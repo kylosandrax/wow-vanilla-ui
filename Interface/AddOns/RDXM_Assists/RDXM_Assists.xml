@@ -1,0 +1,106 @@
+<!--
+RDXM_Assists.xml
+RDX5
+
+Assist/maintanking management.
+-->
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+<Frame name="RDXAssistList" inherits="VFLTitledWinT" hidden="true">
+	<Size><AbsDimension x="290" y="325"/></Size>	
+	<Anchors><Anchor point="CENTER"/></Anchors>
+	<Frames>
+		<Frame name="$parentMTs" inherits="VFLEditListT">
+			<Anchors>
+				<Anchor point="TOPLEFT">
+					<Offset><AbsDimension x="5" y="-25"/></Offset>
+				</Anchor>
+			</Anchors>
+		</Frame>
+		<Frame name="$parentMTsLbl" inherits="VFLStaticT">
+			<Anchors>
+				<Anchor point="TOPLEFT" relativeTo="$parentMTsCaptionArea"/>
+				<Anchor point="BOTTOMRIGHT" relativeTo="$parentMTsCaptionArea"/>
+			</Anchors>
+			<Scripts>
+				<OnShow>this:Setup("Main tanks"); Label_Gold(this);</OnShow>
+			</Scripts>
+		</Frame>
+		<Frame name="$parentAux" inherits="VFLEditListT">
+			<Anchors>
+				<Anchor point="TOPRIGHT">
+					<Offset><AbsDimension x="-5" y="-25"/></Offset>
+				</Anchor>
+			</Anchors>
+		</Frame>
+		<Frame name="$parentAuxLbl" inherits="VFLStaticT">
+			<Anchors>
+				<Anchor point="TOPLEFT" relativeTo="$parentAuxCaptionArea"/>
+				<Anchor point="BOTTOMRIGHT" relativeTo="$parentAuxCaptionArea"/>
+			</Anchors>
+			<Scripts>
+				<OnShow>this:Setup("Auxiliary assists"); Label_Gold(this);</OnShow>
+			</Scripts>
+		</Frame>
+		<!-- OK/CANCEL -->
+		<Button name="$parentCancel" inherits="VFLCancelBtnT" text="Cancel">
+			<Size><AbsDimension x="70" y="24"/></Size>
+			<Anchors>
+				<Anchor point="BOTTOMRIGHT">
+					<Offset><AbsDimension x="-5" y="5"/></Offset>
+				</Anchor>
+			</Anchors>
+		</Button>
+		<Button name="$parentOK" inherits="VFLOKBtnT" text="OK">
+			<Size><AbsDimension x="70" y="24"/></Size>
+			<Anchors>
+				<Anchor point="RIGHT" relativeTo="$parentCancel" relativePoint="LEFT">
+				</Anchor>
+			</Anchors>
+		</Button>
+		<!-- Scale/Alpha -->
+		<Frame name="$parentScaleChk" inherits="VFLChkT">
+			<Size><AbsDimension x="65" y="24"/></Size>
+			<Anchors>
+				<Anchor point="TOPLEFT" relativeTo="$parentMTs" relativePoint="BOTTOMLEFT">
+					<Offset><AbsDimension x="0" y="-5"/></Offset>
+				</Anchor>
+			</Anchors>
+			<Scripts>
+				<OnShow>this:Setup("Scale:");</OnShow>
+			</Scripts>
+		</Frame>
+		<Slider name="$parentScale" inherits="VFLSliderT">
+			<Anchors>
+				<Anchor point="LEFT" relativeTo="$parentScaleChk" relativePoint="RIGHT"/>
+			</Anchors>
+			<Scripts><OnLoad>this:SetMinMaxValues(0.5,2); this:SetValue(1);</OnLoad></Scripts>
+		</Slider>
+		<Frame name="$parentAlphaChk" inherits="VFLChkT">
+			<Size><AbsDimension x="65" y="24"/></Size>
+			<Anchors>
+				<Anchor point="TOPLEFT" relativeTo="$parentScaleChk" relativePoint="BOTTOMLEFT">
+					<Offset><AbsDimension x="0" y="-5"/></Offset>
+				</Anchor>
+			</Anchors>
+			<Scripts>
+				<OnShow>this:Setup("Alpha:");</OnShow>
+			</Scripts>
+		</Frame>
+		<Slider name="$parentAlpha" inherits="VFLSliderT">
+			<Anchors>
+				<Anchor point="LEFT" relativeTo="$parentAlphaChk" relativePoint="RIGHT"/>
+			</Anchors>
+			<Scripts><OnLoad>this:SetMinMaxValues(0,1); this:SetValue(1);</OnLoad></Scripts>
+		</Slider>
+	</Frames>
+	<Scripts>
+		<OnShow>
+			getglobal(this:GetName().."TitleBkg"):SetGradient("HORIZONTAL",0,0,0.9,0,0,0.1);
+			getglobal(this:GetName() .. "Title"):Setup("Assists");
+			getglobal(this:GetName() .. "Title"):SetFontSize(12);
+		</OnShow>
+	</Scripts>
+</Frame>
+<Script file="RDXM_Assists.lua"/>
+<Script file="PullSetup.lua"/>
+</Ui>

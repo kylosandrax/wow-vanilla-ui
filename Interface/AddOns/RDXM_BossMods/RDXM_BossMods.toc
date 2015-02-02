@@ -1,0 +1,8 @@
+## Interface: 11200
+## Title: RDX - Boss Mods Encounters Module
+## Author: Bill Johnson (Venificus of Eredar server)
+## Version: 1
+## RequiredDeps: RDX
+RDXM_BossMods.xml
+AQ40\AQ40_TwinEmpsFrame.xml
+NAXW\NAX_RazuviousFrame.xml

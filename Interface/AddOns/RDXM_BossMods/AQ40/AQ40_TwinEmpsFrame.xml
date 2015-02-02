@@ -1,0 +1,69 @@
+<!--
+AQ40_TwinEmpsFrame.xml
+-->
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+<Frame name="AQEmpsFrame" inherits="VFLWinT" frameStrata="MEDIUM" parent="UIParent" movable="true" hidden="true">
+	<Size><AbsDimension x="220" y="60"/></Size>
+	<Anchors><Anchor point="TOP" relativePoint="TOP"/></Anchors>
+	<Layers>
+		<Layer level="FOREGROUND">
+			<FontString name="$parentTextTopLeft" inherits="VFLFont" justifyH="LEFT" justifyV="CENTER">
+				<Size><AbsDimension x="110" y="18"/></Size>
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset><AbsDimension x="5" y="-5"/></Offset>
+					</Anchor>
+				</Anchors>
+			</FontString>
+			<FontString name="$parentTextTopRight" inherits="VFLFont" justifyH="RIGHT" justifyV="CENTER">
+				<Size><AbsDimension x="110" y="18"/></Size>
+				<Anchors>
+					<Anchor point="TOPRIGHT">
+						<Offset><AbsDimension x="-5" y="-5"/></Offset>
+					</Anchor>
+				</Anchors>
+			</FontString>
+			<FontString name="$parentTextLeft" inherits="VFLFontSmall" justifyH="LEFT" justifyV="TOP">
+				<Anchors>
+					<Anchor point="TOPLEFT" relativeTo="$parentTextTopLeft" relativePoint="BOTTOMLEFT">
+						<Offset><AbsDimension x="0" y="-5"/></Offset>
+					</Anchor>
+					<Anchor point="BOTTOMRIGHT" relativeTo="$parent" relativePoint="BOTTOM"/>
+				</Anchors>
+			</FontString>
+			<FontString name="$parentTextRight" inherits="VFLFontSmall" justifyH="RIGHT" justifyV="TOP">
+				<Anchors>
+					<Anchor point="TOPRIGHT" relativeTo="$parentTextTopRight" relativePoint="BOTTOMRIGHT">
+						<Offset><AbsDimension x="0" y="-5"/></Offset>
+					</Anchor>
+					<Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="BOTTOM"/>
+				</Anchors>
+			</FontString>
+		</Layer>
+	</Layers>
+	<Frames>
+		<Button name="$parentDrag">
+			<Anchors>
+				<Anchor point="TOPLEFT"/>
+				<Anchor point="BOTTOMRIGHT" relativePoint="TOPRIGHT">
+					<Offset><AbsDimension x="0" y="-18"/></Offset>
+				</Anchor>
+			</Anchors>
+			<Scripts>
+				<OnMouseDown>
+					this:GetParent():StartMoving();
+				</OnMouseDown>
+				<OnMouseUp>
+					this:GetParent():StopMovingOrSizing();
+				</OnMouseUp>
+			</Scripts>
+		</Button>
+	</Frames>
+	<Scripts>
+		<OnLoad>
+			getglobal(this:GetName().."TitleBkg"):SetGradient("HORIZONTAL",0,0,0.9,0,0,0.1);
+			this:SetFrameLevel(1);
+		</OnLoad>
+	</Scripts>
+</Frame>
+</Ui>

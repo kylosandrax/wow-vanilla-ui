@@ -1,0 +1,195 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"     xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+    ..\FrameXML\UI.xsd">
+  <Script file="HealBot_Action.lua" />
+ 
+  <Button name="HealingButtonTemplate0" virtual="true">
+    <NormalText name="$parentText" inherits="GameFontNormalSmall" /> 
+    <DisabledText inherits="GameFontDisableSmall" /> 
+    <HighlightText inherits="GameFontHighlightSmall" /> 
+    <NormalTexture inherits="UIPanelButtonUpTexture" /> 
+    <PushedTexture inherits="UIPanelButtonDownTexture" /> 
+    <DisabledTexture inherits="UIPanelButtonDisabledTexture" /> 
+    <HighlightTexture inherits="UIPanelButtonHighlightTexture" /> 
+  </Button>
+
+  <Button name="HealingButtonTemplate" virtual="true" inherits="HealingButtonTemplate0">
+    <Size>
+      <AbsDimension x="128" y="23" />
+    </Size>
+    <Scripts>
+      <OnLoad>HealBot_Action_HealUnit_OnLoad(this);</OnLoad>
+      <OnEnter>HealBot_Action_HealUnit_OnEnter(this);</OnEnter>
+      <OnLeave>HealBot_Action_HealUnit_OnLeave(this);</OnLeave>
+      <OnClick>HealBot_Action_HealUnit_OnClick(this,arg1);</OnClick>
+    </Scripts>
+    <Frames>
+      <StatusBar name="$parentBar" inherits="HealBot_StatusBar">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="10" y="0"/>
+            </Offset>
+          </Anchor>
+          <Anchor point="TOPRIGHT" relativePoint="BOTTOMRIGHT">
+            <Offset>
+              <AbsDimension x="-10" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </StatusBar>
+    </Frames>
+  </Button>
+
+  <Button name="HealingButtonTemplate2" virtual="true" inherits="HealingButtonTemplate">
+    <Size>
+      <AbsDimension x="108" y="23" />
+    </Size>
+    <Frames>
+      <CheckButton name="$parentCheck" inherits="OptionsCheckButtonTemplate">
+        <Size>
+          <AbsDimension x="15" y="15"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativePoint="TOPRIGHT">
+            <Offset>
+              <AbsDimension x="-3" y="-4"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>HealBot_Action_HealUnitCheck_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+    </Frames>
+  </Button>
+
+  <Frame name="HealBot_Action" toplevel="true" parent="UIParent"
+      movable="true" enableMouse="true" enableKeyboard="false" hidden="true">
+    <Size>
+      <AbsDimension x="148" y="74"/>
+    </Size>
+    <Anchors>
+      <Anchor point="RIGHT">
+        <Offset>
+          <AbsDimension x="0" y="0"/>
+        </Offset>
+      </Anchor>
+    </Anchors>
+    <Backdrop tile="true"
+      bgFile="Interface\Tooltips\UI-Tooltip-Background"
+      edgeFile="Interface\Tooltips\UI-Tooltip-Border">
+      <EdgeSize>
+        <AbsValue val="16"/>
+      </EdgeSize>
+      <TileSize>
+        <AbsValue val="16"/>
+      </TileSize>
+      <BackgroundInsets>
+        <AbsInset left="5" right="5" top="5" bottom="5"/>
+      </BackgroundInsets>
+    </Backdrop>
+    <Frames>
+<!-- Heal Buttons -->
+      <Button name="HealBot_Action_HealUnit1" inherits="HealingButtonTemplate" text="Unit1"/>
+      <Button name="HealBot_Action_HealUnit2" inherits="HealingButtonTemplate" text="Unit2"/>
+      <Button name="HealBot_Action_HealUnit3" inherits="HealingButtonTemplate" text="Unit3"/>
+      <Button name="HealBot_Action_HealUnit4" inherits="HealingButtonTemplate" text="Unit4"/>
+      <Button name="HealBot_Action_HealUnit5" inherits="HealingButtonTemplate" text="Unit5"/>
+      <Button name="HealBot_Action_HealUnit6" inherits="HealingButtonTemplate" text="Unit6"/>
+      <Button name="HealBot_Action_HealUnit7" inherits="HealingButtonTemplate" text="Unit7"/>
+      <Button name="HealBot_Action_HealUnit8" inherits="HealingButtonTemplate" text="Unit8"/>
+      <Button name="HealBot_Action_HealUnit9" inherits="HealingButtonTemplate" text="Unit9"/>
+      <Button name="HealBot_Action_HealUnit10" inherits="HealingButtonTemplate" text="Unit10"/>
+      <Button name="HealBot_Action_HealUnit11" inherits="HealingButtonTemplate" text="Unit11"/>
+      <Button name="HealBot_Action_HealUnit12" inherits="HealingButtonTemplate" text="Unit12"/>
+      <Button name="HealBot_Action_HealUnit13" inherits="HealingButtonTemplate" text="Unit13"/>
+      <Button name="HealBot_Action_HealUnit14" inherits="HealingButtonTemplate" text="Unit14"/>
+      <Button name="HealBot_Action_HealUnit15" inherits="HealingButtonTemplate" text="Unit15"/>
+      <Button name="HealBot_Action_HealUnit16" inherits="HealingButtonTemplate" text="Unit16"/>
+      <Button name="HealBot_Action_HealUnit17" inherits="HealingButtonTemplate2" text="Unit17"/>
+      <Button name="HealBot_Action_HealUnit18" inherits="HealingButtonTemplate2" text="Unit18"/>
+      <Button name="HealBot_Action_HealUnit19" inherits="HealingButtonTemplate2" text="Unit19"/>
+      <Button name="HealBot_Action_HealUnit20" inherits="HealingButtonTemplate2" text="Unit20"/>
+      <Button name="HealBot_Action_HealUnit21" inherits="HealingButtonTemplate2" text="Unit21"/>
+      <Button name="HealBot_Action_HealUnit22" inherits="HealingButtonTemplate" text="Unit22"/>
+      <Button name="HealBot_Action_HealUnit23" inherits="HealingButtonTemplate" text="Unit23"/>
+      <Button name="HealBot_Action_HealUnit24" inherits="HealingButtonTemplate" text="Unit24"/>
+      <Button name="HealBot_Action_HealUnit25" inherits="HealingButtonTemplate" text="Unit25"/>
+      <Button name="HealBot_Action_HealUnit26" inherits="HealingButtonTemplate" text="Unit26"/>
+      <Button name="HealBot_Action_HealUnit27" inherits="HealingButtonTemplate" text="Unit27"/>
+<!-- Options Button -->
+      <Button name="HealBot_Action_OptionsButton" inherits="HealingButtonTemplate0" text="HEALBOT_ACTION_OPTIONS">
+        <Size>
+          <AbsDimension x="80" y="22"/>
+        </Size>
+        <Anchors>
+          <Anchor point="BOTTOM" relativePoint="BOTTOM">
+            <Offset>
+              <AbsDimension x="0" y="10"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            HealBot_Action_OptionsButton_OnClick(this);
+          </OnClick>
+        </Scripts>
+      </Button>
+<!-- Close Button -->
+<!--
+			<Button name="HealBot_Action_CloseButton" inherits="UIPanelButtonTemplate" text="CLOSE">
+				<Size>
+					<AbsDimension x="80" y="23"/>
+				</Size>
+				<Anchors>
+					<Anchor point="BOTTOM" relativePoint="BOTTOM">
+						<Offset>
+							<AbsDimension x="0" y="15"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Scripts>
+					<OnClick>
+						HideUIPanel(this:GetParent());
+					</OnClick>
+				</Scripts>
+			</Button>
+-->
+
+    </Frames>
+    <Scripts>
+      <OnLoad>
+        HealBot_Action_OnLoad(this);
+      </OnLoad>
+      <OnShow>
+        HealBot_Action_OnShow(this);
+      </OnShow>
+      <OnHide>
+        HealBot_Action_OnHide(this);
+      </OnHide>
+      <OnMouseDown>
+        HealBot_Action_OnMouseDown(this,arg1);
+      </OnMouseDown>
+      <OnMouseUp>
+        HealBot_Action_OnMouseUp(this,arg1);
+      </OnMouseUp>
+      <OnClick>
+        HealBot_Action_OnClick(this,arg1);
+      </OnClick>
+      <OnDragStart>
+        HealBot_Action_OnDragStart(this,arg1);
+      </OnDragStart>
+      <OnDragStop>
+        HealBot_Action_OnDragStop(this);
+      </OnDragStop>
+<!--
+      <OnKeyDown> 
+        HealBot_Action_OnKey(this,arg1,"down");
+      </OnKeyDown> 
+      <OnKeyUp> 
+        HealBot_Action_OnKey(this,arg1,"up");
+      </OnKeyUp> 
+-->
+   </Scripts>
+  </Frame>
+</Ui>

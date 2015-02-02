@@ -1,0 +1,21 @@
+## Interface: 11100
+## Title: !ViroUI
+## Version: 0.1
+## Notes: Virose UI Config
+## Author: Virose
+
+## SavedVariables: VUI_ACCset
+## SavedVariablesPerCharacter: VUI_CHARset, VUI_CHARprofile, VUI_CHARprofiles
+
+API.lua
+ViroUI.xml
+ViroUI.lua
+
+
+
+Setup\Setup.lua
+Setup\DUF_HEALER.lua
+Setup\DART_HEALER.lua
+Setup\DAB_HEALER.lua
+Setup\test.lua
+Setup\Misc.lua

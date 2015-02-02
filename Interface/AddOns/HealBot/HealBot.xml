@@ -1,0 +1,27 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+  <Script file="HealBot_Localization.lua" />
+  <Script file="HealBot_Data.lua" />
+  <Script file="HealBot.lua" />
+  <StatusBar name="HealBot_StatusBar" virtual="true" frameStrata="MEDIUM" toplevel="true" hidden="false">
+    <Size>
+      <AbsDimension y="4"/>
+    </Size>
+    <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+    <BarColor r="0.0" g="1.0" b="0.0" a="0.6"/>
+  </StatusBar>
+  <Frame name="HealBot" parent="UIParent" frameStrata="LOW" toplevel="true">
+    <Scripts>
+      <OnLoad>
+	HealBot_OnLoad(this);
+      </OnLoad>
+      <OnEvent>
+        HealBot_OnEvent(this,event,arg1);
+      </OnEvent>
+      <OnUpdate>
+        HealBot_OnUpdate(this,arg1);
+      </OnUpdate>
+    </Scripts>
+  </Frame>
+</Ui>

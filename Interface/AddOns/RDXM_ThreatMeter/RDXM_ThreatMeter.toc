@@ -1,0 +1,5 @@
+## Interface: 11200
+## Title: RDX - Threat Meter
+## Author: Hektar of Shadowmoon
+## Dependencies: RDX, KLHThreatMeter
+RDXM_ThreatMeter.xml

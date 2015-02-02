@@ -1,0 +1,56 @@
+<!--
+RDXM_Logistics.xml
+RDX5 - Logistics Module
+By Venificus of Eredar
+-->
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+<!-- The readycheck dialog -->
+<Frame name="RDXReadyCheckDlg" inherits="VFLTitledWinT" frameStrata="HIGH" hidden="true">
+	<Size><AbsDimension x="300" y="85"/></Size>
+	<Anchors><Anchor point="CENTER"/></Anchors>
+	<Frames>
+		<Frame name="$parentReadyTxt" inherits="VFLStaticT">
+			<Size><AbsDimension x="280" y="25"/></Size>
+			<Anchors>
+				<Anchor point="TOPLEFT">
+					<Offset><AbsDimension x="10" y="-27"/></Offset>
+				</Anchor>
+			</Anchors>
+			<Scripts>
+				<OnShow>
+					this:Setup("Are you ready?"); 
+					this:SetFontSize(24);
+				</OnShow>
+			</Scripts>
+		</Frame>
+		<Button name="$parentNotReady" inherits="VFLCancelBtnT" text="Not Ready">
+			<Size><AbsDimension x="100" y="24"/></Size>
+			<Anchors>
+				<Anchor point="BOTTOMLEFT">
+					<Offset><AbsDimension x="5" y="5"/></Offset>
+				</Anchor>
+			</Anchors>
+		</Button>
+		<Button name="$parentReady" inherits="VFLOKBtnT" text="Ready">
+			<Size><AbsDimension x="100" y="24"/></Size>
+			<Anchors>
+				<Anchor point="BOTTOMRIGHT">
+					<Offset><AbsDimension x="-5" y="5"/></Offset>
+				</Anchor>
+			</Anchors>
+		</Button>
+	</Frames>
+	<Scripts>
+		<OnLoad>
+			getglobal(this:GetName().."TitleBkg"):SetGradient("HORIZONTAL",0,0,0.9,0,0,0.1);
+			getglobal(this:GetName() .. "Title"):Setup("Ready Check");
+			getglobal(this:GetName() .. "Title"):SetFontSize(12);
+			this:SetFrameLevel(1);
+		</OnLoad>
+	</Scripts>
+</Frame>
+<!-- End readycheck dialog -->
+	<Script file="RDXM_Logistics.lua"/>
+<!-- RDXM_RaidStatus must come after logistics -->
+	<Script file="RDXM_RaidStatus.lua"/>	
+</Ui>

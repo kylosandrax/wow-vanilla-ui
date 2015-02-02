@@ -1,0 +1,108 @@
+<!--
+RDXM_BossMods.xml
+RDX5
+
+All Boss Encounters for RDX5.
+-->
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+
+	<!-- Initialize tables and modules -->
+	
+	<Script file="RDXM_BossMods_Init.lua"/>
+	
+	<!--Molten Core Files-->
+	<Script file="Interface\AddOns\RDXM_BossMods\Molten_Core\MC_Garr.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\Molten_Core\MC_Geddon.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\Molten_Core\MC_Gehennas.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\Molten_Core\MC_Golemagg.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\Molten_Core\MC_Lucifron.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\Molten_Core\MC_Magmadar.lua"/>	
+	<Script file="Interface\AddOns\RDXM_BossMods\Molten_Core\MC_Majordomo.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\Molten_Core\MC_Ragnaros.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\Molten_Core\MC_Shazzrah.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\Molten_Core\MC_Sulfuron.lua"/>
+
+	<!--BWL Files-->
+
+	<Script file="Interface\AddOns\RDXM_BossMods\Blackwing_Lair\BWL_Broodlord.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\Blackwing_Lair\BWL_Broodlord_Trash.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\Blackwing_Lair\BWL_Chromaggus.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\Blackwing_Lair\BWL_Drakes_Common.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\Blackwing_Lair\BWL_Broodlord.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\Blackwing_Lair\BWL_Ebonroc.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\Blackwing_Lair\BWL_Firemaw.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\Blackwing_Lair\BWL_Flamegor.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\Blackwing_Lair\BWL_Nefarian_Phase1.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\Blackwing_Lair\BWL_Nefarian_Phase2.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\Blackwing_Lair\BWL_Pain_Packs.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\Blackwing_Lair\BWL_Razorgore.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\Blackwing_Lair\BWL_Vaelastrasz.lua"/>
+
+	<!-- AQ20 Files -->
+
+	<Script file="Interface\AddOns\RDXM_BossMods\AQ20\AQ20_Ayamiss.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\AQ20\AQ20_Buru.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\AQ20\AQ20_Rajaxx.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\AQ20\AQ20_Kurinnaxx.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\AQ20\AQ20_Moam.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\AQ20\AQ20_Ossirian.lua"/>
+
+	<!-- AQ40 Files -->
+
+	<Script file="Interface\AddOns\RDXM_BossMods\AQ40\AQ40_Anubisaths.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\AQ40\AQ40_Bug_Trio.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\AQ40\AQ40_Anubisaths.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\AQ40\AQ40_Cthun_Phase1.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\AQ40\AQ40_Cthun_Phase2.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\AQ40\AQ40_Fankriss.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\AQ40\AQ40_Huhuran.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\AQ40\AQ40_Ouro.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\AQ40\AQ40_Qiraji.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\AQ40\AQ40_Sartura.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\AQ40\AQ40_Skeram.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\AQ40\AQ40_Trash.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\AQ40\AQ40_Twin_Emps.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\AQ40\AQ40_Viscidus.lua"/>
+
+	<!-- World Files -->
+
+	<Script file="Interface\AddOns\RDXM_BossMods\World\World_Azuregos.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\World\World_Emeriss.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\World\World_Generic.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\World\World_Green_Dragon_Common.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\World\World_Kazzak.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\World\World_Lethon.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\World\World_Onyxia.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\World\World_Taerar.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\World\World_Ysondre.lua"/>
+
+	<!-- PvP Files -->
+
+	<Script file="Interface\AddOns\RDXM_BossMods\PvP\PVP_Alterac.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\PvP\PVP_Arathi.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\PvP\PVP_Warsong.lua"/>
+
+	<!-- NAXE Files -->
+	<Script file="Interface\AddOns\RDXM_BossMods\NAXE\NAX_AnubRekhan.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\NAXE\NAX_Faerlina.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\NAXE\NAX_Heigan.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\NAXE\NAX_KelThuzad.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\NAXE\NAX_Loatheb.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\NAXE\NAX_Maexxna.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\NAXE\NAX_Noth.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\NAXE\NAX_Sapphiron.lua"/>
+
+	<!-- NAXW Files -->
+	<Script file="Interface\AddOns\RDXM_BossMods\NAXW\NAX_Four_Horsemen.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\NAXW\NAX_Gluth.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\NAXW\NAX_Gothik.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\NAXW\NAX_Grobbulus.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\NAXW\NAX_Patchwerk.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\NAXW\NAX_Razuvious.lua"/>
+	<Script file="Interface\AddOns\RDXM_BossMods\NAXW\NAX_Thaddius.lua"/>
+
+	<!-- Register everything -->
+	
+	<Script file="RDXM_BossMods_Register.lua"/>
+	
+</Ui>

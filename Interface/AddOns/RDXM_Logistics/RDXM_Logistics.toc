@@ -1,0 +1,7 @@
+## Interface: 11200
+## Title: RDX - Logistics Module
+## Notes: Logistics inquiries module for RDX (Who's not here, who has..., stats check, etc.)
+## Author: Bill Johnson (Venificus of Eredar server)
+## Version: 1
+## RequiredDeps: RDX
+RDXM_Logistics.xml

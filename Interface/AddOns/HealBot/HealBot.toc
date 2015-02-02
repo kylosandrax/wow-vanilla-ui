@@ -1,0 +1,11 @@
+## Interface: 11200
+## Title: HealBot BETA
+## Notes: BETA - Adds panel with automated healing spells
+## SavedVariables:  HealBot_Config
+..\..\FrameXML\Fonts.xml
+..\..\FrameXML\OptionsFrameTemplates.xml
+..\..\FrameXML\UIPanelTemplates.xml
+..\..\FrameXML\UIDropDownMenu.xml
+HealBot.xml
+HealBot_Action.xml
+HealBot_Options.xml

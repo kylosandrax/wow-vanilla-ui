@@ -1,0 +1,5 @@
+## Interface: 1700
+## Title: Turn-In
+## Description: Automates turning in of repeatable quests and gossip frames
+## SavedVariables: TI_status
+TurnIn.xml

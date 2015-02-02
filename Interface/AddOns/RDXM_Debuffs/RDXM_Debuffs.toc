@@ -1,0 +1,7 @@
+## Interface: 11200
+## Title: RDX - Debuff Module
+## Notes: Debuff visualization and curing for RDX.
+## Author: Bill Johnson (Venificus of Eredar server)
+## Version: 1
+## RequiredDeps: RDX
+RDXM_Debuffs.xml

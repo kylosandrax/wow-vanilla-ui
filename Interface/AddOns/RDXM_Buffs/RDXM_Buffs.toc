@@ -1,0 +1,7 @@
+## Interface: 11200
+## Title: RDX - Buffs Module
+## Notes: Raid group buffing for RDX.
+## Author: Bill Johnson (Venificus of Eredar server)
+## Version: 1
+## RequiredDeps: RDX
+RDXM_Buffs.xml

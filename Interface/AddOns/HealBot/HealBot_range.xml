@@ -1,0 +1,29 @@
+ <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+  <Script file="HealBot_range.lua" />
+ 
+<Frame name="HealBot_range_Frame" enableMouse="true" movable="true" resizeable="true" parent="UIParent" hidden="true">
+		<Size>
+			<AbsDimension x="85" y="35"/>
+		</Size>
+		<Anchors>
+			<Anchor point="TOPLEFT" relativePoint="TOPLEFT"/>
+		</Anchors>
+			<EdgeSize>
+				<AbsValue val="10"/>
+			</EdgeSize>
+			<TileSize>
+				<AbsValue val="32"/>
+			</TileSize>
+			<BackgroundInsets>
+				<AbsInset left="1" right="1" top="1" bottom="1"/>
+			</BackgroundInsets>
+		</Backdrop> 
+   </Frame> 
+<GameTooltip name="HealBot_range_Tooltip" frameStrata="TOOLTIP" hidden="true" parent="HealBot_range_Frame" inherits="GameTooltipTemplate" >
+	<Scripts>
+		<OnLoad>
+			HealBot_range_Tooltip:SetOwner(HealBot_range_Frame, "ANCHOR_NONE");
+		</OnLoad>
+	</Scripts>
+</GameTooltip>
+</Ui>

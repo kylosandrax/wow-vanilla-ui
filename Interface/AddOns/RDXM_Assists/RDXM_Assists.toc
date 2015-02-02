@@ -1,0 +1,7 @@
+## Interface: 11200
+## Title: RDX - Assist Module
+## Notes: Tanking, assist, and targeting management for RDX.
+## Author: Bill Johnson (Venificus of Eredar server)
+## Version: 1
+## RequiredDeps: RDX
+RDXM_Assists.xml

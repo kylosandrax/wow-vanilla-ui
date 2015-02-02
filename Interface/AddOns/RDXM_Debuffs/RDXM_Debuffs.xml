@@ -1,0 +1,212 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/">
+<!-- The anchor for debuff frames -->
+<Frame name="RDXDebuffAnchor" parent="UIParent" movable="true" hidden="false">
+	<Size><AbsDimension x="1" y="1"/></Size>
+	<Anchors><Anchor point="CENTER"/></Anchors>
+</Frame>
+<!-- GLOBAL OPTIONS -->
+<Frame name="RDXDebuffGlobal" inherits="VFLTitledWinT" frameStrata="HIGH" hidden="true">
+	<Size><AbsDimension x="160" y="250"/></Size>
+	<Anchors><Anchor point="CENTER"/></Anchors>
+	<Frames>
+		<Frame name="$parentIgnore" inherits="VFLEditListT">
+			<Anchors>
+				<Anchor point="TOPLEFT">
+					<Offset><AbsDimension x="5" y="-25"/></Offset>
+				</Anchor>
+			</Anchors>
+		</Frame>
+		<Frame name="$parentIgnoreLbl" inherits="VFLStaticT">
+			<Anchors>
+				<Anchor point="TOPLEFT" relativeTo="$parentIgnoreCaptionArea"/>
+				<Anchor point="BOTTOMRIGHT" relativeTo="$parentIgnoreCaptionArea"/>
+			</Anchors>
+			<Scripts>
+				<OnShow>this:Setup("Global ignores"); Label_Gold(this);</OnShow>
+			</Scripts>
+		</Frame>
+		<!-- OK/Cancel -->
+		<Button name="$parentCancel" inherits="VFLCancelBtnT" text="Cancel">
+			<Size><AbsDimension x="50" y="24"/></Size>
+			<Anchors>
+				<Anchor point="BOTTOMRIGHT">
+					<Offset><AbsDimension x="-5" y="5"/></Offset>
+				</Anchor>
+			</Anchors>
+		</Button>
+		<Button name="$parentOK" inherits="VFLOKBtnT" text="OK">
+			<Size><AbsDimension x="50" y="24"/></Size>
+			<Anchors>
+				<Anchor point="RIGHT" relativeTo="$parentCancel" relativePoint="LEFT">
+				</Anchor>
+			</Anchors>
+		</Button>
+	</Frames>
+	<Scripts>
+		<OnLoad>
+			getglobal(this:GetName().."TitleBkg"):SetGradient("HORIZONTAL",0,0,0.9,0,0,0.1);
+			getglobal(this:GetName() .. "Title"):Setup("Global Debuffs");
+			getglobal(this:GetName() .. "Title"):SetFontSize(12);
+			this:SetFrameLevel(1);
+		</OnLoad>
+	</Scripts>
+</Frame>
+<!-- END GLOBAL OPTIONS -->
+<!-- ENCOUNTER OPTIONS -->
+<Frame name="RDXDebuffEnc" inherits="VFLTitledWinT" frameStrata="HIGH" hidden="true">
+	<Size><AbsDimension x="300" y="250"/></Size>
+	<Anchors><Anchor point="CENTER"/></Anchors>
+	<Frames>
+		<!-- Debuff relevance -->
+		<Frame name="$parentRel" inherits="VFLEditListT">
+			<Anchors>
+				<Anchor point="TOPLEFT">
+					<Offset><AbsDimension x="5" y="-25"/></Offset>
+				</Anchor>
+			</Anchors>
+		</Frame>
+		<Frame name="$parentRelLbl" inherits="VFLStaticT">
+			<Anchors>
+				<Anchor point="TOPLEFT" relativeTo="$parentRelCaptionArea"/>
+				<Anchor point="BOTTOMRIGHT" relativeTo="$parentRelCaptionArea"/>
+			</Anchors>
+			<Scripts>
+				<OnShow>this:Setup("Relevant debuffs"); Label_Gold(this);</OnShow>
+			</Scripts>
+		</Frame>
+		<!-- Show None/Relevant/All -->
+		<Frame name="$parentShowGB" inherits="VFLGroupT">
+			<Size><AbsDimension x="154" y="84"/></Size>
+			<Anchors>
+				<Anchor point="TOPLEFT" relativeTo="$parentRel" relativePoint="TOPRIGHT"/>
+			</Anchors>
+		</Frame>
+		<Frame name="$parentShowGBLbl" inherits="VFLStaticT">
+			<Anchors>
+				<Anchor point="TOPLEFT" relativeTo="$parentShowGBCaptionArea"/>
+				<Anchor point="BOTTOMRIGHT" relativeTo="$parentShowGBCaptionArea"/>
+			</Anchors>
+			<Scripts>
+				<OnShow>this:Setup("Show"); Label_Gold(this);</OnShow>
+			</Scripts>
+		</Frame>
+		<Frame name="$parentShowRB1" inherits="VFLRadioT" id="1">
+			<Size><AbsDimension x="95" y="16"/></Size>
+			<Anchors>
+				<Anchor point="TOPLEFT" relativeTo="$parentShowGBClientArea">
+				</Anchor>
+			</Anchors>
+			<Scripts>
+				<OnShow>this:Setup(RDXDebuffEnc.RGShow, "None");</OnShow>
+			</Scripts>
+		</Frame>
+		<Frame name="$parentShowRB2" inherits="VFLRadioT" id="2">
+			<Size><AbsDimension x="95" y="16"/></Size>
+			<Anchors>
+				<Anchor point="TOPLEFT" relativeTo="$parentShowRB1" relativePoint="BOTTOMLEFT"/>
+			</Anchors>
+			<Scripts>
+				<OnShow>this:Setup(RDXDebuffEnc.RGShow, "Relevant Only");</OnShow>
+			</Scripts>
+		</Frame>
+		<Frame name="$parentShowRB3" inherits="VFLRadioT" id="3">
+			<Size><AbsDimension x="95" y="16"/></Size>
+			<Anchors>
+				<Anchor point="TOPLEFT" relativeTo="$parentShowRB2" relativePoint="BOTTOMLEFT"/>
+			</Anchors>
+			<Scripts>
+				<OnShow>this:Setup(RDXDebuffEnc.RGShow, "Curable Only");</OnShow>
+			</Scripts>
+		</Frame>
+		<Frame name="$parentShowRB4" inherits="VFLRadioT" id="4">
+			<Size><AbsDimension x="95" y="16"/></Size>
+			<Anchors>
+				<Anchor point="TOPLEFT" relativeTo="$parentShowRB3" relativePoint="BOTTOMLEFT"/>
+			</Anchors>
+			<Scripts>
+				<OnShow>this:Setup(RDXDebuffEnc.RGShow, "All");</OnShow>
+			</Scripts>
+		</Frame>
+		<!-- Slice By Debuff/By User -->
+		<Frame name="$parentSliceGB" inherits="VFLGroupT">
+			<Size><AbsDimension x="154" y="55"/></Size>
+			<Anchors>
+				<Anchor point="TOPLEFT" relativeTo="$parentShowGB" relativePoint="BOTTOMLEFT"/>
+			</Anchors>
+		</Frame>
+		<Frame name="$parentSliceGBLbl" inherits="VFLStaticT">
+			<Anchors>
+				<Anchor point="TOPLEFT" relativeTo="$parentSliceGBCaptionArea"/>
+				<Anchor point="BOTTOMRIGHT" relativeTo="$parentSliceGBCaptionArea"/>
+			</Anchors>
+			<Scripts>
+				<OnShow>this:Setup("Slice by"); Label_Gold(this);</OnShow>
+			</Scripts>
+		</Frame>
+		<Frame name="$parentSliceRB1" inherits="VFLRadioT" id="1">
+			<Size><AbsDimension x="95" y="16"/></Size>
+			<Anchors>
+				<Anchor point="TOPLEFT" relativeTo="$parentSliceGBClientArea">
+				</Anchor>
+			</Anchors>
+			<Scripts>
+				<OnShow>this:Setup(RDXDebuffEnc.RGSlice, "Player");</OnShow>
+			</Scripts>
+		</Frame>
+		<Frame name="$parentSliceRB2" inherits="VFLRadioT" id="2">
+			<Size><AbsDimension x="95" y="16"/></Size>
+			<Anchors>
+				<Anchor point="TOPLEFT" relativeTo="$parentSliceRB1" relativePoint="BOTTOMLEFT"/>
+			</Anchors>
+			<Scripts>
+				<OnShow>this:Setup(RDXDebuffEnc.RGSlice, "Debuff");</OnShow>
+			</Scripts>
+		</Frame>
+		<!-- Player prio -->
+		<Frame name="$parentPrio" inherits="VFLChkT">
+			<Size><AbsDimension x="105" y="24"/></Size>
+			<Anchors>
+				<Anchor point="TOPLEFT" relativeTo="$parentSliceGB" relativePoint="BOTTOMLEFT"/>
+			</Anchors>
+			<Scripts>
+				<OnShow>this:Setup("Use player priority:");</OnShow>
+			</Scripts>
+		</Frame>
+		<Button name="$parentPrioFilter" inherits="VFLBtnT" text="Filter">
+			<Size><AbsDimension x="48" y="24"/></Size>
+			<Anchors>
+				<Anchor point="LEFT" relativeTo="$parentPrio" relativePoint="RIGHT"/>
+			</Anchors>
+		</Button>
+		<!-- OK/Cancel -->
+		<Button name="$parentCancel" inherits="VFLCancelBtnT" text="Cancel">
+			<Size><AbsDimension x="50" y="24"/></Size>
+			<Anchors>
+				<Anchor point="BOTTOMRIGHT">
+					<Offset><AbsDimension x="-5" y="5"/></Offset>
+				</Anchor>
+			</Anchors>
+		</Button>
+		<Button name="$parentOK" inherits="VFLOKBtnT" text="OK">
+			<Size><AbsDimension x="50" y="24"/></Size>
+			<Anchors>
+				<Anchor point="RIGHT" relativeTo="$parentCancel" relativePoint="LEFT">
+				</Anchor>
+			</Anchors>
+		</Button>
+	</Frames>
+	<Scripts>
+		<OnLoad>
+			this.RGShow = VFL.RadioGroup:new();
+			this.RGSlice = VFL.RadioGroup:new();
+			getglobal(this:GetName().."TitleBkg"):SetGradient("HORIZONTAL",0,0,0.9,0,0,0.1);
+			getglobal(this:GetName() .. "Title"):Setup("Encounter Debuffs");
+			getglobal(this:GetName() .. "Title"):SetFontSize(12);
+			this:SetFrameLevel(1);
+		</OnLoad>
+	</Scripts>
+</Frame>
+<!-- END ENCOUNTER OPTIONS -->
+<!-- Master script -->
+<Script file="RDXM_Debuffs.lua"/>
+</Ui>

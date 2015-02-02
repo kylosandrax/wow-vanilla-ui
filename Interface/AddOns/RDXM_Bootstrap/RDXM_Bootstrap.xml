@@ -1,0 +1,144 @@
+<Ui xmlns="http://www.blizzard.co`m/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+C:\Projects\WoW\Bin\Interface\FrameXML\UI.xsd">
+	<Script file="RDXM_Bootstrap.lua"/>
+	<Frame name="RDXM_ScriptEditFrame" inherits="VFLTitledWinT" frameStrata="HIGH" hidden="true">
+		<Size>
+			<RelDimension x="0.3" y="0.35"/>
+		</Size>
+		<Anchors>
+			<Anchor point="CENTER"/>
+		</Anchors>
+		<Frames>
+<Frame name="$parentReloadUICheck" inherits="VFLChkT" parent="RDXM_ScriptEditFrame">
+			<Size><AbsDimension x="65" y="24"/></Size>
+	<Anchors>
+		<Anchor point="BOTTOMLEFT">
+			<Offset>
+				<AbsDimension x="10" y="15"/>
+			</Offset>
+		</Anchor>
+	</Anchors>
+			<Scripts>
+				<OnShow>this:Setup("Reload UI");</OnShow>
+			</Scripts>
+</Frame>
+
+<Button name="$parentButtonOK" inherits="VFLBtnT" text="Send" parent="RDXM_ScriptEditFrame">
+	<Size><AbsDimension x="75" y="25"/></Size>
+	<Anchors>
+		<Anchor point="BOTTOMRIGHT">
+			<Offset>
+				<AbsDimension x="-100" y="15"/>
+			</Offset>
+		</Anchor>
+	</Anchors>
+	<Scripts>
+		<OnClick> RDXM.Bootstrap.CommitScriptChanges(); RDXM_ScriptEditFrame:Hide(); </OnClick>
+	</Scripts>
+</Button>
+<Button name="$parentButtonCancel" inherits="VFLBtnT" text="Cancel" parent="RDXM_ScriptEditFrame">
+	<Size><AbsDimension x="75" y="25"/></Size>
+	<Anchors>
+		<Anchor point="BOTTOMRIGHT">
+			<Offset>
+				<AbsDimension x="-20" y="15"/>
+			</Offset>
+		</Anchor>
+	</Anchors>
+	<Scripts>
+		<OnClick> RDXM_ScriptEditFrame:Hide(); </OnClick>
+	</Scripts>
+</Button>
+	<Frame name="RDXM_ScriptEditBoxFrame" movable="false" enableMouse="false" hidden="false" parent="RDXM_ScriptEditFrame">
+	<Backdrop name="$parentBkd" edgeFile="Interface\Tooltips\UI-Tooltip-Border">
+		<BackgroundInsets>
+			<AbsInset left="4" right="4" top="4" bottom="4" />
+		</BackgroundInsets>
+		<EdgeSize><AbsValue val="16"/></EdgeSize>
+	</Backdrop>
+	<Layers>
+		<Layer level="BACKGROUND">
+			<Texture name="$parentBkg">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset><AbsDimension x="4" y="-4"/></Offset>
+					</Anchor>
+					<Anchor point="BOTTOMRIGHT">
+						<Offset><AbsDimension x="-4" y="4"/></Offset>
+					</Anchor>
+				</Anchors>
+			<Color r="0" g="0" b="0" a="1"/>
+			</Texture>
+		</Layer>
+	</Layers>
+	<Anchors>
+		<Anchor point="TOPLEFT">
+			<Offset>
+				<AbsDimension x="5" y="-25"></AbsDimension>
+			</Offset>
+		</Anchor>
+		<Anchor point="BOTTOMRIGHT">
+			<Offset>
+				<AbsDimension x="-5" y="40"></AbsDimension>
+			</Offset>
+		</Anchor>
+	</Anchors>					
+		<Frames>
+
+			<ScrollFrame name="RDXM_ScriptEditScrollFrame" inherits="VFLScrollFrameT" parent="RDXM_ScriptEditBoxFrame">
+		<Anchors>
+			<Anchor point="TOPLEFT" relativePoint="TOPLEFT">
+				<Offset>
+					<AbsDimension x="5" y="-5"/>
+				</Offset>
+			</Anchor>
+			<Anchor point="BOTTOMRIGHT" relativePoint="BOTTOMRIGHT">
+				<Offset>
+					<AbsDimension x="-5" y="5"/>
+				</Offset>
+			</Anchor>
+		</Anchors>
+				<ScrollChild>
+					<EditBox name="RDXM_ScriptEditBox" multiLine="true" maxLines="9" letters="30000" nonspacewrap="true" spacing="1" autoFocus="true">
+	<Size><AbsDimension x="325" y="300"/></Size>
+	<Anchors>
+		<Anchor point="TOPLEFT" relativeTo="RDXM_ScriptEditFrame">
+			<Offset>
+				<AbsDimension x="50" y="-25"></AbsDimension>
+			</Offset>
+		</Anchor>
+	</Anchors>					
+						<Scripts>
+							<OnTextChanged>
+								local scrollBar = getglobal(this:GetParent():GetName().."ScrollBar")
+								this:GetParent():UpdateScrollChildRect();
+								local min;
+								local max;
+								min, max = scrollBar:GetMinMaxValues();
+								if ( max > 0 and (this.max ~= max) ) then
+									this.max = max;
+									scrollBar:SetValue(max);
+								end
+							</OnTextChanged>
+							<OnEscapePressed>
+								this:ClearFocus();
+							</OnEscapePressed>
+						</Scripts>
+	
+						<FontString inherits="GameFontHighlightSmall"/>
+					</EditBox>
+				</ScrollChild>
+			</ScrollFrame>
+		</Frames>
+	</Frame>
+		</Frames>
+		<Scripts>
+			<OnShow>
+				getglobal(this:GetName().."TitleBkg"):SetGradient("HORIZONTAL",0,0,0.9,0,0,0.1); 
+				getglobal(this:GetName() .. "Title"):Setup("Bootstrap Editor: " .. RDXM.Bootstrap.CurrentScript); 
+				getglobal(this:GetName() .. "Title"):SetFontSize(12);
+			</OnShow> 
+		</Scripts>
+	</Frame>
+
+</Ui>

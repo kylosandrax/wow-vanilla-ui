@@ -1,0 +1,5 @@
+## Interface: 11200
+## Title: RDX - Damage Meter
+## Author: Hektar of Shadowmoon
+## Dependencies: RDX, SW_Stats
+RDXM_DamageMeter.xml

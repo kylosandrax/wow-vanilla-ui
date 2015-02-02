@@ -1,0 +1,1045 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+  <Script file="HealBot_Options.lua" />
+  <Button name="HealBot_Options_Tab" inherits="CharacterFrameTabButtonTemplate" virtual="true">
+    <Scripts>
+      <OnClick>
+        PlaySound("igMainMenuOpen");
+        PanelTemplates_Tab_OnClick(HealBot_Options);
+        HealBot_Options_ShowPanel(HealBot_Options.selectedTab);
+      </OnClick> 
+    </Scripts>
+  </Button>
+  <Slider name="HealBot_Options_SliderTemplate" inherits="OptionsSliderTemplate" virtual="true">
+    <Size>
+      <AbsDimension x="240" y="16" /> 
+    </Size>
+  </Slider>
+  <EditBox name="HealBot_Options_EditBoxTemplate" autoFocus="false" historyLines="32" justifyH="LEFT" virtual="true">
+				<Layers>
+					<Layer level="BACKGROUND">
+						<Texture name="$parentLeft" file="Interface\Common\Common-Input-Border">
+							<Size>
+								<AbsDimension x="8" y="20"/>
+							</Size>
+							<Anchors>
+								<Anchor point="TOPLEFT">
+									<Offset>
+										<AbsDimension x="-5" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<TexCoords left="0" right="0.0625" top="0" bottom="0.625"/>
+						</Texture>
+						<Texture name="$parentRight" file="Interface\Common\Common-Input-Border">
+							<Size>
+								<AbsDimension x="8" y="20"/>
+							</Size>
+							<Anchors>
+								<Anchor point="RIGHT">
+									<Offset>
+										<AbsDimension x="5" y="0"/>
+									</Offset>
+								</Anchor>
+							</Anchors>
+							<TexCoords left="0.9375" right="1.0" top="0" bottom="0.625"/>
+						</Texture>
+						<Texture name="$parentMiddle" file="Interface\Common\Common-Input-Border">
+							<Size>
+								<AbsDimension x="10" y="20"/>
+							</Size>
+							<Anchors>
+								<Anchor point="LEFT" relativeTo="$parentLeft" relativePoint="RIGHT"/>
+								<Anchor point="RIGHT" relativeTo="$parentRight" relativePoint="LEFT"/>
+							</Anchors>
+							<TexCoords left="0.0625" right="0.9375" top="0" bottom="0.625"/>
+						</Texture>
+					</Layer>
+				</Layers>
+    <Size>
+      <AbsDimension x="240" y="20"/>
+    </Size>
+    <FontString inherits="GameFontHighlightSmall" bytes="256"/>
+    <Layers>
+      <Layer level="ARTWORK">
+        <FontString name="$parentText" text="Edit" inherits="GameFontNormalSmall">
+          <Size>
+            <AbsDimension x="0" y="10"/>
+          </Size>
+          <Anchors>
+            <Anchor point="BOTTOMLEFT" relativeTo="$parent" relativePoint="TOPLEFT">
+              <Offset>
+                <AbsDimension x="0" y="4"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+      </Layer>
+    </Layers>
+    <Scripts>
+      <OnEscapePressed>
+        this:ClearFocus();
+      </OnEscapePressed>
+      <OnEditFocusLost>
+        this:HighlightText(0, 0);
+      </OnEditFocusLost>
+      <OnEditFocusGained>
+        this:HighlightText();
+      </OnEditFocusGained>
+    </Scripts>
+  </EditBox>
+
+  <Frame name="HealBot_Options" toplevel="true" frameStrata="DIALOG" 
+      movable="false" parent="UIParent" enableMouse="true" hidden="true">
+    <Size>
+      <AbsDimension x="320" y="450"/>
+    </Size>
+    <Anchors>
+      <Anchor point="CENTER">
+        <Offset>
+          <AbsDimension x="0" y="50"/>
+        </Offset>
+      </Anchor>
+    </Anchors>
+    <Backdrop tile="true"
+        bgFile="Interface\DialogFrame\UI-DialogBox-Background"
+        edgeFile="Interface\DialogFrame\UI-DialogBox-Border">
+      <BackgroundInsets>
+        <AbsInset left="11" right="12" top="12" bottom="11"/>
+      </BackgroundInsets>
+      <TileSize>
+        <AbsValue val="32"/>
+      </TileSize>
+      <EdgeSize>
+        <AbsValue val="32"/>
+      </EdgeSize>
+    </Backdrop>
+    <Layers>
+      <Layer level="ARTWORK">
+        <Texture name="HealBot_Options_Header"
+            file="Interface\DialogFrame\UI-DialogBox-Header">
+          <Size>
+            <AbsDimension x="400" y="64"/>
+          </Size>
+          <Anchors>
+            <Anchor point="TOP">
+              <Offset>
+                <AbsDimension x="0" y="12"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </Texture>
+        <FontString inherits="GameFontNormal" text="HEALBOT_OPTIONS_TITLE">
+          <Anchors>
+            <Anchor point="TOP" relativeTo="HealBot_Options_Header">
+              <Offset>
+                <AbsDimension x="0" y="-13"/>
+              </Offset>
+            </Anchor>
+          </Anchors>
+        </FontString>
+      </Layer>
+    </Layers>
+    <Frames>
+      <Frame name="HealBot_Options_Panel1" hidden="true" setAllPoints="true">
+        <Frames>
+      <Slider name="HealBot_Options_ActionAlpha" inherits="HealBot_Options_SliderTemplate">
+        <Anchors>
+          <Anchor point="TOP">
+            <Offset>
+              <AbsDimension x="0" y="-50" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_Pct_OnLoad(this,HEALBOT_OPTIONS_ACTIONALPHA)</OnLoad> 
+          <OnValueChanged>HealBot_Options_ActionAlpha_OnValueChanged(this)</OnValueChanged> 
+        </Scripts>
+      </Slider>
+      <CheckButton name="HealBot_Options_ActionLocked" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_ActionAlpha" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="-15" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_ActionLocked_OnLoad(this)</OnLoad> 
+          <OnClick>HealBot_Options_ActionLocked_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_GrowUpwards" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_ActionLocked" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="5" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_GrowUpwards_OnLoad(this,HEALBOT_OPTIONS_GROWUPWARDS)</OnLoad> 
+          <OnClick>HealBot_Options_GrowUpwards_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_AutoShow" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_GrowUpwards" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="5" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_AutoShow_OnLoad(this)</OnLoad> 
+          <OnClick>HealBot_Options_AutoShow_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_PanelSounds" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_AutoShow" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="5" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_PanelSounds_OnLoad(this)</OnLoad> 
+          <OnClick>HealBot_Options_PanelSounds_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <Slider name="HealBot_Options_AlertSeconds" inherits="HealBot_Options_SliderTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_PanelSounds" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="-15" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_AlertSeconds_OnLoad(this)</OnLoad> 
+          <OnValueChanged>HealBot_Options_AlertSeconds_OnValueChanged(this)</OnValueChanged> 
+        </Scripts>
+      </Slider>
+      <CheckButton name="HealBot_Options_ShowTooltip" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_AlertSeconds" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="-15" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_ShowTooltip_OnLoad(this,HEALBOT_OPTIONS_SHOWTOOLTIP)</OnLoad> 
+          <OnClick>HealBot_Options_ShowTooltip_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_HideOptions" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_ShowTooltip" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="5" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_HideOptions_OnLoad(this,HEALBOT_OPTIONS_HIDEOPTIONS)</OnLoad> 
+          <OnClick>HealBot_Options_HideOptions_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_IntegratePMF" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_HideOptions" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="5" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_IntegratePMF_OnLoad(this,HEALBOT_OPTIONS_INTEGRATEPMF)</OnLoad> 
+          <OnClick>HealBot_Options_IntegratePMF_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_IntegrateCTRA" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_IntegratePMF" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="5" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_IntegrateCTRA_OnLoad(this,HEALBOT_OPTIONS_INTEGRATECTRA)</OnLoad> 
+          <OnClick>HealBot_Options_IntegrateCTRA_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_ToggleAltUse" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_IntegrateCTRA" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="5" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_ToggleAltUse_OnLoad(this,HEALBOT_OPTIONS_TOGGLEALTUSE)</OnLoad> 
+          <OnClick>HealBot_Options_ToggleAltUse_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_ProtectPvP" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_ToggleAltUse" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="5" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_ProtectPvP_OnLoad(this,HEALBOT_OPTIONS_PROTECTPVP)</OnLoad> 
+          <OnClick>HealBot_Options_ProtectPvP_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+        </Frames>
+      </Frame>
+      <Frame name="HealBot_Options_Panel2" hidden="true" setAllPoints="true">
+        <Frames>
+      <Frame name="HealBot_Options_Spells" inherits="OptionFrameBoxTemplate">
+        <Size>
+          <AbsDimension y="270"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="30" y="-35"/>
+            </Offset>
+          </Anchor>
+          <Anchor point="TOPRIGHT">
+            <Offset>
+              <AbsDimension x="-30" y="-35"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+	<Frames>
+      <CheckButton name="HealBot_Options_UseHealing1" inherits="OptionsCheckButtonTemplate">
+        <Size>
+          <AbsDimension x="26" y="26"/>
+        </Size>
+       <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="10" y="-5" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_UseHealing_OnLoad(this,HEALBOT_FLASH_HEAL)</OnLoad> 
+          <OnClick>HealBot_Options_UseHealing_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_UseHealing2" inherits="OptionsCheckButtonTemplate">
+        <Size>
+          <AbsDimension x="26" y="26"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_UseHealing1" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="8" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_UseHealing_OnLoad(this,HEALBOT_FLASH_OF_LIGHT)</OnLoad> 
+          <OnClick>HealBot_Options_UseHealing_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_UseHealing3" inherits="OptionsCheckButtonTemplate">
+        <Size>
+          <AbsDimension x="26" y="26"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_UseHealing2" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="8" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_UseHealing_OnLoad(this,HEALBOT_GREATER_HEAL)</OnLoad> 
+          <OnClick>HealBot_Options_UseHealing_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_UseHealing4" inherits="OptionsCheckButtonTemplate">
+        <Size>
+          <AbsDimension x="26" y="26"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_UseHealing3" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="8" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_UseHealing_OnLoad(this,HEALBOT_HEALING_TOUCH)</OnLoad> 
+          <OnClick>HealBot_Options_UseHealing_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_UseHealing5" inherits="OptionsCheckButtonTemplate">
+        <Size>
+          <AbsDimension x="26" y="26"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_UseHealing4" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="8" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_UseHealing_OnLoad(this,HEALBOT_HEAL)</OnLoad> 
+          <OnClick>HealBot_Options_UseHealing_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_UseHealing6" inherits="OptionsCheckButtonTemplate">
+        <Size>
+          <AbsDimension x="26" y="26"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_UseHealing5" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="8" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_UseHealing_OnLoad(this,HEALBOT_HEALING_WAVE)</OnLoad> 
+          <OnClick>HealBot_Options_UseHealing_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_UseHealing7" inherits="OptionsCheckButtonTemplate">
+        <Size>
+          <AbsDimension x="26" y="26"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_UseHealing6" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="8" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_UseHealing_OnLoad(this,HEALBOT_HOLY_LIGHT)</OnLoad> 
+          <OnClick>HealBot_Options_UseHealing_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_UseHealing8" inherits="OptionsCheckButtonTemplate">
+        <Size>
+          <AbsDimension x="26" y="26"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_UseHealing7" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="8" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_UseHealing_OnLoad(this,HEALBOT_LESSER_HEAL)</OnLoad> 
+          <OnClick>HealBot_Options_UseHealing_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_UseHealing9" inherits="OptionsCheckButtonTemplate">
+        <Size>
+          <AbsDimension x="26" y="26"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_UseHealing8" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="8" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_UseHealing_OnLoad(this,HEALBOT_LESSER_HEALING_WAVE)</OnLoad> 
+          <OnClick>HealBot_Options_UseHealing_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_UseHealing10" inherits="OptionsCheckButtonTemplate">
+        <Size>
+          <AbsDimension x="26" y="26"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_UseHealing9" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="8" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_UseHealing_OnLoad(this,HEALBOT_MEND_PET)</OnLoad> 
+          <OnClick>HealBot_Options_UseHealing_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_UseHealing11" inherits="OptionsCheckButtonTemplate">
+        <Size>
+          <AbsDimension x="26" y="26"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_UseHealing10" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="8" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_UseHealing_OnLoad(this,HEALBOT_POWER_WORD_SHIELD)</OnLoad> 
+          <OnClick>HealBot_Options_UseHealing_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_UseHealing12" inherits="OptionsCheckButtonTemplate">
+        <Size>
+          <AbsDimension x="26" y="26"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_UseHealing11" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="8" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_UseHealing_OnLoad(this,HEALBOT_REGROWTH)</OnLoad> 
+          <OnClick>HealBot_Options_UseHealing_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_UseHealing13" inherits="OptionsCheckButtonTemplate">
+        <Size>
+          <AbsDimension x="26" y="26"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_UseHealing12" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="8" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_UseHealing_OnLoad(this,HEALBOT_RENEW)</OnLoad> 
+          <OnClick>HealBot_Options_UseHealing_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_UseHealing14" inherits="OptionsCheckButtonTemplate">
+        <Size>
+          <AbsDimension x="26" y="26"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_UseHealing13" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="8" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_UseHealing_OnLoad(this,HEALBOT_REJUVENATION)</OnLoad> 
+          <OnClick>HealBot_Options_UseHealing_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+        </Frames>
+      </Frame>
+      <Frame name="HealBot_Options_Items" inherits="OptionFrameBoxTemplate">
+        <Size>
+          <AbsDimension y="72"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_Spells" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="0" /> 
+            </Offset>
+          </Anchor>
+          <Anchor point="TOPRIGHT" relativeTo="HealBot_Options_Spells" relativePoint="BOTTOMRIGHT">
+            <Offset>
+              <AbsDimension x="0" y="0" /> 
+            </Offset>
+          </Anchor> 
+        </Anchors>
+	<Frames>
+      <CheckButton name="HealBot_Options_UseHealing15" inherits="OptionsCheckButtonTemplate">
+        <Size>
+          <AbsDimension x="26" y="26"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="10" y="-5" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_UseHealing_OnLoad(this,HEALBOT_BANDAGES)</OnLoad> 
+          <OnClick>HealBot_Options_UseHealing_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_UseHealing16" inherits="OptionsCheckButtonTemplate">
+        <Size>
+          <AbsDimension x="26" y="26"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_UseHealing15" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="8" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_UseHealing_OnLoad(this,HEALBOT_HEALING_POTIONS)</OnLoad> 
+          <OnClick>HealBot_Options_UseHealing_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_UseHealing17" inherits="OptionsCheckButtonTemplate">
+        <Size>
+          <AbsDimension x="26" y="26"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_UseHealing16" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="8" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_UseHealing_OnLoad(this,HEALBOT_HEALTHSTONES)</OnLoad> 
+          <OnClick>HealBot_Options_UseHealing_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+        </Frames>
+      </Frame>
+        </Frames>
+      </Frame>
+
+      <Frame name="HealBot_Options_Panel3" hidden="true" setAllPoints="true">
+        <Frames>
+      <Slider name="HealBot_Options_Dummy" hidden="true" inherits="HealBot_Options_SliderTemplate">
+        <Anchors>
+          <Anchor point="TOP">
+            <Offset>
+              <AbsDimension x="0" y="-10" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </Slider>
+      <Frame name="HealBot_Options_ComboClass" inherits="UIDropDownMenuTemplate" id="1">
+        <Anchors>
+          <Anchor point="TOPRIGHT" relativeTo="HealBot_Options_Dummy" relativePoint="BOTTOMRIGHT">
+            <Offset>
+              <AbsDimension x="0" y="-15" /> 
+            </Offset>
+          </Anchor>
+       </Anchors>
+        <Layers>
+          <Layer level="OVERLAY">
+            <FontString inherits="GameFontNormalSmall" text="HEALBOT_OPTIONS_COMBOCLASS">
+              <Anchors>
+                <Anchor point="TOPLEFT" relativeTo="HealBot_Options_Dummy" relativePoint="TOPLEFT">
+                  <Offset>
+                    <AbsDimension x="0" y="-39"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </FontString>
+          </Layer>
+        </Layers>
+	<Scripts>
+          <OnLoad>
+             HealBot_Options_ComboClass_OnLoad(this)
+          </OnLoad>
+	</Scripts>
+      </Frame>
+      <EditBox name="HealBot_Options_ShiftLeft" inherits="HealBot_Options_EditBoxTemplate">
+        <Anchors>
+          <Anchor point="TOPRIGHT" relativeTo="HealBot_Options_ComboClass" relativePoint="BOTTOMRIGHT">
+            <Offset>
+              <AbsDimension x="0" y="-15"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>
+            HealBot_Options_EditBox_OnLoad(this,HEALBOT_OPTIONS_SHIFTLEFT)
+          </OnLoad>
+          <OnTextChanged>
+            HealBot_Options_ShiftLeft_OnTextChanged(this)            
+          </OnTextChanged>
+        </Scripts>
+      </EditBox>
+      <EditBox name="HealBot_Options_CtrlLeft" inherits="HealBot_Options_EditBoxTemplate">
+        <Anchors>
+          <Anchor point="TOPRIGHT" relativeTo="HealBot_Options_ShiftLeft" relativePoint="BOTTOMRIGHT">
+            <Offset>
+              <AbsDimension x="0" y="-20"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>
+            HealBot_Options_EditBox_OnLoad(this,HEALBOT_OPTIONS_CTRLLEFT)
+          </OnLoad>
+          <OnTextChanged>
+            HealBot_Options_CtrlLeft_OnTextChanged(this)            
+          </OnTextChanged>
+        </Scripts>
+      </EditBox>
+      <EditBox name="HealBot_Options_ShiftCtrlLeft" inherits="HealBot_Options_EditBoxTemplate">
+        <Anchors>
+          <Anchor point="TOPRIGHT" relativeTo="HealBot_Options_CtrlLeft" relativePoint="BOTTOMRIGHT">
+            <Offset>
+              <AbsDimension x="0" y="-20"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>
+            HealBot_Options_EditBox_OnLoad(this,HEALBOT_OPTIONS_SHIFTCTRLLEFT)
+          </OnLoad>
+          <OnTextChanged>
+            HealBot_Options_ShiftCtrlLeft_OnTextChanged(this)            
+          </OnTextChanged>
+        </Scripts>
+      </EditBox>
+      <CheckButton name="HealBot_Options_EnableHealthy" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_ShiftCtrlLeft" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="-20" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_EnableHealthy_OnLoad(this,HEALBOT_OPTIONS_ENABLEHEALTHY)</OnLoad> 
+          <OnClick>HealBot_Options_EnableHealthy_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+        </Frames>
+      </Frame>
+
+      <Frame name="HealBot_Options_Panel4" hidden="true" setAllPoints="true">
+        <Frames>
+      <Frame name="HealBot_Options_Chat" inherits="OptionFrameBoxTemplate">
+        <Size>
+          <AbsDimension y="100"/>
+        </Size>
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="30" y="-35"/>
+            </Offset>
+          </Anchor>
+          <Anchor point="TOPRIGHT">
+            <Offset>
+              <AbsDimension x="-30" y="-35"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+	<Frames>
+      <CheckButton name="HealBot_Options_CastNotify1" inherits="SendMailRadioButtonTemplate" id="1">
+        <Anchors>
+	  <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="10" y="-10"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_CastNotify_OnLoad(this,HEALBOT_OPTIONS_CASTNOTIFY1)</OnLoad>
+          <OnClick>HealBot_Options_CastNotify_OnClick(this,this:GetID())</OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_CastNotify2" inherits="SendMailRadioButtonTemplate" id="2">
+        <Anchors>
+	  <Anchor point="TOPLEFT" relativeTo="HealBot_Options_CastNotify1" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_CastNotify_OnLoad(this,HEALBOT_OPTIONS_CASTNOTIFY2)</OnLoad>
+          <OnClick>HealBot_Options_CastNotify_OnClick(this,this:GetID())</OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_CastNotify3" inherits="SendMailRadioButtonTemplate" id="3">
+        <Anchors>
+	  <Anchor point="TOPLEFT" relativeTo="HealBot_Options_CastNotify2" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_CastNotify_OnLoad(this,HEALBOT_OPTIONS_CASTNOTIFY3)</OnLoad>
+          <OnClick>HealBot_Options_CastNotify_OnClick(this,this:GetID())</OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_CastNotify4" inherits="SendMailRadioButtonTemplate" id="4">
+        <Anchors>
+	  <Anchor point="TOPLEFT" relativeTo="HealBot_Options_CastNotify3" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_CastNotify_OnLoad(this,HEALBOT_OPTIONS_CASTNOTIFY4)</OnLoad>
+          <OnClick>HealBot_Options_CastNotify_OnClick(this,this:GetID())</OnClick>
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_CastNotify5" inherits="SendMailRadioButtonTemplate" id="5">
+        <Anchors>
+	  <Anchor point="TOPLEFT" relativeTo="HealBot_Options_CastNotify4" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="0"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_CastNotify_OnLoad(this,HEALBOT_OPTIONS_CASTNOTIFY5)</OnLoad>
+          <OnClick>HealBot_Options_CastNotify_OnClick(this,this:GetID())</OnClick>
+        </Scripts>
+      </CheckButton>
+        </Frames>
+      </Frame>
+        </Frames>
+      </Frame>
+
+      <Frame name="HealBot_Options_Panel5" hidden="true" setAllPoints="true">
+        <Frames>
+      <CheckButton name="HealBot_Options_GroupHeals" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT">
+            <Offset>
+              <AbsDimension x="40" y="-35" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_GroupHeals_OnLoad(this,HEALBOT_OPTIONS_GROUPHEALS)</OnLoad> 
+          <OnClick>HealBot_Options_GroupHeals_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_TankHeals" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_GroupHeals" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="5" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_TankHeals_OnLoad(this,HEALBOT_OPTIONS_TANKHEALS)</OnLoad> 
+          <OnClick>HealBot_Options_TankHeals_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_TargetHeals" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_TankHeals" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="5" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_TargetHeals_OnLoad(this,HEALBOT_OPTIONS_TARGETHEALS)</OnLoad> 
+          <OnClick>HealBot_Options_TargetHeals_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <CheckButton name="HealBot_Options_EmergencyHeals" inherits="OptionsCheckButtonTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_TargetHeals" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="5" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_EmergencyHeals_OnLoad(this,HEALBOT_OPTIONS_EMERGENCYHEALS)</OnLoad> 
+          <OnClick>HealBot_Options_EmergencyHeals_OnClick(this)</OnClick> 
+        </Scripts>
+      </CheckButton>
+      <Slider name="HealBot_Options_HealthPct" inherits="HealBot_Options_SliderTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_EmergencyHeals" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="-15" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_Pct_OnLoad(this,HEALBOT_OPTIONS_HEALLEVEL)</OnLoad> 
+          <OnValueChanged>HealBot_Options_HealthPct_OnValueChanged(this)</OnValueChanged> 
+        </Scripts>
+      </Slider>
+      <Slider name="HealBot_Options_AlertLevel" inherits="HealBot_Options_SliderTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_HealthPct" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="-30" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_Pct_OnLoad(this,HEALBOT_OPTIONS_ALERTLEVEL)</OnLoad> 
+          <OnValueChanged>HealBot_Options_AlertLevel_OnValueChanged(this)</OnValueChanged> 
+        </Scripts>
+      </Slider>
+      <Slider name="HealBot_Options_EmergencyLevel" inherits="HealBot_Options_SliderTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_AlertLevel" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="-30" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_Pct_OnLoad(this,HEALBOT_OPTIONS_EMERGENCYLEVEL)</OnLoad> 
+          <OnValueChanged>HealBot_Options_EmergencyLevel_OnValueChanged(this)</OnValueChanged> 
+        </Scripts>
+      </Slider>
+      <Slider name="HealBot_Options_ManaReserve" inherits="HealBot_Options_SliderTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_EmergencyLevel" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="-30" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_Pct_OnLoad(this,HEALBOT_OPTIONS_MANARESERVE)</OnLoad> 
+          <OnValueChanged>HealBot_Options_ManaReserve_OnValueChanged(this)</OnValueChanged> 
+        </Scripts>
+      </Slider>
+      <Slider name="HealBot_Options_HealingUsage" inherits="HealBot_Options_SliderTemplate">
+        <Anchors>
+          <Anchor point="TOPLEFT" relativeTo="HealBot_Options_ManaReserve" relativePoint="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="0" y="-30" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnLoad>HealBot_Options_Pct_OnLoad(this,HEALBOT_OPTIONS_HEALINGUSAGE)</OnLoad> 
+          <OnValueChanged>HealBot_Options_HealingUsage_OnValueChanged(this)</OnValueChanged> 
+        </Scripts>
+      </Slider>
+      <Frame name="HealBot_Options_EmergencySort" inherits="UIDropDownMenuTemplate" id="1">
+        <Anchors>
+          <Anchor point="TOPRIGHT" relativeTo="HealBot_Options_HealingUsage" relativePoint="BOTTOMRIGHT">
+            <Offset>
+              <AbsDimension x="15" y="-15" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Layers>
+          <Layer level="OVERLAY">
+            <FontString inherits="GameFontNormalSmall" text="HEALBOT_OPTIONS_EMERGENCYSORT">
+              <Anchors>
+                <Anchor point="TOPLEFT" relativeTo="HealBot_Options_HealingUsage" relativePoint="BOTTOMLEFT">
+                  <Offset>
+                    <AbsDimension x="0" y="-22"/>
+                  </Offset>
+                </Anchor>
+              </Anchors>
+            </FontString>
+          </Layer>
+        </Layers>
+	<Scripts>
+          <OnLoad>
+             HealBot_Options_EmergencySort_OnLoad(this)
+          </OnLoad>
+	</Scripts>
+      </Frame>
+        </Frames>
+      </Frame>
+      <Button name="HealBot_Options_Defaults" inherits="UIPanelButtonTemplate" text="HEALBOT_OPTIONS_DEFAULTS">
+        <Size>
+          <AbsDimension x="80" y="22"/>
+        </Size>
+        <Anchors>
+          <Anchor point="BOTTOM" relativePoint="BOTTOM">
+            <Offset>
+              <AbsDimension x="-50" y="15"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>HealBot_Options_Defaults_OnClick(this)</OnClick> 
+        </Scripts>
+      </Button>
+      <Button name="HealBot_Options_CloseButton" inherits="UIPanelButtonTemplate" text="HEALBOT_OPTIONS_CLOSE">
+        <Size>
+          <AbsDimension x="80" y="22"/>
+        </Size>
+        <Anchors>
+          <Anchor point="BOTTOM" relativePoint="BOTTOM">
+            <Offset>
+              <AbsDimension x="50" y="15"/>
+            </Offset>
+          </Anchor>
+        </Anchors>
+        <Scripts>
+          <OnClick>
+            HideUIPanel(this:GetParent());
+          </OnClick>
+        </Scripts>
+      </Button>
+      <Button name="HealBot_OptionsTab1" inherits="HealBot_Options_Tab" id="1" text="HEALBOT_OPTIONS_TAB_GENERAL">
+        <Anchors>
+          <Anchor point="BOTTOMLEFT">
+            <Offset>
+              <AbsDimension x="11" y="-25" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </Button>
+      <Button name="HealBot_OptionsTab2" inherits="HealBot_Options_Tab" id="2" text="HEALBOT_OPTIONS_TAB_SPELLS">
+        <Anchors>
+          <Anchor point="LEFT" relativeTo="HealBot_OptionsTab1" relativePoint="RIGHT">
+            <Offset>
+              <AbsDimension x="-14" y="0" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </Button>
+      <Button name="HealBot_OptionsTab3" inherits="HealBot_Options_Tab" id="3" text="HEALBOT_OPTIONS_TAB_KEYS">
+        <Anchors>
+          <Anchor point="LEFT" relativeTo="HealBot_OptionsTab2" relativePoint="RIGHT">
+            <Offset>
+              <AbsDimension x="-14" y="0" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </Button>
+      <Button name="HealBot_OptionsTab4" inherits="HealBot_Options_Tab" id="4" text="HEALBOT_OPTIONS_TAB_CHAT">
+        <Anchors>
+          <Anchor point="LEFT" relativeTo="HealBot_OptionsTab3" relativePoint="RIGHT">
+            <Offset>
+              <AbsDimension x="-14" y="0" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </Button>
+      <Button name="HealBot_OptionsTab5" inherits="HealBot_Options_Tab" id="5" text="HEALBOT_OPTIONS_TAB_HEALING">
+        <Anchors>
+          <Anchor point="LEFT" relativeTo="HealBot_OptionsTab4" relativePoint="RIGHT">
+            <Offset>
+              <AbsDimension x="-14" y="0" /> 
+            </Offset>
+          </Anchor>
+        </Anchors>
+      </Button>
+    </Frames>
+    <Scripts>
+       <OnLoad>HealBot_Options_OnLoad(this);</OnLoad>
+       <OnShow>HealBot_Options_OnShow(this);</OnShow>
+    </Scripts>
+  </Frame>
+</Ui>

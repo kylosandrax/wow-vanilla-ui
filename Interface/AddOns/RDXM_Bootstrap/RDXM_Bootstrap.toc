@@ -1,0 +1,5 @@
+## Interface: 11200
+## Title: RDX - Bootstrap Editor
+## Author: Hektar of Shadowmoon
+## Dependencies: RDX
+RDXM_Bootstrap.xml
