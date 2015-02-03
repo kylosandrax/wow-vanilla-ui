@@ -1,0 +1,2 @@
+
+AucAdvancedStatClassicData = nil

@@ -1,0 +1,3 @@
+
+AucAdvancedConfig = nil
+AucAdvancedData = nil

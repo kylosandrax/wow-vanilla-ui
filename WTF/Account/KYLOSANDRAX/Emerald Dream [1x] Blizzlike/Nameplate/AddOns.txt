@@ -1,0 +1,7 @@
+!ViroUI: disabled
+DiscordUnitFrames: disabled
+DiscordUnitFramesOptions: disabled
+DiscordLibrary: enabled
+CooldownHud: disabled
+DiscordArt: enabled
+!ClearFont: disabled

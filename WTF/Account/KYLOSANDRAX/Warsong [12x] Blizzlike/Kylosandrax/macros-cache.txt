@@ -1,0 +1,37 @@
+MACRO 16777226 "BT" Ability_HeroicLeap
+/script AttackTarget();
+END
+MACRO 16777220 "Def-Charge" Ability_Monk_TouchofKarma
+/cast Charge
+/cast Defensive Stance
+END
+MACRO 16777225 "Intercept" Ability_Rogue_Sprint
+/script texture,name,isActive,isCastable = GetShapeshiftFormInfo(3); if isActive then CastSpellByName("Intercept(Rank 3)"); else CastSpellByName("Berserker Stance()"); end;
+END
+MACRO 16777221 "Overpower" Ability_MeleeDamage
+/script t,n,isActive,c = GetShapeshiftFormInfo(1); if isActive then CastSpellByName("Overpower(Rank 4)"); else CastSpellByName("Battle Stance()"); end;
+END
+MACRO 16777219 "Rend" Ability_Gouge
+/script AttackTarget();
+/cast Rend()
+END
+MACRO 16777223 "Rev-SB" Ability_Warrior_Revenge
+/Cast Shield Block()
+/Cast Revenge()
+END
+MACRO 16777218 "Stance-Spell" Ability_Creature_Amber_01
+/script t,n,b,c = GetShapeshiftFormInfo(1); t,n,d,c = GetShapeshiftFormInfo(2); if b then CastSpellByName("Overpower()"); elseif d then CastSpellByName("Revenge()"); else CastSpellByName("Whirlwind()"); end;
+END
+MACRO 16777224 "Zerk-Charge" ability_deathwing_bloodcorruption_death
+/cast Battle Stance
+/cast Charge
+/cast Berserker Stance
+END
+MACRO 16777222 "Zerker-Charge" Ability_Monk_TouchOfDeath
+/cast Charge
+/cast Berserker Stance
+/cast Battle Stance
+END
+MACRO 16777227 "Zerker-Rage" Ability_Warrior_FocusedRage
+/script texture,name,isActive,isCastable = GetShapeshiftFormInfo(3); if isActive then CastSpellByName("Berserker Rage"); else CastSpellByName("Berserker Stance()"); end;
+END

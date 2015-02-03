@@ -1,0 +1,48 @@
+MACRO 13 "Bijou" Ability_Druid_Typhoon
+/use Bronze Hakkari Bijou
+/use Purple Hakkari Bijou
+/use Orange Hakkari Bijou
+/use Yellow Hakkari Bijou
+/use Gold Hakkari Bijou
+/use Blue Hakkari Bijou
+/use Silver Hakkari Bijou
+/use Red Hakkari Bijou
+/use Green Hakkari Bijou
+/use Zandalar Honor Token
+END
+MACRO 8 "Decurse" Ability_Creature_Cursed_03
+/decursive
+END
+MACRO 3 "MaxView" Ability_CheapShot
+/script SetCVar ("cameraDistancemax" ,60)
+END
+MACRO 2 "PetFinder" Ability_Ambush
+/target "The Rake"
+END
+MACRO 12 "QH-Tanks" Ability_Creature_Cursed_01
+/qh mt
+END
+MACRO 11 "QHGRP" Ability_DeathKnight_Asphixiate
+/qh subgroup
+END
+MACRO 9 "Quester" Ability_Creature_Disease_05
+/run SelectGossipActiveQuest(1)
+END
+MACRO 4 "QuickHeal" TalentSpec_Druid_Restoration
+/qh
+END
+MACRO 1 "Sell-Crap" Ability_Creature_Amber_02
+/script for bag = 0,4,1 do for slot = 1, GetContainerNumSlots(bag), 1 do local name = GetContainerItemLink(bag,slot); if name and string.find(name,"ff9d9d9d") then DEFAULT_CHAT_FRAME:AddMessage("Selling "..name); UseContainerItem(bag,slot) end; end; end
+END
+MACRO 10 "TurnIn" Warrior_DisruptingShout
+/turnin toggle 
+END
+MACRO 5 "Unstuck" Ability_Creature_Cursed_04
+/script Stuck()
+END
+MACRO 7 "Zorlen Drink" Spell_Misc_Drink
+/zorlen drink
+END
+MACRO 6 "Zorlen Eat" Spell_Misc_Food
+/zorlen eat
+END

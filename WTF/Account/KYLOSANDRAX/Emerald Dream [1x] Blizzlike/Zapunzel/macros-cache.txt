@@ -1,0 +1,39 @@
+MACRO 16777220 "Autopilot" Achievement_Cooking_PandarianMasterChef
+/script i=1;m=0;while(UnitBuff("player",i)~=nil) do if(strfind(UnitBuff("player",i), "Spell_Shadow_ManaBurn") ~=nil) then m=1; end; i=i+1;end; c=CastSpellByName; if(m==1) then c("Arcane Missiles"); else c("Frostbolt"); end;
+END
+MACRO 16777218 "Blink" Achievement_BG_captureflag_EOS
+/script SpellStopCasting()
+/cast Blink
+END
+MACRO 16777217 "Counterspell" Ability_Creature_Cursed_04
+/script SpellStopCasting()
+/cast Counterspell
+END
+MACRO 16777225 "CrapWaterTrader" Ability_Vehicle_ShellShieldGenerator
+/run for b=0,4 do for s=1,GetContainerNumSlots(:) do local n=GetContainerItemLink(b,s) if n and string.find(n,"Conjured Sparkling Water") then PickupContainerItem(b,s); DropItemOnUnit("target"); AcceptTrade(); break; end; end; end;
+END
+MACRO 16777226 "FBWC" inv_misc_uncutgemsuperior6
+/script SpellStopCasting()
+/cast Frostbolt(Rank 1)
+END
+MACRO 16777224 "GemMaker" Ability_Miling
+/script local c=function(a) local f,d a="Mana "..a for i=0,4 do for k=1,GetContainerNumSlots(i) do d=GetContainerItemLink(i,k) or "" if strfind(d,a) then f = 1 end end end if not f then CastSpellByName("Conjure "..a) end end c "Ruby" c "Citrine" c "Jade" 
+END
+MACRO 16777223 "IceBlock" Spell_Frost_Frost
+/script SpellStopCasting()
+/cast Ice Block
+END
+MACRO 16777219 "MageTrader" Achievement_Cooking_MasterofthePot
+/run for b=0,4 do for s=1,GetContainerNumSlots(:) do local n=GetContainerItemLink(b,s) if n and string.find(n,"Conjured Crystal Water") then PickupContainerItem(b,s); DropItemOnUnit("target"); AcceptTrade(); break; end; end; end;
+END
+MACRO 16777222 "ManaGem" Ability_Mage_ConjureWater11
+/run local c=function(a) local d a="Mana "..a for i=0,4 do for k=1,GetContainerNumSlots(i) do d=GetContainerItemLink(i,k) or "" if strfind(d,a) then UseContainerItem(i,k) end end end end c "Ruby" c "Citrine" c "Jade" c "Agate"
+END
+MACRO 16777221 "Uber!" Ability_Creature_Amber_01
+/run SpellStopCasting()
+/script UseInventoryItem(13)
+/run SpellStopCasting()
+/script UseInventoryItem(14)
+/run SpellStopCasting()
+/cast Arcane Power
+END

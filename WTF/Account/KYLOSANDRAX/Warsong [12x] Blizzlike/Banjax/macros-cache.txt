@@ -1,0 +1,39 @@
+MACRO 16777228 "Combat-Trap" Ability_Hunter_GlacialTrap
+/script local i=0 g=GetPlayerBuff while not (g(i) == -1) do if(strfind(GetPlayerBuffTexture(g(i)), "Ability_Rogue_FeignDeath"))then CancelPlayerBuff(g(i))end i = i + 1; end
+/script PetFollow(); PetPassiveMode(); ClearTarget();
+/cast Freezing trap
+END
+MACRO 16777227 "Finder" Ability_CheapShot
+/target scarlet spellbinder
+END
+MACRO 16777225 "Pet-Go" Ability_Druid_SkinTeeth
+/script PetAttack()
+END
+MACRO 16777226 "Pet-Stop" Ability_Druid_HealingInstincts
+/script PetPassiveMode()
+/script PetFollow()
+END
+MACRO 16777222 "z Call Pet" Ability_Hunter_BeastCall
+/script castCallAndDismissPet()--CastSpellByName("Call Pet")
+END
+MACRO 16777220 "z ExplosiveTrap" Spell_Fire_SelfDestruct
+/script castExplosiveTrap()--CastSpellByName("Explosive Trap")
+END
+MACRO 16777218 "z FreezingTrap" Spell_Frost_ChainsOfIce
+/script castFreezingTrapWithPetPassive()--CastSpellByName("Freezing Trap")
+END
+MACRO 16777219 "z FrostTrap" Spell_Frost_FreezingBreath
+/script castFrostTrap()--CastSpellByName("Frost Trap")
+END
+MACRO 16777221 "z ImmolationTrap" Spell_Fire_FlameShock
+/script castImmolationTrap()--CastSpellByName("Immolation Trap")
+END
+MACRO 16777217 "z Mend Pet" Ability_Hunter_MendPet
+/script if not needPet()then castOverMend()end--CastSpellByName("Mend Pet(Rank 1)")
+END
+MACRO 16777223 "z Shot Rotation" Ability_Ambush
+/script local a=Zorlen_TargetIsActiveEnemy()if a or Zorlen_isEnemyPlayer()then if a then castAutoShot()end if not a or not castSting()then castShotRotation()end else Zorlen_TargetActiveEnemyOnly()end--CastSpellByName("Aimed Shot")
+END
+MACRO 16777224 "z Wyvern Sting" Ability_Rogue_DualWeild
+/script castWyvernSting()--CastSpellByName("Wyvern Sting")
+END

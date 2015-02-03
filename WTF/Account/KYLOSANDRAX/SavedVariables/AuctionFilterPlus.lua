@@ -1,0 +1,2 @@
+
+afp_SavedSettings = nil

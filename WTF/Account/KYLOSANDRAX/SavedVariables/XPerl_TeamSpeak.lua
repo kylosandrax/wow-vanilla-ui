@@ -1,0 +1,4 @@
+
+XPerlTeamSpeak = {
+	["Anchor"] = "TOPLEFT",
+}

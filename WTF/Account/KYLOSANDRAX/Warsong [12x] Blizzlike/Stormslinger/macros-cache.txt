@@ -1,0 +1,26 @@
+MACRO 16777219 "1000" Spell_Nature_MagicImmunity
+/cmcast Healing Wave(Rank 6)
+END
+MACRO 16777221 "1500" Spell_Nature_ResistMagic
+/cmcast Healing Wave(Rank 8)
+END
+MACRO 16777217 "500" Spell_Nature_MagicImmunity
+/cmcast Healing Wave(Rank 4)
+END
+MACRO 16777226 "CHR3" Ability_Creature_Disease_04
+/cmcast Chain Heal(Rank 3)
+END
+MACRO 16777225 "CHRX" Ability_Druid_NaturalPerfection
+/cmcast Chain Heal(Rank 1)
+END
+MACRO 16777224 "HWR1" Ability_Druid_Cyclone
+/cmcast Healing Wave(Rank 1)
+END
+MACRO 16777227 "Res" Ability_Druid_Dreamstate
+/castAncestral Spirit
+/script SendChatMessage("Resurrecting "..UnitName("target")..".")
+END
+MACRO 16777223 "UberHeal" Ability_Hunter_OneWithNature
+/cast Nature's Swiftness
+/cast Healing Wave(Rank 9)
+END

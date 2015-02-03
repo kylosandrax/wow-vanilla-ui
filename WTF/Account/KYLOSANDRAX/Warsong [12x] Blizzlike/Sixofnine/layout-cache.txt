@@ -1,0 +1,12 @@
+Frame: ItemRefTooltip
+FrameLevel: 10
+X: 745
+Y: -634
+Frame: DefendYourselfPanicBar
+FrameLevel: 2
+X: 1103
+Y: -1010
+Frame: KLHTM_Frame
+FrameLevel: 1
+X: 1328
+Y: -510
