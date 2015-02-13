@@ -15,7 +15,7 @@ FrameLevel: 15
 X: 1284
 Y: -685
 Frame: ATSWFrame
-FrameLevel: 48
+FrameLevel: 38
 X: 354
 Y: -102
 Frame: ATSWCSFrame
@@ -72,7 +72,7 @@ X: 1037
 Y: -1024
 Frame: FuBarPluginMetaMapFrame
 FrameLevel: 7
-X: 882
+X: 606
 Y: 4
 Frame: PowaBarConfigFrame
 FrameLevel: 1
@@ -80,8 +80,8 @@ X: 873
 Y: -135
 Frame: PowaListFrame
 FrameLevel: 1
-X: 1861
-Y: -100
+X: 1199
+Y: -133
 Frame: RecapFrame
 FrameLevel: 1
 X: 2184
@@ -158,8 +158,8 @@ X: 1140
 Y: -903
 Frame: TrinketMenu_MenuFrame
 FrameLevel: 34
-X: 1180
-Y: -824
+X: 1140
+Y: -703
 Frame: TrinketMenu_OptFrame
 FrameLevel: 27
 X: 697

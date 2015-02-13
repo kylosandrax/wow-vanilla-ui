@@ -2,7 +2,7 @@
 VanillaGuideDBPC = {
 	["global"] = {
 		["GuideValues"] = {
-			["GuideID"] = 52,
+			["GuideID"] = 59,
 		},
 		["UI"] = {
 			["MainFrameAnchor"] = {

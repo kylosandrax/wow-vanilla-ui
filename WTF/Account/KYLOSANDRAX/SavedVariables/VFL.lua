@@ -1,12 +1,18 @@
 
 VFLModuleData = {
-	["Fonts"] = {
+	["RPC"] = {
 	},
 	["VFLS"] = {
 	},
-	["VFL"] = {
-	},
 	["Root"] = {
+	},
+	["RDX"] = {
+	},
+	["Fonts"] = {
+	},
+	["HOT"] = {
+	},
+	["VFL"] = {
 	},
 	["VFLUI"] = {
 	},

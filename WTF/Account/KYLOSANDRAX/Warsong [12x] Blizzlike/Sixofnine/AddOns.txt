@@ -96,7 +96,7 @@ TinyTip: enabled
 TinyTipExtras: enabled
 TinyTipOptions: enabled
 TotemTimers: enabled
-VanillaGuide: enabled
+VanillaGuide: disabled
 WeaponQuickSwap: disabled
 XLoot: enabled
 CustomNameplates: enabled

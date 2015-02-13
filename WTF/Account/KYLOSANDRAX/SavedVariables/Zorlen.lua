@@ -61,9 +61,9 @@ ZorlenConfig = {
 				["Skeletal Highborne"] = "yes",
 				["Skeletal Sorcerer"] = "yes",
 				["Skeletal Guardian"] = "yes",
-				["Gurubashi Champion"] = "yes",
-				["Ravaged Cadaver"] = "yes",
 				["Black Guard Sentry"] = "yes",
+				["Ravaged Cadaver"] = "yes",
+				["Gurubashi Champion"] = "yes",
 			},
 			["Concussion Blow"] = {
 				["Lord Incendius"] = "yes",
@@ -93,9 +93,9 @@ ZorlenConfig = {
 				["Gurubashi Axe Thrower"] = "yes",
 				["General Angerforge"] = "yes",
 				["Baron Rivendare"] = "yes",
-				["Illyanna Ravenoak"] = "yes",
-				["Gurubashi Champion"] = "yes",
 				["Cho'Rush the Observer"] = "yes",
+				["Gurubashi Champion"] = "yes",
+				["Illyanna Ravenoak"] = "yes",
 				["King Gordok"] = "yes",
 			},
 			["Disarm"] = {
@@ -168,6 +168,25 @@ ZorlenConfig = {
 		},
 		["food_off"] = true,
 		["Immune"] = {
+			["Hammer of Justice"] = {
+				["Ambassador Flamelash"] = "yes",
+				["Hate'rel"] = "yes",
+				["Golem Lord Argelmach"] = "yes",
+				["Wailing Banshee"] = "yes",
+				["Chromatic Elite Guard"] = "yes",
+				["Hurley Blackbreath"] = "yes",
+				["Alzzin the Wildshaper"] = "yes",
+			},
+			["Turn Undead"] = {
+				["Wailing Banshee"] = "yes",
+			},
+			["Hammer of Wrath"] = {
+				["Emperor Dagran Thaurissan"] = "yes",
+			},
+			["Judgement"] = {
+				["Emperor Dagran Thaurissan"] = "yes",
+				["Wailing Banshee"] = "yes",
+			},
 		},
 	},
 	["Al'Akir [instant 60] Blizzlike.Kylosandrax"] = {
@@ -185,24 +204,24 @@ ZorlenConfig = {
 			["Fireball"] = {
 				["Emperor Dagran Thaurissan"] = "yes",
 			},
-			["Arcane Missiles"] = {
+			["Frostbolt"] = {
+				["Hydrospawn"] = "yes",
 				["Emperor Dagran Thaurissan"] = "yes",
 			},
 			["Polymorph"] = {
 				["Crystal Fang"] = "yes",
 				["Lethtendris"] = "yes",
 			},
-			["Scorch"] = {
-				["Emperor Dagran Thaurissan"] = "yes",
-			},
 			["Frost Nova"] = {
 				["Hydrospawn"] = "yes",
+			},
+			["Scorch"] = {
+				["Emperor Dagran Thaurissan"] = "yes",
 			},
 			["Counterspell"] = {
 				["Emperor Dagran Thaurissan"] = "yes",
 			},
-			["Frostbolt"] = {
-				["Hydrospawn"] = "yes",
+			["Arcane Missiles"] = {
 				["Emperor Dagran Thaurissan"] = "yes",
 			},
 		},

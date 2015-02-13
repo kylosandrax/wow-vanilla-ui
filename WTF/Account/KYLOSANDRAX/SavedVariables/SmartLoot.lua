@@ -9,9 +9,9 @@ SmartLoot_Options = {
 	["ShowMinimapButton"] = 1,
 }
 SmartLoot_Autoroll = {
-	["Essence of Undeath"] = {
+	["Green Hakkari Bijou"] = {
 		["roll"] = 2,
-		["quality"] = 2,
+		["quality"] = 3,
 	},
 	["Lunar Raiment of the Owl"] = {
 		["roll"] = 2,
@@ -21,7 +21,11 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Plans: Thorium Boots"] = {
+	["Gold Hakkari Bijou"] = {
+		["roll"] = 1,
+		["quality"] = 3,
+	},
+	["Darkspinner Claws"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -41,9 +45,21 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 3,
 	},
+	["Plans: Thorium Leggings"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
 	["Pattern: Felcloth Boots"] = {
 		["roll"] = 2,
 		["quality"] = 2,
+	},
+	["Mithril Lockbox"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
+	["Grimoire of Shadow Ward IV"] = {
+		["roll"] = 2,
+		["quality"] = 3,
 	},
 	["Righteous Armor of Power"] = {
 		["roll"] = 2,
@@ -57,43 +73,19 @@ SmartLoot_Autoroll = {
 		["roll"] = 1,
 		["quality"] = 2,
 	},
-	["Purple Hakkari Bijou"] = {
-		["roll"] = 1,
-		["quality"] = 3,
-	},
-	["Pristine Black Diamond"] = {
-		["roll"] = 2,
-		["quality"] = 3,
-	},
-	["Aquamarine"] = {
-		["roll"] = 2,
-		["quality"] = 2,
-	},
-	["Venomshroud Leggings"] = {
-		["roll"] = 2,
-		["quality"] = 2,
-	},
-	["Living Essence"] = {
-		["roll"] = 2,
-		["quality"] = 2,
-	},
-	["Recipe: Elixir of Greater Firepower"] = {
-		["roll"] = 2,
-		["quality"] = 2,
-	},
-	["Vilebranch Coin"] = {
-		["roll"] = 1,
-		["quality"] = 2,
-	},
 	["Pattern: Felcloth Robe"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Formula: Enchant Bracer - Superior Spirit"] = {
+	["Purple Hakkari Bijou"] = {
+		["roll"] = 1,
+		["quality"] = 3,
+	},
+	["Pattern: Mooncloth Bag"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Dark Rune"] = {
+	["Bloodvine"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -101,13 +93,49 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Orange Hakkari Bijou"] = {
+	["Venomshroud Leggings"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
+	["Merciless Surcoat of the Owl"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
+	["Emerald Legplates of Strength"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
+	["Sandfury Coin"] = {
+		["roll"] = 1,
+		["quality"] = 2,
+	},
+	["Eight of Elementals"] = {
+		["roll"] = 2,
+		["quality"] = 3,
+	},
+	["Living Essence"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
+	["Pristine Black Diamond"] = {
+		["roll"] = 2,
+		["quality"] = 3,
+	},
+	["Dark Rune"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
+	["Bindings of Elements"] = {
+		["roll"] = 2,
+		["quality"] = 3,
+	},
+	["Silver Hakkari Bijou"] = {
 		["roll"] = 1,
 		["quality"] = 3,
 	},
-	["Grimoire of Shadow Ward IV"] = {
+	["Formula: Enchant Bracer - Superior Spirit"] = {
 		["roll"] = 2,
-		["quality"] = 3,
+		["quality"] = 2,
 	},
 	["Pattern: Chimeric Vest"] = {
 		["roll"] = 2,
@@ -117,8 +145,8 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Mithril Lockbox"] = {
-		["roll"] = 2,
+	["Vilebranch Coin"] = {
+		["roll"] = 1,
 		["quality"] = 2,
 	},
 	["Plans: Dazzling Mithril Rapier"] = {
@@ -133,15 +161,15 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
+	["Plans: Thorium Bracers"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
 	["Essence of Water"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Bloodvine"] = {
-		["roll"] = 2,
-		["quality"] = 2,
-	},
-	["Plans: Thorium Leggings"] = {
+	["Aquamarine"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -157,12 +185,12 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Silver Hakkari Bijou"] = {
-		["roll"] = 1,
-		["quality"] = 3,
+	["Recipe: Purification Potion"] = {
+		["roll"] = 2,
+		["quality"] = 2,
 	},
-	["Corruptor's Scourgestone"] = {
-		["roll"] = 1,
+	["Plans: Radiant Breastplate"] = {
+		["roll"] = 2,
 		["quality"] = 2,
 	},
 	["Schematic: Master Engineer's Goggles"] = {
@@ -173,7 +201,7 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Recipe: Transmute Life to Earth"] = {
+	["Plans: Thorium Boots"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -181,16 +209,16 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Recipe: Purification Potion"] = {
+	["Essence of Undeath"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Plans: Radiant Breastplate"] = {
-		["roll"] = 2,
+	["Witherbark Coin"] = {
+		["roll"] = 1,
 		["quality"] = 2,
 	},
-	["Book: Gift of the Wild"] = {
-		["roll"] = 2,
+	["Orange Hakkari Bijou"] = {
+		["roll"] = 1,
 		["quality"] = 3,
 	},
 	["Hakkari Coin"] = {
@@ -209,7 +237,7 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Recipe: Greater Stoneshield Potion"] = {
+	["Recipe: Transmute Life to Earth"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -221,15 +249,15 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 3,
 	},
-	["Pattern: Volcanic Breastplate"] = {
-		["roll"] = 2,
-		["quality"] = 2,
+	["Yellow Hakkari Bijou"] = {
+		["roll"] = 1,
+		["quality"] = 3,
 	},
 	["Formula: Enchant Weapon - Unholy"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Pattern: Runic Leather Pants"] = {
+	["Bloodlust Breastplate"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -237,16 +265,16 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Book: Gift of the Wild II"] = {
+	["Libram of Focus"] = {
 		["roll"] = 2,
-		["quality"] = 3,
+		["quality"] = 2,
 	},
 	["Gurubashi Coin"] = {
 		["roll"] = 1,
 		["quality"] = 2,
 	},
-	["Blue Hakkari Bijou"] = {
-		["roll"] = 1,
+	["Beaststalker's Belt"] = {
+		["roll"] = 2,
 		["quality"] = 3,
 	},
 	["Recipe: Greater Fire Protection Potion"] = {
@@ -269,40 +297,40 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Bloodlust Breastplate"] = {
+	["Book: Gift of the Wild II"] = {
 		["roll"] = 2,
-		["quality"] = 2,
+		["quality"] = 3,
 	},
-	["Beaststalker's Belt"] = {
-		["roll"] = 2,
+	["Blue Hakkari Bijou"] = {
+		["roll"] = 1,
 		["quality"] = 3,
 	},
 	["Plans: Radiant Gloves"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Emerald Legplates of Strength"] = {
+	["Pattern: Felcloth Shoulders"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Razzashi Coin"] = {
-		["roll"] = 1,
+	["Pattern: Runecloth Tunic"] = {
+		["roll"] = 2,
 		["quality"] = 2,
 	},
 	["Red Hakkari Bijou"] = {
 		["roll"] = 1,
 		["quality"] = 3,
 	},
-	["Pattern: Felcloth Shoulders"] = {
-		["roll"] = 2,
+	["Razzashi Coin"] = {
+		["roll"] = 1,
 		["quality"] = 2,
 	},
 	["Magnificent Greaves of the Wolf"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Libram of Focus"] = {
-		["roll"] = 2,
+	["Skullsplitter Coin"] = {
+		["roll"] = 1,
 		["quality"] = 2,
 	},
 	["Pattern: Brightcloth Pants"] = {
@@ -313,13 +341,13 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 3,
 	},
-	["Pattern: Runecloth Tunic"] = {
-		["roll"] = 2,
-		["quality"] = 2,
-	},
 	["Pattern: Frostweave Tunic"] = {
 		["roll"] = 2,
 		["quality"] = 2,
+	},
+	["Belt of Valor"] = {
+		["roll"] = 2,
+		["quality"] = 3,
 	},
 	["Schematic: Thorium Shells"] = {
 		["roll"] = 2,
@@ -329,9 +357,9 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Belt of Valor"] = {
+	["Star Ruby"] = {
 		["roll"] = 2,
-		["quality"] = 3,
+		["quality"] = 2,
 	},
 	["Gordok Shackle Key"] = {
 		["roll"] = 0,
@@ -341,7 +369,7 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Plans: Radiant Boots"] = {
+	["Pattern: Brightcloth Robe"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -349,17 +377,17 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 3,
 	},
-	["Skullsplitter Coin"] = {
-		["roll"] = 1,
-		["quality"] = 2,
-	},
 	["Pattern: Red Mageweave Vest"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Star Ruby"] = {
+	["Plans: Radiant Boots"] = {
 		["roll"] = 2,
 		["quality"] = 2,
+	},
+	["Shadowcraft Belt"] = {
+		["roll"] = 2,
+		["quality"] = 3,
 	},
 	["Bloodscalp Coin"] = {
 		["roll"] = 1,
@@ -369,8 +397,8 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Witherbark Coin"] = {
-		["roll"] = 1,
+	["Pattern: Volcanic Breastplate"] = {
+		["roll"] = 2,
 		["quality"] = 2,
 	},
 	["Skin of Shadow"] = {
@@ -385,11 +413,15 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Gold Hakkari Bijou"] = {
-		["roll"] = 1,
-		["quality"] = 3,
+	["Pattern: Runic Leather Pants"] = {
+		["roll"] = 2,
+		["quality"] = 2,
 	},
 	["Plans: Thorium Belt"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
+	["Recipe: Greater Stoneshield Potion"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -397,25 +429,21 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Yellow Hakkari Bijou"] = {
-		["roll"] = 1,
-		["quality"] = 3,
-	},
 	["Pattern: Chimeric Boots"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Plans: Thorium Bracers"] = {
-		["roll"] = 2,
+	["Corruptor's Scourgestone"] = {
+		["roll"] = 1,
 		["quality"] = 2,
 	},
 	["Frayed Abomination Stitching"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Pattern: Mooncloth Bag"] = {
+	["Book: Gift of the Wild"] = {
 		["roll"] = 2,
-		["quality"] = 2,
+		["quality"] = 3,
 	},
 	["Black Diamond"] = {
 		["roll"] = 0,
@@ -425,8 +453,8 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Sandfury Coin"] = {
-		["roll"] = 1,
+	["Recipe: Elixir of Greater Firepower"] = {
+		["roll"] = 2,
 		["quality"] = 2,
 	},
 	["Bronze Hakkari Bijou"] = {

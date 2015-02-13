@@ -14,21 +14,21 @@ TheoryCraft_Settings = {
 	["ColG2"] = 1,
 	["nextstr"] = true,
 	["ColR2"] = 1,
-	["embedstyle1"] = true,
+	["ColB"] = 1,
 	["crit"] = true,
 	["tryfirst"] = "averagedam",
 	["trysecondsfg"] = -1,
 	["ColG"] = 1,
 	["tryfirstsfg"] = 0,
 	["ColB2"] = 0.6862745098039216,
-	["GenerateList"] = "",
-	["nextcrit"] = true,
+	["mitigation"] = true,
 	["FontPath"] = "Fonts\\ArialN.TTF",
+	["nextcrit"] = true,
 	["dontresist"] = true,
 	["trysecond"] = "averagehealnocrit",
 	["ColR"] = 1,
 	["buttontext"] = true,
-	["mitigation"] = true,
+	["GenerateList"] = "",
 	["CustomOutfit"] = {
 		["destat"] = {
 			[1] = "Head",
@@ -53,47 +53,48 @@ TheoryCraft_Settings = {
 		},
 		["newstat"] = {
 		},
+		["strength"] = 0,
+		["agility"] = 0,
+		["name"] = "Naked",
 		["slots"] = {
 			["Waist"] = {
 				["stats"] = {
-					["intellect"] = 17,
-					["settype"] = "The Elements",
-					["stamina"] = 6,
-					["strength"] = 9,
-					["spirit"] = 7,
+					["stamina"] = 11,
+					["strength"] = 12,
 				},
-				["name"] = "|cff0070dd|Hitem:16673:0:0:0|h[Cord of Elements]|h|r",
+				["name"] = "|cff1eff00|Hitem:10122:0:1211:0|h[Ornate Girdle of the Bear]|h|r",
 				["data"] = {
-					["name"] = "Cord of Elements",
+					["name"] = "Ornate Girdle of the Bear",
 					["procs"] = {
 					},
-					["numlines"] = 24,
+					["numlines"] = 7,
 				},
 			},
 			["Finger0"] = {
 				["stats"] = {
-					["strength"] = 9,
+					["intellect"] = 9,
+					["spirit"] = 9,
 				},
-				["name"] = "|cff1eff00|Hitem:11997:0:190:0|h[Greenstone Circle of Strength]|h|r",
+				["name"] = "|cff1eff00|Hitem:11992:0:778:0|h[Vermilion Band of the Owl]|h|r",
 				["data"] = {
-					["name"] = "Greenstone Circle of Strength",
+					["name"] = "Vermilion Band of the Owl",
 					["procs"] = {
 					},
-					["numlines"] = 5,
+					["numlines"] = 6,
 				},
 			},
-			["Legs"] = {
+			["Neck"] = {
 				["stats"] = {
-					["stamina"] = 5,
-					["strength"] = 13,
-					["agility"] = 16,
+					["intellect"] = 4,
+					["stamina"] = 4,
+					["spirit"] = 3,
 				},
-				["name"] = "|cff1eff00|Hitem:8262:0:0:0|h[Serpentskin Leggings]|h|r",
+				["name"] = "|cff1eff00|Hitem:5003:0:0:0|h[Crystal Starfire Medallion]|h|r",
 				["data"] = {
-					["name"] = "Serpentskin Leggings",
+					["name"] = "Crystal Starfire Medallion",
 					["procs"] = {
 					},
-					["numlines"] = 8,
+					["numlines"] = 7,
 				},
 			},
 			["Trinket0"] = {
@@ -109,14 +110,15 @@ TheoryCraft_Settings = {
 			},
 			["Back"] = {
 				["stats"] = {
-					["agility"] = 8,
+					["stamina"] = 3,
+					["spirit"] = 12,
 				},
-				["name"] = "|cff1eff00|Hitem:10606:0:0:0|h[Schematic: Parachute Cloak]|h|r",
+				["name"] = "|cff1eff00|Hitem:8286:0:0:0|h[Arcane Cloak]|h|r",
 				["data"] = {
-					["name"] = "Schematic: Parachute Cloak",
+					["name"] = "Arcane Cloak",
 					["procs"] = {
 					},
-					["numlines"] = 11,
+					["numlines"] = 7,
 				},
 			},
 			["Shirt"] = {
@@ -132,30 +134,27 @@ TheoryCraft_Settings = {
 			},
 			["Hands"] = {
 				["stats"] = {
-					["stamina"] = 3,
-					["spirit"] = 4,
+					["stamina"] = 6,
+					["strength"] = 5,
 				},
-				["name"] = "|cff1eff00|Hitem:6577:0:1016:0|h[Defender Gauntlets of the Whale]|h|r",
+				["name"] = "|cff1eff00|Hitem:3612:0:0:0|h[Plans: Green Iron Gauntlets]|h|r",
 				["data"] = {
-					["name"] = "Defender Gauntlets of the Whale",
+					["name"] = "Plans: Green Iron Gauntlets",
 					["procs"] = {
 					},
-					["numlines"] = 7,
+					["numlines"] = 12,
 				},
 			},
 			["Wrist"] = {
 				["stats"] = {
-					["intellect"] = 10,
-					["settype"] = "The Elements",
-					["spirit"] = 10,
-					["stamina"] = 7,
+					["agility"] = 12,
 				},
-				["name"] = "|cff0070dd|Hitem:16671:0:0:0|h[Bindings of Elements]|h|r",
+				["name"] = "|cff1eff00|Hitem:10126:0:173:0|h[Ornate Bracers of Agility]|h|r",
 				["data"] = {
-					["name"] = "Bindings of Elements",
+					["name"] = "Ornate Bracers of Agility",
 					["procs"] = {
 					},
-					["numlines"] = 23,
+					["numlines"] = 6,
 				},
 			},
 			["Trinket1"] = {
@@ -175,96 +174,12 @@ TheoryCraft_Settings = {
 			},
 			["Head"] = {
 				["stats"] = {
-					["meleecritchance"] = 1,
-					["strength"] = 10,
+					["intellect"] = 14,
+					["strength"] = 13,
 				},
-				["name"] = "|cff1eff00|Hitem:7937:0:0:0|h[Ornate Mithril Helm]|h|r",
+				["name"] = "|cff1eff00|Hitem:10132:0:961:0|h[Revenant Helmet of the Gorilla]|h|r",
 				["data"] = {
-					["name"] = "Ornate Mithril Helm",
-					["procs"] = {
-					},
-					["numlines"] = 7,
-					["CritReport"] = 1,
-				},
-			},
-			["Feet"] = {
-				["stats"] = {
-					["intellect"] = 2,
-					["stamina"] = 4,
-				},
-				["name"] = "|cff1eff00|Hitem:2168:0:0:0|h[Foreman's Boots]|h|r",
-				["data"] = {
-					["name"] = "Foreman's Boots",
-					["procs"] = {
-					},
-					["numlines"] = 7,
-				},
-			},
-			["Chest"] = {
-				["stats"] = {
-					["agility"] = 4,
-					["strength"] = 4,
-				},
-				["name"] = "|cff1eff00|Hitem:9783:0:678:0|h[Raider's Chestpiece of the Tiger]|h|r",
-				["data"] = {
-					["name"] = "Raider's Chestpiece of the Tiger",
-					["procs"] = {
-					},
-					["numlines"] = 7,
-				},
-			},
-			["Main"] = {
-				["stats"] = {
-					["stamina"] = 15,
-					["strength"] = 20,
-				},
-				["name"] = "|cff0070dd|Hitem:13046:0:0:0|h[Blanchard's Stout]|h|r",
-				["data"] = {
-					["numlines"] = 9,
-					["MeleeMax"] = 162,
-					["MeleeMin"] = 107,
-					["procs"] = {
-					},
-					["MeleeAPMult"] = 3.3,
-					["MainSpeed"] = 3.1,
-					["name"] = "Blanchard's Stout",
-				},
-			},
-			["Neck"] = {
-				["stats"] = {
-					["stamina"] = 7,
-					["intellect"] = 6,
-				},
-				["name"] = "|cff1eff00|Hitem:12023:0:856:0|h[Tellurium Necklace of the Eagle]|h|r",
-				["data"] = {
-					["name"] = "Tellurium Necklace of the Eagle",
-					["procs"] = {
-					},
-					["numlines"] = 6,
-				},
-			},
-			["Ranged"] = {
-				["stats"] = {
-				},
-				["name"] = "|cff1eff00|Hitem:15322:0:0:0|h[Smoothbore Gun]|h|r",
-				["data"] = {
-					["name"] = "Smoothbore Gun",
-					["procs"] = {
-					},
-					["RangedSpeed"] = 2.5,
-					["RangedMax"] = 54,
-					["numlines"] = 6,
-					["RangedMin"] = 29,
-				},
-			},
-			["Shoulder"] = {
-				["stats"] = {
-					["strength"] = 7,
-					["spirit"] = 6,
-				},
-				["name"] = "|cff1eff00|Hitem:3841:0:0:0|h[Golden Scale Shoulders]|h|r",
-				["data"] = {
-					["name"] = "Golden Scale Shoulders",
+					["name"] = "Revenant Helmet of the Gorilla",
 					["procs"] = {
 					},
 					["numlines"] = 7,
@@ -272,21 +187,99 @@ TheoryCraft_Settings = {
 			},
 			["Finger1"] = {
 				["stats"] = {
-					["intellect"] = 8,
-					["strength"] = 9,
+					["intellect"] = 9,
+					["spirit"] = 9,
 				},
-				["name"] = "|cff1eff00|Hitem:12002:0:947:0|h[Marble Circle of the Gorilla]|h|r",
+				["name"] = "|cff1eff00|Hitem:11992:0:778:0|h[Vermilion Band of the Owl]|h|r",
 				["data"] = {
-					["name"] = "Marble Circle of the Gorilla",
+					["name"] = "Vermilion Band of the Owl",
 					["procs"] = {
 					},
 					["numlines"] = 6,
 				},
 			},
+			["Chest"] = {
+				["stats"] = {
+					["stamina"] = 11,
+					["strength"] = 3,
+				},
+				["name"] = "|cff1eff00|Hitem:4071:0:0:0|h[Glimmering Mail Breastplate]|h|r",
+				["data"] = {
+					["name"] = "Glimmering Mail Breastplate",
+					["procs"] = {
+					},
+					["numlines"] = 7,
+				},
+			},
+			["Main"] = {
+				["stats"] = {
+					["agility"] = 12,
+					["strength"] = 12,
+				},
+				["name"] = "|cff1eff00|Hitem:15262:0:702:0|h[Greater Maul of the Tiger]|h|r",
+				["data"] = {
+					["numlines"] = 8,
+					["MeleeMax"] = 146,
+					["name"] = "Greater Maul of the Tiger",
+					["procs"] = {
+					},
+					["MeleeAPMult"] = 3.3,
+					["MainSpeed"] = 3.4,
+					["MeleeMin"] = 97,
+				},
+			},
+			["Legs"] = {
+				["stats"] = {
+				},
+				["name"] = "|cff1eff00|Hitem:15746:0:0:0|h[Pattern: Chimeric Leggings]|h|r",
+				["data"] = {
+					["name"] = "Pattern: Chimeric Leggings",
+					["procs"] = {
+					},
+					["numlines"] = 12,
+				},
+			},
+			["Ranged"] = {
+				["stats"] = {
+				},
+				["name"] = "|cff1eff00|Hitem:15284:0:0:0|h[Long Battle Bow]|h|r",
+				["data"] = {
+					["name"] = "Long Battle Bow",
+					["procs"] = {
+					},
+					["RangedSpeed"] = 2.2,
+					["RangedMax"] = 34,
+					["numlines"] = 6,
+					["RangedMin"] = 18,
+				},
+			},
+			["Shoulder"] = {
+				["stats"] = {
+					["intellect"] = 15,
+					["agility"] = 4,
+				},
+				["name"] = "|cff1eff00|Hitem:8250:0:0:0|h[Imperial Red Mantle]|h|r",
+				["data"] = {
+					["name"] = "Imperial Red Mantle",
+					["procs"] = {
+					},
+					["numlines"] = 7,
+				},
+			},
+			["Feet"] = {
+				["stats"] = {
+					["stamina"] = 16,
+					["spirit"] = 4,
+				},
+				["name"] = "|cff1eff00|Hitem:8269:0:0:0|h[Ebonhold Boots]|h|r",
+				["data"] = {
+					["name"] = "Ebonhold Boots",
+					["procs"] = {
+					},
+					["numlines"] = 7,
+				},
+			},
 		},
-		["agility"] = 0,
-		["name"] = "Naked",
-		["strength"] = 0,
 		["wear"] = {
 		},
 		["intellect"] = 0,
@@ -295,7 +288,7 @@ TheoryCraft_Settings = {
 	},
 	["procs"] = true,
 	["dataversion"] = "1.06",
-	["ColB"] = 1,
+	["embedstyle1"] = true,
 	["combinedot"] = true,
 	["healanddamage"] = true,
 }

@@ -163,11 +163,11 @@ AutoBar_Config = {
 	},
 	["Kylosandrax - Warsong [12x] Blizzlike"] = {
 		["display"] = {
-			["dockshifty"] = 1,
 			["position"] = {
 				["y"] = 198.3463975697645,
 				["x"] = 1381.474162575238,
 			},
+			["dockshifty"] = 1,
 		},
 		["buttons"] = {
 			[1] = {

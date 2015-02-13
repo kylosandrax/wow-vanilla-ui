@@ -66,13 +66,13 @@ FuBar2DB = {
 					["title"] = "ClockFu",
 					["category"] = "Interface Enhancements",
 				},
-				["FuBar_DurabilityFu"] = {
-					["title"] = "DurabilityFu",
-					["category"] = "Inventory",
-				},
 				["FuBar_PerformanceFu"] = {
 					["title"] = "PerformanceFu",
 					["category"] = "Interface Enhancements",
+				},
+				["FuBar_DurabilityFu"] = {
+					["title"] = "DurabilityFu",
+					["category"] = "Inventory",
 				},
 			},
 			["tooltip"] = {
@@ -83,8 +83,8 @@ FuBar2DB = {
 			},
 			["thickness"] = 7,
 			["transparency"] = 0.5,
-			["overflow"] = false,
 			["leftSpacing"] = 20,
+			["autohideTop"] = false,
 			["places"] = {
 				["center"] = {
 				},
@@ -93,6 +93,7 @@ FuBar2DB = {
 				["left"] = {
 				},
 			},
+			["overflow"] = false,
 		},
 	},
 }

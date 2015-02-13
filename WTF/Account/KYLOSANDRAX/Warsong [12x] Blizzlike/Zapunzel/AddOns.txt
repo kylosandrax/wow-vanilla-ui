@@ -47,7 +47,7 @@ XPerl_TeamSpeak: enabled
 XPerl_Target: enabled
 XPerl: enabled
 HealBot: disabled
-VanillaGuide: enabled
+VanillaGuide: disabled
 MetaMapZSM: enabled
 MetaMapWKB: enabled
 MetaMapNBK: enabled

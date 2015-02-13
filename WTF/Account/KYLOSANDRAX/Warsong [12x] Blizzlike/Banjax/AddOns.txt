@@ -96,7 +96,7 @@ TheoryCraft: enabled
 TinyTip: enabled
 TinyTipExtras: enabled
 TinyTipOptions: enabled
-VanillaGuide: enabled
+VanillaGuide: disabled
 WeaponQuickSwap: disabled
 XLoot: enabled
 CustomNameplates: enabled

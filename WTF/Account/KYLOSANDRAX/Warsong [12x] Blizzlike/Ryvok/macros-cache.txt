@@ -1,0 +1,15 @@
+MACRO 16777219 "CM-LoH" Ability_Priest_FocusedWill
+/cmcast Lay on Hands
+END
+MACRO 16777218 "CM-Shock" Ability_Paladin_InfusionofLight
+/cmcast Holy Shock
+END
+MACRO 16777220 "PallyPower" Ability_Priest_AngelicFeather
+/pp
+END
+MACRO 16777217 "QH-HLR5" Ability_Paladin_BlindingLight2
+/script QuickHeal(nil,'Holy Light 5')
+END
+MACRO 16777221 "QHR6" Ability_Creature_Cursed_01
+/script QuickHeal(nil,'Holy Light 6')
+END

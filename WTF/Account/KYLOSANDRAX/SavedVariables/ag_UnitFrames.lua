@@ -3,8 +3,8 @@ aUFDB = {
 	["profiles"] = {
 		["Default"] = {
 			["partyParty"] = {
-				["ShowAnchor"] = true,
 				["Grow"] = "down",
+				["ShowAnchor"] = true,
 			},
 			["target"] = {
 				["Scale"] = 1.51,
@@ -35,8 +35,8 @@ aUFDB = {
 				["HealthStyle"] = "Difference",
 			},
 			["partyPlayer"] = {
-				["ShowAnchor"] = true,
 				["Grow"] = "down",
+				["ShowAnchor"] = true,
 			},
 			["Positions"] = {
 				["targettarget"] = {

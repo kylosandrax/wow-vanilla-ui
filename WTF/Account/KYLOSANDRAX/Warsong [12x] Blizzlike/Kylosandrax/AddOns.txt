@@ -103,7 +103,7 @@ Recap: enabled
 Stubby: enabled
 SuperMacro: enabled
 TheoryCraft: enabled
-VanillaGuide: enabled
+VanillaGuide: disabled
 WeaponQuickSwap: disabled
 CT_RABossRazorgore: disabled
 CT_RABossMods: disabled

@@ -84,8 +84,8 @@ sRaidFramesDB = {
 			},
 			["healthDisplayType"] = "deficit",
 			["units_limit"] = 5,
-			["dynamic_aggro_sort"] = true,
-			["dynamic_range_sort"] = true,
+			["dynamic_aggro_sort"] = false,
+			["dynamic_range_sort"] = false,
 		},
 	},
 }

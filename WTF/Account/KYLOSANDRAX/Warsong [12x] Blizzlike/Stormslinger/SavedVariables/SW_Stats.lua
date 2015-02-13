@@ -5,15 +5,22 @@ SW_Settings = {
 	["ReportAmount"] = 4,
 	["RE_Multiline"] = 1,
 	["TL_SafeMode"] = true,
-	["SyncBCTarget"] = "SW_BarSyncFrame_OptRaid",
+	["BarFrames"] = {
+		["SW_BarFrame1"] = {
+			["Docked"] = {
+				[1] = 1,
+			},
+			["Selected"] = 4,
+		},
+	},
 	["lastWOWBuild"] = "1.12.15875Sep 19 2006",
-	["SYNCLastAction"] = 1422402437,
+	["SYNCLastAction"] = 1423164784,
 	["RepTarget"] = "SW_RepTo_Say",
-	["IsRunning"] = true,
-	["LAST_V_RUN"] = "1.5.3",
+	["SW_TL_AutoDelete"] = true,
+	["OPT_ShowMainWinDPS"] = 1,
 	["InfoSettings"] = {
 		[1] = {
-			["IN"] = 1,
+			["CF"] = 1,
 			["OT"] = "DD",
 			["BC"] = {
 				[1] = 0,
@@ -32,10 +39,10 @@ SW_Settings = {
 				[4] = 0.4800000190734863,
 			},
 			["SF"] = "SW_Filter_EverGroup",
-			["BT"] = 9,
+			["COLC"] = 1,
 			["PF"] = "SW_PF_MM",
 			["ShowRank"] = 1,
-			["selSchool"] = 0,
+			["BT"] = 9,
 			["ShowNumber"] = 1,
 			["BFC"] = {
 				[1] = 1,
@@ -43,9 +50,9 @@ SW_Settings = {
 				[3] = 1,
 				[4] = 1,
 			},
-			["CF"] = 1,
+			["IN"] = 1,
 			["BFS"] = 10,
-			["COLC"] = 1,
+			["selSchool"] = 0,
 			["BH"] = 15,
 		},
 		[2] = {
@@ -89,9 +96,9 @@ SW_Settings = {
 				[3] = 0,
 				[4] = 1,
 			},
-			["HealEff"] = true,
+			["OTF"] = "Damage Per Second",
 			["ShowPercent"] = 1,
-			["HealInF"] = true,
+			["UCC"] = 1,
 			["OC"] = {
 				[1] = 0,
 				[2] = 0,
@@ -112,8 +119,8 @@ SW_Settings = {
 			},
 			["SF"] = "SW_Filter_EverGroup",
 			["BT"] = 9,
-			["OTF"] = "Damage Per Second",
-			["UCC"] = 1,
+			["HealEff"] = true,
+			["HealInF"] = true,
 		},
 		[4] = {
 			["IN"] = 2,
@@ -124,7 +131,7 @@ SW_Settings = {
 				[3] = 0,
 				[4] = 1,
 			},
-			["HealEff"] = true,
+			["OTF"] = "Effective Healing",
 			["HealOH"] = false,
 			["ShowPercent"] = 1,
 			["UCC"] = 1,
@@ -135,11 +142,11 @@ SW_Settings = {
 				[4] = 0.4600000381469727,
 			},
 			["SF"] = "SW_Filter_EverGroup",
-			["BT"] = 9,
+			["COLC"] = 1,
 			["PF"] = "SW_PF_MB",
 			["ShowRank"] = 1,
 			["BH"] = 15,
-			["COLC"] = 1,
+			["BT"] = 9,
 			["ShowNumber"] = 1,
 			["BFC"] = {
 				[1] = 1,
@@ -149,11 +156,11 @@ SW_Settings = {
 			},
 			["CF"] = 1,
 			["BFS"] = 10,
-			["OTF"] = "Effective Healing",
+			["HealEff"] = true,
 			["HealInF"] = true,
 		},
 		[5] = {
-			["IN"] = 2,
+			["CF"] = 1,
 			["OT"] = "OH",
 			["BC"] = {
 				[1] = 0,
@@ -161,10 +168,10 @@ SW_Settings = {
 				[3] = 0,
 				[4] = 1,
 			},
-			["OTF"] = "Over Healing",
+			["HealEff"] = false,
 			["HealOH"] = true,
 			["ShowPercent"] = 1,
-			["HealInF"] = true,
+			["UCC"] = 1,
 			["OC"] = {
 				[1] = 0,
 				[2] = 0,
@@ -172,7 +179,7 @@ SW_Settings = {
 				[4] = 0.449999988079071,
 			},
 			["BFS"] = 10,
-			["BT"] = 9,
+			["COLC"] = 1,
 			["ShowRank"] = 1,
 			["BH"] = 15,
 			["SF"] = "SW_Filter_EverGroup",
@@ -183,10 +190,10 @@ SW_Settings = {
 				[3] = 1,
 				[4] = 1,
 			},
-			["COLC"] = 1,
-			["CF"] = 1,
-			["HealEff"] = false,
-			["UCC"] = 1,
+			["BT"] = 9,
+			["IN"] = 2,
+			["OTF"] = "Over Healing",
+			["HealInF"] = true,
 		},
 	},
 	["SYNCLastChan"] = "mc40man",
@@ -282,25 +289,107 @@ SW_Settings = {
 			[4] = 0.3400000333786011,
 		},
 	},
-	["BarFrames"] = {
-		["SW_BarFrame1"] = {
-			["Docked"] = {
-				[1] = 1,
-			},
-			["Selected"] = 4,
-		},
-	},
-	["OPT_ShowMainWinDPS"] = 1,
+	["SyncBCTarget"] = "SW_BarSyncFrame_OptRaid",
+	["LAST_V_RUN"] = "1.5.3",
 	["SW_IconPosR"] = 89,
-	["SW_TL_AutoDelete"] = true,
+	["IsRunning"] = true,
 	["SHOWMAIN"] = true,
 }
 SW_S_Details = {
+	["WORLD"] = {
+		["Normal"] = {
+			[1] = 812,
+			[2] = 0,
+			[3] = 430,
+			[4] = 3,
+			[5] = 0,
+			[6] = 0,
+			[7] = 0,
+		},
+		["Type"] = {
+			["Other"] = {
+				[1] = 812,
+				[2] = 430,
+				[3] = 3,
+				[4] = 0,
+				[5] = 0,
+				[6] = 0,
+			},
+		},
+		["Recieved"] = {
+			[1] = 0,
+			[2] = 0,
+		},
+		["Total"] = {
+			[1] = 812,
+			[2] = 0,
+		},
+	},
 	["Stormslinger"] = {
 		["CLASSE"] = "SHAMAN",
 		["UTYPE"] = "GPC",
 		["Recieved"] = {
 			[1] = 0,
+			[2] = 0,
+		},
+		["Total"] = {
+			[1] = 0,
+			[2] = 0,
+		},
+	},
+	["Feugu"] = {
+		["Type"] = {
+			["Other"] = {
+				[1] = 0,
+				[2] = 0,
+				[3] = 0,
+				[4] = 234,
+				[5] = 234,
+				[6] = 1,
+			},
+		},
+		["Recieved"] = {
+			[1] = 234,
+			[2] = 0,
+		},
+		["Total"] = {
+			[1] = 0,
+			[2] = 0,
+		},
+	},
+	["Wickedantony"] = {
+		["Type"] = {
+			["Other"] = {
+				[1] = 0,
+				[2] = 0,
+				[3] = 0,
+				[4] = 430,
+				[5] = 430,
+				[6] = 1,
+			},
+		},
+		["Recieved"] = {
+			[1] = 430,
+			[2] = 0,
+		},
+		["Total"] = {
+			[1] = 0,
+			[2] = 0,
+		},
+	},
+	["Trener"] = {
+		["Type"] = {
+			["Other"] = {
+				[1] = 0,
+				[2] = 0,
+				[3] = 0,
+				[4] = 148,
+				[5] = 148,
+				[6] = 1,
+			},
+		},
+		["Recieved"] = {
+			[1] = 148,
 			[2] = 0,
 		},
 		["Total"] = {
@@ -326,16 +415,16 @@ SW_RPS = {
 	["allowLastFightUpdate"] = false,
 	["isRunning"] = false,
 	["startTimer"] = {
-		["uTS"] = 9.920999999998458,
-		["msO"] = -0.0790000000015425,
-		["epochTS"] = 1422402340,
+		["uTS"] = 4.634000000000015,
+		["msO"] = -0.3659999999999855,
+		["epochTS"] = 1423164687,
 	},
 	["uglyTruthStarted"] = false,
 	["lastFightDmg"] = 0,
 	["baseTimer"] = {
-		["uTS"] = 9.920999999998458,
-		["msO"] = -0.0790000000015425,
-		["epochTS"] = 1422402340,
+		["uTS"] = 4.634000000000015,
+		["msO"] = -0.3659999999999855,
+		["epochTS"] = 1423164687,
 	},
 	["resetPoint"] = 0,
 	["totalSecs"] = 0,

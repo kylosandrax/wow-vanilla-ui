@@ -14,19 +14,28 @@ TheoryCraft_Settings = {
 	["ColR2"] = 1,
 	["embedstyle1"] = true,
 	["tryfirst"] = "averagedam",
-	["trysecondsfg"] = -1,
 	["dataversion"] = "1.06",
+	["trysecondsfg"] = -1,
 	["tryfirstsfg"] = 0,
-	["combinedot"] = true,
-	["ColB"] = 1,
-	["FontPath"] = "Fonts\\ArialN.TTF",
+	["embed"] = true,
+	["ColG"] = 1,
+	["buttontexty"] = 10.22,
 	["GenerateList"] = "",
-	["procs"] = true,
+	["ColB2"] = 0.6862745098039216,
 	["trysecond"] = "averagehealnocrit",
 	["mitigation"] = true,
 	["buttontext"] = true,
 	["dontresist"] = true,
 	["CustomOutfit"] = {
+		["intellect"] = 0,
+		["newstat"] = {
+		},
+		["strength"] = 0,
+		["agility"] = 0,
+		["name"] = "Naked",
+		["stamina"] = 0,
+		["wear"] = {
+		},
 		["destat"] = {
 			[1] = "Head",
 			[2] = "Neck",
@@ -48,16 +57,15 @@ TheoryCraft_Settings = {
 			[18] = "Tabard",
 			[19] = "Ammo",
 		},
-		["newstat"] = {
-		},
+		["spirit"] = 0,
 		["slots"] = {
 			["Waist"] = {
 				["stats"] = {
 					["intellect"] = 15,
 					["stamina"] = 9,
+					["settype"] = "Lightforge Armor",
 					["spirit"] = 6,
 					["strength"] = 10,
-					["settype"] = "Lightforge Armor",
 				},
 				["name"] = "|cff0070dd|Hitem:16723:0:0:0|h[Lightforge Belt]|h|r",
 				["data"] = {
@@ -104,8 +112,8 @@ TheoryCraft_Settings = {
 			},
 			["Feet"] = {
 				["stats"] = {
-					["stamina"] = 12,
 					["intellect"] = 12,
+					["stamina"] = 12,
 				},
 				["name"] = "|cff1eff00|Hitem:14299:0:872:0|h[Bonecaster's Boots of the Eagle]|h|r",
 				["data"] = {
@@ -129,16 +137,20 @@ TheoryCraft_Settings = {
 					["numlines"] = 8,
 				},
 			},
-			["Back"] = {
+			["Ranged"] = {
 				["stats"] = {
+					["rangedattackpower"] = 14,
 				},
-				["name"] = "|cff1eff00|Hitem:10060:0:1848:0|h[Duskwoven Cape of Shadow Wrath]|h|r",
+				["name"] = "|cff1eff00|Hitem:10604:0:0:0|h[Schematic: Mithril Heavy-bore Rifle]|h|r",
 				["data"] = {
-					["Shadow"] = 17,
-					["name"] = "Duskwoven Cape of Shadow Wrath",
+					["RangedMin"] = 41,
+					["name"] = "Schematic: Mithril Heavy-bore Rifle",
 					["procs"] = {
 					},
-					["numlines"] = 6,
+					["numlines"] = 11,
+					["RangedMax"] = 76,
+					["RangedSpeed"] = 2.9,
+					["RangedAttackPowerReport"] = 14,
 				},
 			},
 			["Main"] = {
@@ -150,12 +162,12 @@ TheoryCraft_Settings = {
 				["data"] = {
 					["numlines"] = 8,
 					["MeleeMax"] = 184,
-					["name"] = "Magus Long Staff of the Wolf",
+					["MeleeMin"] = 122,
 					["procs"] = {
 					},
 					["MeleeAPMult"] = 3.3,
 					["MainSpeed"] = 3.4,
-					["MeleeMin"] = 122,
+					["name"] = "Magus Long Staff of the Wolf",
 				},
 			},
 			["Head"] = {
@@ -209,35 +221,23 @@ TheoryCraft_Settings = {
 					["numlines"] = 12,
 				},
 			},
-			["Ranged"] = {
+			["Back"] = {
 				["stats"] = {
-					["rangedattackpower"] = 14,
 				},
-				["name"] = "|cff1eff00|Hitem:10604:0:0:0|h[Schematic: Mithril Heavy-bore Rifle]|h|r",
+				["name"] = "|cff1eff00|Hitem:10060:0:1848:0|h[Duskwoven Cape of Shadow Wrath]|h|r",
 				["data"] = {
-					["numlines"] = 11,
-					["name"] = "Schematic: Mithril Heavy-bore Rifle",
+					["Shadow"] = 17,
+					["name"] = "Duskwoven Cape of Shadow Wrath",
 					["procs"] = {
 					},
-					["RangedSpeed"] = 2.9,
-					["RangedMax"] = 76,
-					["RangedMin"] = 41,
-					["RangedAttackPowerReport"] = 14,
+					["numlines"] = 6,
 				},
 			},
 		},
-		["agility"] = 0,
-		["name"] = "Naked",
-		["strength"] = 0,
-		["wear"] = {
-		},
-		["intellect"] = 0,
-		["spirit"] = 0,
-		["stamina"] = 0,
 	},
-	["ColB2"] = 0.6862745098039216,
-	["buttontexty"] = 10.22,
-	["ColG"] = 1,
-	["embed"] = true,
+	["procs"] = true,
+	["FontPath"] = "Fonts\\ArialN.TTF",
+	["ColB"] = 1,
+	["combinedot"] = true,
 	["healanddamage"] = true,
 }

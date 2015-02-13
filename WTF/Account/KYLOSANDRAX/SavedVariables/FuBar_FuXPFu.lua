@@ -7,7 +7,7 @@ FuXPDB = {
 			["detachedTooltip"] = {
 			},
 			["Thickness"] = 4,
-			["showText"] = true,
+			["showText"] = false,
 			["Rest"] = {
 				[1] = 0.2509803921568627,
 				[2] = 0.4862745098039216,

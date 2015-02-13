@@ -4,6 +4,9 @@ END
 MACRO 16777220 "CatForm" Ability_Druid_CatForm
 /script local _,_,active=GetShapeshiftFormInfo(3);if active~=1 then CastSpellByName("Cat Form");end;
 END
+MACRO 16777231 "DCUR" TalentSpec_Druid_Balance
+/decursive
+END
 MACRO 16777222 "HealBot" Ability_Druid_ImprovedTreeForm
 /script EquipSet("HealBot")
 END
@@ -19,6 +22,12 @@ MACRO 16777223 "NSHeal" Ability_Mage_LivingBomb
 END
 MACRO 16777217 "Pounce-Rip" Ability_GhoulFrenzy
 /script i=1;m=0;while(UnitBuff("player",i)~=nil) do if(strfind(UnitBuff("player",i),"Ability_Ambush")~=nil) then m=1; end;i=i+1;end; c=CastSpellByName; if(m==1) then c("Pounce(rank 2)");else c("Rake(rank 3)");end;
+END
+MACRO 16777230 "QHR3" TalentSpec_Druid_Restoration
+/script QuickHeal(nil,'Healing Touch 3')
+END
+MACRO 16777229 "QHR4" Ability_DeathKnight_DesecratedGround
+/script QuickHeal(nil,'Healing Touch 4')
 END
 MACRO 16777218 "Ravage-Shred" Ability_Druid_Ravage
 /script i=1;m=0;while(UnitBuff("player",i)~=nil) do if(strfind(UnitBuff("player",i),"Ability_Ambush")~=nil) then m=1; end;i=i+1;end; c=CastSpellByName; if(m==1) then c("Ravage(rank 3)");else c("Shred(rank 4)");end;
