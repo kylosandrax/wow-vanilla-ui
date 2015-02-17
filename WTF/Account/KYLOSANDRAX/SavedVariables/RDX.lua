@@ -113,7 +113,10 @@ RDX5Data = {
 				["smbtn"] = {
 					["iid"] = 1,
 				},
-				["scale"] = 1.216663479804993,
+				["slbtn"] = {
+					["sptitle"] = "healing touch(rank 4)",
+					["iid"] = 4,
+				},
 				["sort"] = 2,
 				["srbtn"] = {
 					["sptitle"] = "rejuvenation(rank 10)",
@@ -123,15 +126,12 @@ RDX5Data = {
 				["stext"] = 3,
 				["truncate"] = 8,
 				["layout"] = 1,
-				["width"] = 152.5184936523438,
 				["rbtn"] = {
 					["iid"] = 1,
 				},
-				["slbtn"] = {
-					["sptitle"] = "healing touch(rank 4)",
-					["iid"] = 4,
-				},
-				["name"] = "raid healing",
+				["width"] = 152.5184936523438,
+				["scale"] = 1.216663479804993,
+				["title"] = "Raid Healing",
 				["filter"] = {
 					["desync"] = 3,
 					["hpmin"] = 1,
@@ -171,14 +171,17 @@ RDX5Data = {
 				["mbtn"] = {
 					["iid"] = 1,
 				},
-				["title"] = "Raid Healing",
+				["name"] = "raid healing",
 			},
 			["main tanks"] = {
 				["smbtn"] = {
 					["sptitle"] = "swiftmend",
 					["iid"] = 4,
 				},
-				["scale"] = 1.216663479804993,
+				["slbtn"] = {
+					["sptitle"] = "healing touch(rank 4)",
+					["iid"] = 4,
+				},
 				["sort"] = 2,
 				["srbtn"] = {
 					["sptitle"] = "rejuvenation(rank 10)",
@@ -188,13 +191,12 @@ RDX5Data = {
 				["stext"] = 3,
 				["truncate"] = 5,
 				["layout"] = 1,
-				["width"] = 152.5184936523438,
-				["name"] = "main tanks",
-				["slbtn"] = {
-					["sptitle"] = "healing touch(rank 4)",
-					["iid"] = 4,
+				["rbtn"] = {
+					["iid"] = 1,
 				},
 				["title"] = "Main Tanks",
+				["scale"] = 1.216663479804993,
+				["name"] = "main tanks",
 				["filter"] = {
 					["desync"] = 3,
 					["hpmin"] = 1,
@@ -209,16 +211,9 @@ RDX5Data = {
 					["hm"] = 1,
 					["groups"] = {
 						[1] = true,
-						[2] = true,
-						[3] = true,
-						[4] = true,
-						[5] = true,
-						[6] = true,
-						[7] = true,
-						[8] = true,
 					},
 					["hptype"] = 1,
-					["followdistance"] = 2,
+					["followdistance"] = 1,
 				},
 				["height"] = 24.99993515014648,
 				["lbtn"] = {
@@ -227,9 +222,7 @@ RDX5Data = {
 				["mbtn"] = {
 					["iid"] = 1,
 				},
-				["rbtn"] = {
-					["iid"] = 1,
-				},
+				["width"] = 152.5184936523438,
 			},
 		},
 	},
@@ -318,9 +311,9 @@ RDX5Data = {
 				},
 				["mod_windows"] = {
 					["main tanks"] = {
-						["y"] = 794.2771065148068,
+						["y"] = 543.1349690767054,
 						["shown"] = false,
-						["x"] = 1345.935270229654,
+						["x"] = 1355.980825888285,
 					},
 					["raid healing"] = {
 						["y"] = 625.9053422820111,

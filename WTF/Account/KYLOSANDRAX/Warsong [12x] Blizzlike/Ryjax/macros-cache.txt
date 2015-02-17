@@ -29,6 +29,9 @@ END
 MACRO 16777229 "QHR4" Ability_DeathKnight_DesecratedGround
 /script QuickHeal(nil,'Healing Touch 4')
 END
+MACRO 16777232 "QHR4SG" Ability_CheapShot
+/script QuickHeal('subgroup','Healing Touch 4')
+END
 MACRO 16777218 "Ravage-Shred" Ability_Druid_Ravage
 /script i=1;m=0;while(UnitBuff("player",i)~=nil) do if(strfind(UnitBuff("player",i),"Ability_Ambush")~=nil) then m=1; end;i=i+1;end; c=CastSpellByName; if(m==1) then c("Ravage(rank 3)");else c("Shred(rank 4)");end;
 END

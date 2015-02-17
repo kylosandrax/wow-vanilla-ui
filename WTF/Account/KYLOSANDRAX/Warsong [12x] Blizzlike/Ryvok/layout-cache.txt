@@ -15,7 +15,7 @@ FrameLevel: 1
 X: 1279
 Y: -506
 Frame: ATSWFrame
-FrameLevel: 28
+FrameLevel: 17
 X: 352
 Y: -107
 Frame: Carni_ECB_1
@@ -57,11 +57,11 @@ Y: -204
 Frame: RDXWin25
 FrameLevel: 1
 X: 1611
-Y: -551
+Y: -337
 Frame: RDXWin26
 FrameLevel: 1
 X: 1608
-Y: -352
+Y: -139
 Frame: RDXEncPane
 FrameLevel: 1
 X: 462

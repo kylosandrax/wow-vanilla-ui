@@ -1,16 +1,12 @@
 
 oCBDB = {
-	["currentProfile"] = {
-		["Stormslinger of Warsong [12x] Blizzlike"] = "Stormslinger - Tank/DPS",
-		["Ryjax of Warsong [12x] Blizzlike"] = "Ryjax - Tank/DPS",
-	},
 	["profiles"] = {
 		["Ryjax - Tank/DPS"] = {
 			["MirrorBar"] = {
 				["edgeFile"] = "None",
 				["height"] = 28,
-				["width"] = 386,
 				["texture"] = "Striped",
+				["width"] = 386,
 			},
 			["Colors"] = {
 				["Channel"] = {
@@ -33,8 +29,8 @@ oCBDB = {
 			["CastingBar"] = {
 				["edgeFile"] = "None",
 				["height"] = 29,
-				["width"] = 385,
 				["texture"] = "Striped",
+				["width"] = 385,
 			},
 			["Pos"] = {
 				["CastingBar"] = "783.85143395112 92.495921621153",
@@ -52,5 +48,9 @@ oCBDB = {
 				["CastingBar"] = "823.47067426001 105.77046956073",
 			},
 		},
+	},
+	["currentProfile"] = {
+		["Stormslinger of Warsong [12x] Blizzlike"] = "Stormslinger - Tank/DPS",
+		["Ryjax of Warsong [12x] Blizzlike"] = "Ryjax - Tank/DPS",
 	},
 }

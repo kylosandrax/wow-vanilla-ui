@@ -54,9 +54,9 @@ FuBar2DB = {
 			["skin"] = "Interface\\AddOns\\FuTextures\\blackorange",
 			["centerSpacing"] = 20,
 			["loadOnDemand"] = {
-				["ItemRackFu"] = {
-					["title"] = "ItemRackFu",
-					["category"] = "Other",
+				["FuBar_DurabilityFu"] = {
+					["title"] = "DurabilityFu",
+					["category"] = "Inventory",
 				},
 				["Fubar_AtlasFu2"] = {
 					["title"] = "AtlasFu2",
@@ -66,13 +66,13 @@ FuBar2DB = {
 					["title"] = "ClockFu",
 					["category"] = "Interface Enhancements",
 				},
+				["ItemRackFu"] = {
+					["title"] = "ItemRackFu",
+					["category"] = "Other",
+				},
 				["FuBar_PerformanceFu"] = {
 					["title"] = "PerformanceFu",
 					["category"] = "Interface Enhancements",
-				},
-				["FuBar_DurabilityFu"] = {
-					["title"] = "DurabilityFu",
-					["category"] = "Inventory",
 				},
 			},
 			["tooltip"] = {
@@ -81,10 +81,10 @@ FuBar2DB = {
 			["rightSpacing"] = 20,
 			["detached"] = {
 			},
-			["thickness"] = 7,
-			["transparency"] = 0.5,
-			["leftSpacing"] = 20,
 			["autohideTop"] = false,
+			["transparency"] = 0.5,
+			["overflow"] = false,
+			["leftSpacing"] = 20,
 			["places"] = {
 				["center"] = {
 				},
@@ -93,7 +93,7 @@ FuBar2DB = {
 				["left"] = {
 				},
 			},
-			["overflow"] = false,
+			["thickness"] = 7,
 		},
 	},
 }

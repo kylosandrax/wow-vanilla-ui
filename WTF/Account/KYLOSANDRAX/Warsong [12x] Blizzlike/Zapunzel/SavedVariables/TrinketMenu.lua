@@ -7,10 +7,10 @@ TrinketMenuPerOptions = {
 	["FirstUse"] = true,
 	["ItemsUsed"] = {
 	},
-	["MenuDock"] = "BOTTOMRIGHT",
+	["MenuScale"] = 1,
 	["MainDock"] = "TOPRIGHT",
 	["YPos"] = 295.5548887994418,
-	["MenuScale"] = 1,
+	["MenuDock"] = "BOTTOMRIGHT",
 	["MenuOrient"] = "VERTICAL",
 }
 TrinketMenuQueue = {

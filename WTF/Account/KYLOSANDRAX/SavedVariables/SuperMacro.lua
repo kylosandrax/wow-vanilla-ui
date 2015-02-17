@@ -26,15 +26,15 @@ SM_ACTION_SUPER = {
 	},
 	["Ryvok of Warsong [12x] Blizzlike"] = {
 	},
-	["Nameplate of Emerald Dream [1x] Blizzlike"] = {
+	["Zapunzel of Warsong [12x] Blizzlike"] = {
 	},
 	["Banjax of Warsong [12x] Blizzlike"] = {
 	},
-	["Sixofnine of Warsong [12x] Blizzlike"] = {
+	["Nameplate of Emerald Dream [1x] Blizzlike"] = {
 	},
 	["Ryvok of Emerald Dream [1x] Blizzlike"] = {
 	},
-	["Zapunzel of Warsong [12x] Blizzlike"] = {
+	["Sixofnine of Warsong [12x] Blizzlike"] = {
 	},
 }
 SM_SUPER = {

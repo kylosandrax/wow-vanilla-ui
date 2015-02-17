@@ -2,17 +2,10 @@
 StubbyConfig = {
 	["addinfo"] = {
 		["EnhTooltip"] = "EnhTooltip|Used to display enhanced tooltips under the original tooltip or in the original tooltip, contains hooking functions for almost all major in game item tooltips [3.9.0.1030] This AddOn is licenced under the GNU GPL, see GPL.txt for details.",
-		["Auctioneer"] = "Auctioneer|Displays item info and analyzes auction data. Use \"/auctioneer scan\" at AH to collect auction data. [3.9.0.1063 (Kangaroo)] This AddOn is licenced under the GNU GPL, see GPL.txt for details.",
+		["Informant"] = "Informant|Displays detailed item information in tooltips, and can produce item reports by binding an information window to a keypress [3.9.0.1000] This AddOn is licenced under the GNU GPL, see GPL.txt for details.",
 		["BeanCounter"] = "BeanCounter|An Auctioneer addon that maintains an auction house transaction database. [3.9.0.1056 (Kangaroo)] This AddOn is licenced under the GNU GPL, see GPL.txt for details.",
 		["Enchantrix"] = "Enchantrix|Display information in item tooltips pertaining to the results of disenchanting said item.  [3.9.0.1000] This AddOn is licenced under the GNU GPL, see GPL.txt for details.",
-		["Informant"] = "Informant|Displays detailed item information in tooltips, and can produce item reports by binding an information window to a keypress [3.9.0.1000] This AddOn is licenced under the GNU GPL, see GPL.txt for details.",
-	},
-	["inspected"] = {
-		["EnhTooltip"] = true,
-		["Auctioneer"] = true,
-		["BeanCounter"] = true,
-		["Enchantrix"] = true,
-		["Informant"] = true,
+		["Auctioneer"] = "Auctioneer|Displays item info and analyzes auction data. Use \"/auctioneer scan\" at AH to collect auction data. [3.9.0.1063 (Kangaroo)] This AddOn is licenced under the GNU GPL, see GPL.txt for details.",
 	},
 	["boots"] = {
 		["informant"] = {
@@ -32,6 +25,13 @@ StubbyConfig = {
 			["triggers"] = "		function BeanCounter_CheckLoad()\n			local loadType = Stubby.GetConfig(\"BeanCounter\", \"LoadType\")\n			if (loadType == \"auctionhouse\" or not loadType) then\n				LoadAddOn(\"BeanCounter\")\n			end\n		end\n		function BeanCounter_ShowNotLoaded()\n		end\n		local function onLoaded()\n			Stubby.UnregisterAddOnHook(\"Blizzard_AuctionUI\", \"BeanCounter\")\n			if (not IsAddOnLoaded(\"BeanCounter\")) then\n				Stubby.RegisterFunctionHook(\"AuctionFrame_Show\", 100, BeanCounter_ShowNotLoaded)\n			end\n		end\n		Stubby.RegisterFunctionHook(\"AuctionFrame_LoadUI\", 100, BeanCounter_CheckLoad)\n		Stubby.RegisterFunctionHook(\"CheckInbox\", 100, BeanCounter_CheckLoad);\n		Stubby.RegisterAddOnHook(\"Blizzard_AuctionUI\", \"BeanCounter\", onLoaded)\n		local loadType = Stubby.GetConfig(\"BeanCounter\", \"LoadType\")\n		if (loadType == \"always\") then\n			LoadAddOn(\"BeanCounter\")\n		else\n			Stubby.Print(\"BeanCounter is not loaded. Type /beancounter for more info.\");\n		end\n	",
 		},
 	},
+	["inspected"] = {
+		["EnhTooltip"] = true,
+		["Informant"] = true,
+		["BeanCounter"] = true,
+		["Enchantrix"] = true,
+		["Auctioneer"] = true,
+	},
 	["configs"] = {
 		["informant"] = {
 			["loadtype"] = "always",
@@ -39,15 +39,15 @@ StubbyConfig = {
 		["auctioneer"] = {
 			["sixofnine:loadtype"] = "always",
 			["zapunzel:loadtype"] = "always",
-			["ryjax:loadtype"] = "always",
-			["stormslinger:loadtype"] = "always",
 			["kylosandrax:loadtype"] = "always",
+			["stormslinger:loadtype"] = "always",
+			["ryjax:loadtype"] = "always",
 		},
 		["enchantrix"] = {
 			["sixofnine:loadtype"] = "always",
 			["zapunzel:loadtype"] = "always",
-			["kylosandrax:loadtype"] = "always",
 			["ryjax:loadtype"] = "always",
+			["kylosandrax:loadtype"] = "always",
 		},
 	},
 }

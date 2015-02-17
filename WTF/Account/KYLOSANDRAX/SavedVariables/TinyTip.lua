@@ -1,11 +1,11 @@
 
 TinyTipDB = {
-	["Scale"] = 1,
+	["MAnchor"] = "GAMEDEFAULT",
 	["FOffY"] = 150,
 	["_v"] = 33,
 	["SmoothBorder"] = false,
-	["MAnchor"] = "GAMEDEFAULT",
+	["Border"] = 1,
 	["MOffY"] = 150,
 	["RTIcon"] = true,
-	["Border"] = 1,
+	["Scale"] = 1,
 }

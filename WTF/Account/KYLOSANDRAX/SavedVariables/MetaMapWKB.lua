@@ -1,11 +1,11 @@
 
 MetaKBOptions = {
 	["SetMapShow"] = false,
-	["RangeCheck"] = 1,
+	["NewTargetNote"] = false,
 	["KBstate"] = false,
 	["ShowUpdates"] = false,
 	["Dsearch"] = true,
-	["NewTargetNote"] = false,
+	["RangeCheck"] = 1,
 	["AutoTrack"] = false,
 	["BoundingBox"] = false,
 }

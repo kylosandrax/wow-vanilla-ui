@@ -22,6 +22,9 @@ END
 MACRO 16777218 "Stance-Spell" Ability_Creature_Amber_01
 /script t,n,b,c = GetShapeshiftFormInfo(1); t,n,d,c = GetShapeshiftFormInfo(2); if b then CastSpellByName("Overpower()"); elseif d then CastSpellByName("Revenge()"); else CastSpellByName("Whirlwind()"); end;
 END
+MACRO 16777228 "TC" Ability_Warrior_StalwartProtector
+/script t,n,isActive,c = GetShapeshiftFormInfo(1); if isActive then CastSpellByName("Thunder Clap(Rank 6)"); else CastSpellByName("Battle Stance()"); end;
+END
 MACRO 16777224 "Zerk-Charge" ability_deathwing_bloodcorruption_death
 /cast Battle Stance
 /cast Charge
