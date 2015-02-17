@@ -82,9 +82,11 @@ function AtlasLootItem_OnEnter()
             else
                 AtlasLootTooltip:SetOwner(this, "ANCHOR_RIGHT", -(this:GetWidth() / 2), 24);
                 AtlasLootTooltip:ClearLines();
-                AtlasLootTooltip:AddLine(RED..ATLASLOOT_ERRORTOOLTIP_L1);
-                AtlasLootTooltip:AddLine(BLUE..ATLASLOOT_ERRORTOOLTIP_L2.." "..this.itemID);
-                AtlasLootTooltip:AddLine(ATLASLOOT_ERRORTOOLTIP_L3);
+                AtlasLootTooltip:AddLine(RED..ATLASLOOT_ERRORTOOLTIP_L1, nil, nil, nil, 1);
+                AtlasLootTooltip:AddLine(BLUE..ATLASLOOT_ERRORTOOLTIP_L2.." "..this.itemID, nil, nil, nil, 1);
+                AtlasLootTooltip:AddLine(ATLASLOOT_ERRORTOOLTIP_L3, nil, nil, nil, 1);
+				AtlasLootTooltip:AddLine(" ", nil, nil, nil, 1);
+				AtlasLootTooltip:AddLine(ATLASLOOT_ERRORTOOLTIP_L4, nil, nil, nil, 1);
                 AtlasLootTooltip:Show();
             end
         end
@@ -115,13 +117,15 @@ end
 -- Item OnClick
 -- Called when a loot item is clicked on
 --------------------------------------------------------------------------------
-function AtlasLootItem_OnClick()
+function AtlasLootItem_OnClick(arg1)
 	local color = strsub(getglobal("AtlasLootItem_"..this:GetID().."_Name"):GetText(), 1, 10);
 	local id = this:GetID();
 	local name = strsub(getglobal("AtlasLootItem_"..this:GetID().."_Name"):GetText(), 11);
 	local iteminfo = GetItemInfo(this.itemID);
     --If shift-clicked, link in the chat window
-	if(ChatFrameEditBox:IsVisible() and IsShiftKeyDown() and iteminfo and (AtlasLootOptions.SafeLinks or AtlasLootOptions.AllLinks)) then
+	if(arg1=="RightButton" and not iteminfo and this.itemID~=0) then
+		AtlasLootTooltip:SetHyperlink("item:"..this.itemID..":0:0:0");
+	elseif(ChatFrameEditBox:IsVisible() and IsShiftKeyDown() and iteminfo and (AtlasLootOptions.SafeLinks or AtlasLootOptions.AllLinks)) then
     	ChatFrameEditBox:Insert(color.."|Hitem:"..this.itemID..":0:0:0|h["..name.."]|h|r");
 	elseif(ChatFrameEditBox:IsVisible() and IsShiftKeyDown() and AtlasLootOptions.AllLinks) then
 		ChatFrameEditBox:Insert(color.."|Hitem:"..this.itemID..":0:0:0|h["..name.."]|h|r");

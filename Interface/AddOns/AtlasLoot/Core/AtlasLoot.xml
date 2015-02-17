@@ -204,6 +204,9 @@
 
 	<Button name="AtlasLootItem_Template" inherits="AtlasLootItem_ParentTemplate" virtual="true" hidden="false">
 		<Scripts>
+			<OnLoad>
+				this:RegisterForClicks("LeftButtonDown", "RightButtonDown");
+			</OnLoad>
 			<OnEnter>
 				AtlasLootItem_OnEnter();
 			</OnEnter>
@@ -211,7 +214,7 @@
 				AtlasLootItem_OnLeave();
 			</OnLeave>
 			<OnClick>
-				AtlasLootItem_OnClick();
+				AtlasLootItem_OnClick(arg1);
 			</OnClick>
             <OnShow>
 				this:SetFrameLevel( (this:GetParent()):GetFrameLevel() + 1 );

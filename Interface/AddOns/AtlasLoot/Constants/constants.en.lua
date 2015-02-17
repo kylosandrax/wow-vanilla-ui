@@ -16,7 +16,8 @@ ATLASLOOT_BANNER_TEXT = "Click onto the bossname to toggle the loot view."
 
 ATLASLOOT_ERRORTOOLTIP_L1 = "Unsafe Item";
 ATLASLOOT_ERRORTOOLTIP_L2 = "ItemID:";
-ATLASLOOT_ERRORTOOLTIP_L3 = "This item is unsafe.  To view this item\nwithout the risk of disconnection, you\nneed to have first seen it in the game world.\nThis is a restriction enforced by Blizzard\nsince Patch 1.10.";
+ATLASLOOT_ERRORTOOLTIP_L3 = "This item is unsafe.  To view this item without the risk of disconnection, you need to have first seen it in the game world. This is a restriction enforced by Blizzard since Patch 1.10.";
+ATLASLOOT_ERRORTOOLTIP_L4 = "You can right-click to attempt to query the server.  You may be disconnected.";
 
 ATLASLOOT_UIBACK = "Back";
 
