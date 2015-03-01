@@ -69,22 +69,23 @@ sRaidFrames.options = {
 		
 		
 		heal_indicators = {
-			name = L["_Healing indicators"],
-			type = "toggle",
-			desc = L["Show/Hide incoming heal indicators"],
-			get = function()
-				return sRaidFrames.opt.heal
-			end,
-			set = function(heal)
-				sRaidFrames:S("heal", heal)
-				sRaidFrames:ResetHealIndicators()
-			end,
-			--order = 3,
+				name = L["_Healing indicators"],
+				type = "text",
+				desc = L["Show/Hide incoming heal indicators"],
+				get = function()
+					return sRaidFrames.opt.heal
+				end,
+				set = "chatHealingIndicators",
+				validate = {
+							["round"] = L["Round"], 
+							["square"] = L["Square"], 
+							["none"] = L["None"]
+							
+				},
+				--order = 3
 		},
 		
-		
-		
-		
+
 		pure_view = {
 		name = L["_Pure view"],
 		type = "group",
@@ -235,7 +236,7 @@ sRaidFrames.options = {
 			args = {
 	
 				profile00 = {
-						name = L["Grid - Horizontal 5 per column"],
+						name = L["Grid - Horizontal 8 per row"],
 						type = "toggle",
 						desc = L["Load predefined settings"],
 						get = function()
@@ -245,10 +246,10 @@ sRaidFrames.options = {
 							if value then
 								sRaidFrames:chatToggleBorder(value)
 
-								sRaidFrames:S("Spacing", -4)
+								
 								sRaidFrames:S("fixed_count", 8)
-								if sRaidFrames.opt.Width ~= 40 then
-									sRaidFrames:S("Width_OLD", sRaidFrames.opt.Width or 79)
+								if sRaidFrames.opt.Width > 50 then
+									sRaidFrames:S("Width_OLD", sRaidFrames.opt.Width or 65)
 								end	
 								sRaidFrames:S("Width", 40)
 								sRaidFrames:S("unit_name_lenght", true)
@@ -258,11 +259,11 @@ sRaidFrames.options = {
 							end
 							sRaidFrames:ProfileFeedGrid()
 						end,
-						order = 6,
+						order = 8,
 					},
 
 				profile11 = {
-						name = L["Classic - 5 per column"],
+						name = L["Classic - 8 per column"],
 						type = "toggle",
 						desc = L["Load predefined settings"],
 						get = function()
@@ -272,10 +273,10 @@ sRaidFrames.options = {
 							if value then
 								sRaidFrames:chatToggleBorder(value)
 	
-								sRaidFrames:S("Spacing", -4)
+								
 								sRaidFrames:S("fixed_count", 5)
-								if sRaidFrames.opt.Width == 40 then
-									sRaidFrames:S("Width", sRaidFrames.opt.Width_OLD or 79)
+								if sRaidFrames.opt.Width <= 50 then
+									sRaidFrames:S("Width", sRaidFrames.opt.Width_OLD or 65)
 								end	
 								sRaidFrames:S("unit_name_lenght", nil)
 								sRaidFrames:S("vertical_hp", nil)
@@ -287,7 +288,7 @@ sRaidFrames.options = {
 					},
 				
 				profile22 = {
-						name = L["Grid - Vertical 5 per column"],
+						name = L["Grid - Vertical 8 per column"],
 						type = "toggle",
 						desc = L["Load predefined settings"],
 						get = function()
@@ -297,10 +298,10 @@ sRaidFrames.options = {
 							if value then
 								sRaidFrames:chatToggleBorder(value)
 		
-								sRaidFrames:S("Spacing", -4)
-								sRaidFrames:S("fixed_count", 5)
-								if sRaidFrames.opt.Width ~= 40 then
-									sRaidFrames:S("Width_OLD", sRaidFrames.opt.Width or 79)
+								
+								sRaidFrames:S("fixed_count", 8)
+								if sRaidFrames.opt.Width > 50 then
+									sRaidFrames:S("Width_OLD", sRaidFrames.opt.Width or 65)
 								end	
 								sRaidFrames:S("Width", 40)
 								sRaidFrames:S("unit_name_lenght", true)
@@ -309,7 +310,7 @@ sRaidFrames.options = {
 							end
 							sRaidFrames:ProfileFeedGrid()
 						end,
-						order = 5,
+						order = 7,
 					},
 					
 				profile33 = {
@@ -323,10 +324,10 @@ sRaidFrames.options = {
 							if value then
 								sRaidFrames:chatToggleBorder(value)
 
-								sRaidFrames:S("Spacing", -4)
+								
 								sRaidFrames:S("fixed_count", 8)
-								if sRaidFrames.opt.Width == 40 then
-									sRaidFrames:S("Width", sRaidFrames.opt.Width_OLD or 79)
+								if sRaidFrames.opt.Width <= 50 then
+									sRaidFrames:S("Width", sRaidFrames.opt.Width_OLD or 65)
 								end	
 								sRaidFrames:S("unit_name_lenght", nil)
 								sRaidFrames:S("vertical_hp", nil)
@@ -350,10 +351,10 @@ sRaidFrames.options = {
 							if value then
 								sRaidFrames:chatToggleBorder(value)
 	
-								sRaidFrames:S("Spacing", -4)
+								
 								sRaidFrames:S("fixed_count", 20)
-								if sRaidFrames.opt.Width == 40 then
-									sRaidFrames:S("Width", sRaidFrames.opt.Width_OLD or 79)
+								if sRaidFrames.opt.Width <= 50 then
+									sRaidFrames:S("Width", sRaidFrames.opt.Width_OLD or 65)
 								end	
 								sRaidFrames:S("unit_name_lenght", nil)
 								sRaidFrames:S("vertical_hp", nil)
@@ -377,10 +378,10 @@ sRaidFrames.options = {
 							if value then
 								sRaidFrames:chatToggleBorder(value)
 	
-								sRaidFrames:S("Spacing", -4)
+								
 								sRaidFrames:S("fixed_count", 10)
-								if sRaidFrames.opt.Width == 40 then
-									sRaidFrames:S("Width", sRaidFrames.opt.Width_OLD or 79)
+								if sRaidFrames.opt.Width <= 50 then
+									sRaidFrames:S("Width", sRaidFrames.opt.Width_OLD or 65)
 								end	
 								sRaidFrames:S("unit_name_lenght", nil)
 								sRaidFrames:S("vertical_hp", nil)
@@ -389,14 +390,173 @@ sRaidFrames.options = {
 							sRaidFrames:ProfileFeedClassic()
 						end,
 						order = 4,
-					},			
-				
+					},
+
+				profile66 = {
+						name = L["Compact - Vertical 8 per column"],
+						type = "toggle",
+						desc = L["Load predefined settings"],
+						get = function()
+							return nil
+						end,
+						set = function(value)
+							if value then
+								sRaidFrames:chatToggleBorder(value)
+		
+								
+								sRaidFrames:S("fixed_count", 8)
+								if sRaidFrames.opt.Width > 50 then
+									sRaidFrames:S("Width_OLD", sRaidFrames.opt.Width or 65)
+								end	
+								sRaidFrames:S("Width", 50)
+								sRaidFrames:S("unit_name_lenght", true)
+								sRaidFrames:S("vertical_hp", true)
+								sRaidFrames:S("Growth", "down")
+							end
+							sRaidFrames:ProfileFeedCompact()
+						end,
+						order = 6,
+					},
+					
+					
+					profile77 = {
+						name = L["Compact - Horizontal 8 per row"],
+						type = "toggle",
+						desc = L["Load predefined settings"],
+						get = function()
+							return nil
+						end,
+						set = function(value)
+							if value then
+								sRaidFrames:chatToggleBorder(value)
+		
+								
+								sRaidFrames:S("fixed_count", 8)
+								if sRaidFrames.opt.Width > 50 then
+									sRaidFrames:S("Width_OLD", sRaidFrames.opt.Width or 65)
+								end	
+								sRaidFrames:S("Width", 50)
+								sRaidFrames:S("unit_name_lenght", true)
+								sRaidFrames:S("vertical_hp", true)
+								sRaidFrames:S("Growth", "right")
+							end
+							sRaidFrames:ProfileFeedCompact()
+						end,
+						order = 7,
+					},
+					
+					profile88 = {
+						name = L["Pyramid BottomRight"],
+						type = "toggle",
+						desc = L["Load predefined settings"],
+						get = function()
+							return nil
+						end,
+						set = function(value)
+							if value then
+								sRaidFrames:chatToggleBorder(value)
+		
+								
+								sRaidFrames:S("fixed_count", 5)
+								if sRaidFrames.opt.Width > 50 then
+									sRaidFrames:S("Width_OLD", sRaidFrames.opt.Width or 65)
+								end	
+								sRaidFrames:S("Width", 46)
+								sRaidFrames:S("unit_name_lenght", true)
+								sRaidFrames:S("vertical_hp", true)
+								sRaidFrames:S("Growth", "up")
+								sRaidFrames:S("ReverseSort", true)
+							end
+							sRaidFrames:ProfileFeedPyramid()
+						end,
+						order = 8,
+					},
+					
+					profile99 = {
+						name = L["Pyramid BottomLeft"],
+						type = "toggle",
+						desc = L["Load predefined settings"],
+						get = function()
+							return nil
+						end,
+						set = function(value)
+							if value then
+								sRaidFrames:chatToggleBorder(value)
+		
+								
+								sRaidFrames:S("fixed_count", 5)
+								if sRaidFrames.opt.Width > 50 then
+									sRaidFrames:S("Width_OLD", sRaidFrames.opt.Width or 65)
+								end	
+								sRaidFrames:S("Width", 46)
+								sRaidFrames:S("unit_name_lenght", true)
+								sRaidFrames:S("vertical_hp", true)
+								sRaidFrames:S("Growth", "up")
+								sRaidFrames:S("ReverseSort", false)
+							end
+							sRaidFrames:ProfileFeedPyramid()
+						end,
+						order = 9,
+					},
+					
+					profile10 = {
+						name = L["Pyramid TopLeft"],
+						type = "toggle",
+						desc = L["Load predefined settings"],
+						get = function()
+							return nil
+						end,
+						set = function(value)
+							if value then
+								sRaidFrames:chatToggleBorder(value)
+		
+								
+								sRaidFrames:S("fixed_count", 5)
+								if sRaidFrames.opt.Width > 50 then
+									sRaidFrames:S("Width_OLD", sRaidFrames.opt.Width or 65)
+								end	
+								sRaidFrames:S("Width", 46)
+								sRaidFrames:S("unit_name_lenght", true)
+								sRaidFrames:S("vertical_hp", true)
+								sRaidFrames:S("Growth", "down")
+								sRaidFrames:S("ReverseSort", false)
+							end
+							sRaidFrames:ProfileFeedPyramid()
+						end,
+						order = 11,
+					},
+					
+					profile11 = {
+						name = L["Pyramid TopRight"],
+						type = "toggle",
+						desc = L["Load predefined settings"],
+						get = function()
+							return nil
+						end,
+						set = function(value)
+							if value then
+								sRaidFrames:chatToggleBorder(value)
+		
+								
+								sRaidFrames:S("fixed_count", 5)
+								if sRaidFrames.opt.Width > 50 then
+									sRaidFrames:S("Width_OLD", sRaidFrames.opt.Width or 65)
+								end	
+								sRaidFrames:S("Width", 46)
+								sRaidFrames:S("unit_name_lenght", true)
+								sRaidFrames:S("vertical_hp", true)
+								sRaidFrames:S("Growth", "down")
+								sRaidFrames:S("ReverseSort", true)
+							end
+							sRaidFrames:ProfileFeedPyramid()
+						end,
+						order = 10,
+					},
 					
 								
-					}
-					
+					}	
 				},				
-						
+					
 
 		focus = {
 			name = L["_Focus frame"],
@@ -872,7 +1032,30 @@ sRaidFrames.options = {
 		},
 
 
-
+		layout = {
+			name = L["Layout"],
+			type = "group",
+			desc = L["Set the layout of the raid frames"],
+			order = 6,
+			args = {
+				reset = {
+					name = L["Reset layout"],
+					type = "execute",
+					desc = L["Reset the position of sRaidFrames"],
+					func = "ResetPosition"
+				},
+				--[[
+				predefined = {
+					name = L["Predefined Layout"],
+					type = "text",
+					desc = L["Set a predefined layout for the raid frames"],
+					get = function() return nil end,
+					set = "chatSetLayout",
+					validate = {["sticky"] = L["Sticky"],["ctra"] = L["CT_RaidAssist"], ["horizontal"] = L["Horizontal"], ["vertical"] = L["Vertical"]},
+				},
+				--]]
+			},
+		},
 
 
 
@@ -885,7 +1068,7 @@ sRaidFrames.options = {
 
 
 			sort = {
-				name = L["Group by"],
+				name = L["Group sort"],
 				type = "text",
 				desc = L["Select how you wish to show the groups"],
 				order = 1,
@@ -897,7 +1080,7 @@ sRaidFrames.options = {
 			},
 				
 			subsort = {
-				name = L["Member sort order"],
+				name = L["Group subsort"],
 				type = "text",
 				desc = L["Select how you wish to sort the members of each group"],
 				get = function()
@@ -907,7 +1090,7 @@ sRaidFrames.options = {
 					sRaidFrames:S("SubSort", value)
 					sRaidFrames:Sort()
 				end,
-				validate = {["name"] = L["By name"], ["class"] = L["By class"], ["none"] = L["By group"]},
+				validate = {["name"] = L["By name"], ["class"] = L["By class"], ["none"] = L["By order"]},
 				order = 2,
 			},
 			
@@ -926,28 +1109,6 @@ sRaidFrames.options = {
 				order = 5,
 			},
 
-			layout = {
-				name = L["Layout"],
-				type = "group",
-				desc = L["Set the layout of the raid frames"],
-				order = 6,
-				args = {
-					reset = {
-						name = L["Reset layout"],
-						type = "execute",
-						desc = L["Reset the position of sRaidFrames"],
-						func = "ResetPosition"
-					},
-					predefined = {
-						name = L["Predefined Layout"],
-						type = "text",
-						desc = L["Set a predefined layout for the raid frames"],
-						get = function() return nil end,
-						set = "chatSetLayout",
-						validate = {["sticky"] = L["Sticky"],["ctra"] = L["CT_RaidAssist"], ["horizontal"] = L["Horizontal"], ["vertical"] = L["Vertical"]},
-					},
-				},
-			},
 
 				
 			dead_sort = {
@@ -962,6 +1123,20 @@ sRaidFrames.options = {
 				end,
 				order = 9,
 			},	
+				
+			reverse_sort = {
+				name = L["Reverse sort"],
+				type = "toggle",
+				desc = L["Reverse sort"],
+				get = function()
+					return sRaidFrames.opt.ReverseSort
+				end,
+				set = function(value)
+					sRaidFrames:S("ReverseSort", value)
+					sRaidFrames:Sort()
+				end,
+				order = 10,
+			},		
 				
 				
 			per_column = {
@@ -1384,7 +1559,7 @@ sRaidFrames.options = {
 				set = function(set)
 					sRaidFrames:S("ShowFilteredBuffs", set)
 				end,	
-				--disabled = function() return not (sRaidFrames.opt.BuffType ~= "buffs" or sRaidFrames.opt.BuffType ~= "nothing") end,
+				disabled = function() return not (sRaidFrames.opt.BuffType == "buffs" or sRaidFrames.opt.BuffType == "buffsanddebuffs") end,
 				order = 4
 			},
 			
@@ -1398,7 +1573,7 @@ sRaidFrames.options = {
 				set = function(set)
 					sRaidFrames:S("ShowFilteredDebuffs", set)
 				end,	
-				--disabled = function() return not (sRaidFrames.opt.BuffType ~= "buffs" or sRaidFrames.opt.BuffType ~= "nothing") end,
+				disabled = function() return not (sRaidFrames.opt.BuffType == "debuffs" or sRaidFrames.opt.BuffType == "buffsanddebuffs") end,
 				order = 5
 			},
 
@@ -1411,7 +1586,7 @@ sRaidFrames.options = {
 					return sRaidFrames.opt.ShowOnlyDispellable
 				end,
 				set = "chatToggleDispellable",
-				disabled = function() return not (sRaidFrames.opt.BuffType ~= "buffs" or sRaidFrames.opt.BuffType ~= "nothing") end,
+				disabled = function() return not (sRaidFrames.opt.BuffType == "debuffs" or sRaidFrames.opt.BuffType == "buffsanddebuffs") end,
 				order = 6
 			},
 		
@@ -1526,6 +1701,7 @@ sRaidFrames.options = {
 					return sRaidFrames.opt.Width
 				end,
 				set = function(set)
+					sRaidFrames:PositionLayout("sticky", 200, -300)
 					sRaidFrames:S("Width", set)
 					sRaidFrames:LoadStyle()
 				end,
@@ -1562,20 +1738,6 @@ sRaidFrames.options = {
 			order = 7,
 		},
 
-		bordercolor = {
-			type = "color",
-			name = L["Border color"],
-			desc = L["Change the border color"],
-			get = function()
-				local s = sRaidFrames.opt.BorderColor
-				return s.r, s.g, s.b, s.a
-			end,
-			set = "chatBorderColor",
-			hasAlpha = true,
-			disabled = function() return not sRaidFrames.opt.Border end,
-			order = 8
-		},
-
 		tooltip = {
 			name = L["Tooltip display"],
 			type = "text",
@@ -1586,6 +1748,52 @@ sRaidFrames.options = {
 			end,
 			validate = {["never"] = L["Never"], ["notincombat"] = L["Only when not in combat"], ["always"] = L["Always"]},
 		},
+
+
+		debug = {
+			name = L["_Debug"],
+			type = "group",
+			desc = L["Set about debug"],
+			args = {
+				debug_range = {
+					name = L["Enable range calculation debug"],
+					type = "toggle",
+					desc = L["Range accuracy calculation, only for testing"],
+					get = function() return sRaidFrames.opt.DebugRange end,
+					set = function(value)
+						sRaidFrames.opt.DebugRange = value
+					end,
+					order = 1,
+				},
+			
+				debug_heal = {
+					name = L["Enable incomming heal debug"],
+					type = "toggle",
+					desc = L["Incomming heal debug, only for testing. Prefixes: HCOM - HealComm, SRF - SRaidFrames, HBOT - HealBot, HAS - Healer Assist"],
+					get = function() return sRaidFrames.opt.DebugHeal end,
+					set = function(value)
+						sRaidFrames.opt.DebugHeal = value
+					end,
+					order = 2,
+				},
+			
+				debug_rez = {
+					name = L["Enable incomming resurrection debug"],
+					type = "toggle",
+					desc = L["Incomming resurrection debug, only for testing. Prefixes: HCOM - HealComm, SRF - SRaidFrames, HBOT - HealBot, HAS - Healer Assist"],
+					get = function() return sRaidFrames.opt.DebugRez end,
+					set = function(value)
+						sRaidFrames.opt.DebugRez = value
+					end,
+					order = 3,
+				},
+			
+				
+			
+			},
+			},
+
+
 
 		range = {
 			name = L["_Range"],
@@ -1639,16 +1847,7 @@ sRaidFrames.options = {
 					order = 3,		
 				},
 				
-					debug = {
-					name = L["Enable debug"],
-					type = "toggle",
-					desc = L["Range accuracy calculation, only for testing"],
-					get = function() return sRaidFrames.opt.Debug end,
-					set = function(value)
-						sRaidFrames.opt.Debug = value
-					end,
-					order = 4,
-				},
+
 				
 				alpha = {
 					name = L["Alpha"],
@@ -1697,24 +1896,64 @@ sRaidFrames.options = {
 			},
 		},
 
-		
-
-		
-
 		border = {
 			name = L["Border"],
-			type = "toggle",
-			desc = L["Toggle the display of borders around the raid frames"],
-			get = function()
-				return sRaidFrames.opt.Border
-			end,
-			order = 9,
-			set = function(value)
-				sRaidFrames:ResetHealIndicators()
-				sRaidFrames:chatToggleBorder(value)
-				sRaidFrames:LoadStyle()
-			end
+			type = "group",
+			desc = L["Set about borders around the raid frames"],
+			order = 6,
+			args = {
+
+			bordertexture = {
+				name = L["Border texture"],
+				type = "text",
+				desc = L["Select border texture"],
+				order = 1,
+				get = function()
+					return sRaidFrames.opt.Bordertexture
+				end,
+				set = "chatTextureBorder",
+				validate = {
+							["Interface\\AddOns\\sRaidFrames\\borders\\UI-Tooltip-Border_Original.blp"] = L["Original"], 
+							["Interface\\AddOns\\sRaidFrames\\borders\\UI-Tooltip-Border_Ace.blp"] = L["Ace"], 
+							--["Interface\\AddOns\\sRaidFrames\\borders\\UI-Tooltip-Border_Santa.blp"] = L["Santa"],
+							--["Interface\\AddOns\\sRaidFrames\\borders\\XPerl_ThinEdge.blp"] = L["ThickEdge"],
+							["Interface\\AddOns\\sRaidFrames\\borders\\UI-Tooltip-Border_Snow.blp"] = L["Snow"],
+							["Interface\\AddOns\\sRaidFrames\\borders\\UI-Tooltip-Border_Grid.tga"] = L["Grid"]
+							
+				},
+				order = 2
+			},
+
+			bordertoggle = {
+				name = L["Toggle border"],
+				type = "toggle",
+				desc = L["Toggle the display of borders around the raid frames"],
+				get = function()
+					return sRaidFrames.opt.Border
+				end,
+				order = 1,
+				set = function(value)
+					sRaidFrames:ResetHealIndicators()
+					sRaidFrames:chatToggleBorder(value)
+					sRaidFrames:LoadStyle()
+				end
+			},
+
+			bordercolor = {
+				type = "color",
+				name = L["Border color"],
+				desc = L["Change the border color"],
+				get = function()
+					local s = sRaidFrames.opt.BorderColor
+					return s.r, s.g, s.b, s.a
+				end,
+				set = "chatBorderColor",
+				hasAlpha = true,
+				disabled = function() return not sRaidFrames.opt.Border end,
+				order = 3
+			},
 		},
+		},	
 
 		spacing = {
 			name = L["Frame spacing"],
@@ -1808,7 +2047,8 @@ end
 
 function sRaidFrames:chatScale(t)
 	self:S("Scale", t)
-
+	self:S("ScaleFocus", t)
+	self:PositionLayout("sticky", 200, -300)
 	self.master:SetScale(t)
 	self:LoadStyle()
 end
@@ -1829,13 +2069,6 @@ function sRaidFrames:chatBorderColor(r, g, b, a)
 	end
 end
 
-function sRaidFrames:MultidragMsg()
-	if not self.MultidragInfo then
-		DEFAULT_CHAT_FRAME:AddMessage("|cff00eeee sRaidFrames: |cffffffff".."For multidrag unlock the frames, hold Alt key then click left Mouse button on any frame name."); 
-		self.MultidragInfo = true
-	end	
-end
-
 function sRaidFrames:chatSetLayout(layout)
 	self:MultidragMsg()
 	self:PositionLayout(layout, 200, -200)
@@ -1849,7 +2082,24 @@ function sRaidFrames:chatToggleBorder(value)
 	end
 
 	self:UpdateBuffs(self.visible)
-	self:ResetHealIndicators("force")
+	--self:ResetHealIndicators("force")
+end
+
+function sRaidFrames:chatTextureBorder(value)
+	self:S("Bordertexture", value)
+	
+	for k,f in pairs(self.frames) do
+			self:SetBackdrop(f)
+	end
+
+	self:UpdateBuffs(self.visible)
+	--self:ResetHealIndicators("force")
+end
+
+function sRaidFrames:chatHealingIndicators(value)
+	sRaidFrames:ResetHealIndicators()
+	self:S("heal", value)
+	sRaidFrames:LoadStyle()
 end
 
 function sRaidFrames:DisableRangeCheck()
@@ -1861,11 +2111,16 @@ function sRaidFrames:DisableRangeCheck()
 	--end					
 end		
 
-function sRaidFrames:ProfileFeedClassic()
-	sRaidFrames:chatSortBy("fixed")
+function sRaidFrames:MultidragMsg()
+	if not self.MultidragInfo then
+		DEFAULT_CHAT_FRAME:AddMessage("|cff00eeee sRaidFrames: |cffffffff".."For multidrag unlock the frames and use alt + left mouse combination."); 
+		self.MultidragInfo = true
+	end	
+end
+
+
+function sRaidFrames:ProfileFeedCommon()
 	sRaidFrames.opt.SubSort = "class"
-	
-	sRaidFrames.opt.heal = true
 	sRaidFrames.opt.RangeAlpha = 0.25
 				
 	sRaidFrames.opt.PowerFilter[0] = false
@@ -1878,54 +2133,84 @@ function sRaidFrames:ProfileFeedClassic()
 	sRaidFrames.opt.BackgroundColor.b = 0.3
 	sRaidFrames.opt.BackgroundColor.a = 1
 	
-	
 	sRaidFrames:S("unitname_color", true)
 	sRaidFrames:S("aggro", true)
 	sRaidFrames:S("red", true)
 	sRaidFrames:S("redbar", false)
+	sRaidFrames:S("healthDisplayType", "none")
 	
-	sRaidFrames:S("healthDisplayType", "percent")
-	sRaidFrames:S("show_txt_buff", nil)
-	sRaidFrames:S("Buff_Growth", "vertical")
-	sRaidFrames:S("Buff_Anchor", "topright")
-	sRaidFrames:S("buff_slots", 2)
-	sRaidFrames:S("Texture", "Gradient")
 	sRaidFrames:S("statusbar_color", true)
+
+end
+
+function sRaidFrames:ProfileFeedClassic()
+	sRaidFrames:chatSortBy("fixed")
+	sRaidFrames:ProfileFeedCommon()
+	sRaidFrames:S("Spacing", -4)
+	sRaidFrames:S("show_txt_buff", nil)
+	sRaidFrames:S("Buff_Growth", "horizontal")
+	sRaidFrames:S("Buff_Anchor", "bottomright")
+	sRaidFrames:S("buff_slots", 4)
+	sRaidFrames:chatTexture("Gradient")
+	sRaidFrames:S("buff_size", 12)
+	sRaidFrames:chatHealingIndicators("round")
+	sRaidFrames:S("Bordertexture", "Interface\\AddOns\\sRaidFrames\\borders\\UI-Tooltip-Border_Original.blp")
+	sRaidFrames:chatBorderColor(0.5, 0.5, 0.5, 1)
+	sRaidFrames:MultidragMsg()
+	sRaidFrames:LoadStyle()
+	sRaidFrames:PositionLayout("sticky", 200, -200)
+	
+end
+
+function sRaidFrames:ProfileFeedGrid()
+	sRaidFrames:chatSortBy("fixed")
+	sRaidFrames:ProfileFeedCommon()
+	sRaidFrames:S("Spacing", -6)
+	sRaidFrames:S("show_txt_buff", true)
+	sRaidFrames:S("Buff_Growth", "horizontal")
+	sRaidFrames:S("Buff_Anchor", "bottomright")
+	sRaidFrames:S("buff_slots", 1)
+	sRaidFrames:chatTexture("Minimalist")
+	sRaidFrames:S("buff_size", 11)
+	sRaidFrames:chatHealingIndicators("square")
+	sRaidFrames:S("Bordertexture", "Interface\\AddOns\\sRaidFrames\\borders\\UI-Tooltip-Border_Grid.tga")
+	sRaidFrames:chatBorderColor(0.3, 0.3, 0.3, 1)
 	sRaidFrames:MultidragMsg()
 	sRaidFrames:LoadStyle()
 	sRaidFrames:PositionLayout("sticky", 200, -200)
 end
 
-function sRaidFrames:ProfileFeedGrid()
+function sRaidFrames:ProfileFeedPyramid()
+	sRaidFrames:chatSortBy("class")
+	sRaidFrames:ProfileFeedCommon()
+	sRaidFrames:S("Spacing", -6)
+	sRaidFrames:S("show_txt_buff", nil)
+	sRaidFrames:S("Buff_Growth", "vertical")
+	sRaidFrames:S("Buff_Anchor", "topright")
+	sRaidFrames:S("buff_slots", 3)
+	sRaidFrames:chatTexture("Minimalist")
+	sRaidFrames:S("buff_size", 10)
+	sRaidFrames:chatHealingIndicators("square")
+	sRaidFrames:S("Bordertexture", "Interface\\AddOns\\sRaidFrames\\borders\\UI-Tooltip-Border_Grid.tga")
+	sRaidFrames:chatBorderColor(1, 1, 1, 1)
+	sRaidFrames:MultidragMsg()
+	sRaidFrames:LoadStyle()
+	sRaidFrames:PositionLayout("sticky", 200, -200)
+end
+
+function sRaidFrames:ProfileFeedCompact()
 	sRaidFrames:chatSortBy("fixed")
-	sRaidFrames.opt.SubSort = "class"
-	
-	sRaidFrames.opt.heal = true
-	sRaidFrames.opt.RangeAlpha = 0.25
-				
-	sRaidFrames.opt.PowerFilter[0] = false
-	sRaidFrames.opt.PowerFilter[1] = false
-	sRaidFrames.opt.PowerFilter[2] = false
-	sRaidFrames.opt.PowerFilter[3] = false
-								
-	sRaidFrames.opt.BackgroundColor.r = 0.3
-	sRaidFrames.opt.BackgroundColor.g = 0.3
-	sRaidFrames.opt.BackgroundColor.b = 0.3
-	sRaidFrames.opt.BackgroundColor.a = 1
-	
-	
-	sRaidFrames:S("unitname_color", true)
-	sRaidFrames:S("aggro", true)
-	sRaidFrames:S("red", true)
-	sRaidFrames:S("redbar", false)
-	
-	sRaidFrames:S("healthDisplayType", "none")
-	sRaidFrames:S("show_txt_buff", true)
-	sRaidFrames:S("Buff_Growth", "horizontal")
-	sRaidFrames:S("Buff_Anchor", "bottomright")
-	sRaidFrames:S("buff_slots", 2)
-	sRaidFrames:S("Texture", "Gradient")
-	sRaidFrames:S("statusbar_color", true)
+	sRaidFrames:ProfileFeedCommon()
+	sRaidFrames:S("Spacing", -6)
+	sRaidFrames:S("show_txt_buff", nil)
+	sRaidFrames:S("Buff_Growth", "vertical")
+	sRaidFrames:S("Buff_Anchor", "topright")
+	sRaidFrames:S("buff_slots", 3)
+	sRaidFrames:chatTexture("BantoBar")
+	sRaidFrames:S("buff_size", 10)
+	sRaidFrames:chatHealingIndicators("square")
+	sRaidFrames:S("Bordertexture", "Interface\\AddOns\\sRaidFrames\\borders\\UI-Tooltip-Border_Grid.tga")
+	sRaidFrames:chatBorderColor(0.3, 0.3, 0.3, 1)
 	sRaidFrames:MultidragMsg()
 	sRaidFrames:LoadStyle()
 	sRaidFrames:PositionLayout("sticky", 200, -200)

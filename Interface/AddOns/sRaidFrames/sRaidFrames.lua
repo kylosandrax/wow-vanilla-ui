@@ -25,7 +25,7 @@ surface:Register("Flat", "Interface\\AddOns\\sRaidFrames\\textures\\bar17.tga")
 surface:Register("Club", "Interface\\AddOns\\sRaidFrames\\textures\\bar5.tga")
 --surface:Register("Bumps", "Interface\\AddOns\\sRaidFrames\\textures\\Bumps")
 --surface:Register("Button", "Interface\\AddOns\\sRaidFrames\\textures\\Button")
-surface:Register("Cloud", "Interface\\AddOns\\sRaidFrames\\textures\\Cloud")
+surface:Register("Cloud", "Interface\\AddOns\\sRaidFrames\\textures\\Insomniax_Bar_1f.tga")
 surface:Register("Diagonal", "Interface\\AddOns\\sRaidFrames\\textures\\Diagonal")
 surface:Register("Fifths", "Interface\\AddOns\\sRaidFrames\\textures\\Fifths")
 surface:Register("Fourths", "Interface\\AddOns\\sRaidFrames\\textures\\Fourths")
@@ -33,13 +33,13 @@ surface:Register("Gloss", "Interface\\AddOns\\sRaidFrames\\textures\\Gloss")
 surface:Register("Hatched", "Interface\\AddOns\\sRaidFrames\\textures\\Hatched")
 surface:Register("Paint", "Interface\\AddOns\\sRaidFrames\\textures\\Paint")
 surface:Register("Skewed", "Interface\\AddOns\\sRaidFrames\\textures\\Skewed")
-surface:Register("Water", "Interface\\AddOns\\sRaidFrames\\textures\\Water")
---surface:Register("Charcoal", "Interface\\AddOns\\sRaidFrames\\textures\\Charcoal")
+surface:Register("Water", "Interface\\AddOns\\sRaidFrames\\textures\\Insomniax_Bar_1e.tga")
+surface:Register("Charcoal", "Interface\\AddOns\\sRaidFrames\\textures\\normTex.tga")
 surface:Register("Glaze", "Interface\\AddOns\\sRaidFrames\\textures\\glaze")
 --surface:Register("Metal", "Interface\\AddOns\\sRaidFrames\\textures\\BEB-BarFill-Metal")
 surface:Register("Wood", "Interface\\AddOns\\sRaidFrames\\textures\\BEB-BarFill-Wood")
-surface:Register("Rupture", "Interface\\AddOns\\sRaidFrames\\textures\\Rupture")
-surface:Register("Highlight", "Interface\\AddOns\\sRaidFrames\\textures\\debuffHighlight")
+surface:Register("Rupture", "Interface\\AddOns\\sRaidFrames\\textures\\Insomniax_Bar_1d.tga")
+--surface:Register("Highlight", "Interface\\AddOns\\sRaidFrames\\textures\\debuffHighlight")
 --surface:Register("TukuiBar", "Interface\\AddOns\\sRaidFrames\\textures\\tukuibar")
 surface:Register("Blur", "Interface\\AddOns\\sRaidFrames\\textures\\bar1.tga")
 surface:Register("VuhDo", "Interface\\AddOns\\sRaidFrames\\textures\\bar3.tga")
@@ -49,13 +49,13 @@ surface:Register("VuhDo", "Interface\\AddOns\\sRaidFrames\\textures\\bar3.tga")
 --surface:Register("Tube", "Interface\\AddOns\\sRaidFrames\\textures\\Tube.tga")
 surface:Register("Stoned", "Interface\\AddOns\\sRaidFrames\\textures\\metal.tga")
 --surface:Register("Glow", "Interface\\AddOns\\sRaidFrames\\textures\\glowTex.tga")
---surface:Register("Ray", "Interface\\AddOns\\sRaidFrames\\textures\\highlightTex.tga")
+surface:Register("Discord", "Interface\\AddOns\\sRaidFrames\\textures\\Insomniax_Bar_2a.tga")
 surface:Register("Neal", "Interface\\AddOns\\sRaidFrames\\textures\\Neal.blp")
 surface:Register("Ruben", "Interface\\AddOns\\sRaidFrames\\textures\\Ruben.tga")
 surface:Register("Orient", "Interface\\AddOns\\sRaidFrames\\textures\\Orient.tga")
 surface:Register("Ghost", "Interface\\AddOns\\sRaidFrames\\textures\\Ghost.tga")
---surface:Register("Lap", "Interface\\AddOns\\sRaidFrames\\textures\\Lap.tga")
---surface:Register("Grid", "Interface\\AddOns\\sRaidFrames\\textures\\Grid")
+surface:Register("Acid", "Interface\\AddOns\\sRaidFrames\\textures\\Insomniax_Bar_1b.tga")
+surface:Register("Insomniac", "Interface\\AddOns\\sRaidFrames\\textures\\Insomniax_Bar_1a.tga")
 
 local math_mod = math.fmod or math.mod 
 
@@ -109,11 +109,11 @@ function sRaidFrames:OnInitialize()
 		SortBy				= "fixed",
 		healthDisplayType	= 'percent',
 		Invert = false,
-		Scale				= 1.15,
-		Width				= 79,
-		ScaleFocus 			= 1.3,
-		WidthFocus 			= 85,
-		Width_OLD			= 79,
+		Scale				= 1.1,
+		Width				= 65,
+		ScaleFocus 			= 1.1,
+		WidthFocus 			= 65,
+		Width_OLD			= 65,
 		Border				= true,
 		Texture				= "Gradient",
 		BuffType			= "debuffs",
@@ -132,13 +132,13 @@ function sRaidFrames:OnInitialize()
 		PowerFilter			= {[0] = false,[1] = false,[2] = false,[3] = false},
 		aggro				= false,
 		RangeCheck 			= false,
-		ExtendedRangeCheck = false,
-		ExtendedRangeCheckCombat = true,
+		ExtendedRangeCheck = true,
+		ExtendedRangeCheckCombat = false,
 		fixed_count			= 5,
 		RangeFrequency 		= 0.20,
 		AccurateRangeFactor = 0.05,
 		RangeAlpha 			= 0.2,
-		buff_size			= 15.3,
+		buff_size			= 15,
 		srfhideparty		= true,
 		lock_focus			= false,
 		ShowGroupTitles_Focus = true,
@@ -149,10 +149,13 @@ function sRaidFrames:OnInitialize()
 		Growth_Focus 		= "down",
 		show_txt_buff		= false,
 		targeting 			= true,
-		self_targeting		= true,
+		self_targeting		= false,
 		buff_slots			= 2,
 		Buff_Growth			= "vertical",
-		Buff_Anchor 		= "topright"
+		Buff_Anchor 		= "topright",
+		Bordertexture		= "Interface\\AddOns\\sRaidFrames\\borders\\UI-Tooltip-Border_Original.blp",
+		heal 				= "round"
+
 		
 	})
 
@@ -236,14 +239,52 @@ function sRaidFrames:OnEnable()
 		aUF.PLAYER_TARGET_CHANGED_OLD = aUF.PLAYER_TARGET_CHANGED
 		aUF.PLAYER_TARGET_CHANGED = self.ag_PLAYER_TARGET_CHANGED_Hook
 	end
+	
+	if XPerl_Frame_FindID then
+		XPerl_Target_UpdateDisplay_OLD = XPerl_Target_UpdateDisplay
+		XPerl_Target_UpdateDisplay = self.XPerl_Target_UpdateDisplay_Hook
+		
+		XPerl_Target_UpdatePortrait_OLD = XPerl_Target_UpdatePortrait
+		XPerl_Target_UpdatePortrait = self.XPerl_Target_UpdatePortrait_Hook
+		
+		--XPerl_Target_CombatFlash_OLD = XPerl_Target_CombatFlash
+		--XPerl_Target_CombatFlash = self.XPerl_Target_CombatFlash_Hook
+		
+	end
 end
 
 function sRaidFrames:PatchUpdate()
 	if not self.opt.DebuffFilter then
 		self.opt.DebuffFilter = {}
 	end
+	if not self.opt.heal then
+		self.opt.heal = "none"
+	end
 end
 
+
+
+function sRaidFrames:XPerl_Target_UpdateDisplay_Hook()
+	if not sRaidFrames.TargetMonitor then
+		--DEFAULT_CHAT_FRAME:AddMessage("XPerl_Target_UpdateDisplay_Hook")
+		XPerl_Target_UpdateDisplay_OLD()
+	end	
+end
+
+function sRaidFrames:XPerl_Target_UpdatePortrait_Hook()
+	if not sRaidFrames.TargetMonitor then
+		--DEFAULT_CHAT_FRAME:AddMessage("XPerl_Target_UpdatePortrait_Hook")
+		XPerl_Target_UpdatePortrait_OLD()
+	end	
+end
+--[[
+function sRaidFrames:XPerl_Target_CombatFlash_Hook(a1, a2)
+	if not sRaidFrames.TargetMonitor then	
+		DEFAULT_CHAT_FRAME:AddMessage("XPerl_Target_CombatFlash")
+		XPerl_Target_CombatFlash_OLD(a1, a2)
+	end	
+end
+--]]
 function sRaidFrames:TargetFrame_OnEvent(event)
 	if not self.TargetMonitor then
 		--DEFAULT_CHAT_FRAME:AddMessage("sRaidFrames:TargetFrame_OnEvent")
@@ -272,6 +313,7 @@ end
 function sRaidFrames:JoinedRaid()
 	--self:Print("Joined a raid, enabling raid frames")
 	self.enabled = true
+	self.carrier = nil
 
 	self:RegisterBucketEvent("UNIT_HEALTH", 0.2, "UpdateUnit")
 	self:RegisterBucketEvent("UNIT_AURA", 0.2, "UpdateBuffs")
@@ -279,8 +321,8 @@ function sRaidFrames:JoinedRaid()
 	self:RegisterBucketEvent("ZONE_CHANGED_NEW_AREA", 1, "ZoneCheck")
 	self:RegisterBucketEvent("PLAYER_UNGHOST", 1, "ZoneCheck")
 		
-	self:RegisterBucketEvent("PLAYER_REGEN_ENABLED", 2, "ResetHealIndicators")
-	self:RegisterBucketEvent("PLAYER_REGEN_DISABLED", 2, "ResetHealIndicators")
+	self:RegisterBucketEvent("PLAYER_REGEN_ENABLED", 2, "CombatEnds")
+	self:RegisterBucketEvent("PLAYER_REGEN_DISABLED", 2, "CombatStarts")
 	self:RegisterBucketEvent("PLAYER_DEAD", 2, "ResetHealIndicators")
 
 	self:RegisterBucketEvent("PLAYER_TARGET_CHANGED", 0.01)
@@ -292,6 +334,10 @@ function sRaidFrames:JoinedRaid()
 	self:RegisterEvent("oRA_PlayerResurrected")
 	self:RegisterEvent("oRA_PlayerNotResurrected")
 	self:RegisterEvent("HealComm_Ressupdate", "HealCommRez")
+	
+	
+	self:RegisterEvent("CHAT_MSG_BG_SYSTEM_HORDE", "TrackCarrier")
+	self:RegisterEvent("CHAT_MSG_BG_SYSTEM_ALLIANCE", "TrackCarrier")
 
 	-- TODO: only updateunit
 	self:ScheduleRepeatingEvent("sRaidFramesSort_Force", self.Sort_Force, 0.5, self)
@@ -376,7 +422,7 @@ function sRaidFrames:Variables()
 
 	
 	self.TempTooltipDebuffs = {}
-
+	self.carrier = {}
 	self.UnitSortOrder = {}
 	self.UnitFocusHPArray = {}
 	self.UnitFocusArray = {}
@@ -502,12 +548,6 @@ function sRaidFrames:oRA_PlayerCanResurrect(msg, author)
 	if unit then self.res[unit] = 1 end
 end
 
-function sRaidFrames:HealCommRez(author)
-	local unit = roster:GetUnitIDFromName(author)
-	--self:Print("oRA_PlayerResurrected", UnitIsDead(unit), UnitIsGhost(unit), self.unavail[unit], msg, author, unit)
-	if unit and HealComm:UnitisResurrecting(GetUnitName(unit)) then self.res[unit] = 2 end
-end
-
 function sRaidFrames:oRA_PlayerResurrected(msg, author)
 	local unit = roster:GetUnitIDFromName(author)
 	--self:Print("oRA_PlayerResurrected", UnitIsDead(unit), UnitIsGhost(unit), self.unavail[unit], msg, author, unit)
@@ -518,6 +558,20 @@ function sRaidFrames:oRA_PlayerNotResurrected(msg, author)
 	local unit = roster:GetUnitIDFromName(author)
 	--self:Print("oRA_PlayerNotResurrected", UnitIsDead(unit), UnitIsGhost(unit), self.unavail[unit], msg, author, unit)
 	if unit then self.res[unit] = nil end
+end
+
+
+function sRaidFrames:HealCommRez(author)
+	local unit = roster:GetUnitIDFromName(author)
+	--self:Print("oRA_PlayerResurrected", UnitIsDead(unit), UnitIsGhost(unit), self.unavail[unit], msg, author, unit)
+	if unit and HealComm:UnitisResurrecting(GetUnitName(unit)) then self.res[unit] = 2 end
+end
+
+function sRaidFrames:SRF_PlayerResurrected(caster, target, prefix)
+	local unit = roster:GetUnitIDFromName(target)
+	sRaidFrames:DebugRez(strupper(prefix).." >> "..caster.." -> Resurrection -> "..target)
+	
+	if unit then self.res[unit] = 2 end
 end
 
 function sRaidFrames:IsSpellInRangeAndActionBar(SpellName)
@@ -581,7 +635,7 @@ function sRaidFrames:RangeCheck()
 
 	if _px > 0 and _py > 0 and not self.MapEnable then
 		self.MapEnable = true
-		self:Debug("RC_MAP_ENABLE")
+		self:DebugRange("RC_MAP_ENABLE")
 	end
 	if not self.opt.RangeCheck and not self.opt.ExtendedRangeCheck and not self.opt.ExtendedRangeCheckCombat then 
 		return 
@@ -617,11 +671,11 @@ function sRaidFrames:RangeCheck()
 						if (dist/11.11) > self.MapScale and CheckInteractDistance(unit, 2) then
 							self.UnitRangeArray[unit] = " 11Y"
 							local adjust = dist/11.11
-							self:Debug("RC_INC "..GetUnitName(unit).."_11Y - "..math.floor(adjust/self.MapScale*100).."% "..adjust)
+							self:DebugRange("RC_INC "..GetUnitName(unit).."_11Y: "..adjust.." - "..math.floor(adjust/self.MapScale*100 - 100).."% ")
 							self.MapScale = adjust
 						elseif (dist/28) > self.MapScale then
 							local adjust = dist/28
-							self:Debug("RC_INC "..GetUnitName(unit).."_28Y - "..math.floor(adjust/self.MapScale*100).."% "..adjust)
+							self:DebugRange("RC_INC "..GetUnitName(unit).."_28Y: "..adjust.." - "..math.floor(adjust/self.MapScale*100 - 100).."% ")
 							self.MapScale = adjust
 						end
 					end	
@@ -654,7 +708,9 @@ function sRaidFrames:RangeCheck()
 			
 			local table_val = self:ExtendedRangeArrayUtilize("calc")
 			local step, freq = self:Freqcalc(table_val)
-			self:Debug("RC_TOTAL: "..table_val.." - CYCLE FREQ: "..((math.floor(freq *100))/100).."s - STATUS: "..status)
+			self:DebugRange("RC_STATUS: |cff00eeee"..status.."|cffffffff - TOTAL: |cff00eeee"..table_val.."|cffffffff - PERIOD: |cff00eeee"..((math.floor(freq *100))/100).."s |cffffffff")
+
+			
 			self:ScheduleRepeatingEvent("sRaidFramesExtendedRangeCheck", self.ExtendedRangeCheck, step , self)	
 		end
 	end
@@ -685,7 +741,7 @@ function sRaidFrames:ExtendedRangeCheck()
 		if self:IsSpellInRangeAndActionBar(self.SpellCheck) then
 			--self.frames[j]:SetAlpha(1)
 			if self.MapEnable and (self.opt.RangeCheck or self.opt.ExtendedRangeCheckCombat and not UnitAffectingCombat("player")) then self.UnitRangeArray[j] = " 40Y*" else self.UnitRangeArray[j] = " 40Y"	end
-			self:Debug("RC "..GetUnitName(j).."_40y - " .."|cff00FF00 PASS")
+			self:DebugRange("RC "..GetUnitName(j).."_40y - " .."|cff00FF00 PASS")
 			jumpnext = nil
 		end
 		if targetchanged then 
@@ -697,7 +753,7 @@ function sRaidFrames:ExtendedRangeCheck()
 		if jumpnext then
 			--self.frames[j]:SetAlpha(self.opt.RangeAlpha)
 			self.UnitRangeArray[j] = ""
-			self:Debug("RC "..GetUnitName(j).."_40y - " .."|cffFF0000 NOT PASS")
+			self:DebugRange("RC "..GetUnitName(j).."_40y - " .."|cffFF0000 NOT PASS")
 		end
 		--self.ExtendedRangeScan[i] = nil
 		self:ExtendedRangeArrayUtilize("remove", j)
@@ -709,13 +765,13 @@ function sRaidFrames:VerifyUnitRange(unit, dist)
 		if self:IsSpellInRangeAndActionBar(self.SpellCheck) then
 			if dist > (self.MapScale*40) then
 				local adjust = dist/(40*0.99)
-				self:Debug("RC_INC "..GetUnitName(unit).."_40Y - "..math.floor(adjust/self.MapScale*100).."% "..adjust)
+				self:DebugRange("RC_INC "..GetUnitName(unit).."_40Y: "..adjust.." - "..math.floor(adjust/self.MapScale*100 - 100).."% ")
 				self.MapScale = adjust
 			end	
 			return true
 		elseif dist < (self.MapScale*40) then
 			local adjust = dist/(40*1.01)
-			self:Debug("RC_DEC "..GetUnitName(unit).."_40Y - "..math.floor(adjust/self.MapScale*100).."% "..adjust)
+			self:DebugRange("RC_DEC "..GetUnitName(unit).."_40Y: "..adjust.." - "..math.floor(adjust/self.MapScale*100 - 100).."% ")
 			self.MapScale = adjust
 			return nil
 		else
@@ -733,12 +789,30 @@ function sRaidFrames:ZoneCheck()
 	self.MapEnable = false
 	SetMapToCurrentZone()
 	self:ResetHealIndicators()
-	self:Debug("RC_RST")
+	self:DebugRange("RC_RST")
 end
 
 function sRaidFrames:Debug(msg)
-	if msg and self.opt.Debug then 
-		DEFAULT_CHAT_FRAME:AddMessage("|cff00eeee sRaidFrames Debug: |cffffffff"..msg); 
+	if msg then 
+		DEFAULT_CHAT_FRAME:AddMessage("|cff00eeee SRF Debug: |cffffffff"..msg); 
+	end
+end
+
+function sRaidFrames:DebugRange(msg)
+	if self.opt.DebugRange then 
+		DEFAULT_CHAT_FRAME:AddMessage("|cff00eeee SRF Debug Range: |cffffffff"..msg); 
+	end
+end
+
+function sRaidFrames:DebugHeal(msg)
+	if self.opt.DebugHeal then 
+		DEFAULT_CHAT_FRAME:AddMessage("|cff00eeee SRF Debug Heal: |cffffffff"..msg); 
+	end
+end
+
+function sRaidFrames:DebugRez(msg)
+	if self.opt.DebugRez then 
+		DEFAULT_CHAT_FRAME:AddMessage("|cff00eeee SRF Debug Rez: |cffffffff"..msg); 
 	end
 end
 
@@ -765,7 +839,7 @@ function sRaidFrames:UpdateUnit(units, force_focus)
 					subgroup = ""
 				end
 				
-				if self.opt.Debug then
+				if self.opt.DebugRange then
 					range = self.UnitRangeArray[unit]
 					if not range then
 						range =  ""
@@ -775,7 +849,7 @@ function sRaidFrames:UpdateUnit(units, force_focus)
 				local _, class = UnitClass(unit)
 				local unit_name = UnitName(unit).." "..subgroup
 				
-				if self.opt.unit_name_lenght or self.opt.Debug then
+				if self.opt.unit_name_lenght or self.opt.DebugRange then
 					unit_name = string.sub(UnitName(unit), 1, 3).." "..subgroup --UnitName(unit)
 				end
 				
@@ -945,11 +1019,10 @@ function sRaidFrames:UpdateBuffs(units, update_counter)
 						-- This should prevent unnessesary calls to functions and lookups
 							
 						if texture == "Interface\\Icons\\Spell_Nature_TimeStop" and self:GetBuffName(unit, i) == BS["Divine Intervention"] then
-							--f.hpbar.text:SetText("|cffff0000"..L["Intervened"].."|r")
 							self.hpaura[unit] = L["Intervened"]
-						--elseif texture == "Interface\\Icons\\Spell_Holy_GreaterHeal" and self:GetBuffName(unit, i) == BS["Spirit of Redemption"] then
-							--f.hpbar.text:SetText("|cffff0000"..L["Spirit"].."|r")
-							--self.hpaura[unit] = L["Spirit"]
+						elseif texture == "Interface\\Icons\\Spell_Holy_GreaterHeal" and self:GetBuffName(unit, i) == BS["Spirit of Redemption"] then
+							f.hpbar.text:SetText("|cffff8c00"..L["Spirit"].."|r")
+							self.hpaura[unit] = L["Spirit"]
 						else
 							self.hpaura[unit] = nil
 						end
@@ -957,9 +1030,10 @@ function sRaidFrames:UpdateBuffs(units, update_counter)
 						
 						if not self.opt.show_txt_buff then
 							if texture == "Interface\\Icons\\INV_BannerPVP_01" then
-								f.mpbar.text:SetText("|cffff0000"..L["Carrier"].."|r")
+								f.mpbar.text:SetText("|cffFF0000"..L["Carrier"].."|r")
+								self.carrier = strlower(GetUnitName(unit))
 							elseif texture == "Interface\\Icons\\Spell_Nature_Lightning" and self:GetBuffName(unit, i) == BS["Innervate"] then
-								f.mpbar.text:SetText("|cff00ff00"..L["Innervating"].."|r")
+								f.mpbar.text:SetText("|cff00ff00"..L["Innervate"].."|r")
 							elseif texture == "Interface\\Icons\\Ability_Warrior_ShieldWall" and self:GetBuffName(unit, i) == BS["Shield Wall"] then
 								f.mpbar.text:SetText("|cffffffff"..BS["Shield Wall"].."|r")
 							elseif texture == "Interface\\Icons\\Spell_Holy_AshesToAshes" and self:GetBuffName(unit, i) == BS["Last Stand"] then
@@ -1105,7 +1179,11 @@ function sRaidFrames:UpdateBuffs(units, update_counter)
 					
 				end	
 			else
-				f.mpbar.text:SetText()
+				if not self.opt.show_txt_buff and self:CheckCarrier(unit) then
+					f.mpbar.text:SetText("|cffFF0000"..L["Carrier"].."|r")
+				else
+					f.mpbar.text:SetText()
+				end	
 				f:SetBackdropColor(self.opt.BackgroundColor.r, self.opt.BackgroundColor.g, self.opt.BackgroundColor.b, self.opt.BackgroundColor.a)
 			end
 		end	
@@ -1195,6 +1273,7 @@ function sRaidFrames:UnitTooltip(frame)
 		return
 	end
 	local name, rank, subgroup, level, class, fileName, zone, online, isDead = GetRaidRosterInfo(frame.id);
+	if not fileName then return end
 	GameTooltip:SetOwner(frame)
 	GameTooltip:AddDoubleLine(name, level, self.RAID_CLASS_COLORS[fileName].r, self.RAID_CLASS_COLORS[fileName].g, self.RAID_CLASS_COLORS[fileName].b, 1, 1, 1)
 	GameTooltip:AddLine(UnitRace(frame.unit) .. " " .. class, 1, 1, 1);
@@ -1233,26 +1312,6 @@ function sRaidFrames:CreateUnitFrame(id)
 	f.title = f:CreateFontString(nil, "ARTWORK")
 	f.title:SetFontObject(GameFontNormalSmall)
 	f.title:SetJustifyH("LEFT")
-
-	--[[
-	f.aura1 = CreateFrame("Button", nil, f)
-	f.aura1.texture = f.aura1:CreateTexture(nil, "ARTWORK")
-	f.aura1.texture:SetAllPoints(f.aura1);
-	f.aura1.count = f.aura1:CreateFontString(nil, "OVERLAY")
-	f.aura1.count:SetFontObject(GameFontHighlightSmallOutline)
-	f.aura1.count:SetJustifyH("CENTER")
-	f.aura1.count:SetPoint("CENTER", f.aura1, "CENTER", 0, 0);
-	f.aura1:Hide()
-
-	f.aura2 = CreateFrame("Button", nil, f)
-	f.aura2.texture = f.aura2:CreateTexture(nil, "ARTWORK")
-	f.aura2.texture:SetAllPoints(f.aura2)
-	f.aura2.count = f.aura2:CreateFontString(nil, "OVERLAY")
-	f.aura2.count:SetFontObject(GameFontHighlightSmallOutline)
-	f.aura2.count:SetJustifyH("CENTER")
-	f.aura2.count:SetPoint("CENTER", f.aura2, "CENTER", 0, 0);
-	f.aura2:Hide()
-	--]]
 
 	f.buff1 = CreateFrame("Button", nil, f)
 	f.buff1.texture = f.buff1:CreateTexture(nil, "ARTWORK")
@@ -1395,9 +1454,8 @@ end
 function sRaidFrames:SetBackdrop(f, unit, aggro)
 	if self.opt.Border then
 		f:SetBackdrop({ bgFile = "Interface\\Tooltips\\UI-Tooltip-Background",
-										tile = true,
-										tileSize = 16,
-										edgeFile = "Interface\\Tooltips\\UI-Tooltip-Border",
+										tile = true, tileSize = 16,
+										edgeFile = self.opt.Bordertexture,
 										edgeSize = 16,
 										insets = { left = 5, right = 5, top = 5, bottom = 5 }
 									})
@@ -1424,17 +1482,14 @@ function sRaidFrames:SetBackdrop(f, unit, aggro)
 end
 
 function sRaidFrames:SetStyle(f, unit, width, aggro)
-
 	local frame_width = width or self.opt.Width
+	local powertype = UnitPowerType(unit) or 0
 	
 	self:SetWHP(f, frame_width, 40)
 	self:SetWHP(f.title, frame_width - 10, 16, "TOPLEFT", f, "TOPLEFT",  5, -6)
-	--self:SetWHP(f.aura1, 12, 12, "TOPRIGHT", f, "TOPRIGHT", -4, -5)
-	--self:SetWHP(f.aura2, 12, 12, "RIGHT", f.aura1, "LEFT", 0, 0)
-	
-	
+
 	if self.opt.Buff_Anchor == "topright" then
-		self:SetWHP(f.buff1, self.opt.buff_size, self.opt.buff_size, "TOPRIGHT", f.hpbar, "TOPRIGHT", 0.3, 0)
+		self:SetWHP(f.buff1, self.opt.buff_size, self.opt.buff_size, "TOPRIGHT", f.hpbar, "TOPRIGHT", 0.35, 0)
 		
 		if self.opt.Buff_Growth == "horizontal" then
 			self:SetWHP(f.buff2, self.opt.buff_size, self.opt.buff_size, "RIGHT", f.buff1, "LEFT", 0, 0)
@@ -1452,7 +1507,7 @@ function sRaidFrames:SetStyle(f, unit, width, aggro)
 			self:SetWHP(f.buff4, self.opt.buff_size, self.opt.buff_size, "TOP", f.buff2, "BOTTOM", 0, 0)
 		end
 	else
-		self:SetWHP(f.buff1, self.opt.buff_size, self.opt.buff_size, "BOTTOMRIGHT", f.hpbar, "BOTTOMRIGHT", 0.3, 0)
+		self:SetWHP(f.buff1, self.opt.buff_size, self.opt.buff_size, "BOTTOMRIGHT", f.hpbar, "BOTTOMRIGHT", 0.35, 0)
 		
 		if self.opt.Buff_Growth == "horizontal" then
 			self:SetWHP(f.buff2, self.opt.buff_size, self.opt.buff_size, "RIGHT", f.buff1, "LEFT", 0, 0)
@@ -1471,23 +1526,18 @@ function sRaidFrames:SetStyle(f, unit, width, aggro)
 		end
 	end
 	
-		
-	if not sRaidFrames.opt.Border then
-		if self.opt.PowerFilter[0] or self.opt.PowerFilter[1] or self.opt.PowerFilter[2] or self.opt.PowerFilter[3] then
-			self:SetWHP(f.hpbar, frame_width - 9.8, 27, "TOPLEFT", f, "BOTTOMLEFT", 5, 35)
-		else
-			self:SetWHP(f.hpbar, frame_width - 9.8, 30, "TOPLEFT", f, "BOTTOMLEFT", 5, 35)
-		end	
-		self:SetWHP(f.mpbar, frame_width - 10, 3, "TOPLEFT", f.hpbar, "BOTTOMLEFT", 0, 0)
-		self:SetWHP(f.hpbar.indicator2, 4.5, 4.5, "TOPLEFT", f, "BOTTOMLEFT", 5, 35)
+	if self.opt.PowerFilter[powertype] then
+		self:SetWHP(f.hpbar, frame_width - 10, 27.5, "TOPLEFT", f, "BOTTOMLEFT", 5, 35)
 	else
-		if self.opt.PowerFilter[0] or self.opt.PowerFilter[1] or self.opt.PowerFilter[2] or self.opt.PowerFilter[3] then
-			self:SetWHP(f.hpbar, frame_width - 9.8, 26, "TOPLEFT", f, "BOTTOMLEFT", 5, 35)
-		else
-			self:SetWHP(f.hpbar, frame_width - 9.8, 30, "TOPLEFT", f, "BOTTOMLEFT", 5, 35)
-		end	
-		self:SetWHP(f.mpbar, frame_width - 10, 3, "TOPLEFT", f.hpbar, "BOTTOMLEFT", 0, 0)
+		self:SetWHP(f.hpbar, frame_width - 9.4, 30, "TOPLEFT", f, "BOTTOMLEFT", 4.75, 35)
+	end	
+	
+	self:SetWHP(f.mpbar, frame_width - 10, 2.5, "TOPLEFT", f.hpbar, "BOTTOMLEFT", 0, 0)
+	
+	if sRaidFrames.opt.heal == "round" then
 		self:SetWHP(f.hpbar.indicator1, 7.7, 7.7, "TOPLEFT", f, "BOTTOMLEFT", 4, 37)
+	else
+		self:SetWHP(f.hpbar.indicator2, 4.5, 4.5, "TOPLEFT", f, "BOTTOMLEFT", 5, 35)
 	end
 	
 	self:SetWHP(f.mpbar.text, f.mpbar:GetWidth(), f.mpbar:GetHeight(), "CENTER", f, "CENTER", 0, -11)
@@ -1535,12 +1585,32 @@ function sRaidFrames:Sort_Force()
 	end	
 end
 
+function sRaidFrames:ReturnClassCount(class)
+	local NumMembers = GetNumRaidMembers()
+	local counter = 1
+	local counter_class = 0
+	local u = nil
+
+	while counter <= NumMembers do
+		u = "raid"..counter
+		if Zorlen_UnitClass(u) == class then
+			counter_class = counter_class + 1
+		end
+		counter = counter + 1	
+	end
+	--DEFAULT_CHAT_FRAME:AddMessage(class.." "..counter_class)
+	return counter_class
+end
+
 function sRaidFrames:MembersSortBy(id)
 	local sort_by = ""
 	local unit = "raid" .. id
-	
+	--DEFAULT_CHAT_FRAME:AddMessage(Zorlen_UnitClass(unit).." ")
 	if self.opt.SubSort == "class" then
-		sort_by = UnitClass(unit) or ""
+		if UnitExists(unit) and Zorlen_UnitClass(unit) then
+			local prefix = self:ReturnClassCount(Zorlen_UnitClass(unit)) or 0
+			sort_by = prefix..Zorlen_UnitClass(unit) or ""
+		end
 	elseif self.opt.SubSort == "name" then
 		sort_by = UnitName(unit) or ""
 	else
@@ -1579,28 +1649,46 @@ function sRaidFrames:Sort(force_sort)
 			--end
 		end
 	end
-	
-	table.sort(sort, function(a,b) return self:MembersSortBy(a) < self:MembersSortBy(b) end)
+	if self.opt.ReverseSort then
+		table.sort(sort, function(a,b) return self:MembersSortBy(a) > self:MembersSortBy(b) end)
+	else
+		table.sort(sort, function(a,b) return self:MembersSortBy(a) < self:MembersSortBy(b) end)
+	end
 
 	if self.opt.SortBy == "class" then
-		frameAssignments["WARRIOR"] = 1;
-		frameAssignments["MAGE"] = 2;
-		frameAssignments["PALADIN"] = 3;
-		frameAssignments["SHAMAN"] = 3;
-		frameAssignments["DRUID"] = 4;
-		frameAssignments["HUNTER"] = 5;
-		frameAssignments["ROGUE"] = 6;
-		frameAssignments["WARLOCK"] = 7;
-		frameAssignments["PRIEST"] = 8;
+		local queue = {}	
+		
+		table.insert(queue, "Warrior")
+		table.insert(queue, "Mage")
+		if UnitFactionGroup("player") == "Alliance" then table.insert(queue, "Paladin")	else table.insert(queue, "Shaman") end	
+		table.insert(queue, "Druid")
+		table.insert(queue, "Hunter")
+		table.insert(queue, "Rogue")
+		table.insert(queue, "Warlock")
+		table.insert(queue, "Priest")
 
-		self.groupframes[1].title:SetText(L["Warrior"]);
-		self.groupframes[2].title:SetText(L["Mage"]);
-		self.groupframes[3].title:SetText((UnitFactionGroup("player") == "Alliance") and L["Paladin"] or L["Shaman"]);
-		self.groupframes[4].title:SetText(L["Druid"]);
-		self.groupframes[5].title:SetText(L["Hunter"]);
-		self.groupframes[6].title:SetText(L["Rogue"]);
-		self.groupframes[7].title:SetText(L["Warlock"]);
-		self.groupframes[8].title:SetText(L["Priest"]);
+		if self.opt.ReverseSort then
+			table.sort(queue, function(a,b) return sRaidFrames:ReturnClassCount(a) < sRaidFrames:ReturnClassCount(b) end)
+		else
+			table.sort(queue, function(a,b) return sRaidFrames:ReturnClassCount(a) > sRaidFrames:ReturnClassCount(b) end)
+		end	
+
+		for i=1,8 do
+			frameAssignments[string.upper(queue[i])] = i
+		end
+
+		self.groupframes[frameAssignments["WARRIOR"]].title:SetText(L["Warrior"]);
+		self.groupframes[frameAssignments["MAGE"]].title:SetText(L["Mage"]);
+		if UnitFactionGroup("player") == "Alliance" then
+			self.groupframes[frameAssignments["PALADIN"]].title:SetText(L["Paladin"]);
+		else
+			self.groupframes[frameAssignments["SHAMAN"]].title:SetText(L["Shaman"]);
+		end	
+		self.groupframes[frameAssignments["DRUID"]].title:SetText(L["Druid"]);
+		self.groupframes[frameAssignments["HUNTER"]].title:SetText(L["Hunter"]);
+		self.groupframes[frameAssignments["ROGUE"]].title:SetText(L["Rogue"]);
+		self.groupframes[frameAssignments["WARLOCK"]].title:SetText(L["Warlock"]);
+		self.groupframes[frameAssignments["PRIEST"]].title:SetText(L["Priest"]);
 
 	elseif self.opt.SortBy == "group" or self.opt.SortBy == "fixed" then
 		frameAssignments[1] = 1;
@@ -1769,7 +1857,7 @@ function sRaidFrames:RestorePosition()
 end
 
 function sRaidFrames:ResetPosition()
-	self:PositionLayout("ctra", 200, -200)
+	self:PositionLayout("sticky", 200, -300)
 end
 
 function sRaidFrames:PositionLayout(layout, xBuffer, yBuffer)
@@ -1781,8 +1869,8 @@ function sRaidFrames:PositionLayout(layout, xBuffer, yBuffer)
 		i = i + 1
 		
 		if k == 9 then
-			yMod = -1*(v:GetWidth()*self.master:GetScale()+self.opt.Spacing)
-			xMod = 0
+			xMod = 2*(f:GetHeight()*self.master:GetScale()+self.opt.Spacing)
+			yMod = f:GetWidth()*self.master:GetScale()+self.opt.Spacing
 		elseif layout == "horizontal" then
 			yMod = (i) * v:GetWidth()
 			xMod = 0
@@ -1808,6 +1896,7 @@ function sRaidFrames:PositionLayout(layout, xBuffer, yBuffer)
 				yMod = 0
 				xMod = -1*(f:GetHeight()*self.master:GetScale()+self.opt.Spacing)*k
 			else
+
 				yMod = (f:GetWidth()*self.master:GetScale()+self.opt.Spacing)*k
 				xMod = 0
 			end
@@ -1832,7 +1921,7 @@ end
 --==Added by Ogrisch
 
 function sRaidFrames:ShowHealIndicator(unit)
-	if not unit or not self.opt.heal then return end
+	if not unit or self.opt.heal == "none" then return end
 		
 	if not self.indicator[unit] then
 		self.indicator[unit] = 0
@@ -1848,7 +1937,7 @@ function sRaidFrames:ShowHealIndicator(unit)
 end
 
 function sRaidFrames:HideHealIndicator(unit, force)
-	if not unit or not self.opt.heal then return end
+	if not unit or self.opt.heal == "none" then return end
 	
 	if not self.indicator[unit] then
 		self.indicator[unit] = 0
@@ -1872,7 +1961,7 @@ function sRaidFrames:SetHealIndicator(unit)
 	
 	local f = nil
 	
-	if self.opt.Border then
+	if self.opt.heal == "round" then
 		f = self.frames[unit].hpbar.indicator1
 	else
 		f = self.frames[unit].hpbar.indicator2
@@ -1897,14 +1986,25 @@ function sRaidFrames:SetHealIndicator(unit)
 	end	
 end
 
+function sRaidFrames:CombatStarts()
+	self:ResetHealIndicators()
+end
+
+function sRaidFrames:CombatEnds()
+	self:ResetHealIndicators()
+	for key,value in pairs(self.res) do
+		self.res[key] = nil
+	end
+end
+
 function sRaidFrames:ResetHealIndicators(mode)
 	if UnitInRaid("player") and self.indicator then
 		for key,value in pairs(self.indicator) do
 			self.indicator[key] = 0
 			self:SetHealIndicator(key)
-			if mode == "force" then
-				self.indicator[key] = nil
-			end
+			--if mode == "force" then
+				--self.indicator[key] = nil
+			--end
 		end
 	end	
 end
@@ -2119,4 +2219,40 @@ function sRaidFrames:AddRemoveFocusUnit(unit)
 		UIErrorsFrame:AddMessage("|cFFFF0000"..err_txt)
 	end
 	return
+end
+
+
+function sRaidFrames:CheckCarrier(unit)
+	local name = GetUnitName(unit)
+	if self.carrier and name and strlower(name) == self.carrier then
+		
+		return true
+	end
+	return nil
+end
+
+function sRaidFrames:TrackCarrier(msg)
+	local oposite_faction = "Alliance"
+	if UnitFactionGroup("player") == oposite_faction then
+		oposite_faction = "Horde"
+	end
+	if msg then
+		msg = strlower(msg)
+		
+		local find0 = "captured "
+		local find1 = "The "..oposite_faction.." Flag"
+		local find2 = " was picked up "
+		local find3 = " was dropped "
+		
+		if string.find(msg, strlower(find1..find2)) then
+			_, _, self.carrier = string.find(msg, strlower(find1..find2.."by (.+)%!"))	
+		elseif string.find(msg, strlower(find1..find3)) or string.find(msg, strlower(find0..find1)) then
+			self.carrier = nil
+		end
+	end
+end
+
+function sRaidFrames:xcv()
+	
+	
 end

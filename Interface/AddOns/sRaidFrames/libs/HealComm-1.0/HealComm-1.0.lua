@@ -749,6 +749,14 @@ HealComm.Spells = {
 			local shMod = 2*talentRank2/100 + 1
 			return (965*shMod+((3/3.5/3) * (SpellPower+sgMod)))
 		end;
+		[5] = function (SpellPower)
+            local _,_,_,_,talentRank,_ = GetTalentInfo(2,14)
+            local _,Spirit,_,_ = UnitStat("player",5)
+            local sgMod = Spirit * 5*talentRank/100
+            local _,_,_,_,talentRank2,_ = GetTalentInfo(2,15)
+			local shMod = 2*talentRank2/100 + 1
+            return (1070*shMod+((3/3.5/3) * (SpellPower+sgMod)))
+        end;	
 	};
 	[L["Healing Touch"]] = {
 		[1] = function (SpellPower)
@@ -954,6 +962,8 @@ local function GetTargetSpellPower(spell)
 		local buffName = healcommTipTextLeft1:GetText()
 		if (buffTexture == "Interface\\Icons\\Spell_Holy_PrayerOfHealing02" or buffTexture == "Interface\\Icons\\Spell_Holy_GreaterBlessingofLight") then
 			local _,_, HLBonus, FoLBonus = string.find(healcommTipTextLeft2:GetText(),L["Blessing of Light"])
+			HLBonus = HLBonus or 0
+			FoLBonus = FoLBonus or 0
 			if (spell == L["Flash of Light"]) then
 				targetpower = FoLBonus + targetpower
 			elseif spell == L["Holy Light"] then
@@ -1048,6 +1058,9 @@ function HealComm.stopGrpHeal(caster)
 	if HealComm.SpecialEventScheduler:IsEventScheduled(caster) then
 		HealComm.SpecialEventScheduler:CancelScheduledEvent(caster)
 	end
+	if not HealComm.GrpHeals[caster] then
+		return
+	end
 	local targets = HealComm.GrpHeals[caster].targets
 	HealComm.GrpHeals[caster] = nil
 	for i=1,getn(targets) do
@@ -1057,6 +1070,9 @@ end
 
 function HealComm.delayGrpHeal(caster, delay)
 	HealComm.SpecialEventScheduler:CancelScheduledEvent(caster)
+	if not HealComm.GrpHeals[caster] then
+		return
+	end
 	HealComm.GrpHeals[caster].ctime = HealComm.GrpHeals[caster].ctime + (delay/1000)
 	HealComm.SpecialEventScheduler:ScheduleEvent(caster, HealComm.stopGrpHeal, (HealComm.GrpHeals[caster].ctime-GetTime()), caster)
 end
