@@ -12,62 +12,40 @@ TheoryCraft_Settings = {
 	["embed"] = true,
 	["buttontextx"] = 1.111,
 	["ColG2"] = 1,
-	["nextstr"] = true,
+	["combinedot"] = true,
 	["ColR2"] = 1,
 	["ColB"] = 1,
-	["crit"] = true,
+	["embedstyle1"] = true,
 	["tryfirst"] = "averagedam",
 	["trysecondsfg"] = -1,
-	["ColG"] = 1,
+	["dataversion"] = "1.06",
 	["tryfirstsfg"] = 0,
-	["ColB2"] = 0.6862745098039216,
-	["mitigation"] = true,
+	["procs"] = true,
 	["FontPath"] = "Fonts\\ArialN.TTF",
-	["nextcrit"] = true,
-	["dontresist"] = true,
+	["GenerateList"] = "",
+	["mitigation"] = true,
 	["trysecond"] = "averagehealnocrit",
+	["dontresist"] = true,
 	["ColR"] = 1,
 	["buttontext"] = true,
-	["GenerateList"] = "",
+	["nextcrit"] = true,
 	["CustomOutfit"] = {
-		["destat"] = {
-			[1] = "Head",
-			[2] = "Neck",
-			[3] = "Shoulder",
-			[4] = "Chest",
-			[5] = "Waist",
-			[6] = "Legs",
-			[7] = "Feet",
-			[8] = "Wrist",
-			[9] = "Hands",
-			[10] = "Finger0",
-			[11] = "Finger1",
-			[12] = "Trinket0",
-			[13] = "Trinket1",
-			[14] = "Back",
-			[15] = "MainHand",
-			[16] = "SecondaryHand",
-			[17] = "Ranged",
-			[18] = "Tabard",
-			[19] = "Ammo",
-		},
+		["intellect"] = 0,
 		["newstat"] = {
 		},
-		["strength"] = 0,
-		["agility"] = 0,
-		["name"] = "Naked",
 		["slots"] = {
-			["Waist"] = {
+			["Ranged"] = {
 				["stats"] = {
-					["stamina"] = 11,
-					["strength"] = 12,
 				},
-				["name"] = "|cff1eff00|Hitem:10122:0:1211:0|h[Ornate Girdle of the Bear]|h|r",
+				["name"] = "|cff1eff00|Hitem:15284:0:0:0|h[Long Battle Bow]|h|r",
 				["data"] = {
-					["name"] = "Ornate Girdle of the Bear",
+					["name"] = "Long Battle Bow",
 					["procs"] = {
 					},
-					["numlines"] = 7,
+					["RangedSpeed"] = 2.2,
+					["RangedMax"] = 34,
+					["RangedMin"] = 18,
+					["numlines"] = 6,
 				},
 			},
 			["Finger0"] = {
@@ -83,18 +61,15 @@ TheoryCraft_Settings = {
 					["numlines"] = 6,
 				},
 			},
-			["Neck"] = {
+			["Legs"] = {
 				["stats"] = {
-					["intellect"] = 4,
-					["stamina"] = 4,
-					["spirit"] = 3,
 				},
-				["name"] = "|cff1eff00|Hitem:5003:0:0:0|h[Crystal Starfire Medallion]|h|r",
+				["name"] = "|cff1eff00|Hitem:15746:0:0:0|h[Pattern: Chimeric Leggings]|h|r",
 				["data"] = {
-					["name"] = "Crystal Starfire Medallion",
+					["name"] = "Pattern: Chimeric Leggings",
 					["procs"] = {
 					},
-					["numlines"] = 7,
+					["numlines"] = 12,
 				},
 			},
 			["Trinket0"] = {
@@ -220,50 +195,12 @@ TheoryCraft_Settings = {
 				["data"] = {
 					["numlines"] = 8,
 					["MeleeMax"] = 146,
-					["name"] = "Greater Maul of the Tiger",
+					["MeleeMin"] = 97,
 					["procs"] = {
 					},
 					["MeleeAPMult"] = 3.3,
 					["MainSpeed"] = 3.4,
-					["MeleeMin"] = 97,
-				},
-			},
-			["Legs"] = {
-				["stats"] = {
-				},
-				["name"] = "|cff1eff00|Hitem:15746:0:0:0|h[Pattern: Chimeric Leggings]|h|r",
-				["data"] = {
-					["name"] = "Pattern: Chimeric Leggings",
-					["procs"] = {
-					},
-					["numlines"] = 12,
-				},
-			},
-			["Ranged"] = {
-				["stats"] = {
-				},
-				["name"] = "|cff1eff00|Hitem:15284:0:0:0|h[Long Battle Bow]|h|r",
-				["data"] = {
-					["name"] = "Long Battle Bow",
-					["procs"] = {
-					},
-					["RangedSpeed"] = 2.2,
-					["RangedMax"] = 34,
-					["numlines"] = 6,
-					["RangedMin"] = 18,
-				},
-			},
-			["Shoulder"] = {
-				["stats"] = {
-					["intellect"] = 15,
-					["agility"] = 4,
-				},
-				["name"] = "|cff1eff00|Hitem:8250:0:0:0|h[Imperial Red Mantle]|h|r",
-				["data"] = {
-					["name"] = "Imperial Red Mantle",
-					["procs"] = {
-					},
-					["numlines"] = 7,
+					["name"] = "Greater Maul of the Tiger",
 				},
 			},
 			["Feet"] = {
@@ -279,16 +216,79 @@ TheoryCraft_Settings = {
 					["numlines"] = 7,
 				},
 			},
+			["Waist"] = {
+				["stats"] = {
+					["stamina"] = 11,
+					["strength"] = 12,
+				},
+				["name"] = "|cff1eff00|Hitem:10122:0:1211:0|h[Ornate Girdle of the Bear]|h|r",
+				["data"] = {
+					["name"] = "Ornate Girdle of the Bear",
+					["procs"] = {
+					},
+					["numlines"] = 7,
+				},
+			},
+			["Shoulder"] = {
+				["stats"] = {
+					["intellect"] = 15,
+					["agility"] = 4,
+				},
+				["name"] = "|cff1eff00|Hitem:8250:0:0:0|h[Imperial Red Mantle]|h|r",
+				["data"] = {
+					["name"] = "Imperial Red Mantle",
+					["procs"] = {
+					},
+					["numlines"] = 7,
+				},
+			},
+			["Neck"] = {
+				["stats"] = {
+					["intellect"] = 4,
+					["stamina"] = 4,
+					["spirit"] = 3,
+				},
+				["name"] = "|cff1eff00|Hitem:5003:0:0:0|h[Crystal Starfire Medallion]|h|r",
+				["data"] = {
+					["name"] = "Crystal Starfire Medallion",
+					["procs"] = {
+					},
+					["numlines"] = 7,
+				},
+			},
 		},
+		["agility"] = 0,
+		["name"] = "Naked",
+		["stamina"] = 0,
 		["wear"] = {
 		},
-		["intellect"] = 0,
+		["destat"] = {
+			[1] = "Head",
+			[2] = "Neck",
+			[3] = "Shoulder",
+			[4] = "Chest",
+			[5] = "Waist",
+			[6] = "Legs",
+			[7] = "Feet",
+			[8] = "Wrist",
+			[9] = "Hands",
+			[10] = "Finger0",
+			[11] = "Finger1",
+			[12] = "Trinket0",
+			[13] = "Trinket1",
+			[14] = "Back",
+			[15] = "MainHand",
+			[16] = "SecondaryHand",
+			[17] = "Ranged",
+			[18] = "Tabard",
+			[19] = "Ammo",
+		},
 		["spirit"] = 0,
-		["stamina"] = 0,
+		["strength"] = 0,
 	},
-	["procs"] = true,
-	["dataversion"] = "1.06",
-	["embedstyle1"] = true,
-	["combinedot"] = true,
+	["ColB2"] = 0.6862745098039216,
+	["ColG"] = 1,
+	["crit"] = true,
+	["nextstr"] = true,
 	["healanddamage"] = true,
 }

@@ -3,9 +3,9 @@ oCBDB = {
 	["profiles"] = {
 		["Ryjax - Tank/DPS"] = {
 			["MirrorBar"] = {
+				["texture"] = "Striped",
 				["edgeFile"] = "None",
 				["height"] = 28,
-				["texture"] = "Striped",
 				["width"] = 386,
 			},
 			["Colors"] = {
@@ -27,9 +27,9 @@ oCBDB = {
 			},
 			["lock"] = false,
 			["CastingBar"] = {
+				["texture"] = "Striped",
 				["edgeFile"] = "None",
 				["height"] = 29,
-				["texture"] = "Striped",
 				["width"] = 385,
 			},
 			["Pos"] = {
@@ -50,7 +50,7 @@ oCBDB = {
 		},
 	},
 	["currentProfile"] = {
-		["Stormslinger of Warsong [12x] Blizzlike"] = "Stormslinger - Tank/DPS",
 		["Ryjax of Warsong [12x] Blizzlike"] = "Ryjax - Tank/DPS",
+		["Stormslinger of Warsong [12x] Blizzlike"] = "Stormslinger - Tank/DPS",
 	},
 }

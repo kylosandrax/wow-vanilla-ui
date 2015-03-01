@@ -13,16 +13,16 @@ BankItems_Save = {
 		["money"] = 332150,
 	},
 	["Sixofnine|Warsong [12x] Blizzlike"] = {
-		["money"] = 30407533,
+		["money"] = 187328,
 	},
 	["Kylosandrax|Warsong [12x] Blizzlike"] = {
-		["money"] = 345548,
+		["money"] = 20669760,
 	},
 	["Ryvok|Warsong [12x] Blizzlike"] = {
-		["money"] = 318606,
+		["money"] = 318396,
 	},
 	["Zapunzel|Warsong [12x] Blizzlike"] = {
-		["money"] = 1142081,
+		["money"] = 1148951,
 	},
 	["Banjax|Warsong [12x] Blizzlike"] = {
 		["money"] = 0,

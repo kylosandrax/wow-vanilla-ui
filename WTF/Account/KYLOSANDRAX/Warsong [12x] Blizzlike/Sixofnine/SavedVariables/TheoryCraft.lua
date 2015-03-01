@@ -20,7 +20,7 @@ TheoryCraft_Settings = {
 	["embed"] = true,
 	["ColG"] = 1,
 	["ColR"] = 1,
-	["mitigation"] = true,
+	["FontPath"] = "Fonts\\ArialN.TTF",
 	["ColB2"] = 0.6862745098039216,
 	["dontresist"] = true,
 	["trysecond"] = "averagehealnocrit",
@@ -274,8 +274,8 @@ TheoryCraft_Settings = {
 		["stamina"] = 0,
 	},
 	["procs"] = true,
-	["FontPath"] = "Fonts\\ArialN.TTF",
 	["GenerateList"] = "",
+	["mitigation"] = true,
 	["combinedot"] = true,
 	["healanddamage"] = true,
 }

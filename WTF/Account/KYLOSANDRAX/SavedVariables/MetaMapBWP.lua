@@ -785,7 +785,7 @@ BWP_QuestList = {
 		["Y"] = 0.3798324465751648,
 		["X"] = 0.5199804902076721,
 		["Zone"] = 13,
-		["QuestName"] = "Dukes of the Council,A Humble Offering",
+		["QuestName"] = "",
 		["QuestGiver"] = "Aurel Goldleaf",
 	},
 	[112] = {
@@ -1072,7 +1072,7 @@ BWP_QuestList = {
 		["Y"] = 0.1450556516647339,
 		["X"] = 0.1528200805187225,
 		["Zone"] = 18,
-		["QuestName"] = "Paragons of Power: The Vindicator's Armguards,Strength of Mount Mugamba,Paragons of Power: The Vindicator's Belt",
+		["QuestName"] = "Paragons of Power: The Vindicator's Armguards,Strength of Mount Mugamba,Paragons of Power: The Vindicator's Belt,Paragons of Power: The Vindicator's Breastplate",
 		["QuestGiver"] = "Jin'rokh the Breaker",
 	},
 	[153] = {
@@ -1452,6 +1452,20 @@ BWP_QuestList = {
 		["Zone"] = 13,
 		["QuestName"] = "The Twilight Lexicon",
 		["QuestGiver"] = "Hermit Ortell",
+	},
+	[207] = {
+		["Y"] = 0.394833505153656,
+		["X"] = 0.5176669955253601,
+		["Zone"] = 13,
+		["QuestName"] = "Drape of Unyielding Strength",
+		["QuestGiver"] = "Keyl Swiftclaw",
+	},
+	[208] = {
+		["Y"] = 0.3881097733974457,
+		["X"] = 0.5112235546112061,
+		["Zone"] = 13,
+		["QuestName"] = "Sickle of Unyielding Strength",
+		["QuestGiver"] = "Warden Haro",
 	},
 }
 BWP_AbandonedQuests = nil

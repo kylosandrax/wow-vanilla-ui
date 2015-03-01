@@ -157,9 +157,10 @@ WeaponQuickSwap: disabled
 Zorlen: enabled
 ComboEnergyBar: disabled
 Attack bar: disabled
-BeanCounter: disabled
+BeanCounter: enabled
 !ClearFont: disabled
 CooldownHud: disabled
-WarriorHUD: disabled
+WarriorHUD: enabled
 WoWDBProfiler: disabled
 RDX: disabled
+EngBags: disabled

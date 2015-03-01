@@ -9,13 +9,13 @@ EzDismount_Config = {
 		["Druid"] = "ON",
 		["Moonkin"] = "ON",
 	},
-	["Zapunzel of Warsong [12x] Blizzlike"] = {
+	["Kylosandrax of Al'Akir [instant 60] Blizzlike"] = {
 		["Stand"] = "ON",
 		["Dismount"] = "ON",
-		["Druid"] = "ON",
+		["Auction"] = "ON",
 		["Shadowform"] = "ON",
 		["Wolf"] = "ON",
-		["Auction"] = "ON",
+		["Druid"] = "ON",
 		["Moonkin"] = "ON",
 	},
 	["Ryjax of Warsong [12x] Blizzlike"] = {
@@ -45,7 +45,7 @@ EzDismount_Config = {
 		["Auction"] = "ON",
 		["Moonkin"] = "ON",
 	},
-	["Sixofnine of Warsong [12x] Blizzlike"] = {
+	["Nameplate of Emerald Dream [1x] Blizzlike"] = {
 		["Stand"] = "ON",
 		["Dismount"] = "ON",
 		["Auction"] = "ON",
@@ -63,7 +63,7 @@ EzDismount_Config = {
 		["Auction"] = "ON",
 		["Moonkin"] = "ON",
 	},
-	["Nameplate of Emerald Dream [1x] Blizzlike"] = {
+	["Sixofnine of Warsong [12x] Blizzlike"] = {
 		["Stand"] = "ON",
 		["Dismount"] = "ON",
 		["Auction"] = "ON",
@@ -81,13 +81,13 @@ EzDismount_Config = {
 		["Auction"] = "ON",
 		["Moonkin"] = "ON",
 	},
-	["Kylosandrax of Al'Akir [instant 60] Blizzlike"] = {
+	["Zapunzel of Warsong [12x] Blizzlike"] = {
 		["Stand"] = "ON",
 		["Dismount"] = "ON",
-		["Auction"] = "ON",
+		["Druid"] = "ON",
 		["Shadowform"] = "ON",
 		["Wolf"] = "ON",
-		["Druid"] = "ON",
+		["Auction"] = "ON",
 		["Moonkin"] = "ON",
 	},
 }

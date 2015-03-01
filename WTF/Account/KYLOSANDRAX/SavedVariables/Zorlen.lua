@@ -60,12 +60,13 @@ ZorlenConfig = {
 				["Onyxia"] = "yes",
 			},
 			["Intimidating Shout"] = {
-				["Skeletal Highborne"] = "yes",
-				["Gurubashi Champion"] = "yes",
-				["Ravaged Cadaver"] = "yes",
 				["Black Guard Sentry"] = "yes",
 				["Skeletal Guardian"] = "yes",
+				["Skeletal Highborne"] = "yes",
 				["Skeletal Sorcerer"] = "yes",
+				["Gurubashi Champion"] = "yes",
+				["Ravaged Cadaver"] = "yes",
+				["Soulflayer"] = "yes",
 			},
 			["Concussion Blow"] = {
 				["Lord Incendius"] = "yes",
@@ -94,8 +95,8 @@ ZorlenConfig = {
 				["Maleki the Pallid"] = "yes",
 				["Gurubashi Axe Thrower"] = "yes",
 				["King Gordok"] = "yes",
-				["Illyanna Ravenoak"] = "yes",
 				["Cho'Rush the Observer"] = "yes",
+				["Illyanna Ravenoak"] = "yes",
 				["Gurubashi Champion"] = "yes",
 				["Baron Rivendare"] = "yes",
 				["General Angerforge"] = "yes",
@@ -207,25 +208,25 @@ ZorlenConfig = {
 			["Fireball"] = {
 				["Emperor Dagran Thaurissan"] = "yes",
 			},
-			["Frostbolt"] = {
-				["Hydrospawn"] = "yes",
+			["Arcane Missiles"] = {
 				["Emperor Dagran Thaurissan"] = "yes",
 			},
 			["Polymorph"] = {
 				["Crystal Fang"] = "yes",
 				["Lethtendris"] = "yes",
 			},
-			["Scorch"] = {
-				["Emperor Dagran Thaurissan"] = "yes",
+			["Frost Nova"] = {
+				["Hydrospawn"] = "yes",
 			},
-			["Arcane Missiles"] = {
+			["Frostbolt"] = {
+				["Hydrospawn"] = "yes",
 				["Emperor Dagran Thaurissan"] = "yes",
 			},
 			["Counterspell"] = {
 				["Emperor Dagran Thaurissan"] = "yes",
 			},
-			["Frost Nova"] = {
-				["Hydrospawn"] = "yes",
+			["Scorch"] = {
+				["Emperor Dagran Thaurissan"] = "yes",
 			},
 		},
 	},

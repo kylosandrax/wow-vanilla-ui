@@ -157,9 +157,10 @@ Zorlen: enabled
 Attack bar: disabled
 Ace2: enabled
 Ace: enabled
-BeanCounter: disabled
+BeanCounter: enabled
 !ClearFont: disabled
 CooldownHud: disabled
-WarriorHUD: disabled
+WarriorHUD: enabled
 WoWDBProfiler: disabled
 RDX: disabled
+EngBags: disabled

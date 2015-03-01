@@ -1,24 +1,24 @@
 
 Dcr_Saved = {
 	["Print_CustomFrame"] = true,
-	["Ingore_Stealthed"] = false,
+	["Random_Order"] = false,
 	["SkipList"] = {
 	},
 	["AlwaysUseBestSpell"] = true,
 	["Amount_Of_Afflicted"] = 5,
 	["CureBlacklist"] = 5,
-	["Show_LiveList"] = false,
-	["Print_ChatFrame"] = false,
-	["PlaySound"] = true,
 	["HideButtons"] = false,
+	["Check_For_Abolish"] = true,
+	["PlaySound"] = true,
+	["Show_LiveList"] = false,
 	["DoNot_Blacklist_Prio_List"] = false,
 	["Print_Error"] = true,
 	["Scan_Pets"] = true,
-	["ScanTime"] = 0.2,
+	["Print_ChatFrame"] = false,
 	["PriorityList"] = {
 	},
-	["Random_Order"] = false,
-	["Check_For_Abolish"] = true,
+	["Ingore_Stealthed"] = false,
+	["ScanTime"] = 0.2,
 }
 DCR_REMOTE_DEBUG = {
 }
