@@ -15,7 +15,7 @@ FrameLevel: 15
 X: 1284
 Y: -514
 Frame: ATSWFrame
-FrameLevel: 90
+FrameLevel: 38
 X: 354
 Y: -102
 Frame: ATSWCSFrame
@@ -58,6 +58,10 @@ Frame: DAB_ActionBar_10
 FrameLevel: 1
 X: 2408
 Y: -970
+Frame: DiscordMiniInventoryFrame
+FrameLevel: 1
+X: 1961
+Y: -431
 Frame: ItemRack_InvFrame
 FrameLevel: 21
 X: 2
@@ -72,7 +76,7 @@ X: 1037
 Y: -1024
 Frame: FuBarPluginMetaMapFrame
 FrameLevel: 7
-X: 605
+X: 603
 Y: 4
 Frame: PowaBarConfigFrame
 FrameLevel: 1
@@ -158,8 +162,8 @@ X: 1140
 Y: -903
 Frame: TrinketMenu_MenuFrame
 FrameLevel: 31
-X: 1140
-Y: -783
+X: 1180
+Y: -824
 Frame: TrinketMenu_OptFrame
 FrameLevel: 24
 X: 697

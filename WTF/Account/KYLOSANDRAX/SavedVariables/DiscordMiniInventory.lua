@@ -37,7 +37,7 @@ DMIN_Settings = {
 			["b"] = 0.5,
 		},
 	},
-	["sortBy"] = "name",
+	["sortBy"] = "quality",
 	["bagNames"] = {
 		[1] = "Bag 1",
 		[2] = "Bag 2",

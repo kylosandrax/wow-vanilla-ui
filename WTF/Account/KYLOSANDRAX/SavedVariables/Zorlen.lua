@@ -95,8 +95,8 @@ ZorlenConfig = {
 				["Maleki the Pallid"] = "yes",
 				["Gurubashi Axe Thrower"] = "yes",
 				["King Gordok"] = "yes",
-				["Cho'Rush the Observer"] = "yes",
 				["Illyanna Ravenoak"] = "yes",
+				["Cho'Rush the Observer"] = "yes",
 				["Gurubashi Champion"] = "yes",
 				["Baron Rivendare"] = "yes",
 				["General Angerforge"] = "yes",
@@ -116,12 +116,13 @@ ZorlenConfig = {
 				["Petrified Treant"] = "yes",
 				["Ironbark Protector"] = "yes",
 				["Obsidian Destroyer"] = "yes",
-				["Lava Annihilator"] = "yes",
 				["Blazing Fireguard"] = "yes",
+				["Lava Annihilator"] = "yes",
+				["Wandering Forest Walker"] = "yes",
 				["Mana Remnant"] = "yes",
 				["Warpwood Crusher"] = "yes",
-				["Pyroguard Emberseer"] = "yes",
 				["Warbringer Construct"] = "yes",
+				["Pyroguard Emberseer"] = "yes",
 				["Firelord"] = "yes",
 			},
 			["Piercing Howl"] = {
@@ -208,25 +209,25 @@ ZorlenConfig = {
 			["Fireball"] = {
 				["Emperor Dagran Thaurissan"] = "yes",
 			},
-			["Arcane Missiles"] = {
+			["Frostbolt"] = {
+				["Hydrospawn"] = "yes",
 				["Emperor Dagran Thaurissan"] = "yes",
 			},
 			["Polymorph"] = {
 				["Crystal Fang"] = "yes",
 				["Lethtendris"] = "yes",
 			},
-			["Frost Nova"] = {
-				["Hydrospawn"] = "yes",
+			["Scorch"] = {
+				["Emperor Dagran Thaurissan"] = "yes",
 			},
-			["Frostbolt"] = {
-				["Hydrospawn"] = "yes",
+			["Arcane Missiles"] = {
 				["Emperor Dagran Thaurissan"] = "yes",
 			},
 			["Counterspell"] = {
 				["Emperor Dagran Thaurissan"] = "yes",
 			},
-			["Scorch"] = {
-				["Emperor Dagran Thaurissan"] = "yes",
+			["Frost Nova"] = {
+				["Hydrospawn"] = "yes",
 			},
 		},
 	},

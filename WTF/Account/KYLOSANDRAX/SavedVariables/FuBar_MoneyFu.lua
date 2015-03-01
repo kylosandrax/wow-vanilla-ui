@@ -3,7 +3,7 @@ MoneyFuDB = {
 	["realms"] = {
 		["Warsong [12x] Blizzlike - Horde"] = {
 			["gained"] = {
-				[16495] = 0,
+				[16495] = 541484,
 				[16492] = 1772134,
 				[16489] = 0,
 				[16493] = 11900,
@@ -12,7 +12,7 @@ MoneyFuDB = {
 				[16491] = 2076029,
 			},
 			["time"] = {
-				[16495] = 1860,
+				[16495] = 7707,
 				[16492] = 8609,
 				[16489] = 16,
 				[16493] = 1255,
@@ -21,7 +21,7 @@ MoneyFuDB = {
 				[16491] = 13678,
 			},
 			["spent"] = {
-				[16495] = 89423,
+				[16495] = 92426,
 				[16492] = 37357,
 				[16489] = 0,
 				[16493] = 109330,
@@ -34,8 +34,8 @@ MoneyFuDB = {
 				["Zapunzel"] = 1148951,
 				["Stormslinger"] = 589823,
 				["Banjax"] = 369798,
-				["Kylosandrax"] = 20669760,
-				["Sixofnine"] = 187328,
+				["Kylosandrax"] = 20801652,
+				["Sixofnine"] = 593917,
 			},
 		},
 		["Al'Akir [instant 60] Blizzlike - Horde"] = {
@@ -99,8 +99,8 @@ MoneyFuDB = {
 				[16287] = 0,
 			},
 			["chars"] = {
-				["Nameplate"] = 0,
 				["Ryvok"] = 0,
+				["Nameplate"] = 0,
 			},
 		},
 		["Warsong [12x] Blizzlike - Alliance"] = {

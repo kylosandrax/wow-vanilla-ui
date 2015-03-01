@@ -2,30 +2,28 @@
 CliqueDB = {
 	["disabledModules"] = {
 		["Default"] = {
-			["resurrection"] = true,
-			["healselect"] = true,
 			["sageuf"] = true,
 			["duf"] = true,
 			["archud"] = true,
 			["squeaky"] = true,
 			["blizzraid"] = true,
-			["nuf"] = true,
+			["healassist"] = true,
 			["oramtf"] = true,
 			["needylist"] = true,
 			["perfectraid"] = true,
 			["ouf"] = true,
 			["mg2-64pre"] = true,
-			["healassist"] = true,
+			["nuf"] = true,
 			["aofhclique"] = true,
 			["xperl"] = true,
 			["xraid"] = true,
 			["ora2mtf"] = true,
 			["marsraid"] = true,
-			["ctra"] = true,
+			["squishy"] = true,
 			["pcuf"] = true,
 			["watchdog"] = true,
 			["easyraid"] = true,
-			["squishy"] = true,
+			["ctra"] = true,
 		},
 	},
 	["chars"] = {
@@ -212,7 +210,9 @@ CliqueDB = {
 			["Default Hostile"] = {
 			},
 		},
-		["Nameplate of Emerald Dream [1x] Blizzlike"] = {
+		["Sixofnine of Warsong [12x] Blizzlike"] = {
+			["Click on Dead Unit"] = {
+			},
 			["Default Friendly"] = {
 			},
 			["Out-of-combat"] = {
@@ -237,9 +237,7 @@ CliqueDB = {
 			["Default Hostile"] = {
 			},
 		},
-		["Sixofnine of Warsong [12x] Blizzlike"] = {
-			["Click on Dead Unit"] = {
-			},
+		["Nameplate of Emerald Dream [1x] Blizzlike"] = {
 			["Default Friendly"] = {
 			},
 			["Out-of-combat"] = {

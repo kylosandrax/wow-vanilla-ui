@@ -18,7 +18,7 @@ WIM_Data = {
 		["show"] = true,
 		["classIcon"] = true,
 	},
-	["keepFocus"] = false,
+	["versionLastLoaded"] = "1.3.1",
 	["autoFocus"] = false,
 	["winCascade"] = {
 		["enabled"] = true,
@@ -91,7 +91,7 @@ WIM_Data = {
 	["enableWIM"] = true,
 	["popOnSend"] = true,
 	["showMiniMap"] = true,
-	["versionLastLoaded"] = "1.3.1",
+	["keepFocus"] = false,
 	["showToolTips"] = true,
 	["winLoc"] = {
 		["top"] = 775,

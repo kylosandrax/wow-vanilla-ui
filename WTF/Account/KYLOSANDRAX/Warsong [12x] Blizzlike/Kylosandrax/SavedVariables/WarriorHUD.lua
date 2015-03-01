@@ -14,7 +14,7 @@ WHUD_VARS = {
 	["Cooldowns"] = {
 		["enabled"] = true,
 		["strata"] = "HIGH",
-		["scale"] = 1,
+		["scale"] = 3,
 		["fadetime"] = 1.5,
 		["Y"] = -50,
 		["X"] = 0,
@@ -25,7 +25,7 @@ WHUD_VARS = {
 	},
 	["Overpower"] = {
 		["enabled"] = true,
-		["scale"] = 1,
+		["scale"] = 3,
 		["Y"] = 50,
 		["X"] = 0,
 		["MSG"] = "USE OVERPOWER NOW",
@@ -35,10 +35,10 @@ WHUD_VARS = {
 	["Ragebar"] = {
 		["enabled"] = true,
 		["scale"] = 1,
-		["Y"] = -100,
-		["transparency"] = 1,
+		["Y"] = -200,
+		["X"] = 0,
 		["fontsize"] = 25,
 		["strata"] = "HIGH",
-		["X"] = 0,
+		["transparency"] = 1,
 	},
 }

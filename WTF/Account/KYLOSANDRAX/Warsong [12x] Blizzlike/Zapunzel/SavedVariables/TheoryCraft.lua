@@ -8,34 +8,25 @@ TheoryCraft_Settings = {
 		["Shadow"] = 0,
 		["Nature"] = 0,
 	},
-	["ColR"] = 1,
-	["ColG"] = 1,
+	["buttontexty"] = 10.22,
+	["buttontextx"] = 1.111,
 	["ColG2"] = 1,
 	["ColR2"] = 1,
 	["embedstyle1"] = true,
 	["tryfirst"] = "averagedam",
-	["dataversion"] = "1.06",
 	["trysecondsfg"] = -1,
+	["dataversion"] = "1.06",
 	["tryfirstsfg"] = 0,
-	["embed"] = true,
-	["buttontextx"] = 1.111,
-	["buttontexty"] = 10.22,
+	["combinedot"] = true,
+	["ColB"] = 1,
+	["FontPath"] = "Fonts\\ArialN.TTF",
 	["GenerateList"] = "",
-	["ColB2"] = 0.6862745098039216,
+	["procs"] = true,
 	["trysecond"] = "averagehealnocrit",
 	["mitigation"] = true,
 	["buttontext"] = true,
 	["dontresist"] = true,
 	["CustomOutfit"] = {
-		["intellect"] = 0,
-		["newstat"] = {
-		},
-		["strength"] = 0,
-		["agility"] = 0,
-		["name"] = "Naked",
-		["stamina"] = 0,
-		["wear"] = {
-		},
 		["destat"] = {
 			[1] = "Head",
 			[2] = "Neck",
@@ -57,18 +48,26 @@ TheoryCraft_Settings = {
 			[18] = "Tabard",
 			[19] = "Ammo",
 		},
-		["spirit"] = 0,
+		["newstat"] = {
+		},
+		["strength"] = 0,
+		["agility"] = 0,
+		["name"] = "Naked",
 		["slots"] = {
-			["Waist"] = {
+			["Ranged"] = {
 				["stats"] = {
-					["intellect"] = 5,
+					["rangedattackpower"] = 14,
 				},
-				["name"] = "|cff1eff00|Hitem:4786:0:0:0|h[Wise Man's Belt]|h|r",
+				["name"] = "|cff1eff00|Hitem:10604:0:0:0|h[Schematic: Mithril Heavy-bore Rifle]|h|r",
 				["data"] = {
-					["name"] = "Wise Man's Belt",
+					["RangedSpeed"] = 2.9,
+					["name"] = "Schematic: Mithril Heavy-bore Rifle",
 					["procs"] = {
 					},
-					["numlines"] = 6,
+					["RangedMin"] = 41,
+					["RangedMax"] = 76,
+					["numlines"] = 11,
+					["RangedAttackPowerReport"] = 14,
 				},
 			},
 			["Finger0"] = {
@@ -84,17 +83,17 @@ TheoryCraft_Settings = {
 					["numlines"] = 6,
 				},
 			},
-			["Neck"] = {
+			["Legs"] = {
 				["stats"] = {
-					["stamina"] = 10,
-					["spirit"] = 15,
+					["intellect"] = 5,
+					["spirit"] = 4,
 				},
-				["name"] = "|cffa335ee|Hitem:1315:0:0:0|h[Lei of Lilies]|h|r",
+				["name"] = "|cff1eff00|Hitem:5972:0:0:0|h[Pattern: Fine Leather Pants]|h|r",
 				["data"] = {
-					["name"] = "Lei of Lilies",
+					["name"] = "Pattern: Fine Leather Pants",
 					["procs"] = {
 					},
-					["numlines"] = 7,
+					["numlines"] = 11,
 				},
 			},
 			["Back"] = {
@@ -158,21 +157,22 @@ TheoryCraft_Settings = {
 					["numlines"] = 11,
 				},
 			},
-			["Feet"] = {
+			["Finger1"] = {
 				["stats"] = {
+					["intellect"] = 14,
 				},
-				["name"] = "|cffffffff|Hitem:9743:0:0:0|h[Simple Shoes]|h|r",
+				["name"] = "|cff1eff00|Hitem:11991:0:214:0|h[Quicksilver Ring of Intellect]|h|r",
 				["data"] = {
-					["name"] = "Simple Shoes",
+					["name"] = "Quicksilver Ring of Intellect",
 					["procs"] = {
 					},
-					["numlines"] = 4,
+					["numlines"] = 5,
 				},
 			},
 			["Chest"] = {
 				["stats"] = {
-					["intellect"] = 6,
 					["stamina"] = 7,
+					["intellect"] = 6,
 				},
 				["name"] = "|cff1eff00|Hitem:14380:0:0:0|h[Sanguine Robe]|h|r",
 				["data"] = {
@@ -190,53 +190,52 @@ TheoryCraft_Settings = {
 				["data"] = {
 					["numlines"] = 11,
 					["MeleeMax"] = 57,
-					["MeleeMin"] = 30,
+					["name"] = "Plans: Mighty Iron Hammer",
 					["procs"] = {
 					},
 					["MeleeAPMult"] = 2.4,
 					["MainSpeed"] = 2.8,
-					["name"] = "Plans: Mighty Iron Hammer",
+					["MeleeMin"] = 30,
 				},
 			},
-			["Ranged"] = {
-				["stats"] = {
-					["rangedattackpower"] = 14,
-				},
-				["name"] = "|cff1eff00|Hitem:10604:0:0:0|h[Schematic: Mithril Heavy-bore Rifle]|h|r",
-				["data"] = {
-					["RangedMin"] = 41,
-					["name"] = "Schematic: Mithril Heavy-bore Rifle",
-					["procs"] = {
-					},
-					["numlines"] = 11,
-					["RangedMax"] = 76,
-					["RangedSpeed"] = 2.9,
-					["RangedAttackPowerReport"] = 14,
-				},
-			},
-			["Legs"] = {
+			["Waist"] = {
 				["stats"] = {
 					["intellect"] = 5,
-					["spirit"] = 4,
 				},
-				["name"] = "|cff1eff00|Hitem:5972:0:0:0|h[Pattern: Fine Leather Pants]|h|r",
+				["name"] = "|cff1eff00|Hitem:4786:0:0:0|h[Wise Man's Belt]|h|r",
 				["data"] = {
-					["name"] = "Pattern: Fine Leather Pants",
+					["name"] = "Wise Man's Belt",
 					["procs"] = {
 					},
-					["numlines"] = 11,
+					["numlines"] = 6,
 				},
 			},
-			["Finger1"] = {
+			["Off Hand"] = {
 				["stats"] = {
-					["intellect"] = 14,
+					["stamina"] = 2,
+					["strength"] = 2,
 				},
-				["name"] = "|cff1eff00|Hitem:11991:0:214:0|h[Quicksilver Ring of Intellect]|h|r",
+				["name"] = "|cff1eff00|Hitem:4439:0:0:0|h[Bruiser Club]|h|r",
 				["data"] = {
-					["name"] = "Quicksilver Ring of Intellect",
+					["numlines"] = 8,
+					["MeleeMax"] = 32,
+					["MeleeMin"] = 17,
 					["procs"] = {
 					},
-					["numlines"] = 5,
+					["MeleeAPMult"] = 2.4,
+					["MainSpeed"] = 2.2,
+					["name"] = "Bruiser Club",
+				},
+			},
+			["Feet"] = {
+				["stats"] = {
+				},
+				["name"] = "|cffffffff|Hitem:9743:0:0:0|h[Simple Shoes]|h|r",
+				["data"] = {
+					["name"] = "Simple Shoes",
+					["procs"] = {
+					},
+					["numlines"] = 4,
 				},
 			},
 			["Shoulder"] = {
@@ -250,28 +249,29 @@ TheoryCraft_Settings = {
 					["numlines"] = 4,
 				},
 			},
-			["Off Hand"] = {
+			["Neck"] = {
 				["stats"] = {
-					["stamina"] = 2,
-					["strength"] = 2,
+					["stamina"] = 10,
+					["spirit"] = 15,
 				},
-				["name"] = "|cff1eff00|Hitem:4439:0:0:0|h[Bruiser Club]|h|r",
+				["name"] = "|cffa335ee|Hitem:1315:0:0:0|h[Lei of Lilies]|h|r",
 				["data"] = {
-					["numlines"] = 8,
-					["MeleeMax"] = 32,
-					["name"] = "Bruiser Club",
+					["name"] = "Lei of Lilies",
 					["procs"] = {
 					},
-					["MeleeAPMult"] = 2.4,
-					["MainSpeed"] = 2.2,
-					["MeleeMin"] = 17,
+					["numlines"] = 7,
 				},
 			},
 		},
+		["wear"] = {
+		},
+		["intellect"] = 0,
+		["spirit"] = 0,
+		["stamina"] = 0,
 	},
-	["procs"] = true,
-	["FontPath"] = "Fonts\\ArialN.TTF",
-	["ColB"] = 1,
-	["combinedot"] = true,
+	["ColB2"] = 0.6862745098039216,
+	["ColR"] = 1,
+	["ColG"] = 1,
+	["embed"] = true,
 	["healanddamage"] = true,
 }

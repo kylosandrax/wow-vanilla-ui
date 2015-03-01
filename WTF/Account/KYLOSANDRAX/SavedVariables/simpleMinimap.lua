@@ -1,13 +1,6 @@
 
 smmConfig = {
 	["namespaces"] = {
-		["location"] = {
-			["profiles"] = {
-				["Default"] = {
-					["scale"] = 0.8500000000000001,
-				},
-			},
-		},
 		["movers"] = {
 			["profiles"] = {
 				["Default"] = {
@@ -29,6 +22,13 @@ smmConfig = {
 							["x"] = 347.7681045776809,
 						},
 					},
+				},
+			},
+		},
+		["location"] = {
+			["profiles"] = {
+				["Default"] = {
+					["scale"] = 0.8500000000000001,
 				},
 			},
 		},
