@@ -1,6 +1,6 @@
 ## Interface: 11200
 ## Title: TankStats
-## Author: Timetheos/Garrmageddon/Archon
+## Author: Timetheos/Garrmageddon/Archon/Kylosandrax
 
 TankStats.xml
 tankstats.lua
