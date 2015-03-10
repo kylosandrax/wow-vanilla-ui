@@ -1,0 +1,386 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+    
+    <Frame name="EHFrame" parent="UIParent" enableMouse="true" movable="true" clampedToScreen="true">
+        <Size x="300" y="100"/>
+        <Anchors>
+            <Anchor point="Top" relativePoint="CENTER"/>
+        </Anchors>
+		<TitleRegion setAllPoints="true"/>
+        <Frames>
+			
+			<!-- EH -->
+            <StatusBar name="$parentMaxEHBar"  parentKey="MaxEHBar" frameLevel="2">
+                <Anchors>
+                    <Anchor point="TOPLEFT"/>
+                </Anchors>
+                <Size x="300" y="25"/>
+              
+                <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+                <BarColor r="0.25" g="0" b="0" a="1"/>
+            </StatusBar>
+            <StatusBar name="$parentEHBar" parentKey="EHBar" frameLevel="3">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="$parentMaxEHBar"/>
+                </Anchors>
+                <Size x="300" y="25"/>
+                <Layers>
+                    <Layer level="OVERLAY">
+                        <FontString name="$parentText" inherits="GameFontNormal" justifyH="LEFT" justifyV="MIDDLE" text="80 / 100" minValue="0" maxValue="100" value="80">
+                            <Anchors>
+                                <Anchor point="CENTER"/>
+                            </Anchors>
+                        </FontString>
+                    </Layer>
+                </Layers>
+           
+                <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+                <BarColor r=".78" g="0.61" b=".43" a="1"/>
+            </StatusBar>
+			
+			<!-- Fire EH -->
+            <StatusBar name="$parentMaxFireEHBar"  parentKey="MaxFireEHBar" frameLevel="2">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentMaxEHBar"/>
+                </Anchors>
+                <Size x="300" y="15"/>
+              
+                <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+                <BarColor r="0.25" g="0" b="0" a="1"/>
+            </StatusBar>
+            <StatusBar name="$parentFireEHBar" parentKey="FireEHBar" frameLevel="3">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="$parentMaxFireEHBar"/>
+                </Anchors>
+                <Size x="300" y="15"/>
+                <Layers>
+                    <Layer level="OVERLAY">
+                        <FontString name="$parentText" inherits="GameFontNormal" justifyH="LEFT" justifyV="MIDDLE" text="80 / 100" minValue="0" maxValue="100" value="80">
+                            <Anchors>
+                                <Anchor point="CENTER"/>
+                            </Anchors>
+                        </FontString>
+                    </Layer>
+                </Layers>
+           
+                <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+                <BarColor r=".87" g="..22" b="0" a="1"/>
+			</StatusBar>
+			
+			<!-- Shadow EH -->
+            <StatusBar name="$parentMaxShadowEHBar"  parentKey="MaxShadowEHBar" frameLevel="2">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentMaxFireEHBar"/>
+                </Anchors>
+                <Size x="300" y="15"/>
+              
+                <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+                <BarColor r="0.25" g="0" b="0" a="1"/>
+            </StatusBar>
+            <StatusBar name="$parentShadowEHBar" parentKey="ShadowEHBar" frameLevel="3">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="$parentMaxShadowEHBar"/>
+                </Anchors>
+                <Size x="300" y="15"/>
+                <Layers>
+                    <Layer level="OVERLAY">
+                        <FontString name="$parentText" inherits="GameFontNormal" justifyH="LEFT" justifyV="MIDDLE" text="80 / 100" minValue="0" maxValue="100" value="80">
+                            <Anchors>
+                                <Anchor point="CENTER"/>
+                            </Anchors>
+                        </FontString>
+                    </Layer>
+                </Layers>
+           
+                <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+                <BarColor r=".39" g=".05" b=".67" a="1"/>
+            </StatusBar>
+						
+			<!-- Nature EH -->
+            <StatusBar name="$parentMaxNatureEHBar"  parentKey="MaxNatureEHBar" frameLevel="2">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentMaxShadowEHBar"/>
+                </Anchors>
+                <Size x="300" y="15"/>
+              
+                <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+                <BarColor r="0.25" g="0" b="0" a="1"/>
+            </StatusBar>
+            <StatusBar name="$parentNatureEHBar" parentKey="NatureEHBar" frameLevel="3">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="$parentMaxNatureEHBar"/>
+                </Anchors>
+                <Size x="300" y="15"/>
+                <Layers>
+                    <Layer level="OVERLAY">
+                        <FontString name="$parentText" inherits="GameFontNormal" justifyH="LEFT" justifyV="MIDDLE" text="80 / 100" minValue="0" maxValue="100" value="80">
+                            <Anchors>
+                                <Anchor point="CENTER"/>
+                            </Anchors>
+                        </FontString>
+                    </Layer>
+                </Layers>
+           
+                <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+                <BarColor r=".02" g=".68" b=".12" a="1"/>
+            </StatusBar>
+									
+			<!-- Frost EH -->
+            <StatusBar name="$parentMaxFrostEHBar"  parentKey="MaxFrostEHBar" frameLevel="2">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentMaxNatureEHBar"/>
+                </Anchors>
+                <Size x="300" y="15"/>
+              
+                <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+                <BarColor r="0.25" g="0" b="0" a="1"/>
+            </StatusBar>
+            <StatusBar name="$parentFrostEHBar" parentKey="FrostEHBar" frameLevel="3">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="$parentMaxFrostEHBar"/>
+                </Anchors>
+                <Size x="300" y="15"/>
+                <Layers>
+                    <Layer level="OVERLAY">
+                        <FontString name="$parentText" inherits="GameFontNormal" justifyH="LEFT" justifyV="MIDDLE" text="80 / 100" minValue="0" maxValue="100" value="80">
+                            <Anchors>
+                                <Anchor point="CENTER"/>
+                            </Anchors>
+                        </FontString>
+                    </Layer>
+                </Layers>
+           
+                <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+                <BarColor r=".31" g=".65" b="1" a="1"/>
+            </StatusBar>
+									
+			<!-- Arcane EH -->
+            <StatusBar name="$parentMaxArcaneEHBar"  parentKey="MaxArcaneEHBar" frameLevel="2">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="$parentMaxFrostEHBar"/>
+                </Anchors>
+                <Size x="300" y="15"/>
+              
+                <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+                <BarColor r="0.25" g="0" b="0" a="1"/>
+            </StatusBar>
+            <StatusBar name="$parentArcaneEHBar" parentKey="ArcaneEHBar" frameLevel="3">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativeTo="$parentMaxArcaneEHBar"/>
+                </Anchors>
+                <Size x="300" y="15"/>
+                <Layers>
+                    <Layer level="OVERLAY">
+                        <FontString name="$parentText" inherits="GameFontNormal" justifyH="LEFT" justifyV="MIDDLE" text="80 / 100" minValue="0" maxValue="100" value="80">
+                            <Anchors>
+                                <Anchor point="CENTER"/>
+                            </Anchors>
+                        </FontString>
+                    </Layer>
+                </Layers>
+           
+                <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+                <BarColor r="0" g=".47" b=".47" a="1"/>
+            </StatusBar>
+			
+        </Frames>
+    </Frame>
+    
+    <Frame name="HitTable" parent="UIParent" enableMouse="true" movable="true" clampedToScreen="true">
+        <Size x="450" y="20"/>
+        <Anchors>
+            <Anchor point="CENTER"/>
+        </Anchors>
+		<Scripts>
+			<OnEnter>
+				TankStats:showHitTableText();
+			</OnEnter>
+			<OnLeave>
+				TankStats:hideHitTableText();
+			</OnLeave>
+		</Scripts>
+		<Layers>
+			<Layer level="OVERLAY">
+				<FontString name="$parentText" inherits="GameFontNormal" justifyH="LEFT" justifyV="MIDDLE"
+				text="">
+					<Anchors>
+						<Anchor point="BOTTOM" relativePoint="TOP" relativeTo="HitTable"/>
+					</Anchors>
+				</FontString>
+			</Layer>
+		</Layers>
+		<TitleRegion setAllPoints="true"/>
+        <Frames>
+			
+			<!-- Miss -->
+            <StatusBar name="$parentMissBar"  parentKey="MissBar" frameLevel="2">
+                <Anchors>
+                    <Anchor point="TOPLEFT"/>
+                </Anchors>
+                <Size x="30" y="20"/>
+              
+                <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+                <BarColor r="0" g="1" b="0" a="1"/>
+                <Layers>
+                    <Layer level="OVERLAY">
+                        <FontString name="$parentText" inherits="GameFontNormal" justifyH="LEFT" justifyV="MIDDLE" text="M">
+                            <Anchors>
+                                <Anchor point="CENTER"/>
+                            </Anchors>
+                        </FontString>
+                    </Layer>
+                </Layers>
+            </StatusBar>
+			
+			<!-- Dodge -->
+            <StatusBar name="$parentDodgeBar"  parentKey="DodgeBar" frameLevel="2">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeTo="$parentMissBar"/>
+                </Anchors>
+                <Size x="30" y="20"/>
+              
+                <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+                <BarColor r="0" g="1" b="0" a="1"/>
+                <Layers>
+                    <Layer level="OVERLAY">
+                        <FontString name="$parentText" inherits="GameFontNormal" justifyH="LEFT" justifyV="MIDDLE" text="D">
+                            <Anchors>
+                                <Anchor point="CENTER"/>
+                            </Anchors>
+                        </FontString>
+                    </Layer>
+                </Layers>
+            </StatusBar>
+			
+			<!-- Parry -->
+            <StatusBar name="$parentParryBar"  parentKey="ParryBar" frameLevel="2">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeTo="$parentDodgeBar"/>
+                </Anchors>
+                <Size x="30" y="20"/>
+              
+                <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+                <BarColor r="0" g="1" b="0" a="1"/>
+                <Layers>
+                    <Layer level="OVERLAY">
+                        <FontString name="$parentText" inherits="GameFontNormal" justifyH="LEFT" justifyV="MIDDLE" text="P">
+                            <Anchors>
+                                <Anchor point="CENTER"/>
+                            </Anchors>
+                        </FontString>
+                    </Layer>
+                </Layers>
+            </StatusBar>
+			
+			<!-- Block -->
+            <StatusBar name="$parentBlockBar"  parentKey="BlockBar" frameLevel="2">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeTo="$parentParryBar"/>
+                </Anchors>
+                <Size x="30" y="20"/>
+              
+                <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+                <BarColor r="1" g="1" b="0" a="1"/>
+                <Layers>
+                    <Layer level="OVERLAY">
+                        <FontString name="$parentText" inherits="GameFontNormal" justifyH="LEFT" justifyV="MIDDLE" text="B">
+                            <Anchors>
+                                <Anchor point="CENTER"/>
+                            </Anchors>
+                        </FontString>
+                    </Layer>
+                </Layers>
+            </StatusBar>
+			
+			<!-- Crit -->
+            <StatusBar name="$parentCritBar"  parentKey="CritBar" frameLevel="2">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeTo="$parentBlockBar"/>
+                </Anchors>
+                <Size x="30" y="20"/>
+              
+                <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+                <BarColor r="0.3" g="0" b="0" a="1"/>
+                <Layers>
+                    <Layer level="OVERLAY">
+                        <FontString name="$parentText" inherits="GameFontNormal" justifyH="LEFT" justifyV="MIDDLE" text="Ct">
+                            <Anchors>
+                                <Anchor point="CENTER"/>
+                            </Anchors>
+                        </FontString>
+                    </Layer>
+                </Layers>
+            </StatusBar>
+			
+			<!-- Crush -->
+            <StatusBar name="$parentCrushBar"  parentKey="Crush" frameLevel="2">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeTo="$parentCritBar"/>
+                </Anchors>
+                <Size x="30" y="20"/>
+              
+                <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+                <BarColor r="1" g="0" b="0" a="1"/>
+                <Layers>
+                    <Layer level="OVERLAY">
+                        <FontString name="$parentText" inherits="GameFontNormal" justifyH="LEFT" justifyV="MIDDLE" text="Cu">
+                            <Anchors>
+                                <Anchor point="CENTER"/>
+                            </Anchors>
+                        </FontString>
+                    </Layer>
+                </Layers>
+            </StatusBar>
+			
+			<!-- Hit -->
+            <StatusBar name="$parentHitBar"  parentKey="HitBar" frameLevel="2">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeTo="$parentCrushBar"/>
+                </Anchors>
+                <Size x="30" y="20"/>
+              
+                <BarTexture file="Interface\TargetingFrame\UI-StatusBar"/>
+                <BarColor r="1" g="0.5" b="0" a="1"/>
+                <Layers>
+                    <Layer level="OVERLAY">
+                        <FontString name="$parentText" inherits="GameFontNormal" justifyH="LEFT" justifyV="MIDDLE" text="H">
+                            <Anchors>
+                                <Anchor point="CENTER"/>
+                            </Anchors>
+                        </FontString>
+                    </Layer>
+                </Layers>
+            </StatusBar>
+			
+			
+        </Frames>
+    </Frame>
+    
+</Ui>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
