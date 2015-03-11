@@ -76,7 +76,7 @@ X: 1037
 Y: -1024
 Frame: FuBarPluginMetaMapFrame
 FrameLevel: 7
-X: 603
+X: 604
 Y: 4
 Frame: PowaBarConfigFrame
 FrameLevel: 1
@@ -152,6 +152,14 @@ Frame: TankBuddyFrame
 FrameLevel: 1
 X: 655
 Y: -184
+Frame: EHFrame
+FrameLevel: 1
+X: 1216
+Y: -43
+Frame: HitTable
+FrameLevel: 1
+X: 1183
+Y: -37
 Frame: TheoryCraft
 FrameLevel: 1
 X: 1255
@@ -162,8 +170,8 @@ X: 1140
 Y: -903
 Frame: TrinketMenu_MenuFrame
 FrameLevel: 31
-X: 1180
-Y: -824
+X: 1140
+Y: -783
 Frame: TrinketMenu_OptFrame
 FrameLevel: 24
 X: 697

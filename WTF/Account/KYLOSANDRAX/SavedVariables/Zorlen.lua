@@ -95,8 +95,8 @@ ZorlenConfig = {
 				["Maleki the Pallid"] = "yes",
 				["Gurubashi Axe Thrower"] = "yes",
 				["King Gordok"] = "yes",
-				["Illyanna Ravenoak"] = "yes",
 				["Cho'Rush the Observer"] = "yes",
+				["Illyanna Ravenoak"] = "yes",
 				["Gurubashi Champion"] = "yes",
 				["Baron Rivendare"] = "yes",
 				["General Angerforge"] = "yes",
@@ -106,23 +106,26 @@ ZorlenConfig = {
 				["Crimson Hammersmith"] = "yes",
 			},
 			["Rend"] = {
-				["Lava Surger"] = "yes",
+				["Warbringer Construct"] = "yes",
 				["Firewalker"] = "yes",
 				["Arcane Aberration"] = "yes",
+				["Crimson Templar"] = "yes",
 				["Molten War Golem"] = "yes",
 				["Fireguard Destroyer"] = "yes",
 				["Atal'ai Totem"] = "yes",
 				["Lava Spawn"] = "yes",
+				["Azure Templar"] = "yes",
 				["Petrified Treant"] = "yes",
 				["Ironbark Protector"] = "yes",
+				["Earth Elemental"] = "yes",
 				["Obsidian Destroyer"] = "yes",
-				["Blazing Fireguard"] = "yes",
+				["Lava Surger"] = "yes",
 				["Lava Annihilator"] = "yes",
 				["Wandering Forest Walker"] = "yes",
 				["Mana Remnant"] = "yes",
 				["Warpwood Crusher"] = "yes",
-				["Warbringer Construct"] = "yes",
 				["Pyroguard Emberseer"] = "yes",
+				["Blazing Fireguard"] = "yes",
 				["Firelord"] = "yes",
 			},
 			["Piercing Howl"] = {
@@ -209,25 +212,25 @@ ZorlenConfig = {
 			["Fireball"] = {
 				["Emperor Dagran Thaurissan"] = "yes",
 			},
-			["Frostbolt"] = {
-				["Hydrospawn"] = "yes",
+			["Arcane Missiles"] = {
 				["Emperor Dagran Thaurissan"] = "yes",
 			},
 			["Polymorph"] = {
 				["Crystal Fang"] = "yes",
 				["Lethtendris"] = "yes",
 			},
-			["Scorch"] = {
-				["Emperor Dagran Thaurissan"] = "yes",
+			["Frost Nova"] = {
+				["Hydrospawn"] = "yes",
 			},
-			["Arcane Missiles"] = {
+			["Frostbolt"] = {
+				["Hydrospawn"] = "yes",
 				["Emperor Dagran Thaurissan"] = "yes",
 			},
 			["Counterspell"] = {
 				["Emperor Dagran Thaurissan"] = "yes",
 			},
-			["Frost Nova"] = {
-				["Hydrospawn"] = "yes",
+			["Scorch"] = {
+				["Emperor Dagran Thaurissan"] = "yes",
 			},
 		},
 	},

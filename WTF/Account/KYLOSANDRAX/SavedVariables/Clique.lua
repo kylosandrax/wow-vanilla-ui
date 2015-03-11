@@ -7,23 +7,23 @@ CliqueDB = {
 			["archud"] = true,
 			["squeaky"] = true,
 			["blizzraid"] = true,
+			["ouf"] = true,
 			["healassist"] = true,
-			["oramtf"] = true,
+			["aofhclique"] = true,
 			["needylist"] = true,
 			["perfectraid"] = true,
-			["ouf"] = true,
 			["mg2-64pre"] = true,
 			["nuf"] = true,
-			["aofhclique"] = true,
+			["oramtf"] = true,
 			["xperl"] = true,
 			["xraid"] = true,
-			["ora2mtf"] = true,
+			["ctra"] = true,
 			["marsraid"] = true,
 			["squishy"] = true,
 			["pcuf"] = true,
 			["watchdog"] = true,
 			["easyraid"] = true,
-			["ctra"] = true,
+			["ora2mtf"] = true,
 		},
 	},
 	["chars"] = {
@@ -35,7 +35,7 @@ CliqueDB = {
 			["Default Hostile"] = {
 			},
 		},
-		["Kylosandrax of Al'Akir [instant 60] Blizzlike"] = {
+		["Zapunzel of Warsong [12x] Blizzlike"] = {
 			["Default Friendly"] = {
 			},
 			["Out-of-combat"] = {
@@ -194,7 +194,7 @@ CliqueDB = {
 			["Default Hostile"] = {
 			},
 		},
-		["Zapunzel of Warsong [12x] Blizzlike"] = {
+		["Kylosandrax of Al'Akir [instant 60] Blizzlike"] = {
 			["Default Friendly"] = {
 			},
 			["Out-of-combat"] = {
@@ -210,9 +210,7 @@ CliqueDB = {
 			["Default Hostile"] = {
 			},
 		},
-		["Sixofnine of Warsong [12x] Blizzlike"] = {
-			["Click on Dead Unit"] = {
-			},
+		["Nameplate of Emerald Dream [1x] Blizzlike"] = {
 			["Default Friendly"] = {
 			},
 			["Out-of-combat"] = {
@@ -237,7 +235,9 @@ CliqueDB = {
 			["Default Hostile"] = {
 			},
 		},
-		["Nameplate of Emerald Dream [1x] Blizzlike"] = {
+		["Sixofnine of Warsong [12x] Blizzlike"] = {
+			["Click on Dead Unit"] = {
+			},
 			["Default Friendly"] = {
 			},
 			["Out-of-combat"] = {

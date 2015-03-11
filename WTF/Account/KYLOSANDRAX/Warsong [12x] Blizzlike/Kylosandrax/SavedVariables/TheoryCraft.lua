@@ -12,33 +12,24 @@ TheoryCraft_Settings = {
 	["embed"] = true,
 	["buttontextx"] = 1.111,
 	["ColG2"] = 1,
-	["combinedot"] = true,
+	["nextstr"] = true,
 	["ColR2"] = 1,
-	["embedstyle1"] = true,
 	["ColB"] = 1,
+	["crit"] = true,
 	["tryfirst"] = "averagedam",
 	["trysecondsfg"] = -1,
-	["dataversion"] = "1.06",
+	["ColG"] = 1,
 	["tryfirstsfg"] = 0,
-	["procs"] = true,
-	["nextcrit"] = true,
+	["ColB2"] = 0.6862745098039216,
 	["mitigation"] = true,
-	["GenerateList"] = "",
-	["trysecond"] = "averagehealnocrit",
+	["FontPath"] = "Fonts\\ArialN.TTF",
+	["nextcrit"] = true,
 	["dontresist"] = true,
+	["trysecond"] = "averagehealnocrit",
 	["ColR"] = 1,
 	["buttontext"] = true,
-	["FontPath"] = "Fonts\\ArialN.TTF",
+	["GenerateList"] = "",
 	["CustomOutfit"] = {
-		["intellect"] = 0,
-		["newstat"] = {
-		},
-		["strength"] = 0,
-		["agility"] = 0,
-		["name"] = "Naked",
-		["stamina"] = 0,
-		["wear"] = {
-		},
 		["destat"] = {
 			[1] = "Head",
 			[2] = "Neck",
@@ -60,20 +51,23 @@ TheoryCraft_Settings = {
 			[18] = "Tabard",
 			[19] = "Ammo",
 		},
-		["spirit"] = 0,
+		["newstat"] = {
+		},
+		["strength"] = 0,
+		["agility"] = 0,
+		["name"] = "Naked",
 		["slots"] = {
-			["Ranged"] = {
+			["Waist"] = {
 				["stats"] = {
+					["stamina"] = 11,
+					["strength"] = 12,
 				},
-				["name"] = "|cff1eff00|Hitem:15284:0:0:0|h[Long Battle Bow]|h|r",
+				["name"] = "|cff1eff00|Hitem:10122:0:1211:0|h[Ornate Girdle of the Bear]|h|r",
 				["data"] = {
-					["name"] = "Long Battle Bow",
+					["name"] = "Ornate Girdle of the Bear",
 					["procs"] = {
 					},
-					["RangedSpeed"] = 2.2,
-					["RangedMax"] = 34,
-					["RangedMin"] = 18,
-					["numlines"] = 6,
+					["numlines"] = 7,
 				},
 			},
 			["Finger0"] = {
@@ -180,58 +174,14 @@ TheoryCraft_Settings = {
 			},
 			["Head"] = {
 				["stats"] = {
-					["intellect"] = 14,
-					["strength"] = 13,
+					["settype"] = "Twilight Trappings",
 				},
-				["name"] = "|cff1eff00|Hitem:10132:0:961:0|h[Revenant Helmet of the Gorilla]|h|r",
+				["name"] = "|cff1eff00|Hitem:20408:0:0:0|h[Twilight Cultist Cowl]|h|r",
 				["data"] = {
-					["name"] = "Revenant Helmet of the Gorilla",
+					["name"] = "Twilight Cultist Cowl",
 					["procs"] = {
 					},
-					["numlines"] = 7,
-				},
-			},
-			["Feet"] = {
-				["stats"] = {
-					["stamina"] = 7,
-					["strength"] = 7,
-				},
-				["name"] = "|cff1eff00|Hitem:9864:0:1197:0|h[Renegade Boots of the Bear]|h|r",
-				["data"] = {
-					["name"] = "Renegade Boots of the Bear",
-					["procs"] = {
-					},
-					["numlines"] = 7,
-				},
-			},
-			["Chest"] = {
-				["stats"] = {
-					["stamina"] = 11,
-					["strength"] = 3,
-				},
-				["name"] = "|cff1eff00|Hitem:4071:0:0:0|h[Glimmering Mail Breastplate]|h|r",
-				["data"] = {
-					["name"] = "Glimmering Mail Breastplate",
-					["procs"] = {
-					},
-					["numlines"] = 7,
-				},
-			},
-			["Main"] = {
-				["stats"] = {
-					["agility"] = 12,
-					["strength"] = 12,
-				},
-				["name"] = "|cff1eff00|Hitem:15262:0:702:0|h[Greater Maul of the Tiger]|h|r",
-				["data"] = {
-					["numlines"] = 8,
-					["MeleeMax"] = 146,
-					["MeleeMin"] = 97,
-					["procs"] = {
-					},
-					["MeleeAPMult"] = 3.3,
-					["MainSpeed"] = 3.4,
-					["name"] = "Greater Maul of the Tiger",
+					["numlines"] = 11,
 				},
 			},
 			["Finger1"] = {
@@ -247,30 +197,33 @@ TheoryCraft_Settings = {
 					["numlines"] = 6,
 				},
 			},
-			["Waist"] = {
+			["Chest"] = {
 				["stats"] = {
-					["stamina"] = 11,
-					["strength"] = 12,
+					["settype"] = "Twilight Trappings",
 				},
-				["name"] = "|cff1eff00|Hitem:10122:0:1211:0|h[Ornate Girdle of the Bear]|h|r",
+				["name"] = "|cff1eff00|Hitem:20407:0:0:0|h[Twilight Cultist Robe]|h|r",
 				["data"] = {
-					["name"] = "Ornate Girdle of the Bear",
+					["name"] = "Twilight Cultist Robe",
 					["procs"] = {
 					},
-					["numlines"] = 7,
+					["numlines"] = 11,
 				},
 			},
-			["Shoulder"] = {
+			["Main"] = {
 				["stats"] = {
-					["intellect"] = 15,
-					["agility"] = 4,
+					["agility"] = 12,
+					["strength"] = 12,
 				},
-				["name"] = "|cff1eff00|Hitem:8250:0:0:0|h[Imperial Red Mantle]|h|r",
+				["name"] = "|cff1eff00|Hitem:15262:0:702:0|h[Greater Maul of the Tiger]|h|r",
 				["data"] = {
-					["name"] = "Imperial Red Mantle",
+					["numlines"] = 8,
+					["MeleeMax"] = 146,
+					["name"] = "Greater Maul of the Tiger",
 					["procs"] = {
 					},
-					["numlines"] = 7,
+					["MeleeAPMult"] = 3.3,
+					["MainSpeed"] = 3.4,
+					["MeleeMin"] = 97,
 				},
 			},
 			["Legs"] = {
@@ -284,11 +237,55 @@ TheoryCraft_Settings = {
 					["numlines"] = 12,
 				},
 			},
+			["Ranged"] = {
+				["stats"] = {
+				},
+				["name"] = "|cff1eff00|Hitem:15284:0:0:0|h[Long Battle Bow]|h|r",
+				["data"] = {
+					["name"] = "Long Battle Bow",
+					["procs"] = {
+					},
+					["RangedSpeed"] = 2.2,
+					["RangedMax"] = 34,
+					["numlines"] = 6,
+					["RangedMin"] = 18,
+				},
+			},
+			["Shoulder"] = {
+				["stats"] = {
+					["settype"] = "Twilight Trappings",
+				},
+				["name"] = "|cff1eff00|Hitem:20406:0:0:0|h[Twilight Cultist Mantle]|h|r",
+				["data"] = {
+					["name"] = "Twilight Cultist Mantle",
+					["procs"] = {
+					},
+					["numlines"] = 11,
+				},
+			},
+			["Feet"] = {
+				["stats"] = {
+					["stamina"] = 7,
+					["strength"] = 7,
+				},
+				["name"] = "|cff1eff00|Hitem:9864:0:1197:0|h[Renegade Boots of the Bear]|h|r",
+				["data"] = {
+					["name"] = "Renegade Boots of the Bear",
+					["procs"] = {
+					},
+					["numlines"] = 7,
+				},
+			},
 		},
+		["wear"] = {
+		},
+		["intellect"] = 0,
+		["spirit"] = 0,
+		["stamina"] = 0,
 	},
-	["ColB2"] = 0.6862745098039216,
-	["ColG"] = 1,
-	["crit"] = true,
-	["nextstr"] = true,
+	["procs"] = true,
+	["dataversion"] = "1.06",
+	["embedstyle1"] = true,
+	["combinedot"] = true,
 	["healanddamage"] = true,
 }

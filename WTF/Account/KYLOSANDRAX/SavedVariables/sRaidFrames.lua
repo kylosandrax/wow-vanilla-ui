@@ -2,7 +2,6 @@
 sRaidFramesDB = {
 	["profiles"] = {
 		["Default"] = {
-			["Scale"] = 1.1,
 			["fill_range"] = true,
 			["profile3"] = false,
 			["SortBy"] = "group",

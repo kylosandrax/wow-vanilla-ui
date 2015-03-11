@@ -8,13 +8,6 @@ oCBDB = {
 				["texture"] = "Striped",
 				["width"] = 386,
 			},
-			["CastingBar"] = {
-				["edgeFile"] = "None",
-				["height"] = 29,
-				["texture"] = "Striped",
-				["width"] = 385,
-			},
-			["lock"] = false,
 			["Colors"] = {
 				["Channel"] = {
 					["r"] = 0.4117647058823529,
@@ -31,6 +24,13 @@ oCBDB = {
 					["g"] = 0.2901960784313726,
 					["b"] = 0.2901960784313726,
 				},
+			},
+			["lock"] = false,
+			["CastingBar"] = {
+				["edgeFile"] = "None",
+				["height"] = 29,
+				["texture"] = "Striped",
+				["width"] = 385,
 			},
 			["Pos"] = {
 				["CastingBar"] = "783.85143395112 92.495921621153",

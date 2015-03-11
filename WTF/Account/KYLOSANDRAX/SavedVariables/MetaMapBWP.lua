@@ -204,7 +204,7 @@ BWP_QuestList = {
 		["Y"] = 0.377271980047226,
 		["X"] = 0.4863336086273193,
 		["Zone"] = 13,
-		["QuestName"] = "Secret Communication",
+		["QuestName"] = "Secret Communication,Azure Templar,Hoary Templar,Hive'Regal Scout Report,Hive'Ashi Scout Report",
 		["QuestGiver"] = "Bor Wildmane",
 	},
 	[29] = {
@@ -218,7 +218,7 @@ BWP_QuestList = {
 		["Y"] = 0.3647378385066986,
 		["X"] = 0.4994093775749207,
 		["Zone"] = 13,
-		["QuestName"] = "Cenarion Battlegear,,Field Duty,",
+		["QuestName"] = "Cenarion Battlegear,,Field Duty,,Twilight Marauders,Azure Templar",
 		["QuestGiver"] = "Windcaller Kaldon",
 	},
 	[31] = {
@@ -1452,20 +1452,6 @@ BWP_QuestList = {
 		["Zone"] = 13,
 		["QuestName"] = "The Twilight Lexicon",
 		["QuestGiver"] = "Hermit Ortell",
-	},
-	[207] = {
-		["Y"] = 0.394833505153656,
-		["X"] = 0.5176669955253601,
-		["Zone"] = 13,
-		["QuestName"] = "Drape of Unyielding Strength",
-		["QuestGiver"] = "Keyl Swiftclaw",
-	},
-	[208] = {
-		["Y"] = 0.3881097733974457,
-		["X"] = 0.5112235546112061,
-		["Zone"] = 13,
-		["QuestName"] = "Sickle of Unyielding Strength",
-		["QuestGiver"] = "Warden Haro",
 	},
 }
 BWP_AbandonedQuests = nil
