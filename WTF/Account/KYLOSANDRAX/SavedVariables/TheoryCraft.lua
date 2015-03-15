@@ -114,22 +114,18 @@ TheoryCraft_SetBonuses = {
 			["text"] = "Decrease the rage cost of Whirlwind by 3.",
 		},
 	},
-	["Dreadmist Raiment"] = {
+	["Stormrage Raiment"] = {
 		[1] = {
-			["pieces"] = 2,
-			["text"] = "+200 Armor.",
+			["pieces"] = 3,
+			["text"] = "Allows 15% of your Mana regeneration to continue while casting.",
 		},
 		[2] = {
-			["pieces"] = 4,
-			["text"] = "Increases damage and healing done by magical spells and effects by up to 23.",
+			["pieces"] = 5,
+			["text"] = "Reduces the casting time of your Regrowth spell by 0.2 sec.",
 		},
 		[3] = {
-			["pieces"] = 6,
-			["text"] = "When struck in combat has a chance of causing the attacker to flee in terror for 2 seconds. ",
-		},
-		[4] = {
 			["pieces"] = 8,
-			["text"] = "+8 All Resistances.",
+			["text"] = "Increases the duration of your Rejuvenation spell by 3 sec.",
 		},
 	},
 	["Battlegear of Valor"] = {
@@ -376,24 +372,22 @@ TheoryCraft_SetBonuses = {
 			["text"] = "Reduces the cooldown of your Tranquility and Hurricane spells by 50%.",
 		},
 	},
-	["Stormrage Raiment"] = {
+	["Dreadmist Raiment"] = {
 		[1] = {
-			["pieces"] = 3,
-			["text"] = "Allows 15% of your Mana regeneration to continue while casting.",
+			["pieces"] = 2,
+			["text"] = "+200 Armor.",
 		},
 		[2] = {
-			["pieces"] = 5,
-			["text"] = "Reduces the casting time of your Regrowth spell by 0.2 sec.",
+			["pieces"] = 4,
+			["text"] = "Increases damage and healing done by magical spells and effects by up to 23.",
 		},
 		[3] = {
-			["pieces"] = 8,
-			["text"] = "Increases the duration of your Rejuvenation spell by 3 sec.",
+			["pieces"] = 6,
+			["text"] = "When struck in combat has a chance of causing the attacker to flee in terror for 2 seconds. ",
 		},
-	},
-	["The Darksoul"] = {
-		[1] = {
-			["pieces"] = 3,
-			["text"] = "Increased Defense +20.",
+		[4] = {
+			["pieces"] = 8,
+			["text"] = "+8 All Resistances.",
 		},
 	},
 	["Imperial Plate"] = {
@@ -408,6 +402,12 @@ TheoryCraft_SetBonuses = {
 		[3] = {
 			["pieces"] = 6,
 			["text"] = "+18 Stamina.",
+		},
+	},
+	["The Darksoul"] = {
+		[1] = {
+			["pieces"] = 3,
+			["text"] = "Increased Defense +20.",
 		},
 	},
 	["Ironfeather Armor"] = {
@@ -481,8 +481,8 @@ TheoryCraft_MitigationMobs = {
 	["General Drakkisath"] = {
 		[1] = 5423,
 	},
-	["Shrike Bat"] = {
-		[1] = 1627,
+	["Vilebranch Ambusher"] = {
+		[1] = 2980,
 	},
 	["Zealot Zath"] = {
 		[1] = 3655,
@@ -544,8 +544,8 @@ TheoryCraft_MitigationMobs = {
 	["Murk Slitherer"] = {
 		[1] = 2913,
 	},
-	["Scarlet Chaplain"] = {
-		[1] = 3173,
+	["Anvilrage Overseer"] = {
+		[1] = 2262,
 	},
 	["Spire Spider"] = {
 		[1] = -34,
@@ -559,8 +559,8 @@ TheoryCraft_MitigationMobs = {
 	["Awbee"] = {
 		[1] = 370,
 	},
-	["Razormane Thornweaver"] = {
-		[1] = 652,
+	["Lord Roccor"] = {
+		[1] = -566,
 	},
 	["Witherbark Witch Doctor"] = {
 		[1] = 2138,
@@ -602,13 +602,13 @@ TheoryCraft_MitigationMobs = {
 		[1] = 2498,
 	},
 	["Twilight Geolord"] = {
-		[1] = 3544,
+		[1] = 3526,
 	},
 	["Baron Geddon"] = {
 		[1] = 4598,
 	},
-	["Arcane Torrent"] = {
-		[1] = 3595,
+	["Gnarl Leafbrother"] = {
+		[1] = 2484,
 	},
 	["Mana Remnant"] = {
 		[1] = 2682,
@@ -619,14 +619,14 @@ TheoryCraft_MitigationMobs = {
 	["Spirestone Warlord"] = {
 		[1] = -416,
 	},
-	["Shadowforge Citizen"] = {
-		[1] = 2326,
+	["Stormsnout"] = {
+		[1] = 1298,
 	},
 	["Shazzrah"] = {
 		[1] = -928,
 	},
-	["Theramore Preserver"] = {
-		[1] = 1219,
+	["Ironfur Bear"] = {
+		[1] = 2481,
 	},
 	["Wastewander Thief"] = {
 		[1] = 2719,
@@ -640,11 +640,11 @@ TheoryCraft_MitigationMobs = {
 	["Hive'Ashi Defender"] = {
 		[1] = 3535,
 	},
-	["Anger'rel"] = {
-		[1] = 3172,
+	["Starving Snickerfang"] = {
+		[1] = 2064,
 	},
-	["Hakkar"] = {
-		[1] = 4548,
+	["Thunderhead"] = {
+		[1] = 1358,
 	},
 	["Fungal Ooze"] = {
 		[1] = 2696,
@@ -652,8 +652,8 @@ TheoryCraft_MitigationMobs = {
 	["Netherwalker"] = {
 		[1] = 1125,
 	},
-	["Core Hound"] = {
-		[1] = 3165,
+	["Guard Slip'kik"] = {
+		[1] = -1292,
 	},
 	["Stromgarde Defender"] = {
 		[1] = 3048,
@@ -667,17 +667,17 @@ TheoryCraft_MitigationMobs = {
 	["Gurubashi Headhunter"] = {
 		[1] = 2932,
 	},
-	["War Reaver"] = {
-		[1] = 3542,
+	["Gurubashi Berserker"] = {
+		[1] = 3412,
 	},
-	["Spirestone Battle Mage"] = {
-		[1] = 2529,
+	["Raging Owlbeast"] = {
+		[1] = 3549,
 	},
 	["Antu'sul"] = {
 		[1] = 3468,
 	},
-	["Captain Qeez"] = {
-		[1] = 4030,
+	["Bloodtalon Scythemaw"] = {
+		[1] = 572,
 	},
 	["Slave Worker"] = {
 		[1] = 2900,
@@ -694,8 +694,8 @@ TheoryCraft_MitigationMobs = {
 	["Bijou"] = {
 		[1] = -287,
 	},
-	["Doomforge Arcanasmith"] = {
-		[1] = 1890,
+	["Anubisath Guardian"] = {
+		[1] = 3807,
 	},
 	["Syndicate Highwayman"] = {
 		[1] = 2076,
@@ -706,8 +706,8 @@ TheoryCraft_MitigationMobs = {
 	["Thunderhead Hippogryph"] = {
 		[1] = 3311,
 	},
-	["Phase Lasher"] = {
-		[1] = -2318,
+	["Steeljaw Snapper"] = {
+		[1] = 2778,
 	},
 	["Grimtotem Raider"] = {
 		[1] = -782,
@@ -718,14 +718,14 @@ TheoryCraft_MitigationMobs = {
 	["Crimson Monk"] = {
 		[1] = -1026,
 	},
-	["Scarlet Monk"] = {
-		[1] = 2253,
+	["Galak Assassin"] = {
+		[1] = 1914,
 	},
 	["Grimtotem Geomancer"] = {
 		[1] = 1624,
 	},
-	["Firelord"] = {
-		[1] = 1681,
+	["Caliph Scorpidsting"] = {
+		[1] = 2320,
 	},
 	["King Mosh"] = {
 		[1] = 4239,
@@ -760,8 +760,8 @@ TheoryCraft_MitigationMobs = {
 	["Broken Cadaver"] = {
 		[1] = 5534,
 	},
-	["Bloodpetal Lasher"] = {
-		[1] = 3164,
+	["Hakkari Shadowcaster"] = {
+		[1] = 2813,
 	},
 	["Wayward Buzzard"] = {
 		[1] = 2445,
@@ -808,14 +808,14 @@ TheoryCraft_MitigationMobs = {
 	["Slimeshell Makrura"] = {
 		[1] = 1379,
 	},
-	["Onyxia"] = {
-		[1] = -683,
+	["Inferno Elemental"] = {
+		[1] = 3113,
 	},
 	["Thunderhawk Hatchling"] = {
 		[1] = 1517,
 	},
-	["Southsea Pirate"] = {
-		[1] = 2838,
+	["Grimtotem Bandit"] = {
+		[1] = 1643,
 	},
 	["Weaver"] = {
 		[1] = -701,
@@ -904,14 +904,14 @@ TheoryCraft_MitigationMobs = {
 	["Young Mesa Buzzard"] = {
 		[1] = 2000,
 	},
-	["Diseased Black Bear"] = {
-		[1] = 3051,
+	["Lar'korwi Mate"] = {
+		[1] = 3334,
 	},
 	["Blackhand Assassin"] = {
 		[1] = 1599,
 	},
-	["Kurinnaxx"] = {
-		[1] = 3896,
+	["Giant Plains Creeper"] = {
+		[1] = 2374,
 	},
 	["Lava Reaver"] = {
 		[1] = 5832,
@@ -919,8 +919,8 @@ TheoryCraft_MitigationMobs = {
 	["The Ravenian"] = {
 		[1] = 329,
 	},
-	["High Priestess Mar'li"] = {
-		[1] = 4549,
+	["Rage Talon Captain"] = {
+		[1] = 4534,
 	},
 	["Plugger Spazzring"] = {
 		[1] = 3469,
@@ -940,11 +940,11 @@ TheoryCraft_MitigationMobs = {
 	["Savannah Cub"] = {
 		[1] = 312,
 	},
-	["Wastewander Rogue"] = {
-		[1] = 2824,
+	["Crimson Inquisitor"] = {
+		[1] = 462,
 	},
-	["Spirestone Mystic"] = {
-		[1] = -433,
+	["Lady Illucia Barov"] = {
+		[1] = -188,
 	},
 	["Smolderthorn Seer"] = {
 		[1] = 3225,
@@ -952,8 +952,8 @@ TheoryCraft_MitigationMobs = {
 	["Spire Spiderling"] = {
 		[1] = 2258,
 	},
-	["Wandering Eye of Kilrogg"] = {
-		[1] = 3605,
+	["Ridge Stalker Patriarch"] = {
+		[1] = 3029,
 	},
 	["Brokespear"] = {
 		[1] = 1142,
@@ -965,10 +965,10 @@ TheoryCraft_MitigationMobs = {
 		[1] = 3457,
 	},
 	["Moam"] = {
-		[1] = 3658,
+		[1] = 4038,
 	},
-	["Warpwood Treant"] = {
-		[1] = -1484,
+	["Blazing Elemental"] = {
+		[1] = 3233,
 	},
 	["Southsea Brigand"] = {
 		[1] = 918,
@@ -979,8 +979,8 @@ TheoryCraft_MitigationMobs = {
 	["Gurubashi Axe Thrower"] = {
 		[1] = 3664,
 	},
-	["Razormane Water Seeker"] = {
-		[1] = 612,
+	["Quartermaster Zigris"] = {
+		[1] = 2938,
 	},
 	["Hazzas"] = {
 		[1] = -1244,
@@ -992,7 +992,7 @@ TheoryCraft_MitigationMobs = {
 		[1] = 3535,
 	},
 	["Vile Scarab"] = {
-		[1] = 3278,
+		[1] = 3297,
 	},
 	["Highland Strider"] = {
 		[1] = 2084,
@@ -1009,8 +1009,8 @@ TheoryCraft_MitigationMobs = {
 	["Mother Smolderweb"] = {
 		[1] = 1027,
 	},
-	["Fireguard Destroyer"] = {
-		[1] = -12,
+	["Enthralled Atal'ai"] = {
+		[1] = 2786,
 	},
 	["Scarlet Guardsman"] = {
 		[1] = 2983,
@@ -1045,17 +1045,17 @@ TheoryCraft_MitigationMobs = {
 	["Phalanx"] = {
 		[1] = 3262,
 	},
-	["Hive'Zara Stinger"] = {
-		[1] = 4455,
+	["Onyxian Warder"] = {
+		[1] = 3310,
 	},
-	["Venomhide Ravasaur"] = {
-		[1] = 3312,
+	["Bloodaxe Warmonger"] = {
+		[1] = 357,
 	},
 	["Spectral Assassin"] = {
 		[1] = -2135,
 	},
-	["Magma Elemental"] = {
-		[1] = 2955,
+	["Tazan"] = {
+		[1] = 810,
 	},
 	["Scarlet Myrmidon"] = {
 		[1] = 2597,
@@ -1084,8 +1084,8 @@ TheoryCraft_MitigationMobs = {
 	["Crimson Guardsman"] = {
 		[1] = 483,
 	},
-	["Molten Giant"] = {
-		[1] = -465,
+	["Ironbark Protector"] = {
+		[1] = 6509,
 	},
 	["Diemetradon"] = {
 		[1] = 3369,
@@ -1105,8 +1105,8 @@ TheoryCraft_MitigationMobs = {
 	["Eye of Immol'thar"] = {
 		[1] = 4472,
 	},
-	["Sunscale Screecher"] = {
-		[1] = 965,
+	["Lord Pythas"] = {
+		[1] = 1316,
 	},
 	["Tar Beast"] = {
 		[1] = 3350,
@@ -1126,8 +1126,8 @@ TheoryCraft_MitigationMobs = {
 	["Anvilrage Soldier"] = {
 		[1] = 1823,
 	},
-	["Windfury Sorceress"] = {
-		[1] = 727,
+	["Galak Scout"] = {
+		[1] = 1730,
 	},
 	["Galak Mauler"] = {
 		[1] = 1674,
@@ -1142,7 +1142,7 @@ TheoryCraft_MitigationMobs = {
 		[1] = 2627,
 	},
 	["Ossirian the Unscarred"] = {
-		[1] = 3904,
+		[1] = 3305,
 	},
 	["Chromatic Elite Guard"] = {
 		[1] = 2138,
@@ -1159,8 +1159,8 @@ TheoryCraft_MitigationMobs = {
 	["Lava Annihilator"] = {
 		[1] = -57,
 	},
-	["Sandfury Executioner"] = {
-		[1] = 2496,
+	["Vilebranch Kidnapper"] = {
+		[1] = 2756,
 	},
 	["Redstone Basilisk"] = {
 		[1] = 2933,
@@ -1180,6 +1180,9 @@ TheoryCraft_MitigationMobs = {
 	["Needles Cougar"] = {
 		[1] = 1794,
 	},
+	["Boulderfist Brute"] = {
+		[1] = 2416,
+	},
 	["Goraluk Anvilcrack"] = {
 		[1] = -422,
 	},
@@ -1192,11 +1195,17 @@ TheoryCraft_MitigationMobs = {
 	["Boss Tho'grun"] = {
 		[1] = 2577,
 	},
-	["Grand Inquisitor Isillien"] = {
-		[1] = 3512,
+	["Wastewander Shadow Mage"] = {
+		[1] = 2444,
 	},
-	["Gorishi Tunneler"] = {
-		[1] = 3300,
+	["Razzashi Serpent"] = {
+		[1] = 3607,
+	},
+	["Hive'Ashi Sandstalker"] = {
+		[1] = 3616,
+	},
+	["Ashmane Boar"] = {
+		[1] = 3306,
 	},
 	["Overmaster Pyron"] = {
 		[1] = 2667,
@@ -1204,8 +1213,8 @@ TheoryCraft_MitigationMobs = {
 	["Guzzling Patron"] = {
 		[1] = 1356,
 	},
-	["Scarshield Grunt"] = {
-		[1] = -1386,
+	["Ridge Huntress"] = {
+		[1] = 2483,
 	},
 	["Cursed Darkhound"] = {
 		[1] = 628,
@@ -1222,71 +1231,71 @@ TheoryCraft_MitigationMobs = {
 	["Thuzadin Acolyte"] = {
 		[1] = -2073,
 	},
-	["Hecklefang Snarler"] = {
-		[1] = 1385,
+	["Anvilrage Marshal"] = {
+		[1] = 2556,
 	},
 	["Zul'Lor"] = {
 		[1] = -84,
 	},
-	["Sul'lithuz Sandcrawler"] = {
-		[1] = 2911,
-	},
-	["Treasure Hunting Pirate"] = {
-		[1] = 2900,
-	},
-	["Skeletal Highborne"] = {
-		[1] = 3222,
-	},
-	["Scarab"] = {
-		[1] = 3025,
-	},
-	["Dustbelcher Brute"] = {
-		[1] = 2526,
-	},
-	["Oasis Snapjaw"] = {
-		[1] = 1009,
-	},
-	["Gurubashi Champion"] = {
-		[1] = 3842,
-	},
-	["Boulderfist Brute"] = {
-		[1] = 2416,
+	["Hecklefang Snarler"] = {
+		[1] = 1385,
 	},
 	["Reanimated Corpse"] = {
 		[1] = -550,
 	},
-	["Lord Alexei Barov"] = {
-		[1] = -16,
+	["Skeletal Highborne"] = {
+		[1] = 3222,
 	},
-	["Vilebranch Kidnapper"] = {
-		[1] = 2756,
+	["Crypt Crawler"] = {
+		[1] = 586,
+	},
+	["Sul'lithuz Sandcrawler"] = {
+		[1] = 2911,
+	},
+	["Scarlet Tracking Hound"] = {
+		[1] = 2626,
+	},
+	["Gurubashi Champion"] = {
+		[1] = 3842,
+	},
+	["Cloud Serpent"] = {
+		[1] = 1489,
 	},
 	["Witherbark Troll"] = {
 		[1] = 2164,
 	},
-	["Flame Imp"] = {
-		[1] = 3135,
-	},
-	["Risen Warrior"] = {
-		[1] = 86,
-	},
-	["Captain Kromcrush"] = {
-		[1] = 1278,
-	},
-	["Dreamscythe"] = {
-		[1] = 2275,
-	},
-	["Scarshield Sentry"] = {
-		[1] = -245,
+	["Oasis Snapjaw"] = {
+		[1] = 1009,
 	},
 	["Jed Runewatcher"] = {
 		[1] = -1464,
 	},
+	["Southsea Cannoneer"] = {
+		[1] = 1170,
+	},
+	["Flame Imp"] = {
+		[1] = 3135,
+	},
+	["Sandfury Executioner"] = {
+		[1] = 2496,
+	},
+	["Greater Duskbat"] = {
+		[1] = 458,
+	},
+	["Grand Inquisitor Isillien"] = {
+		[1] = 3512,
+	},
+	["Rotting Highborne"] = {
+		[1] = 3230,
+	},
+	["Jin'do the Hexxer"] = {
+		[1] = 5003,
+	},
 	["Muculent Ooze"] = {
 		[1] = 3160,
 	},
-	["Fireguard"] = {
-		[1] = 2386,
+	["Southsea Dock Worker"] = {
+		[1] = 2748,
 	},
 	["Dark Iron Lookout"] = {
 		[1] = 2995,
@@ -1294,8 +1303,8 @@ TheoryCraft_MitigationMobs = {
 	["Spitelash Warrior"] = {
 		[1] = 2830,
 	},
-	["Scarlet Tracking Hound"] = {
-		[1] = 2626,
+	["Shardtooth Mauler"] = {
+		[1] = 3617,
 	},
 	["Ravaged Cadaver"] = {
 		[1] = -2576,
@@ -1330,14 +1339,14 @@ TheoryCraft_MitigationMobs = {
 	["Black Guard Swordsmith"] = {
 		[1] = 27,
 	},
-	["Sulfuron Harbinger"] = {
-		[1] = -991,
+	["Scarab"] = {
+		[1] = 3025,
 	},
 	["Gravelsnout Kobold"] = {
 		[1] = 1717,
 	},
-	["Helboar"] = {
-		[1] = 3218,
+	["Dreamscythe"] = {
+		[1] = 2275,
 	},
 	["Stone Guardian"] = {
 		[1] = 3967,
@@ -1345,32 +1354,32 @@ TheoryCraft_MitigationMobs = {
 	["Bhag'thera"] = {
 		[1] = 2503,
 	},
-	["Galak Scout"] = {
-		[1] = 1730,
+	["Molten Giant"] = {
+		[1] = -465,
 	},
 	["Fleshflayer Ghoul"] = {
 		[1] = 756,
 	},
-	["Hive'Ashi Sandstalker"] = {
-		[1] = 3616,
+	["Chromatic Whelp"] = {
+		[1] = 2385,
 	},
-	["Jin'do the Hexxer"] = {
-		[1] = 5003,
+	["Stormpike Defender"] = {
+		[1] = 4117,
 	},
-	["Shardtooth Mauler"] = {
-		[1] = 3617,
+	["Wildspawn Shadowstalker"] = {
+		[1] = -2027,
 	},
-	["Lord Pythas"] = {
-		[1] = 1316,
+	["Fireguard"] = {
+		[1] = 2386,
 	},
-	["Wastewander Shadow Mage"] = {
-		[1] = 2444,
+	["Gorishi Tunneler"] = {
+		[1] = 3300,
 	},
 	["Spectral Citizen"] = {
 		[1] = -424,
 	},
-	["Stormpike Defender"] = {
-		[1] = 4117,
+	["Risen Warrior"] = {
+		[1] = 86,
 	},
 	["Gordunni Ogre"] = {
 		[1] = 2608,
@@ -1378,8 +1387,8 @@ TheoryCraft_MitigationMobs = {
 	["Galak Marauder"] = {
 		[1] = 1709,
 	},
-	["Tendris Warpwood"] = {
-		[1] = 3697,
+	["Spectral Teacher"] = {
+		[1] = -544,
 	},
 	["Ramstein the Gorger"] = {
 		[1] = 3875,
@@ -1387,8 +1396,8 @@ TheoryCraft_MitigationMobs = {
 	["Mana Burst"] = {
 		[1] = 3003,
 	},
-	["Ironbark Protector"] = {
-		[1] = 6509,
+	["Nightmare Whelp"] = {
+		[1] = -100,
 	},
 	["Plagued Rat"] = {
 		[1] = 3317,
@@ -1396,11 +1405,11 @@ TheoryCraft_MitigationMobs = {
 	["Dark Iron Taskmaster"] = {
 		[1] = 1583,
 	},
-	["Black Guard Sentry"] = {
-		[1] = 47,
+	["Bristleback Hunter"] = {
+		[1] = 1148,
 	},
-	["Greater Duskbat"] = {
-		[1] = 458,
+	["Weapon Technician"] = {
+		[1] = 76,
 	},
 	["Earthen Templar"] = {
 		[1] = 3563,
@@ -1408,32 +1417,32 @@ TheoryCraft_MitigationMobs = {
 	["Durotar Tiger"] = {
 		[1] = 554,
 	},
-	["Bloodaxe Warmonger"] = {
-		[1] = 357,
+	["Razzashi Skitterer"] = {
+		[1] = 3165,
 	},
-	["Ice Thistle Matriarch"] = {
-		[1] = 3754,
+	["Lathoric the Black"] = {
+		[1] = 3409,
 	},
 	["Scarlet Scout"] = {
 		[1] = 1902,
 	},
-	["Emperor Dagran Thaurissan"] = {
-		[1] = 3200,
-	},
-	["Enthralled Atal'ai"] = {
-		[1] = 2786,
-	},
-	["Magmadar"] = {
-		[1] = 3864,
+	["Gorishi Reaver"] = {
+		[1] = 2999,
 	},
 	["Thuzadin Shadowcaster"] = {
 		[1] = -1534,
 	},
+	["Dustbelcher Brute"] = {
+		[1] = 2526,
+	},
+	["Razormane Water Seeker"] = {
+		[1] = 612,
+	},
 	["Spirestone Ogre Magus"] = {
 		[1] = 231,
 	},
-	["Onyxian Whelp"] = {
-		[1] = 3117,
+	["Flamewaker Priest"] = {
+		[1] = -1092,
 	},
 	["The Unforgiven"] = {
 		[1] = 1417,
@@ -1444,41 +1453,41 @@ TheoryCraft_MitigationMobs = {
 	["Shadowsworn Thug"] = {
 		[1] = 3281,
 	},
-	["Zolo"] = {
-		[1] = -498,
-	},
-	["Quartermaster Zigris"] = {
-		[1] = 2938,
-	},
-	["Boulderfist Ogre"] = {
-		[1] = 2545,
-	},
-	["Lord Incendius"] = {
-		[1] = 2981,
-	},
-	["High Priestess Jeklik"] = {
-		[1] = 4076,
+	["Hive'Zara Stinger"] = {
+		[1] = 3798,
 	},
 	["Marduk Blackpool"] = {
 		[1] = 1522,
 	},
+	["Boulderfist Ogre"] = {
+		[1] = 2545,
+	},
+	["Blackhand Dragon Handler"] = {
+		[1] = 5298,
+	},
+	["High Priestess Jeklik"] = {
+		[1] = 4076,
+	},
+	["Treasure Hunting Pirate"] = {
+		[1] = 2900,
+	},
 	["Eldreth Spectre"] = {
 		[1] = 2428,
 	},
-	["Flamewaker Priest"] = {
-		[1] = -1092,
+	["Ogom the Wretched"] = {
+		[1] = -981,
 	},
-	["Imp Minion"] = {
-		[1] = 1555,
+	["Diseased Ghoul"] = {
+		[1] = -460,
 	},
-	["Burning Exile"] = {
-		[1] = 2695,
+	["Thaurissan Agent"] = {
+		[1] = 3509,
 	},
 	["Razormane Mystic"] = {
 		[1] = 641,
 	},
-	["Twilight Bodyguard"] = {
-		[1] = 2321,
+	["Gordunni Brute"] = {
+		[1] = 2697,
 	},
 	["Thaurissan Firewalker"] = {
 		[1] = 3462,
@@ -1486,11 +1495,11 @@ TheoryCraft_MitigationMobs = {
 	["Stromgarde Troll Hunter"] = {
 		[1] = 2888,
 	},
-	["Bristleback Hunter"] = {
-		[1] = 1148,
+	["Scarlet Soldier"] = {
+		[1] = 2041,
 	},
-	["Ogom the Wretched"] = {
-		[1] = -981,
+	["Lord Alexei Barov"] = {
+		[1] = -16,
 	},
 	["Southsea Freebooter"] = {
 		[1] = 2557,
@@ -1498,17 +1507,17 @@ TheoryCraft_MitigationMobs = {
 	["Devouring Ectoplasm"] = {
 		[1] = 1074,
 	},
-	["Razzashi Serpent"] = {
-		[1] = 3607,
+	["Wandering Eye of Kilrogg"] = {
+		[1] = 3605,
 	},
-	["Scarlet Soldier"] = {
-		[1] = 2041,
+	["Vile Priestess Hexx"] = {
+		[1] = 3076,
 	},
 	["Gordok Captain"] = {
 		[1] = 2863,
 	},
-	["Ashmane Boar"] = {
-		[1] = 3306,
+	["Emperor Dagran Thaurissan"] = {
+		[1] = 3200,
 	},
 	["Razormane Defender"] = {
 		[1] = 703,
@@ -1516,8 +1525,8 @@ TheoryCraft_MitigationMobs = {
 	["Theramore Marine"] = {
 		[1] = 1625,
 	},
-	["Halycon"] = {
-		[1] = -145,
+	["Spawn of Mar'li"] = {
+		[1] = 3602,
 	},
 	["Drywallow Vicejaw"] = {
 		[1] = 2351,
@@ -1528,11 +1537,11 @@ TheoryCraft_MitigationMobs = {
 	["Blazing Fireguard"] = {
 		[1] = 2351,
 	},
-	["Vile Priestess Hexx"] = {
-		[1] = 3076,
+	["Fireguard Destroyer"] = {
+		[1] = -12,
 	},
-	["Crypt Crawler"] = {
-		[1] = 586,
+	["Captain Kromcrush"] = {
+		[1] = 1278,
 	},
 	["Gehennas"] = {
 		[1] = -213,
@@ -1543,14 +1552,14 @@ TheoryCraft_MitigationMobs = {
 	["Unstable Corpse"] = {
 		[1] = -2032,
 	},
-	["Spawn of Mar'li"] = {
-		[1] = 3602,
+	["Plagued Insect"] = {
+		[1] = 3327,
 	},
-	["Vilebranch Soul Eater"] = {
-		[1] = 3037,
+	["Firebrand Invoker"] = {
+		[1] = -167,
 	},
-	["Sandfury Slave"] = {
-		[1] = 2707,
+	["Spirestone Mystic"] = {
+		[1] = -433,
 	},
 	["Nightmare Scalebane"] = {
 		[1] = 864,
@@ -1561,29 +1570,29 @@ TheoryCraft_MitigationMobs = {
 	["Dark Iron Steamsmith"] = {
 		[1] = 2959,
 	},
-	["Lady Illucia Barov"] = {
-		[1] = -188,
+	["Lava Spawn"] = {
+		[1] = 1194,
 	},
-	["Gorishi Reaver"] = {
-		[1] = 2999,
+	["Stormhide"] = {
+		[1] = 1515,
 	},
 	["Risen Aberration"] = {
 		[1] = -1400,
 	},
-	["Ferra"] = {
-		[1] = 3712,
+	["Doomguard Minion"] = {
+		[1] = 691,
 	},
 	["Bael'dun Rifleman"] = {
 		[1] = 1445,
 	},
-	["Weapon Technician"] = {
-		[1] = 76,
+	["High Priestess Mar'li"] = {
+		[1] = 4549,
 	},
 	["Hive'Zara Hornet"] = {
 		[1] = 3662,
 	},
-	["Tar Creeper"] = {
-		[1] = 3337,
+	["Kurinnaxx"] = {
+		[1] = 3874,
 	},
 	["Twilight Stonecaller"] = {
 		[1] = 3444,
@@ -1591,47 +1600,47 @@ TheoryCraft_MitigationMobs = {
 	["Rockwing Gargoyle"] = {
 		[1] = 1265,
 	},
-	["Plagued Insect"] = {
-		[1] = 3327,
+	["Tethis"] = {
+		[1] = 2575,
 	},
 	["Shadowforge Darkweaver"] = {
 		[1] = 2739,
 	},
-	["Big Will"] = {
-		[1] = 2247,
+	["Wildspawn Felsworn"] = {
+		[1] = -2399,
 	},
 	["Scarshield Worg"] = {
 		[1] = 836,
 	},
-	["Lava Spawn"] = {
-		[1] = 1194,
+	["Elder Mottled Boar"] = {
+		[1] = 535,
 	},
-	["Tethis"] = {
-		[1] = 2575,
+	["Gordok Ogre-Mage"] = {
+		[1] = 3414,
 	},
 	["Vilebranch Warrior"] = {
 		[1] = 2317,
 	},
-	["Wildspawn Felsworn"] = {
-		[1] = -2399,
+	["Atal'ai Deathwalker"] = {
+		[1] = 1422,
 	},
 	["Major Yeggeth"] = {
 		[1] = 3448,
 	},
-	["Atal'ai Corpse Eater"] = {
-		[1] = 1657,
+	["Shadowforge Flame Keeper"] = {
+		[1] = 3311,
 	},
-	["Elder Mottled Boar"] = {
-		[1] = 535,
+	["Magmadar"] = {
+		[1] = 3864,
 	},
-	["Flamewaker Healer"] = {
-		[1] = 3775,
+	["Burning Exile"] = {
+		[1] = 2695,
 	},
 	["Illyanna Ravenoak"] = {
 		[1] = -601,
 	},
-	["Gordok Ogre-Mage"] = {
-		[1] = 3414,
+	["Vile'rel"] = {
+		[1] = 2571,
 	},
 	["Prince Tortheldrin"] = {
 		[1] = -2079,
@@ -1639,32 +1648,32 @@ TheoryCraft_MitigationMobs = {
 	["Hive'Ashi Drone"] = {
 		[1] = 3826,
 	},
-	["Burrowing Thundersnout"] = {
-		[1] = 2628,
-	},
-	["Atal'ai Deathwalker"] = {
-		[1] = 1422,
-	},
-	["Colonel Zerran"] = {
-		[1] = -486,
-	},
-	["Gravelsnout Vermin"] = {
-		[1] = 1947,
-	},
-	["Lar'korwi Mate"] = {
-		[1] = 3334,
-	},
-	["Dustbelcher Mauler"] = {
-		[1] = 2838,
+	["Tendris Warpwood"] = {
+		[1] = 3697,
 	},
 	["Lava Surger"] = {
 		[1] = -25,
 	},
-	["Ridge Huntress"] = {
-		[1] = 2483,
+	["Zhevra Courser"] = {
+		[1] = 1234,
+	},
+	["Gravelsnout Vermin"] = {
+		[1] = 1947,
+	},
+	["Nightmare Wanderer"] = {
+		[1] = 2750,
+	},
+	["Dustbelcher Mauler"] = {
+		[1] = 2838,
 	},
 	["Doctor Theolen Krastinov"] = {
 		[1] = 961,
+	},
+	["Searing Lava Spider"] = {
+		[1] = 3022,
+	},
+	["Zulian Cub"] = {
+		[1] = -1193,
 	},
 	["Hukku"] = {
 		[1] = 441,
@@ -1678,41 +1687,41 @@ TheoryCraft_MitigationMobs = {
 	["Rookery Whelp"] = {
 		[1] = -142,
 	},
-	["Anvilrage Footman"] = {
-		[1] = 2881,
+	["Woodpaw Mongrel"] = {
+		[1] = 2416,
 	},
-	["Ghoul Ravener"] = {
-		[1] = 608,
-	},
-	["Corrupted Bloodtalon Scythemaw"] = {
-		[1] = 890,
-	},
-	["Searing Lava Spider"] = {
-		[1] = 3022,
-	},
-	["Shadowsworn Adept"] = {
-		[1] = 3823,
+	["Tar Creeper"] = {
+		[1] = 3337,
 	},
 	["Lava Elemental"] = {
 		[1] = 411,
 	},
-	["Hakkari Blood Priest"] = {
-		[1] = 2987,
+	["Southsea Pirate"] = {
+		[1] = 2838,
 	},
-	["Grimtotem Bandit"] = {
-		[1] = 1643,
+	["Wandering Forest Walker"] = {
+		[1] = 2627,
+	},
+	["Razormane Wolf"] = {
+		[1] = 773,
+	},
+	["Onyxia"] = {
+		[1] = -683,
+	},
+	["Bloodpetal Lasher"] = {
+		[1] = 3164,
 	},
 	["Ragefire Shaman"] = {
 		[1] = 799,
 	},
-	["Vile'rel"] = {
-		[1] = 2571,
+	["Muck Frenzy"] = {
+		[1] = 1083,
 	},
-	["Mijan"] = {
-		[1] = -676,
+	["Mad Servant"] = {
+		[1] = -130,
 	},
-	["Warpwood Stomper"] = {
-		[1] = -1653,
+	["Warpwood Tangler"] = {
+		[1] = -1915,
 	},
 	["Razorbeak Skylord"] = {
 		[1] = 2959,
@@ -1720,17 +1729,17 @@ TheoryCraft_MitigationMobs = {
 	["Blackhand Veteran"] = {
 		[1] = 3499,
 	},
-	["Zulian Cub"] = {
-		[1] = -1193,
+	["Jade Sludge"] = {
+		[1] = 2911,
 	},
 	["Shadowforge Senator"] = {
 		[1] = 2063,
 	},
-	["Prairie Wolf Alpha"] = {
-		[1] = 614,
+	["Splintered Skeleton"] = {
+		[1] = 553,
 	},
-	["Inferno Elemental"] = {
-		[1] = 3113,
+	["Eldreth Apparition"] = {
+		[1] = 2702,
 	},
 	["Wildspawn Betrayer"] = {
 		[1] = -1773,
@@ -1738,32 +1747,32 @@ TheoryCraft_MitigationMobs = {
 	["Scholomance Dark Summoner"] = {
 		[1] = 2791,
 	},
-	["Muck Frenzy"] = {
-		[1] = 1083,
-	},
-	["Hakkari Shadowcaster"] = {
-		[1] = 2813,
-	},
-	["Mosshoof Runner"] = {
-		[1] = 2752,
-	},
-	["Galak Messenger"] = {
-		[1] = 1765,
-	},
-	["Stonevault Rockchewer"] = {
-		[1] = -2671,
-	},
 	["Hive'Ashi Stinger"] = {
 		[1] = 3385,
 	},
 	["Bloodlord Mandokir"] = {
 		[1] = 4542,
 	},
-	["Scarshield Spellbinder"] = {
-		[1] = 2401,
+	["Shadowsworn Adept"] = {
+		[1] = 3823,
+	},
+	["Big Will"] = {
+		[1] = 2247,
+	},
+	["Stonevault Rockchewer"] = {
+		[1] = -2671,
+	},
+	["Scarlet Monk"] = {
+		[1] = 2253,
+	},
+	["Instructor Malicia"] = {
+		[1] = 2534,
 	},
 	["Atal'ai Warrior"] = {
 		[1] = 2911,
+	},
+	["Phase Lasher"] = {
+		[1] = -2318,
 	},
 	["Silithid Swarmer"] = {
 		[1] = 1649,
@@ -1771,32 +1780,32 @@ TheoryCraft_MitigationMobs = {
 	["Mindless Undead"] = {
 		[1] = 3823,
 	},
-	["Instructor Malicia"] = {
-		[1] = 2534,
+	["Doomforge Arcanasmith"] = {
+		[1] = 1890,
 	},
 	["Vampiric Duskbat"] = {
 		[1] = 570,
 	},
-	["Razzashi Venombrood"] = {
-		[1] = 3516,
+	["Lesser Rock Elemental"] = {
+		[1] = 2381,
 	},
-	["Steeljaw Snapper"] = {
-		[1] = 2778,
+	["Arcanist Doan"] = {
+		[1] = 2171,
 	},
-	["Bloodtalon Scythemaw"] = {
-		[1] = 572,
+	["Captain Qeez"] = {
+		[1] = 3819,
 	},
-	["Gurubashi Berserker"] = {
-		[1] = 3412,
+	["War Reaver"] = {
+		[1] = 3542,
 	},
-	["Sunscale Scytheclaw"] = {
-		[1] = 1219,
-	},
-	["Spirestone Butcher"] = {
-		[1] = 2791,
+	["Mijan"] = {
+		[1] = -676,
 	},
 	["Cursed Atal'ai"] = {
 		[1] = 2310,
+	},
+	["Hakkar"] = {
+		[1] = 4548,
 	},
 	["Magmus"] = {
 		[1] = 3261,
@@ -1810,11 +1819,11 @@ TheoryCraft_MitigationMobs = {
 	["Syndicate Mercenary"] = {
 		[1] = 2133,
 	},
-	["Thunderhead"] = {
-		[1] = 1358,
+	["Razzashi Venombrood"] = {
+		[1] = 3516,
 	},
-	["Starving Snickerfang"] = {
-		[1] = 2064,
+	["Greater Rock Elemental"] = {
+		[1] = 2669,
 	},
 	["Pyromancer Loregrain"] = {
 		[1] = -2420,
@@ -1822,8 +1831,8 @@ TheoryCraft_MitigationMobs = {
 	["Cho'Rush the Observer"] = {
 		[1] = 2914,
 	},
-	["Lesser Rock Elemental"] = {
-		[1] = 2381,
+	["Dope'rel"] = {
+		[1] = 1582,
 	},
 	["Rak'shiri"] = {
 		[1] = 3738,
@@ -1840,14 +1849,14 @@ TheoryCraft_MitigationMobs = {
 	["Cave Creeper"] = {
 		[1] = 3391,
 	},
-	["Eldreth Apparition"] = {
-		[1] = 2702,
+	["Shadowforge Citizen"] = {
+		[1] = 2326,
 	},
-	["Immol'thar"] = {
-		[1] = 3980,
+	["Prairie Wolf Alpha"] = {
+		[1] = 614,
 	},
-	["Dope'rel"] = {
-		[1] = 1582,
+	["Lorekeeper Polkelt"] = {
+		[1] = -564,
 	},
 	["Plagued Maggot"] = {
 		[1] = 3542,
@@ -1861,8 +1870,8 @@ TheoryCraft_MitigationMobs = {
 	["Savannah Huntress"] = {
 		[1] = 869,
 	},
-	["Splintered Skeleton"] = {
-		[1] = 553,
+	["Bloodpetal Thresher"] = {
+		[1] = 3339,
 	},
 	["Grand Crusader Dathrohan"] = {
 		[1] = 3179,
@@ -1876,53 +1885,53 @@ TheoryCraft_MitigationMobs = {
 	["Vilebranch Raiding Wolf"] = {
 		[1] = 3086,
 	},
-	["Diseased Wolf"] = {
-		[1] = 3149,
+	["Arcane Torrent"] = {
+		[1] = 3595,
 	},
-	["Gnarl Leafbrother"] = {
-		[1] = 2484,
+	["Warpwood Stomper"] = {
+		[1] = -1653,
 	},
 	["Warchief Rend Blackhand"] = {
 		[1] = 3317,
 	},
-	["Gordok Mage-Lord"] = {
-		[1] = 1609,
-	},
-	["Bloodpetal Thresher"] = {
-		[1] = 3339,
-	},
-	["Blighted Zombie"] = {
-		[1] = 2742,
-	},
-	["Molten War Golem"] = {
-		[1] = 3189,
-	},
-	["Shadowforge Flame Keeper"] = {
-		[1] = 3311,
-	},
-	["Qiraji Warrior"] = {
-		[1] = 3645,
+	["Skeletal Shocktrooper"] = {
+		[1] = 3512,
 	},
 	["Ribbly Screwspigot"] = {
 		[1] = -780,
 	},
-	["Surf Glider"] = {
-		[1] = 3140,
+	["Sandfury Soul Eater"] = {
+		[1] = 2882,
 	},
 	["Doom'rel"] = {
 		[1] = 3082,
 	},
-	["Lord Roccor"] = {
-		[1] = -566,
+	["Razormane Thornweaver"] = {
+		[1] = 652,
 	},
-	["Stormsnout"] = {
-		[1] = 1298,
+	["Qiraji Warrior"] = {
+		[1] = 3645,
 	},
-	["Anvilrage Overseer"] = {
-		[1] = 2262,
+	["Atal'ai Corpse Eater"] = {
+		[1] = 1657,
 	},
-	["Flamewaker"] = {
-		[1] = 4412,
+	["Surf Glider"] = {
+		[1] = 3140,
+	},
+	["Lethtendris"] = {
+		[1] = -1750,
+	},
+	["Gurubashi Blood Drinker"] = {
+		[1] = 3684,
+	},
+	["Core Rager"] = {
+		[1] = 4746,
+	},
+	["Gyth"] = {
+		[1] = 4123,
+	},
+	["Mosh'Ogg Witch Doctor"] = {
+		[1] = 2639,
 	},
 	["Mosh'Ogg Brute"] = {
 		[1] = 1961,
@@ -1930,20 +1939,20 @@ TheoryCraft_MitigationMobs = {
 	["Bristleback Geomancer"] = {
 		[1] = 1359,
 	},
-	["Gurubashi Blood Drinker"] = {
-		[1] = 3684,
+	["Longtooth Runner"] = {
+		[1] = 2420,
 	},
 	["Overseer Maltorius"] = {
 		[1] = 3238,
 	},
-	["Gyth"] = {
-		[1] = 4123,
+	["Diseased Wolf"] = {
+		[1] = 3149,
 	},
 	["Flesh Hunter"] = {
-		[1] = 4812,
+		[1] = 3230,
 	},
-	["Gordok Warlock"] = {
-		[1] = 2362,
+	["Hecklefang Hyena"] = {
+		[1] = 1007,
 	},
 	["Woodpaw Brute"] = {
 		[1] = 2556,
@@ -1954,23 +1963,23 @@ TheoryCraft_MitigationMobs = {
 	["Anvilrage Officer"] = {
 		[1] = 1235,
 	},
-	["Hakkari Witch Doctor"] = {
-		[1] = 2896,
+	["Anvilrage Guardsman"] = {
+		[1] = 3802,
 	},
 	["Mummified Atal'ai"] = {
 		[1] = -1817,
 	},
-	["Shen'dralar Ancient"] = {
-		[1] = -4,
+	["Lord Incendius"] = {
+		[1] = 2981,
 	},
-	["Smolderthorn Witch Doctor"] = {
-		[1] = 27,
+	["Swarmguard Needler"] = {
+		[1] = 2805,
 	},
 	["Ras Frostwhisper"] = {
 		[1] = -744,
 	},
-	["Swarmguard Needler"] = {
-		[1] = 4377,
+	["Shen'dralar Ancient"] = {
+		[1] = -4,
 	},
 	["Summoned Water Elemental"] = {
 		[1] = 38,
@@ -1978,8 +1987,8 @@ TheoryCraft_MitigationMobs = {
 	["Balnazzar"] = {
 		[1] = 807,
 	},
-	["Hecklefang Hyena"] = {
-		[1] = 1007,
+	["Thundering Exile"] = {
+		[1] = 2663,
 	},
 	["Bristleback Thornweaver"] = {
 		[1] = 1298,
@@ -1987,8 +1996,8 @@ TheoryCraft_MitigationMobs = {
 	["Ghostly Citizen"] = {
 		[1] = -43,
 	},
-	["Thundering Exile"] = {
-		[1] = 2663,
+	["Plains Creeper"] = {
+		[1] = 2264,
 	},
 	["Cadaverous Worm"] = {
 		[1] = 4131,
@@ -1996,8 +2005,8 @@ TheoryCraft_MitigationMobs = {
 	["War Master Voone"] = {
 		[1] = -202,
 	},
-	["Gizrul the Slavener"] = {
-		[1] = -315,
+	["Magister Kalendris"] = {
+		[1] = 2980,
 	},
 	["Skeletal Berserker"] = {
 		[1] = 2576,
@@ -2005,29 +2014,29 @@ TheoryCraft_MitigationMobs = {
 	["Vilebranch Blood Drinker"] = {
 		[1] = 2750,
 	},
-	["Plains Creeper"] = {
-		[1] = 2264,
-	},
-	["Atal'ai High Priest"] = {
-		[1] = 1455,
-	},
-	["Watchman Doomgrip"] = {
-		[1] = 3308,
-	},
 	["Tar Lord"] = {
 		[1] = 4170,
 	},
 	["Elder Crag Coyote"] = {
 		[1] = 2570,
 	},
-	["Gloom'rel"] = {
-		[1] = 3120,
+	["Elder Cloud Serpent"] = {
+		[1] = 1676,
+	},
+	["Scholomance Adept"] = {
+		[1] = -570,
 	},
 	["Crypt Beast"] = {
 		[1] = 815,
 	},
-	["Scarlet Beastmaster"] = {
-		[1] = 2204,
+	["Gizrul the Slavener"] = {
+		[1] = -315,
+	},
+	["The Beast"] = {
+		[1] = -295,
+	},
+	["Vilebranch Shadowcaster"] = {
+		[1] = 2911,
 	},
 	["Hakkari Priest"] = {
 		[1] = 2907,
@@ -2035,17 +2044,17 @@ TheoryCraft_MitigationMobs = {
 	["Verek"] = {
 		[1] = 2997,
 	},
-	["Tortured Druid"] = {
-		[1] = 4138,
+	["Atal'ai High Priest"] = {
+		[1] = 1455,
 	},
-	["Ambassador Flamelash"] = {
-		[1] = 2482,
+	["Dark Screecher"] = {
+		[1] = 2885,
 	},
 	["Bloodaxe Evoker"] = {
 		[1] = -659,
 	},
-	["Burning Imp"] = {
-		[1] = 2667,
+	["Watchman Doomgrip"] = {
+		[1] = 3308,
 	},
 	["Gorosh the Dervish"] = {
 		[1] = -1801,
@@ -2056,8 +2065,8 @@ TheoryCraft_MitigationMobs = {
 	["Eldreth Spirit"] = {
 		[1] = 3245,
 	},
-	["Fire Elemental"] = {
-		[1] = 81,
+	["Gloom'rel"] = {
+		[1] = 3120,
 	},
 	["Thunder Lizard"] = {
 		[1] = 653,
@@ -2065,11 +2074,11 @@ TheoryCraft_MitigationMobs = {
 	["Deviate Stinglash"] = {
 		[1] = 1269,
 	},
-	["Magister Kalendris"] = {
-		[1] = 2980,
+	["Firesworn"] = {
+		[1] = -262,
 	},
-	["Dark Screecher"] = {
-		[1] = 2885,
+	["Scarlet Beastmaster"] = {
+		[1] = 2204,
 	},
 	["Glassweb Spider"] = {
 		[1] = 2345,
@@ -2077,11 +2086,11 @@ TheoryCraft_MitigationMobs = {
 	["Greater Obsidian Elemental"] = {
 		[1] = 3660,
 	},
-	["Scarshield Warlock"] = {
-		[1] = -205,
+	["Ambassador Flamelash"] = {
+		[1] = 2482,
 	},
-	["Vilebranch Shadowcaster"] = {
-		[1] = 2911,
+	["Murkgill Warrior"] = {
+		[1] = 2275,
 	},
 	["Spitelash Screamer"] = {
 		[1] = 2812,
@@ -2095,17 +2104,17 @@ TheoryCraft_MitigationMobs = {
 	["Syndicate Pathstalker"] = {
 		[1] = 2172,
 	},
-	["Murkgill Warrior"] = {
-		[1] = 2275,
+	["Burning Imp"] = {
+		[1] = 2667,
 	},
-	["Hakkari Shadow Hunter"] = {
-		[1] = 3095,
+	["Grimtotem Stomper"] = {
+		[1] = 1779,
 	},
-	["Overlord Wyrmthalak"] = {
-		[1] = -1077,
+	["Deviate Venomwing"] = {
+		[1] = 1339,
 	},
-	["General Angerforge"] = {
-		[1] = 3205,
+	["Razzashi Adder"] = {
+		[1] = 3549,
 	},
 	["Dabyrie Laborer"] = {
 		[1] = 2102,
@@ -2113,20 +2122,20 @@ TheoryCraft_MitigationMobs = {
 	["Dustbelcher Wyrmhunter"] = {
 		[1] = 2326,
 	},
+	["Vilebranch Shadow Hunter"] = {
+		[1] = 3037,
+	},
 	["Crimson Gallant"] = {
 		[1] = 218,
 	},
-	["Deviate Venomwing"] = {
-		[1] = 1339,
-	},
-	["Bristleback Water Seeker"] = {
-		[1] = 1099,
+	["Risen Bonewarder"] = {
+		[1] = 2027,
 	},
 	["Anvilrage Warden"] = {
 		[1] = 2020,
 	},
-	["Vilebranch Shadow Hunter"] = {
-		[1] = 3037,
+	["Overlord Wyrmthalak"] = {
+		[1] = -1077,
 	},
 	["Treasure Hunting Swashbuckler"] = {
 		[1] = 2867,
@@ -2134,8 +2143,8 @@ TheoryCraft_MitigationMobs = {
 	["Vilebranch Hideskinner"] = {
 		[1] = 2955,
 	},
-	["Smolderthorn Headhunter"] = {
-		[1] = -878,
+	["Bristleback Water Seeker"] = {
+		[1] = 1099,
 	},
 	["Silithid Creeper"] = {
 		[1] = 1214,
@@ -2155,8 +2164,8 @@ TheoryCraft_MitigationMobs = {
 	["Un'Goro Stomper"] = {
 		[1] = 3338,
 	},
-	["Risen Bonewarder"] = {
-		[1] = 2027,
+	["Smolderthorn Headhunter"] = {
+		[1] = -878,
 	},
 	["Stonelash Scorpid"] = {
 		[1] = 3241,
@@ -2170,8 +2179,8 @@ TheoryCraft_MitigationMobs = {
 	["Black Broodling"] = {
 		[1] = 3318,
 	},
-	["Blackhand Thug"] = {
-		[1] = 2108,
+	["Zhevra Runner"] = {
+		[1] = 845,
 	},
 	["Scarshield Raider"] = {
 		[1] = 643,
@@ -2194,11 +2203,11 @@ TheoryCraft_MitigationMobs = {
 	["Wastewander Scofflaw"] = {
 		[1] = 2874,
 	},
-	["Crimson Priest"] = {
-		[1] = -517,
+	["Mesa Buzzard"] = {
+		[1] = 2157,
 	},
-	["Mana Fiend"] = {
-		[1] = 532,
+	["Atal'ai Slave"] = {
+		[1] = 2882,
 	},
 	["Fineous Darkvire"] = {
 		[1] = 3504,
@@ -2218,26 +2227,26 @@ TheoryCraft_MitigationMobs = {
 	["Anub'shiah"] = {
 		[1] = 3518,
 	},
-	["Zhevra Runner"] = {
-		[1] = 845,
+	["Blackhand Thug"] = {
+		[1] = 2108,
 	},
-	["Mesa Buzzard"] = {
-		[1] = 2157,
-	},
-	["Atal'ai Slave"] = {
-		[1] = 2882,
-	},
-	["Gordok Mastiff"] = {
-		[1] = 3266,
-	},
-	["Blackhand Summoner"] = {
-		[1] = 1957,
+	["Devilsaur"] = {
+		[1] = 4972,
 	},
 	["Achellios the Banished"] = {
 		[1] = 2127,
 	},
-	["Crimson Conjuror"] = {
-		[1] = -553,
+	["Bloodpetal Trapper"] = {
+		[1] = 3901,
+	},
+	["Blackhand Summoner"] = {
+		[1] = 1957,
+	},
+	["Mana Fiend"] = {
+		[1] = 532,
+	},
+	["Spirestone Reaver"] = {
+		[1] = 486,
 	},
 	["Wildspawn Satyr"] = {
 		[1] = 3632,
@@ -2245,11 +2254,11 @@ TheoryCraft_MitigationMobs = {
 	["Digger Flameforge"] = {
 		[1] = 1586,
 	},
-	["Pyroguard Emberseer"] = {
-		[1] = 2291,
+	["Hecklefang Stalker"] = {
+		[1] = 1296,
 	},
-	["Petrified Guardian"] = {
-		[1] = 4842,
+	["Crimson Conjuror"] = {
+		[1] = -553,
 	},
 	["Twilight Avenger"] = {
 		[1] = 3468,
@@ -2257,17 +2266,17 @@ TheoryCraft_MitigationMobs = {
 	["Loro"] = {
 		[1] = -63,
 	},
-	["Spirestone Reaver"] = {
-		[1] = 486,
+	["Petrified Guardian"] = {
+		[1] = 4842,
 	},
-	["Hecklefang Stalker"] = {
-		[1] = 1296,
+	["Boulderfist Enforcer"] = {
+		[1] = 2204,
 	},
-	["Dustbelcher Shaman"] = {
-		[1] = 2703,
+	["Bael'dun Soldier"] = {
+		[1] = 1848,
 	},
-	["Jungle Toad"] = {
-		[1] = -2217,
+	["Bloodaxe Summoner"] = {
+		[1] = 2285,
 	},
 	["Crimson Initiate"] = {
 		[1] = 1559,
@@ -2275,8 +2284,8 @@ TheoryCraft_MitigationMobs = {
 	["Silithid Harvester"] = {
 		[1] = 1700,
 	},
-	["Sand Skitterer"] = {
-		[1] = 3292,
+	["Spirestone Enforcer"] = {
+		[1] = 538,
 	},
 	["Clattering Scorpid"] = {
 		[1] = 453,
@@ -2284,8 +2293,8 @@ TheoryCraft_MitigationMobs = {
 	["Stonelash Pincer"] = {
 		[1] = 3361,
 	},
-	["Bael'dun Soldier"] = {
-		[1] = 1848,
+	["Dustbelcher Shaman"] = {
+		[1] = 2703,
 	},
 	["Stonelash Flayer"] = {
 		[1] = 3166,
@@ -2296,11 +2305,11 @@ TheoryCraft_MitigationMobs = {
 	["High Priest Venoxis"] = {
 		[1] = 3466,
 	},
-	["Deviate Crocolisk"] = {
-		[1] = 1213,
+	["Vilebranch Berserker"] = {
+		[1] = 2837,
 	},
-	["Bloodaxe Summoner"] = {
-		[1] = 2285,
+	["Jungle Toad"] = {
+		[1] = -2217,
 	},
 	["Scarlet Adept"] = {
 		[1] = 2025,
@@ -2320,8 +2329,8 @@ TheoryCraft_MitigationMobs = {
 	["Smolderthorn Shadow Priest"] = {
 		[1] = 289,
 	},
-	["Spirestone Enforcer"] = {
-		[1] = 538,
+	["High Interrogator Gerstahn"] = {
+		[1] = 2547,
 	},
 	["Gordok Brute"] = {
 		[1] = 2341,
@@ -2341,32 +2350,32 @@ TheoryCraft_MitigationMobs = {
 	["Skeletal Terror"] = {
 		[1] = 3127,
 	},
-	["High Interrogator Gerstahn"] = {
-		[1] = 2547,
-	},
 	["Bloodaxe Veteran"] = {
 		[1] = 2241,
+	},
+	["Sand Skitterer"] = {
+		[1] = 3292,
 	},
 	["Witherbark Shadowcaster"] = {
 		[1] = 2186,
 	},
-	["Zulian Crocolisk"] = {
-		[1] = 181,
+	["Scarlet Preserver"] = {
+		[1] = 1879,
 	},
 	["Deviate Ravager"] = {
 		[1] = 1089,
 	},
-	["Theka the Martyr"] = {
-		[1] = 2924,
+	["Zulian Guardian"] = {
+		[1] = 4637,
 	},
-	["Scarlet Preserver"] = {
-		[1] = 1879,
+	["Zulian Crocolisk"] = {
+		[1] = 181,
 	},
 	["Sprite Darter"] = {
 		[1] = -866,
 	},
-	["Zulian Guardian"] = {
-		[1] = 4637,
+	["Theka the Martyr"] = {
+		[1] = 2924,
 	},
 	["Ragefire Trogg"] = {
 		[1] = 799,
@@ -2383,23 +2392,20 @@ TheoryCraft_MitigationMobs = {
 	["Venomlash Scorpid"] = {
 		[1] = 1581,
 	},
-	["Baron Rivendare"] = {
-		[1] = 2444,
+	["Greater Lava Spider"] = {
+		[1] = 3019,
 	},
 	["Dire Maul Crystal Totem"] = {
 		[1] = 2089,
 	},
-	["Greater Lava Spider"] = {
-		[1] = 3019,
-	},
 	["Swiftmane"] = {
 		[1] = 1525,
 	},
+	["Scarlet Spellbinder"] = {
+		[1] = 3754,
+	},
 	["Cloned Ooze"] = {
 		[1] = 3148,
-	},
-	["Deviate Lasher"] = {
-		[1] = 1559,
 	},
 	["Elder Diemetradon"] = {
 		[1] = 2914,
@@ -2407,14 +2413,17 @@ TheoryCraft_MitigationMobs = {
 	["Jabbering Ghoul"] = {
 		[1] = 3183,
 	},
-	["Captain Fairmount"] = {
-		[1] = 1387,
+	["Soulflayer"] = {
+		[1] = 3891,
 	},
-	["Makasgar"] = {
-		[1] = 1124,
+	["Savannah Matriarch"] = {
+		[1] = 1146,
 	},
 	["Pusillin"] = {
 		[1] = -2920,
+	},
+	["Andre Firebeard"] = {
+		[1] = 2745,
 	},
 	["Scarlet Avenger"] = {
 		[1] = 3656,
@@ -2422,8 +2431,8 @@ TheoryCraft_MitigationMobs = {
 	["Gluggle"] = {
 		[1] = 2255,
 	},
-	["Savannah Matriarch"] = {
-		[1] = 1146,
+	["Thaurissan Spy"] = {
+		[1] = 3818,
 	},
 	["Skeletal Sorcerer"] = {
 		[1] = 3050,
@@ -2434,8 +2443,8 @@ TheoryCraft_MitigationMobs = {
 	["Savannah Prowler"] = {
 		[1] = 956,
 	},
-	["Searing Blade Warlock"] = {
-		[1] = 575,
+	["Makasgar"] = {
+		[1] = 1124,
 	},
 	["Crimson Templar"] = {
 		[1] = 3581,
@@ -2452,32 +2461,32 @@ TheoryCraft_MitigationMobs = {
 	["Deviate Stalker"] = {
 		[1] = 1203,
 	},
+	["Searing Blade Warlock"] = {
+		[1] = 575,
+	},
 	["Decrepit Darkhound"] = {
 		[1] = 288,
-	},
-	["Princess Moira Bronzebeard"] = {
-		[1] = 2716,
 	},
 	["Dark Iron Sentry"] = {
 		[1] = 3054,
 	},
-	["Thaurissan Spy"] = {
-		[1] = 3818,
+	["Princess Moira Bronzebeard"] = {
+		[1] = 2716,
 	},
-	["Andre Firebeard"] = {
-		[1] = 2745,
+	["Captain Fairmount"] = {
+		[1] = 1387,
 	},
 	["Hurley Blackbreath"] = {
 		[1] = 2913,
 	},
-	["Soulflayer"] = {
-		[1] = 3891,
+	["Deviate Lasher"] = {
+		[1] = 1559,
 	},
 	["Eldreth Darter"] = {
 		[1] = 170,
 	},
-	["Scarlet Spellbinder"] = {
-		[1] = 3754,
+	["Baron Rivendare"] = {
+		[1] = 2444,
 	},
 	["Venomous Cloud Serpent"] = {
 		[1] = 1853,
@@ -2518,14 +2527,14 @@ TheoryCraft_MitigationMobs = {
 	["Wrath Phantom"] = {
 		[1] = 2042,
 	},
-	["Vilebranch Berserker"] = {
-		[1] = 2837,
+	["Deviate Crocolisk"] = {
+		[1] = 1213,
 	},
 	["Highlord Omokk"] = {
 		[1] = 651,
 	},
-	["Devilsaur"] = {
-		[1] = 4972,
+	["Pyroguard Emberseer"] = {
+		[1] = 2291,
 	},
 	["The Duke of Fathoms"] = {
 		[1] = 3699,
@@ -2533,14 +2542,14 @@ TheoryCraft_MitigationMobs = {
 	["Crimson Battle Mage"] = {
 		[1] = 971,
 	},
-	["Boulderfist Enforcer"] = {
-		[1] = 2204,
+	["Gordok Mastiff"] = {
+		[1] = 3266,
 	},
 	["Burning Blade Thug"] = {
 		[1] = 848,
 	},
-	["Bloodpetal Trapper"] = {
-		[1] = 3901,
+	["Crimson Priest"] = {
+		[1] = -517,
 	},
 	["Roc"] = {
 		[1] = 2722,
@@ -2551,11 +2560,11 @@ TheoryCraft_MitigationMobs = {
 	["Bael'dun Foreman"] = {
 		[1] = 1412,
 	},
-	["Sandfury Witch Doctor"] = {
-		[1] = 2882,
-	},
 	["Stranglethorn Tigress"] = {
 		[1] = 2174,
+	},
+	["Sandfury Witch Doctor"] = {
+		[1] = 2882,
 	},
 	["Rock Stalker"] = {
 		[1] = 3165,
@@ -2569,8 +2578,8 @@ TheoryCraft_MitigationMobs = {
 	["Kul Tiras Sailor"] = {
 		[1] = 424,
 	},
-	["Grimtotem Stomper"] = {
-		[1] = 1779,
+	["General Angerforge"] = {
+		[1] = 3205,
 	},
 	["Maleki the Pallid"] = {
 		[1] = -825,
@@ -2584,11 +2593,11 @@ TheoryCraft_MitigationMobs = {
 	["Arnak Grimtotem"] = {
 		[1] = 1626,
 	},
+	["Hakkari Shadow Hunter"] = {
+		[1] = 3095,
+	},
 	["Bloodseeker Bat"] = {
 		[1] = 3557,
-	},
-	["Razzashi Adder"] = {
-		[1] = 3549,
 	},
 	["Thauris Balgarr"] = {
 		[1] = 3747,
@@ -2596,20 +2605,20 @@ TheoryCraft_MitigationMobs = {
 	["Burning Spirit"] = {
 		[1] = 1850,
 	},
-	["Primal Ooze"] = {
-		[1] = 2770,
+	["Scarshield Warlock"] = {
+		[1] = -205,
 	},
-	["Scholomance Adept"] = {
-		[1] = -570,
+	["Fire Elemental"] = {
+		[1] = 81,
 	},
 	["Warbringer Construct"] = {
 		[1] = -2,
 	},
-	["Golem Lord Argelmach"] = {
-		[1] = 2107,
+	["Tortured Druid"] = {
+		[1] = 4138,
 	},
-	["Firesworn"] = {
-		[1] = -262,
+	["Primal Ooze"] = {
+		[1] = 2770,
 	},
 	["Wastewander Bandit"] = {
 		[1] = 2719,
@@ -2626,8 +2635,8 @@ TheoryCraft_MitigationMobs = {
 	["Makrura Clacker"] = {
 		[1] = 738,
 	},
-	["The Beast"] = {
-		[1] = -295,
+	["Golem Lord Argelmach"] = {
+		[1] = 2107,
 	},
 	["Burning Felguard"] = {
 		[1] = 2750,
@@ -2635,8 +2644,8 @@ TheoryCraft_MitigationMobs = {
 	["Scholomance Occultist"] = {
 		[1] = -468,
 	},
-	["Blackhand Dragon Handler"] = {
-		[1] = 5298,
+	["Spectral Soldier"] = {
+		[1] = 85,
 	},
 	["Dustbelcher Ogre"] = {
 		[1] = 2639,
@@ -2644,38 +2653,38 @@ TheoryCraft_MitigationMobs = {
 	["Scalding Broodling"] = {
 		[1] = 3501,
 	},
-	["Vilebranch Ambusher"] = {
-		[1] = 2980,
+	["Smolderthorn Witch Doctor"] = {
+		[1] = 27,
 	},
 	["Bile Spewer"] = {
 		[1] = 2623,
 	},
-	["Mosh'Ogg Witch Doctor"] = {
-		[1] = 2639,
+	["Shrike Bat"] = {
+		[1] = 1627,
 	},
 	["Smolderthorn Axe Thrower"] = {
 		[1] = -20,
 	},
-	["Longtooth Runner"] = {
-		[1] = 2420,
+	["Gordok Warlock"] = {
+		[1] = 2362,
 	},
 	["Eldreth Phantasm"] = {
 		[1] = 3300,
 	},
-	["Core Rager"] = {
-		[1] = 4746,
+	["Hakkari Witch Doctor"] = {
+		[1] = 2896,
 	},
-	["Lethtendris"] = {
-		[1] = -1750,
+	["Flamewaker"] = {
+		[1] = 4412,
 	},
 	["Dredge Striker"] = {
 		[1] = 3292,
 	},
-	["Warpwood Guardian"] = {
-		[1] = -1635,
+	["Scarlet Chaplain"] = {
+		[1] = 3173,
 	},
-	["Anvilrage Guardsman"] = {
-		[1] = 3802,
+	["Twilight Bodyguard"] = {
+		[1] = 2321,
 	},
 	["Fleeting Plainstrider"] = {
 		[1] = 813,
@@ -2689,11 +2698,11 @@ TheoryCraft_MitigationMobs = {
 	["Hammered Patron"] = {
 		[1] = -22,
 	},
-	["Lorekeeper Polkelt"] = {
-		[1] = -564,
+	["Gordok Mage-Lord"] = {
+		[1] = 1609,
 	},
-	["Warpwood Tangler"] = {
-		[1] = -1915,
+	["Molten War Golem"] = {
+		[1] = 3189,
 	},
 	["Zhevra Charger"] = {
 		[1] = 1307,
@@ -2701,8 +2710,8 @@ TheoryCraft_MitigationMobs = {
 	["Borer Beetle"] = {
 		[1] = -2310,
 	},
-	["Ironfur Bear"] = {
-		[1] = 2481,
+	["Theramore Preserver"] = {
+		[1] = 1219,
 	},
 	["Crimson Defender"] = {
 		[1] = 1081,
@@ -2710,26 +2719,26 @@ TheoryCraft_MitigationMobs = {
 	["Shade of Eranikus"] = {
 		[1] = 2654,
 	},
-	["Guard Slip'kik"] = {
-		[1] = -1292,
+	["Anger'rel"] = {
+		[1] = 3172,
 	},
-	["Greater Rock Elemental"] = {
-		[1] = 2669,
+	["Immol'thar"] = {
+		[1] = 3980,
 	},
-	["Raging Owlbeast"] = {
-		[1] = 3549,
+	["Spirestone Butcher"] = {
+		[1] = 2791,
 	},
-	["Arcanist Doan"] = {
-		[1] = 2171,
+	["Core Hound"] = {
+		[1] = 3165,
 	},
-	["Anubisath Guardian"] = {
-		[1] = 3832,
+	["Spirestone Battle Mage"] = {
+		[1] = 2529,
 	},
-	["Elder Cloud Serpent"] = {
-		[1] = 1676,
+	["Blighted Zombie"] = {
+		[1] = 2742,
 	},
-	["Sandfury Soul Eater"] = {
-		[1] = 2882,
+	["Warpwood Guardian"] = {
+		[1] = -1635,
 	},
 	["Kolkar Pack Runner"] = {
 		[1] = 1007,
@@ -2737,11 +2746,11 @@ TheoryCraft_MitigationMobs = {
 	["Twilight Flamereaver"] = {
 		[1] = 3725,
 	},
-	["Galak Assassin"] = {
-		[1] = 1914,
+	["Firelord"] = {
+		[1] = 1681,
 	},
-	["Caliph Scorpidsting"] = {
-		[1] = 2320,
+	["Scarshield Spellbinder"] = {
+		[1] = 2401,
 	},
 	["Rage Talon Dragonspawn"] = {
 		[1] = 3272,
@@ -2749,59 +2758,59 @@ TheoryCraft_MitigationMobs = {
 	["Twilight Dark Shaman"] = {
 		[1] = 2766,
 	},
-	["Mad Servant"] = {
-		[1] = -130,
-	},
-	["Zhevra Courser"] = {
-		[1] = 1234,
-	},
-	["Rotting Cadaver"] = {
-		[1] = 3152,
-	},
-	["Scarlet Diviner"] = {
-		[1] = 2227,
-	},
-	["Firemane Scalebane"] = {
-		[1] = 2412,
-	},
-	["Razormane Wolf"] = {
-		[1] = 773,
-	},
-	["Eldreth Sorcerer"] = {
-		[1] = 1499,
-	},
-	["Wandering Forest Walker"] = {
-		[1] = 2627,
-	},
-	["Twilight Emissary"] = {
-		[1] = 1919,
-	},
-	["Woodpaw Mongrel"] = {
-		[1] = 2416,
-	},
-	["Qiraji Gladiator"] = {
-		[1] = 3778,
+	["Mosshoof Runner"] = {
+		[1] = 2752,
 	},
 	["Ok'thor the Breaker"] = {
 		[1] = 2585,
 	},
+	["Corrupted Bloodtalon Scythemaw"] = {
+		[1] = 890,
+	},
+	["Sunscale Scytheclaw"] = {
+		[1] = 1219,
+	},
+	["Firemane Scalebane"] = {
+		[1] = 2412,
+	},
+	["General Rajaxx"] = {
+		[1] = 3897,
+	},
+	["Eldreth Sorcerer"] = {
+		[1] = 1499,
+	},
+	["Hakkari Blood Priest"] = {
+		[1] = 2987,
+	},
+	["Twilight Emissary"] = {
+		[1] = 1919,
+	},
+	["Galak Messenger"] = {
+		[1] = 1765,
+	},
+	["Qiraji Gladiator"] = {
+		[1] = 3230,
+	},
+	["Anvilrage Footman"] = {
+		[1] = 2881,
+	},
 	["Dreadmaw Crocolisk"] = {
 		[1] = 478,
 	},
-	["Jade Sludge"] = {
-		[1] = 2911,
+	["Scarlet Diviner"] = {
+		[1] = 2227,
 	},
-	["Nightmare Wanderer"] = {
-		[1] = 2750,
+	["Rotting Cadaver"] = {
+		[1] = 3152,
 	},
 	["Twilight's Hammer Torturer"] = {
 		[1] = 2644,
 	},
-	["General Rajaxx"] = {
-		[1] = 3440,
+	["Ghoul Berserker"] = {
+		[1] = 3512,
 	},
-	["Plague Ghoul"] = {
-		[1] = 325,
+	["Diseased Black Bear"] = {
+		[1] = 3051,
 	},
 	["Blackhand Iron Guard"] = {
 		[1] = 8260,
@@ -2812,8 +2821,8 @@ TheoryCraft_MitigationMobs = {
 	["Mercutio Filthgorger"] = {
 		[1] = 3471,
 	},
-	["Giant Plains Creeper"] = {
-		[1] = 2374,
+	["Colonel Zerran"] = {
+		[1] = -486,
 	},
 	["Harb Foulmountain"] = {
 		[1] = 1847,
@@ -2821,26 +2830,26 @@ TheoryCraft_MitigationMobs = {
 	["Shadowpriest Sezz'ziz"] = {
 		[1] = 2962,
 	},
-	["Rage Talon Captain"] = {
-		[1] = 4534,
+	["Ghoul Ravener"] = {
+		[1] = 608,
 	},
 	["Voodoo Slave"] = {
 		[1] = -340,
 	},
-	["Crimson Inquisitor"] = {
-		[1] = 462,
+	["Ice Thistle Matriarch"] = {
+		[1] = 3754,
 	},
-	["Firebrand Invoker"] = {
-		[1] = -167,
+	["Giant Buzzard"] = {
+		[1] = 2742,
 	},
 	["Twilight Overlord"] = {
 		[1] = 3548,
 	},
-	["Onyxian Warder"] = {
-		[1] = 3310,
+	["Wastewander Rogue"] = {
+		[1] = 2824,
 	},
-	["Southsea Cannoneer"] = {
-		[1] = 1170,
+	["Sandfury Slave"] = {
+		[1] = 2707,
 	},
 	["Dire Mottled Boar"] = {
 		[1] = 573,
@@ -2851,17 +2860,17 @@ TheoryCraft_MitigationMobs = {
 	["Guard Mol'dar"] = {
 		[1] = 3357,
 	},
-	["Spectral Teacher"] = {
-		[1] = -544,
+	["Burrowing Thundersnout"] = {
+		[1] = 2628,
 	},
-	["Ridge Stalker Patriarch"] = {
-		[1] = 3029,
+	["Scarshield Grunt"] = {
+		[1] = -1386,
 	},
 	["Dredge Crusher"] = {
 		[1] = 3406,
 	},
-	["Nightmare Whelp"] = {
-		[1] = -100,
+	["Flamewaker Healer"] = {
+		[1] = 3775,
 	},
 	["Scarlet Sentry"] = {
 		[1] = 1960,
@@ -2875,41 +2884,41 @@ TheoryCraft_MitigationMobs = {
 	["Rockwing Screecher"] = {
 		[1] = 638,
 	},
-	["Blazing Elemental"] = {
-		[1] = 3233,
+	["Warpwood Treant"] = {
+		[1] = -1484,
 	},
-	["Thaurissan Agent"] = {
-		[1] = 3509,
+	["Sulfuron Harbinger"] = {
+		[1] = -991,
 	},
-	["Giant Buzzard"] = {
-		[1] = 2742,
+	["Ferra"] = {
+		[1] = 3712,
 	},
-	["Doomguard Minion"] = {
-		[1] = 691,
+	["Onyxian Whelp"] = {
+		[1] = 3117,
 	},
-	["Lathoric the Black"] = {
-		[1] = 3409,
+	["Plague Ghoul"] = {
+		[1] = 325,
 	},
-	["Stormhide"] = {
-		[1] = 1515,
+	["Vilebranch Soul Eater"] = {
+		[1] = 3037,
 	},
 	["Galak Windchaser"] = {
 		[1] = 1601,
 	},
-	["Anvilrage Marshal"] = {
-		[1] = 2556,
+	["Venomhide Ravasaur"] = {
+		[1] = 3312,
 	},
-	["Razzashi Skitterer"] = {
-		[1] = 3165,
+	["Magma Elemental"] = {
+		[1] = 2955,
 	},
-	["Tazan"] = {
-		[1] = 810,
+	["Black Guard Sentry"] = {
+		[1] = 47,
 	},
 	["Bloodaxe Worg"] = {
 		[1] = -471,
 	},
-	["Wildspawn Shadowstalker"] = {
-		[1] = -2027,
+	["Zolo"] = {
+		[1] = -498,
 	},
 	["Bael'dun Excavator"] = {
 		[1] = 1981,
@@ -2926,8 +2935,8 @@ TheoryCraft_MitigationMobs = {
 	["Twilight's Hammer Ambassador"] = {
 		[1] = 3682,
 	},
-	["Rotting Highborne"] = {
-		[1] = 3230,
+	["Sunscale Screecher"] = {
+		[1] = 965,
 	},
 	["Gargantuan Ooze"] = {
 		[1] = 3339,
@@ -2935,20 +2944,20 @@ TheoryCraft_MitigationMobs = {
 	["Ohgan"] = {
 		[1] = 2473,
 	},
+	["Windfury Sorceress"] = {
+		[1] = 727,
+	},
+	["Affray Challenger"] = {
+		[1] = 1810,
+	},
 	["Firegut Ogre Mage"] = {
 		[1] = 3258,
 	},
-	["Gordunni Brute"] = {
-		[1] = 2697,
-	},
-	["Southsea Dock Worker"] = {
-		[1] = 2748,
-	},
 	["Hive'Zara Wasp"] = {
-		[1] = 3717,
+		[1] = 3673,
 	},
-	["Diseased Ghoul"] = {
-		[1] = -460,
+	["Imp Minion"] = {
+		[1] = 1555,
 	},
 	["Darkmaster Gandling"] = {
 		[1] = -155,
@@ -2956,8 +2965,8 @@ TheoryCraft_MitigationMobs = {
 	["Zulian Prowler"] = {
 		[1] = 3585,
 	},
-	["Cloud Serpent"] = {
-		[1] = 1489,
+	["Halycon"] = {
+		[1] = -145,
 	},
 	["Eldreth Seether"] = {
 		[1] = 3329,
@@ -2968,8 +2977,8 @@ TheoryCraft_MitigationMobs = {
 	["Gurubashi Warrior"] = {
 		[1] = -1048,
 	},
-	["Affray Challenger"] = {
-		[1] = 1810,
+	["Scarshield Sentry"] = {
+		[1] = -245,
 	},
 	["Gammerita"] = {
 		[1] = 3092,
@@ -2977,8 +2986,8 @@ TheoryCraft_MitigationMobs = {
 	["Unliving Atal'ai"] = {
 		[1] = -1886,
 	},
-	["Chromatic Whelp"] = {
-		[1] = 2385,
+	["Helboar"] = {
+		[1] = 3218,
 	},
 	["Venomtail Scorpid"] = {
 		[1] = 572,
@@ -3006,14 +3015,14 @@ TheoryCraft_MitigationPlayers = {
 	["Chocawar"] = {
 		[1] = 3282,
 	},
-	["Peetr"] = {
-		[1] = 1472,
+	["Waia"] = {
+		[1] = 2721,
 	},
 	["Druid:60"] = {
 		[1] = 1448,
 	},
-	["Bulzen"] = {
-		[1] = 1480,
+	["Warrior:60"] = {
+		[1] = 2721,
 	},
 	["Dhube"] = {
 		[1] = 3321,
@@ -3051,11 +3060,11 @@ TheoryCraft_MitigationPlayers = {
 	["Psolikarfi"] = {
 		[1] = 1076,
 	},
-	["Narrs"] = {
-		[1] = 5961,
+	["Celoa"] = {
+		[1] = 2079,
 	},
-	["Waia"] = {
-		[1] = 2721,
+	["Peetr"] = {
+		[1] = 1472,
 	},
 	["Sinit"] = {
 		[1] = 781,
@@ -3063,8 +3072,8 @@ TheoryCraft_MitigationPlayers = {
 	["Brucewilly"] = {
 		[1] = 1088,
 	},
-	["Celoa"] = {
-		[1] = 2079,
+	["Narrs"] = {
+		[1] = 5961,
 	},
 	["Paladin:60"] = {
 		[1] = 5961,
@@ -3078,8 +3087,8 @@ TheoryCraft_MitigationPlayers = {
 	["Fric"] = {
 		[1] = 1004,
 	},
-	["Warrior:60"] = {
-		[1] = 2721,
+	["Bulzen"] = {
+		[1] = 1480,
 	},
 	["Derocian"] = {
 		[1] = 1448,

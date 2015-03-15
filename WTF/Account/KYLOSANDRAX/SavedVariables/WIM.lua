@@ -18,7 +18,7 @@ WIM_Data = {
 		["show"] = true,
 		["classIcon"] = true,
 	},
-	["keepFocus"] = false,
+	["versionLastLoaded"] = "1.3.1",
 	["autoFocus"] = false,
 	["winCascade"] = {
 		["enabled"] = true,
@@ -91,7 +91,7 @@ WIM_Data = {
 	["enableWIM"] = true,
 	["popOnSend"] = true,
 	["showMiniMap"] = true,
-	["versionLastLoaded"] = "1.3.1",
+	["keepFocus"] = false,
 	["showToolTips"] = true,
 	["winLoc"] = {
 		["top"] = 775,
@@ -120,4 +120,22 @@ WIM_Filters = {
 	["^YOU HAVE THE PLAGUE!"] = "Ignore",
 }
 WIM_History = {
+	["Shadowcosmos"] = {
+		[1] = {
+			["type"] = 2,
+			["time"] = "20:02",
+			["from"] = "Kylosandrax",
+			["date"] = "03/11/15",
+			["msg"] = "ty for the totemlove btw",
+			["stamp"] = 1426104160,
+		},
+		[2] = {
+			["type"] = 1,
+			["time"] = "20:03",
+			["from"] = "Shadowcosmos",
+			["date"] = "03/11/15",
+			["msg"] = "gotchu",
+			["stamp"] = 1426104202,
+		},
+	},
 }

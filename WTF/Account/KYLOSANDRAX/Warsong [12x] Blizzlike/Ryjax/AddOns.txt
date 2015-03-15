@@ -135,3 +135,4 @@ WoWDBProfiler: disabled
 RDX: enabled
 Banknon: enabled
 EngBags: disabled
+TankStats: disabled

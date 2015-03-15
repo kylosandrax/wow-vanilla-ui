@@ -160,3 +160,4 @@ BeanCounter: disabled
 !ClearFont: disabled
 CooldownHud: disabled
 WarriorHUD: disabled
+TankStats: disabled

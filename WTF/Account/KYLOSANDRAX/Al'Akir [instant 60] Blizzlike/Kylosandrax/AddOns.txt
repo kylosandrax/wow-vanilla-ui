@@ -1,1 +1,2 @@
 !ClearFont: disabled
+TankStats: enabled

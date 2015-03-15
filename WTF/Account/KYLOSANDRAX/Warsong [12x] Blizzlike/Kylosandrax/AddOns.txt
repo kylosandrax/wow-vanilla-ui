@@ -164,3 +164,4 @@ WarriorHUD: enabled
 WoWDBProfiler: disabled
 RDX: disabled
 EngBags: disabled
+TankStats: enabled

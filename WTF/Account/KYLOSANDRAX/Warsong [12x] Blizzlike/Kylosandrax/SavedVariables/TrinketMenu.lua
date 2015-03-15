@@ -7,38 +7,37 @@ TrinketMenuPerOptions = {
 	["FirstUse"] = true,
 	["ItemsUsed"] = {
 	},
-	["MenuScale"] = 1,
+	["MenuDock"] = "BOTTOMRIGHT",
 	["MainDock"] = "TOPRIGHT",
 	["YPos"] = 296.6661043661355,
-	["MenuDock"] = "BOTTOMRIGHT",
+	["MenuScale"] = 1,
 	["MenuOrient"] = "VERTICAL",
 }
 TrinketMenuQueue = {
 	["Enabled"] = {
-		[0] = 1,
 	},
 	["Stats"] = {
-		["11815"] = {
+		["19120"] = {
 		},
 		["13966"] = {
 		},
-		["19948"] = {
-			["priority"] = 1,
-			["delay"] = 21,
+		["19287"] = {
 		},
 		["13209"] = {
 		},
 		["13515"] = {
 		},
-		["13965"] = {
+		["11815"] = {
 		},
 		["20130"] = {
 			["priority"] = 1,
 			["delay"] = 60,
 		},
-		["19120"] = {
+		["13965"] = {
 		},
-		["19287"] = {
+		["19948"] = {
+			["priority"] = 1,
+			["delay"] = 21,
 		},
 	},
 	["Sort"] = {

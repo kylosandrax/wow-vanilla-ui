@@ -76,7 +76,7 @@ X: 1037
 Y: -1024
 Frame: FuBarPluginMetaMapFrame
 FrameLevel: 7
-X: 604
+X: 605
 Y: 4
 Frame: PowaBarConfigFrame
 FrameLevel: 1
@@ -154,8 +154,8 @@ X: 655
 Y: -184
 Frame: EHFrame
 FrameLevel: 1
-X: 1216
-Y: -43
+X: 1266
+Y: -71
 Frame: HitTable
 FrameLevel: 1
 X: 1183
@@ -171,7 +171,7 @@ Y: -903
 Frame: TrinketMenu_MenuFrame
 FrameLevel: 31
 X: 1140
-Y: -783
+Y: -743
 Frame: TrinketMenu_OptFrame
 FrameLevel: 24
 X: 697

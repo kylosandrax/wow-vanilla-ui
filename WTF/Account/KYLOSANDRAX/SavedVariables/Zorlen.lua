@@ -60,6 +60,7 @@ ZorlenConfig = {
 				["Onyxia"] = "yes",
 			},
 			["Intimidating Shout"] = {
+				["Skeletal Shocktrooper"] = "yes",
 				["Black Guard Sentry"] = "yes",
 				["Skeletal Guardian"] = "yes",
 				["Skeletal Highborne"] = "yes",
@@ -95,8 +96,8 @@ ZorlenConfig = {
 				["Maleki the Pallid"] = "yes",
 				["Gurubashi Axe Thrower"] = "yes",
 				["King Gordok"] = "yes",
-				["Cho'Rush the Observer"] = "yes",
 				["Illyanna Ravenoak"] = "yes",
+				["Cho'Rush the Observer"] = "yes",
 				["Gurubashi Champion"] = "yes",
 				["Baron Rivendare"] = "yes",
 				["General Angerforge"] = "yes",
@@ -106,7 +107,7 @@ ZorlenConfig = {
 				["Crimson Hammersmith"] = "yes",
 			},
 			["Rend"] = {
-				["Warbringer Construct"] = "yes",
+				["Lava Surger"] = "yes",
 				["Firewalker"] = "yes",
 				["Arcane Aberration"] = "yes",
 				["Crimson Templar"] = "yes",
@@ -119,13 +120,13 @@ ZorlenConfig = {
 				["Ironbark Protector"] = "yes",
 				["Earth Elemental"] = "yes",
 				["Obsidian Destroyer"] = "yes",
-				["Lava Surger"] = "yes",
+				["Warbringer Construct"] = "yes",
 				["Lava Annihilator"] = "yes",
-				["Wandering Forest Walker"] = "yes",
+				["Blazing Fireguard"] = "yes",
 				["Mana Remnant"] = "yes",
 				["Warpwood Crusher"] = "yes",
 				["Pyroguard Emberseer"] = "yes",
-				["Blazing Fireguard"] = "yes",
+				["Wandering Forest Walker"] = "yes",
 				["Firelord"] = "yes",
 			},
 			["Piercing Howl"] = {
@@ -212,25 +213,25 @@ ZorlenConfig = {
 			["Fireball"] = {
 				["Emperor Dagran Thaurissan"] = "yes",
 			},
-			["Arcane Missiles"] = {
+			["Frostbolt"] = {
+				["Hydrospawn"] = "yes",
 				["Emperor Dagran Thaurissan"] = "yes",
 			},
 			["Polymorph"] = {
 				["Crystal Fang"] = "yes",
 				["Lethtendris"] = "yes",
 			},
-			["Frost Nova"] = {
-				["Hydrospawn"] = "yes",
+			["Scorch"] = {
+				["Emperor Dagran Thaurissan"] = "yes",
 			},
-			["Frostbolt"] = {
-				["Hydrospawn"] = "yes",
+			["Arcane Missiles"] = {
 				["Emperor Dagran Thaurissan"] = "yes",
 			},
 			["Counterspell"] = {
 				["Emperor Dagran Thaurissan"] = "yes",
 			},
-			["Scorch"] = {
-				["Emperor Dagran Thaurissan"] = "yes",
+			["Frost Nova"] = {
+				["Hydrospawn"] = "yes",
 			},
 		},
 	},
