@@ -2,29 +2,28 @@
 CliqueDB = {
 	["disabledModules"] = {
 		["Default"] = {
-			["resurrection"] = true,
-			["healselect"] = true,
+			["archud"] = true,
+			["sageuf"] = true,
 			["squeaky"] = true,
 			["duf"] = true,
 			["perfectraid"] = true,
 			["ouf"] = true,
-			["nuf"] = true,
+			["healassist"] = true,
 			["aofhclique"] = true,
 			["needylist"] = true,
-			["archud"] = true,
-			["mg2-64pre"] = true,
-			["healassist"] = true,
-			["sageuf"] = true,
-			["xperl"] = true,
-			["oramtf"] = true,
-			["xraid"] = true,
 			["ora2mtf"] = true,
-			["marsraid"] = true,
+			["mg2-64pre"] = true,
+			["oramtf"] = true,
+			["xperl"] = true,
+			["blizzraid"] = true,
+			["xraid"] = true,
 			["squishy"] = true,
+			["marsraid"] = true,
+			["ctra"] = true,
 			["pcuf"] = true,
 			["watchdog"] = true,
 			["easyraid"] = true,
-			["ctra"] = true,
+			["nuf"] = true,
 		},
 	},
 	["chars"] = {
@@ -36,7 +35,7 @@ CliqueDB = {
 			["Default Hostile"] = {
 			},
 		},
-		["Kylosandrax of Al'Akir [instant 60] Blizzlike"] = {
+		["Zapunzel of Warsong [12x] Blizzlike"] = {
 			["Default Friendly"] = {
 			},
 			["Out-of-combat"] = {
@@ -195,7 +194,7 @@ CliqueDB = {
 			["Default Hostile"] = {
 			},
 		},
-		["Zapunzel of Warsong [12x] Blizzlike"] = {
+		["Kylosandrax of Al'Akir [instant 60] Blizzlike"] = {
 			["Default Friendly"] = {
 			},
 			["Out-of-combat"] = {

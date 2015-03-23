@@ -13,7 +13,7 @@ H: 168
 Frame: ItemRefTooltip
 FrameLevel: 10
 X: 1272
-Y: -805
+Y: -556
 Frame: ATSWFrame
 FrameLevel: 20
 X: 356

@@ -95,7 +95,7 @@ Enchantrix: enabled
 EnhTooltip: enabled
 EquipCompare: enabled
 FuBar_FriendsFu: enabled
-FuBar_GuildFu: enabled
+FuBar_GuildFu: disabled
 Informant: enabled
 MobInfo2: enabled
 PowerAuras: enabled
@@ -165,3 +165,4 @@ WoWDBProfiler: disabled
 RDX: disabled
 EngBags: disabled
 TankStats: disabled
+TankPoints: disabled

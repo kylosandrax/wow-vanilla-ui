@@ -36,7 +36,7 @@ FuBar_ClockFu: enabled
 FuBar_DurabilityFu: enabled
 FuBar_FriendsFu: enabled
 FuBar_FuXPFu: enabled
-FuBar_GuildFu: enabled
+FuBar_GuildFu: disabled
 FuBar_MailFu: enabled
 FuBar_MoneyFu: enabled
 FuBar_PerformanceFu: enabled
@@ -164,3 +164,4 @@ WoWDBProfiler: disabled
 RDX: disabled
 EngBags: disabled
 TankStats: disabled
+TankPoints: disabled

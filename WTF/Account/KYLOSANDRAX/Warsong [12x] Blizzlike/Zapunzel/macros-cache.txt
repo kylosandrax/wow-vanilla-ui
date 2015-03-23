@@ -10,7 +10,7 @@ MACRO 16777217 "Counterspell" Ability_Creature_Cursed_04
 /cast Counterspell
 END
 MACRO 16777225 "CrapWaterTrader" Ability_Vehicle_ShellShieldGenerator
-/run for b=0,4 do for s=1,GetContainerNumSlots(:) do local n=GetContainerItemLink(b,s) if n and string.find(n,"Conjured Sparkling Water") then PickupContainerItem(b,s); DropItemOnUnit("target"); AcceptTrade(); break; end; end; end;
+/run for b=0,4 do for s=1,GetContainerNumSlots(:) do local n=GetContainerItemLink(b,s) if n and string.find(n,"Conjured Crystal Water") then PickupContainerItem(b,s); DropItemOnUnit("target"); AcceptTrade(); break; end; end; end;
 END
 MACRO 16777226 "FBWC" inv_misc_uncutgemsuperior6
 /script SpellStopCasting()

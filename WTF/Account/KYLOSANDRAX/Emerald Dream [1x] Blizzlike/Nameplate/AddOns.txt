@@ -6,3 +6,4 @@ CooldownHud: disabled
 DiscordArt: enabled
 !ClearFont: disabled
 TankStats: disabled
+TankPoints: disabled

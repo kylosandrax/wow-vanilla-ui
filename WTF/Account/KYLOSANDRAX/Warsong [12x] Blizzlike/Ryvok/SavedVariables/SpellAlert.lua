@@ -38,10 +38,10 @@ SAConfig = {
 			["b"] = 0,
 		},
 	},
-	["version"] = 1.5,
+	["livingBomb"] = 1,
 	["heals"] = 1,
 	["dispelable"] = 1,
 	["shadow"] = 1,
-	["livingBomb"] = 1,
+	["version"] = 1.5,
 	["pos"] = -350,
 }

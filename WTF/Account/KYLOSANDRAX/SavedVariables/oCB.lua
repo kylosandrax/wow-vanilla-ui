@@ -50,7 +50,7 @@ oCBDB = {
 		},
 	},
 	["currentProfile"] = {
-		["Ryjax of Warsong [12x] Blizzlike"] = "Ryjax - Tank/DPS",
 		["Stormslinger of Warsong [12x] Blizzlike"] = "Stormslinger - Tank/DPS",
+		["Ryjax of Warsong [12x] Blizzlike"] = "Ryjax - Tank/DPS",
 	},
 }

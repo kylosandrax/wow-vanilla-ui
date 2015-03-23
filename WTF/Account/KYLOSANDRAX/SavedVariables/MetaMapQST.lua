@@ -756,7 +756,7 @@ QST_QuestLog = {
 	},
 	[30] = {
 		["qLogged"] = 1406833531,
-		["qIndex"] = 8,
+		["qIndex"] = 2,
 		["qTitle"] = "Blackhand's Command",
 		["qDesc"] = "Imbecile,\n\nI hold very little faith in your ability to prevent outsiders from accessing the master's lair. In the very likely event of your death, this orb has its own failsafe built in to prevent outsiders from teleporting directly into Blackwing.\n\nOnly those with the Mark of Drakkisath branded upon their hand may make use of this orb. Thankfully, Drakkisath is not nearly as incompetent as you, Quartermaster. He guards the brand himself!\n\n-Warchief Rend Blackhand\n\nP.S. Destroy this letter, idiot.",
 		["qZone"] = "Blackrock Spire",
@@ -870,7 +870,7 @@ QST_QuestLog = {
 	},
 	[34] = {
 		["qLogged"] = 1406833531,
-		["qIndex"] = 13,
+		["qIndex"] = 2,
 		["qTitle"] = "Elven Legends",
 		["qDesc"] = "Several years ago, a lone elven master named Kariel Winthalus fled the devastation of his homeland with several ancient elven artifacts in tow.\n\nOur search for this lost master lead us from the ruins of Quel'Thalas, through the Burning Steppes, across the great expanses of the sea, to Feralas.\n\nWe suspect that the elf sought sanctuary in the halls of Eldre'Thalas (what is now known as Dire Maul).\n\nYou must find him, adventurer. Whether alive or dead, the knowledge he carried must be recovered!",
 		["qZone"] = "Dire Maul",
@@ -891,7 +891,7 @@ QST_QuestLog = {
 	},
 	[35] = {
 		["qLogged"] = 1406833531,
-		["qIndex"] = 15,
+		["qIndex"] = 4,
 		["qTitle"] = "Plagued Hatchlings",
 		["qDesc"] = "The Argent Dawn recently learned that the Scourge are creating their own plagued dragonflight!  We must stop them -- if the Scourge gain a force of dragons they'll sweep across Azeroth unchecked!\n\nTheir necromancers are breeding plagued dragons at the Scholomance, in the middle of Darrowmere Lake.\n\nGo to the Scholomance and kill as many hatchlings as you can... before they get any bigger!",
 		["qZone"] = "Scholomance",
@@ -998,7 +998,7 @@ QST_QuestLog = {
 	},
 	[39] = {
 		["qLogged"] = 1406833531,
-		["qIndex"] = 22,
+		["qIndex"] = 8,
 		["qTitle"] = "Twilight Geolords",
 		["qDesc"] = "The Twilight's Hammer, an insane cult bent on destruction, set up camps in Silithus and perform rituals day and night.  We do not yet know their plans, but we do think they are somehow linked to the pulsing red crystals spread across the desert.\n\nAlthough their mystery may one day be solved, we must first deal with their immediate threat.  Go to their camps to the west and seek out Twilight geolords.  They are the heads of these serpents; that is where we must strike!",
 		["qZone"] = "Silithus",
@@ -1019,7 +1019,7 @@ QST_QuestLog = {
 	},
 	[40] = {
 		["qLogged"] = 1406833531,
-		["qIndex"] = 24,
+		["qIndex"] = 10,
 		["qTitle"] = "The Archivist",
 		["qDesc"] = "Anything taken to an extreme is hazardous to our world, Stormslinger. Take for example, the Scarlet Crusade. Do you believe that their blind zealotry serves a greater good? How many innocents have they destroyed in the name of the Light?\n\nBlasphemers, one and all!\n\nOne in particular interests me, though; the Archivist Galford of Stratholme: A man that watches over the Crusade's most valued documents. Destroy him and burn down his archives! Should you succeed, return to me and be rewarded.",
 		["qZone"] = "Stratholme",
@@ -1032,7 +1032,7 @@ QST_QuestLog = {
 		},
 		["qLevel"] = 60,
 		["qItems"] = {
-			[1] = "Archivist Galford slain: 1/1",
+			[1] = "  slain: 1/1",
 			[2] = "Archive Burned: 1/1",
 		},
 		["qNote"] = "",
@@ -1115,7 +1115,7 @@ QST_QuestLog = {
 	},
 	[44] = {
 		["qLogged"] = 1406833531,
-		["qIndex"] = 27,
+		["qIndex"] = 6,
 		["qTitle"] = "The Ectoplasmic Distiller",
 		["qDesc"] = "Ah, you're in need of my latest project... the extra-dimensional ghost revealer!  Unfortunately I've run out of funds and manpower.\n\nYou're willing to help?  Excellent!  Our first task is to build a device to harvest the very fabric of death!  Building an ectoplasmic distiller won't be an easy task, Stormslinger.\n\nI'll need you to bring me an arcanite converter, some greater eternal essences and stonescale oil. I'll also need some volcanic ash from the lava pools in the Burning Steppes to build a filter.",
 		["qZone"] = "Tanaris",
@@ -1324,7 +1324,7 @@ QST_QuestLog = {
 	},
 	[54] = {
 		["qLogged"] = 1423999395,
-		["qIndex"] = 12,
+		["qIndex"] = 2,
 		["qTitle"] = "Plagued Hatchlings",
 		["qDesc"] = "The Argent Dawn recently learned that the Scourge are creating their own plagued dragonflight!  We must stop them -- if the Scourge gain a force of dragons they'll sweep across Azeroth unchecked!\n\nTheir necromancers are breeding plagued dragons at the Scholomance, in the middle of Darrowmere Lake.\n\nGo to the Scholomance and kill as many hatchlings as you can... before they get any bigger!",
 		["qZone"] = "Scholomance",
@@ -1652,415 +1652,6 @@ QST_QuestLog = {
 		},
 	},
 	[67] = {
-		["qLogged"] = 1424122480,
-		["qIndex"] = 2,
-		["qTitle"] = "Commander Gor'shak",
-		["qDesc"] = "Poor Gargal... didn't even see it coming. WHAM! The arrow landed dead center on the top of his head. He was no genius before but now...\n\n<Galamav grimaces.>\n\nWhen we dislodged the arrow, we noticed a rolled up note attached to the shaft. On the note was a crudely drawn picture of an orc behind bars with the signature of Commander Gor'shak attached.\n\nIf he's still alive in the Depths, you'll have to find him.\n\nA trap you say? Well no kidding, numb hooves! That's why you're going!\n",
-		["qZone"] = "Blackrock Depths",
-		["qObj"] = "Find Commander Gor'shak in Blackrock Depths.\n\nYou recall that the crudely drawn picture of the orc included bars drawn over the portrait. Perhaps you should search for a prison of some sort.",
-		["qTag"] = "Dungeon",
-		["qPlayer"] = {
-			["Ryjax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFFFFFF00Active",
-			},
-		},
-		["qLevel"] = 52,
-		["qNote"] = "",
-		["qMoney"] = 6600,
-		["qNPC"] = {
-		},
-	},
-	[68] = {
-		["qLogged"] = 1424122480,
-		["qIndex"] = 3,
-		["qTitle"] = "The Heart of the Mountain",
-		["qDesc"] = "For years I have sought a certain gem.  It is called the Heart of the Mountain and it's the size of your fist!  The Dark Iron dwarves have it locked in their vault and, try as I may, they won't let me purchase it.\n\nSo I must resort to force.\n\nFight your way to the Lower Vault of Blackrock Depths, breach its secret safe and gain the Heart.  To do that, you must defeat Watchman Doomgrip, and he won't appear until you've opened every relic coffer in the vault!\n\nGood luck.",
-		["qZone"] = "Blackrock Depths",
-		["qObj"] = "Bring the Heart of the Mountain to Maxwort Uberglint in the Burning Steppes.",
-		["qTag"] = "Dungeon",
-		["qPlayer"] = {
-			["Ryjax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFFFFFF00Active",
-			},
-		},
-		["qLevel"] = 55,
-		["qItems"] = {
-			[1] = "The Heart of the Mountain: 0/1",
-		},
-		["qNote"] = "",
-		["qMoney"] = 33000,
-		["qNPC"] = {
-		},
-	},
-	[69] = {
-		["qLogged"] = 1424122480,
-		["qIndex"] = 4,
-		["qTitle"] = "Disharmony of Fire",
-		["qDesc"] = "I can taste the foulness in the air that surrounds you, Ryjax. There is another, hidden in the depths of Blackrock, who does control this foulness.\n\nThe wind and earth cry his name: Lord Incendius... but someone... something... commands this being. He is merely an emissary.\n\nFind him and discover where his master hides. Return to me when you have collected this information.\n",
-		["qZone"] = "Blackrock Depths",
-		["qItems"] = {
-			[1] = "Lord Incendius slain: 0/1",
-			[2] = "Tablet of Kurniya: 0/1",
-		},
-		["qChoice"] = {
-			[1] = {
-				["qAmount"] = 1,
-			},
-			[2] = {
-				["qAmount"] = 1,
-			},
-			[3] = {
-				["qAmount"] = 1,
-			},
-			[4] = {
-				["qAmount"] = 1,
-			},
-		},
-		["qTag"] = "Dungeon",
-		["qPlayer"] = {
-			["Ryjax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFFFFFF00Active",
-			},
-		},
-		["qLevel"] = 56,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 84000,
-		["qObj"] = "Enter Blackrock Depths and track down Lord Incendius. Slay him and return any source of information you may find to Thunderheart.\n",
-	},
-	[70] = {
-		["qLogged"] = 1424122480,
-		["qIndex"] = 6,
-		["qTitle"] = "Bijou's Belongings",
-		["qDesc"] = "Ordinarily I don't deal with taurens but it seems that I'm stuck between a troll and a hard place. You see, my mission here is one of utmost importance to the Horde. The information I've discovered, however, applies to the well being of the Alliance as well. Now believe me, I'm no Alliance sympathizer, but the Blackrock threat is bigger than just a bunch of orcs.\n\nYou help me out by finding my belongings and I'll help you out with some information that could prove useful to your kind.\n\nDeal?",
-		["qZone"] = "Blackrock Spire",
-		["qObj"] = "Find Bijou's Belongings and return them to her. Good luck!\n",
-		["qTag"] = "Dungeon",
-		["qPlayer"] = {
-			["Ryjax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFFFFFF00Active",
-			},
-		},
-		["qLevel"] = 59,
-		["qItems"] = {
-			[1] = "Bijou's Belongings: 0/1",
-		},
-		["qNote"] = "",
-		["qMoney"] = 8400,
-		["qNPC"] = {
-		},
-	},
-	[71] = {
-		["qLogged"] = 1424122480,
-		["qIndex"] = 7,
-		["qTitle"] = "En-Ay-Es-Tee-Why",
-		["qDesc"] = "Believe it or not, there are people out there willing to pay for the most vile of domesticated beast!\n\nI'd sent Bijou into the Spire to try and collect some of those spire spider eggs but I haven't heard from her in weeks. Maybe you can help me out?\n\nI'll tell you what, Ryjax. Go to Blackrock Spire and collect some spire spider eggs for me. Bring them back here and not only will I give you a little cash, but I'll even domesticate one for you!",
-		["qZone"] = "Blackrock Spire",
-		["qItems"] = {
-			[1] = "Spire Spider Egg: 0/15",
-		},
-		["qObj"] = "Travel to Blackrock Spire and collect 15 Spire Spider Eggs for Kibler.\n\nBy the sound of it, these eggs could be found near spiders.\n",
-		["qTag"] = "Dungeon",
-		["qPlayer"] = {
-			["Ryjax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFFFFFF00Active",
-			},
-		},
-		["qLevel"] = 59,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 35400,
-		["qReward"] = {
-			[1] = {
-				["qAmount"] = 1,
-			},
-		},
-	},
-	[72] = {
-		["qLogged"] = 1424122480,
-		["qIndex"] = 8,
-		["qTitle"] = "Mother's Milk",
-		["qDesc"] = "It's probably one of the most potent poisons in the world, tauren!\n\nI've overheard the Blackrock speaking about its lethality in my jaunts into the Spire. They call it 'Mother's Milk', named after Mother Smolderweb, the big nasty spider in the Skitterweb cave.\n\nNow here's what I need from you: A live sample of the Milk, flowing through YOUR veins. Just bringing me the gland won't be enough! Get her to poison you and come back to me!\n\nThen... I get to milk ya!\n\n<Rubs his hands together in anticipation.>",
-		["qZone"] = "Blackrock Spire",
-		["qItems"] = {
-		},
-		["qObj"] = "In the heart of Blackrock Spire you will find Mother Smolderweb. Engage her and get her to poison you. Chances are good that you will have to kill her as well. Return to Ragged John when you are poisoned so that he can 'milk' you.",
-		["qTag"] = "Dungeon",
-		["qPlayer"] = {
-			["Ryjax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFFFFFF00Active",
-			},
-		},
-		["qLevel"] = 60,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 62700,
-		["qReward"] = {
-			[1] = {
-				["qAmount"] = 1,
-			},
-		},
-	},
-	[73] = {
-		["qLogged"] = 1424122480,
-		["qIndex"] = 10,
-		["qTitle"] = "Lethtendris's Web",
-		["qDesc"] = "The blood elf Lethtendris has overstepped her bounds.  So eager was she to gather magical power that she defied her brethren and created a device of insidious design, a web meant to siphon the tainted magical energies of Dire Maul.  Even now she gathers those energies and plans to release them against her enemies.\n\nLethtendris must be stopped.  Find her within the Warpwood Quarter of Dire Maul, defeat her and bring her web to me so that it might be returned to more clear-headed blood elves for study.",
-		["qZone"] = "Dire Maul",
-		["qItems"] = {
-			[1] = "Lethtendris's Web: 0/1",
-		},
-		["qObj"] = "Bring Lethtendris's Web to Talo Thornhoof at Camp Mojache in Feralas.",
-		["qTag"] = "Dungeon",
-		["qPlayer"] = {
-			["Ryjax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFFFFFF00Active",
-			},
-		},
-		["qLevel"] = 57,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 58800,
-		["qReward"] = {
-			[1] = {
-				["qAmount"] = 1,
-			},
-		},
-	},
-	[74] = {
-		["qLogged"] = 1424122480,
-		["qIndex"] = 11,
-		["qTitle"] = "Elven Legends",
-		["qDesc"] = "Several years ago, a lone elven master named Kariel Winthalus fled the devastation of his homeland with several ancient elven artifacts in tow.\n\nOur search for this lost master lead us from the ruins of Quel'Thalas, through the Burning Steppes, across the great expanses of the sea, to Feralas.\n\nWe suspect that the elf sought sanctuary in the halls of Eldre'Thalas (what is now known as Dire Maul).\n\nYou must find him, adventurer. Whether alive or dead, the knowledge he carried must be recovered!",
-		["qZone"] = "Dire Maul",
-		["qObj"] = "Search Dire Maul for Kariel Winthalus. Report back to Sage Korolusk at Camp Mojache with whatever information that you may find.",
-		["qTag"] = "Dungeon",
-		["qPlayer"] = {
-			["Ryjax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFFFFFF00Active",
-			},
-		},
-		["qLevel"] = 60,
-		["qItems"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 62700,
-		["qNPC"] = {
-		},
-	},
-	[75] = {
-		["qItems"] = {
-			[1] = "Putrid Vine: 0/1",
-		},
-		["qDesc"] = "It is as I feared -- the toxin is simply too weak for such a powerful creature.\n\nIf we are to create a toxin of high enough potency, you must venture to the bottom of the Temple of Atal'Hakkar, unlock the secrets of the altar and recover a putrid vine from the guardian there.  The temple is dangerous, and it would behoove you to bring friends.\n\nReturn to me when this is done.",
-		["qNPC"] = {
-		},
-		["qChoice"] = {
-			[1] = {
-				["qAmount"] = 1,
-			},
-			[2] = {
-				["qAmount"] = 1,
-			},
-			[3] = {
-				["qAmount"] = 1,
-			},
-		},
-		["qTag"] = "Dungeon",
-		["qPlayer"] = {
-			["Ryjax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFFFFFF00Active",
-			},
-		},
-		["qMoney"] = 6600,
-		["qIndex"] = 13,
-		["qTitle"] = "A Better Ingredient",
-		["qZone"] = "Druid",
-		["qObj"] = "Retrieve a Putrid Vine from the guardian at the bottom of the Sunken Temple and return to Torwa Pathfinder.",
-		["qLevel"] = 52,
-		["qLogged"] = 1424122480,
-		["qNote"] = "",
-		["qArea"] = "Unknown",
-	},
-	[76] = {
-		["qLogged"] = 1424122480,
-		["qIndex"] = 15,
-		["qTitle"] = "The Champion of the Horde",
-		["qDesc"] = "I have received word from one of my champions that a way into the lair of the dragon may exist. You are to seek him out.\n\nRexxar wanders the desert wasteland of Desolace, traveling between Stonetalon and Feralas. He awaits your arrival.",
-		["qZone"] = "Orgrimmar",
-		["qObj"] = "Seek out Rexxar. The Warchief has instructed you as to his whereabouts. Search the paths of Desolace, between the Stonetalon Mountains and Feralas.",
-		["qPlayer"] = {
-			["Ryjax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFFFFFF00Active",
-			},
-		},
-		["qLevel"] = 60,
-		["qNote"] = "",
-		["qMoney"] = 2880,
-		["qNPC"] = {
-		},
-	},
-	[77] = {
-		["qLogged"] = 1424122480,
-		["qIndex"] = 17,
-		["qTitle"] = "Plagued Hatchlings",
-		["qDesc"] = "The Argent Dawn recently learned that the Scourge are creating their own plagued dragonflight!  We must stop them -- if the Scourge gain a force of dragons they'll sweep across Azeroth unchecked!\n\nTheir necromancers are breeding plagued dragons at the Scholomance, in the middle of Darrowmere Lake.\n\nGo to the Scholomance and kill as many hatchlings as you can... before they get any bigger!",
-		["qZone"] = "Scholomance",
-		["qObj"] = "Kill 20 Plagued Hatchlings, then return to Betina Bigglezink at the Light's Hope Chapel.",
-		["qTag"] = "Dungeon",
-		["qPlayer"] = {
-			["Ryjax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFFFFFF00Active",
-			},
-		},
-		["qLevel"] = 58,
-		["qItems"] = {
-			[1] = "Plagued Hatchling slain: 0/20",
-		},
-		["qNote"] = "",
-		["qMoney"] = 35100,
-		["qNPC"] = {
-		},
-	},
-	[78] = {
-		["qLogged"] = 1424122480,
-		["qIndex"] = 18,
-		["qTitle"] = "Barov Family Fortune",
-		["qDesc"] = "Within the Scholomance lays the Barov family fortune. I, Alexi Barov, am one of the last two remaining heirs of the house Barov. My brother, Weldon, is the other.\n\nWeldon, the miserable coward, fled during the war and thus retained his worthless existence as a human.\n\nHe now searches for the deeds so that he may claim the fortune for his own. Recover the deeds before my brother does and I shall make you wealthy beyond your wildest dreams!",
-		["qZone"] = "Scholomance",
-		["qObj"] = "Venture to the Scholomance and recover the Barov family fortune. Four deeds make up this fortune: The Deed to Caer Darrow; The Deed to Brill; The Deed to Tarren Mill; and The Deed to Southshore. Return to Alexi Barov when you have completed this task.",
-		["qTag"] = "Dungeon",
-		["qPlayer"] = {
-			["Ryjax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFFFFFF00Active",
-			},
-		},
-		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "The Deed to Brill: 0/1",
-			[2] = "The Deed to Caer Darrow: 0/1",
-			[3] = "The Deed to Southshore: 0/1",
-			[4] = "The Deed to Tarren Mill: 0/1",
-		},
-		["qNote"] = "",
-		["qMoney"] = 62700,
-		["qNPC"] = {
-		},
-	},
-	[79] = {
-		["qLogged"] = 1424122480,
-		["qIndex"] = 19,
-		["qTitle"] = "Krastinov's Bag of Horrors",
-		["qDesc"] = "A great weight has been lifted from our hearts, Ryjax, but your task is not yet complete. Krastinov's master, Kirtonos, still lives.\n\nBefore you may face Kirtonos, however, you must first secure a method in which to summon him.\n\nIt is said that Jandice Barov stewards the blood of innocents from Krastinov to Kirtonos.\n\nFind her in the sunken catacombs of Scholomance and strike her down. Bring back any clues that you may find.",
-		["qZone"] = "Scholomance",
-		["qObj"] = "Locate Jandice Barov in the Scholomance and destroy her. From her corpse recover Krastinov's Bag of Horrors. Return the bag to Eva Sarkhoff.",
-		["qTag"] = "Dungeon",
-		["qPlayer"] = {
-			["Ryjax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFFFFFF00Active",
-			},
-		},
-		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "Krastinov's Bag of Horrors: 0/1",
-		},
-		["qNote"] = "",
-		["qMoney"] = 8700,
-		["qNPC"] = {
-		},
-	},
-	[80] = {
-		["qLogged"] = 1424122480,
-		["qIndex"] = 21,
-		["qTitle"] = "Great-father Winter is Here!",
-		["qDesc"] = "Have a wondrous Winter Veil, friend!  Be sure to say hello to Greatfather Winter!  If you've been nice this year, you'll receive wondrous treats on the day of the Feast of Winter Veil.  Be sure to tell him what you hope to get this year!\n\nAlso, be sure to stock up on treats to give those who've been nice this year.  We have a great selection to choose from.  Fresh from our farm to your plate - it's Smokywood Pastures wholesome goodness!",
-		["qArea"] = "Unknown",
-		["qObj"] = "Speak with Greatfather Winter; he is located near the Smokywood Pastures vendor area in Orgrimmar.",
-		["qPlayer"] = {
-			["Ryjax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFFFFFF00Active",
-			},
-		},
-		["qLevel"] = 60,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 390,
-		["qZone"] = "Seasonal",
-	},
-	[81] = {
-		["qLogged"] = 1424122480,
-		["qIndex"] = 23,
-		["qTitle"] = "Into The Maw of Madness",
-		["qDesc"] = "I need you to venture into Hive'Regal and find what became of my dearest Natalia, Ryjax. This will be no easy task for you. Before you dive headlong into the maw of madness, make sure that you go back and speak with those dwarves. They might be able to give you some tips on dealing with the silithid that inhabit that hive.\n\nAnd Ryjax, if she truly is as mad as they say... do what you must.\n\n<Commander Mar'alith turns away from you.>\n",
-		["qZone"] = "Silithus",
-		["qItems"] = {
-			[1] = "The Fate of Mistress Natalia Mar'alith: 0/1",
-		},
-		["qObj"] = "Commander Mar'alith at Cenarion Hold in Silithus wants you to find his beloved Natalia. The information that you gathered points to Hive'Regal in the south as being the area in which you may find Mistress Natalia Mar'alith.\n\nDo not forget to visit the dwarves at Bronzebeard's camp before venturing into the hive. They might have some additional work and advice for you.\n\nAnd Ryjax, remember the Commander's words: \"Do what you must...\"",
-		["qTag"] = "Elite",
-		["qPlayer"] = {
-			["Ryjax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFFFFFF00Active",
-			},
-		},
-		["qLevel"] = 60,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 61200,
-		["qReward"] = {
-			[1] = {
-				["qAmount"] = 1,
-			},
-		},
-	},
-	[82] = {
-		["qLogged"] = 1424122480,
-		["qIndex"] = 25,
-		["qTitle"] = "The Flesh Does Not Lie",
-		["qDesc"] = "The Forsaken apothecaries are not the only beings in this world schooled in the sciences.\n\nI have been studying the plague for years, tauren. We had previously thought that the potency of the plague was dwindling, but what I have discovered here in the Plaguelands is startling. The plague seems to be growing in strength!\n\nI need to run more tests! The most potent source of the plague is from the tainted flesh of the most recently infected. Travel to Stratholme and bring me samples, Ryjax.\n",
-		["qZone"] = "Stratholme",
-		["qObj"] = "Recover 10 Plagued Flesh Samples from Stratholme and return them to Betina Bigglezink. You suspect that any creature in Stratholme would have said flesh sample.",
-		["qTag"] = "Dungeon",
-		["qPlayer"] = {
-			["Ryjax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFFFFFF00Active",
-			},
-		},
-		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "Plagued Flesh Sample: 8/20",
-		},
-		["qNote"] = "",
-		["qMoney"] = 62700,
-		["qNPC"] = {
-		},
-	},
-	[83] = {
-		["qLogged"] = 1424122480,
-		["qIndex"] = 27,
-		["qTitle"] = "Nat's Measuring Tape",
-		["qDesc"] = "Amongst the shattered fishing lures and tackle is a rolled, silken measuring tape.  Attached to the tape is a label that reads:\n\n\"Nat Pagle, Dustwallow Marsh.\"",
-		["qZone"] = "Zul'Gurub",
-		["qObj"] = "Return Nat's Measuring Tape to Nat Pagle in Dustwallow Marsh.",
-		["qTag"] = "Raid",
-		["qPlayer"] = {
-			["Ryjax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFF00FF19Completed",
-			},
-		},
-		["qLevel"] = 60,
-		["qNote"] = "",
-		["qMoney"] = 570,
-		["qNPC"] = {
-		},
-	},
-	[84] = {
 		["qLogged"] = 1426326979,
 		["qIndex"] = 2,
 		["qTitle"] = "KILL ON SIGHT: Dark Iron Dwarves",
@@ -2084,7 +1675,7 @@ QST_QuestLog = {
 		["qNPC"] = {
 		},
 	},
-	[85] = {
+	[68] = {
 		["qLogged"] = 1426326979,
 		["qIndex"] = 3,
 		["qTitle"] = "The Heart of the Mountain",
@@ -2106,7 +1697,7 @@ QST_QuestLog = {
 		["qNPC"] = {
 		},
 	},
-	[86] = {
+	[69] = {
 		["qLogged"] = 1426326979,
 		["qIndex"] = 5,
 		["qTitle"] = "Kibler's Exotic Pets",
@@ -2133,7 +1724,7 @@ QST_QuestLog = {
 			},
 		},
 	},
-	[87] = {
+	[70] = {
 		["qLogged"] = 1426326979,
 		["qIndex"] = 6,
 		["qTitle"] = "Operative Bijou",
@@ -2152,7 +1743,7 @@ QST_QuestLog = {
 		["qNPC"] = {
 		},
 	},
-	[88] = {
+	[71] = {
 		["qLogged"] = 1426326979,
 		["qIndex"] = 7,
 		["qTitle"] = "The Pack Mistress",
@@ -2185,7 +1776,7 @@ QST_QuestLog = {
 		["qMoney"] = 62400,
 		["qObj"] = "Slay Halycon, pack mistress of the Bloodaxe worg.",
 	},
-	[89] = {
+	[72] = {
 		["qLogged"] = 1426326979,
 		["qIndex"] = 8,
 		["qTitle"] = "Mother's Milk",
@@ -2211,7 +1802,7 @@ QST_QuestLog = {
 			},
 		},
 	},
-	[90] = {
+	[73] = {
 		["qLogged"] = 1426326979,
 		["qIndex"] = 9,
 		["qTitle"] = "Warlord's Command",
@@ -2253,7 +1844,7 @@ QST_QuestLog = {
 		["qMoney"] = 62700,
 		["qObj"] = "Slay Highlord Omokk, War Master Voone, and Overlord Wyrmthalak. Recover Important Blackrock Documents. Return to Warlord Goretooth in Kargath when the mission has been accomplished.",
 	},
-	[91] = {
+	[74] = {
 		["qLogged"] = 1426326979,
 		["qIndex"] = 11,
 		["qTitle"] = "The Rise of the Machines",
@@ -2274,7 +1865,7 @@ QST_QuestLog = {
 		["qNPC"] = {
 		},
 	},
-	[92] = {
+	[75] = {
 		["qLogged"] = 1426326979,
 		["qIndex"] = 13,
 		["qTitle"] = "Pusillin and the Elder Azj'Tordin",
@@ -2304,7 +1895,7 @@ QST_QuestLog = {
 		["qMoney"] = 60600,
 		["qObj"] = "Travel to Dire Maul and locate the Imp, Pusillin. Convince Pusillin to give you Azj'Tordin's Book of Incantations through any means necessary.\n\nReturn to Azj'Tordin at the Lariss Pavilion in Feralas should you recover the Book of Incantations.",
 	},
-	[93] = {
+	[76] = {
 		["qLogged"] = 1426326979,
 		["qIndex"] = 14,
 		["qTitle"] = "Elven Legends",
@@ -2325,7 +1916,7 @@ QST_QuestLog = {
 		["qNPC"] = {
 		},
 	},
-	[94] = {
+	[77] = {
 		["qLogged"] = 1426326979,
 		["qIndex"] = 16,
 		["qTitle"] = "Magecraft",
@@ -2344,7 +1935,7 @@ QST_QuestLog = {
 		["qMoney"] = 450,
 		["qZone"] = "Mage",
 	},
-	[95] = {
+	[78] = {
 		["qLogged"] = 1426326979,
 		["qIndex"] = 18,
 		["qTitle"] = "Plagued Hatchlings",
@@ -2366,7 +1957,7 @@ QST_QuestLog = {
 		["qNPC"] = {
 		},
 	},
-	[96] = {
+	[79] = {
 		["qLogged"] = 1426326979,
 		["qIndex"] = 19,
 		["qTitle"] = "Barov Family Fortune",
@@ -2391,7 +1982,7 @@ QST_QuestLog = {
 		["qNPC"] = {
 		},
 	},
-	[97] = {
+	[80] = {
 		["qLogged"] = 1426326979,
 		["qIndex"] = 21,
 		["qTitle"] = "The Perfect Poison",
@@ -2434,7 +2025,7 @@ QST_QuestLog = {
 		["qMoney"] = 5700,
 		["qObj"] = "Dirk Thunderwood at Cenarion Hold wants you to bring him Venoxis's Venom Sac and Kurinnaxx's Venom Sac.",
 	},
-	[98] = {
+	[81] = {
 		["qLogged"] = 1426326979,
 		["qIndex"] = 23,
 		["qTitle"] = "The Archivist",
@@ -2457,7 +2048,7 @@ QST_QuestLog = {
 		["qNPC"] = {
 		},
 	},
-	[99] = {
+	[82] = {
 		["qLogged"] = 1426326979,
 		["qIndex"] = 24,
 		["qTitle"] = "The Flesh Does Not Lie",
@@ -2479,7 +2070,7 @@ QST_QuestLog = {
 		["qNPC"] = {
 		},
 	},
-	[100] = {
+	[83] = {
 		["qLogged"] = 1426326979,
 		["qIndex"] = 26,
 		["qTitle"] = "Assisting Arch Druid Runetotem",
@@ -2497,7 +2088,7 @@ QST_QuestLog = {
 		["qNPC"] = {
 		},
 	},
-	[101] = {
+	[84] = {
 		["qLogged"] = 1426326979,
 		["qIndex"] = 28,
 		["qTitle"] = "Trouble in Winterspring!",
@@ -2515,7 +2106,7 @@ QST_QuestLog = {
 		["qNPC"] = {
 		},
 	},
-	[102] = {
+	[85] = {
 		["qLogged"] = 1426326979,
 		["qIndex"] = 29,
 		["qTitle"] = "Ursius of the Shardtooth",
@@ -2537,7 +2128,7 @@ QST_QuestLog = {
 		["qNPC"] = {
 		},
 	},
-	[103] = {
+	[86] = {
 		["qLogged"] = 1426326979,
 		["qIndex"] = 30,
 		["qTitle"] = "Luck Be With You",
@@ -2559,8 +2150,8 @@ QST_QuestLog = {
 		["qNPC"] = {
 		},
 	},
-	[104] = {
-		["qLogged"] = 1426416789,
+	[87] = {
+		["qLogged"] = 1427148176,
 		["qIndex"] = 2,
 		["qTitle"] = "KILL ON SIGHT: High Ranking Dark Iron Officials",
 		["qDesc"] = "By order of Warlord Goretooth, commander of the Kargath Expeditionary Force:\n\nHead of the K.E.F. reconnaissance division, Grandmaster Lexlort, has returned with news of the whereabouts of high ranking Dark Iron officials. Through locked gate, near the heart of the city, they train their forces to snuff out our men. Travel to Blackrock Depths and destroy them!\n\nCompletion of this mission will result in a tribute.\n",
@@ -2583,8 +2174,8 @@ QST_QuestLog = {
 		["qNPC"] = {
 		},
 	},
-	[105] = {
-		["qLogged"] = 1426416789,
+	[88] = {
+		["qLogged"] = 1427148176,
 		["qIndex"] = 4,
 		["qTitle"] = "Disharmony of Flame",
 		["qDesc"] = "The elders have felt a disturbance amongst the elements. The Dark Iron dwarves have summoned a foul spirit into our world that threatens to plague our lands with an eternal draught. This disharmony of flame must be investigated.\n\nTravel to Blackrock Mountain, through the Chasm of Flame, into the quarry. It is there that you shall find this lord of fire: Overmaster Pyron.\n\nEnd the disruption and return to me.",
@@ -2606,62 +2197,18 @@ QST_QuestLog = {
 		["qMoney"] = 50850,
 		["qZone"] = "Blackrock Mountain",
 	},
-	[106] = {
-		["qLogged"] = 1426416789,
+	[89] = {
+		["qLogged"] = 1427148176,
 		["qIndex"] = 6,
-		["qTitle"] = "Bijou's Belongings",
-		["qDesc"] = "Ordinarily I don't deal with orcs but it seems that I'm stuck between a troll and a hard place. You see, my mission here is one of utmost importance to the Horde. The information I've discovered, however, applies to the well being of the Alliance as well. Now believe me, I'm no Alliance sympathizer, but the Blackrock threat is bigger than just a bunch of orcs.\n\nYou help me out by finding my belongings and I'll help you out with some information that could prove useful to your kind.\n\nDeal?",
-		["qZone"] = "Blackrock Spire",
-		["qObj"] = "Find Bijou's Belongings and return them to her. Good luck!\n",
-		["qTag"] = "Dungeon",
-		["qPlayer"] = {
-			["Kylosandrax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFFFFFF00Active",
-			},
-		},
-		["qLevel"] = 59,
-		["qItems"] = {
-			[1] = "Bijou's Belongings: 0/1",
-		},
-		["qNote"] = "",
-		["qMoney"] = 8400,
-		["qNPC"] = {
-		},
-	},
-	[107] = {
-		["qLogged"] = 1426416789,
-		["qIndex"] = 8,
-		["qTitle"] = "Only One May Rise",
-		["qDesc"] = "There is no time to waste! A hero must be found! The task I give will require an army to complete but only one may rise from the throng of would be champions to take on the burden and responsibility of an ally of the Brood.\n\nWithin the lair of the Lord of Blackrock is a most cruel beast. The Broodlord Lashlayer guards the Halls of Strife, blocking the way into Nefarian's inner sanctum. Slay the foul aberration and return his head to me. Do this and you may begin the next step of your journey.",
-		["qZone"] = "Blackwing Lair",
-		["qObj"] = "Return the Head of the Broodlord Lashlayer to Baristolth of the Shifting Sands at Cenarion Hold in Silithus.",
-		["qTag"] = "Raid",
-		["qPlayer"] = {
-			["Kylosandrax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFFFFFF00Active",
-			},
-		},
-		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "Head of the Broodlord Lashlayer: 0/1",
-		},
-		["qNote"] = "",
-		["qMoney"] = 5730,
-		["qNPC"] = {
-		},
-	},
-	[108] = {
-		["qLogged"] = 1426416789,
-		["qIndex"] = 10,
 		["qTitle"] = "Spirit of the Boar",
 		["qDesc"] = "When I first administered the elixir, Kylosandrax, I could tell that one or two applications would not satiate your appetite. Even now, I can see the hunger in your eyes. The concoction has addictive properties of which, seemingly, the most strong of will cannot resist.\n\nSo be it! Should you require more of the lung juice cocktail, venture back into the wasteland and find for me three blasted boar lungs, two scorpok pincers, and one basilisk brain.",
 		["qZone"] = "Blasted Lands",
+		["qObj"] = "Bring three Blasted Boar Lungs, two Scorpok Pincers, and one Basilisk Brain to Bloodmage Drazial.\n",
 		["qItems"] = {
 			[1] = "Blasted Boar Lung: 0/3",
 			[2] = "Scorpok Pincer: 0/2",
 			[3] = "Basilisk Brain: 0/1",
 		},
-		["qObj"] = "Bring three Blasted Boar Lungs, two Scorpok Pincers, and one Basilisk Brain to Bloodmage Drazial.\n",
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFFFFFF00Active",
@@ -2680,9 +2227,9 @@ QST_QuestLog = {
 		["qNPC"] = {
 		},
 	},
-	[109] = {
-		["qLogged"] = 1426416789,
-		["qIndex"] = 12,
+	[90] = {
+		["qLogged"] = 1427148176,
+		["qIndex"] = 8,
 		["qTitle"] = "Elven Legends",
 		["qDesc"] = "Several years ago, a lone elven master named Kariel Winthalus fled the devastation of his homeland with several ancient elven artifacts in tow.\n\nOur search for this lost master lead us from the ruins of Quel'Thalas, through the Burning Steppes, across the great expanses of the sea, to Feralas.\n\nWe suspect that the elf sought sanctuary in the halls of Eldre'Thalas (what is now known as Dire Maul).\n\nYou must find him, adventurer. Whether alive or dead, the knowledge he carried must be recovered!",
 		["qZone"] = "Dire Maul",
@@ -2701,9 +2248,9 @@ QST_QuestLog = {
 		["qNPC"] = {
 		},
 	},
-	[110] = {
-		["qLogged"] = 1426416789,
-		["qIndex"] = 13,
+	[91] = {
+		["qLogged"] = 1427148176,
+		["qIndex"] = 9,
 		["qTitle"] = "Libram of Protection",
 		["qDesc"] = "He wept like an infant at the loss of this libram. Mind you, I myself have wept over texts - there is no greater loss than that of knowledge and history - but to cry over this nearly useless jumbling of incantations? Preposterous! It left me to believe that the Prince was doing him a favor in flaying the flesh from his bones.\n\nBring the Libram along with a pristine black diamond, large brilliant shards, and a frayed abomination stitching and I shall recreate the Arcanum.\n\nOh, and check the north wing.",
 		["qZone"] = "Dire Maul",
@@ -2721,26 +2268,26 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 0,
 		["qReward"] = {
 			[1] = {
 				["qAmount"] = 1,
 			},
 		},
-		["qNote"] = "",
-		["qMoney"] = 0,
-		["qNPC"] = {
-		},
 	},
-	[111] = {
-		["qLogged"] = 1426416789,
-		["qIndex"] = 15,
+	[92] = {
+		["qLogged"] = 1427148176,
+		["qIndex"] = 11,
 		["qTitle"] = "Writ of Safe Passage",
 		["qDesc"] = "Without the help of adventurers, my caravan would have never made it! Scourge were coming out of the woodwork to try and stop us from getting here.\n\n<Guard Didier wipes his brow.>\n\nNow we need to wait here for Field Marshal Chambers to arrive. He'll sign your writ of safe passage to take back to Dispatch Commander Metz at Light's Hope Chapel.\n\nAnd Kylosandrax, watch what you say around Chambers. He's the 'bite off your head and spit down your wind pipe' type of guy - except that he'll actually do it...",
 		["qZone"] = "Eastern Plaguelands",
+		["qObj"] = "Deliver the signed Writ of Safe Passage to Dispatch Commander Metz at Light's Hope Chapel in the Eastern Plaguelands.",
 		["qItems"] = {
 			[1] = "Writ of Safe Passage Signed: 0/1",
 		},
-		["qObj"] = "Deliver the signed Writ of Safe Passage to Dispatch Commander Metz at Light's Hope Chapel in the Eastern Plaguelands.",
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFFFFFF00Active",
@@ -2764,9 +2311,70 @@ QST_QuestLog = {
 		["qNPC"] = {
 		},
 	},
-	[112] = {
-		["qLogged"] = 1426416789,
-		["qIndex"] = 17,
+	[93] = {
+		["qItems"] = {
+			[1] = "Shadow of Doom slain: 0/1",
+		},
+		["qDesc"] = "After you bring down the defenses of the Scourge summoning circles that have appeared in the zones under attack, you will be able to confront the acolytes who protect them.\n\nIn truth, these are not men. They are shadows, some of the Lich King's most frightening creatures. They can be revealed using the necrotic runes they carry, and then destroyed with magic or strength of arms.",
+		["qNPC"] = {
+		},
+		["qChoice"] = {
+			[1] = {
+				["qAmount"] = 1,
+			},
+			[2] = {
+				["qAmount"] = 1,
+			},
+		},
+		["qTag"] = "Elite",
+		["qPlayer"] = {
+			["Kylosandrax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFFFFFF00Active",
+			},
+		},
+		["qMoney"] = 0,
+		["qIndex"] = 13,
+		["qTitle"] = "Shadows of Doom",
+		["qZone"] = "Invasion",
+		["qObj"] = "Go to a summoning circle and kill a Shadow of Doom, then return to Commander Thomas Helleran at Light's Hope Chapel in Eastern Plaguelands.",
+		["qLevel"] = 60,
+		["qLogged"] = 1427148176,
+		["qNote"] = "",
+		["qArea"] = "Unknown",
+	},
+	[94] = {
+		["qItems"] = {
+			[1] = "Necrotic Rune: 2/10",
+		},
+		["qIndex"] = 14,
+		["qTitle"] = "Under the Shadow",
+		["qDesc"] = "The floating necropolises of the Scourge plague the lands of Horde and Alliance alike. Tanaris, the Blasted Lands, Winterspring and the Burning Steppes are blanketed in the shadows of the flying fortresses.\n\nOnly through our combined efforts will they be turned away.\n\nThe necropolises are supported by magical circles at various points in the invaded areas. We have determined that destroying the mindless hordes that surround these circles will destroy their defenses.",
+		["qZone"] = "Invasion",
+		["qLogged"] = 1427148176,
+		["qObj"] = "Check your map to find an area under Scourge attack. Go there and damage a necropolis by defeating the Scourge around them. Return 10 of their Necrotic Runes to Commander Thomas Helleran at Light's Hope Chapel in the Eastern Plaguelands.",
+		["qArea"] = "Unknown",
+		["qPlayer"] = {
+			["Kylosandrax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFFFFFF00Active",
+			},
+		},
+		["qLevel"] = 60,
+		["qChoice"] = {
+			[1] = {
+				["qAmount"] = 1,
+			},
+			[2] = {
+				["qAmount"] = 1,
+			},
+		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qNPC"] = {
+		},
+	},
+	[95] = {
+		["qLogged"] = 1427148176,
+		["qIndex"] = 16,
 		["qTitle"] = "The Champion of the Horde",
 		["qDesc"] = "I have received word from one of my champions that a way into the lair of the dragon may exist. You are to seek him out.\n\nRexxar wanders the desert wasteland of Desolace, traveling between Stonetalon and Feralas. He awaits your arrival.",
 		["qZone"] = "Orgrimmar",
@@ -2782,9 +2390,9 @@ QST_QuestLog = {
 		["qNPC"] = {
 		},
 	},
-	[113] = {
-		["qLogged"] = 1426416789,
-		["qIndex"] = 19,
+	[96] = {
+		["qLogged"] = 1427148176,
+		["qIndex"] = 18,
 		["qTitle"] = "Plagued Hatchlings",
 		["qDesc"] = "The Argent Dawn recently learned that the Scourge are creating their own plagued dragonflight!  We must stop them -- if the Scourge gain a force of dragons they'll sweep across Azeroth unchecked!\n\nTheir necromancers are breeding plagued dragons at the Scholomance, in the middle of Darrowmere Lake.\n\nGo to the Scholomance and kill as many hatchlings as you can... before they get any bigger!",
 		["qZone"] = "Scholomance",
@@ -2804,9 +2412,9 @@ QST_QuestLog = {
 		["qNPC"] = {
 		},
 	},
-	[114] = {
-		["qLogged"] = 1426416789,
-		["qIndex"] = 20,
+	[97] = {
+		["qLogged"] = 1427148176,
+		["qIndex"] = 19,
 		["qTitle"] = "Barov Family Fortune",
 		["qDesc"] = "Within the Scholomance lays the Barov family fortune. I, Alexi Barov, am one of the last two remaining heirs of the house Barov. My brother, Weldon, is the other.\n\nWeldon, the miserable coward, fled during the war and thus retained his worthless existence as a human.\n\nHe now searches for the deeds so that he may claim the fortune for his own. Recover the deeds before my brother does and I shall make you wealthy beyond your wildest dreams!",
 		["qZone"] = "Scholomance",
@@ -2829,23 +2437,15 @@ QST_QuestLog = {
 		["qNPC"] = {
 		},
 	},
-	[115] = {
-		["qLogged"] = 1426416789,
-		["qIndex"] = 22,
+	[98] = {
+		["qLogged"] = 1427148176,
+		["qIndex"] = 21,
 		["qTitle"] = "Field Duty",
 		["qDesc"] = "Greetings, Kylosandrax.  Before I assign you to more involved tasks in the war, you'll need to do your share of field duty.  \n\nYou will find Captain Skullsplit's Orgrimmar Legion outside Hive'Regal.\n\nReport to him and come back to me with proof of your field service.  I shall have a more advanced assignment ready for you.\n\nOh, please do your best to stay away from the Ironforge Brigade.  Tensions are high among our Alliance and Horde volunteers.",
 		["qZone"] = "Silithus",
 		["qItems"] = {
 			[1] = "Signed Field Duty Papers: 0/1",
 		},
-		["qObj"] = "Report to Krug Skullsplit at the Orgrimmar Legion post in front of Hive'Regal.  Prepare your Unsigned Field Duty Papers, obtain Signed Field Duty Papers and bring them to Windcaller Kaldon in Cenarion Hold.\n\nNote: Healing or casting beneficial spells on a member of the Orgrimmar Legion will flag you for PvP.",
-		["qTag"] = "Elite",
-		["qPlayer"] = {
-			["Kylosandrax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFFFFFF00Active",
-			},
-		},
-		["qLevel"] = 60,
 		["qChoice"] = {
 			[1] = {
 				["qAmount"] = 1,
@@ -2859,14 +2459,22 @@ QST_QuestLog = {
 				["qAmount"] = 1,
 			},
 		},
-		["qNote"] = "",
-		["qMoney"] = 0,
+		["qTag"] = "Elite",
+		["qPlayer"] = {
+			["Kylosandrax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFFFFFF00Active",
+			},
+		},
+		["qLevel"] = 60,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qObj"] = "Report to Krug Skullsplit at the Orgrimmar Legion post in front of Hive'Regal.  Prepare your Unsigned Field Duty Papers, obtain Signed Field Duty Papers and bring them to Windcaller Kaldon in Cenarion Hold.\n\nNote: Healing or casting beneficial spells on a member of the Orgrimmar Legion will flag you for PvP.",
 	},
-	[116] = {
-		["qLogged"] = 1426416789,
-		["qIndex"] = 23,
+	[99] = {
+		["qLogged"] = 1427148176,
+		["qIndex"] = 22,
 		["qTitle"] = "Hive'Ashi Scout Report",
 		["qDesc"] = "We've sent our best scouts deep into the silithid hives to gather intelligence.  Scout Jalia has been watching the silithid movements at Hive'Ashi for several days now.  Find her and obtain a written report.  We need to be able to act on that information as soon as possible, Kylosandrax.",
 		["qZone"] = "Silithus",
@@ -2881,6 +2489,10 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 0,
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:20801:0:0:0|h[Cenarion Tactical Badge]|h|r",
@@ -2893,14 +2505,10 @@ QST_QuestLog = {
 				["qAmount"] = 1,
 			},
 		},
-		["qNote"] = "",
-		["qMoney"] = 0,
-		["qNPC"] = {
-		},
 	},
-	[117] = {
-		["qLogged"] = 1426416789,
-		["qIndex"] = 24,
+	[100] = {
+		["qLogged"] = 1427148176,
+		["qIndex"] = 23,
 		["qTitle"] = "Hive'Regal Scout Report",
 		["qDesc"] = "We've sent our best scouts deep into the silithid hives to gather intelligence.  Scout Landion has been watching the silithid movements at Hive'Regal for several days now.  Find him and obtain a written report.  We need to be able to act on that information as soon as possible, Kylosandrax.",
 		["qZone"] = "Silithus",
@@ -2915,6 +2523,10 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 0,
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:20801:0:0:0|h[Cenarion Tactical Badge]|h|r",
@@ -2925,14 +2537,65 @@ QST_QuestLog = {
 				["qAmount"] = 1,
 			},
 		},
-		["qNote"] = "",
-		["qMoney"] = 0,
+	},
+	[101] = {
+		["qLogged"] = 1427148176,
+		["qIndex"] = 24,
+		["qTitle"] = "Lords of the Council",
+		["qDesc"] = "Lords of the Abyssal Council can only be summoned through the greater wind stones, and only the top ranking members of the Twilight's Council may speak to them.  But... I have found a way to upgrade your disguise and fool the Abyssal Lords!\n\nThe disguise calls for a ring of lordship, worn only by the highest members of the cult.  I will craft one for you if you can bring me large brilliant shards and abyssal signets.",
+		["qZone"] = "Silithus",
+		["qItems"] = {
+			[1] = "Large Brilliant Shard: 4/5",
+			[2] = "Abyssal Signet: 0/3",
+		},
+		["qObj"] = "Bring 5 Large Brilliant Shards and 3 Abyssal Signets to Aurel Goldleaf in Cenarion Hold.",
+		["qTag"] = "Elite",
+		["qPlayer"] = {
+			["Kylosandrax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFFFFFF00Active",
+			},
+		},
+		["qLevel"] = 60,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 5730,
+		["qReward"] = {
+			[1] = {
+				["qAmount"] = 1,
+			},
+		},
 	},
-	[118] = {
-		["qLogged"] = 1426416789,
+	[102] = {
+		["qLogged"] = 1427148176,
 		["qIndex"] = 25,
+		["qTitle"] = "Signet of the Dukes",
+		["qDesc"] = "Huum tells me you've figured out how to summon the Abyssal Dukes!  That's quite an accomplishment.\n\nYou know what else would be quite the accomplishment?  Smashing up one of those things really good.  That'll cause an impression on their underlings, if you know what I mean.  Bring back its signet as proof of the deed.",
+		["qZone"] = "Silithus",
+		["qItems"] = {
+			[1] = "Abyssal Signet: 0/1",
+		},
+		["qObj"] = "Bring the Abyssal Signet to Bor Wildmane in Cenarion Hold.",
+		["qTag"] = "Elite",
+		["qPlayer"] = {
+			["Kylosandrax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFFFFFF00Active",
+			},
+		},
+		["qLevel"] = 60,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 61200,
+		["qReward"] = {
+			[1] = {
+				["qAmount"] = 1,
+			},
+		},
+	},
+	[103] = {
+		["qLogged"] = 1427148176,
+		["qIndex"] = 26,
 		["qTitle"] = "The Twilight Lexicon",
 		["qDesc"] = "The Twilight's Hammer are not kind to those that leave their ranks.  They hunt me to this day like I'm some sort of beast!  Needless to say, an enemy of theirs is a friend of mine!\n\nTo decipher this Tablet I'll need the book used by their scribes to encode secret messages: the Twilight Lexicon.  It's such an important tool that they keep its three chapters in different locations!  The officers entrusted with the Lexicon are known as Twilight Keepers, look for them at the Twilight's Hammer camps.",
 		["qZone"] = "Silithus",
@@ -2953,9 +2616,9 @@ QST_QuestLog = {
 		["qNPC"] = {
 		},
 	},
-	[119] = {
-		["qLogged"] = 1426416789,
-		["qIndex"] = 26,
+	[104] = {
+		["qLogged"] = 1427148176,
+		["qIndex"] = 27,
 		["qTitle"] = "Twilight Marauders",
 		["qDesc"] = "Bands of mounted Twilight's Hammer cultists have been spotted riding outside the reach of our forces in Cenarion Hold, picking off our smaller patrols and caravans.\n\nFind and defeat the twilight marauders along with their leader, a terrible warrior by the name of Morna.  Report to Windcaller Proudhorn after completing the task.",
 		["qZone"] = "Silithus",
@@ -2971,6 +2634,10 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 0,
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:20801:0:0:0|h[Cenarion Tactical Badge]|h|r",
@@ -2981,24 +2648,20 @@ QST_QuestLog = {
 				["qAmount"] = 1,
 			},
 		},
-		["qNote"] = "",
-		["qMoney"] = 0,
-		["qNPC"] = {
-		},
 	},
-	[120] = {
-		["qLogged"] = 1426416789,
-		["qIndex"] = 28,
+	[105] = {
+		["qLogged"] = 1427148176,
+		["qIndex"] = 29,
 		["qTitle"] = "The Ectoplasmic Distiller",
 		["qDesc"] = "Ah, you're in need of my latest project... the extra-dimensional ghost revealer!  Unfortunately I've run out of funds and manpower.\n\nYou're willing to help?  Excellent!  Our first task is to build a device to harvest the very fabric of death!  Building an ectoplasmic distiller won't be an easy task, Kylosandrax.\n\nI'll need you to bring me an arcanite converter, some greater eternal essences and stonescale oil. I'll also need some volcanic ash from the lava pools in the Burning Steppes to build a filter.",
 		["qZone"] = "Tanaris",
+		["qObj"] = "Return to Mux Manascrambler in Gadgetzan with 1 Delicate Arcanite Converter, 4 Greater Eternal Essence, 10 Stonescale Oil, 25 Volcanic Ash and 40 gold.",
 		["qItems"] = {
 			[1] = "Delicate Arcanite Converter: 0/1",
 			[2] = "Greater Eternal Essence: 4/4",
 			[3] = "Stonescale Oil: 0/10",
 			[4] = "Volcanic Ash: 0/25",
 		},
-		["qObj"] = "Return to Mux Manascrambler in Gadgetzan with 1 Delicate Arcanite Converter, 4 Greater Eternal Essence, 10 Stonescale Oil, 25 Volcanic Ash and 40 gold.",
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFFFFFF00Active",
@@ -3015,19 +2678,145 @@ QST_QuestLog = {
 		["qNPC"] = {
 		},
 	},
-	[121] = {
-		["qLogged"] = 1426416789,
-		["qIndex"] = 30,
-		["qTitle"] = "Paragons of Power: The Vindicator's Breastplate",
-		["qDesc"] = "The vindicator's symbol of power is the breastplate.  It is forged with powerful mojo.  It is trusted only to those we revere.  It is the Zandalar symbol of vengeance.\n\nTo become a vindicator is to become vengeance.  Take the Paragons of Power we need from Zul'Gurub.  Bring them to us.  We will take the mojo stolen from us.  We will make the minions of Hakkar pay.  We will reward you with the vindicator's breastplate.\n\nGo.  Be our vengeance, Kylosandrax.",
-		["qZone"] = "Zul'Gurub",
-		["qItems"] = {
-			[1] = "Primal Hakkari Kossack: 0/1",
-		},
-		["qObj"] = "Bring Jin'rokh the Breaker a Primal Hakkari Kossack.  You must also have a reputation equal to or greater than Revered with the Zandalar Tribe.\n\nJin'rokh the Breaker is located on Yojamba Isle, Stranglethorn Vale.",
-		["qTag"] = "Raid",
+	[106] = {
+		["qLogged"] = 1427148931,
+		["qIndex"] = 2,
+		["qTitle"] = "Commander Gor'shak",
+		["qDesc"] = "Poor Gargal... didn't even see it coming. WHAM! The arrow landed dead center on the top of his head. He was no genius before but now...\n\n<Galamav grimaces.>\n\nWhen we dislodged the arrow, we noticed a rolled up note attached to the shaft. On the note was a crudely drawn picture of an orc behind bars with the signature of Commander Gor'shak attached.\n\nIf he's still alive in the Depths, you'll have to find him.\n\nA trap you say? Well no kidding, numb hooves! That's why you're going!\n",
+		["qZone"] = "Blackrock Depths",
+		["qObj"] = "Find Commander Gor'shak in Blackrock Depths.\n\nYou recall that the crudely drawn picture of the orc included bars drawn over the portrait. Perhaps you should search for a prison of some sort.",
+		["qTag"] = "Dungeon",
 		["qPlayer"] = {
-			["Kylosandrax of Warsong [12x] Blizzlike"] = {
+			["Ryjax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFFFFFF00Active",
+			},
+		},
+		["qLevel"] = 52,
+		["qNote"] = "",
+		["qMoney"] = 6600,
+		["qNPC"] = {
+		},
+	},
+	[107] = {
+		["qLogged"] = 1427148931,
+		["qIndex"] = 3,
+		["qTitle"] = "The Heart of the Mountain",
+		["qDesc"] = "For years I have sought a certain gem.  It is called the Heart of the Mountain and it's the size of your fist!  The Dark Iron dwarves have it locked in their vault and, try as I may, they won't let me purchase it.\n\nSo I must resort to force.\n\nFight your way to the Lower Vault of Blackrock Depths, breach its secret safe and gain the Heart.  To do that, you must defeat Watchman Doomgrip, and he won't appear until you've opened every relic coffer in the vault!\n\nGood luck.",
+		["qZone"] = "Blackrock Depths",
+		["qObj"] = "Bring the Heart of the Mountain to Maxwort Uberglint in the Burning Steppes.",
+		["qTag"] = "Dungeon",
+		["qPlayer"] = {
+			["Ryjax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFFFFFF00Active",
+			},
+		},
+		["qLevel"] = 55,
+		["qItems"] = {
+			[1] = "The Heart of the Mountain: 0/1",
+		},
+		["qNote"] = "",
+		["qMoney"] = 33000,
+		["qNPC"] = {
+		},
+	},
+	[108] = {
+		["qLogged"] = 1427148931,
+		["qIndex"] = 4,
+		["qTitle"] = "Disharmony of Fire",
+		["qDesc"] = "I can taste the foulness in the air that surrounds you, Ryjax. There is another, hidden in the depths of Blackrock, who does control this foulness.\n\nThe wind and earth cry his name: Lord Incendius... but someone... something... commands this being. He is merely an emissary.\n\nFind him and discover where his master hides. Return to me when you have collected this information.\n",
+		["qZone"] = "Blackrock Depths",
+		["qItems"] = {
+			[1] = "Lord Incendius slain: 0/1",
+			[2] = "Tablet of Kurniya: 0/1",
+		},
+		["qObj"] = "Enter Blackrock Depths and track down Lord Incendius. Slay him and return any source of information you may find to Thunderheart.\n",
+		["qTag"] = "Dungeon",
+		["qPlayer"] = {
+			["Ryjax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFFFFFF00Active",
+			},
+		},
+		["qLevel"] = 56,
+		["qChoice"] = {
+			[1] = {
+				["qAmount"] = 1,
+			},
+			[2] = {
+				["qAmount"] = 1,
+			},
+			[3] = {
+				["qAmount"] = 1,
+			},
+			[4] = {
+				["qAmount"] = 1,
+			},
+		},
+		["qNote"] = "",
+		["qMoney"] = 84000,
+		["qNPC"] = {
+		},
+	},
+	[109] = {
+		["qLogged"] = 1427148931,
+		["qIndex"] = 6,
+		["qTitle"] = "Bijou's Belongings",
+		["qDesc"] = "Ordinarily I don't deal with taurens but it seems that I'm stuck between a troll and a hard place. You see, my mission here is one of utmost importance to the Horde. The information I've discovered, however, applies to the well being of the Alliance as well. Now believe me, I'm no Alliance sympathizer, but the Blackrock threat is bigger than just a bunch of orcs.\n\nYou help me out by finding my belongings and I'll help you out with some information that could prove useful to your kind.\n\nDeal?",
+		["qZone"] = "Blackrock Spire",
+		["qObj"] = "Find Bijou's Belongings and return them to her. Good luck!\n",
+		["qTag"] = "Dungeon",
+		["qPlayer"] = {
+			["Ryjax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFFFFFF00Active",
+			},
+		},
+		["qLevel"] = 59,
+		["qItems"] = {
+			[1] = "Bijou's Belongings: 0/1",
+		},
+		["qNote"] = "",
+		["qMoney"] = 8400,
+		["qNPC"] = {
+		},
+	},
+	[110] = {
+		["qLogged"] = 1427148931,
+		["qIndex"] = 7,
+		["qTitle"] = "En-Ay-Es-Tee-Why",
+		["qDesc"] = "Believe it or not, there are people out there willing to pay for the most vile of domesticated beast!\n\nI'd sent Bijou into the Spire to try and collect some of those spire spider eggs but I haven't heard from her in weeks. Maybe you can help me out?\n\nI'll tell you what, Ryjax. Go to Blackrock Spire and collect some spire spider eggs for me. Bring them back here and not only will I give you a little cash, but I'll even domesticate one for you!",
+		["qZone"] = "Blackrock Spire",
+		["qItems"] = {
+			[1] = "Spire Spider Egg: 0/15",
+		},
+		["qObj"] = "Travel to Blackrock Spire and collect 15 Spire Spider Eggs for Kibler.\n\nBy the sound of it, these eggs could be found near spiders.\n",
+		["qTag"] = "Dungeon",
+		["qPlayer"] = {
+			["Ryjax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFFFFFF00Active",
+			},
+		},
+		["qLevel"] = 59,
+		["qReward"] = {
+			[1] = {
+				["qAmount"] = 1,
+			},
+		},
+		["qNote"] = "",
+		["qMoney"] = 35400,
+		["qNPC"] = {
+		},
+	},
+	[111] = {
+		["qLogged"] = 1427148931,
+		["qIndex"] = 8,
+		["qTitle"] = "Mother's Milk",
+		["qDesc"] = "It's probably one of the most potent poisons in the world, tauren!\n\nI've overheard the Blackrock speaking about its lethality in my jaunts into the Spire. They call it 'Mother's Milk', named after Mother Smolderweb, the big nasty spider in the Skitterweb cave.\n\nNow here's what I need from you: A live sample of the Milk, flowing through YOUR veins. Just bringing me the gland won't be enough! Get her to poison you and come back to me!\n\nThen... I get to milk ya!\n\n<Rubs his hands together in anticipation.>",
+		["qZone"] = "Blackrock Spire",
+		["qItems"] = {
+		},
+		["qObj"] = "In the heart of Blackrock Spire you will find Mother Smolderweb. Engage her and get her to poison you. Chances are good that you will have to kill her as well. Return to Ragged John when you are poisoned so that he can 'milk' you.",
+		["qTag"] = "Dungeon",
+		["qPlayer"] = {
+			["Ryjax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFFFFFF00Active",
 			},
 		},
@@ -3038,7 +2827,263 @@ QST_QuestLog = {
 			},
 		},
 		["qNote"] = "",
-		["qMoney"] = 3900,
+		["qMoney"] = 62700,
+		["qNPC"] = {
+		},
+	},
+	[112] = {
+		["qLogged"] = 1427148931,
+		["qIndex"] = 10,
+		["qTitle"] = "Lethtendris's Web",
+		["qDesc"] = "The blood elf Lethtendris has overstepped her bounds.  So eager was she to gather magical power that she defied her brethren and created a device of insidious design, a web meant to siphon the tainted magical energies of Dire Maul.  Even now she gathers those energies and plans to release them against her enemies.\n\nLethtendris must be stopped.  Find her within the Warpwood Quarter of Dire Maul, defeat her and bring her web to me so that it might be returned to more clear-headed blood elves for study.",
+		["qZone"] = "Dire Maul",
+		["qItems"] = {
+			[1] = "Lethtendris's Web: 0/1",
+		},
+		["qObj"] = "Bring Lethtendris's Web to Talo Thornhoof at Camp Mojache in Feralas.",
+		["qTag"] = "Dungeon",
+		["qPlayer"] = {
+			["Ryjax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFFFFFF00Active",
+			},
+		},
+		["qLevel"] = 57,
+		["qReward"] = {
+			[1] = {
+				["qAmount"] = 1,
+			},
+		},
+		["qNote"] = "",
+		["qMoney"] = 58800,
+		["qNPC"] = {
+		},
+	},
+	[113] = {
+		["qLogged"] = 1427148931,
+		["qIndex"] = 11,
+		["qTitle"] = "Elven Legends",
+		["qDesc"] = "Several years ago, a lone elven master named Kariel Winthalus fled the devastation of his homeland with several ancient elven artifacts in tow.\n\nOur search for this lost master lead us from the ruins of Quel'Thalas, through the Burning Steppes, across the great expanses of the sea, to Feralas.\n\nWe suspect that the elf sought sanctuary in the halls of Eldre'Thalas (what is now known as Dire Maul).\n\nYou must find him, adventurer. Whether alive or dead, the knowledge he carried must be recovered!",
+		["qZone"] = "Dire Maul",
+		["qObj"] = "Search Dire Maul for Kariel Winthalus. Report back to Sage Korolusk at Camp Mojache with whatever information that you may find.",
+		["qTag"] = "Dungeon",
+		["qPlayer"] = {
+			["Ryjax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFFFFFF00Active",
+			},
+		},
+		["qLevel"] = 60,
+		["qItems"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 62700,
+		["qNPC"] = {
+		},
+	},
+	[114] = {
+		["qItems"] = {
+			[1] = "Putrid Vine: 0/1",
+		},
+		["qDesc"] = "It is as I feared -- the toxin is simply too weak for such a powerful creature.\n\nIf we are to create a toxin of high enough potency, you must venture to the bottom of the Temple of Atal'Hakkar, unlock the secrets of the altar and recover a putrid vine from the guardian there.  The temple is dangerous, and it would behoove you to bring friends.\n\nReturn to me when this is done.",
+		["qNPC"] = {
+		},
+		["qChoice"] = {
+			[1] = {
+				["qAmount"] = 1,
+			},
+			[2] = {
+				["qAmount"] = 1,
+			},
+			[3] = {
+				["qAmount"] = 1,
+			},
+		},
+		["qTag"] = "Dungeon",
+		["qPlayer"] = {
+			["Ryjax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFFFFFF00Active",
+			},
+		},
+		["qMoney"] = 6600,
+		["qIndex"] = 13,
+		["qTitle"] = "A Better Ingredient",
+		["qZone"] = "Druid",
+		["qObj"] = "Retrieve a Putrid Vine from the guardian at the bottom of the Sunken Temple and return to Torwa Pathfinder.",
+		["qLevel"] = 52,
+		["qNote"] = "",
+		["qLogged"] = 1427148931,
+		["qArea"] = "Unknown",
+	},
+	[115] = {
+		["qLogged"] = 1427148931,
+		["qIndex"] = 15,
+		["qTitle"] = "The Champion of the Horde",
+		["qDesc"] = "I have received word from one of my champions that a way into the lair of the dragon may exist. You are to seek him out.\n\nRexxar wanders the desert wasteland of Desolace, traveling between Stonetalon and Feralas. He awaits your arrival.",
+		["qZone"] = "Orgrimmar",
+		["qObj"] = "Seek out Rexxar. The Warchief has instructed you as to his whereabouts. Search the paths of Desolace, between the Stonetalon Mountains and Feralas.",
+		["qPlayer"] = {
+			["Ryjax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFFFFFF00Active",
+			},
+		},
+		["qLevel"] = 60,
+		["qNote"] = "",
+		["qMoney"] = 2880,
+		["qNPC"] = {
+		},
+	},
+	[116] = {
+		["qLogged"] = 1427148931,
+		["qIndex"] = 17,
+		["qTitle"] = "Plagued Hatchlings",
+		["qDesc"] = "The Argent Dawn recently learned that the Scourge are creating their own plagued dragonflight!  We must stop them -- if the Scourge gain a force of dragons they'll sweep across Azeroth unchecked!\n\nTheir necromancers are breeding plagued dragons at the Scholomance, in the middle of Darrowmere Lake.\n\nGo to the Scholomance and kill as many hatchlings as you can... before they get any bigger!",
+		["qZone"] = "Scholomance",
+		["qObj"] = "Kill 20 Plagued Hatchlings, then return to Betina Bigglezink at the Light's Hope Chapel.",
+		["qTag"] = "Dungeon",
+		["qPlayer"] = {
+			["Ryjax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFFFFFF00Active",
+			},
+		},
+		["qLevel"] = 58,
+		["qItems"] = {
+			[1] = "Plagued Hatchling slain: 0/20",
+		},
+		["qNote"] = "",
+		["qMoney"] = 35100,
+		["qNPC"] = {
+		},
+	},
+	[117] = {
+		["qLogged"] = 1427148931,
+		["qIndex"] = 18,
+		["qTitle"] = "Barov Family Fortune",
+		["qDesc"] = "Within the Scholomance lays the Barov family fortune. I, Alexi Barov, am one of the last two remaining heirs of the house Barov. My brother, Weldon, is the other.\n\nWeldon, the miserable coward, fled during the war and thus retained his worthless existence as a human.\n\nHe now searches for the deeds so that he may claim the fortune for his own. Recover the deeds before my brother does and I shall make you wealthy beyond your wildest dreams!",
+		["qZone"] = "Scholomance",
+		["qObj"] = "Venture to the Scholomance and recover the Barov family fortune. Four deeds make up this fortune: The Deed to Caer Darrow; The Deed to Brill; The Deed to Tarren Mill; and The Deed to Southshore. Return to Alexi Barov when you have completed this task.",
+		["qTag"] = "Dungeon",
+		["qPlayer"] = {
+			["Ryjax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFFFFFF00Active",
+			},
+		},
+		["qLevel"] = 60,
+		["qItems"] = {
+			[1] = "The Deed to Brill: 0/1",
+			[2] = "The Deed to Caer Darrow: 0/1",
+			[3] = "The Deed to Southshore: 0/1",
+			[4] = "The Deed to Tarren Mill: 0/1",
+		},
+		["qNote"] = "",
+		["qMoney"] = 62700,
+		["qNPC"] = {
+		},
+	},
+	[118] = {
+		["qLogged"] = 1427148931,
+		["qIndex"] = 19,
+		["qTitle"] = "Krastinov's Bag of Horrors",
+		["qDesc"] = "A great weight has been lifted from our hearts, Ryjax, but your task is not yet complete. Krastinov's master, Kirtonos, still lives.\n\nBefore you may face Kirtonos, however, you must first secure a method in which to summon him.\n\nIt is said that Jandice Barov stewards the blood of innocents from Krastinov to Kirtonos.\n\nFind her in the sunken catacombs of Scholomance and strike her down. Bring back any clues that you may find.",
+		["qZone"] = "Scholomance",
+		["qObj"] = "Locate Jandice Barov in the Scholomance and destroy her. From her corpse recover Krastinov's Bag of Horrors. Return the bag to Eva Sarkhoff.",
+		["qTag"] = "Dungeon",
+		["qPlayer"] = {
+			["Ryjax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFFFFFF00Active",
+			},
+		},
+		["qLevel"] = 60,
+		["qItems"] = {
+			[1] = "Krastinov's Bag of Horrors: 0/1",
+		},
+		["qNote"] = "",
+		["qMoney"] = 8700,
+		["qNPC"] = {
+		},
+	},
+	[119] = {
+		["qLogged"] = 1427148931,
+		["qIndex"] = 21,
+		["qTitle"] = "Great-father Winter is Here!",
+		["qDesc"] = "Have a wondrous Winter Veil, friend!  Be sure to say hello to Greatfather Winter!  If you've been nice this year, you'll receive wondrous treats on the day of the Feast of Winter Veil.  Be sure to tell him what you hope to get this year!\n\nAlso, be sure to stock up on treats to give those who've been nice this year.  We have a great selection to choose from.  Fresh from our farm to your plate - it's Smokywood Pastures wholesome goodness!",
+		["qArea"] = "Unknown",
+		["qObj"] = "Speak with Greatfather Winter; he is located near the Smokywood Pastures vendor area in Orgrimmar.",
+		["qPlayer"] = {
+			["Ryjax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFFFFFF00Active",
+			},
+		},
+		["qLevel"] = 60,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 390,
+		["qZone"] = "Seasonal",
+	},
+	[120] = {
+		["qLogged"] = 1427148931,
+		["qIndex"] = 23,
+		["qTitle"] = "Into The Maw of Madness",
+		["qDesc"] = "I need you to venture into Hive'Regal and find what became of my dearest Natalia, Ryjax. This will be no easy task for you. Before you dive headlong into the maw of madness, make sure that you go back and speak with those dwarves. They might be able to give you some tips on dealing with the silithid that inhabit that hive.\n\nAnd Ryjax, if she truly is as mad as they say... do what you must.\n\n<Commander Mar'alith turns away from you.>\n",
+		["qZone"] = "Silithus",
+		["qItems"] = {
+			[1] = "The Fate of Mistress Natalia Mar'alith: 0/1",
+		},
+		["qObj"] = "Commander Mar'alith at Cenarion Hold in Silithus wants you to find his beloved Natalia. The information that you gathered points to Hive'Regal in the south as being the area in which you may find Mistress Natalia Mar'alith.\n\nDo not forget to visit the dwarves at Bronzebeard's camp before venturing into the hive. They might have some additional work and advice for you.\n\nAnd Ryjax, remember the Commander's words: \"Do what you must...\"",
+		["qTag"] = "Elite",
+		["qPlayer"] = {
+			["Ryjax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFFFFFF00Active",
+			},
+		},
+		["qLevel"] = 60,
+		["qReward"] = {
+			[1] = {
+				["qAmount"] = 1,
+			},
+		},
+		["qNote"] = "",
+		["qMoney"] = 61200,
+		["qNPC"] = {
+		},
+	},
+	[121] = {
+		["qLogged"] = 1427148931,
+		["qIndex"] = 25,
+		["qTitle"] = "The Flesh Does Not Lie",
+		["qDesc"] = "The Forsaken apothecaries are not the only beings in this world schooled in the sciences.\n\nI have been studying the plague for years, tauren. We had previously thought that the potency of the plague was dwindling, but what I have discovered here in the Plaguelands is startling. The plague seems to be growing in strength!\n\nI need to run more tests! The most potent source of the plague is from the tainted flesh of the most recently infected. Travel to Stratholme and bring me samples, Ryjax.\n",
+		["qZone"] = "Stratholme",
+		["qObj"] = "Recover 10 Plagued Flesh Samples from Stratholme and return them to Betina Bigglezink. You suspect that any creature in Stratholme would have said flesh sample.",
+		["qTag"] = "Dungeon",
+		["qPlayer"] = {
+			["Ryjax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFFFFFF00Active",
+			},
+		},
+		["qLevel"] = 60,
+		["qItems"] = {
+			[1] = "Plagued Flesh Sample: 8/20",
+		},
+		["qNote"] = "",
+		["qMoney"] = 62700,
+		["qNPC"] = {
+		},
+	},
+	[122] = {
+		["qLogged"] = 1427148931,
+		["qIndex"] = 27,
+		["qTitle"] = "Nat's Measuring Tape",
+		["qDesc"] = "Amongst the shattered fishing lures and tackle is a rolled, silken measuring tape.  Attached to the tape is a label that reads:\n\n\"Nat Pagle, Dustwallow Marsh.\"",
+		["qZone"] = "Zul'Gurub",
+		["qObj"] = "Return Nat's Measuring Tape to Nat Pagle in Dustwallow Marsh.",
+		["qTag"] = "Raid",
+		["qPlayer"] = {
+			["Ryjax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFF00FF19Completed",
+			},
+		},
+		["qLevel"] = 60,
+		["qNote"] = "",
+		["qMoney"] = 570,
 		["qNPC"] = {
 		},
 	},
@@ -13940,6 +13985,183 @@ QST_QuestBase = {
 		["qNote"] = "",
 		["qMoney"] = 510,
 		["qNPC"] = {
+		},
+	},
+	[438] = {
+		["qItems"] = {
+			[1] = "Shadow of Doom slain: 0/1",
+		},
+		["qLogged"] = 1426442699,
+		["qTitle"] = "Shadows of Doom",
+		["qDesc"] = "After you bring down the defenses of the Scourge summoning circles that have appeared in the zones under attack, you will be able to confront the acolytes who protect them.\n\nIn truth, these are not men. They are shadows, some of the Lich King's most frightening creatures. They can be revealed using the necrotic runes they carry, and then destroyed with magic or strength of arms.",
+		["qZone"] = "Invasion",
+		["qNPC"] = {
+		},
+		["qChoice"] = {
+			[1] = {
+				["qLink"] = "|cff1eff00|Hitem:23123:0:0:0|h[Blessed Wizard Oil]|h|r",
+				["qTex"] = "Interface\\Icons\\INV_Potion_26",
+				["qAmount"] = 5,
+			},
+			[2] = {
+				["qLink"] = "|cff1eff00|Hitem:23122:0:0:0|h[Consecrated Sharpening Stone]|h|r",
+				["qTex"] = "Interface\\Icons\\INV_Stone_SharpeningStone_02",
+				["qAmount"] = 5,
+			},
+		},
+		["qTag"] = "Elite",
+		["qPlayer"] = {
+			["Kylosandrax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFF7F7F7FUnknown",
+			},
+		},
+		["qLevel"] = 60,
+		["qArea"] = "Unknown",
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qObj"] = "Go to a summoning circle and kill a Shadow of Doom, then return to Commander Thomas Helleran at Light's Hope Chapel in Eastern Plaguelands.",
+	},
+	[439] = {
+		["qLogged"] = 1426442720,
+		["qTitle"] = "Under the Shadow",
+		["qDesc"] = "The floating necropolises of the Scourge plague the lands of Horde and Alliance alike. Tanaris, the Blasted Lands, Winterspring and the Burning Steppes are blanketed in the shadows of the flying fortresses.\n\nOnly through our combined efforts will they be turned away.\n\nThe necropolises are supported by magical circles at various points in the invaded areas. We have determined that destroying the mindless hordes that surround these circles will destroy their defenses.",
+		["qZone"] = "Invasion",
+		["qObj"] = "Check your map to find an area under Scourge attack. Go there and damage a necropolis by defeating the Scourge around them. Return 10 of their Necrotic Runes to Commander Thomas Helleran at Light's Hope Chapel in the Eastern Plaguelands.",
+		["qChoice"] = {
+			[1] = {
+				["qLink"] = "|cff1eff00|Hitem:23123:0:0:0|h[Blessed Wizard Oil]|h|r",
+				["qTex"] = "Interface\\Icons\\INV_Potion_26",
+				["qAmount"] = 2,
+			},
+			[2] = {
+				["qLink"] = "|cff1eff00|Hitem:23122:0:0:0|h[Consecrated Sharpening Stone]|h|r",
+				["qTex"] = "Interface\\Icons\\INV_Stone_SharpeningStone_02",
+				["qAmount"] = 2,
+			},
+		},
+		["qItems"] = {
+			[1] = "Necrotic Rune: 2/10",
+		},
+		["qPlayer"] = {
+			["Kylosandrax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFF7F7F7FUnknown",
+			},
+		},
+		["qLevel"] = 60,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qArea"] = "Unknown",
+	},
+	[440] = {
+		["qItems"] = {
+			[1] = "Arcane Crystal: 0/5",
+			[2] = "Nexus Crystal: 0/2",
+			[3] = "Righteous Orb: 1/1",
+		},
+		["qTitle"] = "The Dread Citadel - Naxxramas",
+		["qDesc"] = "In the thick of Plaguewood lies the entrance to the dread citadel of Naxxramas. Previously, all attempts to enter had been stymied by the magical wards placed upon the rune portal. That is, until now.\n\nWe have devised a way to gain entry via arcane cloaking - an old cantrip of the Kirin Tor with a few modifications of my own. Since your dedication to the cause of the Dawn is somewhat lacking, Kylosandrax, the price will be high. You may decline and choose to return when you are revered or exalted for a discount.",
+		["qZone"] = "Eastern Plaguelands",
+		["qObj"] = "Archmage Angela Dosantos at Light's Hope Chapel in the Eastern Plaguelands wants 5 Arcane Crystals, 2 Nexus Crystals, 1 Righteous Orb and 60 gold pieces. You must also be Honored with the Argent Dawn.\n",
+		["qPlayer"] = {
+			["Kylosandrax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFF7F7F7FUnknown",
+			},
+		},
+		["qLevel"] = 60,
+		["qLogged"] = 1426442866,
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qNPC"] = {
+		},
+	},
+	[441] = {
+		["qLogged"] = 1427064313,
+		["qTitle"] = "Bor Wildmane",
+		["qDesc"] = "Now that you have a medallion and can summon an Abyssal Duke, speak with Bor Wildmane.  He will set you on a task against the Abyssal Council.\n\nGood luck, Kylosandrax.  And if you ever need more medallions, return to me.",
+		["qZone"] = "Silithus",
+		["qObj"] = "Speak with Bor Wildmane in Cenarion Hold.",
+		["qTag"] = "Elite",
+		["qPlayer"] = {
+			["Kylosandrax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFF7F7F7FUnknown",
+			},
+		},
+		["qLevel"] = 60,
+		["qNote"] = "",
+		["qMoney"] = 570,
+		["qNPC"] = {
+		},
+	},
+	[442] = {
+		["qLogged"] = 1427064386,
+		["qTitle"] = "Signet of the Dukes",
+		["qDesc"] = "Huum tells me you've figured out how to summon the Abyssal Dukes!  That's quite an accomplishment.\n\nYou know what else would be quite the accomplishment?  Smashing up one of those things really good.  That'll cause an impression on their underlings, if you know what I mean.  Bring back its signet as proof of the deed.",
+		["qNPC"] = {
+		},
+		["qItems"] = {
+			[1] = "Abyssal Signet: 0/1",
+		},
+		["qObj"] = "Bring the Abyssal Signet to Bor Wildmane in Cenarion Hold.",
+		["qTag"] = "Elite",
+		["qPlayer"] = {
+			["Kylosandrax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFF7F7F7FUnknown",
+			},
+		},
+		["qLevel"] = 60,
+		["qZone"] = "Silithus",
+		["qNote"] = "",
+		["qMoney"] = 61200,
+		["qReward"] = {
+			[1] = {
+				["qAmount"] = 1,
+			},
+		},
+	},
+	[443] = {
+		["qLogged"] = 1427071090,
+		["qTitle"] = "Goldleaf's Discovery",
+		["qDesc"] = "Kylosandrax, Aurel Goldleaf thinks she's found a way to summon and defeat a ruling member of the Abyssal Council!  Such a task will be dangerous, but you have earned great respect amongst the Cenarion Circle.  We know that if anyone can do it, you can.\n\nMay fortune go with you, Kylosandrax.  Speak with Aurel when you are ready.",
+		["qZone"] = "Silithus",
+		["qObj"] = "Speak with Aurel Goldleaf in Cenarion Hold.",
+		["qPlayer"] = {
+			["Kylosandrax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFF7F7F7FUnknown",
+			},
+		},
+		["qLevel"] = 60,
+		["qNote"] = "",
+		["qMoney"] = 5700,
+		["qNPC"] = {
+		},
+	},
+	[444] = {
+		["qLogged"] = 1427071117,
+		["qTitle"] = "Lords of the Council",
+		["qDesc"] = "Lords of the Abyssal Council can only be summoned through the greater wind stones, and only the top ranking members of the Twilight's Council may speak to them.  But... I have found a way to upgrade your disguise and fool the Abyssal Lords!\n\nThe disguise calls for a ring of lordship, worn only by the highest members of the cult.  I will craft one for you if you can bring me large brilliant shards and abyssal signets.",
+		["qZone"] = "Silithus",
+		["qItems"] = {
+			[1] = "Large Brilliant Shard: 4/5",
+			[2] = "Abyssal Signet: 0/3",
+		},
+		["qObj"] = "Bring 5 Large Brilliant Shards and 3 Abyssal Signets to Aurel Goldleaf in Cenarion Hold.",
+		["qTag"] = "Elite",
+		["qPlayer"] = {
+			["Kylosandrax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFF7F7F7FUnknown",
+			},
+		},
+		["qLevel"] = 60,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 5730,
+		["qReward"] = {
+			[1] = {
+				["qAmount"] = 1,
+			},
 		},
 	},
 }

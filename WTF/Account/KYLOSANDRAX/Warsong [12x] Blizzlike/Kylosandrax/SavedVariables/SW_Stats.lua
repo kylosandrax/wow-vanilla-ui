@@ -5,19 +5,12 @@ SW_Settings = {
 	["ReportAmount"] = 6,
 	["RE_Multiline"] = 1,
 	["TL_SafeMode"] = true,
-	["BarFrames"] = {
-		["SW_BarFrame1"] = {
-			["Docked"] = {
-				[1] = 1,
-			},
-			["Selected"] = 1,
-		},
-	},
+	["SyncBCTarget"] = "SW_BarSyncFrame_OptRaid",
 	["lastWOWBuild"] = "1.12.15875Sep 19 2006",
 	["SYNCLastAction"] = 1407614521,
 	["RepTarget"] = "SW_RepTo_Group",
-	["IsRunning"] = true,
-	["OPT_ShowMainWinDPS"] = 1,
+	["SW_TL_AutoDelete"] = true,
+	["LAST_V_RUN"] = "1.5.3",
 	["SHOWMAIN"] = true,
 	["BFLocked"] = true,
 	["Colors"] = {
@@ -112,13 +105,9 @@ SW_Settings = {
 			[4] = 1,
 		},
 	},
-	["SyncBCTarget"] = "SW_BarSyncFrame_OptRaid",
-	["LAST_V_RUN"] = "1.5.3",
-	["SW_IconPosR"] = 90,
-	["SW_TL_AutoDelete"] = true,
 	["InfoSettings"] = {
 		[1] = {
-			["CF"] = 1,
+			["IN"] = 1,
 			["OT"] = "DD",
 			["BC"] = {
 				[1] = 0,
@@ -140,7 +129,7 @@ SW_Settings = {
 			["COLC"] = 1,
 			["PF"] = "SW_PF_MM",
 			["ShowRank"] = 1,
-			["BH"] = 20,
+			["BH"] = 13,
 			["ShowNumber"] = 1,
 			["BFC"] = {
 				[1] = 1,
@@ -150,7 +139,7 @@ SW_Settings = {
 			},
 			["BT"] = 9,
 			["BFS"] = 10,
-			["IN"] = 1,
+			["CF"] = 1,
 			["selSchool"] = 0,
 		},
 		[2] = {
@@ -194,9 +183,9 @@ SW_Settings = {
 				[3] = 0,
 				[4] = 1,
 			},
-			["HealEff"] = true,
+			["OTF"] = "Damage Per Second",
 			["ShowPercent"] = 1,
-			["HealInF"] = true,
+			["UCC"] = 1,
 			["OC"] = {
 				[1] = 0,
 				[2] = 0,
@@ -206,8 +195,8 @@ SW_Settings = {
 			["SF"] = "SW_Filter_EverGroup",
 			["BT"] = 9,
 			["ShowRank"] = 1,
-			["UCC"] = 1,
-			["OTF"] = "Damage Per Second",
+			["HealInF"] = true,
+			["HealEff"] = true,
 			["ShowNumber"] = 1,
 			["BFC"] = {
 				[1] = 1,
@@ -221,7 +210,7 @@ SW_Settings = {
 			["BH"] = 9,
 		},
 		[4] = {
-			["IN"] = 2,
+			["CF"] = 1,
 			["OT"] = "EH",
 			["BC"] = {
 				[1] = 0,
@@ -229,10 +218,10 @@ SW_Settings = {
 				[3] = 0,
 				[4] = 1,
 			},
-			["HealEff"] = true,
+			["OTF"] = "Effective Healing",
 			["HealOH"] = false,
 			["ShowPercent"] = 1,
-			["HealInF"] = true,
+			["UCC"] = 1,
 			["OC"] = {
 				[1] = 0,
 				[2] = 0,
@@ -240,10 +229,10 @@ SW_Settings = {
 				[4] = 0.4600000381469727,
 			},
 			["SF"] = "SW_Filter_EverGroup",
-			["COLC"] = 1,
+			["BT"] = 9,
 			["ShowRank"] = 1,
-			["UCC"] = 1,
-			["OTF"] = "Effective Healing",
+			["HealInF"] = true,
+			["HealEff"] = true,
 			["ShowNumber"] = 1,
 			["BFC"] = {
 				[1] = 1,
@@ -252,12 +241,12 @@ SW_Settings = {
 				[4] = 1,
 			},
 			["BFS"] = 10,
-			["CF"] = 1,
-			["BT"] = 9,
+			["IN"] = 2,
+			["COLC"] = 1,
 			["BH"] = 15,
 		},
 		[5] = {
-			["IN"] = 2,
+			["CF"] = 1,
 			["OT"] = "OH",
 			["BC"] = {
 				[1] = 0,
@@ -265,10 +254,10 @@ SW_Settings = {
 				[3] = 0,
 				[4] = 1,
 			},
-			["OTF"] = "Over Healing",
+			["HealEff"] = false,
 			["HealOH"] = true,
 			["ShowPercent"] = 1,
-			["HealInF"] = true,
+			["UCC"] = 1,
 			["OC"] = {
 				[1] = 0,
 				[2] = 0,
@@ -276,10 +265,10 @@ SW_Settings = {
 				[4] = 0.449999988079071,
 			},
 			["BFS"] = 10,
-			["COLC"] = 2,
+			["BT"] = 9,
 			["ShowRank"] = 1,
-			["UCC"] = 1,
-			["HealEff"] = false,
+			["HealInF"] = true,
+			["OTF"] = "Over Healing",
 			["ShowNumber"] = 1,
 			["BFC"] = {
 				[1] = 1,
@@ -287,61 +276,135 @@ SW_Settings = {
 				[3] = 1,
 				[4] = 1,
 			},
-			["CF"] = 1,
-			["BT"] = 9,
+			["IN"] = 2,
+			["COLC"] = 2,
 			["SF"] = "SW_Filter_EverGroup",
 			["BH"] = 9,
 		},
 	},
-}
-SW_S_Details = {
-	["Morog"] = {
-		["Type"] = {
-			["Other"] = {
-				[1] = 0,
-				[2] = 0,
-				[3] = 0,
-				[4] = 1222,
-				[5] = 1222,
-				[6] = 1,
+	["BarFrames"] = {
+		["SW_BarFrame1"] = {
+			["Docked"] = {
+				[1] = 1,
 			},
-		},
-		["Recieved"] = {
-			[1] = 1222,
-			[2] = 0,
-		},
-		["Total"] = {
-			[1] = 0,
-			[2] = 0,
+			["Selected"] = 1,
 		},
 	},
-	["WORLD"] = {
+	["SW_IconPosR"] = 90,
+	["IsRunning"] = true,
+	["OPT_ShowMainWinDPS"] = 1,
+}
+SW_S_Details = {
+	["Hive'Ashi Stinger"] = {
 		["Normal"] = {
-			[1] = 3609,
+			[1] = 1211,
 			[2] = 0,
-			[3] = 1418,
-			[4] = 4,
+			[3] = 258,
+			[4] = 5,
 			[5] = 0,
 			[6] = 0,
 			[7] = 0,
 		},
 		["Total"] = {
-			[1] = 3609,
+			[1] = 1211,
 			[2] = 0,
+		},
+		["Recieved"] = {
+			[1] = 8785,
+			[2] = 0,
+		},
+		["CLASSE"] = "WARRIOR",
+		["Type"] = {
+			["Other"] = {
+				[1] = 1211,
+				[2] = 258,
+				[3] = 5,
+				[4] = 8785,
+				[5] = 862,
+				[6] = 23,
+			},
+		},
+		["Deaths"] = 1,
+		["UTYPE"] = "NPC",
+	},
+	["WORLD"] = {
+		["Normal"] = {
+			[1] = 512,
+			[2] = 0,
+			[3] = 502,
+			[4] = 2,
+			[5] = 0,
+			[6] = 0,
+			[7] = 0,
+		},
+		["Type"] = {
+			["Other"] = {
+				[1] = 512,
+				[2] = 502,
+				[3] = 2,
+				[4] = 0,
+				[5] = 0,
+				[6] = 0,
+			},
 		},
 		["Recieved"] = {
 			[1] = 0,
 			[2] = 0,
 		},
+		["Total"] = {
+			[1] = 512,
+			[2] = 0,
+		},
+	},
+	["Natsho"] = {
 		["Type"] = {
 			["Other"] = {
-				[1] = 3609,
-				[2] = 1418,
-				[3] = 4,
-				[4] = 0,
-				[5] = 0,
-				[6] = 0,
+				[1] = 0,
+				[2] = 0,
+				[3] = 0,
+				[4] = 502,
+				[5] = 502,
+				[6] = 1,
 			},
+		},
+		["Recieved"] = {
+			[1] = 502,
+			[2] = 0,
+		},
+		["Total"] = {
+			[1] = 0,
+			[2] = 0,
+		},
+	},
+	["Cenarion Hold Infantry"] = {
+		["Normal"] = {
+			[1] = 8785,
+			[2] = 0,
+			[3] = 862,
+			[4] = 23,
+			[5] = 0,
+			[6] = 3,
+			[7] = 0,
+		},
+		["Type"] = {
+			["Other"] = {
+				[1] = 8785,
+				[2] = 862,
+				[3] = 23,
+				[4] = 1211,
+				[5] = 258,
+				[6] = 5,
+			},
+		},
+		["Recieved"] = {
+			[1] = 1211,
+			[2] = 0,
+		},
+		["UTYPE"] = "NPC",
+		["CLASSE"] = "WARRIOR",
+		["Total"] = {
+			[1] = 8785,
+			[2] = 0,
 		},
 	},
 	["Kylosandrax"] = {
@@ -356,88 +419,24 @@ SW_S_Details = {
 		},
 		["UTYPE"] = "GPC",
 	},
-	["Fulis"] = {
-		["CLASSE"] = "PRIEST",
-		["Total"] = {
-			[1] = 0,
-			[2] = 0,
-		},
-		["Recieved"] = {
-			[1] = 0,
-			[2] = 0,
-		},
-		["UTYPE"] = "GPC",
-	},
-	["Pumanumaguy"] = {
-		["Total"] = {
-			[1] = 0,
-			[2] = 0,
-		},
-		["Recieved"] = {
-			[1] = 885,
-			[2] = 0,
-		},
+	["Sharlissa"] = {
 		["Type"] = {
 			["Other"] = {
 				[1] = 0,
 				[2] = 0,
 				[3] = 0,
-				[4] = 885,
-				[5] = 885,
+				[4] = 10,
+				[5] = 10,
 				[6] = 1,
 			},
 		},
-	},
-	["Breyt"] = {
-		["CLASSE"] = "WARLOCK",
+		["Recieved"] = {
+			[1] = 10,
+			[2] = 0,
+		},
 		["Total"] = {
 			[1] = 0,
 			[2] = 0,
-		},
-		["Recieved"] = {
-			[1] = 0,
-			[2] = 0,
-		},
-		["UTYPE"] = "GPC",
-	},
-	["Drinkingmoo"] = {
-		["Total"] = {
-			[1] = 0,
-			[2] = 0,
-		},
-		["Recieved"] = {
-			[1] = 84,
-			[2] = 0,
-		},
-		["Type"] = {
-			["Other"] = {
-				[1] = 0,
-				[2] = 0,
-				[3] = 0,
-				[4] = 84,
-				[5] = 84,
-				[6] = 1,
-			},
-		},
-	},
-	["Macaca"] = {
-		["Total"] = {
-			[1] = 0,
-			[2] = 0,
-		},
-		["Recieved"] = {
-			[1] = 1418,
-			[2] = 0,
-		},
-		["Type"] = {
-			["Other"] = {
-				[1] = 0,
-				[2] = 0,
-				[3] = 0,
-				[4] = 1418,
-				[5] = 1418,
-				[6] = 1,
-			},
 		},
 	},
 }
@@ -445,16 +444,12 @@ SW_S_Healed = {
 }
 SW_S_SpellInfo = {
 	["Kylosandrax"] = {
-		["Blacksmithing"] = {
+		["Hearthstone"] = {
 			[1] = 1,
 			[2] = 0,
 		},
 		["Horn of the Dire Wolf"] = {
-			[1] = 1,
-			[2] = 0,
-		},
-		["Defensive Stance"] = {
-			[1] = 1,
+			[1] = 2,
 			[2] = 0,
 		},
 	},
@@ -472,16 +467,16 @@ SW_RPS = {
 	["allowLastFightUpdate"] = false,
 	["isRunning"] = false,
 	["startTimer"] = {
-		["epochTS"] = 1426332819,
-		["msO"] = -0.2599999999993088,
-		["uTS"] = -83964.25999999046,
+		["epochTS"] = 1427096452,
+		["msO"] = -0.1330000000000382,
+		["uTS"] = -51720.132999897,
 	},
 	["uglyTruthStarted"] = false,
 	["lastFightDmg"] = 0,
 	["baseTimer"] = {
-		["epochTS"] = 1426332819,
-		["msO"] = -0.2599999999993088,
-		["uTS"] = -83964.25999999046,
+		["epochTS"] = 1427096452,
+		["msO"] = -0.1330000000000382,
+		["uTS"] = -51720.132999897,
 	},
 	["currentSecs"] = 0,
 	["totalSecs"] = 0,

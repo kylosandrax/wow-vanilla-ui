@@ -2,10 +2,14 @@ Frame: ItemRefTooltip
 FrameLevel: 10
 X: 745
 Y: -634
+Frame: DecursiveAfflictedListFrame
+FrameLevel: 1
+X: 1382
+Y: -50
 Frame: DefendYourselfPanicBar
 FrameLevel: 2
 X: 1103
-Y: -1010
+Y: -1008
 Frame: KLHTM_Frame
 FrameLevel: 1
 X: 1328

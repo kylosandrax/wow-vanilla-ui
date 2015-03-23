@@ -55,7 +55,7 @@ FrameLevel: 1
 X: 1386
 Y: -284
 Frame: TargetRangeInfo
-FrameLevel: 12
+FrameLevel: 10
 X: 1365
 Y: -136
 W: 135
@@ -96,3 +96,7 @@ Frame: TrinketMenu_OptFrame
 FrameLevel: 1
 X: 582
 Y: -409
+Frame: WIM_msgFrameJinglebells
+FrameLevel: 1
+X: 518
+Y: -582

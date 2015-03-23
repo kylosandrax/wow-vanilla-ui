@@ -16,6 +16,9 @@ END
 MACRO 16777224 "HWR1" Ability_Druid_Cyclone
 /cmcast Healing Wave(Rank 1)
 END
+MACRO 16777228 "QHRX" Ability_Druid_ImprovedTreeForm
+/script QuickHeal(nil,'Healing Wave 5')
+END
 MACRO 16777227 "Res" Ability_Druid_Dreamstate
 /castAncestral Spirit
 /script SendChatMessage("Resurrecting "..UnitName("target")..".")

@@ -3999,7 +3999,7 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["rangerecolor"] = 1,
-				["page"] = 1,
+				["alpha"] = 1,
 				["Label"] = {
 					["bgcolor"] = {
 						["b"] = 0,
@@ -4056,14 +4056,14 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["unusablerecolor"] = 1,
-				["frameStrata"] = "LOW",
-				["buttonbg"] = "Interface\\AddOns\\DiscordLibrary\\EmptyButton",
 				["highlightcolor"] = {
 					["b"] = 1,
 					["g"] = 1,
 					["r"] = 1,
 				},
-				["alpha"] = 1,
+				["buttonbg"] = "Interface\\AddOns\\DiscordLibrary\\EmptyButton",
+				["frameStrata"] = "LOW",
+				["page"] = 1,
 			},
 			[5] = {
 				["unusablerecolor"] = 1,
@@ -5447,7 +5447,7 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["rangerecolor"] = 1,
-				["page"] = 1,
+				["alpha"] = 1,
 				["middleClick"] = 10,
 				["rangecolor"] = {
 					["b"] = 0.1,
@@ -5465,14 +5465,14 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["buttonbg"] = "Interface\\AddOns\\DiscordLibrary\\EmptyButton",
+				["frameStrata"] = "HIGH",
+				["vspacing"] = 0,
 				["highlightcolor"] = {
 					["b"] = 1,
 					["g"] = 1,
 					["r"] = 1,
 				},
-				["vspacing"] = 0,
-				["frameStrata"] = "HIGH",
-				["alpha"] = 1,
+				["page"] = 1,
 			},
 		},
 	},
@@ -6270,7 +6270,7 @@ DAB_Settings = {
 		["ButtonLockOverride"] = 3,
 		["Buttons"] = {
 			[1] = {
-				["action"] = 97,
+				["action"] = 1,
 				["Scripts"] = {
 				},
 				["Conditions"] = {
@@ -6278,7 +6278,7 @@ DAB_Settings = {
 				["Bar"] = 1,
 			},
 			[2] = {
-				["action"] = 98,
+				["action"] = 2,
 				["Scripts"] = {
 				},
 				["Conditions"] = {
@@ -6286,7 +6286,7 @@ DAB_Settings = {
 				["Bar"] = 1,
 			},
 			[3] = {
-				["action"] = 99,
+				["action"] = 3,
 				["Scripts"] = {
 				},
 				["Conditions"] = {
@@ -6294,7 +6294,7 @@ DAB_Settings = {
 				["Bar"] = 1,
 			},
 			[4] = {
-				["action"] = 100,
+				["action"] = 4,
 				["Scripts"] = {
 				},
 				["Conditions"] = {
@@ -6302,7 +6302,7 @@ DAB_Settings = {
 				["Bar"] = 1,
 			},
 			[5] = {
-				["action"] = 101,
+				["action"] = 5,
 				["Scripts"] = {
 				},
 				["Conditions"] = {
@@ -6310,7 +6310,7 @@ DAB_Settings = {
 				["Bar"] = 1,
 			},
 			[6] = {
-				["action"] = 102,
+				["action"] = 6,
 				["Scripts"] = {
 				},
 				["Conditions"] = {
@@ -6318,7 +6318,7 @@ DAB_Settings = {
 				["Bar"] = 1,
 			},
 			[7] = {
-				["action"] = 103,
+				["action"] = 7,
 				["Scripts"] = {
 				},
 				["Conditions"] = {
@@ -6326,7 +6326,7 @@ DAB_Settings = {
 				["Bar"] = 1,
 			},
 			[8] = {
-				["action"] = 104,
+				["action"] = 8,
 				["Scripts"] = {
 				},
 				["Conditions"] = {
@@ -6334,7 +6334,7 @@ DAB_Settings = {
 				["Bar"] = 1,
 			},
 			[9] = {
-				["action"] = 105,
+				["action"] = 9,
 				["Scripts"] = {
 				},
 				["Conditions"] = {
@@ -6342,7 +6342,7 @@ DAB_Settings = {
 				["Bar"] = 1,
 			},
 			[10] = {
-				["action"] = 106,
+				["action"] = 10,
 				["Scripts"] = {
 				},
 				["Conditions"] = {
@@ -6350,7 +6350,7 @@ DAB_Settings = {
 				["Bar"] = 1,
 			},
 			[11] = {
-				["action"] = 107,
+				["action"] = 11,
 				["Scripts"] = {
 				},
 				["Conditions"] = {
@@ -6358,7 +6358,7 @@ DAB_Settings = {
 				["Bar"] = 1,
 			},
 			[12] = {
-				["action"] = 108,
+				["action"] = 12,
 				["Scripts"] = {
 				},
 				["Conditions"] = {
@@ -8693,7 +8693,7 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["rangerecolor"] = 1,
-				["page"] = 9,
+				["page"] = 1,
 				["unusablerecolor"] = 1,
 				["rangecolor"] = {
 					["b"] = 0.09803921568627451,
@@ -9459,7 +9459,7 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["rangerecolor"] = 1,
-				["alpha"] = 1,
+				["page"] = 1,
 				["Label"] = {
 					["bgcolor"] = {
 						["b"] = 0,
@@ -9516,12 +9516,8 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["unusablerecolor"] = 1,
-				["page"] = 1,
-				["highlightcolor"] = {
-					["b"] = 1,
-					["g"] = 1,
-					["r"] = 1,
-				},
+				["alpha"] = 1,
+				["frameStrata"] = "LOW",
 				["pages"] = {
 					[1] = {
 						[1] = 37,
@@ -9536,7 +9532,11 @@ DAB_Settings = {
 						[10] = 46,
 					},
 				},
-				["frameStrata"] = "LOW",
+				["highlightcolor"] = {
+					["b"] = 1,
+					["g"] = 1,
+					["r"] = 1,
+				},
 			},
 			[5] = {
 				["unusablerecolor"] = 1,
@@ -10838,7 +10838,7 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["rangerecolor"] = 1,
-				["frameStrata"] = "HIGH",
+				["page"] = 1,
 				["middleClick"] = 10,
 				["rangecolor"] = {
 					["b"] = 0.1,
@@ -10871,7 +10871,11 @@ DAB_Settings = {
 						[12] = 120,
 					},
 				},
-				["alpha"] = 1,
+				["highlightcolor"] = {
+					["b"] = 1,
+					["g"] = 1,
+					["r"] = 1,
+				},
 				["Background"] = {
 					["leftpadding"] = 1,
 					["color"] = {
@@ -10899,12 +10903,8 @@ DAB_Settings = {
 					["edgeSize"] = 1,
 					["balpha"] = 1,
 				},
-				["highlightcolor"] = {
-					["b"] = 1,
-					["g"] = 1,
-					["r"] = 1,
-				},
-				["page"] = 1,
+				["alpha"] = 1,
+				["frameStrata"] = "HIGH",
 			},
 		},
 	},
@@ -14913,7 +14913,7 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["rangerecolor"] = 1,
-				["page"] = 1,
+				["alpha"] = 1,
 				["Label"] = {
 					["bgcolor"] = {
 						["b"] = 0,
@@ -14970,14 +14970,14 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["unusablerecolor"] = 1,
-				["frameStrata"] = "LOW",
-				["buttonbg"] = "Interface\\AddOns\\DiscordLibrary\\EmptyButton",
 				["highlightcolor"] = {
 					["b"] = 1,
 					["g"] = 1,
 					["r"] = 1,
 				},
-				["alpha"] = 1,
+				["buttonbg"] = "Interface\\AddOns\\DiscordLibrary\\EmptyButton",
+				["frameStrata"] = "LOW",
+				["page"] = 1,
 			},
 			[5] = {
 				["unusablerecolor"] = 1,
@@ -16361,7 +16361,7 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["rangerecolor"] = 1,
-				["page"] = 1,
+				["alpha"] = 1,
 				["middleClick"] = 10,
 				["rangecolor"] = {
 					["b"] = 0.1,
@@ -16379,14 +16379,14 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["buttonbg"] = "Interface\\AddOns\\DiscordLibrary\\EmptyButton",
+				["frameStrata"] = "HIGH",
+				["vspacing"] = 0,
 				["highlightcolor"] = {
 					["b"] = 1,
 					["g"] = 1,
 					["r"] = 1,
 				},
-				["vspacing"] = 0,
-				["frameStrata"] = "HIGH",
-				["alpha"] = 1,
+				["page"] = 1,
 			},
 		},
 	},
@@ -25830,7 +25830,7 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["rangerecolor"] = 1,
-				["page"] = 1,
+				["alpha"] = 1,
 				["Label"] = {
 					["bgcolor"] = {
 						["b"] = 0,
@@ -25887,14 +25887,14 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["unusablerecolor"] = 1,
-				["frameStrata"] = "LOW",
-				["buttonbg"] = "Interface\\AddOns\\DiscordLibrary\\EmptyButton",
 				["highlightcolor"] = {
 					["b"] = 1,
 					["g"] = 1,
 					["r"] = 1,
 				},
-				["alpha"] = 1,
+				["buttonbg"] = "Interface\\AddOns\\DiscordLibrary\\EmptyButton",
+				["frameStrata"] = "LOW",
+				["page"] = 1,
 			},
 			[5] = {
 				["unusablerecolor"] = 1,
@@ -27278,7 +27278,7 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["rangerecolor"] = 1,
-				["page"] = 1,
+				["alpha"] = 1,
 				["middleClick"] = 10,
 				["rangecolor"] = {
 					["b"] = 0.1,
@@ -27296,14 +27296,14 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["buttonbg"] = "Interface\\AddOns\\DiscordLibrary\\EmptyButton",
+				["frameStrata"] = "HIGH",
+				["vspacing"] = 0,
 				["highlightcolor"] = {
 					["b"] = 1,
 					["g"] = 1,
 					["r"] = 1,
 				},
-				["vspacing"] = 0,
-				["frameStrata"] = "HIGH",
-				["alpha"] = 1,
+				["page"] = 1,
 			},
 		},
 	},
@@ -31305,7 +31305,7 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["rangerecolor"] = 1,
-				["page"] = 1,
+				["alpha"] = 1,
 				["Label"] = {
 					["bgcolor"] = {
 						["b"] = 0,
@@ -31362,14 +31362,14 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["unusablerecolor"] = 1,
-				["frameStrata"] = "LOW",
-				["buttonbg"] = "Interface\\AddOns\\DiscordLibrary\\EmptyButton",
 				["highlightcolor"] = {
 					["b"] = 1,
 					["g"] = 1,
 					["r"] = 1,
 				},
-				["alpha"] = 1,
+				["buttonbg"] = "Interface\\AddOns\\DiscordLibrary\\EmptyButton",
+				["frameStrata"] = "LOW",
+				["page"] = 1,
 			},
 			[5] = {
 				["unusablerecolor"] = 1,
@@ -32753,7 +32753,7 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["rangerecolor"] = 1,
-				["page"] = 1,
+				["alpha"] = 1,
 				["middleClick"] = 10,
 				["rangecolor"] = {
 					["b"] = 0.1,
@@ -32771,14 +32771,14 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["buttonbg"] = "Interface\\AddOns\\DiscordLibrary\\EmptyButton",
+				["frameStrata"] = "HIGH",
+				["vspacing"] = 0,
 				["highlightcolor"] = {
 					["b"] = 1,
 					["g"] = 1,
 					["r"] = 1,
 				},
-				["vspacing"] = 0,
-				["frameStrata"] = "HIGH",
-				["alpha"] = 1,
+				["page"] = 1,
 			},
 		},
 	},
@@ -36696,7 +36696,7 @@ DAB_Settings = {
 				["rows"] = 4,
 				["hideEmpty"] = 1,
 				["cbgroup"] = 4,
-				["page"] = 1,
+				["alpha"] = 1,
 				["Anchor"] = {
 					["y"] = -904.3599999999999,
 					["x"] = 384.41,
@@ -36734,17 +36734,13 @@ DAB_Settings = {
 				["numButtons"] = 12,
 				["hide"] = 1,
 				["buttonbg"] = "Interface\\AddOns\\DiscordLibrary\\EmptyButton",
-				["alpha"] = 1,
+				["page"] = 1,
 				["manacolor"] = {
 					["r"] = 0.2,
 					["g"] = 0.2,
 					["b"] = 1,
 				},
-				["highlightcolor"] = {
-					["r"] = 1,
-					["g"] = 1,
-					["b"] = 1,
-				},
+				["frameStrata"] = "LOW",
 				["Macro"] = {
 					["color"] = {
 						["r"] = 1,
@@ -36755,7 +36751,11 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["rangerecolor"] = 1,
-				["frameStrata"] = "LOW",
+				["highlightcolor"] = {
+					["r"] = 1,
+					["g"] = 1,
+					["b"] = 1,
+				},
 				["unusablerecolor"] = 1,
 				["rangecolor"] = {
 					["r"] = 1,
@@ -38117,7 +38117,7 @@ DAB_Settings = {
 				["rows"] = 1,
 				["hideEmpty"] = 1,
 				["cbgroup"] = 10,
-				["page"] = 1,
+				["alpha"] = 1,
 				["Anchor"] = {
 					["y"] = -855.93,
 					["x"] = 648.63,
@@ -38155,13 +38155,17 @@ DAB_Settings = {
 					["tileSize"] = 1,
 					["hide"] = 1,
 				},
-				["frameStrata"] = "HIGH",
+				["highlightcolor"] = {
+					["r"] = 1,
+					["g"] = 1,
+					["b"] = 1,
+				},
 				["manacolor"] = {
 					["r"] = 0.2,
 					["g"] = 0.2,
 					["b"] = 1,
 				},
-				["alpha"] = 1,
+				["page"] = 1,
 				["Macro"] = {
 					["color"] = {
 						["r"] = 1,
@@ -38172,11 +38176,7 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["rangerecolor"] = 1,
-				["highlightcolor"] = {
-					["r"] = 1,
-					["g"] = 1,
-					["b"] = 1,
-				},
+				["frameStrata"] = "HIGH",
 				["unusablerecolor"] = 1,
 				["rangecolor"] = {
 					["r"] = 1,
@@ -42187,7 +42187,7 @@ DAB_Settings = {
 				["rows"] = 4,
 				["hideEmpty"] = 1,
 				["cbgroup"] = 4,
-				["alpha"] = 1,
+				["page"] = 1,
 				["Anchor"] = {
 					["y"] = -904.3599999999999,
 					["x"] = 384.41,
@@ -42224,18 +42224,18 @@ DAB_Settings = {
 				},
 				["numButtons"] = 12,
 				["hide"] = 1,
-				["highlightcolor"] = {
-					["r"] = 1,
-					["g"] = 1,
-					["b"] = 1,
-				},
+				["frameStrata"] = "LOW",
 				["buttonbg"] = "Interface\\AddOns\\DiscordLibrary\\EmptyButton",
 				["manacolor"] = {
 					["r"] = 0.2,
 					["g"] = 0.2,
 					["b"] = 1,
 				},
-				["frameStrata"] = "LOW",
+				["highlightcolor"] = {
+					["r"] = 1,
+					["g"] = 1,
+					["b"] = 1,
+				},
 				["Macro"] = {
 					["color"] = {
 						["r"] = 1,
@@ -42246,7 +42246,7 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["rangerecolor"] = 1,
-				["page"] = 1,
+				["alpha"] = 1,
 				["unusablerecolor"] = 1,
 				["rangecolor"] = {
 					["r"] = 1,
@@ -43550,7 +43550,7 @@ DAB_Settings = {
 				["numBars"] = 1,
 				["rows"] = 1,
 				["cbgroup"] = 10,
-				["frameStrata"] = "HIGH",
+				["page"] = 1,
 				["Anchor"] = {
 					["y"] = -967.04,
 					["x"] = 1198.63,
@@ -43603,17 +43603,13 @@ DAB_Settings = {
 					},
 				},
 				["vspacing"] = 0,
-				["highlightcolor"] = {
-					["r"] = 1,
-					["g"] = 1,
-					["b"] = 1,
-				},
+				["alpha"] = 1,
 				["manacolor"] = {
 					["r"] = 0.2,
 					["g"] = 0.2,
 					["b"] = 1,
 				},
-				["page"] = 1,
+				["frameStrata"] = "HIGH",
 				["Macro"] = {
 					["color"] = {
 						["r"] = 1,
@@ -43624,7 +43620,11 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["rangerecolor"] = 1,
-				["alpha"] = 1,
+				["highlightcolor"] = {
+					["r"] = 1,
+					["g"] = 1,
+					["b"] = 1,
+				},
 				["unusablerecolor"] = 1,
 				["rangecolor"] = {
 					["r"] = 1,
@@ -47115,7 +47115,7 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["rangerecolor"] = 1,
-				["alpha"] = 1,
+				["page"] = 1,
 				["middleClick"] = 3,
 				["rangecolor"] = {
 					["r"] = 1,
@@ -47148,14 +47148,14 @@ DAB_Settings = {
 						[12] = 36,
 					},
 				},
-				["frameStrata"] = "LOW",
-				["vspacing"] = 0,
 				["highlightcolor"] = {
 					["r"] = 1,
 					["g"] = 1,
 					["b"] = 1,
 				},
-				["page"] = 1,
+				["vspacing"] = 0,
+				["frameStrata"] = "LOW",
+				["alpha"] = 1,
 			},
 			[4] = {
 				["middleClick"] = 4,
@@ -52776,7 +52776,7 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["rangerecolor"] = 1,
-				["page"] = 1,
+				["alpha"] = 1,
 				["Label"] = {
 					["bgcolor"] = {
 						["b"] = 0,
@@ -52833,14 +52833,14 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["unusablerecolor"] = 1,
-				["frameStrata"] = "LOW",
-				["buttonbg"] = "Interface\\AddOns\\DiscordLibrary\\EmptyButton",
 				["highlightcolor"] = {
 					["b"] = 1,
 					["g"] = 1,
 					["r"] = 1,
 				},
-				["alpha"] = 1,
+				["buttonbg"] = "Interface\\AddOns\\DiscordLibrary\\EmptyButton",
+				["frameStrata"] = "LOW",
+				["page"] = 1,
 			},
 			[5] = {
 				["unusablerecolor"] = 1,
@@ -54175,7 +54175,11 @@ DAB_Settings = {
 					["size"] = 10,
 				},
 				["rangerecolor"] = 1,
-				["alpha"] = 1,
+				["highlightcolor"] = {
+					["b"] = 1,
+					["g"] = 1,
+					["r"] = 1,
+				},
 				["middleClick"] = 10,
 				["rangecolor"] = {
 					["b"] = 0.1,
@@ -54192,12 +54196,8 @@ DAB_Settings = {
 					["font"] = "Fonts\\FRIZQT__.TTF",
 					["size"] = 10,
 				},
-				["page"] = 1,
-				["highlightcolor"] = {
-					["b"] = 1,
-					["g"] = 1,
-					["r"] = 1,
-				},
+				["frameStrata"] = "HIGH",
+				["alpha"] = 1,
 				["vspacing"] = 0,
 				["pages"] = {
 					[1] = {
@@ -54215,7 +54215,7 @@ DAB_Settings = {
 						[12] = 120,
 					},
 				},
-				["frameStrata"] = "HIGH",
+				["page"] = 1,
 			},
 		},
 	},

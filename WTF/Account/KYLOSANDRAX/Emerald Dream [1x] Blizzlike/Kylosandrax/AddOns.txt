@@ -162,3 +162,4 @@ BeanCounter: disabled
 CooldownHud: disabled
 WarriorHUD: disabled
 TankStats: enabled
+TankPoints: enabled

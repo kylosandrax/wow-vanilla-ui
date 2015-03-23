@@ -14,53 +14,25 @@ TheoryCraft_Settings = {
 	["ColG2"] = 1,
 	["combinedot"] = true,
 	["ColR2"] = 1,
-	["embedstyle1"] = true,
 	["ColB"] = 1,
+	["embedstyle1"] = true,
 	["tryfirst"] = "averagedam",
 	["trysecondsfg"] = -1,
 	["dataversion"] = "1.06",
 	["tryfirstsfg"] = 0,
 	["procs"] = true,
-	["nextcrit"] = true,
-	["mitigation"] = true,
+	["FontPath"] = "Fonts\\ArialN.TTF",
 	["GenerateList"] = "",
+	["mitigation"] = true,
 	["trysecond"] = "averagehealnocrit",
 	["dontresist"] = true,
 	["ColR"] = 1,
 	["buttontext"] = true,
-	["FontPath"] = "Fonts\\ArialN.TTF",
+	["nextcrit"] = true,
 	["CustomOutfit"] = {
 		["intellect"] = 0,
 		["newstat"] = {
 		},
-		["strength"] = 0,
-		["agility"] = 0,
-		["name"] = "Naked",
-		["stamina"] = 0,
-		["wear"] = {
-		},
-		["destat"] = {
-			[1] = "Head",
-			[2] = "Neck",
-			[3] = "Shoulder",
-			[4] = "Chest",
-			[5] = "Waist",
-			[6] = "Legs",
-			[7] = "Feet",
-			[8] = "Wrist",
-			[9] = "Hands",
-			[10] = "Finger0",
-			[11] = "Finger1",
-			[12] = "Trinket0",
-			[13] = "Trinket1",
-			[14] = "Back",
-			[15] = "MainHand",
-			[16] = "SecondaryHand",
-			[17] = "Ranged",
-			[18] = "Tabard",
-			[19] = "Ammo",
-		},
-		["spirit"] = 0,
 		["slots"] = {
 			["Ranged"] = {
 				["stats"] = {
@@ -89,18 +61,15 @@ TheoryCraft_Settings = {
 					["numlines"] = 6,
 				},
 			},
-			["Neck"] = {
+			["Legs"] = {
 				["stats"] = {
-					["intellect"] = 4,
-					["stamina"] = 4,
-					["spirit"] = 3,
 				},
-				["name"] = "|cff1eff00|Hitem:5003:0:0:0|h[Crystal Starfire Medallion]|h|r",
+				["name"] = "|cff1eff00|Hitem:15746:0:0:0|h[Pattern: Chimeric Leggings]|h|r",
 				["data"] = {
-					["name"] = "Crystal Starfire Medallion",
+					["name"] = "Pattern: Chimeric Leggings",
 					["procs"] = {
 					},
-					["numlines"] = 7,
+					["numlines"] = 12,
 				},
 			},
 			["Trinket0"] = {
@@ -140,12 +109,10 @@ TheoryCraft_Settings = {
 			},
 			["Hands"] = {
 				["stats"] = {
-					["stamina"] = 6,
-					["strength"] = 5,
 				},
-				["name"] = "|cff1eff00|Hitem:3612:0:0:0|h[Plans: Green Iron Gauntlets]|h|r",
+				["name"] = "|cff1eff00|Hitem:12695:0:0:0|h[Plans: Radiant Gloves]|h|r",
 				["data"] = {
-					["name"] = "Plans: Green Iron Gauntlets",
+					["name"] = "Plans: Radiant Gloves",
 					["procs"] = {
 					},
 					["numlines"] = 12,
@@ -190,17 +157,17 @@ TheoryCraft_Settings = {
 					["numlines"] = 11,
 				},
 			},
-			["Feet"] = {
+			["Finger1"] = {
 				["stats"] = {
-					["stamina"] = 7,
-					["strength"] = 7,
+					["intellect"] = 9,
+					["spirit"] = 9,
 				},
-				["name"] = "|cff1eff00|Hitem:9864:0:1197:0|h[Renegade Boots of the Bear]|h|r",
+				["name"] = "|cff1eff00|Hitem:11992:0:778:0|h[Vermilion Band of the Owl]|h|r",
 				["data"] = {
-					["name"] = "Renegade Boots of the Bear",
+					["name"] = "Vermilion Band of the Owl",
 					["procs"] = {
 					},
-					["numlines"] = 7,
+					["numlines"] = 6,
 				},
 			},
 			["Chest"] = {
@@ -232,17 +199,17 @@ TheoryCraft_Settings = {
 					["name"] = "Greater Maul of the Tiger",
 				},
 			},
-			["Finger1"] = {
+			["Feet"] = {
 				["stats"] = {
-					["intellect"] = 9,
-					["spirit"] = 9,
+					["stamina"] = 7,
+					["strength"] = 7,
 				},
-				["name"] = "|cff1eff00|Hitem:11992:0:778:0|h[Vermilion Band of the Owl]|h|r",
+				["name"] = "|cff1eff00|Hitem:9864:0:1197:0|h[Renegade Boots of the Bear]|h|r",
 				["data"] = {
-					["name"] = "Vermilion Band of the Owl",
+					["name"] = "Renegade Boots of the Bear",
 					["procs"] = {
 					},
-					["numlines"] = 6,
+					["numlines"] = 7,
 				},
 			},
 			["Waist"] = {
@@ -270,18 +237,49 @@ TheoryCraft_Settings = {
 					["numlines"] = 11,
 				},
 			},
-			["Legs"] = {
+			["Neck"] = {
 				["stats"] = {
+					["intellect"] = 4,
+					["stamina"] = 4,
+					["spirit"] = 3,
 				},
-				["name"] = "|cff1eff00|Hitem:15746:0:0:0|h[Pattern: Chimeric Leggings]|h|r",
+				["name"] = "|cff1eff00|Hitem:5003:0:0:0|h[Crystal Starfire Medallion]|h|r",
 				["data"] = {
-					["name"] = "Pattern: Chimeric Leggings",
+					["name"] = "Crystal Starfire Medallion",
 					["procs"] = {
 					},
-					["numlines"] = 12,
+					["numlines"] = 7,
 				},
 			},
 		},
+		["agility"] = 0,
+		["name"] = "Naked",
+		["stamina"] = 0,
+		["wear"] = {
+		},
+		["destat"] = {
+			[1] = "Head",
+			[2] = "Neck",
+			[3] = "Shoulder",
+			[4] = "Chest",
+			[5] = "Waist",
+			[6] = "Legs",
+			[7] = "Feet",
+			[8] = "Wrist",
+			[9] = "Hands",
+			[10] = "Finger0",
+			[11] = "Finger1",
+			[12] = "Trinket0",
+			[13] = "Trinket1",
+			[14] = "Back",
+			[15] = "MainHand",
+			[16] = "SecondaryHand",
+			[17] = "Ranged",
+			[18] = "Tabard",
+			[19] = "Ammo",
+		},
+		["spirit"] = 0,
+		["strength"] = 0,
 	},
 	["ColB2"] = 0.6862745098039216,
 	["ColG"] = 1,

@@ -120,22 +120,4 @@ WIM_Filters = {
 	["^YOU HAVE THE PLAGUE!"] = "Ignore",
 }
 WIM_History = {
-	["Shadowcosmos"] = {
-		[1] = {
-			["type"] = 2,
-			["time"] = "20:02",
-			["from"] = "Kylosandrax",
-			["date"] = "03/11/15",
-			["msg"] = "ty for the totemlove btw",
-			["stamp"] = 1426104160,
-		},
-		[2] = {
-			["type"] = 1,
-			["time"] = "20:03",
-			["from"] = "Shadowcosmos",
-			["date"] = "03/11/15",
-			["msg"] = "gotchu",
-			["stamp"] = 1426104202,
-		},
-	},
 }

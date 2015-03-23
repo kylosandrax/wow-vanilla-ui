@@ -51,21 +51,21 @@ TheoryCraft_Settings = {
 		},
 		["newstat"] = {
 		},
-		["strength"] = 0,
-		["agility"] = 0,
-		["name"] = "Naked",
 		["slots"] = {
-			["Waist"] = {
+			["Ranged"] = {
 				["stats"] = {
-					["intellect"] = 14,
-					["spirit"] = 9,
+					["rangedattackpower"] = 14,
 				},
-				["name"] = "|cff1eff00|Hitem:15745:0:0:0|h[Pattern: Runic Leather Belt]|h|r",
+				["name"] = "|cff1eff00|Hitem:10604:0:0:0|h[Schematic: Mithril Heavy-bore Rifle]|h|r",
 				["data"] = {
-					["name"] = "Pattern: Runic Leather Belt",
+					["RangedMin"] = 41,
+					["name"] = "Schematic: Mithril Heavy-bore Rifle",
 					["procs"] = {
 					},
 					["numlines"] = 11,
+					["RangedMax"] = 76,
+					["RangedSpeed"] = 2.9,
+					["RangedAttackPowerReport"] = 14,
 				},
 			},
 			["Head"] = {
@@ -199,23 +199,23 @@ TheoryCraft_Settings = {
 					["numlines"] = 11,
 				},
 			},
-			["Ranged"] = {
+			["Waist"] = {
 				["stats"] = {
-					["rangedattackpower"] = 14,
+					["intellect"] = 14,
+					["spirit"] = 9,
 				},
-				["name"] = "|cff1eff00|Hitem:10604:0:0:0|h[Schematic: Mithril Heavy-bore Rifle]|h|r",
+				["name"] = "|cff1eff00|Hitem:15745:0:0:0|h[Pattern: Runic Leather Belt]|h|r",
 				["data"] = {
-					["RangedMin"] = 41,
-					["name"] = "Schematic: Mithril Heavy-bore Rifle",
+					["name"] = "Pattern: Runic Leather Belt",
 					["procs"] = {
 					},
 					["numlines"] = 11,
-					["RangedMax"] = 76,
-					["RangedSpeed"] = 2.9,
-					["RangedAttackPowerReport"] = 14,
 				},
 			},
 		},
+		["agility"] = 0,
+		["name"] = "Naked",
+		["strength"] = 0,
 		["wear"] = {
 		},
 		["intellect"] = 0,
@@ -477,9 +477,9 @@ TheoryCraft_Settings = {
 			["casts"] = 4,
 			["crits"] = 1,
 		},
-		["158:5"] = {
-			["casts"] = 6,
-			["crits"] = 0,
+		["138:0"] = {
+			["casts"] = 31,
+			["crits"] = 1,
 		},
 		["170:0"] = {
 			["casts"] = 41,
@@ -489,9 +489,9 @@ TheoryCraft_Settings = {
 			["casts"] = 63,
 			["crits"] = 5,
 		},
-		["137:5"] = {
-			["casts"] = 21,
-			["crits"] = 2,
+		["177:0"] = {
+			["casts"] = 4,
+			["crits"] = 1,
 		},
 		["133:5"] = {
 			["casts"] = 7,
@@ -537,6 +537,10 @@ TheoryCraft_Settings = {
 			["casts"] = 45,
 			["crits"] = 3,
 		},
+		["269:5"] = {
+			["casts"] = 3,
+			["crits"] = 2,
+		},
 		["87:0"] = {
 			["casts"] = 4,
 			["crits"] = 0,
@@ -544,6 +548,10 @@ TheoryCraft_Settings = {
 		["244:5"] = {
 			["casts"] = 43,
 			["crits"] = 4,
+		},
+		["228:5"] = {
+			["casts"] = 46,
+			["crits"] = 6,
 		},
 		["101:0"] = {
 			["casts"] = 11,
@@ -702,8 +710,8 @@ TheoryCraft_Settings = {
 			["crits"] = 0,
 		},
 		["260:5"] = {
-			["casts"] = 11,
-			["crits"] = 0,
+			["casts"] = 48,
+			["crits"] = 7,
 		},
 		["240:5"] = {
 			["casts"] = 75,
@@ -725,9 +733,9 @@ TheoryCraft_Settings = {
 			["casts"] = 12,
 			["crits"] = 0,
 		},
-		["177:0"] = {
-			["casts"] = 4,
-			["crits"] = 1,
+		["137:5"] = {
+			["casts"] = 21,
+			["crits"] = 2,
 		},
 		["178:0"] = {
 			["casts"] = 2,
@@ -737,9 +745,9 @@ TheoryCraft_Settings = {
 			["casts"] = 125,
 			["crits"] = 8,
 		},
-		["138:0"] = {
-			["casts"] = 31,
-			["crits"] = 1,
+		["158:5"] = {
+			["casts"] = 6,
+			["crits"] = 0,
 		},
 		["329:5"] = {
 			["casts"] = 102,

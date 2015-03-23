@@ -15,7 +15,7 @@ FrameLevel: 15
 X: 1284
 Y: -514
 Frame: ATSWFrame
-FrameLevel: 38
+FrameLevel: 78
 X: 354
 Y: -102
 Frame: ATSWCSFrame
@@ -36,8 +36,8 @@ X: 819
 Y: -941
 Frame: DefendYourselfPanicBar
 FrameLevel: 2
-X: 1101
-Y: -1008
+X: 38
+Y: -24
 Frame: DAB_ActionBar_1
 FrameLevel: 1
 X: 1229
@@ -76,7 +76,7 @@ X: 1037
 Y: -1024
 Frame: FuBarPluginMetaMapFrame
 FrameLevel: 7
-X: 605
+X: 514
 Y: 4
 Frame: PowaBarConfigFrame
 FrameLevel: 1
@@ -152,9 +152,13 @@ Frame: TankBuddyFrame
 FrameLevel: 1
 X: 655
 Y: -184
+Frame: TankPointsCalculator
+FrameLevel: 1
+X: 717
+Y: -348
 Frame: EHFrame
 FrameLevel: 1
-X: 1266
+X: 1260
 Y: -71
 Frame: HitTable
 FrameLevel: 1
