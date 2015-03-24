@@ -1,7 +1,7 @@
 --[[
 	Auctioneer Addon for World of Warcraft(tm).
-	Version: 3.8.0 (Kangaroo)
-	Revision: $Id: AucCommand.lua 981 2006-08-31 05:49:45Z mentalpower $
+	Version: 3.9.0.1063 (Kangaroo)
+	Revision: $Id: AucCommand.lua 1031 2006-10-04 04:15:38Z mentalpower $
 
 	Auctioneer command functions.
 	Functions to allow setting of values, switching commands etc.
@@ -20,7 +20,7 @@
 		You should have received a copy of the GNU General Public License
 		along with this program(see GPL.txt); if not, write to the Free Software
 		Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
-]]
+--]]
 
 --Local function prototypes
 local register, convertKhaos, getKhaosDefault, setKhaosSetKeyParameter, setKhaosSetKeyValue, getKhaosLocaleList, getKhaosDurationsList, getKhaosProtectionList, getKhaosFinishList, registerKhaos, buildCommandMap, commandMap, commandMapRev, command, chatPrintHelp, onOff, clear, alsoInclude, isValidLocale, setLocale, default, getFrameNames, getFrameIndex, setFrame, protectWindow, auctionDuration, finish, genVarSet, percentVarSet, numVarSet, setFilter, getFilterVal, getFilter, findFilterClass, setFilter, getLocale
@@ -960,7 +960,7 @@ function registerKhaos()
 					return _AUCT('HelpAskPriceWhispers')
 				end;
 				callback=function(state)
-					Auctioneer.AskPrice.GenVarSet("whisper", state.checked);
+					Auctioneer.AskPrice.GenVarSet("whispers", state.checked);
 				end;
 				feedback=function(state)
 					if (state.checked) then
@@ -1452,7 +1452,9 @@ function mainHandler(command, source)
 
 	--/auctioneer scan
 	elseif (cmd == 'scan') then
-		Auctioneer.Scanning.RequestAuctionScan(chatPrint);
+		if (not Auctioneer.ScanManager.Scan()) then
+			Auctioneer.Util.ChatPrint(_AUCT('AuctionScanNexttime'));
+		end
 
 	--/auctioneer protect-window
 	elseif (cmd == 'protect-window') then
@@ -1483,16 +1485,20 @@ function mainHandler(command, source)
 		Auctioneer.AskPrice.CommandHandler(param, source);
 
 	--/auctioneer (GenVars)
-	elseif (cmd == 'embed' or cmd == 'autofill' or cmd == 'auction-click' or
-			cmd == 'show-verbose' or cmd == 'show-average' or cmd == 'show-link' or
-			cmd == 'show-median' or cmd == 'show-stats' or cmd == 'show-suggest' or
-			cmd == 'show-embed-blankline' or cmd == 'show-warning' or cmd == 'warn-color' or
-			cmd == 'update-price') then
+	elseif (
+		cmd == 'embed'					or cmd == 'autofill'		or cmd == 'auction-click'	or
+		cmd == 'show-verbose'			or cmd == 'show-average'	or cmd == 'show-link'		or
+		cmd == 'show-median'			or cmd == 'show-stats'		or cmd == 'show-suggest'	or
+		cmd == 'show-embed-blankline'	or cmd == 'show-warning'	or cmd == 'warn-color'		or
+		cmd == 'update-price'			or cmd == 'finish-sound'
+	) then
 		genVarSet(cmd, param, chatprint);
 
 	--/auctioneer (PercentVars)
-	elseif (cmd == 'pct-bidmarkdown' or cmd == 'pct-markup' or cmd == "pct-maxless" or
-			cmd == "pct-nocomp" or cmd == "pct-underlow" or cmd == "pct-undermkt") then
+	elseif (
+		cmd == 'pct-bidmarkdown'		or cmd == 'pct-markup'		or cmd == 'pct-maxless'		or
+		cmd == 'pct-nocomp'				or cmd == 'pct-underlow'	or cmd == 'pct-undermkt'
+	) then
 		percentVarSet(cmd, param, chatprint);
 
 	--/auctioneer (NumVars)
@@ -1513,55 +1519,55 @@ function chatPrintHelp()
 
 	local onOffToggle = " (".._AUCT('CmdOn').."|".._AUCT('CmdOff').."|".._AUCT('CmdToggle')..")";
 
-	local _, frameName = getFrameNames(getFrameIndex());
+	local _, frameName = getFrameNames(getFrameIndex())
 
 	Auctioneer.Util.ChatPrint(_AUCT('TextUsage'));
 	Auctioneer.Util.ChatPrint("  |cffffffff/auctioneer "..onOffToggle.."|r |cff2040ff["..Auctioneer.Util.GetLocalizedFilterVal("all").."]|r\n          " .. _AUCT('HelpOnoff') .. "\n\n");
 	Auctioneer.Util.ChatPrint("  |cffffffff/auctioneer ".._AUCT('CmdDisable').."|r\n          " .. _AUCT('HelpDisable') .. "\n\n");
 
 	local lineFormat = "  |cffffffff/auctioneer %s "..onOffToggle.."|r |cff2040ff[%s]|r\n          %s\n\n";
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('ShowVerbose'), Auctioneer.Util.GetLocalizedFilterVal('show-verbose'), _AUCT('HelpVerbose')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('ShowAverage'), Auctioneer.Util.GetLocalizedFilterVal('show-average'), _AUCT('HelpAverage')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('ShowMedian'), Auctioneer.Util.GetLocalizedFilterVal('show-median'), _AUCT('HelpMedian')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('ShowSuggest'), Auctioneer.Util.GetLocalizedFilterVal('show-suggest'), _AUCT('HelpSuggest')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('ShowStats'), Auctioneer.Util.GetLocalizedFilterVal('show-stats'), _AUCT('HelpStats')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('ShowLink'), Auctioneer.Util.GetLocalizedFilterVal('show-link'), _AUCT('HelpLink')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAutofill'), Auctioneer.Util.GetLocalizedFilterVal('autofill'), _AUCT('HelpAutofill')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdEmbed'), Auctioneer.Util.GetLocalizedFilterVal('embed'), _AUCT('HelpEmbed')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('ShowEmbedBlank'), Auctioneer.Util.GetLocalizedFilterVal('show-embed-blankline'), _AUCT('HelpEmbedBlank')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('ShowRedo'), Auctioneer.Util.GetLocalizedFilterVal('show-warning'), _AUCT('HelpRedo')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAuctionClick'), Auctioneer.Util.GetLocalizedFilterVal('auction-click'), _AUCT('HelpAuctionClick')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdWarnColor'), Auctioneer.Util.GetLocalizedFilterVal('warn-color'), _AUCT('HelpWarnColor')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdUpdatePrice'), Auctioneer.Util.GetLocalizedFilterVal('update-price'), _AUCT('HelpUpdatePrice')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdFinishSound'), Auctioneer.Util.GetLocalizedFilterVal('finish-sound'), _AUCT('HelpFinishSound')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('ShowVerbose'),		Auctioneer.Util.GetLocalizedFilterVal('show-verbose'),			_AUCT('HelpVerbose')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('ShowAverage'),		Auctioneer.Util.GetLocalizedFilterVal('show-average'),			_AUCT('HelpAverage')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('ShowMedian'),		Auctioneer.Util.GetLocalizedFilterVal('show-median'),			_AUCT('HelpMedian')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('ShowSuggest'),		Auctioneer.Util.GetLocalizedFilterVal('show-suggest'),			_AUCT('HelpSuggest')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('ShowStats'),			Auctioneer.Util.GetLocalizedFilterVal('show-stats'),			_AUCT('HelpStats')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('ShowLink'),			Auctioneer.Util.GetLocalizedFilterVal('show-link'),				_AUCT('HelpLink')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAutofill'),		Auctioneer.Util.GetLocalizedFilterVal('autofill'),				_AUCT('HelpAutofill')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdEmbed'),			Auctioneer.Util.GetLocalizedFilterVal('embed'),					_AUCT('HelpEmbed')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('ShowEmbedBlank'),	Auctioneer.Util.GetLocalizedFilterVal('show-embed-blankline'),	_AUCT('HelpEmbedBlank')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('ShowRedo'),			Auctioneer.Util.GetLocalizedFilterVal('show-warning'),			_AUCT('HelpRedo')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAuctionClick'),	Auctioneer.Util.GetLocalizedFilterVal('auction-click'),			_AUCT('HelpAuctionClick')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdWarnColor'),		Auctioneer.Util.GetLocalizedFilterVal('warn-color'),			_AUCT('HelpWarnColor')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdUpdatePrice'),	Auctioneer.Util.GetLocalizedFilterVal('update-price'),			_AUCT('HelpUpdatePrice')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdFinishSound'),	Auctioneer.Util.GetLocalizedFilterVal('finish-sound'),			_AUCT('HelpFinishSound')));
 
 	lineFormat = "  |cffffffff/auctioneer %s %s|r |cff2040ff[%s]|r\n          %s\n\n";
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdProtectWindow'), _AUCT('OptProtectWindow'), _AUCT('CmdProtectWindow'..Auctioneer.Command.GetFilterVal('protect-window')), _AUCT('HelpProtectWindow')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAuctionDuration'), _AUCT('OptAuctionDuration'), _AUCT('CmdAuctionDuration'..Auctioneer.Command.GetFilterVal('auction-duration')), _AUCT('HelpAuctionDuration')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdProtectWindow'),		_AUCT('OptProtectWindow'), 		_AUCT('CmdProtectWindow'..Auctioneer.Command.GetFilterVal('protect-window')),		_AUCT('HelpProtectWindow')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAuctionDuration'),	_AUCT('OptAuctionDuration'),	_AUCT('CmdAuctionDuration'..Auctioneer.Command.GetFilterVal('auction-duration')),	_AUCT('HelpAuctionDuration')));
 
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdLocale'), _AUCT('OptLocale'), Auctioneer.Util.GetLocalizedFilterVal("locale"), _AUCT('HelpLocale')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdPrintin'), _AUCT('OptPrintin'), frameName, _AUCT('HelpPrintin')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdFinish'), _AUCT('OptFinish'), _AUCT('CmdFinish'..Auctioneer.Command.GetFilterVal('finish')), _AUCT('HelpFinish')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdLocale'),				_AUCT('OptLocale'),				Auctioneer.Util.GetLocalizedFilterVal("locale"),									_AUCT('HelpLocale')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdPrintin'),			_AUCT('OptPrintin'),			frameName, _AUCT('HelpPrintin')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdFinish'),				_AUCT('OptFinish'),				_AUCT('CmdFinish'..Auctioneer.Command.GetFilterVal('finish')),						_AUCT('HelpFinish')));
 
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdPctMarkup'), _AUCT('OptPctMarkup'), Auctioneer.Command.GetFilterVal('pct-markup'), _AUCT('HelpPctMarkup')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdPctBidmarkdown'), _AUCT('OptPctBidmarkdown'), Auctioneer.Command.GetFilterVal('pct-bidmarkdown'), _AUCT('HelpPctBidmarkdown')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdPctNocomp'), _AUCT('OptPctNocomp'), Auctioneer.Command.GetFilterVal('pct-nocomp'), _AUCT('HelpPctNocomp')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdPctUnderlow'), _AUCT('OptPctUnderlow'), Auctioneer.Command.GetFilterVal('pct-underlow'), _AUCT('HelpPctUnderlow')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdPctUndermkt'), _AUCT('OptPctUndermkt'), Auctioneer.Command.GetFilterVal('pct-undermkt'), _AUCT('HelpPctUndermkt')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdPctMaxless'), _AUCT('OptPctMaxless'), Auctioneer.Command.GetFilterVal('pct-maxless'), _AUCT('HelpPctMaxless')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdBidLimit'), _AUCT('OptBidLimit'), Auctioneer.Command.GetFilterVal('bid-limit'), _AUCT('HelpBidLimit')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdPctMarkup'),			_AUCT('OptPctMarkup'),			Auctioneer.Command.GetFilterVal('pct-markup'),										_AUCT('HelpPctMarkup')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdPctBidmarkdown'),		_AUCT('OptPctBidmarkdown'),		Auctioneer.Command.GetFilterVal('pct-bidmarkdown'),									_AUCT('HelpPctBidmarkdown')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdPctNocomp'),			_AUCT('OptPctNocomp'),			Auctioneer.Command.GetFilterVal('pct-nocomp'),										_AUCT('HelpPctNocomp')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdPctUnderlow'),		_AUCT('OptPctUnderlow'),		Auctioneer.Command.GetFilterVal('pct-underlow'),									_AUCT('HelpPctUnderlow')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdPctUndermkt'),		_AUCT('OptPctUndermkt'),		Auctioneer.Command.GetFilterVal('pct-undermkt'),									_AUCT('HelpPctUndermkt')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdPctMaxless'),			_AUCT('OptPctMaxless'),			Auctioneer.Command.GetFilterVal('pct-maxless'),										_AUCT('HelpPctMaxless')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdBidLimit'),			_AUCT('OptBidLimit'),			Auctioneer.Command.GetFilterVal('bid-limit'),										_AUCT('HelpBidLimit')));
 
 	Auctioneer.AskPrice.ChatPrintHelp()
 
 	lineFormat = "  |cffffffff/auctioneer %s %s|r\n          %s\n\n";
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdClear'), _AUCT('OptClear'), _AUCT('HelpClear')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAlso'), _AUCT('OptAlso'), _AUCT('HelpAlso')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdBroker'), _AUCT('OptBroker'), _AUCT('HelpBroker')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdBidbroker'), _AUCT('OptBidbroker'), _AUCT('HelpBidbroker')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdPercentless'), _AUCT('OptPercentless'), _AUCT('HelpPercentless')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdCompete'), _AUCT('OptCompete'), _AUCT('HelpCompete')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdScan'), _AUCT('OptScan'), _AUCT('HelpScan')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdDefault'), _AUCT('OptDefault'), _AUCT('HelpDefault')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdClear'),			_AUCT('OptClear'),			_AUCT('HelpClear')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAlso'),			_AUCT('OptAlso'),			_AUCT('HelpAlso')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdBroker'),			_AUCT('OptBroker'),			_AUCT('HelpBroker')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdBidbroker'),		_AUCT('OptBidbroker'),		_AUCT('HelpBidbroker')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdPercentless'),	_AUCT('OptPercentless'),	_AUCT('HelpPercentless')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdCompete'),		_AUCT('OptCompete'),		_AUCT('HelpCompete')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdScan'),			_AUCT('OptScan'),			_AUCT('HelpScan')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdDefault'),		_AUCT('OptDefault'),		_AUCT('HelpDefault')));
 end
 --[[
 	The onOff(state, chatprint) function handles the state of the Auctioneer AddOn (whether it is currently on or off)
@@ -1574,7 +1580,7 @@ end
 	"nil" is the same as "toggle"
 
 	If chatprint is "true" then the state will also be printed to the user.
-]]
+--]]
 function onOff(state, chatprint)
 	if (type(state) == "string") then
 		state = Auctioneer.Util.DelocalizeFilterVal(state);
@@ -1616,56 +1622,26 @@ function clear(param, chatprint)
 		return
 	end
 
-	local aKey = Auctioneer.Util.GetAuctionKey();
+	local ahKey = Auctioneer.Util.GetAuctionKey();
 
 	if ((param == _AUCT('CmdClearAll')) or (param == "all")) then
+		Auctioneer.Statistic.ClearCache(nil, ahKey);
+		Auctioneer.SnapshotDB.Clear(nil, ahKey);
+		Auctioneer.HistoryDB.Clear(nil, ahKey);
 
-		AuctionConfig.info = {};
-		AuctionConfig.data[aKey] = {};
-		AuctionConfig.stats.histmed[aKey] = {};
-		AuctionConfig.stats.histcount[aKey] = {};
-		clear("snapshot");
 	elseif ((param == _AUCT('CmdClearSnapshot')) or (param == "snapshot")) then
+		Auctioneer.SnapshotDB.Clear(nil, ahKey);
 
-		AuctionConfig.snap[aKey] = {};
-		AuctionConfig.sbuy[aKey] = {};
-		Auctioneer_HSPCache[aKey] = {};
-		AuctionConfig.stats.snapmed[aKey] = {};
-		AuctionConfig.stats.snapcount[aKey] = {};
-		Auctioneer.Core.Variables.SnapshotItemPrices = {};
 	else
-
 		local items = Auctioneer.Util.GetItems(param);
-		local itemLinks = Auctioneer.Util.GetItemHyperlinks(param);
-
 		if (items) then
-			for pos,itemKey in ipairs(items) do
-
-				if (AuctionConfig.data[aKey][itemKey]) then
-					AuctionConfig.data[aKey][itemKey] = nil;
-
-					AuctionConfig.stats.snapmed[aKey][itemKey] = nil;
-					AuctionConfig.stats.histmed[aKey][itemKey] = nil;
-					AuctionConfig.stats.histcount[aKey][itemKey] = nil;
-					AuctionConfig.stats.snapcount[aKey][itemKey] = nil;
-					AuctionConfig.sbuy[aKey][itemKey] = nil;
-
-					local count = 0;
-					while (AuctionConfig.snap[aKey][count]) do
-						AuctionConfig.snap[aKey][count][itemKey] = nil;
-						count = count+1;
-					end
-
-					Auctioneer_HSPCache[aKey][itemKey] = nil;
-
-					--These are not included in the print statement below because there could be the possiblity that an item's data was cleared but another's was not
-					if (chatprint) then
-						Auctioneer.Util.ChatPrint(string.format(_AUCT('FrmtActClearOk'), itemLinks[pos]));
-					end
-				else
-					if (chatprint) then
-						Auctioneer.Util.ChatPrint(string.format(_AUCT('FrmtActClearFail'), itemLinks[pos]));
-					end
+			local itemLinks = Auctioneer.Util.GetItemHyperlinks(param);
+			for pos, itemKey in ipairs(items) do
+				Auctioneer.Statistic.ClearCache(itemKey, ahKey);
+				Auctioneer.SnapshotDB.Clear(itemKey, ahKey);
+				Auctioneer.HistoryDB.Clear(itemKey, ahKey);
+				if (chatprint) then
+					Auctioneer.Util.ChatPrint(string.format(_AUCT('FrmtActClearOk'), itemLinks[pos]));
 				end
 			end
 		end
@@ -1673,7 +1649,7 @@ function clear(param, chatprint)
 
 	if (chatprint) then
 		if ((param == _AUCT('CmdClearAll')) or (param == "all")) then
-			Auctioneer.Util.ChatPrint(string.format(_AUCT('FrmtActClearall'), aKey));
+			Auctioneer.Util.ChatPrint(string.format(_AUCT('FrmtActClearall'), ahKey));
 
 		elseif ((param == _AUCT('CmdClearSnapshot')) or (param == "snapshot")) then
 			Auctioneer.Util.ChatPrint(_AUCT('FrmtActClearsnap'));

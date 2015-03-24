@@ -1,6 +1,6 @@
 --[[
 	Auctioneer Addon for World of Warcraft(tm).
-	Version: 3.8.0 (Kangaroo)
+	Version: 3.9.0.1063 (Kangaroo)
 	Revision: $Id: AucLocale.lua 675 2006-01-05 19:33:38Z mentalpower $
 
 	AucLocale

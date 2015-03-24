@@ -1,6 +1,6 @@
 --[[
-	Version: 3.8.0 (Kangaroo)
-	Revision: $Id: BalancedList.lua 958 2006-08-16 04:21:17Z mentalpower $
+	Version: 3.9.0.1063 (Kangaroo)
+	Revision: $Id: BalancedList.lua 1003 2006-09-25 07:46:12Z vindicator $
 
 	License:
 		This program is free software; you can redistribute it and/or
@@ -32,7 +32,7 @@ local function newBalancedList(paramSize)
 	-- This is what keeps the list balanced. For example if your list is {1,2,3,4}
 	-- and you insert(2) then your list would become {1,2,2,3}.
 	local insert =  function (value)
-	if (not value) then return; end
+		if (not value) then return; end
 		local val = tonumber(value) or 0;
 
 		local insertPos	= 0

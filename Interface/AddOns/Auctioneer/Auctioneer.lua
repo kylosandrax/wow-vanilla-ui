@@ -1,7 +1,7 @@
 --[[
 	Auctioneer
-	Revision: $Id: Auctioneer.lua 895 2006-06-02 19:17:11Z mentalpower $
-	Version: 3.8.0 (Kangaroo)
+	Revision: $Id: Auctioneer.lua 1003 2006-09-25 07:46:12Z vindicator $
+	Version: 3.9.0.1063 (Kangaroo)
 	Original version written by Norganna.
 	Contributors: Araband
 
@@ -24,13 +24,13 @@
 		You should have received a copy of the GNU General Public License
 		along with this program(see GPL.txt); if not, write to the Free Software
 		Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
-]]
+--]]
 
 
-Auctioneer.Version="3.8.0";
+Auctioneer.Version="3.9.0.1063";
 -- If you want to see debug messages, create a window called "Debug" within the client.
 if (Auctioneer.Version == "<".."%version%>") then
-	Auctioneer.Version = "3.7.DEV";
+	Auctioneer.Version = "3.9.DEV";
 end
 
 local function onLoad()

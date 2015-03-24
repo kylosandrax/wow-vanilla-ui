@@ -1,7 +1,7 @@
 --[[
 	Auctioneer Addon for World of Warcraft(tm).
-	Version: 3.8.0 (Kangaroo)
-	Revision: $Id: AucStatistic.lua 972 2006-08-22 19:05:01Z mentalpower $
+	Version: 3.9.0.1063 (Kangaroo)
+	Revision: $Id: AucStatistic.lua 1048 2006-10-06 17:21:29Z vindicator $
 
 	Auctioneer statistical functions.
 	Functions to calculate various forms of statistics from the auction data.
@@ -20,23 +20,270 @@
 		You should have received a copy of the GNU General Public License
 		along with this program(see GPL.txt); if not, write to the Free Software
 		Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
-]]
+--]]
 
---Local function prototypes
-local subtractPercent, addPercent, percentLessThan, getLowest, getMedian, getPercentile, getMeans, getItemSnapshotMedianBuyout, getItemHistoricalMedianBuyout, getUsableMedian, getCurrentBid, isBadResaleChoice, profitComparisonSort, roundDownTo95, findLowestAuctions, buildLowestCache, doLow, doMedian, doHSP, getBidBasedSellablePrice, getMarketPrice, getHSP, determinePrice, setScanLength, setScanAge, getScanLength, getScanAge
+-------------------------------------------------------------------------------
+-- Function Imports
+-------------------------------------------------------------------------------
+local stringFromBoolean = Auctioneer.Database.StringFromBoolean;
+local booleanFromString = Auctioneer.Database.BooleanFromString;
+local stringFromNumber = Auctioneer.Database.StringFromNumber;
+local nilSafeStringFromString = Auctioneer.Database.NilSafeStringFromString;
+local stringFromNilSafeString = Auctioneer.Database.StringFromNilSafeString;
 
--- Subtracts/Adds given percentage from/to a value
+-------------------------------------------------------------------------------
+-- Function Prototypes
+-------------------------------------------------------------------------------
+local load;
+local subtractPercent;
+local addPercent;
+local percentLessThan;
+local getMedian;
+local getPercentile;
+local getMeans;
+local getItemSnapshotMedianBuyout;
+local getItemHistoricalMedianBuyout;
+local getUsableMedian;
+local isBadResaleChoice;
+local profitComparisonSort;
+local roundDownTo95;
+local getAuctionWithLowestBuyout;
+local doLow;
+local doMedian;
+local doHSP;
+local getBidBasedSellablePrice;
+local getMarketPrice;
+local getHSP;
+local determinePrice;
+local getBidProfit;
+local getBuyoutProfit;
+local getSuggestedResale;
+local clearCache;
+local debugPrint;
 
-function subtractPercent(value, percentLess) --function subtractPercent(value, percentLess)
+-------------------------------------------------------------------------------
+-- Constants
+-------------------------------------------------------------------------------
+local MedianMetaData =
+{
+	[1] = {
+		fieldName = "median";
+		fromStringFunc = tonumber;
+		toStringFunc = stringFromNumber;
+	},
+	[2] = {
+		fieldName = "count";
+		fromStringFunc = tonumber;
+		toStringFunc = stringFromNumber;
+	},
+};
+
+local HSPInfoMetaData =
+{
+	[1] = {
+		fieldName = "hsp";
+		fromStringFunc = tonumber;
+		toStringFunc = stringFromNumber;
+	},
+	[2] = {
+		fieldName = "count";
+		fromStringFunc = tonumber;
+		toStringFunc = stringFromNumber;
+	},
+	[3] = {
+		fieldName = "market";
+		fromStringFunc = tonumber;
+		toStringFunc = stringFromNumber;
+	},
+	[4] = {
+		fieldName = "warn";
+		fromStringFunc = stringFromNilSafeString;
+		toStringFunc = nilSafeStringFromString;
+	},
+};
+
+-------------------------------------------------------------------------------
+-- Data Members
+-------------------------------------------------------------------------------
+AuctioneerCache = {};
+
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+function load()
+	Auctioneer.EventManager.RegisterEvent("AUCTIONEER_AUCTION_ADDED", onAuctionAdded);
+	Auctioneer.EventManager.RegisterEvent("AUCTIONEER_AUCTION_REMOVED", onAuctionRemoved);
+end
+
+-------------------------------------------------------------------------------
+-- Gets the cache for the specified auction house.
+-------------------------------------------------------------------------------
+function getCacheForAHKey(ahKey, create)
+	-- If no auction house key was provided use the default key for the
+	-- current zone.
+	if (ahKey == nil) then ahKey = Auctioneer.Util.GetAuctionKey() end;
+
+	-- Get or create the cache.
+	if (AuctioneerCache == nil) then
+		AuctioneerCache = {};
+	end
+	local cache = AuctioneerCache[ahKey];
+	if (cache == nil and create) then
+		cache = createCacheForAHKey(ahKey);
+		AuctioneerCache[ahKey] = cache;
+		debugPrint("Created AuctioneerCache["..ahKey.."]");
+	end
+	return cache;
+end
+
+-------------------------------------------------------------------------------
+-- Creates a cache table for the specified AH key.
+-------------------------------------------------------------------------------
+function createCacheForAHKey(ahKey)
+	local cache = {};
+	cache.ahKey = ahKey;
+	cache.snapshotMedians = {};
+	cache.historicalMedians = {};
+	cache.lowestBuyoutAuctionId = {};
+	cache.hspInfo = {};
+	return cache;
+end
+
+-------------------------------------------------------------------------------
+-- Clears the cache for the specified item. If itemKey is nil then the entire
+-- cache for that AH is cleared.
+-------------------------------------------------------------------------------
+function clearCache(itemKey, ahKey)
+	local cache = getCacheForAHKey(ahKey);
+	if (cache) then
+		if (itemKey) then
+			-- Toss the cache for the specified item.
+			cache.snapshotMedians[itemKey] = nil;
+			cache.historicalMedians[itemKey] = nil;
+			cache.lowestBuyoutAuctionId[itemKey] = nil;
+			cache.hspInfo[itemKey] = nil;
+			debugPrint("Removed "..itemKey.." from cache "..cache.ahKey);
+		else
+			-- Toss the entire cache by recreating it.
+			AuctioneerCache[cache.ahKey] = createCacheForAHKey(cache.ahKey);
+			debugPrint("Cleared cache database for "..cache.ahKey);
+		end
+	end
+end
+
+-------------------------------------------------------------------------------
+-- Called when an auction is added to the snapshot. We use this event as an
+-- indication that we need to clear snapshot values from the cache.
+-------------------------------------------------------------------------------
+function onAuctionAdded(event, auction)
+	local cache = getCacheForAHKey(auction.ahKey, false);
+	if (cache) then
+		local itemKey = Auctioneer.ItemDB.CreateItemKeyFromAuction(auction);
+		clearCache(itemKey, auction.ahKey);
+	end
+end
+
+-------------------------------------------------------------------------------
+-- Called when an auction is removed from the snapshot. We use this event as an
+-- indication that we need to clear snapshot values from the cache.
+-------------------------------------------------------------------------------
+function onAuctionRemoved(event, auction)
+	local cache = getCacheForAHKey(auction.ahKey, false);
+	if (cache) then
+		local itemKey = Auctioneer.ItemDB.CreateItemKeyFromAuction(auction);
+		cache.snapshotMedians[itemKey] = nil;
+		cache.lowestBuyoutAuctionId[itemKey] = nil;
+		cache.hspInfo[itemKey] = nil;
+	end
+end
+
+-------------------------------------------------------------------------------
+-- Returns the current snapshot median for an item
+-------------------------------------------------------------------------------
+function getItemSnapshotMedianBuyout(itemKey, ahKey)
+	if (not ahKey) then ahKey = Auctioneer.Util.GetAuctionKey() end
+
+	-- Try to get the value from the cache first.
+	local unpacked;
+	local cache = getCacheForAHKey(ahKey, true);
+	local packed = cache.snapshotMedians[itemKey];
+	if (packed) then
+		-- Use the cached value.
+		--debugPrint("getItemSnapshotMedianBuyout: Cache hit - "..itemKey);
+		unpacked = Auctioneer.Database.UnpackRecord(packed, MedianMetaData);
+	else
+		-- Not in the cache, we'll have to calculate it.
+		--debugPrint("getItemSnapshotMedianBuyout: Cache miss - "..itemKey);
+		unpacked = {};
+
+		-- Query the snapshot and calculate the median.
+		local buyoutPrices = {};
+		local auctions = Auctioneer.SnapshotDB.GetAuctionsForItem(itemKey, ahKey);
+		for _, auction in pairs(auctions) do
+			if (auction.buyoutPrice and auction.buyoutPrice > 0) then
+				table.insert(buyoutPrices, auction.buyoutPrice / auction.count);
+			end
+		end
+		unpacked.median, unpacked.count = getMedian(buyoutPrices);
+		
+		-- Cache the calculated values.
+		cache.snapshotMedians[itemKey] = Auctioneer.Database.PackRecord(unpacked, MedianMetaData);
+	end
+
+	return unpacked.median, unpacked.count;
+end
+
+-------------------------------------------------------------------------------
+-- Returns the historical median for an item
+-------------------------------------------------------------------------------
+function getItemHistoricalMedianBuyout(itemKey, ahKey)
+	if (not ahKey) then ahKey = Auctioneer.Util.GetAuctionKey() end
+
+	-- Try to get the value from the cache first.
+	local unpacked;
+	local cache = getCacheForAHKey(ahKey, true);
+	local packed = cache.historicalMedians[itemKey];
+	if (packed) then
+		-- Use the cached value.
+		--debugPrint("getItemHistoricalMedianBuyout: Cache hit - "..itemKey);
+		unpacked = Auctioneer.Database.UnpackRecord(packed, MedianMetaData);
+	else
+		-- Not in the cache, we'll have to calculate it.
+		--debugPrint("getItemHistoricalMedianBuyout: Cache miss - "..itemKey);
+		unpacked = {};
+
+		-- Get the historical median price list and calculate the median.
+		local medianBuyoutPriceList = Auctioneer.HistoryDB.GetMedianBuyoutPriceList(itemKey, ahKey);
+		if (medianBuyoutPriceList) then
+			unpacked.median, unpacked.count = getMedian(medianBuyoutPriceList);
+		else
+			unpacked.median, unpacked.count = 0, 0;
+		end
+		
+		-- Cache the calculated values.
+		cache.historicalMedians[itemKey] = Auctioneer.Database.PackRecord(unpacked, MedianMetaData);
+	end
+
+	return unpacked.median, unpacked.count;
+end
+
+-------------------------------------------------------------------------------
+-- Subtracts given percentage from a value
+-------------------------------------------------------------------------------
+function subtractPercent(value, percentLess)
 	return math.floor(value * ((100 - percentLess)/100));
 end
 
+-------------------------------------------------------------------------------
+-- Adds given percentage to a value
+-------------------------------------------------------------------------------
 function addPercent(value, percentMore)
 	return math.floor(value * ((100 + percentMore)/100));
 end
 
+-------------------------------------------------------------------------------
 -- returns the integer representation of the percent less value2 is from value1
 -- example: value1=10, value2=7,  percentLess=30
+-------------------------------------------------------------------------------
 function percentLessThan(value1, value2)
 	if Auctioneer.Util.NullSafe(value1) > 0 and Auctioneer.Util.NullSafe(value2) < Auctioneer.Util.NullSafe(value1) then
 		return 100 - math.floor((100 * Auctioneer.Util.NullSafe(value2))/Auctioneer.Util.NullSafe(value1));
@@ -45,32 +292,18 @@ function percentLessThan(value1, value2)
 	end
 end
 
-function getLowest(valuesTable)
-	if (not valuesTable or table.getn(valuesTable) == 0) then
-		return nil, nil;
-	end
-	local tableSize = table.getn(valuesTable);
-	local lowest = tonumber(valuesTable[1]) or 0;
-	local second = nil
-	if (tableSize > 1) then
-		for i=2, tableSize do
-			second = tonumber(valuesTable[i]) or 0;
-			if (second > lowest) then
-				return lowest, second;
-			end
-		end
-	end
-	return lowest, nil;
-end
-
+-------------------------------------------------------------------------------
 -- Returns the median value of a given table one-dimentional table
+-------------------------------------------------------------------------------
 function getMedian(valuesTable)
 	return getPercentile(valuesTable, 0.5)
 end
 
+-------------------------------------------------------------------------------
 -- Return weighted average percentile such that returned value
 -- is larger than or equal to (100*pct)% of the table values
 -- 0 <= pct <= 1
+-------------------------------------------------------------------------------
 function getPercentile(valuesTable, pct)
 	if (type(valuesTable) ~= "table") or (not tonumber(pct)) then
 		return nil   -- make valuesTable a required table argument
@@ -127,108 +360,46 @@ function getPercentile(valuesTable, pct)
 	return _percentile(valuesTable, pct, first, last), last - first + 1
 end
 
-
+-------------------------------------------------------------------------------
 -- Return all of the averages for an item
 -- Returns: avgMin,avgBuy,avgBid,bidPct,buyPct,avgQty,aCount
+-------------------------------------------------------------------------------
 function getMeans(itemKey, from)
-	local auctionPriceItem = Auctioneer.Core.GetAuctionPriceItem(itemKey, from);
-	if (not auctionPriceItem.data) then
-		EnhTooltip.DebugPrint("Error, GetAuctionPriceItem", itemKey, from, "returns", auctionPriceItem);
-	end
-	local aCount,minCount,minPrice,bidCount,bidPrice,buyCount,buyPrice = Auctioneer.Core.GetAuctionPrices(auctionPriceItem.data);
-	local avgMin,avgBuy,avgBid,bidPct,buyPct,avgQty;
-
-	if aCount > 0 then
-		avgQty = math.floor(minCount / aCount);
-		avgMin = math.floor(minPrice / minCount);
-		bidPct = math.floor(bidCount / minCount * 100);
-		buyPct = math.floor(buyCount / minCount * 100);
+	local avgMin,avgBuy,avgBid,bidPct,buyPct,avgQty,seenCount;
+	local itemTotals = Auctioneer.HistoryDB.GetItemTotals(itemKey, from);
+	if (itemTotals and itemTotals.seenCount > 0) then
+		avgQty = math.floor(itemTotals.minCount / itemTotals.seenCount);
+		avgMin = math.floor(itemTotals.minPrice / itemTotals.minCount);
+		bidPct = math.floor(itemTotals.bidCount / itemTotals.minCount * 100);
+		buyPct = math.floor(itemTotals.buyoutCount / itemTotals.minCount * 100);
 
 		avgBid = 0;
-		if (bidCount > 0) then
-			avgBid = math.floor(bidPrice / bidCount);
+		if (itemTotals.bidCount > 0) then
+			avgBid = math.floor(itemTotals.bidPrice / itemTotals.bidCount);
 		end
 
 		avgBuy = 0;
-		if (buyCount > 0) then
-			avgBuy = math.floor(buyPrice / buyCount);
+		if (itemTotals.buyoutCount > 0) then
+			avgBuy = math.floor(itemTotals.buyoutPrice / itemTotals.buyoutCount);
 		end
+		
+		seenCount = itemTotals.seenCount;
 	end
-	return avgMin,avgBuy,avgBid,bidPct,buyPct,avgQty,aCount;
+	return avgMin,avgBuy,avgBid,bidPct,buyPct,avgQty,seenCount;
 end
 
--- Returns the current snapshot median for an item
-function getItemSnapshotMedianBuyout(itemKey, auctKey, buyoutPrices)
-	if (not auctKey) then auctKey = Auctioneer.Util.GetAuctionKey() end
-
-	local stat, count;
-
-	if (AuctionConfig.stats and AuctionConfig.stats.snapmed and AuctionConfig.stats.snapmed[auctKey]) then
-		stat = AuctionConfig.stats.snapmed[auctKey][itemKey];
-		count = AuctionConfig.stats.snapcount[auctKey][itemKey];
-	end
-
-	if (not stat) or (not count) then
-		if (not buyoutPrices) then
-			local sbuy = Auctioneer.Core.GetSnapshotInfo(auctKey, itemKey);
-			if (sbuy) then
-				buyoutPrices = sbuy.buyoutPrices;
-			end
-		end
-
-		if (buyoutPrices) then
-			stat, count = getMedian(buyoutPrices);
-		else
-			stat, count = 0, 0;
-		end
-
-		-- save median to the savedvariablesfile
-		Auctioneer.Storage.SetSnapMed(auctKey, itemKey, stat, count)
-	end
-
-	return stat, count;
-end
-
--- Returns the historical median for an item
-function getItemHistoricalMedianBuyout(itemKey, auctKey, buyoutHistoryTable)
-	if (not auctKey) then auctKey = Auctioneer.Util.GetAuctionKey() end
-
-	local stat, count;
-
-	if (AuctionConfig.stats and AuctionConfig.stats.histmed and AuctionConfig.stats.histmed[auctKey]) then
-		stat = AuctionConfig.stats.histmed[auctKey][itemKey];
-		count = AuctionConfig.stats.histcount[auctKey][itemKey];
-	end
-
-	if (not stat) or (not count) then
-		if (not buyoutHistoryTable) then
-			buyoutHistoryTable = Auctioneer.Core.GetAuctionBuyoutHistory(itemKey, auctKey);
-		end
-
-		if (buyoutHistoryTable) then
-			stat, count = getMedian(buyoutHistoryTable);
-		else
-			stat, count = 0, 0;
-		end
-
-		-- save median to the savedvariablesfile
-		Auctioneer.Storage.SetHistMed(auctKey, itemKey, stat, count);
-	end
-
-	return stat, count;
-end
-
--- this function returns the most accurate median possible,
--- if an accurate median cannot be obtained based on min seen counts then nil is returned
-function getUsableMedian(itemKey, realm, buyoutPrices)
-	if not realm then
-		realm = Auctioneer.Util.GetAuctionKey();
-	end
+-------------------------------------------------------------------------------
+-- This function returns the most accurate median possible,
+-- If an accurate median cannot be obtained based on min seen counts then nil
+-- is returned.
+-------------------------------------------------------------------------------
+function getUsableMedian(itemKey, ahKey)
+	if (not ahKey) then ahKey = Auctioneer.Util.GetAuctionKey() end
 
 	--get snapshot median
-	local snapshotMedian, snapCount = getItemSnapshotMedianBuyout(itemKey, realm, buyoutPrices)
+	local snapshotMedian, snapCount = getItemSnapshotMedianBuyout(itemKey, ahKey)
 	--get history median
-	local historyMedian, histCount = getItemHistoricalMedianBuyout(itemKey, realm);
+	local historyMedian, histCount = getItemHistoricalMedianBuyout(itemKey, ahKey);
 
 	local median, count
 	if (histCount >= Auctioneer.Core.Constants.MinBuyoutSeenCount) then
@@ -242,46 +413,31 @@ function getUsableMedian(itemKey, realm, buyoutPrices)
 			median, count = snapshotMedian, snapCount;
 		end
 	end
+
 	return median, count;
 end
 
--- Returns the current bid on an auction
-function getCurrentBid(auctionSignature)
-	local x,x,x, x, x,min,x,_ = Auctioneer.Core.GetItemSignature(auctionSignature);
-	local auctKey = Auctioneer.Util.GetAuctionKey();
-	local itemCat = Auctioneer.Util.GetCatForSig(auctionSignature);
-	local snap = Auctioneer.Core.GetSnapshot(auctKey, itemCat, auctionSignature);
-	if (not snap) then return 0 end
-	local currentBid = tonumber(snap.bidamount) or 0;
-	if currentBid == 0 then currentBid = min end
-	return currentBid;
-end
-
+-------------------------------------------------------------------------------
 -- This filter will return true if an auction is a bad choice for reselling
-function isBadResaleChoice(auctSig, auctKey)
-	if (not auctKey) then auctKey = Auctioneer.Util.GetAuctionKey() end
-
+-------------------------------------------------------------------------------
+function isBadResaleChoice(auction)
 	local isBadChoice = false;
-	local id,rprop,enchant, name, count,min,buyout,uniq = Auctioneer.Core.GetItemSignature(auctSig);
-	local itemKey = id..":"..rprop..":"..enchant;
-	local itemCat = Auctioneer.Util.GetCatForKey(itemKey);
-	local auctionItem = Auctioneer.Core.GetSnapshot(auctKey, itemCat, auctSig);
-	local auctionPriceItem = Auctioneer.Core.GetAuctionPriceItem(itemKey, auctKey);
-	local aCount,minCount,minPrice,bidCount,bidPrice,buyCount,buyPrice = Auctioneer.Core.GetAuctionPrices(auctionPriceItem.data);
-	local bidPercent = math.floor(bidCount / minCount * 100);
 
-	if (auctionItem) then
-		local itemLevel = tonumber(auctionItem.level);
-		local itemQuality = tonumber(auctionItem.quality);
+	-- Get the item info and item historical totals.
+	local itemKey = Auctioneer.ItemDB.CreateItemKeyFromAuction(auction);
+	local itemInfo = Auctioneer.ItemDB.GetItemInfo(itemKey);
+	local itemTotals = Auctioneer.HistoryDB.GetItemTotals(itemKey, auction.ahKey);
 
-		-- bad choice conditions
-		if Auctioneer.Core.Constants.BidBasedCategories[auctionItem.category] and bidPercent < Auctioneer.Core.Constants.MinBidPercent then
+	-- Determine if its a bad choice.
+	if (itemInfo and itemTotals) then
+		local bidPercent = math.floor(itemTotals.bidCount / itemTotals.minCount * 100);
+		if Auctioneer.Core.Constants.BidBasedCategories[itemInfo.categoryName] and bidPercent < Auctioneer.Core.Constants.MinBidPercent then
 			isBadChoice = true; -- bidbased items should have a minimum bid percent
-		elseif (itemLevel >= 50 and itemQuality == Auctioneer.Core.Constants.Quality.Uncommon and bidPercent < Auctioneer.Core.Constants.MinBidPercent) then
+		elseif (itemInfo.useLevel >= 50 and itemInfo.quality == Auctioneer.Core.Constants.Quality.Uncommon and bidPercent < Auctioneer.Core.Constants.MinBidPercent) then
 			isBadChoice = true; -- level 50 and greater greens that do not have bids do not sell well
-		elseif auctionItem.owner == UnitName("player") or auctionItem.highBidder then
-			isBadChoice = true; -- don't display auctions that we own, or are high bidder on
-		elseif itemQuality == Auctioneer.Core.Constants.Quality.Poor then
+		elseif auction.owner == UnitName("player") then
+			isBadChoice = true; -- don't display auctions that we own
+		elseif itemInfo.quality == Auctioneer.Core.Constants.Quality.Poor then
 			isBadChoice = true; -- gray items are never a good choice
 		end
 	end
@@ -289,21 +445,12 @@ function isBadResaleChoice(auctSig, auctKey)
 	return isBadChoice;
 end
 
--- method to pass to table.sort() that sorts auctions by profit descending
-function profitComparisonSort(a, b)
-	local aid,arprop,aenchant, aName, aCount, x, aBuyout, x = Auctioneer.Core.GetItemSignature(a.signature);
-	local bid,brprop,benchant, bName, bCount, x, bBuyout, x = Auctioneer.Core.GetItemSignature(b.signature);
-	local aItemKey = aid .. ":" .. arprop..":"..aenchant;
-	local bItemKey = bid .. ":" .. brprop..":"..benchant;
-	local realm = Auctioneer.Util.GetAuctionKey()
-	local aProfit = (getHSP(aItemKey, realm) * aCount) - aBuyout;
-	local bProfit = (getHSP(bItemKey, realm) * bCount) - bBuyout;
-	return (aProfit > bProfit)
-end
-
--- this function takes copper and rounds to 5 silver below the the nearest gold if it is less than 15 silver above of an even gold
+-------------------------------------------------------------------------------
+-- This function takes copper and rounds to 5 silver below the the nearest gold
+-- if it is less than 15 silver above of an even gold.
 -- example: this function changes 1g9s to 95s
 -- example: 1.5g will be unchanged and remain 1.5g
+-------------------------------------------------------------------------------
 function roundDownTo95(copper)
 	local g,s,c = EnhTooltip.GetGSC(copper);
 	if g > 0 and s < 10 then
@@ -312,100 +459,82 @@ function roundDownTo95(copper)
 	return copper;
 end
 
+-------------------------------------------------------------------------------
+-- Returns the auction in the snapshot with the lowest buyout price.
+-------------------------------------------------------------------------------
+function getAuctionWithLowestBuyout(itemKey, ahKey)
+	if (not ahKey) then ahKey = Auctioneer.Util.GetAuctionKey() end
 
--- given an item name, find the lowest price for that item in the current AHSnapshot
--- if the item does not exist in the snapshot or the snapshot does not exist
--- a nil is returned.
-function findLowestAuctions(itemKey, auctKey)
-	local itemID, itemRand, enchant = Auctioneer.Util.BreakItemKey(itemKey);
-	if (itemID == nil) then return nil; end
-	if (not auctKey) then
-		auctKey = Auctioneer.Util.GetAuctionKey();
-	end
-	if not (Auctioneer_Lowests and Auctioneer_Lowests[auctKey]) then buildLowestCache(auctKey) end
+	-- Try to get the list from the cache first.
+	local auctionWithLowestBuyout;
+	local cache = getCacheForAHKey(ahKey, true);
+	local auctionId = cache.lowestBuyoutAuctionId[itemKey];
+	if (auctionId and auctionId ~= 0) then
+		-- Return the auction id in the cache.
+		--debugPrint("getAuctionWithLowestBuyout: Cache hit - "..itemKey);
+		auctionWithLowestBuyout = Auctioneer.SnapshotDB.GetAuctionById(ahKey, auctionId);
+	else
+		-- Query the snapshot for all auctions of this item with a buyout.
+		--debugPrint("getAuctionWithLowestBuyout: Cache miss - "..itemKey);
+		local auctions = Auctioneer.SnapshotDB.QueryWithItemKey(
+			itemKey,
+			ahKey,
+			function (auction)
+				return (auction.buyoutPrice and auction.buyoutPrice > 0);
+			end);
 
-	local lowKey = itemID..":"..itemRand;
+		-- If we found any auctions, get the lowest buyout price.
+		if (table.getn(auctions) > 0) then
+			-- Sort the list of auctions by buyoutPrice.
+			table.sort(
+				auctions,
+				function (auction1, auction2)
+					return (Auctioneer.Util.PriceForOne(auction1.buyoutPrice, auction1.count) < Auctioneer.Util.PriceForOne(auction2.buyoutPrice, auction2.count))
+				end);
 
-	local itemCat = nil;
-	local lowSig = nil;
-	local nextSig = nil;
-	local lowestPrice = 0;
-	local nextLowest = 0;
-
-	local lows = Auctioneer_Lowests[auctKey][lowKey];
-	if (lows) then
-		lowSig = lows.lowSig;
-		nextSig = lows.nextSig;
-		lowestPrice = lows.lowestPrice or 0;
-		nextLowest = lows.nextLowest or 0;
-		itemCat = lows.cat;
-	end
-
-	return lowSig, lowestPrice, nextSig, nextLowest, itemCat;
-end
-
-function buildLowestCache(auctKey)
-	if (Auctioneer_Lowests == nil) then Auctioneer_Lowests = {}; end
-	Auctioneer_Lowests[auctKey] = {}
-
-	local id, rprop, enchant, name, count, min, buyout, uniq, lowKey, priceForOne, lowests;
-	if (AuctionConfig and AuctionConfig.snap and AuctionConfig.snap[auctKey]) then
-		for itemCat, cData in pairs(AuctionConfig.snap[auctKey]) do
-			for sig, sData in pairs(cData) do
-				id,rprop,enchant, name, count,min,buyout,uniq = Auctioneer.Core.GetItemSignature(sig);
-
-				lowKey = id..":"..rprop;
-				if (not Auctioneer_Lowests[auctKey][lowKey]) then Auctioneer_Lowests[auctKey][lowKey] = {cat = itemCat} end
-				lowests = Auctioneer_Lowests[auctKey][lowKey]
-
-				if (Auctioneer.Util.NullSafe(buyout) > 0) then
-					priceForOne = Auctioneer.Util.PriceForOne(buyout, count)
-
-					if (lowests.lowestPrice == nil) or (priceForOne < lowests.lowestPrice) then
-						lowests.lowestPrice, lowests.nextLowest = priceForOne, lowests.lowestPrice
-						lowests.lowSig, lowests.nextSig = sig, lowests.lowSig
-					elseif (lowests.nextLowest == nil) or (priceForOne < lowests.nextLowest) then
-						lowests.nextLowest = priceForOne
-						lowests.nextSig = sig
-					end
-				end
-			end
+			-- Cache the lowest auction id.
+			cache.lowestBuyoutAuctionId[itemKey] = auctions[1].auctionId;
+			
+			-- Return the lowest we found.
+			auctionWithLowestBuyout = auctions[1];
+		else
+			-- Cache none.
+			cache.lowestBuyoutAuctionId[itemKey] = 0;
 		end
 	end
+	
+	
+	return auctionWithLowestBuyout;
 end
 
+-------------------------------------------------------------------------------
 -- execute the '/auctioneer low <itemName>' that returns the auction for an item with the lowest buyout
+-------------------------------------------------------------------------------
 function doLow(link)
-
-	local auctKey = Auctioneer.Util.GetAuctionKey();
+	local ahKey = Auctioneer.Util.GetAuctionKey();
 	local items = Auctioneer.Util.GetItems(link);
 	local itemLinks = Auctioneer.Util.GetItemHyperlinks(link);
 
 	if (items) then
 		for pos,itemKey in pairs(items) do
-
-			local auctionSignature = findLowestAuctions(itemKey);
-			if (not auctionSignature) then
+			local auction = getAuctionWithLowestBuyout(itemKey, ahKey);
+			if (not auction) then
 				Auctioneer.Util.ChatPrint(string.format(_AUCT('FrmtNoauct'), itemLinks[pos]));
-
 			else
-				local itemCat = Auctioneer.Util.GetCatForKey(itemKey);
-				local auction = Auctioneer.Core.GetSnapshot(auctKey, itemCat, auctionSignature);
-				local x,x,x, x, count, x, buyout, x = Auctioneer.Core.GetItemSignature(auctionSignature);
-					Auctioneer.Util.ChatPrint(string.format(_AUCT('FrmtLowLine'), Auctioneer.Util.ColorTextWhite(count.."x")..auction.itemLink, EnhTooltip.GetTextGSC(buyout), Auctioneer.Util.ColorTextWhite(auction.owner), EnhTooltip.GetTextGSC(buyout / count), Auctioneer.Util.ColorTextWhite(percentLessThan(getUsableMedian(itemKey), buyout / count).."%")));
+				Auctioneer.Util.ChatPrint(string.format(_AUCT('FrmtLowLine'), Auctioneer.Util.ColorTextWhite(count.."x")..itemLinks[pos], EnhTooltip.GetTextGSC(auction.buyoutPrice), Auctioneer.Util.ColorTextWhite(auction.owner), EnhTooltip.GetTextGSC(auction.buyout / auction.count), Auctioneer.Util.ColorTextWhite(percentLessThan(getUsableMedian(itemKey), auction.buyout / auction.count).."%")));
 			end
 		end
 	end
 end
 
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 function doMedian(link)
-
 	local items = Auctioneer.Util.GetItems(link);
 	local itemLinks = Auctioneer.Util.GetItemHyperlinks(link);
 
 	if (items) then
 		for pos,itemKey in pairs(items) do
-
 			local median, count = getUsableMedian(itemKey);
 			if (not median) then
 				Auctioneer.Util.ChatPrint(string.format(_AUCT('FrmtMedianNoauct'), Auctioneer.Util.ColorTextWhite(itemName)));
@@ -417,29 +546,31 @@ function doMedian(link)
 	end
 end
 
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
 function doHSP(link)
-
 	local items = Auctioneer.Util.GetItems(link);
 	local itemLinks = Auctioneer.Util.GetItemHyperlinks(link);
 
 	if (items) then
 		for pos,itemKey in pairs(items) do
-
 			local highestSellablePrice = getHSP(itemKey, Auctioneer.Util.GetAuctionKey());
 			Auctioneer.Util.ChatPrint(string.format(_AUCT('FrmtHspLine'), itemLinks[pos], EnhTooltip.GetTextGSC(Auctioneer.Util.NilSafeString(highestSellablePrice))));
 		end
 	end
 end
 
-function getBidBasedSellablePrice(itemKey,realm, avgMin,avgBuy,avgBid,bidPct,buyPct,avgQty,seenCount)
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+function getBidBasedSellablePrice(itemKey, ahKey, avgMin, avgBuy, avgBid, bidPct, buyPct, avgQty, seenCount)
 	-- We can pass these values along if we have them.
 	if (seenCount == nil) then
-		avgMin,avgBuy,avgBid,bidPct,buyPct,avgQty,seenCount = getMeans(itemKey, realm);
+		avgMin,avgBuy,avgBid,bidPct,buyPct,avgQty,seenCount = getMeans(itemKey, ahKey);
 	end
 	local bidBasedSellPrice = 0;
 	local typicalBuyout = 0;
 
-	local medianBuyout = getUsableMedian(itemKey, realm);
+	local medianBuyout = getUsableMedian(itemKey, ahKey);
 	if medianBuyout and avgBuy then
 		typicalBuyout = math.min(avgBuy, medianBuyout);
 	elseif medianBuyout then
@@ -456,11 +587,13 @@ function getBidBasedSellablePrice(itemKey,realm, avgMin,avgBuy,avgBid,bidPct,buy
 	return bidBasedSellPrice;
 end
 
+-------------------------------------------------------------------------------
 -- returns the best market price - 0, if no market price could be calculated
-function getMarketPrice(itemKey, realm, buyoutValues)
+-------------------------------------------------------------------------------
+function getMarketPrice(itemKey, ahKey)
 	-- make sure to call this function with valid parameters! No check is being performed!
-	local buyoutMedian = Auctioneer.Util.NullSafe(getUsableMedian(itemKey, realm, buyoutValues))
-	local avgMin, avgBuy, avgBid, bidPct, buyPct, avgQty, meanCount = getMeans(itemKey, realm)
+	local buyoutMedian = Auctioneer.Util.NullSafe(getUsableMedian(itemKey, ahKey))
+	local avgMin, avgBuy, avgBid, bidPct, buyPct, avgQty, meanCount = getMeans(itemKey, ahKey)
 	local commonBuyout = 0
 
 	-- assign the best common buyout
@@ -471,136 +604,103 @@ function getMarketPrice(itemKey, realm, buyoutValues)
 		commonBuyout = avgBuy;
 	end
 
-	local playerMade, skill, level = Auctioneer.Core.IsPlayerMade(itemKey);
-	if Auctioneer.Core.Constants.BidBasedCategories[Auctioneer.Core.GetItemCategory(itemKey)] and not (playerMade and level < 250 and commonBuyout < 100000) then
-		-- returns bibasedSellablePrice for bidbaseditems, playermade items or if the buyoutprice is not present or less than 10g
-		return getBidBasedSellablePrice(itemKey,realm, avgMin,avgBuy,avgBid,bidPct,buyPct,avgQty,seenCount)
-	end
-
-	-- returns buyoutMedian, if present - returns avgBuy otherwise, if meanCount > 0 - returns 0 otherwise
-	return commonBuyout
-end
-
--- Returns market information relating to the HighestSellablePrice for one of the given items.
--- If you use cached data it may be affected by buying/selling items.
-HSPCOUNT = 0; CACHECOUNT = 0;
-function getHSP(itemKey, realm, buyoutValues, itemCat)
-	if (itemKey == nil) then                                 -- make itemKey a required parameter
-		EnhTooltip.DebugPrint("ERROR: Calling Auctioneer.Statistic.GetHSP(itemKey, realm) - Function requires valid itemKey.");
-		return nil;
-	end
-	if (realm == nil) then
-		EnhTooltip.DebugPrint("WARNING: Auctioneer.Statistic.GetHSP(itemKey, realm) - Defaulting to player realm.");
-		EnhTooltip.DebugPrint("This is only some debugging code. THIS IS NO BUG!");
-		realm = Auctioneer.Util.GetAuctionKey();
-	end
-
-	if (not Auctioneer_HSPCache) then Auctioneer_HSPCache = {}; end
-	CACHECOUNT = CACHECOUNT + 1;
-
-	if (not Auctioneer_HSPCache[realm]) then Auctioneer_HSPCache[realm] = {} end
-	local cached = Auctioneer_HSPCache[realm][itemKey];
-	if (cached) then
-		local cache = Auctioneer.Util.Split(cached, ";");
-		return tonumber(cache[1]), tonumber(cache[2]), tonumber(cache[3]), cache[4], tonumber(cache[5]), cache[6];
-	end
-	HSPCOUNT = HSPCOUNT + 1;
-
-	local highestSellablePrice = 0;
-	local warn = _AUCT('FrmtWarnNodata');
-	EnhTooltip.DebugPrint("Getting HSP, calling GetMarketPrice", itemKey, realm);
-	if (not buyoutValues) then
-		local sbuy = Auctioneer.Core.GetSnapshotInfo(realm, itemKey);
-		if sbuy then
-			buyoutValues = sbuy.buyoutPrices;
+	local category = Auctioneer.ItemDB.GetItemCategory(itemKey);
+	if (category and Auctioneer.Core.Constants.BidBasedCategories[category]) then
+		local playerMade, skill, level = Auctioneer.ItemDB.IsPlayerMade(itemKey);
+		if (not (playerMade and level < 250 and commonBuyout < 100000)) then
+			-- returns bibasedSellablePrice for bidbaseditems, playermade items or if the buyoutprice is not present or less than 10g
+			return getBidBasedSellablePrice(itemKey,ahKey, avgMin,avgBuy,avgBid,bidPct,buyPct,avgQty,seenCount);
 		end
 	end
 
-	local marketPrice = getMarketPrice(itemKey, realm, buyoutValues);
-
-	-- Get our user-set pricing parameters
-	local lowestAllowedPercentBelowMarket = tonumber(Auctioneer.Command.GetFilterVal('pct-maxless'));
-	local discountLowPercent              = tonumber(Auctioneer.Command.GetFilterVal('pct-underlow'));
-	local discountMarketPercent           = tonumber(Auctioneer.Command.GetFilterVal('pct-undermkt'));
-	local discountNoCompetitionPercent    = tonumber(Auctioneer.Command.GetFilterVal('pct-nocomp'));
-	local vendorSellMarkupPercent         = tonumber(Auctioneer.Command.GetFilterVal('pct-markup'));
-
-	local x, histCount = getUsableMedian(itemKey, realm, buyoutValues);
-	histCount = Auctioneer.Util.NullSafe(histCount);
-
-	local id = Auctioneer.Util.BreakItemKey(itemKey);
-
-	-- Get the snapshot sigs of the two lowest auctions
-	local currentLowestSig = nil;
-	local currentLowestBuyout = nil;
-	local currentLowestCount = nil;
-
-	local nextLowestSig = nil;
-	local nextLowestBuyout = nil;
-	local nextLowestCount = nil;
-
-	local lowSig, lowPrice, nextSig, nextPrice, itemCat = findLowestAuctions(itemKey, realm);
-	if lowSig then
-		currentLowestSig = lowSig;
-		currentLowestBuyout = lowPrice;
-		nextLowestSig = nextSig;
-		nextLowestBuyout = nextPrice;
-	end
-
-	if (not itemCat) then itemCat = Auctioneer.Util.GetCatForKey(itemKey) end
-
-	local hsp, market, warn = determinePrice(id, realm, marketPrice, currentLowestBuyout, currentLowestSig, lowestAllowedPercentBelowMarket, discountLowPercent, discountMarketPercent, discountNoCompetitionPercent, vendorSellMarkupPercent, itemCat);
-	local nexthsp, x, nextwarn = determinePrice(id, realm, marketPrice, nextLowestBuyout, nextLowestSig, lowestAllowedPercentBelowMarket, discountLowPercent, discountMarketPercent, discountNoCompetitionPercent, vendorSellMarkupPercent, itemCat);
-
-
-	if (not hsp) then
-		EnhTooltip.DebugPrint("Unable to calc HSP for",id, realm, marketPrice, currentLowestBuyout, currentLowestSig);
-		hsp = 0;
-		warn = "";
-	end
-	if (not nexthsp) then nexthsp = 0; nextwarn = ""; end
-
-	EnhTooltip.DebugPrint("Auction data: ", hsp, histCount, market, warn, nexthsp, nextwarn);
-
-	local cache = string.format("%d;%d;%d;%s;%d;%s", hsp,histCount,market,warn, nexthsp,nextwarn);
-	Auctioneer_HSPCache[realm][itemKey] = cache;
-
-	return hsp, histCount, market, warn, nexthsp, nextwarn;
+	-- returns buyoutMedian, if present - returns avgBuy otherwise, if meanCount > 0 - returns 0 otherwise
+	return commonBuyout;
 end
 
-function determinePrice(id, realm, marketPrice, currentLowestBuyout, currentLowestSig, lowestAllowedPercentBelowMarket, discountLowPercent, discountMarketPercent, discountNoCompetitionPercent, vendorSellMarkupPercent, itemCat)
+-------------------------------------------------------------------------------
+-- Returns market information relating to the HighestSellablePrice for one of
+-- the given items. If HSP cannot be calculated thsi method will return
+-- 0 for the HSP.
+-------------------------------------------------------------------------------
+function getHSP(itemKey, ahKey)
+	-- Normalize the arguments.
+	if (ahKey == nil) then ahKey = Auctioneer.Util.GetAuctionKey() end
+	if (itemKey == nil) then
+		debugPrint("ERROR: Calling Auctioneer.Statistic.GetHSP(itemKey, ahKey) - Function requires valid itemKey.");
+		return nil;
+	end
 
-	local warn, highestSellablePrice, lowestBuyoutPriceAllowed;
+	-- Check the cache first.
+	local cache = getCacheForAHKey(ahKey, true);
+	local packedInfo = cache.hspInfo[itemKey];
+	if (packedInfo) then
+		-- Use the cached info.
+		--debugPrint("getHSP: Cache hit - "..itemKey);
+		info = Auctioneer.Database.UnpackRecord(packedInfo, HSPInfoMetaData);
+		return info.hsp, info.count, info.market, info.warn;
+	end
+	
+	-- Its not in the cache, so calculate it.
+	--debugprofilestart();
+	--debugPrint("getHSP: Cache miss - "..itemKey);
+	local _, seenCount = getUsableMedian(itemKey, ahKey);
+	seenCount = Auctioneer.Util.NullSafe(seenCount);
+	local hsp, market, warn = determinePrice(
+		itemKey,
+		ahKey,
+		getAuctionWithLowestBuyout(itemKey, ahKey),
+		tonumber(Auctioneer.Command.GetFilterVal('pct-maxless')),
+		tonumber(Auctioneer.Command.GetFilterVal('pct-underlow')),
+		tonumber(Auctioneer.Command.GetFilterVal('pct-undermkt')),
+		tonumber(Auctioneer.Command.GetFilterVal('pct-nocomp')),
+		tonumber(Auctioneer.Command.GetFilterVal('pct-markup'))
+	);
+	
+	-- Cache our calculations
+	local info = {};
+	info.hsp = hsp;
+	info.count = seenCount;
+	info.market = market;
+	info.warn = warn;
+	cache.hspInfo[itemKey] = Auctioneer.Database.PackRecord(info, HSPInfoMetaData);
+	--Auctioneer.Util.ChatPrint("HSP calculation took "..debugprofilestop());
+	
+	debugPrint("Calculated HSP for "..itemKey..": hsp="..info.hsp.."; count="..info.count.."; market="..info.market.."; warn="..info.warn);
+	return info.hsp, info.count, info.market, info.warn;
+end
 
-	if marketPrice and marketPrice > 0 then
-		if currentLowestBuyout and currentLowestBuyout > 0 then
-			lowestBuyoutPriceAllowed = subtractPercent(marketPrice, lowestAllowedPercentBelowMarket);
-			if (not itemCat) then itemCat = Auctioneer.Util.GetCatForSig(currentLowestSig) end
+-------------------------------------------------------------------------------
+-- Calcultes the HSP, market price and HSP description for an item.
+-------------------------------------------------------------------------------
+function determinePrice(itemKey, ahKey, auctionWithLowestBuyout, lowestAllowedPercentBelowMarket, discountLowPercent, discountMarketPercent, discountNoCompetitionPercent, vendorSellMarkupPercent)
+	local highestSellablePrice = 0;
+	local marketPrice = getMarketPrice(itemKey, ahKey);
+	local warn = _AUCT('FrmtWarnNodata');
+	if (marketPrice and marketPrice > 0) then
+		if (auctionWithLowestBuyout) then
+			local lowestBuyoutPriceAllowed = subtractPercent(marketPrice, lowestAllowedPercentBelowMarket);
 
 			-- since we don't want to decode the full data unless there's a chance it belongs to the player
 			-- do a substring search for the players name first.
-			-- For some reason AuctionConfig.snap[realm][itemCat][currentLowestSig] sometimes doesn't
+			-- For some reason AuctionConfig.snap[ahKey][itemCat][currentLowestSig] sometimes doesn't
 			-- exist, even if currentLowestBuyout is set. Added a check for this as a workaround, but
 			-- the real cause should probably be tracked down - Thorarin
-			local snap;
-			if (AuctionConfig.snap[realm][itemCat][currentLowestSig] and string.find(AuctionConfig.snap[realm][itemCat][currentLowestSig], UnitName("player"), 1, true)) then
-				snap = Auctioneer.Core.GetSnapshot(realm, itemCat, currentLowestSig);
-			end
-			if snap and snap.owner == UnitName("player") then
-				highestSellablePrice = currentLowestBuyout; -- If I am the lowest seller use same low price
+			local lowestBuyout = (auctionWithLowestBuyout.buyoutPrice / auctionWithLowestBuyout.count);
+			if (auctionWithLowestBuyout.owner == UnitName("player")) then
+				highestSellablePrice = lowestBuyout; -- If I am the lowest seller use same low price
 				warn = _AUCT('FrmtWarnMyprice');
-			elseif (currentLowestBuyout < lowestBuyoutPriceAllowed) then
+			elseif (lowestBuyout < lowestBuyoutPriceAllowed) then
 				highestSellablePrice = subtractPercent(marketPrice, discountMarketPercent);
 				warn = _AUCT('FrmtWarnToolow');
 			else
-				if (currentLowestBuyout > marketPrice) then
+				if (lowestBuyout > marketPrice) then
 					highestSellablePrice = subtractPercent(marketPrice, discountNoCompetitionPercent);
 					warn = _AUCT('FrmtWarnAbovemkt');
 				end
 				-- Account for negative discountNoCompetitionPercent values
-				if (currentLowestBuyout <= marketPrice or highestSellablePrice >= currentLowestBuyout) then
+				if (lowestBuyout <= marketPrice or highestSellablePrice >= lowestBuyout) then
 					-- set highest price to "Discount low"
-					highestSellablePrice = subtractPercent(currentLowestBuyout, discountLowPercent);
+					highestSellablePrice = subtractPercent(lowestBuyout, discountLowPercent);
 					warn = string.format(_AUCT('FrmtWarnUndercut'), discountLowPercent);
 				end
 			end
@@ -610,16 +710,16 @@ function determinePrice(id, realm, marketPrice, currentLowestBuyout, currentLowe
 			warn = _AUCT('FrmtWarnNocomp');
 		end
 	else -- no market
-		-- Note: urentLowestBuyout is nil, incase the realm is not the current player's realm
-		if currentLowestBuyout and currentLowestBuyout > 0 then
+		if (auctionWithLowestBuyout) then
 			-- set highest price to "Discount low"
-			EnhTooltip.DebugPrint("Discount low case 2");
-			highestSellablePrice = subtractPercent(currentLowestBuyout, discountLowPercent);
+			debugPrint("Discount low case 2");
+			highestSellablePrice = subtractPercent(auctionWithLowestBuyout.buyoutPrice, discountLowPercent);
 			warn = string.format(_AUCT('FrmtWarnUndercut'), discountLowPercent);
 		else
+			-- Use vendor price markup.
 			local baseData;
-			if (Informant) then baseData = Informant.GetItem(id) end
-
+			local itemId = Auctioneer.ItemDB.BreakItemKey(itemKey);
+			if (Informant) then baseData = Informant.GetItem(itemId) end;
 			if (baseData and baseData.sell) then
 				-- use vendor prices if no auction data available
 				local vendorSell = Auctioneer.Util.NullSafe(baseData.sell); -- use vendor prices
@@ -632,80 +732,101 @@ function determinePrice(id, realm, marketPrice, currentLowestBuyout, currentLowe
 	return highestSellablePrice, marketPrice, warn;
 end
 
+-------------------------------------------------------------------------------
+-- Calculates the HSP based bid profit for the specified auction.
+-- Returns the profit amount (ie 5500 copper) and profit percent (200% profit)
+-- and percent less HSP (50% less than HSP).
+-------------------------------------------------------------------------------
+function getBidProfit(auction, hsp)
+	-- Calculate profit from bidding.
+	local currentBid;
+	if (auction.bidAmount and auction.bidAmount > 0) then
+		currentBid = auction.bidAmount; -- %todo: take into account the min bid increment
+	else
+		currentBid = auction.minBid;
+	end
+	local itemKey = Auctioneer.ItemDB.CreateItemKeyFromAuction(auction);
+	if (hsp == nil) then
+		hsp = Auctioneer.Statistic.GetHSP(itemKey, auction.ahKey);
+	end
+	local bidProfit = (hsp * auction.count) - currentBid;
+	local bidProfitPercent = math.floor((bidProfit / currentBid) * 100);
+	local bidPercentLess = Auctioneer.Statistic.PercentLessThan(hsp * auction.count, currentBid);
+	return bidProfit, bidProfitPercent, bidPercentLess;
+end
 
 -------------------------------------------------------------------------------
--- Scan Statistic Functions
+-- Calculates the HSP based buyout profit for the specified auction.
+-- Returns the profit amount (ie 5500 copper) and profit percent (200% profit)
+-- and percent less HSP (50% less than HSP).
 -------------------------------------------------------------------------------
-function setScanLength(startTime, endTime)
-	--Make both parameters required ones and make sure they're numbers
-	if (not (tonumber(startTime) and tonumber(endTime))) then
-		return
+function getBuyoutProfit(auction, hsp)
+	if (auction.buyoutPrice and auction.buyoutPrice > 0) then
+		local itemKey = Auctioneer.ItemDB.CreateItemKeyFromAuction(auction);
+		if (hsp == nil) then
+			hsp = Auctioneer.Statistic.GetHSP(itemKey, auction.ahKey);
+		end
+		local buyoutProfit = (hsp * auction.count) - auction.buyoutPrice;
+		local buyoutProfitPercent = math.floor((buyoutProfit / auction.buyoutPrice) * 100);
+		local buyoutPercentLess = Auctioneer.Statistic.PercentLessThan(hsp * auction.count, auction.buyoutPrice);
+		return buyoutProfit, buyoutProfitPercent, buyoutPercentLess;
 	end
-
-	--Initialize our data structure
-	if (not AuctionConfig.scanStats) then
-		AuctionConfig.scanStats = {}
-	end
-
-	AuctionConfig.scanStats.lastScanLength = (endTime - startTime)
+	return 0, 0, 0;
 end
 
-function setScanAge(endTime)
-	--Make our parameter a required one and make sure its a number
-	endTime = tonumber(endTime)
-	if (not endTime) then
-		return
+-------------------------------------------------------------------------------
+-- Calculates the suggested starting bid and buyout. If there is no info on
+-- which to base a suggestion, this method returns zero for bid, buyout and
+-- market prices.
+-------------------------------------------------------------------------------
+function getSuggestedResale(itemKey, ahKey, count)
+	if (ahKey == nil) then ahKey = Auctioneer.Util.GetAuctionKey() end;
+	local hsp, hspCount, marketPrice, warn = Auctioneer.Statistic.GetHSP(itemKey, ahKey);
+	if (hsp == 0) then
+		local itemTotals = Auctioneer.HistoryDB.GetItemTotals(itemKey, ahKey);
+		if (itemTotals and itemTotals.buyoutCount > 0) then
+			hsp = math.ceil(itemTotals.buyoutPrice / itemTotals.buyoutCount); -- use mean buyout if median not available
+		end
 	end
-
-	--Initialize our data structure
-	if (not AuctionConfig.scanStats) then
-		AuctionConfig.scanStats = {}
-	end
-
-	AuctionConfig.scanStats.lastScanAge = endTime
+	local discountBidPercent = tonumber(Auctioneer.Command.GetFilterVal('pct-bidmarkdown'));
+	local buyPrice = Auctioneer.Statistic.RoundDownTo95(hsp * count);
+	local bidPrice = Auctioneer.Statistic.RoundDownTo95(Auctioneer.Statistic.SubtractPercent(buyPrice, discountBidPercent));
+	return bidPrice, buyPrice, (marketPrice*count), warn;
 end
 
-function getScanLength()
-	if (AuctionConfig and AuctionConfig.scanStats) then
-		return AuctionConfig.scanStats.lastScanLength
-	end
+-------------------------------------------------------------------------------
+-------------------------------------------------------------------------------
+function debugPrint(message)
+	EnhTooltip.DebugPrint("[Auc.Statistic] "..message);
 end
 
-function getScanAge()
-	if (AuctionConfig and AuctionConfig.scanStats and tonumber(AuctionConfig.scanStats.lastScanAge)) then
-		return time() - AuctionConfig.scanStats.lastScanAge
-	end
-end
-
-
+-------------------------------------------------------------------------------
+-- Public API
+-------------------------------------------------------------------------------
 Auctioneer.Statistic = {
-	SubtractPercent = subtractPercent,
-	AddPercent = addPercent,
-	PercentLessThan = percentLessThan,
-	GetLowest = getLowest,
-	GetMedian = getMedian,
-	GetPercentile = getPercentile,
-	GetMeans = getMeans,
-	GetItemSnapshotMedianBuyout = getItemSnapshotMedianBuyout,
-	GetSnapMedian = getItemSnapshotMedianBuyout,
-	GetItemHistoricalMedianBuyout = getItemHistoricalMedianBuyout,
-	GetHistMedian = getItemHistoricalMedianBuyout,
-	GetUsableMedian = getUsableMedian,
-	GetCurrentBid = getCurrentBid,
-	IsBadResaleChoice = isBadResaleChoice,
-	ProfitComparisonSort = profitComparisonSort,
-	RoundDownTo95 = roundDownTo95,
-	FindLowestAuctions = findLowestAuctions,
-	BuildLowestCache = buildLowestCache,
-	DoLow = doLow,
-	DoMedian = doMedian,
-	DoHSP = doHSP,
-	GetBidBasedSellablePrice = getBidBasedSellablePrice,
-	GetMarketPrice = getMarketPrice,
-	GetHSP = getHSP,
-	DeterminePrice = determinePrice,
-	SetScanLength = setScanLength,
-	SetScanAge = setScanAge,
-	GetScanLength = getScanLength,
-	GetScanAge = getScanAge,
+	Load = load;
+	SubtractPercent = subtractPercent;
+	AddPercent = addPercent;
+	PercentLessThan = percentLessThan;
+	GetMedian = getMedian;
+	GetPercentile = getPercentile;
+	GetMeans = getMeans;
+	GetItemSnapshotMedianBuyout = getItemSnapshotMedianBuyout;
+	GetSnapMedian = getItemSnapshotMedianBuyout;
+	GetItemHistoricalMedianBuyout = getItemHistoricalMedianBuyout;
+	GetHistMedian = getItemHistoricalMedianBuyout;
+	GetUsableMedian = getUsableMedian;
+	IsBadResaleChoice = isBadResaleChoice;
+	ProfitComparisonSort = profitComparisonSort;
+	RoundDownTo95 = roundDownTo95;
+	GetAuctionWithLowestBuyout = getAuctionWithLowestBuyout;
+	DoLow = doLow;
+	DoMedian = doMedian;
+	DoHSP = doHSP;
+	GetMarketPrice = getMarketPrice;
+	GetHSP = getHSP;
+	GetBidProfit = getBidProfit;
+	GetBuyoutProfit = getBuyoutProfit;
+	GetSuggestedResale = getSuggestedResale;
+	ClearCache = clearCache;
 }
