@@ -1,7 +1,7 @@
 --[[  Stubby
 
-$Id: Stubby.lua 941 2006-07-10 17:34:32Z mentalpower $
-Version: 3.8.0 (Kangaroo)
+$Id: Stubby.lua 1053 2006-10-09 03:46:07Z vindicator $
+Version: 3.9.0.1053 (Kangaroo)
 
 Stubby is an addon that allows you to register boot code for
 your addon.
@@ -138,7 +138,7 @@ Stubby.VERSION                (introduced in revision 507)
 This constant is Stubby's revision number, a simple positive
 integer that will increase by an arbitrary amount with each
 new version of Stubby.
-Current $Revision: 941 $
+Current $Revision: 1053 $
 
 Example:
 -------------------------------------------
@@ -278,7 +278,10 @@ function hookCall(funcName, a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a
 						returns = true
 					end
 					if (res == 'setparams') then
-						a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20 = unpack(addit)
+						-- Don't use unpack() since that doesn't correctly
+						-- handle nil values in the middle of the arg list.
+						a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20 = 
+							addit[1], addit[2], addit[3], addit[4], addit[5], addit[6], addit[7], addit[8], addit[9], addit[10], addit[11], addit[12], addit[13], addit[14], addit[15], addit[16], addit[17], addit[18], addit[19], addit[20];
 					end
 				end
 			else
@@ -291,6 +294,7 @@ function hookCall(funcName, a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a
 			= pcall(orig, a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a16,a17,a18,a19,a20)
 		if (result) then
 			if r1 or r2 or r3 or r4 or r5 or r6 or r7 or r8 or r9 or r10 or r11 or r12 or r13 or r14 or r15 or r16 or r17 or r18 or r19 or r20 then
+				retVal = { r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20 }
 				returns = true
 			end
 		else
@@ -298,7 +302,10 @@ function hookCall(funcName, a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11,a12,a13,a14,a15,a
 		end
 	end
 	if (returns) then
-		return r1,r2,r3,r4,r5,r6,r7,r8,r9,r10,r11,r12,r13,r14,r15,r16,r17,r18,r19,r20
+		-- unpack() stops at the first nil value. That causes a problem for
+		-- hooking methods such as GetInboxText() where the first value is
+		-- often nil, but others following it are not.
+		return retVal[1], retVal[2], retVal[3], retVal[4], retVal[5], retVal[6], retVal[7], retVal[8], retVal[9], retVal[10], retVal[11], retVal[12], retVal[13], retVal[14], retVal[15], retVal[16], retVal[17], retVal[18], retVal[19], retVal[20];
 	end
 end
 
@@ -704,7 +711,7 @@ end
 
 -- Extract the revision number from SVN keyword string
 local function getRevision()
-	local found, _, rev = string.find("$Revision: 941 $", "(%d+)")
+	local found, _, rev = string.find("$Revision: 1053 $", "(%d+)")
 	if (found ~= nil) then return tonumber(rev); end
 	return nil
 end

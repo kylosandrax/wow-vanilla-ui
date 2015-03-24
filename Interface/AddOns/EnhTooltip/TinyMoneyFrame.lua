@@ -1,6 +1,6 @@
 --[[
 	TinyMoneyFrame functions
-	3.8.0 (Kangaroo)
+	3.9.0.1030 (Kangaroo)
    
 	$Id: TinyMoneyFrame.lua 632 2005-12-18 14:36:34Z norganna $
   
