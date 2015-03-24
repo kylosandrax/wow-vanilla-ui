@@ -1,7 +1,7 @@
 --[[
 	Auctioneer Addon for World of Warcraft(tm).
-	Version: 3.9.0.1063 (Kangaroo)
-	Revision: $Id: AucPostManager.lua 1043 2006-10-06 00:48:05Z vindicator $
+	Version: 3.8.0 (Kangaroo)
+	Revision: $Id: AucPostManager.lua 931 2006-07-06 07:08:15Z vindicator $
 
 	AucPostManager - manages posting auctions in the AH
 
@@ -27,10 +27,6 @@
 local RequestQueue = {};
 local ProcessingRequestQueue = false;
 
--- Queue of pending auctions. In otherwords StartAuction() had been called but
--- we haven't received confirmation from the server of the start.
-local PendingAuctions = {};
-
 -------------------------------------------------------------------------------
 -- State machine states for a request.
 -------------------------------------------------------------------------------
@@ -49,10 +45,6 @@ local Original_SplitContainerItem;
 -------------------------------------------------------------------------------
 -- Function Prototypes
 -------------------------------------------------------------------------------
-local load;
-local onEventHook;
-local pickupContainerItem;
-local splitContainerItem;
 local postAuction;
 local addRequestToQueue;
 local removeRequestFromQueue;
@@ -61,48 +53,32 @@ local run;
 local onEvent;
 local setState;
 local findEmptySlot;
-local findStackByItemKey;
+local findStackBySignature;
 local getContainerItemName;
-local getContainerItemKey;
+local getContainerItemSignature;
 local clearAuctionItem;
 local findAuctionItem;
-local getItemQuantityByItemKey;
+local getItemQuantityBySignature;
+local createItemSignature;
+local breakItemSignature;
 local printBag;
-local getTimeLeftFromDuration;
-local preStartAuctionHook;
-local addPendingAuction;
-local removePendingAuction;
-local debugPrint;
 
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
-function load()
-	Stubby.RegisterEventHook("AUCTION_HOUSE_CLOSED", "Auctioneer_PostManager", onEventHook);
-	Stubby.RegisterFunctionHook("StartAuction", -200, preStartAuctionHook)
+function AucPostManagerFrame_OnLoad()
+	this:RegisterEvent("AUCTION_HOUSE_CLOSED");
 end
 
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
-function onEventHook(_, event)
+function AucPostManagerFrame_OnEvent(event)
 	-- Toss all the pending requests when the AH closes.
 	if (event == "AUCTION_HOUSE_CLOSED") then
 		while (table.getn(RequestQueue) > 0) do
 			removeRequestFromQueue();
 		end
 
-	-- Check for an auction created message.
-	elseif (event == "CHAT_MSG_SYSTEM" and arg1) then
-		if (arg1 == ERR_AUCTION_STARTED) then
-		 	removePendingAuction(true);
-		end
-
-	-- Check for an auction failure message.
-	elseif (event == "UI_ERROR_MESSAGE" and arg1) then
-		if (arg1 == ERR_NOT_ENOUGH_MONEY) then
-			removePendingAuction(false);
-		end
-
-	-- Otherwise hand off the event to the current request.
+	-- Hand off the event to the current request
 	elseif (table.getn(RequestQueue) > 0) then
 		local request = RequestQueue[1];
 		if (request.state ~= READY_STATE) then
@@ -151,17 +127,21 @@ end
 -------------------------------------------------------------------------------
 -- Start an auction.
 -------------------------------------------------------------------------------
-function postAuction(itemKey, stackSize, stackCount, bid, buyout, duration, callbackFunc, callbackParam)
+function postAuction(itemSignature, stackSize, stackCount, bid, buyout, duration, callbackFunc, callbackParam)
 	-- Problems can occur if the Auctions tab hasn't been shown at least once.
 	if (not AuctionFrameAuctions:IsVisible()) then
 		AuctionFrameAuctions:Show();
 		AuctionFrameAuctions:Hide();
 	end
 
+	-- Get the item id and name
+	local itemId = breakItemSignature(itemSignature);
+	local itemName = GetItemInfo(itemId);
+
 	-- Add the request to the queue.
 	local request = {};
-	request.itemKey = itemKey;
-	request.name = Auctioneer.ItemDB.GetItemName(itemKey);
+	request.itemSignature = itemSignature;
+	request.name = itemName;
 	request.stackSize = stackSize;
 	request.stackCount = stackCount;
 	request.bid = bid;
@@ -281,19 +261,19 @@ function run(request)
 		-- for a stack of the exact size. Failing that, we'll start with the
 		-- first stack we find.
 		local stack1 = nil;
-		if (request.stack and request.itemKey == getContainerItemKey(request.stack.bag, request.stack.slot)) then
+		if (request.stack and request.itemSignature == getContainerItemSignature(request.stack.bag, request.stack.slot)) then
 			-- Use the stack hint.
 			stack1 = request.stack;
 		else
 			-- Find the first stack.
-			stack1 = findStackByItemKey(request.itemKey);
+			stack1 = findStackBySignature(request.itemSignature);
 
 			-- Now look for a stack of the exact size to use instead.
 			if (stack1) then
 				local stack2 = { bag = stack1.bag, slot = stack1.slot };
 				local _, stack2Size = GetContainerItemInfo(stack2.bag, stack2.slot);
 				while (stack2 and stack2Size ~= request.stackSize) do
-					stack2 = findStackByItemKey(request.itemKey, stack2.bag, stack2.slot + 1);
+					stack2 = findStackBySignature(request.itemSignature, stack2.bag, stack2.slot + 1);
 					if (stack2) then
 						_, stack2Size = GetContainerItemInfo(stack2.bag, stack2.slot);
 					end
@@ -322,7 +302,7 @@ function run(request)
 				end
 			elseif (stack1Size < request.stackSize) then
 				-- The stack we have is less than needed. Locate more of the item.
-				local stack2 = findStackByItemKey(request.itemKey, stack1.bag, stack1.slot + 1);
+				local stack2 = findStackBySignature(request.itemSignature, stack1.bag, stack1.slot + 1);
 				if (stack2) then
 					local _, stack2Size = GetContainerItemInfo(stack2.bag, stack2.slot);
 					if (stack1Size + stack2Size <= request.stackSize) then
@@ -339,9 +319,8 @@ function run(request)
 						request.stack = stack1;
 					end
 				else
-					-- Not enough of the item!
-					local output = string.format(_AUCT('FrmtNotEnoughOfItem'), request.name);
-					chatPrint(output);
+					-- Not enough of the item found!
+					chatPrint(_AUCT('FrmtNoEmptyPackSpace'));
 					removeRequestFromQueue();
 				end
 			else
@@ -353,8 +332,9 @@ function run(request)
 					pickupContainerItem(stack2.bag, stack2.slot);
 					request.stack = stack2;
 				else
-					-- Not enough of the item found!
-					chatPrint(_AUCT('FrmtNoEmptyPackSpace'));
+					-- Not enough of the item!
+					local output = string.format(_AUCT('FrmtNotEnoughOfItem'), request.name);
+					chatPrint(output);
 					removeRequestFromQueue();
 				end
 			end
@@ -412,10 +392,10 @@ function setState(request, newState)
 			request.state == COMBINING_STACK_STATE or
 			request.state == SPLITTING_AND_COMBINING_STACK_STATE) then
 			debugPrint("Unregistering for ITEM_LOCK_CHANGED");
-			Stubby.UnregisterEventHook("ITEM_LOCK_CHANGED", "Auctioneer_PostManager");
+			AucPostManagerFrame:UnregisterEvent("ITEM_LOCK_CHANGED");
 		elseif (request.state == AUCTIONING_STACK_STATE) then
 			debugPrint("Unregistering for BAG_UPDATE");
-			Stubby.UnregisterEventHook("BAG_UPDATE", "Auctioneer_PostManager");
+			AucPostManagerFrame:UnregisterEvent("BAG_UPDATE");
 		end
 
 		-- Update the request's state.
@@ -427,10 +407,10 @@ function setState(request, newState)
 			request.state == COMBINING_STACK_STATE or
 			request.state == SPLITTING_AND_COMBINING_STACK_STATE) then
 			debugPrint("Registering for ITEM_LOCK_CHANGED");
-			Stubby.RegisterEventHook("ITEM_LOCK_CHANGED", "Auctioneer_PostManager", onEventHook);
+			AucPostManagerFrame:RegisterEvent("ITEM_LOCK_CHANGED");
 		elseif (request.state == AUCTIONING_STACK_STATE) then
 			debugPrint("Registering for BAG_UPDATE");
-			Stubby.RegisterEventHook("BAG_UPDATE", "Auctioneer_PostManager", onEventHook);
+			AucPostManagerFrame:RegisterEvent("BAG_UPDATE");
 		end
 	end
 end
@@ -458,7 +438,7 @@ end
 --
 -- TODO: Correctly handle containers like ammo packs
 -------------------------------------------------------------------------------
-function findStackByItemKey(itemKey, startingBag, startingSlot)
+function findStackBySignature(itemSignature, startingBag, startingSlot)
 	if (startingBag == nil) then
 		startingBag = 0;
 	end
@@ -470,8 +450,8 @@ function findStackByItemKey(itemKey, startingBag, startingSlot)
 			local numItems = GetContainerNumSlots(bag);
 			if (startingSlot <= numItems) then
 				for slot = startingSlot, GetContainerNumSlots(bag), 1 do
-					local thisItemKey = getContainerItemKey(bag, slot);
-					if (itemKey == thisItemKey) then
+					local thisItemSignature = getContainerItemSignature(bag, slot);
+					if (itemSignature == thisItemSignature) then
 						return { bag=bag, slot=slot };
 					end
 				end
@@ -495,12 +475,13 @@ function getContainerItemName(bag, slot)
 end
 
 -------------------------------------------------------------------------------
--- Gets the item key of the specified item (itemId:suffixId:enchantId)
+-- Gets the signature of the specified item (itemId:suffixId:enchantId)
 -------------------------------------------------------------------------------
-function getContainerItemKey(bag, slot)
+function getContainerItemSignature(bag, slot)
 	local link = GetContainerItemLink(bag, slot);
 	if (link) then
-		return Auctioneer.ItemDB.CreateItemKeyFromLink(link);
+		local itemId, suffixId, enchantId = EnhTooltip.BreakLink(link);
+		return createItemSignature(itemId, suffixId, enchantId);
 	end
 end
 
@@ -543,17 +524,35 @@ function findAuctionItem()
 end
 
 -------------------------------------------------------------------------------
+-- Creates an item signature (itemId:suffixId:enchantId)
+-------------------------------------------------------------------------------
+function createItemSignature(itemId, suffixId, enchantId)
+	return itemId..":"..suffixId..":"..enchantId;
+end
+
+-------------------------------------------------------------------------------
+-- Breaks an item signature (itemId:suffixId:enchantId)
+-------------------------------------------------------------------------------
+function breakItemSignature(itemSignature)
+	_, _, itemId, suffixId, enchantId = string.find(itemSignature, "(.+):(.+):(.+)");
+	itemId = tonumber(itemId);
+	suffixId = tonumber(suffixId);
+	enchantId = tonumber(enchantId);
+	return itemId, suffixId, enchantId;
+end
+
+-------------------------------------------------------------------------------
 -- Gets the quanity of the specified item
 --
 -- TODO: Correctly handle containers like ammo packs
 -------------------------------------------------------------------------------
-function getItemQuantityByItemKey(itemKey)
+function getItemQuantityBySignature(itemSignature)
 	local quantity = 0;
 	for bag = 0, 4, 1 do
 		if (GetBagName(bag)) then
 			for item = GetContainerNumSlots(bag), 1, -1 do
-				local thisItemKey = getContainerItemKey(bag, item);
-				if (itemKey == thisItemKey) then
+				local thisItemSignature = getContainerItemSignature(bag, item);
+				if (itemSignature == thisItemSignature) then
 					local _, itemCount = GetContainerItemInfo(bag, item);
 					quantity = quantity + itemCount;
 				end
@@ -561,109 +560,6 @@ function getItemQuantityByItemKey(itemKey)
 		end
 	end
 	return quantity;
-end
-
-
--------------------------------------------------------------------------------
--- Converts from duration (in minutes) to time left (1 thru 4 representing
--- short to very long). Returns nil if the duration is invalid.
--------------------------------------------------------------------------------
-function getTimeLeftFromDuration(duration)
-	if (duration) then
-		if (duration == 2*60) then
-			return 2;
-		elseif (duration == 8*60) then
-			return 3;
-		elseif (duration == 24*60) then
-			return 4;
-		end
-	end
-end
-
--------------------------------------------------------------------------------
--- Called before Blizzard's StartAuctionHook().
--------------------------------------------------------------------------------
-function preStartAuctionHook(_, _, bid, buyout, duration)
-	debugPrint("Blizzard's StartAuction("..nilSafe(bid)..", "..nilSafe(buyout)..", "..nilSafe(duration)..") called");
-	if (bid ~= nil and bid > 0 and getTimeLeftFromDuration(duration)) then
-		local bag, item = findAuctionItem();
-		if (bag and item) then
-			-- Get the item's information.
-			local itemTexture, itemCount = GetContainerItemInfo(bag, item);
-			local itemLink = GetContainerItemLink(bag, item);
-			local itemId, suffixId, enchantId, uniqueId, name = EnhTooltip.BreakLink(itemLink);
-
-			-- Create the auction and add it to the pending list.
-			local auction = {};
-			auction.ahKey = Auctioneer.Util.GetAuctionKey();
-			auction.itemId = itemId;
-			auction.suffixId = suffixId;
-			auction.enchantId = enchantId;
-			auction.uniqueId = uniqueId
-			auction.count = itemCount;
-			auction.minBid = bid;
-			auction.buyoutPrice = buyout;
-			auction.owner = UnitName("player");
-			auction.bidAmount = 0;
-			auction.highBidder = false;
-			auction.timeLeft = getTimeLeftFromDuration(duration);
-			auction.lastSeen = time();
-			addPendingAuction(auction);
-		else
-			debugPrint("Aborting StartAuction() because item cannot be found in bags");
-			return "abort";
-		end
-	else
-		debugPrint("Aborting StartAuction() due to invalid arguments");
-		return "abort";
-	end
-end
-
--------------------------------------------------------------------------------
--- Adds a pending auction to the queue.
--------------------------------------------------------------------------------
-function addPendingAuction(auction)
-	table.insert(PendingAuctions, auction);
-	debugPrint("Added pending auction");
-
-	-- Register for the response events if this is the first pending auction.
-	if (table.getn(PendingAuctions) == 1) then
-		debugPrint("addPendingAuction() - Registering for CHAT_MSG_SYSTEM and UI_ERROR_MESSAGE");
-		Stubby.RegisterEventHook("CHAT_MSG_SYSTEM", "Auctioneer_PostManager", onEventHook);
-		Stubby.RegisterEventHook("UI_ERROR_MESSAGE", "Auctioneer_PostManager", onEventHook);
-	end
-end
-
--------------------------------------------------------------------------------
--- Removes the pending auction from the queue.
--------------------------------------------------------------------------------
-function removePendingAuction(result)
-	if (table.getn(PendingAuctions) > 0) then
-		-- Remove the first pending auction.
-		local pendingAuction = PendingAuctions[1];
-		table.remove(PendingAuctions, 1);
-		if (result) then
-			debugPrint("Removed pending auction with result: true");
-		else
-			debugPrint("Removed pending auction with result: false");
-		end
-		
-		-- Unregister for the response events if this is the last pending auction.
-		if (table.getn(PendingAuctions) == 0) then
-			debugPrint("removePendingAuction() - Unregistering for CHAT_MSG_SYSTEM and UI_ERROR_MESSAGE");
-			Stubby.UnregisterEventHook("CHAT_MSG_SYSTEM", "Auctioneer_PostManager");
-			Stubby.UnregisterEventHook("UI_ERROR_MESSAGE", "Auctioneer_PostManager");
-		end
-
-		-- If successful, then add it to the snapshot.
-		if (result) then
-			Auctioneer.SnapshotDB.AddAuction(pendingAuction);
-		end
-	else
-		-- We got out of sync somehow... this indicates a bug in how we determine
-		-- the results of auction requests.
-		chatPrint("Post auction queue out of sync!"); -- %todo: localize
-	end
 end
 
 -------------------------------------------------------------------------------
@@ -681,16 +577,16 @@ chatPrint = Auctioneer.Util.ChatPrint;
 
 -------------------------------------------------------------------------------
 -------------------------------------------------------------------------------
-function debugPrint(message)
-	EnhTooltip.DebugPrint("[Auc.PostManager] "..message);
-end
+debugPrint = EnhTooltip.DebugPrint;
 
 -------------------------------------------------------------------------------
 -- Public API
 -------------------------------------------------------------------------------
-Auctioneer.PostManager =
+AucPostManager =
 {
-	Load = load;
+	-- Exported functions
 	PostAuction = postAuction;
-	GetItemQuantityByItemKey = getItemQuantityByItemKey;
+	CreateItemSignature = createItemSignature;
+	BreakItemSignature = breakItemSignature;
+	GetItemQuantityBySignature = getItemQuantityBySignature;
 };

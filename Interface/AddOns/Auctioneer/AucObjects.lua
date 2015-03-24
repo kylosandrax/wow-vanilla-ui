@@ -1,7 +1,7 @@
 --[[
 	Auctioneer Addon for World of Warcraft(tm).
-	Version: 3.9.0.1063 (Kangaroo)
-	Revision: $Id: AucObjects.lua 1031 2006-10-04 04:15:38Z mentalpower $
+	Version: 3.8.0 (Kangaroo)
+	Revision: $Id: AucObjects.lua 766 2006-03-22 22:35:05Z mentalpower $
 
 	Auctioneer Objects
 	Initialization of Auctioneer method tables.
@@ -24,4 +24,31 @@
 ]]
 
 Auctioneer = {
+	API = {};
+
+	AskPrice = {};
+
+	Command = {};
+
+	Convert = {};
+
+	Core = {};
+
+	Filter = {};
+
+	Scanner = {};
+
+	Scanning = {};
+
+	Statistic = {};
+
+	Storage = {};
+
+	Tooltip = {};
+
+	Util = {};
+
+	BalancedList = {};
+
+	Event = {};
 };

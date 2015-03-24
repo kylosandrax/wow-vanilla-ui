@@ -1,7 +1,7 @@
 --[[
 	Auctioneer Addon for World of Warcraft(tm).
-	Version: 3.9.0.1063 (Kangaroo)
-	Revision: $Id: AucUtil.lua 1034 2006-10-04 05:18:29Z mentalpower $
+	Version: 3.8.0 (Kangaroo)
+	Revision: $Id: AucUtil.lua 981 2006-08-31 05:49:45Z mentalpower $
 
 	Auctioneer utility functions.
 	Functions to maniuplate items keys, signatures etc
@@ -20,14 +20,10 @@
 		You should have received a copy of the GNU General Public License
 		along with this program(see GPL.txt); if not, write to the Free Software
 		Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
---]]
+]]
 
 --Local function prototypes
-local storePlayerFaction, getTimeLeftString, getSecondsLeftString, unpackSeconds, getGSC, getTextGSC, nilSafeString, colorTextWhite, getWarnColor, nullSafe, sanifyAHSnapshot, getAuctionKey, getOppositeKey, getNeutralKey, getHomeKey, isValidAlso, split, getItemLinks, getItems, getItemHyperlinks, chatPrint, setFilterDefaults, protectAuctionFrame, priceForOne, round, delocalizeFilterVal, localizeFilterVal, getLocalizedFilterVal, delocalizeCommand, localizeCommand, findEmptySlot
-
-function storePlayerFaction()
-	Auctioneer.Core.Constants.PlayerFaction = (Auctioneer.Core.Constants.PlayerFaction or UnitFactionGroup("player") or "Alliance");
-end
+local getTimeLeftString, getSecondsLeftString, unpackSeconds, getGSC, getTextGSC, nilSafeString, colorTextWhite, getWarnColor, nullSafe, sanifyAHSnapshot, getAuctionKey, getOppositeKey, getNeutralKey, getHomeKey, isValidAlso, breakItemKey, split, findClass, getCatName, getCatNumberByName, getCatForKey, getKeyFromSig, getCatForSig, getItemLinks, getItems, getItemHyperlinks, loadCategories, loadCategoryClasses, loadCategorySubClasses, chatPrint, setFilterDefaults, protectAuctionFrame, priceForOne, round, delocalizeFilterVal, localizeFilterVal, getLocalizedFilterVal, delocalizeCommand, localizeCommand, findEmptySlot, containerFrameItemButtonOnClick
 
 -- return the string representation of the given timeLeft constant
 function getTimeLeftString(timeLeft)
@@ -196,33 +192,33 @@ function getAuctionKey()
 		factionGroup = "Neutral"
 
 	else
-		factionGroup = Auctioneer.Core.Constants.PlayerFaction;
+		factionGroup = UnitFactionGroup("player");
 	end
-	return string.lower(serverName).."-"..string.lower(factionGroup);
+	return serverName.."-"..factionGroup;
 end
 
 -- Returns the current faction's opposing faction's auction signature
 function getOppositeKey()
 	local serverName = GetCVar("realmName");
-	local factionGroup = Auctioneer.Core.Constants.PlayerFaction;
+	local factionGroup = UnitFactionGroup("player");
 
 	if (factionGroup == "Alliance") then factionGroup="Horde"; else factionGroup="Alliance"; end
-	return string.lower(serverName).."-"..string.lower(factionGroup);
+	return serverName.."-"..factionGroup;
 end
 
 -- Returns the current server's neutral auction signature
 function getNeutralKey()
 	local serverName = GetCVar("realmName");
 
-	return string.lower(serverName).."-neutral";
+	return serverName.."-Neutral";
 end
 
 -- Returns the current faction's auction signature
 function getHomeKey()
 	local serverName = GetCVar("realmName");
-	local factionGroup = Auctioneer.Core.Constants.PlayerFaction;
+	local factionGroup = UnitFactionGroup("player");
 
-	return string.lower(serverName).."-"..string.lower(factionGroup);
+	return serverName.."-"..factionGroup;
 end
 
 -- function returns true, if the given parameter is a valid option for the also command, false otherwise
@@ -242,11 +238,17 @@ function isValidAlso(also)
 	end
 
 	-- check if faction = "Horde" or "Alliance"
-	if (f == 'horde') or (f == 'alliance')or (f == 'neutral') then
+	if (f == 'Horde') or (f == 'Alliance')or (f == 'Neutral') then
 		return true
 	end
 
 	return true
+end
+
+-- Given an item key, breaks it into its itemID, randomProperty and enchantProperty
+function breakItemKey(itemKey)
+	local i,j, itemID, randomProp, enchant = string.find(itemKey, "(%d+):(%d+):(%d+)");
+	return tonumber(itemID or 0), tonumber(randomProp or 0), tonumber(enchant or 0);
 end
 
 function split(str, at)
@@ -267,6 +269,65 @@ function split(str, at)
 	end
 	return splut;
 end
+
+function findClass(cName, sName)
+
+	if (AuctionConfig and AuctionConfig.classes) then
+
+		for class, cData in pairs(AuctionConfig.classes) do
+
+			if (cData.name == cName) then
+				if (sName == nil) then return class, 0; end
+
+				for sClass, sData in pairs(cData) do
+					if (sClass ~= "name") and (sData == sName) then
+						return class, sClass;
+					end
+				end
+				return class, 0;
+			end
+		end
+	end
+	return 0,0;
+end
+
+function getCatName(number)
+	if (number == 0) then return "" end;
+
+	if (AuctionConfig.classes[number]) then
+		return AuctionConfig.classes[number].name;
+	end
+	return nil;
+end
+
+function getCatNumberByName(name)
+	if (not name) then return 0 end
+	if (AuctionConfig and AuctionConfig.classes) then
+
+		for cat, class in pairs(AuctionConfig.classes) do
+			if (name == class.name) then
+				return cat;
+			end
+		end
+	end
+	return 0;
+end
+
+function getCatForKey(itemKey)
+	local info = Auctioneer.Core.GetInfo(itemKey);
+	return info.category;
+end
+
+function getKeyFromSig(auctSig)
+	local id, rprop, enchant = Auctioneer.Core.GetItemSignature(auctSig);
+	return id..":"..rprop..":"..enchant;
+end
+
+function getCatForSig(auctSig)
+	local itemKey = getKeyFromSig(auctSig);
+	return getCatForKey(itemKey);
+end
+
 
 function getItemLinks(str)
 	if (not (type(str) == "string")) then
@@ -305,6 +366,25 @@ function getItemHyperlinks(str)
 		table.insert(itemList, "|c"..color.."|Hitem:"..item.."|h["..name.."]|h|r")
 	end
 	return itemList;
+end
+
+function loadCategories()
+	if (not AuctionConfig.classes) then AuctionConfig.classes = {} end
+	loadCategoryClasses(GetAuctionItemClasses());
+end
+
+function loadCategoryClasses(...)
+	for c=1, arg.n, 1 do
+		AuctionConfig.classes[c] = {};
+		AuctionConfig.classes[c].name = arg[c];
+		loadCategorySubClasses(c, GetAuctionItemSubClasses(c));
+	end
+end
+
+function loadCategorySubClasses(c, ...)
+	for s=1, arg.n, 1 do
+		AuctionConfig.classes[c][s] = arg[s];
+	end
 end
 
 function chatPrint(text, cRed, cGreen, cBlue, cAlpha, holdTime)
@@ -424,8 +504,8 @@ end
 -- Localization functions
 -------------------------------------------------------------------------------
 
---Auctioneer.Command.CommandMap = nil;
---Auctioneer.Command.CommandMapRev = nil;
+Auctioneer.Command.CommandMap = nil;
+Auctioneer.Command.CommandMapRev = nil;
 
 function delocalizeFilterVal(value)
 	if (value == _AUCT('CmdOn')) then
@@ -503,21 +583,94 @@ function findEmptySlot()
 	end
 end
 
--------------------------------------------------------------------------------
--------------------------------------------------------------------------------
-function debugPrint(message)
-	EnhTooltip.DebugPrint("[Auc.Util] "..message);
+
+function containerFrameItemButtonOnClick(hookParams, returnValue, button, ignoreShift) --Auctioneer_ContainerFrameItemButton_OnClick
+	local bag = this:GetParent():GetID()
+	local slot = this:GetID()
+
+	local texture, count, noSplit = GetContainerItemInfo(bag, slot)
+	local link = GetContainerItemLink(bag, slot)
+	if (count and count > 1 and not noSplit) then
+		if (button == "RightButton") and (IsControlKeyDown()) then
+			local splitCount = math.floor(count / 2)
+			local emptyBag, emptySlot = findEmptySlot()
+			if (emptyBag) then
+				SplitContainerItem(bag, slot, splitCount)
+				PickupContainerItem(emptyBag, emptySlot)
+			else
+				chatPrint("Can't split, all bags are full")
+			end
+			return "abort";
+		end
+	end
+
+	if (AuctionFrame and AuctionFrame:IsVisible()) then
+		if (link) then
+			if (button == "RightButton") and (IsAltKeyDown()) then
+				AuctionFrameTab_OnClick(1)
+				local itemID = EnhTooltip.BreakLink(link)
+				if (itemID) then
+					local itemName = GetItemInfo(tostring(itemID))
+					if (itemName) then
+						BrowseName:SetText(itemName)
+						BrowseMinLevel:SetText("")
+						BrowseMaxLevel:SetText("")
+						AuctionFrameBrowse.selectedInvtype = nil
+						AuctionFrameBrowse.selectedInvtypeIndex = nil
+						AuctionFrameBrowse.selectedClass = nil
+						AuctionFrameBrowse.selectedClassIndex = nil
+						AuctionFrameBrowse.selectedSubclass = nil
+						AuctionFrameBrowse.selectedSubclassIndex = nil
+						AuctionFrameFilters_Update()
+						IsUsableCheckButton:SetChecked(0)
+						UIDropDownMenu_SetSelectedValue(BrowseDropDown, -1)
+						AuctionFrameBrowse_Search()
+						BrowseNoResultsText:SetText(BROWSE_NO_RESULTS)
+					end
+				end
+				return "abort";
+			end
+		end
+	end
+
+	if (not CursorHasItem() and AuctionFrameAuctions and AuctionFrameAuctions:IsVisible() and IsAltKeyDown()) then
+		PickupContainerItem(bag, slot)
+		if (CursorHasItem() and Auctioneer.Command.GetFilter('auction-click')) then
+			ClickAuctionSellItemButton()
+			AuctionsFrameAuctions_ValidateAuction()
+			local start = MoneyInputFrame_GetCopper(StartPrice)
+			local buy = MoneyInputFrame_GetCopper(BuyoutPrice)
+			local duration = AuctionFrameAuctions.duration
+			local warn = AuctionInfoWarnText:GetText()
+			if (AuctionsCreateAuctionButton:IsEnabled() and IsShiftKeyDown()) then
+				local cHex, cRed, cGreen, cBlue = getWarnColor(warn)
+				warn = ("|c"..cHex..warn.."|r")
+				StartAuction(start, buy, duration);
+				chatPrint(string.format(_AUCT('FrmtAutostart'), link, EnhTooltip.GetTextGSC(start), EnhTooltip.GetTextGSC(buy), duration/60, warn));
+			end
+			return "abort";
+		end
+	end
+
+	if (not CursorHasItem() and AuctionFramePost and AuctionFramePost:IsVisible() and button == "LeftButton" and IsAltKeyDown()) then
+		local _, count = GetContainerItemInfo(bag, slot);
+		if (count) then
+			if (count > 1 and IsShiftKeyDown()) then
+				this.SplitStack = function(button, split)
+					local _, _, _, _, name = EnhTooltip.BreakLink(link);
+					AuctionFramePost:SetAuctionItem(bag, slot, split);
+				end
+				OpenStackSplitFrame(count, this, "BOTTOMRIGHT", "TOPRIGHT");
+			else
+				local _, _, _, _, name = EnhTooltip.BreakLink(link);
+				AuctionFramePost:SetAuctionItem(bag, slot, 1);
+			end
+			return "abort";
+		end
+	end
 end
 
---=============================================================================
--- Initialization
---=============================================================================
-if (Auctioneer.Util ~= nil) then return end;
-debugPrint("AucUtil.lua loaded");
-
-Auctioneer.Util =
-{
-	StorePlayerFaction = storePlayerFaction,
+Auctioneer.Util = {
 	GetTimeLeftString = getTimeLeftString,
 	GetSecondsLeftString = getSecondsLeftString,
 	UnpackSeconds = unpackSeconds,
@@ -533,10 +686,20 @@ Auctioneer.Util =
 	GetNeutralKey = getNeutralKey,
 	GetHomeKey = getHomeKey,
 	IsValidAlso = isValidAlso,
+	BreakItemKey = breakItemKey,
 	Split = split,
+	FindClass = findClass,
+	GetCatName = getCatName,
+	GetCatNumberByName = getCatNumberByName,
+	GetCatForKey = getCatForKey,
+	GetKeyFromSig = getKeyFromSig,
+	GetCatForSig = getCatForSig,
 	GetItemLinks = getItemLinks,
 	GetItems = getItems,
 	GetItemHyperlinks = getItemHyperlinks,
+	LoadCategories = loadCategories,
+	LoadCategoryClasses = loadCategoryClasses,
+	LoadCategorySubClasses = loadCategorySubClasses,
 	ChatPrint = chatPrint,
 	SetFilterDefaults = setFilterDefaults,
 	ProtectAuctionFrame = protectAuctionFrame,
@@ -548,4 +711,5 @@ Auctioneer.Util =
 	DelocalizeCommand = delocalizeCommand,
 	LocalizeCommand = localizeCommand,
 	FindEmptySlot = findEmptySlot,
+	ContainerFrameItemButtonOnClick = containerFrameItemButtonOnClick,
 }

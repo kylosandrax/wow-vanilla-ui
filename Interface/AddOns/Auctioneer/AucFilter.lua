@@ -1,7 +1,7 @@
 --[[
 	Auctioneer Addon for World of Warcraft(tm).
-	Version: 3.9.0.1063 (Kangaroo)
-	Revision: $Id: AucFilter.lua 1003 2006-09-25 07:46:12Z vindicator $
+	Version: 3.8.0 (Kangaroo)
+	Revision: $Id: AucFilter.lua 856 2006-05-11 00:23:22Z luke1410 $
 
 	Auctioneer filtering functions.
 	Functions to filter auctions based upon various parameters.
@@ -20,365 +20,273 @@
 		You should have received a copy of the GNU General Public License
 		along with this program(see GPL.txt); if not, write to the Free Software
 		Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
---]]
+]]
 
--------------------------------------------------------------------------------
--- Function Prototypes
--------------------------------------------------------------------------------
-local isAuctionExpired;
-local getSecondsLeftForAuction;
-local getMyHighestBuyouts;
+--Local function prototypes
+local brokerFilter, bidBrokerFilter, auctionOwnerFilter, competingFilter, percentLessFilter, plainFilter,  querySnapshot, doBroker, doBidBroker, doCompeting, doPercentLess
 
-local profitFilter;
-local auctionOwnerFilter;
-local competitionFilter;
-local itemFilter;
+function brokerFilter (minProfit, signature) --function brokerFilter(minProfit, signature)
+	local filterAuction = true;
+	local id,rprop,enchant, name, count,min,buyout,uniq = Auctioneer.Core.GetItemSignature(signature);
+	local itemKey = id..":"..rprop..":"..enchant;
 
-local doBroker;
-local doBidBroker;
-local doCompeting;
-local doPercentLess;
+	if (buyout and buyout > 0 and buyout <= Auctioneer.Core.Constants.MaxBuyoutPrice and Auctioneer.Statistic.GetUsableMedian(itemKey)) then
+		local auctKey = Auctioneer.Util.GetAuctionKey();
+		local itemCat = Auctioneer.Util.GetCatForKey(itemKey);
+		local snap = Auctioneer.Core.GetSnapshot(auctKey, itemCat, signature);
 
-local debugPrint;
+		if (snap) then
+			local timeLeft = snap.timeLeft;
+			local elapsedTime = time() - snap.lastSeenTime;
+			local secondsLeft = Auctioneer.Core.Constants.TimeLeft.Seconds[timeLeft] - elapsedTime;
 
--------------------------------------------------------------------------------
--- Determines if this auction in the snapshot has expired.
--------------------------------------------------------------------------------
-function isAuctionExpired(auction)
-	local elapsedTime = time() - auction.lastSeen;
-	local secondsLeft = Auctioneer.Core.Constants.TimeLeft.Seconds[auction.timeLeft] - elapsedTime;
-	return (secondsLeft <= 0);
+			if (secondsLeft > 0) then
+				local hsp, seenCount = Auctioneer.Statistic.GetHSP(itemKey, auctKey);
+				local profit = (hsp * count) - buyout;
+				local profitPricePercent = math.floor((profit / buyout) * 100);
+
+				if (profit >= minProfit and profitPricePercent >= Auctioneer.Core.Constants.MinProfitPricePercent and seenCount >= Auctioneer.Core.Constants.MinBuyoutSeenCount and not Auctioneer.Statistic.IsBadResaleChoice(signature)) then
+					filterAuction = false;
+				end
+			end
+
+		end
+	end
+
+	return filterAuction;
 end
 
--------------------------------------------------------------------------------
--- Gets the maximum number of seconds left for the auction.
--------------------------------------------------------------------------------
-function getSecondsLeftForAuction(auction)
-	local elapsedTime = time() - auction.lastSeen;
-	return Auctioneer.Core.Constants.TimeLeft.Seconds[auction.timeLeft] - elapsedTime;
+-- filters out all auctions except those that have no more than maximumTime remaining and meet profit requirements
+function bidBrokerFilter(minProfit, signature, maximumTime, category, minQuality,itemName)
+	local filterAuction = true;
+	local id,rprop,enchant, name, count,min,buyout,uniq = Auctioneer.Core.GetItemSignature(signature);
+	local itemKey = id..":"..rprop..":"..enchant;
+	if (not maximumTime) then maximumTime = 100000 end
+	if (not category) then category = 0 end
+	if (not minQuality) then minQuality = 0 end
+
+	if (itemName) then
+		local iName
+		local oName = string.lower(name)
+		local iCount = table.getn(itemName)
+		local match = false
+		for iPos=1, iCount do
+			iName = itemName[iPos]
+			if (iName and iName ~= "") then
+				local i,j = string.find(oName, string.lower(iName))
+				if (i) then match = true end
+			end
+		end
+		if (not match) then return true end
+	end
+
+	if Auctioneer.Statistic.GetUsableMedian(itemKey) then  -- only add if we have seen it enough times to have a usable median
+		local auctKey = Auctioneer.Util.GetAuctionKey();
+		local currentBid = Auctioneer.Statistic.GetCurrentBid(signature);
+		local sbuy = Auctioneer.Core.GetSnapshotInfo(auctKey, itemKey);
+		local buyoutValues = {};
+		if (sbuy) then buyoutValues = sbuy.buyoutPrices end
+		local lowest, second = Auctioneer.Statistic.GetLowest(buyoutValues);
+
+		local itemCat = Auctioneer.Util.GetCatForKey(itemKey);
+		if (category == 0 or itemCat == category) then
+			local snap = Auctioneer.Core.GetSnapshot(auctKey, itemCat, signature);
+
+			if (snap) then
+				if (tonumber(snap.quality) >= tonumber(minQuality)) then
+					local timeLeft = tonumber(snap.timeLeft);
+					local elapsedTime = time() - tonumber(snap.lastSeenTime);
+					local secondsLeft = Auctioneer.Core.Constants.TimeLeft.Seconds[timeLeft] - elapsedTime;
+
+					if (secondsLeft <= maximumTime and secondsLeft > 0) then
+						-- hsp is the HSP with the lowest priced item still in the auction, nshp is the next highest price.
+						local hsp, seenCount, x, x, nhsp = Auctioneer.Statistic.GetHSP(itemKey, auctKey, buyoutValues);
+						local profit = (hsp * count) - currentBid;
+						local profitPricePercent = math.floor((profit / currentBid) * 100);
+
+						if ((minProfit == 0 or profit >= minProfit) and seenCount >= Auctioneer.Core.Constants.MinBuyoutSeenCount and not Auctioneer.Statistic.IsBadResaleChoice(signature)) then
+							filterAuction = false;
+						end
+					end
+				end
+			end
+		end
+	end
+
+	return filterAuction;
 end
 
--------------------------------------------------------------------------------
--- Returns a map of itemKeys -> highest buyout for the player's own auctions.
--------------------------------------------------------------------------------
-function getMyHighestBuyouts(ahKey)
-	if (not auctKey) then auctKey = Auctioneer.Util.GetAuctionKey() end
-
-	-- Get the list of our own auctions.
-	local myAuctions = Auctioneer.SnapshotDB.Query(
-		ahKey,
-		nil,
-		function (auction)
-			return (auction.buyoutPrice and auction.buyoutPrice > 0 and auction.owner == UnitName("player"));
-		end);
-
-	-- Construct the map of itemKey -> highest buyout.			
-	local myHighestBuyouts = {};
-	for _, myAuction in pairs(myAuctions) do
-		local myBuyout = myAuction.buyoutPrice / myAuction.count;
-		local myItemKey = Auctioneer.ItemDB.CreateItemKeyFromAuction(myAuction);
-		local myHighestBuyout = myHighestBuyouts[myItemKey];
-		if (myHighestBuyout == nil or myBuyout > myHighestBuyout) then
-			myHighestBuyouts[myItemKey] = myBuyout;
-		end
-	end
-
-	return myHighestBuyouts;
-end
-
--------------------------------------------------------------------------------
--- Snapshot query filter function that matches auctions based on resale
--- profit for bids.
--- 
--- filterArgs can contain:
---     itemNames
---     categoryName
---     minQuality
---     maxSecondsLeft
---     minBidProfit
---     minBidProfitPercent
---     minBidPercentLess
---     minBuyoutProfit
---     minBuyoutProfitPercent
---     minBuyoutPercentLess
--------------------------------------------------------------------------------
-function profitFilter(auction, filterArgs)
-	--local debug = true;
-	if (debug) then debugPrint("profitFilter - checking auction: "..auction.auctionId) end;
-	local itemKey = Auctioneer.ItemDB.CreateItemKeyFromAuction(auction);
-	local itemInfo = Auctioneer.ItemDB.GetItemInfo(itemKey);
-
-	-- Check the item category
-	local categoryName = filterArgs.categoryName;
-	if (categoryName and itemInfo.categoryName ~= categoryName) then
+function auctionOwnerFilter(owner, signature)
+	local auctKey = Auctioneer.Util.GetAuctionKey();
+	local itemCat = Auctioneer.Util.GetCatForSig(signature);
+	local snap = Auctioneer.Core.GetSnapshot(auctKey, itemCat, signature);
+	if (snap and snap.owner == owner) then
 		return false;
 	end
-
-	-- Check the item quality
-	local minQuality = filterArgs.minQuality;
-	if (minQuality and itemInfo.quality < minQuality) then
-		if (debug) then debugPrint("No match due to quality") end;
-		return false;
-	end
-
-	-- Check the names
-	local itemNames = filterArgs.itemNames;
-	if (itemNames) then
-		local match = false;
-		for _, itemName in pairs(itemNames) do
-			match = Auctioneer.Database.DoesNameMatch(itemInfo.name, itemName, false);
-			if (match) then break end;
-		end
-		if (not match) then
-			if (debug) then debugPrint("No match due to name") end;
-			return false;
-		end
-	end
-
-	-- Check for auction expiration.
-	if (isAuctionExpired(auction)) then
-		if (debug) then debugPrint("No match due to expired auction (lastSeen="..date("%x", auction.lastSeen)..")") end;
-		return false;
-	end
-
-	-- Check the time left.
-	local maxSecondsLeft = filterArgs.maxSecondsLeft;
-	if (maxSecondsLeft and getSecondsLeftForAuction(auction) > maxSecondsLeft) then
-		if (debug) then debugPrint("No match due to time left") end;
-		return false;
-	end
-
-	-- Check for resale profit.
-	local minBidProfit = filterArgs.minBidProfit;
-	local minBidProfitPercent = filterArgs.minBidProfitPercent;
-	local minBidPercentLess = filterArgs.minBidPercentLess;
-	local minBuyoutProfit = filterArgs.minBuyoutProfit;
-	local minBuyoutProfitPercent = filterArgs.minBuyoutProfitPercent;
-	local minBuyoutPercentLess = filterArgs.minBuyoutPercentLess
-	if (minBidProfit or minBidProfitPercent or minBidPercentLess or minBuyoutProfit or minBuyoutProfitPercent or minBuyoutPercentLess) then
-		-- Check for a usable median
-		if (Auctioneer.Statistic.GetUsableMedian(itemKey, auction.ahKey) == nil) then
-			if (debug) then debugPrint("No match due to no usable mean") end;
-			return false;
-		end
-
-		-- Check the seen count.
-		local hsp, seenCount = Auctioneer.Statistic.GetHSP(itemKey, auction.ahKey);
-		if (seenCount < Auctioneer.Core.Constants.MinBuyoutSeenCount) then
-			if (debug) then debugPrint("No match due to seen count") end;
-			return false;
-		end
-
-		-- Check the profit from bidding.
-		if (minBidProfit or minBidProfitPercent or minBidPercentLess) then
-			-- Calculate the bid profit.
-			local bidProfit, bidProfitPercent, bidPercentLess = Auctioneer.Statistic.GetBidProfit(auction, hsp);
-
-			-- Check the minimum bid profit.
-			if (minBidProfit and bidProfit < minBidProfit) then
-				if (debug) then debugPrint("No match due bid profit") end;
-				return false;
-			end
-		
-			-- Check the minimum bid profit percent.
-			if (minBidProfitPercent and bidProfitPercent < minBidProfitPercent) then
-				if (debug) then debugPrint("No match due bid profit percentage") end;
-				return false;
-			end
-
-			-- Check the minimum bid percent less then HSP.
-			if (minBidPercentLess and bidPercentLess < minBidPercentLess) then
-				if (debug) then debugPrint("No match due bid profit percent less") end;
-				return false;
-			end
-		end
-		
-		-- Check the profit from buying out.
-		if (minBuyoutProfit or minBuyoutProfitPercent or minBuyoutPercentLess) then
-			-- Calculate the buyout profit (no buyout means no match).
-			if (auction.buyoutPrice == nil or auction.buyoutPrice == 0) then
-				if (debug) then debugPrint("No match due to no buyout") end;
-				return false;
-			end
-			local buyoutProfit, buyoutProfitPercent, buyoutPercentLess = Auctioneer.Statistic.GetBuyoutProfit(auction, hsp);
-		
-			-- Check the minimum buyout profit.
-			if (minBuyoutProfit and buyoutProfit < minBuyoutProfit) then
-				if (debug) then debugPrint("No match due buyout price (profit was "..buyoutProfit..")") end;
-				return false;
-			end
-		
-			-- Check the minimum buyout profit percent.
-			if (minBuyoutProfitPercent and buyoutProfitPercent < minBuyoutProfitPercent) then
-				if (debug) then debugPrint("No match due buyout price percent") end;
-				return false;
-			end
-
-			-- Check the minimum buyout percent less then HSP
-			if (minBuyoutPercentLess and buyoutPercentLess < minBuyoutPercentLess) then
-				if (debug) then debugPrint("No match due buyout price percent less") end;
-				return false;
-			end
-		end
-
-		-- Check if its a bad resale choice.
-		if (Auctioneer.Statistic.IsBadResaleChoice(auction)) then
-			if (debug) then debugPrint("No match due bad resale choice") end;
-			return false;
-		end
-	end
-
-	-- If we make it this far, its a match!
-	if (debug) then debugPrint("MATCH!") end;
 	return true;
 end
 
--------------------------------------------------------------------------------
--- Snapshot query filter function that matches auctions based on owner.
--- 
--- filterArgs should contain:
---     owner
--------------------------------------------------------------------------------
-function auctionOwnerFilter(auction, filterArgs)
-	-- Normalize the filter arguments.
-	local owner = filterArgs.owner;
+function competingFilter(minLess, signature, myAuctions)
+	local id,rprop,enchant, name, count,min,buyout,uniq = Auctioneer.Core.GetItemSignature(signature);
+	if (count > 1) then buyout = buyout/count; end
+	local itemKey = id..":"..rprop..":"..enchant;
 
-	-- Check the owner.
-	if (owner and auction.owner ~= owner) then
+	local auctKey = Auctioneer.Util.GetAuctionKey();
+	local itemCat = Auctioneer.Util.GetCatForSig(signature);
+	local snap = Auctioneer.Core.GetSnapshot(auctKey, itemCat, signature);
+	if (snap and snap.owner ~= UnitName("player")) and
+		(myAuctions[itemKey]) and
+		(buyout > 0) and
+		(buyout+minLess < myAuctions[itemKey]) then
 		return false;
 	end
-	
-	-- If we make it this far, its a match!
 	return true;
 end
 
--------------------------------------------------------------------------------
--- Snapshot query filter function that matches auctions based on competing
--- auctions undercutting.
---
--- filterArgs could contain:
---     minLess
--------------------------------------------------------------------------------
-function competitionFilter(auction, filterArgs)
-	--local debug = true;
-	if (debug) then debugPrint("competitionFilter - checking auction: "..auction.auctionId) end;
-	local itemKey = Auctioneer.ItemDB.CreateItemKeyFromAuction(auction);
+-- filters out all auctions that are not a given percentless than the median for that item.
+function percentLessFilter(percentLess, signature, category, minQuality, itemName)
+	local filterAuction = true;
+	local id,rprop,enchant, name, count,min,buyout,uniq = Auctioneer.Core.GetItemSignature(signature);
+	local itemKey = id .. ":" .. rprop..":"..enchant;
+	local auctKey = Auctioneer.Util.GetAuctionKey();
 
-	-- Normalize the filter arguments.
-	local minLess = filterArgs.minLess;
-	if (minLess == nil) then minLess = 0 end;
-	local myHighestBuyouts = filterArgs.myHighestBuyouts;
-	if (myHighestBuyouts == nil) then return false end;
-	
-	-- Check that the auction has a buyout
-	if (auction.buyoutPrice == nil or auction.buyoutPrice == 0) then
-		if (debug) then debugPrint("No match due to no buyout") end;
-		return false;
-	end
+	if (not category) then category = 0 end
+	if (not minQuality) then minQuality = 0 end
 
-	-- Check the owner (must not match the current player)
-	if (auction.owner == UnitName("player")) then
-		if (debug) then debugPrint("No match due to own auction") end;
-		return false;
-	end
-	
-	-- Check for auction expiration.
-	if (isAuctionExpired(auction)) then
-		if (debug) then debugPrint("No match due to expired auction") end;
-		return false;
+	if (itemName) then
+		local iName
+		local oName = string.lower(name)
+		local iCount = table.getn(itemName)
+		local match = false
+		for iPos=1, iCount do
+			iName = itemName[iPos]
+			if (iName and iName ~= "") then
+				local i,j = string.find(oName, string.lower(iName))
+				if (i) then match = true end
+			end
+		end
+		if (not match) then return true end
 	end
 
-	-- Check the buyout price against our price.
-	local myHighestBuyout = myHighestBuyouts[itemKey];
-	local buyout = auction.buyoutPrice / auction.count;
-	if (myHighestBuyout == nil) then
-		if (debug) then debugPrint("No match due to no auctions") end;
-		return false;
+	local hsp, seenCount = Auctioneer.Statistic.GetHSP(itemKey, auctKey)
+
+	if hsp > 0 and seenCount >= Auctioneer.Core.Constants.MinBuyoutSeenCount then
+		local profit = (hsp * count) - buyout;
+		--see if this auction should not be filtered
+		if (buyout > 0 and Auctioneer.Statistic.PercentLessThan(hsp, buyout / count) >= tonumber(percentLess) and profit >= Auctioneer.Core.Constants.MinProfitMargin) then
+			local itemCat = Auctioneer.Util.GetCatForKey(itemKey);
+			if (category == 0 or itemCat == category) then
+				local snap = Auctioneer.Core.GetSnapshot(auctKey, itemCat, signature);
+				if (snap) then
+					if (tonumber(snap.quality) >= tonumber(minQuality)) then
+						local timeLeft = tonumber(snap.timeLeft);
+						local elapsedTime = time() - tonumber(snap.lastSeenTime);
+						local secondsLeft = Auctioneer.Core.Constants.TimeLeft.Seconds[timeLeft] - elapsedTime;
+
+						if (secondsLeft > 0) then
+							filterAuction = false;
+						end
+					end
+				end
+			end
+		end
 	end
-	if (buyout + minLess > myHighestBuyout) then
-		if (debug) then debugPrint("No match due to high buyout price") end;
-		return false;
-	end
-	
-	-- If we make it this far, its a match!
-	if (debug) then debugPrint("MATCH!") end;
-	return true;
+
+	return filterAuction;
 end
 
--------------------------------------------------------------------------------
--- Snapshot query filter function that matches auctions based item properties.
---
--- filterArgs can contain:
---     itemNames
---     categoryName
---     minQuality
---     maxBuyout
--------------------------------------------------------------------------------
-function itemFilter(auction, filterArgs)
-	--local debug = true;
-	if (debug) then debugPrint("itemFilter - checking auction: "..auction.auctionId) end;
+-- filters out all auctions that are not below a certain price.
+function plainFilter(maxPrice, signature, category, minQuality, itemName)
+	local filterAuction = true;
+	local id,rprop,enchant, name, count,min,buyout,uniq = Auctioneer.Core.GetItemSignature(signature);
+	local itemKey = id .. ":" .. rprop..":"..enchant;
+	local auctKey = Auctioneer.Util.GetAuctionKey();
 
-	-- Check for a maximum buyout price.
-	local maxBuyout = filterArgs.maxBuyout;
-	if (maxBuyout and maxBuyout > 0) then
-		if (auction.buyoutPrice == nil or auction.buyoutPrice == 0) then
-			if (debug) then debugPrint("No match due to no buyout") end;
-			return false;
-		elseif (auction.buyoutPrice > maxBuyout) then
-			if (debug) then debugPrint("No match due to maximum buyout") end;
-			return false;
+	if (not category) then category = 0 end
+	if (not minQuality) then minQuality = 0 end
+	if (not maxPrice or maxPrice == 0) then maxPrice = 100000000 end
+
+	if (itemName) then
+		local iName
+		local oName = string.lower(name)
+		local iCount = table.getn(itemName)
+		local match = false
+		for iPos=1, iCount do
+			iName = itemName[iPos]
+			if (iName and iName ~= "") then
+				local i,j = string.find(oName, string.lower(iName))
+				if (i) then match = true end
+			end
+		end
+		if (not match) then return true end
+	end
+
+	if (count and count > 1) then maxPrice = maxPrice * count end
+
+	-- check to see if we need to retrieve the current bid before actually getting it
+	local currentBid = min
+	if (min <= maxPrice and (not buyout or buyout == 0 or buyout > maxPrice)) then
+		local bid = Auctioneer.Statistic.GetCurrentBid(signature);
+		if (bid) then currentBid = bid end
+	end
+
+	if (currentBid <= maxPrice or (buyout and buyout > 0 and buyout <= maxPrice)) then
+		local itemCat = Auctioneer.Util.GetCatForKey(itemKey);
+		if (category == 0 or itemCat == category) then
+			local snap = Auctioneer.Core.GetSnapshot(auctKey, itemCat, signature);
+			if (snap) then
+				if (tonumber(snap.quality) >= tonumber(minQuality)) then
+					local timeLeft = tonumber(snap.timeLeft);
+					local elapsedTime = time() - tonumber(snap.lastSeenTime);
+					local secondsLeft = Auctioneer.Core.Constants.TimeLeft.Seconds[timeLeft] - elapsedTime;
+
+					if (secondsLeft > 0) then
+						filterAuction = false;
+					end
+				end
+			end
 		end
 	end
 
-	-- Check for auction expiration.
-	if (isAuctionExpired(auction)) then
-		if (debug) then debugPrint("No match due to expired auction") end;
-		return false;
-	end
-
-	-- Get the item info so we can check item properties such as name
-	-- and quality.
-	local itemKey = Auctioneer.ItemDB.CreateItemKeyFromAuction(auction);
-	local itemInfo = Auctioneer.ItemDB.GetItemInfo(itemKey);
-
-	-- Check the item category
-	local categoryName = filterArgs.categoryName;
-	if (categoryName and itemInfo.categoryName ~= categoryName) then
-		return false;
-	end
-
-	-- Check the item quality
-	local minQuality = filterArgs.minQuality;
-	if (minQuality and itemInfo.quality < minQuality) then
-		if (debug) then debugPrint("No match due to quality") end;
-		return false;
-	end
-
-	-- Check the names
-	local itemNames = filterArgs.itemNames;
-	if (itemNames) then
-		local match = false;
-		for _, itemName in pairs(itemNames) do
-			match = Auctioneer.Database.DoesNameMatch(itemInfo.name, itemName, false);
-			if (match) then break end;
-		end
-		if (not match) then
-			if (debug) then debugPrint("No match due to name") end;
-			return false;
-		end
-	end
-
-	-- If we make it this far, its a match!
-	if (debug) then debugPrint("MATCH!") end;
-	return true;
+	return filterAuction;
 end
 
--------------------------------------------------------------------------------
--- Builds the list of auctions that can be bought and resold for profit based
--- on buyout and a minimum profit.
--------------------------------------------------------------------------------
+
+--[[
+	generic function for querying the snapshot with a filter function that returns true if an auction should be filtered out of the result set.
+
+	@return (array)
+		all items in the current snapshot which are not filtered out by the given filter.
+		Each entry of the array contains:
+		   {snapshotdata, (see Auctioneer.Core.GetSnapshotFromData for details)
+		    [signature]   (snapshot signature)
+		   }
+		If there are no matching entries in the snapshot, the function returns an empty array.
+]]
+function querySnapshot(filter, param, e1,e2,e3,e4,e5)
+	local queryResults = {};
+	param = param or "";
+
+	local a;
+	local auctKey = Auctioneer.Util.GetAuctionKey();
+
+	if (AuctionConfig and AuctionConfig.snap and AuctionConfig.snap[auctKey]) then
+		for itemCat, iData in pairs(AuctionConfig.snap[auctKey]) do
+			for auctionSignature, data in pairs(iData) do
+				if (not filter(param, auctionSignature, e1,e2,e3,e4,e5)) then
+					a = Auctioneer.Core.GetSnapshotFromData(data);
+					a.signature = auctionSignature;
+					table.insert(queryResults, a);
+				end
+			end
+		end
+	end
+
+	return queryResults;
+end
+
+-- builds the list of auctions that can be bought and resold for profit
 function doBroker(minProfit)
-	-- Normalize the arguments.
 	if not minProfit or minProfit == "" then
 		minProfit = Auctioneer.Core.Constants.MinProfitMargin
 	elseif (tonumber(minProfit)) then
@@ -388,78 +296,74 @@ function doBroker(minProfit)
 		return
 	end
 
-	-- Query the snapshot and sort the results by descending profit.
-	local filterArgs = {};
-	filterArgs.minBuyoutProfit = minProfit;
-	local auctions = Auctioneer.SnapshotDB.Query(nil, nil, profitFilter, filterArgs);
-	table.sort(auctions, function(a, b) return (Auctioneer.Statistic.GetBuyoutProfit(a) > Auctioneer.Statistic.GetBuyoutProfit(b)) end);
-
-	-- Output the list of auctions
 	local output = string.format(_AUCT('FrmtBrokerHeader'), EnhTooltip.GetTextGSC(minProfit));
 	Auctioneer.Util.ChatPrint(output);
-	for _,auction in pairs(auctions) do
-		local itemKey = Auctioneer.ItemDB.CreateItemKeyFromAuction(auction);
-		local itemInfo = Auctioneer.ItemDB.GetItemInfo(itemKey);
-		local itemLink = Auctioneer.ItemDB.GetItemLink(itemKey);
-		local hsp, seenCount = Auctioneer.Statistic.GetHSP(itemKey, auction.ahKey);
-		local profit = Auctioneer.Statistic.GetBuyoutProfit(auction, hsp);
-		local buyout = auction.buyoutPrice;
-		local count = auction.count;
-		local output = string.format(_AUCT('FrmtBrokerLine'), Auctioneer.Util.ColorTextWhite(auction.count.."x")..itemLink, seenCount, EnhTooltip.GetTextGSC(hsp * count), EnhTooltip.GetTextGSC(buyout), EnhTooltip.GetTextGSC(profit));
-		Auctioneer.Util.ChatPrint(output);
+
+	local resellableAuctions = querySnapshot(brokerFilter, minProfit);
+
+	-- sort by profit decending
+	table.sort(resellableAuctions, Auctioneer.Statistic.ProfitComparisonSort);
+
+	-- output the list of auctions
+	local id,rprop,enchant,name,count,min,buyout,uniq,itemKey,hsp,seenCount,profit,output;
+	if (resellableAuctions) then
+		for pos,a in pairs(resellableAuctions) do
+			id,rprop,enchant, name, count,min,buyout,uniq = Auctioneer.Core.GetItemSignature(a.signature);
+			itemKey = id .. ":" .. rprop..":"..enchant;
+			hsp, seenCount = Auctioneer.Statistic.GetHSP(itemKey, Auctioneer.Util.GetAuctionKey());
+			profit = (hsp * count) - buyout;
+			output = string.format(_AUCT('FrmtBrokerLine'), Auctioneer.Util.ColorTextWhite(count.."x")..a.itemLink, seenCount, EnhTooltip.GetTextGSC(hsp * count), EnhTooltip.GetTextGSC(buyout), EnhTooltip.GetTextGSC(profit));
+			Auctioneer.Util.ChatPrint(output);
+		end
 	end
+
 	Auctioneer.Util.ChatPrint(_AUCT('FrmtBrokerDone'));
 end
 
--------------------------------------------------------------------------------
--- Builds the list of auctions that can be bought and resold for profit based
--- on bid and a minimum profit.
--------------------------------------------------------------------------------
+-- builds the list of auctions that can be bought and resold for profit
 function doBidBroker(minProfit)
-	-- Normalize the arguments.
 	if not minProfit or minProfit == "" then
-		minProfit = Auctioneer.Core.Constants.MinProfitMargin;
+		minProfit = Auctioneer.Core.Constants.MinProfitMargin
 	elseif (tonumber(minProfit)) then
 		minProfit = tonumber(minProfit) * 100
 	else
 		Auctioneer.Util.ChatPrint(string.format(_AUCT('FrmtActUnknown'), minProfit))
-		return;
+		return
 	end
 
-	-- Query the snapshot and sort the results by increasing time left.
-	local filterArgs = {};
-	filterArgs.minBidProfit = minProfit;
-	filterArgs.maxSecondsLeft = Auctioneer.Core.Constants.TimeLeft.Seconds[Auctioneer.Core.Constants.TimeLeft.Medium];
-	local auctions = Auctioneer.SnapshotDB.Query(nil, nil, profitFilter, filterArgs);
-	table.sort(auctions, function(a, b) return (a.timeLeft < b.timeLeft) end);
-
-	-- Output the list of auctions
 	local output = string.format(_AUCT('FrmtBidbrokerHeader'), EnhTooltip.GetTextGSC(minProfit));
 	Auctioneer.Util.ChatPrint(output);
-	for _,auction in pairs(auctions) do
-		local bidText = _AUCT('FrmtBidbrokerCurbid');
-		if (auction.bidAmount == nil or auction.bidAmount == 0) then
-			bidText = _AUCT('FrmtBidbrokerMinbid');
+
+	local bidWorthyAuctions = querySnapshot(bidBrokerFilter, minProfit, Auctioneer.Core.Constants.TimeLeft.Seconds[Auctioneer.Core.Constants.TimeLeft.Medium]);
+
+	table.sort(bidWorthyAuctions, function(a, b) return (a.timeLeft < b.timeLeft) end);
+
+	-- output the list of auctions
+	local id,rprop,enchant, name, count,min,buyout,uniq,itemKey,hsp,seenCount,currentBid,profit,bidText,output;
+	if (bidWorthyAuctions) then
+		for pos,a in pairs(bidWorthyAuctions) do
+			id,rprop,enchant, name, count,min,buyout,uniq = Auctioneer.Core.GetItemSignature(a.signature);
+			itemKey = id .. ":" .. rprop..":"..enchant;
+			hsp, seenCount = Auctioneer.Statistic.GetHSP(itemKey, Auctioneer.Util.GetAuctionKey());
+			currentBid = Auctioneer.Statistic.GetCurrentBid(a.signature);
+			profit = (hsp * count) - currentBid;
+
+			bidText = _AUCT('FrmtBidbrokerCurbid');
+			if (currentBid == min) then
+				bidText = _AUCT('FrmtBidbrokerMinbid');
+			end
+			EnhTooltip.DebugPrint("a", a);
+
+			-- local secondsLeft = Auctioneer.Core.Constants.TimeLeft.Seconds[a.timeLeft] + a.lastSeenTime - time()
+			output = string.format(_AUCT('FrmtBidbrokerLine'), Auctioneer.Util.ColorTextWhite(count.."x")..a.itemLink, seenCount, EnhTooltip.GetTextGSC(hsp * count), bidText, EnhTooltip.GetTextGSC(currentBid), EnhTooltip.GetTextGSC(profit), Auctioneer.Util.ColorTextWhite(Auctioneer.Util.GetTimeLeftString(a.timeLeft)));
+			Auctioneer.Util.ChatPrint(output);
 		end
-		local itemKey = Auctioneer.ItemDB.CreateItemKeyFromAuction(auction);
-		local itemInfo = Auctioneer.ItemDB.GetItemInfo(itemKey);
-		local itemLink = Auctioneer.ItemDB.GetItemLink(itemKey);
-		local hsp, seenCount = Auctioneer.Statistic.GetHSP(itemKey, auction.ahKey);
-		local count = auction.count;
-		local currentBid = Auctioneer.SnapshotDB.GetCurrentBid(auction);
-		local profit = Auctioneer.Statistic.GetBidProfit(auction, hsp);
-		local timeLeft = auction.timeLeft;
-		local output = string.format(_AUCT('FrmtBidbrokerLine'), Auctioneer.Util.ColorTextWhite(count.."x")..itemLink, seenCount, EnhTooltip.GetTextGSC(hsp * count), bidText, EnhTooltip.GetTextGSC(currentBid), EnhTooltip.GetTextGSC(profit), Auctioneer.Util.ColorTextWhite(Auctioneer.Util.GetTimeLeftString(timeLeft)));
-		Auctioneer.Util.ChatPrint(output);
 	end
+
 	Auctioneer.Util.ChatPrint(_AUCT('FrmtBidbrokerDone'));
 end
 
--------------------------------------------------------------------------------
--- Builds a list of competing auctions under cutting the players own auctions.
--------------------------------------------------------------------------------
 function doCompeting(minLess)
-	-- Normalize the arguments.
 	if not minLess or minLess == "" then
 		minLess = Auctioneer.Core.Constants.DefaultCompeteLess * 100
 	elseif (tonumber(minLess)) then
@@ -469,89 +373,96 @@ function doCompeting(minLess)
 		return
 	end
 
-	-- Query the snapshot for competing auctions
-	local filterArgs = {};
-	filterArgs.minLess = minLess;
-	filterArgs.myHighestBuyouts = getMyHighestBuyouts();
-	local auctions = Auctioneer.SnapshotDB.Query(nil, nil, competitionFilter, filterArgs);
-	table.sort(auctions, function(a, b) return (Auctioneer.Statistic.GetBuyoutProfit(a) > Auctioneer.Statistic.GetBuyoutProfit(b)) end);
-
-	-- Output the list of auctions undercutting auctions.
 	local output = string.format(_AUCT('FrmtCompeteHeader'), EnhTooltip.GetTextGSC(minLess));
 	Auctioneer.Util.ChatPrint(output);
-	for _,auction in pairs(auctions) do
-		local itemKey = Auctioneer.ItemDB.CreateItemKeyFromAuction(auction);
-		local itemInfo = Auctioneer.ItemDB.GetItemInfo(itemKey);
-		local itemLink = Auctioneer.ItemDB.GetItemLink(itemKey);
-		local count = auction.count;
 
-		local bidPrice = "No bids ("..auction.minBid..")";
-		if (auction.bidAmount) then
-			local bidPrice = EnhTooltip.GetTextGSC(auction.bidAmount / auction.count).."ea";
+	local myAuctions = querySnapshot(auctionOwnerFilter, UnitName("player"));
+	local myHighestPrices = {}
+	local id,rprop,enchant,name,count,min,buyout,uniq,itemKey,competingAuctions,currentBid,buyoutForOne,bidForOne,bidPrice,myBuyout,buyPrice,myPrice,priceLess,lessPrice,output;
+	if (myAuctions) then
+		for pos,a in pairs(myAuctions) do
+			id,rprop,enchant, name, count,min,buyout,uniq = Auctioneer.Core.GetItemSignature(a.signature);
+			if (count > 1) then buyout = buyout/count; end
+			itemKey = id .. ":" .. rprop..":"..enchant;
+			if (not myHighestPrices[itemKey]) or (myHighestPrices[itemKey] < buyout) then
+				myHighestPrices[itemKey] = buyout;
+			end
 		end
-
-		local myBuyout = filterArgs.myHighestBuyouts[itemKey];
-		local buyPrice = EnhTooltip.GetTextGSC(auction.buyoutPrice / auction.count).."ea";
-		local myPrice = EnhTooltip.GetTextGSC(myBuyout).."ea";
-		local priceLess = myBuyout - (auction.buyoutPrice / auction.count);
-		local lessPrice = EnhTooltip.GetTextGSC(priceLess);
-	
-		local output = string.format(_AUCT('FrmtCompeteLine'), Auctioneer.Util.ColorTextWhite(count.."x")..itemLink, bidPrice, buyPrice, myPrice, lessPrice);
-		Auctioneer.Util.ChatPrint(output);
 	end
+	competingAuctions = querySnapshot(competingFilter, minLess, myHighestPrices);
+
+	table.sort(competingAuctions, Auctioneer.Statistic.ProfitComparisonSort);
+
+	-- output the list of auctions
+	if (competingAuctions) then
+		for pos,a in pairs(competingAuctions) do
+			id,rprop,enchant, name, count,min,buyout,uniq = Auctioneer.Core.GetItemSignature(a.signature);
+			itemKey = id .. ":" .. rprop..":"..enchant;
+			currentBid = Auctioneer.Statistic.GetCurrentBid(a.signature);
+
+			buyoutForOne = buyout;
+			bidForOne = currentBid;
+			if (count > 1) then
+				buyoutForOne = buyout/count;
+				bidForOne = currentBid/count;
+			end
+
+			bidPrice = EnhTooltip.GetTextGSC(bidForOne).."ea";
+			if (currentBid == min) then
+				bidPrice = "No bids ("..bidPrice..")";
+			end
+
+			myBuyout = myHighestPrices[itemKey];
+			buyPrice = EnhTooltip.GetTextGSC(buyoutForOne).."ea";
+			myPrice = EnhTooltip.GetTextGSC(myBuyout).."ea";
+			priceLess = myBuyout - buyoutForOne;
+			lessPrice = EnhTooltip.GetTextGSC(priceLess);
+
+			output = string.format(_AUCT('FrmtCompeteLine'), Auctioneer.Util.ColorTextWhite(count.."x")..a.itemLink, bidPrice, buyPrice, myPrice, lessPrice);
+			Auctioneer.Util.ChatPrint(output);
+		end
+	end
+
 	Auctioneer.Util.ChatPrint(_AUCT('FrmtCompeteDone'));
 end
 
--------------------------------------------------------------------------------
--- builds the list of auctions that can be bought and resold for profit based
--- on a buyout below HSP by a percentage.
--------------------------------------------------------------------------------
+-- builds the list of auctions that can be bought and resold for profit
 function doPercentLess(percentLess)
-	-- Normalize the arguments.
 	if not percentLess or percentLess == "" then percentLess = Auctioneer.Core.Constants.MinPercentLessThanHSP end
-
-	-- Query the snapshot and sort the results by increasing time left.
-	local filterArgs = {};
-	filterArgs.minBuyoutPercentLess = percentLess;
-	local auctions = Auctioneer.SnapshotDB.Query(nil, nil, profitFilter, filterArgs);
-	table.sort(auctions, function(a, b) return (Auctioneer.Statistic.GetBuyoutProfit(a) > Auctioneer.Statistic.GetBuyoutProfit(b)) end);
-
-	-- Output the list of auctions
 	local output = string.format(_AUCT('FrmtPctlessHeader'), percentLess);
 	Auctioneer.Util.ChatPrint(output);
-	for _,auction in pairs(auctions) do
-		local itemKey = Auctioneer.ItemDB.CreateItemKeyFromAuction(auction);
-		local itemInfo = Auctioneer.ItemDB.GetItemInfo(itemKey);
-		local itemLink = Auctioneer.ItemDB.GetItemLink(itemKey);
-		local hsp, seenCount = Auctioneer.Statistic.GetHSP(itemKey, auction.ahKey);
-		local count = auction.count;
-		local buyout = auction.buyoutPrice;
-		local profit = (hsp * count) - buyout;
-		local output = string.format(_AUCT('FrmtPctlessLine'), Auctioneer.Util.ColorTextWhite(count.."x")..itemLink, seenCount, EnhTooltip.GetTextGSC(hsp * count), EnhTooltip.GetTextGSC(buyout), EnhTooltip.GetTextGSC(profit), Auctioneer.Util.ColorTextWhite(Auctioneer.Statistic.PercentLessThan(hsp, buyout / count).."%"));
-		Auctioneer.Util.ChatPrint(output);
+
+	local auctionsBelowHSP = querySnapshot(percentLessFilter, percentLess);
+
+	-- sort by profit based on median
+	table.sort(auctionsBelowHSP, Auctioneer.Statistic.ProfitComparisonSort);
+
+	-- output the list of auctions
+	local id,rprop,enchant,name,count,buyout,itemKey,hsp,seenCount,profit,output,x;
+	if (auctionsBelowHSP) then
+		for pos,a in pairs(auctionsBelowHSP) do
+			id,rprop,enchant, name, count,x,buyout,x = Auctioneer.Core.GetItemSignature(a.signature);
+			itemKey = id ..":"..rprop..":"..enchant;
+			hsp, seenCount = Auctioneer.Statistic.GetHSP(itemKey, Auctioneer.Util.GetAuctionKey());
+			profit = (hsp * count) - buyout;
+			output = string.format(_AUCT('FrmtPctlessLine'), Auctioneer.Util.ColorTextWhite(count.."x")..a.itemLink, seenCount, EnhTooltip.GetTextGSC(hsp * count), EnhTooltip.GetTextGSC(buyout), EnhTooltip.GetTextGSC(profit), Auctioneer.Util.ColorTextWhite(Auctioneer.Statistic.PercentLessThan(hsp, buyout / count).."%"));
+			Auctioneer.Util.ChatPrint(output);
+		end
 	end
+
 	Auctioneer.Util.ChatPrint(_AUCT('FrmtPctlessDone'));
 end
-
--------------------------------------------------------------------------------
--------------------------------------------------------------------------------
-function debugPrint(message)
-	EnhTooltip.DebugPrint("[Auc.Filter] "..message);
-end
-
--------------------------------------------------------------------------------
--- Public API
--------------------------------------------------------------------------------
-Auctioneer.Filter =
-{
+-- Auctioneer.Filter.
+Auctioneer.Filter = {
+	BrokerFilter = brokerFilter,
+	BidBrokerFilter = bidBrokerFilter,
+	AuctionOwnerFilter = auctionOwnerFilter,
+	CompetingFilter = competingFilter,
+	PercentLessFilter = percentLessFilter,
+	PlainFilter = plainFilter,
+	QuerySnapshot = querySnapshot,
 	DoBroker = doBroker,
 	DoBidBroker = doBidBroker,
 	DoCompeting = doCompeting,
 	DoPercentLess = doPercentLess,
-
-	CompetitionFilter = competitionFilter,
-	ProfitFilter = profitFilter;
-	ItemFilter = itemFilter;
-
-	GetMyHighestBuyouts = getMyHighestBuyouts;
 }

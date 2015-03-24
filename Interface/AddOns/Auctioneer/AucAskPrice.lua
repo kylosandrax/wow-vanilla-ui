@@ -1,7 +1,7 @@
 --[[
 	Auctioneer Addon for World of Warcraft(tm).
-	Version: 3.9.0.1063 (Kangaroo)
-	Revision: $Id: AucAskPrice.lua 1031 2006-10-04 04:15:38Z mentalpower $
+	Version: 3.8.0 (Kangaroo)
+	Revision: $Id: AucAskPrice.lua 981 2006-08-31 05:49:45Z mentalpower $
 
 	Auctioneer AskPrice created by Mikezter and merged into Auctioneer by MentalPower.
 	Functions responsible for AskPrice's operation..
@@ -20,7 +20,7 @@
 		You should have received a copy of the GNU General Public License
 		along with this program(see GPL.txt); if not, write to the Free Software
 		Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
---]]
+]]
 
 --Local function prototypes
 local init, askpriceFrame, commandHandler, chatPrintHelp, onOff, setTrigger, genVarSet, setCustomSmartWords, setKhaosSetKeyValue, eventHandler, sendWhisper, onEventHook
@@ -78,11 +78,8 @@ function commandHandler(command, source)
 	elseif (cmd == 'trigger') then
 		setTrigger(param, chatprint)
 
-	--/auctioneer askprice (party|guild|smart|ad|whispers) (on|off|toggle)
-	elseif (
-		cmd == 'vendor'	or cmd == 'party'	or cmd == 'guild' or
-		cmd == 'smart'	or cmd == 'ad'		or cmd == 'whispers'
-	) then
+	--/auctioneer askprice (party|guild|smart|ad)
+	elseif (cmd == 'vendor' or cmd == 'party' or cmd == 'guild' or cmd == 'smart' or cmd == 'ad') then
 		genVarSet(cmd, param, chatprint);
 
 	--/auctioneer askprice word # (customSmartWord)
@@ -103,19 +100,19 @@ function chatPrintHelp()
 
 	Auctioneer.Util.ChatPrint("  |cffffffff/auctioneer askprice"..onOffToggle.."|r |cff2040ff["..Auctioneer.Util.GetLocalizedFilterVal('askprice').."]|r\n          " .. _AUCT('HelpAskPrice') .. "\n\n");
 
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAskPriceWhispers'),	Auctioneer.Util.GetLocalizedFilterVal('askprice-whispers'),	_AUCT('HelpAskPriceWhispers')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAskPriceVendor'),		Auctioneer.Util.GetLocalizedFilterVal('askprice-vendor'),	_AUCT('HelpAskPriceVendor')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAskPriceParty'),		Auctioneer.Util.GetLocalizedFilterVal('askprice-party'),	_AUCT('HelpAskPriceParty')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAskPriceGuild'),		Auctioneer.Util.GetLocalizedFilterVal('askprice-guild'),	_AUCT('HelpAskPriceGuild')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAskPriceSmart'),		Auctioneer.Util.GetLocalizedFilterVal('askprice-smart'),	_AUCT('HelpAskPriceSmart')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAskPriceAd'),			Auctioneer.Util.GetLocalizedFilterVal('askprice-ad'),		_AUCT('HelpAskPriceAd')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAskPriceWhispers'), Auctioneer.Util.GetLocalizedFilterVal('askprice-whispers'), _AUCT('HelpAskPriceWhispers')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAskPriceVendor'), Auctioneer.Util.GetLocalizedFilterVal('askprice-vendor'), _AUCT('HelpAskPriceVendor')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAskPriceParty'), Auctioneer.Util.GetLocalizedFilterVal('askprice-party'), _AUCT('HelpAskPriceParty')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAskPriceGuild'), Auctioneer.Util.GetLocalizedFilterVal('askprice-guild'), _AUCT('HelpAskPriceGuild')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAskPriceSmart'), Auctioneer.Util.GetLocalizedFilterVal('askprice-smart'), _AUCT('HelpAskPriceSmart')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAskPriceAd'), Auctioneer.Util.GetLocalizedFilterVal('askprice-ad'), _AUCT('HelpAskPriceAd')));
 
 	lineFormat = "  |cffffffff/auctioneer askprice %s|r |cff2040ff[%s]|r\n          %s\n\n";
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAskPriceTrigger'),	Auctioneer.Command.GetFilterVal('askprice-trigger'),		_AUCT('HelpAskPriceTrigger')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAskPriceTrigger'), Auctioneer.Command.GetFilterVal('askprice-trigger'), _AUCT('HelpAskPriceTrigger')));
 
 	lineFormat = "  |cffffffff/auctioneer askprice %s %d|r |cff2040ff[%s]|r\n          %s\n\n";
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAskPriceWord'), 1,	Auctioneer.Command.GetFilterVal('askprice-word1'),			_AUCT('HelpAskPriceWord')));
-	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAskPriceWord'), 2,	Auctioneer.Command.GetFilterVal('askprice-word2'),			_AUCT('HelpAskPriceWord')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAskPriceWord'), 1, Auctioneer.Command.GetFilterVal('askprice-word1'), _AUCT('HelpAskPriceWord')));
+	Auctioneer.Util.ChatPrint(string.format(lineFormat, _AUCT('CmdAskPriceWord'), 2, Auctioneer.Command.GetFilterVal('askprice-word2'), _AUCT('HelpAskPriceWord')));
 end
 
 --[[
@@ -350,21 +347,37 @@ function eventHandler(event, text, player)
 end
 
 function getData(itemLink)
-	local auctKey = Auctioneer.Util.GetAuctionKey();
-	local itemKey = Auctioneer.ItemDB.CreateItemKeyFromLink(itemLink);
-	local itemID = Auctioneer.ItemDB.BreakItemKey(itemKey);
+	local itemID, randomProp, enchant, uniqID, lame = EnhTooltip.BreakLink(itemLink);
 
-	local itemTotals = Auctioneer.HistoryDB.GetItemTotals(itemKey, auctKey);
+	local auctKey = Auctioneer.Util.GetAuctionKey();
+	local itemKey = itemID..":"..randomProp..":"..enchant;
+
+	local auctionPriceItem = Auctioneer.Core.GetAuctionPriceItem(itemKey, auctKey);
+	local aCount,minCount,minPrice,bidCount,bidPrice,buyCount,buyPrice = Auctioneer.Core.GetAuctionPrices(auctionPriceItem.data);
 	local historicalMedian, historicalMedCount = Auctioneer.Statistic.GetItemHistoricalMedianBuyout(itemKey, auctKey);
 	local snapshotMedian, snapshotMedCount = Auctioneer.Statistic.GetItemSnapshotMedianBuyout(itemKey, auctKey);
+	local median, medCount = Auctioneer.Statistic.GetUsableMedian(itemKey, auctKey);
 	local vendorSell = Auctioneer.API.GetVendorSellPrice(itemID)
-	
-	local seenCount
-	if (itemTotals) then
-		seenCount = itemTotals.seenCount
+
+	if (aCount > 0) then
+		-- calculate auction values
+
+		local avgMin = math.floor(minPrice / minCount);
+
+		local bidPct = math.floor(bidCount / minCount * 100);
+		local avgBid = 0;
+		if (bidCount > 0) then
+			avgBid = math.floor(bidPrice / bidCount);
+		end
+
+		local buyPct = math.floor(buyCount / minCount * 100);
+		local avgBuy = 0;
+		if (buyCount > 0) then
+			avgBuy = math.floor(buyPrice / buyCount);
+		end
 	end
 
-	return seenCount or 0, historicalMedian or 0, snapshotMedian or 0, vendorSell or 0;
+	return aCount or 0, historicalMedian or 0, snapshotMedian or 0, vendorSell or 0;
 end
 
 --Many thanks to the guys at irc://chat.freenode.net/wowi-lounge for their help in creating this function

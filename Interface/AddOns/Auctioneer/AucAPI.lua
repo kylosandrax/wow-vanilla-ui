@@ -1,7 +1,7 @@
 --[[
 	Auctioneer Addon for World of Warcraft(tm).
-	Version: 3.9.0.1063 (Kangaroo)
-	Revision: $Id: AucAPI.lua 1028 2006-10-02 23:55:27Z mentalpower $
+	Version: 3.8.0 (Kangaroo)
+	Revision: $Id: AucAPI.lua 972 2006-08-22 19:05:01Z mentalpower $
 
 	Auctioneer data access and management.
 	Functions central to setting/getting any data from Auctioneer.
@@ -25,41 +25,36 @@
 		You should have received a copy of the GNU General Public License
 		along with this program(see GPL.txt); if not, write to the Free Software
 		Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
---]]
+]]
 
--------------------------------------------------------------------------------
--- Function Prototypes
--------------------------------------------------------------------------------
-local getVendorBuyPrice;
-local getVendorSellPrice;
-local getScanAge;
-local requestAuctionScan;
+--Local function prototypes
+local getVendorBuyPrice, getVendorSellPrice
+local setScanLength, setScanAge, getScanLength, getScanAge = Auctioneer.Statistic.SetScanLength, Auctioneer.Statistic.SetScanAge, Auctioneer.Statistic.GetScanLength, Auctioneer.Statistic.GetScanAge
+local requestAuctionScan = Auctioneer.Scanning.RequestAuctionScan
+--[[
+	Auctioneer.API.GetVendorBuyPrice(itemId)
 
--------------------------------------------------------------------------------
---	Auctioneer.API.GetVendorBuyPrice(itemId)
---
---	This function gets the buy price (how much it costs for the player to buy) from
---	Auctioneer's database of item prices.
---
---	@param itemId The ID portion of the item link (the first of the four numbers).
---	@returns A price if known (may be 0 if known to have no price) or nil if unknown.
--------------------------------------------------------------------------------
+	This function gets the buy price (how much it costs for the player to buy) from
+	Auctioneer's database of item prices.
+
+	@param itemId The ID portion of the item link (the first of the four numbers).
+	@returns A price if known (may be 0 if known to have no price) or nil if unknown.
+]]
 function getVendorBuyPrice(itemId)
 	if (Informant) then
 		local ret = Informant.GetItem(itemId)
 		if (ret) then return ret.buy end
 	end
 end
+--[[
+	Auctioneer.API.GetVendorSellPrice(itemId)
 
--------------------------------------------------------------------------------
---	Auctioneer.API.GetVendorSellPrice(itemId)
---
---	This function gets the sell price (how much it the player will get if they sell it)
---	from Auctioneer's database of item prices.
---
---	@param itemId The ID portion of the item link (the first of the four numbers).
---	@returns A price if known (may be 0 if known to have no price) or nil if unknown.
--------------------------------------------------------------------------------
+	This function gets the sell price (how much it the player will get if they sell it)
+	from Auctioneer's database of item prices.
+
+	@param itemId The ID portion of the item link (the first of the four numbers).
+	@returns A price if known (may be 0 if known to have no price) or nil if unknown.
+]]
 function getVendorSellPrice(itemId)
 	if (Informant) then
 		local ret = Informant.GetItem(itemId)
@@ -67,45 +62,21 @@ function getVendorSellPrice(itemId)
 	end
 end
 
--------------------------------------------------------------------------------
---	Auctioneer.API.GetScanAge()
---
---	This function gets the time (in seconds) since the last scan was completed.
---	The function will return the time since the last "update" scan, 
---	not the time since the last full scan was done.
---
---	This function has no parameters
--------------------------------------------------------------------------------
-function getScanAge()
-	return (time() - Auctioneer.SnapshotDB.GetLastUpdate());
-end
-
--------------------------------------------------------------------------------
---	Auctioneer.API.RequestAuctionScan()
---
---	This function sends a request so that Auctioneer will do a full Auction House scan
---	the next time the AH window is opened, or inmediately if its already open.
---
---	This function has no parameters
--------------------------------------------------------------------------------
-function requestAuctionScan()
-	return Auctioneer.ScanManager.Scan();
-end
-
--------------------------------------------------------------------------------
--- Public API
--------------------------------------------------------------------------------
-Auctioneer.API =
-{
+Auctioneer.API = {
 	GetVendorBuyPrice = getVendorBuyPrice,
 	GetVendorSellPrice = getVendorSellPrice,
-
+	
+	--Linked from other files. PLEASE copy over the old versions when the function's prototype changes to maintain backwards compatibility.
+	--Auctioneer.Statistic
+	SetScanLength = setScanLength,
+	SetScanAge = setScanAge,
+	GetScanLength = getScanLength,
 	GetScanAge = getScanAge,
-	RequestAuctionScan = requestAuctionScan;
+	
+	--Auctioneer.Scanning
+	RequestAuctionScan = requestAuctionScan
 }
 
--------------------------------------------------------------------------------
 --Backwards compatiblity, please use the new prototypes whenever possible.
--------------------------------------------------------------------------------
-Auctioneer_GetVendorBuyPrice = Auctioneer.API.GetVendorBuyPrice;
-Auctioneer_GetVendorSellPrice = Auctioneer.API.GetVendorSellPrice;
+Auctioneer_GetVendorBuyPrice = getVendorBuyPrice;
+Auctioneer_GetVendorSellPrice = getVendorSellPrice;
