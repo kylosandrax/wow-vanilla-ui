@@ -9,7 +9,6 @@ FuBar2DB = {
 					["xPercent"] = -9.315609195148511e-008,
 					["attachPoint"] = "TOP",
 					["lock"] = true,
-					["widthPercent"] = 1,
 					["plugins"] = {
 						["center"] = {
 							[1] = "ItemBonusesFu",
@@ -47,6 +46,7 @@ FuBar2DB = {
 							[16] = "sRaidFrames Improved 0.99",
 						},
 					},
+					["widthPercent"] = 1,
 					["yPercent"] = 0.9849999652217268,
 				},
 			},
@@ -55,9 +55,9 @@ FuBar2DB = {
 			["skin"] = "Interface\\AddOns\\FuTextures\\blackorange",
 			["centerSpacing"] = 20,
 			["loadOnDemand"] = {
-				["FuBar_DurabilityFu"] = {
-					["title"] = "DurabilityFu",
-					["category"] = "Inventory",
+				["ItemRackFu"] = {
+					["title"] = "ItemRackFu",
+					["category"] = "Other",
 				},
 				["Fubar_AtlasFu2"] = {
 					["title"] = "AtlasFu2",
@@ -67,13 +67,13 @@ FuBar2DB = {
 					["title"] = "ClockFu",
 					["category"] = "Interface Enhancements",
 				},
-				["ItemRackFu"] = {
-					["title"] = "ItemRackFu",
-					["category"] = "Other",
-				},
 				["FuBar_PerformanceFu"] = {
 					["title"] = "PerformanceFu",
 					["category"] = "Interface Enhancements",
+				},
+				["FuBar_DurabilityFu"] = {
+					["title"] = "DurabilityFu",
+					["category"] = "Inventory",
 				},
 			},
 			["tooltip"] = {

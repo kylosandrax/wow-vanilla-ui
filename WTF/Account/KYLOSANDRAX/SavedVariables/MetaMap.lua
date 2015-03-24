@@ -3833,6 +3833,8 @@ MetaMapNotes_Data = {
 	},
 	["Alterac Valley"] = {
 	},
+	["Thunder Bluff"] = {
+	},
 	["Warsong Gulch"] = {
 	},
 	[0] = {
@@ -3900,8 +3902,6 @@ MetaMapNotes_Data = {
 		},
 		[32] = {
 		},
-	},
-	["Thunder Bluff"] = {
 	},
 	["Orgrimmar"] = {
 	},
@@ -4005,6 +4005,8 @@ MetaMapNotes_Lines = {
 	},
 	["Alterac Valley"] = {
 	},
+	["Thunder Bluff"] = {
+	},
 	["Warsong Gulch"] = {
 	},
 	[0] = {
@@ -4072,8 +4074,6 @@ MetaMapNotes_Lines = {
 		},
 		[32] = {
 		},
-	},
-	["Thunder Bluff"] = {
 	},
 	["Orgrimmar"] = {
 	},

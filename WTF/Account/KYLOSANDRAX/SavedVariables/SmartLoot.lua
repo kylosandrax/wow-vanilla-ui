@@ -29,14 +29,6 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Pattern: Brightcloth Cloak"] = {
-		["roll"] = 2,
-		["quality"] = 2,
-	},
-	["Bloodvine"] = {
-		["roll"] = 2,
-		["quality"] = 2,
-	},
 	["Lambent Idol"] = {
 		["roll"] = 2,
 		["quality"] = 3,
@@ -49,6 +41,14 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
+	["Grimoire of Shadow Ward IV"] = {
+		["roll"] = 2,
+		["quality"] = 3,
+	},
+	["Pattern: Brightcloth Cloak"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
 	["Aquamarine"] = {
 		["roll"] = 2,
 		["quality"] = 2,
@@ -57,9 +57,9 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Four of Beasts"] = {
+	["Recipe: Purification Potion"] = {
 		["roll"] = 2,
-		["quality"] = 3,
+		["quality"] = 2,
 	},
 	["Traveler's Backpack"] = {
 		["roll"] = 2,
@@ -77,7 +77,7 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 3,
 	},
-	["Emerald Legplates of Strength"] = {
+	["Living Essence"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -89,11 +89,11 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Pattern: Felcloth Robe"] = {
+	["Emerald Legplates of Strength"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Twilight Cultist Cowl"] = {
+	["Righteous Armor of Power"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -105,24 +105,24 @@ SmartLoot_Autoroll = {
 		["roll"] = 1,
 		["quality"] = 2,
 	},
-	["Sandfury Coin"] = {
-		["roll"] = 1,
+	["Plans: Thorium Helm"] = {
+		["roll"] = 2,
 		["quality"] = 2,
 	},
 	["Plans: Thorium Bracers"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Pattern: Mooncloth Bag"] = {
+	["Pristine Black Diamond"] = {
+		["roll"] = 2,
+		["quality"] = 3,
+	},
+	["Bloodvine"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Living Essence"] = {
+	["Plans: Thorium Leggings"] = {
 		["roll"] = 2,
-		["quality"] = 2,
-	},
-	["Skullsplitter Coin"] = {
-		["roll"] = 1,
 		["quality"] = 2,
 	},
 	["Venomshroud Leggings"] = {
@@ -133,23 +133,23 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Plans: Radiant Leggings"] = {
-		["roll"] = 2,
+	["Skullsplitter Coin"] = {
+		["roll"] = 1,
 		["quality"] = 2,
 	},
 	["Recipe: Elixir of Greater Firepower"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Grimoire of Shadow Ward IV"] = {
-		["roll"] = 2,
+	["Orange Hakkari Bijou"] = {
+		["roll"] = 1,
 		["quality"] = 3,
 	},
-	["Adventurer's Cape of Agility"] = {
+	["Pattern: Heavy Scorpid Belt"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Essence of Water"] = {
+	["Plans: Thorium Boots"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -161,7 +161,7 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 3,
 	},
-	["Plans: Thorium Boots"] = {
+	["Pattern: Big Voodoo Robe"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -169,7 +169,7 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Pattern: Chimeric Vest"] = {
+	["Plans: Radiant Leggings"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -197,7 +197,7 @@ SmartLoot_Autoroll = {
 		["roll"] = 1,
 		["quality"] = 3,
 	},
-	["Formula: Enchant Weapon - Unholy"] = {
+	["Plans: Radiant Breastplate"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -221,15 +221,15 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Yellow Hakkari Bijou"] = {
-		["roll"] = 1,
-		["quality"] = 3,
+	["Recipe: Greater Fire Protection Potion"] = {
+		["roll"] = 2,
+		["quality"] = 2,
 	},
 	["Schematic: Master Engineer's Goggles"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Plans: Thorium Helm"] = {
+	["Pattern: Felcloth Robe"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -257,7 +257,7 @@ SmartLoot_Autoroll = {
 		["roll"] = 1,
 		["quality"] = 2,
 	},
-	["Pattern: Big Voodoo Robe"] = {
+	["Adventurer's Cape of Agility"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -285,9 +285,9 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 3,
 	},
-	["Plans: Radiant Breastplate"] = {
+	["Jasper Idol"] = {
 		["roll"] = 2,
-		["quality"] = 2,
+		["quality"] = 3,
 	},
 	["Blue Hakkari Bijou"] = {
 		["roll"] = 1,
@@ -309,7 +309,7 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Recipe: Greater Fire Protection Potion"] = {
+	["Pattern: Brightcloth Gloves"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -401,9 +401,9 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Pattern: Brightcloth Gloves"] = {
-		["roll"] = 2,
-		["quality"] = 2,
+	["Yellow Hakkari Bijou"] = {
+		["roll"] = 1,
+		["quality"] = 3,
 	},
 	["Pattern: Frostweave Tunic"] = {
 		["roll"] = 2,
@@ -417,9 +417,9 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 3,
 	},
-	["Jasper Idol"] = {
+	["Formula: Enchant Weapon - Unholy"] = {
 		["roll"] = 2,
-		["quality"] = 3,
+		["quality"] = 2,
 	},
 	["Pattern: Runic Leather Pants"] = {
 		["roll"] = 2,
@@ -445,35 +445,35 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Orange Hakkari Bijou"] = {
-		["roll"] = 1,
-		["quality"] = 3,
+	["Essence of Water"] = {
+		["roll"] = 2,
+		["quality"] = 2,
 	},
 	["Plans: Thorium Belt"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Pristine Black Diamond"] = {
-		["roll"] = 2,
-		["quality"] = 3,
-	},
-	["Recipe: Purification Potion"] = {
+	["Pattern: Chimeric Vest"] = {
 		["roll"] = 2,
 		["quality"] = 2,
+	},
+	["Four of Beasts"] = {
+		["roll"] = 2,
+		["quality"] = 3,
 	},
 	["Pattern: Chimeric Boots"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Righteous Armor of Power"] = {
-		["roll"] = 2,
+	["Sandfury Coin"] = {
+		["roll"] = 1,
 		["quality"] = 2,
 	},
 	["Silver Hakkari Bijou"] = {
 		["roll"] = 1,
 		["quality"] = 3,
 	},
-	["Pattern: Heavy Scorpid Belt"] = {
+	["Twilight Cultist Cowl"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -485,7 +485,7 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 3,
 	},
-	["Plans: Thorium Leggings"] = {
+	["Pattern: Mooncloth Bag"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},

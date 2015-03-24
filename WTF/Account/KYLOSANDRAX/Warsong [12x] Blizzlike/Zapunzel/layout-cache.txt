@@ -15,7 +15,7 @@ FrameLevel: 9
 X: 1296
 Y: -491
 Frame: ATSWFrame
-FrameLevel: 34
+FrameLevel: 64
 X: 349
 Y: -105
 Frame: ATSWCSFrame
@@ -96,7 +96,3 @@ Frame: TrinketMenu_OptFrame
 FrameLevel: 1
 X: 582
 Y: -409
-Frame: WIM_msgFrameJinglebells
-FrameLevel: 1
-X: 518
-Y: -582

@@ -1,17 +1,17 @@
 
 ElkBuffBarOptions = {
-	["alpha"] = 1,
-	["scale"] = 1,
 	["group"] = 5,
-	["height"] = 20,
+	["anchor"] = "TOPRIGHT",
+	["scale"] = 1,
+	["timer"] = "DEFAULT",
 	["dbcolor"] = true,
 	["width"] = 250,
 	["y"] = 1177,
 	["x"] = 2842,
 	["sort"] = "DEFAULT",
 	["spacing"] = 0,
-	["anchor"] = "TOPRIGHT",
 	["locked"] = true,
+	["height"] = 20,
 	["icon"] = "LEFT",
-	["timer"] = "DEFAULT",
+	["alpha"] = 1,
 }

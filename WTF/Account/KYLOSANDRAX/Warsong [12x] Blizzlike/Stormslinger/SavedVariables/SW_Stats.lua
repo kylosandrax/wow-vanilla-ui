@@ -5,15 +5,22 @@ SW_Settings = {
 	["ReportAmount"] = 4,
 	["RE_Multiline"] = 1,
 	["TL_SafeMode"] = true,
-	["SyncBCTarget"] = "SW_BarSyncFrame_OptRaid",
+	["BarFrames"] = {
+		["SW_BarFrame1"] = {
+			["Docked"] = {
+				[1] = 1,
+			},
+			["Selected"] = 4,
+		},
+	},
 	["lastWOWBuild"] = "1.12.15875Sep 19 2006",
 	["SYNCLastAction"] = 1427070408,
 	["RepTarget"] = "SW_RepTo_Say",
 	["IsRunning"] = true,
-	["LAST_V_RUN"] = "1.5.3",
+	["OPT_ShowMainWinDPS"] = 1,
 	["InfoSettings"] = {
 		[1] = {
-			["IN"] = 1,
+			["CF"] = 1,
 			["OT"] = "DD",
 			["BC"] = {
 				[1] = 0,
@@ -32,10 +39,10 @@ SW_Settings = {
 				[4] = 0.4800000190734863,
 			},
 			["SF"] = "SW_Filter_EverGroup",
-			["COLC"] = 1,
+			["BT"] = 9,
 			["PF"] = "SW_PF_MM",
 			["ShowRank"] = 1,
-			["BT"] = 9,
+			["BH"] = 15,
 			["ShowNumber"] = 1,
 			["BFC"] = {
 				[1] = 1,
@@ -43,10 +50,10 @@ SW_Settings = {
 				[3] = 1,
 				[4] = 1,
 			},
-			["CF"] = 1,
-			["BFS"] = 10,
 			["selSchool"] = 0,
-			["BH"] = 15,
+			["BFS"] = 10,
+			["IN"] = 1,
+			["COLC"] = 1,
 		},
 		[2] = {
 			["IN"] = 7,
@@ -62,7 +69,7 @@ SW_Settings = {
 			["TV"] = "Virose",
 			["BH"] = 15,
 			["BFS"] = 10,
-			["BT"] = 10,
+			["COLC"] = 1,
 			["ShowRank"] = 1,
 			["ShowNumber"] = 1,
 			["BFC"] = {
@@ -71,14 +78,14 @@ SW_Settings = {
 				[3] = 1,
 				[4] = 1,
 			},
-			["COLC"] = 1,
+			["BT"] = 10,
+			["CF"] = 1,
 			["OC"] = {
 				[1] = 0,
 				[2] = 0,
 				[3] = 0,
 				[4] = 0.4800000190734863,
 			},
-			["CF"] = 1,
 		},
 		[3] = {
 			["CF"] = 1,
@@ -98,11 +105,11 @@ SW_Settings = {
 				[3] = 0,
 				[4] = 0.4800000190734863,
 			},
-			["BFS"] = 10,
-			["COLC"] = 1,
+			["SF"] = "SW_Filter_EverGroup",
+			["BT"] = 9,
 			["ShowRank"] = 1,
-			["BH"] = 15,
-			["IN"] = 17,
+			["UCC"] = 1,
+			["OTF"] = "Damage Per Second",
 			["ShowNumber"] = 1,
 			["BFC"] = {
 				[1] = 1,
@@ -110,10 +117,10 @@ SW_Settings = {
 				[3] = 1,
 				[4] = 1,
 			},
-			["SF"] = "SW_Filter_EverGroup",
-			["BT"] = 9,
-			["OTF"] = "Damage Per Second",
-			["UCC"] = 1,
+			["BFS"] = 10,
+			["COLC"] = 1,
+			["IN"] = 17,
+			["BH"] = 15,
 		},
 		[4] = {
 			["IN"] = 2,
@@ -135,11 +142,11 @@ SW_Settings = {
 				[4] = 0.4600000381469727,
 			},
 			["SF"] = "SW_Filter_EverGroup",
-			["BT"] = 9,
+			["COLC"] = 1,
 			["PF"] = "SW_PF_MB",
 			["ShowRank"] = 1,
-			["BH"] = 15,
-			["COLC"] = 1,
+			["HealInF"] = true,
+			["OTF"] = "Effective Healing",
 			["ShowNumber"] = 1,
 			["BFC"] = {
 				[1] = 1,
@@ -147,10 +154,10 @@ SW_Settings = {
 				[3] = 1,
 				[4] = 1,
 			},
-			["CF"] = 1,
 			["BFS"] = 10,
-			["OTF"] = "Effective Healing",
-			["HealInF"] = true,
+			["CF"] = 1,
+			["BT"] = 9,
+			["BH"] = 15,
 		},
 		[5] = {
 			["IN"] = 2,
@@ -172,10 +179,10 @@ SW_Settings = {
 				[4] = 0.449999988079071,
 			},
 			["BFS"] = 10,
-			["BT"] = 9,
+			["COLC"] = 1,
 			["ShowRank"] = 1,
-			["BH"] = 15,
-			["SF"] = "SW_Filter_EverGroup",
+			["UCC"] = 1,
+			["HealEff"] = false,
 			["ShowNumber"] = 1,
 			["BFC"] = {
 				[1] = 1,
@@ -183,10 +190,10 @@ SW_Settings = {
 				[3] = 1,
 				[4] = 1,
 			},
-			["COLC"] = 1,
 			["CF"] = 1,
-			["HealEff"] = false,
-			["UCC"] = 1,
+			["BT"] = 9,
+			["SF"] = "SW_Filter_EverGroup",
+			["BH"] = 15,
 		},
 	},
 	["Colors"] = {
@@ -202,10 +209,10 @@ SW_Settings = {
 			[3] = 0.43,
 			[4] = 1,
 		},
-		["SHAMAN"] = {
-			[1] = 0.96,
-			[2] = 0.55,
-			[3] = 0.73,
+		["ROGUE"] = {
+			[1] = 1,
+			[2] = 0.96,
+			[3] = 0.41,
 			[4] = 1,
 		},
 		["MAGE"] = {
@@ -256,22 +263,10 @@ SW_Settings = {
 			[3] = 0.79,
 			[4] = 1,
 		},
-		["ROGUE"] = {
-			[1] = 1,
-			[2] = 0.96,
-			[3] = 0.41,
-			[4] = 1,
-		},
-		["PALADIN"] = {
+		["SHAMAN"] = {
 			[1] = 0.96,
 			[2] = 0.55,
 			[3] = 0.73,
-			[4] = 1,
-		},
-		["TitleBars"] = {
-			[1] = 1,
-			[2] = 0.05882352941176471,
-			[3] = 0,
 			[4] = 1,
 		},
 		["Backdrops"] = {
@@ -280,32 +275,186 @@ SW_Settings = {
 			[3] = 0.2980392156862745,
 			[4] = 0.3400000333786011,
 		},
-	},
-	["BarFrames"] = {
-		["SW_BarFrame1"] = {
-			["Docked"] = {
-				[1] = 1,
-			},
-			["Selected"] = 4,
+		["TitleBars"] = {
+			[1] = 1,
+			[2] = 0.05882352941176471,
+			[3] = 0,
+			[4] = 1,
+		},
+		["PALADIN"] = {
+			[1] = 0.96,
+			[2] = 0.55,
+			[3] = 0.73,
+			[4] = 1,
 		},
 	},
-	["OPT_ShowMainWinDPS"] = 1,
-	["SW_IconPosR"] = 89,
-	["SW_TL_AutoDelete"] = true,
 	["SHOWMAIN"] = true,
+	["SW_TL_AutoDelete"] = true,
+	["SW_IconPosR"] = 89,
+	["LAST_V_RUN"] = "1.5.3",
+	["SyncBCTarget"] = "SW_BarSyncFrame_OptRaid",
 }
 SW_S_Details = {
-	["Stormslinger"] = {
-		["CLASSE"] = "SHAMAN",
-		["Total"] = {
-			[1] = 0,
+	["WORLD"] = {
+		["Normal"] = {
+			[1] = 677,
 			[2] = 0,
+			[3] = 294,
+			[4] = 6,
+			[5] = 0,
+			[6] = 0,
+			[7] = 0,
+		},
+		["Type"] = {
+			["Other"] = {
+				[1] = 677,
+				[2] = 294,
+				[3] = 6,
+				[4] = 0,
+				[5] = 0,
+				[6] = 0,
+			},
 		},
 		["Recieved"] = {
 			[1] = 0,
 			[2] = 0,
 		},
+		["Total"] = {
+			[1] = 677,
+			[2] = 0,
+		},
+	},
+	["Rmac"] = {
+		["Type"] = {
+			["Other"] = {
+				[1] = 0,
+				[2] = 0,
+				[3] = 0,
+				[4] = 294,
+				[5] = 294,
+				[6] = 1,
+			},
+		},
+		["Recieved"] = {
+			[1] = 294,
+			[2] = 0,
+		},
+		["Total"] = {
+			[1] = 0,
+			[2] = 0,
+		},
+	},
+	["Morgas"] = {
+		["Type"] = {
+			["Other"] = {
+				[1] = 0,
+				[2] = 0,
+				[3] = 0,
+				[4] = 10,
+				[5] = 10,
+				[6] = 1,
+			},
+		},
+		["Recieved"] = {
+			[1] = 10,
+			[2] = 0,
+		},
+		["Total"] = {
+			[1] = 0,
+			[2] = 0,
+		},
+	},
+	["Demonicdabs"] = {
+		["Type"] = {
+			["Other"] = {
+				[1] = 0,
+				[2] = 0,
+				[3] = 0,
+				[4] = 168,
+				[5] = 168,
+				[6] = 1,
+			},
+		},
+		["Recieved"] = {
+			[1] = 168,
+			[2] = 0,
+		},
+		["Total"] = {
+			[1] = 0,
+			[2] = 0,
+		},
+	},
+	["Lomz"] = {
+		["Type"] = {
+			["Other"] = {
+				[1] = 0,
+				[2] = 0,
+				[3] = 0,
+				[4] = 10,
+				[5] = 10,
+				[6] = 1,
+			},
+		},
+		["Recieved"] = {
+			[1] = 10,
+			[2] = 0,
+		},
+		["Total"] = {
+			[1] = 0,
+			[2] = 0,
+		},
+	},
+	["Stormslinger"] = {
+		["CLASSE"] = "SHAMAN",
 		["UTYPE"] = "GPC",
+		["Recieved"] = {
+			[1] = 0,
+			[2] = 0,
+		},
+		["Total"] = {
+			[1] = 0,
+			[2] = 0,
+		},
+	},
+	["Waterbubble"] = {
+		["Type"] = {
+			["Other"] = {
+				[1] = 0,
+				[2] = 0,
+				[3] = 0,
+				[4] = 185,
+				[5] = 185,
+				[6] = 1,
+			},
+		},
+		["Recieved"] = {
+			[1] = 185,
+			[2] = 0,
+		},
+		["Total"] = {
+			[1] = 0,
+			[2] = 0,
+		},
+	},
+	["Karabeast"] = {
+		["Type"] = {
+			["Other"] = {
+				[1] = 0,
+				[2] = 0,
+				[3] = 0,
+				[4] = 10,
+				[5] = 10,
+				[6] = 1,
+			},
+		},
+		["Recieved"] = {
+			[1] = 10,
+			[2] = 0,
+		},
+		["Total"] = {
+			[1] = 0,
+			[2] = 0,
+		},
 	},
 }
 SW_S_Healed = {
@@ -325,22 +474,22 @@ SW_RPS = {
 	["allowLastFightUpdate"] = false,
 	["isRunning"] = false,
 	["startTimer"] = {
-		["epochTS"] = 1427070408,
+		["uTS"] = -79761.06900000572,
 		["msO"] = -0.06899999999950524,
-		["uTS"] = -78398.06900000572,
+		["epochTS"] = 1427070408,
 	},
 	["uglyTruthStarted"] = false,
 	["lastFightDmg"] = 0,
 	["baseTimer"] = {
-		["epochTS"] = 1427070408,
+		["uTS"] = -79761.06900000572,
 		["msO"] = -0.06899999999950524,
-		["uTS"] = -78398.06900000572,
+		["epochTS"] = 1427070408,
 	},
-	["currentSecs"] = 0,
-	["totalSecs"] = 0,
-	["startDmg"] = 0,
-	["maxDPS"] = 0,
 	["resetPoint"] = 0,
+	["totalSecs"] = 0,
+	["maxDPS"] = 0,
+	["startDmg"] = 0,
+	["currentSecs"] = 0,
 }
 SW_Sync_MsgTrack = {
 }

@@ -15,7 +15,7 @@ FrameLevel: 15
 X: 1284
 Y: -514
 Frame: ATSWFrame
-FrameLevel: 78
+FrameLevel: 38
 X: 354
 Y: -102
 Frame: ATSWCSFrame

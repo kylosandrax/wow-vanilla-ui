@@ -9,25 +9,34 @@ TheoryCraft_Settings = {
 		["Nature"] = 0,
 	},
 	["buttontexty"] = 10.22,
-	["ColG"] = 1,
+	["buttontextx"] = 1.111,
 	["ColG2"] = 1,
 	["ColR2"] = 1,
 	["ColB"] = 1,
-	["embedstyle3"] = true,
+	["combinedot"] = true,
 	["tryfirst"] = "averagedam",
 	["trysecondsfg"] = -1,
-	["combinedot"] = true,
+	["embed"] = true,
 	["tryfirstsfg"] = 0,
-	["buttontextx"] = 1.111,
+	["ColG"] = 1,
+	["GenerateList"] = "",
+	["procs"] = true,
 	["mitigation"] = true,
-	["ColB2"] = 0.6862745098039216,
-	["FontPath"] = "Fonts\\ArialN.TTF",
-	["dontresist"] = true,
 	["trysecond"] = "averagehealnocrit",
-	["ColR"] = 1,
-	["buttontext"] = true,
+	["dontresist"] = true,
 	["dataversion"] = "1.06",
+	["buttontext"] = true,
+	["ColR"] = 1,
 	["CustomOutfit"] = {
+		["intellect"] = 0,
+		["newstat"] = {
+		},
+		["strength"] = 0,
+		["agility"] = 0,
+		["name"] = "Naked",
+		["stamina"] = 0,
+		["wear"] = {
+		},
 		["destat"] = {
 			[1] = "Head",
 			[2] = "Neck",
@@ -49,8 +58,7 @@ TheoryCraft_Settings = {
 			[18] = "Tabard",
 			[19] = "Ammo",
 		},
-		["newstat"] = {
-		},
+		["spirit"] = 0,
 		["slots"] = {
 			["Ranged"] = {
 				["stats"] = {
@@ -58,13 +66,13 @@ TheoryCraft_Settings = {
 				},
 				["name"] = "|cff1eff00|Hitem:10604:0:0:0|h[Schematic: Mithril Heavy-bore Rifle]|h|r",
 				["data"] = {
-					["RangedMin"] = 41,
+					["RangedSpeed"] = 2.9,
 					["name"] = "Schematic: Mithril Heavy-bore Rifle",
 					["procs"] = {
 					},
-					["numlines"] = 11,
+					["RangedMin"] = 41,
 					["RangedMax"] = 76,
-					["RangedSpeed"] = 2.9,
+					["numlines"] = 11,
 					["RangedAttackPowerReport"] = 14,
 				},
 			},
@@ -118,13 +126,14 @@ TheoryCraft_Settings = {
 					["numlines"] = 7,
 				},
 			},
-			["Back"] = {
+			["Waist"] = {
 				["stats"] = {
-					["agility"] = 8,
+					["intellect"] = 14,
+					["spirit"] = 9,
 				},
-				["name"] = "|cff1eff00|Hitem:10606:0:0:0|h[Schematic: Parachute Cloak]|h|r",
+				["name"] = "|cff1eff00|Hitem:15745:0:0:0|h[Pattern: Runic Leather Belt]|h|r",
 				["data"] = {
-					["name"] = "Schematic: Parachute Cloak",
+					["name"] = "Pattern: Runic Leather Belt",
 					["procs"] = {
 					},
 					["numlines"] = 11,
@@ -132,19 +141,45 @@ TheoryCraft_Settings = {
 			},
 			["Main"] = {
 				["stats"] = {
-					["spirit"] = 10,
 					["strength"] = 10,
+					["spirit"] = 10,
 				},
 				["name"] = "|cff1eff00|Hitem:15260:0:1121:0|h[Stone Hammer of the Boar]|h|r",
 				["data"] = {
 					["numlines"] = 8,
 					["MeleeMax"] = 96,
-					["MeleeMin"] = 64,
+					["name"] = "Stone Hammer of the Boar",
 					["procs"] = {
 					},
 					["MeleeAPMult"] = 3.3,
 					["MainSpeed"] = 3,
-					["name"] = "Stone Hammer of the Boar",
+					["MeleeMin"] = 64,
+				},
+			},
+			["Wrist"] = {
+				["stats"] = {
+					["stamina"] = 11,
+					["spirit"] = 4,
+				},
+				["name"] = "|cff1eff00|Hitem:14861:0:0:0|h[Vanguard Vambraces]|h|r",
+				["data"] = {
+					["name"] = "Vanguard Vambraces",
+					["procs"] = {
+					},
+					["numlines"] = 7,
+				},
+			},
+			["Hands"] = {
+				["stats"] = {
+					["stamina"] = 11,
+					["strength"] = 12,
+				},
+				["name"] = "|cff1eff00|Hitem:10165:0:1211:0|h[Templar Gauntlets of the Bear]|h|r",
+				["data"] = {
+					["name"] = "Templar Gauntlets of the Bear",
+					["procs"] = {
+					},
+					["numlines"] = 7,
 				},
 			},
 			["Off Hand"] = {
@@ -161,32 +196,6 @@ TheoryCraft_Settings = {
 					["BlockValueReport"] = 17,
 				},
 			},
-			["Hands"] = {
-				["stats"] = {
-					["stamina"] = 11,
-					["strength"] = 12,
-				},
-				["name"] = "|cff1eff00|Hitem:10165:0:1211:0|h[Templar Gauntlets of the Bear]|h|r",
-				["data"] = {
-					["name"] = "Templar Gauntlets of the Bear",
-					["procs"] = {
-					},
-					["numlines"] = 7,
-				},
-			},
-			["Wrist"] = {
-				["stats"] = {
-					["stamina"] = 11,
-					["spirit"] = 4,
-				},
-				["name"] = "|cff1eff00|Hitem:14861:0:0:0|h[Vanguard Vambraces]|h|r",
-				["data"] = {
-					["name"] = "Vanguard Vambraces",
-					["procs"] = {
-					},
-					["numlines"] = 7,
-				},
-			},
 			["Shoulder"] = {
 				["stats"] = {
 					["settype"] = "Twilight Trappings",
@@ -199,31 +208,22 @@ TheoryCraft_Settings = {
 					["numlines"] = 11,
 				},
 			},
-			["Waist"] = {
+			["Back"] = {
 				["stats"] = {
-					["intellect"] = 14,
-					["spirit"] = 9,
+					["agility"] = 8,
 				},
-				["name"] = "|cff1eff00|Hitem:15745:0:0:0|h[Pattern: Runic Leather Belt]|h|r",
+				["name"] = "|cff1eff00|Hitem:10606:0:0:0|h[Schematic: Parachute Cloak]|h|r",
 				["data"] = {
-					["name"] = "Pattern: Runic Leather Belt",
+					["name"] = "Schematic: Parachute Cloak",
 					["procs"] = {
 					},
 					["numlines"] = 11,
 				},
 			},
 		},
-		["agility"] = 0,
-		["name"] = "Naked",
-		["strength"] = 0,
-		["wear"] = {
-		},
-		["intellect"] = 0,
-		["spirit"] = 0,
-		["stamina"] = 0,
 	},
-	["procs"] = true,
-	["GenerateList"] = "",
+	["ColB2"] = 0.6862745098039216,
+	["FontPath"] = "Fonts\\ArialN.TTF",
 	["critchancedata"] = {
 		["190:5"] = {
 			["casts"] = 39,
@@ -281,9 +281,9 @@ TheoryCraft_Settings = {
 			["casts"] = 27,
 			["crits"] = 1,
 		},
-		["187:5"] = {
-			["casts"] = 23,
-			["crits"] = 5,
+		["260:5"] = {
+			["casts"] = 48,
+			["crits"] = 7,
 		},
 		["304:5"] = {
 			["casts"] = 59,
@@ -633,9 +633,9 @@ TheoryCraft_Settings = {
 			["casts"] = 3,
 			["crits"] = 0,
 		},
-		["279:5"] = {
-			["casts"] = 121,
-			["crits"] = 16,
+		["51:0"] = {
+			["casts"] = 9,
+			["crits"] = 0,
 		},
 		["256:5"] = {
 			["casts"] = 39,
@@ -685,33 +685,33 @@ TheoryCraft_Settings = {
 			["casts"] = 17,
 			["crits"] = 2,
 		},
-		["249:5"] = {
-			["casts"] = 428,
-			["crits"] = 81,
+		["95:0"] = {
+			["casts"] = 6,
+			["crits"] = 0,
 		},
 		["186:5"] = {
 			["casts"] = 6,
 			["crits"] = 0,
 		},
-		["345:5"] = {
-			["casts"] = 216,
-			["crits"] = 29,
+		["56:0"] = {
+			["casts"] = 29,
+			["crits"] = 1,
 		},
-		["319:5"] = {
-			["casts"] = 42,
-			["crits"] = 4,
+		["219:5"] = {
+			["casts"] = 37,
+			["crits"] = 1,
 		},
-		["53:0"] = {
-			["casts"] = 17,
-			["crits"] = 0,
+		["135:5"] = {
+			["casts"] = 6,
+			["crits"] = 2,
 		},
-		["114:0"] = {
-			["casts"] = 5,
-			["crits"] = 0,
+		["149:5"] = {
+			["casts"] = 58,
+			["crits"] = 11,
 		},
-		["260:5"] = {
-			["casts"] = 48,
-			["crits"] = 7,
+		["187:5"] = {
+			["casts"] = 23,
+			["crits"] = 5,
 		},
 		["240:5"] = {
 			["casts"] = 75,
@@ -729,29 +729,29 @@ TheoryCraft_Settings = {
 			["casts"] = 17,
 			["crits"] = 3,
 		},
-		["65:0"] = {
-			["casts"] = 12,
-			["crits"] = 0,
+		["329:5"] = {
+			["casts"] = 102,
+			["crits"] = 13,
 		},
-		["137:5"] = {
-			["casts"] = 21,
-			["crits"] = 2,
-		},
-		["178:0"] = {
-			["casts"] = 2,
+		["158:5"] = {
+			["casts"] = 6,
 			["crits"] = 0,
 		},
 		["203:0"] = {
 			["casts"] = 125,
 			["crits"] = 8,
 		},
-		["158:5"] = {
-			["casts"] = 6,
+		["178:0"] = {
+			["casts"] = 2,
 			["crits"] = 0,
 		},
-		["329:5"] = {
-			["casts"] = 102,
-			["crits"] = 13,
+		["137:5"] = {
+			["casts"] = 21,
+			["crits"] = 2,
+		},
+		["65:0"] = {
+			["casts"] = 12,
+			["crits"] = 0,
 		},
 		["242:5"] = {
 			["casts"] = 105,
@@ -765,29 +765,29 @@ TheoryCraft_Settings = {
 			["casts"] = 89,
 			["crits"] = 12,
 		},
-		["149:5"] = {
-			["casts"] = 58,
-			["crits"] = 11,
+		["114:0"] = {
+			["casts"] = 5,
+			["crits"] = 0,
 		},
-		["135:5"] = {
-			["casts"] = 6,
-			["crits"] = 2,
+		["53:0"] = {
+			["casts"] = 17,
+			["crits"] = 0,
 		},
-		["219:5"] = {
-			["casts"] = 37,
-			["crits"] = 1,
+		["319:5"] = {
+			["casts"] = 42,
+			["crits"] = 4,
 		},
-		["56:0"] = {
-			["casts"] = 29,
-			["crits"] = 1,
+		["345:5"] = {
+			["casts"] = 216,
+			["crits"] = 29,
 		},
 		["66:0"] = {
 			["casts"] = 7,
 			["crits"] = 0,
 		},
-		["95:0"] = {
-			["casts"] = 6,
-			["crits"] = 0,
+		["249:5"] = {
+			["casts"] = 428,
+			["crits"] = 81,
 		},
 		["86:0"] = {
 			["casts"] = 37,
@@ -801,11 +801,11 @@ TheoryCraft_Settings = {
 			["casts"] = 8,
 			["crits"] = 0,
 		},
-		["51:0"] = {
-			["casts"] = 9,
-			["crits"] = 0,
+		["279:5"] = {
+			["casts"] = 121,
+			["crits"] = 16,
 		},
 	},
-	["embed"] = true,
+	["embedstyle3"] = true,
 	["healanddamage"] = true,
 }

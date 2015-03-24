@@ -9,8 +9,8 @@ SW_Settings = {
 	["lastWOWBuild"] = "1.12.15875Sep 19 2006",
 	["SYNCLastAction"] = 1407614521,
 	["RepTarget"] = "SW_RepTo_Group",
-	["SW_TL_AutoDelete"] = true,
-	["LAST_V_RUN"] = "1.5.3",
+	["IsRunning"] = true,
+	["OPT_ShowMainWinDPS"] = 1,
 	["SHOWMAIN"] = true,
 	["BFLocked"] = true,
 	["Colors"] = {
@@ -26,10 +26,10 @@ SW_Settings = {
 			[3] = 0.43,
 			[4] = 1,
 		},
-		["ROGUE"] = {
-			[1] = 1,
-			[2] = 0.96,
-			[3] = 0.41,
+		["SHAMAN"] = {
+			[1] = 0.96,
+			[2] = 0.55,
+			[3] = 0.73,
 			[4] = 1,
 		},
 		["MAGE"] = {
@@ -80,23 +80,11 @@ SW_Settings = {
 			[3] = 0.79,
 			[4] = 1,
 		},
-		["SHAMAN"] = {
-			[1] = 0.96,
-			[2] = 0.55,
-			[3] = 0.73,
+		["ROGUE"] = {
+			[1] = 1,
+			[2] = 0.96,
+			[3] = 0.41,
 			[4] = 1,
-		},
-		["Backdrops"] = {
-			[1] = 0.6980392156862745,
-			[2] = 0.6980392156862745,
-			[3] = 1,
-			[4] = 0,
-		},
-		["TitleBars"] = {
-			[1] = 0,
-			[2] = 0,
-			[3] = 0,
-			[4] = 0,
 		},
 		["PALADIN"] = {
 			[1] = 0.96,
@@ -104,10 +92,33 @@ SW_Settings = {
 			[3] = 0.73,
 			[4] = 1,
 		},
+		["TitleBars"] = {
+			[1] = 0,
+			[2] = 0,
+			[3] = 0,
+			[4] = 0,
+		},
+		["Backdrops"] = {
+			[1] = 0.6980392156862745,
+			[2] = 0.6980392156862745,
+			[3] = 1,
+			[4] = 0,
+		},
+	},
+	["LAST_V_RUN"] = "1.5.3",
+	["SW_TL_AutoDelete"] = true,
+	["SW_IconPosR"] = 90,
+	["BarFrames"] = {
+		["SW_BarFrame1"] = {
+			["Docked"] = {
+				[1] = 1,
+			},
+			["Selected"] = 1,
+		},
 	},
 	["InfoSettings"] = {
 		[1] = {
-			["IN"] = 1,
+			["CF"] = 1,
 			["OT"] = "DD",
 			["BC"] = {
 				[1] = 0,
@@ -129,7 +140,7 @@ SW_Settings = {
 			["COLC"] = 1,
 			["PF"] = "SW_PF_MM",
 			["ShowRank"] = 1,
-			["BH"] = 13,
+			["BT"] = 9,
 			["ShowNumber"] = 1,
 			["BFC"] = {
 				[1] = 1,
@@ -137,10 +148,10 @@ SW_Settings = {
 				[3] = 1,
 				[4] = 1,
 			},
-			["BT"] = 9,
+			["IN"] = 1,
 			["BFS"] = 10,
-			["CF"] = 1,
 			["selSchool"] = 0,
+			["BH"] = 13,
 		},
 		[2] = {
 			["IN"] = 7,
@@ -156,7 +167,7 @@ SW_Settings = {
 			["TV"] = "Virose",
 			["BH"] = 10,
 			["BFS"] = 10,
-			["COLC"] = 1,
+			["BT"] = 10,
 			["ShowRank"] = 1,
 			["ShowNumber"] = 1,
 			["BFC"] = {
@@ -165,14 +176,14 @@ SW_Settings = {
 				[3] = 1,
 				[4] = 1,
 			},
-			["BT"] = 10,
-			["CF"] = 1,
+			["COLC"] = 1,
 			["OC"] = {
 				[1] = 0,
 				[2] = 0,
 				[3] = 0,
 				[4] = 0.4800000190734863,
 			},
+			["CF"] = 1,
 		},
 		[3] = {
 			["CF"] = 1,
@@ -192,11 +203,11 @@ SW_Settings = {
 				[3] = 0,
 				[4] = 0.4800000190734863,
 			},
-			["SF"] = "SW_Filter_EverGroup",
-			["BT"] = 9,
+			["BFS"] = 10,
+			["COLC"] = 2,
 			["ShowRank"] = 1,
-			["HealInF"] = true,
-			["HealEff"] = true,
+			["BH"] = 9,
+			["IN"] = 17,
 			["ShowNumber"] = 1,
 			["BFC"] = {
 				[1] = 1,
@@ -204,13 +215,13 @@ SW_Settings = {
 				[3] = 1,
 				[4] = 1,
 			},
-			["BFS"] = 10,
-			["COLC"] = 2,
-			["IN"] = 17,
-			["BH"] = 9,
+			["SF"] = "SW_Filter_EverGroup",
+			["BT"] = 9,
+			["HealEff"] = true,
+			["HealInF"] = true,
 		},
 		[4] = {
-			["CF"] = 1,
+			["IN"] = 2,
 			["OT"] = "EH",
 			["BC"] = {
 				[1] = 0,
@@ -229,10 +240,10 @@ SW_Settings = {
 				[4] = 0.4600000381469727,
 			},
 			["SF"] = "SW_Filter_EverGroup",
-			["BT"] = 9,
+			["COLC"] = 1,
 			["ShowRank"] = 1,
-			["HealInF"] = true,
-			["HealEff"] = true,
+			["BH"] = 15,
+			["BT"] = 9,
 			["ShowNumber"] = 1,
 			["BFC"] = {
 				[1] = 1,
@@ -240,10 +251,10 @@ SW_Settings = {
 				[3] = 1,
 				[4] = 1,
 			},
+			["CF"] = 1,
 			["BFS"] = 10,
-			["IN"] = 2,
-			["COLC"] = 1,
-			["BH"] = 15,
+			["HealEff"] = true,
+			["HealInF"] = true,
 		},
 		[5] = {
 			["CF"] = 1,
@@ -265,10 +276,10 @@ SW_Settings = {
 				[4] = 0.449999988079071,
 			},
 			["BFS"] = 10,
-			["BT"] = 9,
+			["COLC"] = 2,
 			["ShowRank"] = 1,
-			["HealInF"] = true,
-			["OTF"] = "Over Healing",
+			["BH"] = 9,
+			["SF"] = "SW_Filter_EverGroup",
 			["ShowNumber"] = 1,
 			["BFC"] = {
 				[1] = 1,
@@ -276,23 +287,12 @@ SW_Settings = {
 				[3] = 1,
 				[4] = 1,
 			},
+			["BT"] = 9,
 			["IN"] = 2,
-			["COLC"] = 2,
-			["SF"] = "SW_Filter_EverGroup",
-			["BH"] = 9,
+			["OTF"] = "Over Healing",
+			["HealInF"] = true,
 		},
 	},
-	["BarFrames"] = {
-		["SW_BarFrame1"] = {
-			["Docked"] = {
-				[1] = 1,
-			},
-			["Selected"] = 1,
-		},
-	},
-	["SW_IconPosR"] = 90,
-	["IsRunning"] = true,
-	["OPT_ShowMainWinDPS"] = 1,
 }
 SW_S_Details = {
 	["Hive'Ashi Stinger"] = {
@@ -305,15 +305,6 @@ SW_S_Details = {
 			[6] = 0,
 			[7] = 0,
 		},
-		["Total"] = {
-			[1] = 1211,
-			[2] = 0,
-		},
-		["Recieved"] = {
-			[1] = 8785,
-			[2] = 0,
-		},
-		["CLASSE"] = "WARRIOR",
 		["Type"] = {
 			["Other"] = {
 				[1] = 1211,
@@ -324,39 +315,27 @@ SW_S_Details = {
 				[6] = 23,
 			},
 		},
-		["Deaths"] = 1,
-		["UTYPE"] = "NPC",
-	},
-	["WORLD"] = {
-		["Normal"] = {
-			[1] = 512,
-			[2] = 0,
-			[3] = 502,
-			[4] = 2,
-			[5] = 0,
-			[6] = 0,
-			[7] = 0,
-		},
-		["Type"] = {
-			["Other"] = {
-				[1] = 512,
-				[2] = 502,
-				[3] = 2,
-				[4] = 0,
-				[5] = 0,
-				[6] = 0,
-			},
-		},
 		["Recieved"] = {
+			[1] = 8785,
+			[2] = 0,
+		},
+		["CLASSE"] = "WARRIOR",
+		["Total"] = {
+			[1] = 1211,
+			[2] = 0,
+		},
+		["UTYPE"] = "NPC",
+		["Deaths"] = 1,
+	},
+	["Natsho"] = {
+		["Total"] = {
 			[1] = 0,
 			[2] = 0,
 		},
-		["Total"] = {
-			[1] = 512,
+		["Recieved"] = {
+			[1] = 502,
 			[2] = 0,
 		},
-	},
-	["Natsho"] = {
 		["Type"] = {
 			["Other"] = {
 				[1] = 0,
@@ -367,13 +346,111 @@ SW_S_Details = {
 				[6] = 1,
 			},
 		},
+	},
+	["Kylosandrax"] = {
+		["CLASSE"] = "WARRIOR",
+		["UTYPE"] = "GPC",
 		["Recieved"] = {
-			[1] = 502,
+			[1] = 0,
 			[2] = 0,
 		},
 		["Total"] = {
 			[1] = 0,
 			[2] = 0,
+		},
+	},
+	["Karabeast"] = {
+		["Type"] = {
+			["Other"] = {
+				[1] = 0,
+				[2] = 0,
+				[3] = 0,
+				[4] = 949,
+				[5] = 949,
+				[6] = 1,
+			},
+		},
+		["Recieved"] = {
+			[1] = 949,
+			[2] = 1254,
+		},
+		["Rejuvenation"] = {
+			[1] = 0,
+			[2] = 1254,
+			[3] = 0,
+			[4] = 3,
+			[5] = 418,
+			[6] = 0,
+			[7] = 0,
+		},
+		["Total"] = {
+			[1] = 0,
+			[2] = 1254,
+		},
+	},
+	["Demonicdabs"] = {
+		["CLASSE"] = "WARLOCK",
+		["Total"] = {
+			[1] = 0,
+			[2] = 0,
+		},
+		["Recieved"] = {
+			[1] = 0,
+			[2] = 0,
+		},
+		["UTYPE"] = "GPC",
+	},
+	["Igotshots"] = {
+		["CLASSE"] = "DRUID",
+		["Total"] = {
+			[1] = 0,
+			[2] = 0,
+		},
+		["Recieved"] = {
+			[1] = 0,
+			[2] = 0,
+		},
+		["UTYPE"] = "GPC",
+	},
+	["Wolfes"] = {
+		["CLASSE"] = "WARRIOR",
+		["Total"] = {
+			[1] = 0,
+			[2] = 0,
+		},
+		["Recieved"] = {
+			[1] = 0,
+			[2] = 0,
+		},
+		["UTYPE"] = "GPC",
+	},
+	["WORLD"] = {
+		["Normal"] = {
+			[1] = 1461,
+			[2] = 0,
+			[3] = 949,
+			[4] = 3,
+			[5] = 0,
+			[6] = 0,
+			[7] = 0,
+		},
+		["Total"] = {
+			[1] = 1461,
+			[2] = 0,
+		},
+		["Recieved"] = {
+			[1] = 0,
+			[2] = 0,
+		},
+		["Type"] = {
+			["Other"] = {
+				[1] = 1461,
+				[2] = 949,
+				[3] = 3,
+				[4] = 0,
+				[5] = 0,
+				[6] = 0,
+			},
 		},
 	},
 	["Cenarion Hold Infantry"] = {
@@ -407,19 +484,15 @@ SW_S_Details = {
 			[2] = 0,
 		},
 	},
-	["Kylosandrax"] = {
-		["CLASSE"] = "WARRIOR",
+	["Sharlissa"] = {
 		["Total"] = {
 			[1] = 0,
 			[2] = 0,
 		},
 		["Recieved"] = {
-			[1] = 0,
+			[1] = 10,
 			[2] = 0,
 		},
-		["UTYPE"] = "GPC",
-	},
-	["Sharlissa"] = {
 		["Type"] = {
 			["Other"] = {
 				[1] = 0,
@@ -430,17 +503,12 @@ SW_S_Details = {
 				[6] = 1,
 			},
 		},
-		["Recieved"] = {
-			[1] = 10,
-			[2] = 0,
-		},
-		["Total"] = {
-			[1] = 0,
-			[2] = 0,
-		},
 	},
 }
 SW_S_Healed = {
+	["Karabeast"] = {
+		["Karabeast"] = 1254,
+	},
 }
 SW_S_SpellInfo = {
 	["Kylosandrax"] = {
@@ -448,8 +516,16 @@ SW_S_SpellInfo = {
 			[1] = 1,
 			[2] = 0,
 		},
+		["Battle Stance"] = {
+			[1] = 1,
+			[2] = 0,
+		},
+		["Defensive Stance"] = {
+			[1] = 1,
+			[2] = 0,
+		},
 		["Horn of the Dire Wolf"] = {
-			[1] = 2,
+			[1] = 3,
 			[2] = 0,
 		},
 	},
@@ -467,22 +543,22 @@ SW_RPS = {
 	["allowLastFightUpdate"] = false,
 	["isRunning"] = false,
 	["startTimer"] = {
-		["epochTS"] = 1427096452,
+		["uTS"] = -125591.132999897,
 		["msO"] = -0.1330000000000382,
-		["uTS"] = -51720.132999897,
+		["epochTS"] = 1427096452,
 	},
 	["uglyTruthStarted"] = false,
 	["lastFightDmg"] = 0,
 	["baseTimer"] = {
-		["epochTS"] = 1427096452,
+		["uTS"] = -125591.132999897,
 		["msO"] = -0.1330000000000382,
-		["uTS"] = -51720.132999897,
+		["epochTS"] = 1427096452,
 	},
-	["currentSecs"] = 0,
-	["totalSecs"] = 0,
-	["startDmg"] = 0,
-	["maxDPS"] = 0,
 	["resetPoint"] = 0,
+	["totalSecs"] = 0,
+	["maxDPS"] = 0,
+	["startDmg"] = 0,
+	["currentSecs"] = 0,
 }
 SW_Sync_MsgTrack = {
 }

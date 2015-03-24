@@ -2,12 +2,12 @@
 FuXPDB = {
 	["profiles"] = {
 		["Default"] = {
-			["Shadow"] = false,
 			["ShowRemaining"] = true,
 			["detachedTooltip"] = {
 			},
 			["Thickness"] = 4,
 			["showText"] = false,
+			["Shadow"] = false,
 			["XP"] = {
 				[1] = 0.792156862745098,
 				[2] = 0.792156862745098,
