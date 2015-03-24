@@ -2,7 +2,7 @@
 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
 <!--
-	Version: 3.9.0.1030 (Kangaroo)
+	Version: 3.8.0 (Kangaroo)
 	Revision: $Id: Tooltip.xml 845 2006-05-01 18:27:01Z mentalpower $
 
 	License:

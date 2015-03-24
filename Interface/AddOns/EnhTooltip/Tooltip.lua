@@ -1,7 +1,7 @@
 --[[
 Additional function hooks to allow hooks into more tooltips
-3.9.0.1030 (Kangaroo)
-$Id: Tooltip.lua 1030 2006-10-03 04:28:13Z mentalpower $
+3.8.0 (Kangaroo)
+$Id: Tooltip.lua 957 2006-08-16 04:16:22Z mentalpower $
 
 You should hook into EnhTooltip using Stubby:
 	Stubby.RegisterFunctionHook("EnhTooltip.HOOK", 200, myHookingFunction)
@@ -169,9 +169,9 @@ You may use the following methods of the EnhTooltip class:
 ]]
 
 -- setting version number
-ENHTOOLTIP_VERSION = "3.9.0.1030"
+ENHTOOLTIP_VERSION = "3.8.0"
 if (ENHTOOLTIP_VERSION == "<".."%version%>") then
-	ENHTOOLTIP_VERSION = "3.9.DEV"
+	ENHTOOLTIP_VERSION = "3.7.DEV"
 end
 
 --[[
@@ -1034,6 +1034,7 @@ function gtHookSetInboxItem(funcArgs, retVal, frame, index)
 			break
 		end
 	end
+	
 end
 
 function gtHookSetInventoryItem(funcArgs, retVal, frame, unit, slot)
@@ -1459,6 +1460,4 @@ EnhTooltip = {
 
 	SetElapsed			= setElapsed,
 	DebugPrint			= debugPrint,
-	
-	Version				= ENHTOOLTIP_VERSION,
 }
