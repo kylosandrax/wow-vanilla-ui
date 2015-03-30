@@ -59,7 +59,11 @@ end);
 
 
 function TankStats:updateTargetLevel()
-    TankStats.enemyLevel = UnitLevel("target");
+
+	-- The only enemy level we really care about are lvl 63 bosses
+	-- There's fuck all point in showing the stats against a level 49 bank NPC
+	-- So why not just compare against a 'Boss' our level
+    TankStats.enemyLevel = UnitLevel("player") + 3;
     TankStats.playerLevel = UnitLevel("player");
 
     -- 0: nothing selected; use raid boss level (63)
