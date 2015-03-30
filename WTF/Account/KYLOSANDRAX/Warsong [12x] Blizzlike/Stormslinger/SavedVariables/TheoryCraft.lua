@@ -31,49 +31,18 @@ TheoryCraft_Settings = {
 		["intellect"] = 0,
 		["newstat"] = {
 		},
-		["strength"] = 0,
-		["agility"] = 0,
-		["name"] = "Naked",
-		["stamina"] = 0,
-		["wear"] = {
-		},
-		["destat"] = {
-			[1] = "Head",
-			[2] = "Neck",
-			[3] = "Shoulder",
-			[4] = "Chest",
-			[5] = "Waist",
-			[6] = "Legs",
-			[7] = "Feet",
-			[8] = "Wrist",
-			[9] = "Hands",
-			[10] = "Finger0",
-			[11] = "Finger1",
-			[12] = "Trinket0",
-			[13] = "Trinket1",
-			[14] = "Back",
-			[15] = "MainHand",
-			[16] = "SecondaryHand",
-			[17] = "Ranged",
-			[18] = "Tabard",
-			[19] = "Ammo",
-		},
-		["spirit"] = 0,
 		["slots"] = {
-			["Ranged"] = {
+			["Waist"] = {
 				["stats"] = {
-					["rangedattackpower"] = 14,
+					["intellect"] = 14,
+					["spirit"] = 9,
 				},
-				["name"] = "|cff1eff00|Hitem:10604:0:0:0|h[Schematic: Mithril Heavy-bore Rifle]|h|r",
+				["name"] = "|cff1eff00|Hitem:15745:0:0:0|h[Pattern: Runic Leather Belt]|h|r",
 				["data"] = {
-					["RangedSpeed"] = 2.9,
-					["name"] = "Schematic: Mithril Heavy-bore Rifle",
+					["name"] = "Pattern: Runic Leather Belt",
 					["procs"] = {
 					},
-					["RangedMin"] = 41,
-					["RangedMax"] = 76,
 					["numlines"] = 11,
-					["RangedAttackPowerReport"] = 14,
 				},
 			},
 			["Head"] = {
@@ -126,17 +95,20 @@ TheoryCraft_Settings = {
 					["numlines"] = 7,
 				},
 			},
-			["Waist"] = {
+			["Ranged"] = {
 				["stats"] = {
-					["intellect"] = 14,
-					["spirit"] = 9,
+					["rangedattackpower"] = 14,
 				},
-				["name"] = "|cff1eff00|Hitem:15745:0:0:0|h[Pattern: Runic Leather Belt]|h|r",
+				["name"] = "|cff1eff00|Hitem:10604:0:0:0|h[Schematic: Mithril Heavy-bore Rifle]|h|r",
 				["data"] = {
-					["name"] = "Pattern: Runic Leather Belt",
+					["RangedSpeed"] = 2.9,
+					["name"] = "Schematic: Mithril Heavy-bore Rifle",
 					["procs"] = {
 					},
+					["RangedMin"] = 41,
+					["RangedMax"] = 76,
 					["numlines"] = 11,
+					["RangedAttackPowerReport"] = 14,
 				},
 			},
 			["Main"] = {
@@ -221,6 +193,34 @@ TheoryCraft_Settings = {
 				},
 			},
 		},
+		["agility"] = 0,
+		["name"] = "Naked",
+		["stamina"] = 0,
+		["wear"] = {
+		},
+		["destat"] = {
+			[1] = "Head",
+			[2] = "Neck",
+			[3] = "Shoulder",
+			[4] = "Chest",
+			[5] = "Waist",
+			[6] = "Legs",
+			[7] = "Feet",
+			[8] = "Wrist",
+			[9] = "Hands",
+			[10] = "Finger0",
+			[11] = "Finger1",
+			[12] = "Trinket0",
+			[13] = "Trinket1",
+			[14] = "Back",
+			[15] = "MainHand",
+			[16] = "SecondaryHand",
+			[17] = "Ranged",
+			[18] = "Tabard",
+			[19] = "Ammo",
+		},
+		["spirit"] = 0,
+		["strength"] = 0,
 	},
 	["ColB2"] = 0.6862745098039216,
 	["FontPath"] = "Fonts\\ArialN.TTF",
@@ -282,8 +282,8 @@ TheoryCraft_Settings = {
 			["crits"] = 1,
 		},
 		["260:5"] = {
-			["casts"] = 48,
-			["crits"] = 7,
+			["casts"] = 65,
+			["crits"] = 9,
 		},
 		["304:5"] = {
 			["casts"] = 59,
@@ -372,6 +372,10 @@ TheoryCraft_Settings = {
 		["171:5"] = {
 			["casts"] = 4,
 			["crits"] = 2,
+		},
+		["316:5"] = {
+			["casts"] = 28,
+			["crits"] = 4,
 		},
 		["216:5"] = {
 			["casts"] = 24,
@@ -514,8 +518,8 @@ TheoryCraft_Settings = {
 			["crits"] = 1,
 		},
 		["291:5"] = {
-			["casts"] = 26,
-			["crits"] = 6,
+			["casts"] = 48,
+			["crits"] = 9,
 		},
 		["191:5"] = {
 			["casts"] = 1,
@@ -552,6 +556,10 @@ TheoryCraft_Settings = {
 		["228:5"] = {
 			["casts"] = 46,
 			["crits"] = 6,
+		},
+		["328:5"] = {
+			["casts"] = 199,
+			["crits"] = 28,
 		},
 		["101:0"] = {
 			["casts"] = 11,

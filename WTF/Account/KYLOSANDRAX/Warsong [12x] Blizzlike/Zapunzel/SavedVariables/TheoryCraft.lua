@@ -8,8 +8,8 @@ TheoryCraft_Settings = {
 		["Shadow"] = 0,
 		["Nature"] = 0,
 	},
-	["ColR"] = 1,
-	["ColG"] = 1,
+	["buttontexty"] = 10.22,
+	["buttontextx"] = 1.111,
 	["ColG2"] = 1,
 	["ColR2"] = 1,
 	["embedstyle1"] = true,
@@ -50,6 +50,9 @@ TheoryCraft_Settings = {
 		},
 		["newstat"] = {
 		},
+		["strength"] = 0,
+		["agility"] = 0,
+		["name"] = "Naked",
 		["slots"] = {
 			["Ranged"] = {
 				["stats"] = {
@@ -80,17 +83,17 @@ TheoryCraft_Settings = {
 					["numlines"] = 6,
 				},
 			},
-			["Neck"] = {
+			["Legs"] = {
 				["stats"] = {
-					["stamina"] = 10,
-					["spirit"] = 15,
+					["intellect"] = 5,
+					["spirit"] = 4,
 				},
-				["name"] = "|cffa335ee|Hitem:1315:0:0:0|h[Lei of Lilies]|h|r",
+				["name"] = "|cff1eff00|Hitem:5972:0:0:0|h[Pattern: Fine Leather Pants]|h|r",
 				["data"] = {
-					["name"] = "Lei of Lilies",
+					["name"] = "Pattern: Fine Leather Pants",
 					["procs"] = {
 					},
-					["numlines"] = 7,
+					["numlines"] = 11,
 				},
 			},
 			["Trinket0"] = {
@@ -129,14 +132,17 @@ TheoryCraft_Settings = {
 			},
 			["Hands"] = {
 				["stats"] = {
+					["intellect"] = 14,
+					["stamina"] = 9,
+					["spirit"] = 14,
+					["settype"] = "Magister's Regalia",
 				},
-				["name"] = "|cff1eff00|Hitem:4348:0:0:0|h[Pattern: Phoenix Gloves]|h|r",
+				["name"] = "|cff0070dd|Hitem:16684:0:0:0|h[Magister's Gloves]|h|r",
 				["data"] = {
-					["name"] = "Pattern: Phoenix Gloves",
+					["name"] = "Magister's Gloves",
 					["procs"] = {
 					},
-					["numlines"] = 11,
-					["Fire"] = 9,
+					["numlines"] = 23,
 				},
 			},
 			["Wrist"] = {
@@ -225,14 +231,17 @@ TheoryCraft_Settings = {
 			},
 			["Waist"] = {
 				["stats"] = {
-					["intellect"] = 5,
+					["intellect"] = 17,
+					["stamina"] = 9,
+					["spirit"] = 10,
+					["settype"] = "Wildheart Raiment",
 				},
-				["name"] = "|cff1eff00|Hitem:4786:0:0:0|h[Wise Man's Belt]|h|r",
+				["name"] = "|cff0070dd|Hitem:16716:0:0:0|h[Wildheart Belt]|h|r",
 				["data"] = {
-					["name"] = "Wise Man's Belt",
+					["name"] = "Wildheart Belt",
 					["procs"] = {
 					},
-					["numlines"] = 6,
+					["numlines"] = 24,
 				},
 			},
 			["Feet"] = {
@@ -257,23 +266,20 @@ TheoryCraft_Settings = {
 					["numlines"] = 4,
 				},
 			},
-			["Legs"] = {
+			["Neck"] = {
 				["stats"] = {
-					["intellect"] = 5,
-					["spirit"] = 4,
+					["stamina"] = 10,
+					["spirit"] = 15,
 				},
-				["name"] = "|cff1eff00|Hitem:5972:0:0:0|h[Pattern: Fine Leather Pants]|h|r",
+				["name"] = "|cffa335ee|Hitem:1315:0:0:0|h[Lei of Lilies]|h|r",
 				["data"] = {
-					["name"] = "Pattern: Fine Leather Pants",
+					["name"] = "Lei of Lilies",
 					["procs"] = {
 					},
-					["numlines"] = 11,
+					["numlines"] = 7,
 				},
 			},
 		},
-		["agility"] = 0,
-		["name"] = "Naked",
-		["strength"] = 0,
 		["wear"] = {
 		},
 		["intellect"] = 0,
@@ -281,8 +287,8 @@ TheoryCraft_Settings = {
 		["stamina"] = 0,
 	},
 	["ColB2"] = 0.6862745098039216,
-	["buttontexty"] = 10.22,
-	["buttontextx"] = 1.111,
+	["ColR"] = 1,
+	["ColG"] = 1,
 	["embed"] = true,
 	["healanddamage"] = true,
 }

@@ -113,10 +113,7 @@ RDX5Data = {
 				["smbtn"] = {
 					["iid"] = 1,
 				},
-				["slbtn"] = {
-					["sptitle"] = "healing touch(rank 4)",
-					["iid"] = 4,
-				},
+				["scale"] = 1.216663479804993,
 				["sort"] = 2,
 				["srbtn"] = {
 					["sptitle"] = "rejuvenation(rank 10)",
@@ -126,12 +123,15 @@ RDX5Data = {
 				["stext"] = 3,
 				["truncate"] = 8,
 				["layout"] = 1,
+				["width"] = 152.5184936523438,
 				["rbtn"] = {
 					["iid"] = 1,
 				},
-				["width"] = 152.5184936523438,
-				["scale"] = 1.216663479804993,
-				["title"] = "Raid Healing",
+				["slbtn"] = {
+					["sptitle"] = "healing touch(rank 4)",
+					["iid"] = 4,
+				},
+				["name"] = "raid healing",
 				["filter"] = {
 					["desync"] = 3,
 					["hpmin"] = 1,
@@ -171,17 +171,14 @@ RDX5Data = {
 				["mbtn"] = {
 					["iid"] = 1,
 				},
-				["name"] = "raid healing",
+				["title"] = "Raid Healing",
 			},
 			["main tanks"] = {
 				["smbtn"] = {
 					["sptitle"] = "swiftmend",
 					["iid"] = 4,
 				},
-				["slbtn"] = {
-					["sptitle"] = "healing touch(rank 4)",
-					["iid"] = 4,
-				},
+				["scale"] = 1.216663479804993,
 				["sort"] = 2,
 				["srbtn"] = {
 					["sptitle"] = "rejuvenation(rank 10)",
@@ -191,12 +188,13 @@ RDX5Data = {
 				["stext"] = 3,
 				["truncate"] = 5,
 				["layout"] = 1,
-				["rbtn"] = {
-					["iid"] = 1,
+				["width"] = 152.5184936523438,
+				["name"] = "main tanks",
+				["slbtn"] = {
+					["sptitle"] = "healing touch(rank 4)",
+					["iid"] = 4,
 				},
 				["title"] = "Main Tanks",
-				["scale"] = 1.216663479804993,
-				["name"] = "main tanks",
 				["filter"] = {
 					["desync"] = 3,
 					["hpmin"] = 1,
@@ -222,7 +220,9 @@ RDX5Data = {
 				["mbtn"] = {
 					["iid"] = 1,
 				},
-				["width"] = 152.5184936523438,
+				["rbtn"] = {
+					["iid"] = 1,
+				},
 			},
 		},
 	},
@@ -249,13 +249,13 @@ RDX5Data = {
 				["mod_windows"] = {
 					["raid healing"] = {
 						["y"] = 648.8889461626353,
-						["shown"] = true,
-						["x"] = 1611.110938427315,
+						["shown"] = false,
+						["x"] = 1611.111070915982,
 					},
 					["main tanks"] = {
 						["y"] = 847.7779510653628,
 						["shown"] = true,
-						["x"] = 1607.778186025732,
+						["x"] = 1607.778318514398,
 					},
 				},
 			},
@@ -311,7 +311,7 @@ RDX5Data = {
 				},
 				["mod_windows"] = {
 					["main tanks"] = {
-						["y"] = 543.1349690767054,
+						["y"] = 543.1349359545388,
 						["shown"] = false,
 						["x"] = 1355.980825888285,
 					},

@@ -218,7 +218,7 @@ BWP_QuestList = {
 		["Y"] = 0.3647378385066986,
 		["X"] = 0.4994093775749207,
 		["Zone"] = 13,
-		["QuestName"] = "Cenarion Battlegear,,Field Duty,,Twilight Marauders,Azure Templar",
+		["QuestName"] = "Cenarion Battlegear,,Field Duty,,Azure Templar",
 		["QuestGiver"] = "Windcaller Kaldon",
 	},
 	[31] = {
@@ -1041,419 +1041,412 @@ BWP_QuestList = {
 		["QuestGiver"] = "Ragged John",
 	},
 	[148] = {
-		["Y"] = 0.2727212011814117,
-		["X"] = 0.5247272849082947,
-		["Zone"] = 15,
-		["QuestName"] = "The Ectoplasmic Distiller",
-		["QuestGiver"] = "Mux Manascrambler",
-	},
-	[149] = {
 		["Y"] = 0.2869296669960022,
 		["X"] = 0.5141602754592896,
 		["Zone"] = 15,
 		["QuestName"] = "A Good Head On Your Shoulders,The Mithril Kid,The World At Your Feet,Did You Lose This?,",
 		["QuestGiver"] = "Trenton Lighthammer",
 	},
-	[150] = {
+	[149] = {
 		["Y"] = 0.6692702174186707,
 		["X"] = 0.8040356040000916,
 		["Zone"] = 1,
 		["QuestName"] = "Spirit Totem,Da Voodoo",
 		["QuestGiver"] = "Bath'rah the Windwatcher",
 	},
-	[151] = {
+	[150] = {
 		["Y"] = 0.1450556516647339,
 		["X"] = 0.1528200805187225,
 		["Zone"] = 18,
 		["QuestName"] = "Paragons of Power: The Vindicator's Armguards,Strength of Mount Mugamba,Paragons of Power: The Vindicator's Belt,",
 		["QuestGiver"] = "Jin'rokh the Breaker",
 	},
-	[152] = {
+	[151] = {
 		["Y"] = 0.5878239870071411,
 		["X"] = 0.4500860273838043,
 		["Zone"] = 19,
 		["QuestName"] = "Enchanted Thorium Platemail: Volume I",
 		["QuestGiver"] = "Auctioneer Stampi",
 	},
-	[153] = {
+	[152] = {
 		["Y"] = 0.1431785970926285,
 		["X"] = 0.5065704584121704,
 		["Zone"] = 4,
 		["QuestName"] = "A Boar's Vitality,Spirit of the Boar",
 		["QuestGiver"] = "Bloodmage Drazial",
 	},
-	[154] = {
+	[153] = {
 		["Y"] = 0.5843577384948731,
 		["X"] = 0.8146784901618958,
 		["Zone"] = 9,
 		["QuestName"] = "Cryptstalker Armor Doesn't Make Itself...",
 		["QuestGiver"] = "Huntsman Leopold",
 	},
-	[155] = {
+	[154] = {
 		["Y"] = 0.5882173776626587,
 		["X"] = 0.7998583912849426,
 		["Zone"] = 9,
 		["QuestName"] = "Writ of Safe Passage",
 		["QuestGiver"] = "Guard Didier",
 	},
-	[156] = {
+	[155] = {
 		["Y"] = 0.5758795738220215,
 		["X"] = 0.8101119995117188,
 		["Zone"] = 9,
 		["QuestName"] = "They Call Me \"The Rooster\"",
 		["QuestGiver"] = "Dispatch Commander Metz",
 	},
-	[157] = {
+	[156] = {
 		["Y"] = 0.7150391340255737,
 		["X"] = 0.8302962779998779,
 		["Zone"] = 21,
 		["QuestName"] = "Barov Family Fortune",
 		["QuestGiver"] = "Alexi Barov",
 	},
-	[158] = {
+	[157] = {
 		["Y"] = 0.3801336586475372,
 		["X"] = 0.5198718905448914,
 		["Zone"] = 13,
 		["QuestName"] = "Signet of Unyielding Strength",
 		["QuestGiver"] = "Windcaller Yessendra",
 	},
-	[159] = {
+	[158] = {
 		["Y"] = 0.8140287399291992,
 		["X"] = 0.5072869658470154,
 		["Zone"] = 0,
 		["QuestName"] = "Speak with our Quartermaster",
 		["QuestGiver"] = "Jotek",
 	},
-	[160] = {
+	[159] = {
 		["Y"] = 0.3834188282489777,
 		["X"] = 0.675690233707428,
 		["Zone"] = 22,
 		["QuestName"] = "Assisting Arch Druid Runetotem",
 		["QuestGiver"] = "Innkeeper Norman",
 	},
-	[161] = {
+	[160] = {
 		["Y"] = 0.4779968857765198,
 		["X"] = 0.03148280456662178,
 		["Zone"] = 3,
 		["QuestName"] = "The Rise of the Machines",
 		["QuestGiver"] = "Hierophant Theodora Mulvadania",
 	},
-	[162] = {
+	[161] = {
 		["Y"] = 0.7376251816749573,
 		["X"] = 0.7019848227500916,
 		["Zone"] = 23,
 		["QuestName"] = "Doctor Theolen Krastinov, the Butcher",
 		["QuestGiver"] = "Eva Sarkhoff",
 	},
-	[163] = {
+	[162] = {
 		["Y"] = 0.389680027961731,
 		["X"] = 0.6812300086021423,
 		["Zone"] = 22,
 		["QuestName"] = "Great-father Winter is Here!",
 		["QuestGiver"] = "Nardstrum Copperpinch",
 	},
-	[164] = {
+	[163] = {
 		["Y"] = 0.656093955039978,
 		["X"] = 0.4166505932807922,
 		["Zone"] = 10,
 		["QuestName"] = "Elmore's Task",
 		["QuestGiver"] = "Smith Argus",
 	},
-	[165] = {
+	[164] = {
 		["Y"] = 0.6597595810890198,
 		["X"] = 0.4111310541629791,
 		["Zone"] = 10,
 		["QuestName"] = "Tome of Divinity",
 		["QuestGiver"] = "Brother Wilhelm",
 	},
-	[166] = {
+	[165] = {
 		["Y"] = 0.3136130571365356,
 		["X"] = 0.5601345300674439,
 		["Zone"] = 24,
 		["QuestName"] = "The Killing Fields",
 		["QuestGiver"] = "Farmer Saldean",
 	},
-	[167] = {
+	[166] = {
 		["Y"] = 0.4751962125301361,
 		["X"] = 0.5637316107749939,
 		["Zone"] = 24,
 		["QuestName"] = "",
 		["QuestGiver"] = "Gryan Stoutmantle",
 	},
-	[168] = {
+	[167] = {
 		["Y"] = 0.4717308282852173,
 		["X"] = 0.5694428682327271,
 		["Zone"] = 24,
 		["QuestName"] = "A Swift Message",
 		["QuestGiver"] = "Quartermaster Lewis",
 	},
-	[169] = {
+	[168] = {
 		["Y"] = 0.4889159202575684,
 		["X"] = 0.3348107635974884,
 		["Zone"] = 14,
 		["QuestName"] = "Blackrock Menace,",
 		["QuestGiver"] = "Marshal Marris",
 	},
-	[170] = {
+	[169] = {
 		["Y"] = 0.2664841413497925,
 		["X"] = 0.3866793215274811,
 		["Zone"] = 17,
 		["QuestName"] = "The Tome of Divinity",
 		["QuestGiver"] = "Gazin Tenorm",
 	},
-	[171] = {
+	[170] = {
 		["Y"] = 0.03366024792194367,
 		["X"] = 0.3776566982269287,
 		["Zone"] = 18,
 		["QuestName"] = "Krazek's Cookery",
 		["QuestGiver"] = "Corporal Kaleb",
 	},
-	[172] = {
+	[171] = {
 		["Y"] = 0.0336574949324131,
 		["X"] = 0.3795436322689056,
 		["Zone"] = 18,
 		["QuestName"] = "Jungle Secrets",
 		["QuestGiver"] = "Private Thorsen",
 	},
-	[173] = {
+	[172] = {
 		["Y"] = 0.03304412588477135,
 		["X"] = 0.3799698948860169,
 		["Zone"] = 18,
 		["QuestName"] = "The Second Rebellion,Bad Medicine,Special Forces",
 		["QuestGiver"] = "Sergeant Yohwa",
 	},
-	[174] = {
+	[173] = {
 		["Y"] = 0.03036109358072281,
 		["X"] = 0.3801094591617584,
 		["Zone"] = 18,
 		["QuestName"] = "Bookie Herod,Patrol Schedules,",
 		["QuestGiver"] = "Lieutenant Doren",
 	},
-	[175] = {
+	[174] = {
 		["Y"] = 0.03392423689365387,
 		["X"] = 0.3768557608127594,
 		["Zone"] = 18,
 		["QuestName"] = "Report to Doren",
 		["QuestGiver"] = "Corporal Sethman",
 	},
-	[176] = {
+	[175] = {
 		["Y"] = 0.06419789046049118,
 		["X"] = 0.23262719810009,
 		["Zone"] = 12,
 		["QuestName"] = "The Tome of Nobility",
 		["QuestGiver"] = "Brandur Ironhammer",
 	},
-	[177] = {
+	[176] = {
 		["Y"] = 0.4442006647586823,
 		["X"] = 0.09844079613685608,
 		["Zone"] = 20,
 		["QuestName"] = "Witherbark Cages,",
 		["QuestGiver"] = "Gryphon Master Talonaxe",
 	},
-	[178] = {
+	[177] = {
 		["Y"] = 0.4453419148921967,
 		["X"] = 0.1481322348117828,
 		["Zone"] = 20,
 		["QuestName"] = "Skulk Rock Clean-up,Troll Necklace Bounty",
 		["QuestGiver"] = "Fraggar Thundermantle",
 	},
-	[179] = {
+	[178] = {
 		["Y"] = 0.3774391710758209,
 		["X"] = 0.4935363531112671,
 		["Zone"] = 20,
 		["QuestName"] = "Rescue OOX-09/HL!",
 		["QuestGiver"] = "Homing Robot OOX-09/HL",
 	},
-	[180] = {
+	[179] = {
 		["Y"] = 0.7713332772254944,
 		["X"] = 0.277311235666275,
 		["Zone"] = 18,
 		["QuestName"] = "Scaring Shaky,Voodoo Dues",
 		["QuestGiver"] = "\"Sea Wolf\" MacKinley",
 	},
-	[181] = {
+	[180] = {
 		["Y"] = 0.7362057566642761,
 		["X"] = 0.269199013710022,
 		["Zone"] = 18,
 		["QuestName"] = "Return to MacKinley",
 		["QuestGiver"] = "\"Shaky\" Phillipe",
 	},
-	[182] = {
+	[181] = {
 		["Y"] = 0.2983743846416473,
 		["X"] = 0.3994582891464233,
 		["Zone"] = 17,
 		["QuestName"] = "The Tome of Nobility,Lord Grayson Shadowbreaker",
 		["QuestGiver"] = "Duthorian Rall",
 	},
-	[183] = {
+	[182] = {
 		["Y"] = 0.6237439513206482,
 		["X"] = 0.6554850935935974,
 		["Zone"] = 15,
 		["QuestName"] = "Caught!",
 		["QuestGiver"] = "Locheed",
 	},
-	[184] = {
+	[183] = {
 		["Y"] = 0.8394016027450562,
 		["X"] = 0.1817642897367477,
 		["Zone"] = 13,
 		["QuestName"] = "Proof of Deed",
 		["QuestGiver"] = "Mountaineer Pebblebitty",
 	},
-	[185] = {
+	[184] = {
 		["Y"] = 0.2318159341812134,
 		["X"] = 0.6537918448448181,
 		["Zone"] = 12,
 		["QuestName"] = "A Call to Arms: The Plaguelands!,Feathermoon Stronghold",
 		["QuestGiver"] = "Courier Hammerfall",
 	},
-	[186] = {
+	[185] = {
 		["Y"] = 0.06928518414497376,
 		["X"] = 0.6525143980979919,
 		["Zone"] = 12,
 		["QuestName"] = "At Last!",
 		["QuestGiver"] = "Curator Thorius",
 	},
-	[187] = {
+	[186] = {
 		["Y"] = 0.8403897881507874,
 		["X"] = 0.427465945482254,
 		["Zone"] = 23,
 		["QuestName"] = "Clear the Way",
 		["QuestGiver"] = "Unknown",
 	},
-	[188] = {
+	[187] = {
 		["Y"] = 0.8373171091079712,
 		["X"] = 0.4339931309223175,
 		["Zone"] = 23,
 		["QuestName"] = "Barov Family Fortune",
 		["QuestGiver"] = "Weldon Barov",
 	},
-	[189] = {
+	[188] = {
 		["Y"] = 0.8490778207778931,
 		["X"] = 0.4346383810043335,
 		["Zone"] = 23,
 		["QuestName"] = "A Plague Upon Thee",
 		["QuestGiver"] = "Nathaniel Dumah",
 	},
-	[190] = {
+	[189] = {
 		["Y"] = 0.8442562222480774,
 		["X"] = 0.4292928576469421,
 		["Zone"] = 23,
 		["QuestName"] = "Target: Felstone Field,",
 		["QuestGiver"] = "High Priestess MacDonnell",
 	},
-	[191] = {
+	[190] = {
 		["Y"] = 0.8384526371955872,
 		["X"] = 0.4269379675388336,
 		["Zone"] = 23,
 		["QuestName"] = "Skeletal Fragments",
 		["QuestGiver"] = "Alchemist Arbington",
 	},
-	[192] = {
+	[191] = {
 		["Y"] = 0.4749845862388611,
 		["X"] = 0.5836957097053528,
 		["Zone"] = 12,
 		["QuestName"] = "Taking Back Silithus",
 		["QuestGiver"] = "Cenarion Emissary Jademoon",
 	},
-	[193] = {
+	[192] = {
 		["Y"] = 0.3458303809165955,
 		["X"] = 0.5066964626312256,
 		["Zone"] = 13,
 		["QuestName"] = "Report to Marshal Bluewall",
 		["QuestGiver"] = "Rifleman Torrig",
 	},
-	[194] = {
+	[193] = {
 		["Y"] = 0.3814003169536591,
 		["X"] = 0.5143994688987732,
 		["Zone"] = 13,
 		["QuestName"] = "Wanted - Deathclasp, Terror of the Sands",
 		["QuestGiver"] = "Kania",
 	},
-	[195] = {
+	[194] = {
 		["Y"] = 0.509336531162262,
 		["X"] = 0.332694411277771,
 		["Zone"] = 13,
 		["QuestName"] = "Scouring the Desert",
 		["QuestGiver"] = "Marshal Bluewall",
 	},
-	[196] = {
+	[195] = {
 		["Y"] = 0.3649612963199616,
 		["X"] = 0.4953971803188324,
 		["Zone"] = 13,
 		["QuestName"] = "What Tomorrow Brings,",
 		["QuestGiver"] = "Baristolth of the Shifting Sands",
 	},
-	[197] = {
+	[196] = {
 		["Y"] = 0.3305685818195343,
 		["X"] = 0.3732792735099793,
 		["Zone"] = 17,
 		["QuestName"] = "Chillwind Point,Emphasis on Sacrifice",
 		["QuestGiver"] = "Lord Grayson Shadowbreaker",
 	},
-	[198] = {
+	[197] = {
 		["Y"] = 0.4392149746417999,
 		["X"] = 0.3109653294086456,
 		["Zone"] = 9,
 		["QuestName"] = "Elven Legends",
 		["QuestGiver"] = "Scholar Runethorn",
 	},
-	[199] = {
+	[198] = {
 		["Y"] = 0.5141180157661438,
 		["X"] = 0.1864435970783234,
 		["Zone"] = 12,
 		["QuestName"] = "Assisting Arch Druid Staghelm",
 		["QuestGiver"] = "Innkeeper Firebrew",
 	},
-	[200] = {
+	[199] = {
 		["Y"] = 0.6587992310523987,
 		["X"] = 0.3250693678855896,
 		["Zone"] = 12,
 		["QuestName"] = "Dearest Colara,",
 		["QuestGiver"] = "Tormek Stoneriver",
 	},
-	[201] = {
+	[200] = {
 		["Y"] = 0.5954912304878235,
 		["X"] = 0.607438325881958,
 		["Zone"] = 21,
 		["QuestName"] = "Dearest Elenia,",
 		["QuestGiver"] = "Deathguard Tor",
 	},
-	[202] = {
+	[201] = {
 		["Y"] = 0.7017242908477783,
 		["X"] = 0.5095344185829163,
 		["Zone"] = 12,
 		["QuestName"] = "The Lunar Festival",
 		["QuestGiver"] = "Lunar Festival Herald",
 	},
-	[203] = {
+	[202] = {
 		["Y"] = 0.7011438012123108,
 		["X"] = 0.5120698213577271,
 		["Zone"] = 12,
 		["QuestName"] = "Dearest Elenia,",
 		["QuestGiver"] = "Orok Deathbane",
 	},
-	[204] = {
+	[203] = {
 		["Y"] = 0.3734864294528961,
 		["X"] = 0.4960527122020721,
 		["Zone"] = 13,
 		["QuestName"] = "The Deserter",
 		["QuestGiver"] = "Geologist Larksbane",
 	},
-	[205] = {
+	[204] = {
 		["Y"] = 0.6968662142753601,
 		["X"] = 0.6708322167396545,
 		["Zone"] = 13,
 		["QuestName"] = "The Twilight Lexicon",
 		["QuestGiver"] = "Hermit Ortell",
 	},
-	[206] = {
+	[205] = {
 		["Y"] = 0.5988507866859436,
 		["X"] = 0.8148823380470276,
 		["Zone"] = 9,
 		["QuestName"] = "Shadows of Doom,Under the Shadow",
 		["QuestGiver"] = "Commander Thomas Helleran",
 	},
-	[207] = {
+	[206] = {
 		["Y"] = 0.3945970237255096,
 		["X"] = 0.5181177854537964,
 		["Zone"] = 13,

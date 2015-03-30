@@ -8,8 +8,8 @@ TheoryCraft_Settings = {
 		["Shadow"] = 0,
 		["Nature"] = 0,
 	},
-	["buttontexty"] = 10.22,
-	["ColG"] = 1,
+	["ColR"] = 1,
+	["buttontextx"] = 1.111,
 	["ColG2"] = 1,
 	["ColR2"] = 1,
 	["embedstyle1"] = true,
@@ -50,24 +50,21 @@ TheoryCraft_Settings = {
 		},
 		["newstat"] = {
 		},
-		["strength"] = 0,
-		["agility"] = 0,
-		["name"] = "Naked",
 		["slots"] = {
-			["Ranged"] = {
+			["Waist"] = {
 				["stats"] = {
-					["rangedattackpower"] = 14,
+					["intellect"] = 15,
+					["stamina"] = 9,
+					["spirit"] = 6,
+					["strength"] = 10,
+					["settype"] = "Lightforge Armor",
 				},
-				["name"] = "|cff1eff00|Hitem:10604:0:0:0|h[Schematic: Mithril Heavy-bore Rifle]|h|r",
+				["name"] = "|cff0070dd|Hitem:16723:0:0:0|h[Lightforge Belt]|h|r",
 				["data"] = {
-					["RangedSpeed"] = 2.9,
-					["name"] = "Schematic: Mithril Heavy-bore Rifle",
+					["name"] = "Lightforge Belt",
 					["procs"] = {
 					},
-					["RangedMin"] = 41,
-					["RangedMax"] = 76,
-					["numlines"] = 11,
-					["RangedAttackPowerReport"] = 14,
+					["numlines"] = 24,
 				},
 			},
 			["Finger0"] = {
@@ -212,23 +209,26 @@ TheoryCraft_Settings = {
 					["numlines"] = 12,
 				},
 			},
-			["Waist"] = {
+			["Ranged"] = {
 				["stats"] = {
-					["intellect"] = 15,
-					["settype"] = "Lightforge Armor",
-					["strength"] = 10,
-					["spirit"] = 6,
-					["stamina"] = 9,
+					["rangedattackpower"] = 14,
 				},
-				["name"] = "|cff0070dd|Hitem:16723:0:0:0|h[Lightforge Belt]|h|r",
+				["name"] = "|cff1eff00|Hitem:10604:0:0:0|h[Schematic: Mithril Heavy-bore Rifle]|h|r",
 				["data"] = {
-					["name"] = "Lightforge Belt",
+					["RangedMin"] = 41,
+					["name"] = "Schematic: Mithril Heavy-bore Rifle",
 					["procs"] = {
 					},
-					["numlines"] = 24,
+					["numlines"] = 11,
+					["RangedMax"] = 76,
+					["RangedSpeed"] = 2.9,
+					["RangedAttackPowerReport"] = 14,
 				},
 			},
 		},
+		["agility"] = 0,
+		["name"] = "Naked",
+		["strength"] = 0,
 		["wear"] = {
 		},
 		["intellect"] = 0,
@@ -236,8 +236,8 @@ TheoryCraft_Settings = {
 		["stamina"] = 0,
 	},
 	["ColB2"] = 0.6862745098039216,
-	["ColR"] = 1,
-	["buttontextx"] = 1.111,
+	["buttontexty"] = 10.22,
+	["ColG"] = 1,
 	["embed"] = true,
 	["healanddamage"] = true,
 }

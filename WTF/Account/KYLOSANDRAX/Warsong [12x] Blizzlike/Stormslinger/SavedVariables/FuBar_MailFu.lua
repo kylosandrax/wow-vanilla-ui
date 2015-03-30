@@ -1,2 +1,6 @@
 
-FuBar_MailDBPC = nil
+FuBar_MailDBPC = {
+	["global"] = {
+		["total"] = 24,
+	},
+}

@@ -14,14 +14,14 @@ coolDownOptions = {
 		["b"] = 0.95,
 	},
 	["iconDock"] = "Right",
-	["buttonDock"] = "Top",
-	["frameScale"] = 1,
-	["maxSpellDuration"] = 7200,
-	["minItemDuration"] = 3,
 	["textColor"] = {
 		["a"] = 1,
 		["r"] = 1,
 		["g"] = 0.82,
 		["b"] = 0,
 	},
+	["maxSpellDuration"] = 7200,
+	["frameScale"] = 1,
+	["minItemDuration"] = 3,
+	["buttonDock"] = "Top",
 }

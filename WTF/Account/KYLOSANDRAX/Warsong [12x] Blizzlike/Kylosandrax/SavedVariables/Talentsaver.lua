@@ -4,8 +4,8 @@ TALENTS_SAVED = {
 	},
 	["VERSION"] = 1.1,
 	["DELAY"] = -1,
-	["LIST"] = {
-	},
 	["BUILDS"] = {
+	},
+	["LIST"] = {
 	},
 }

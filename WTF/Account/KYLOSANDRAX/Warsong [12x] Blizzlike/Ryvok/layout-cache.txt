@@ -54,14 +54,10 @@ Frame: QuickHealConfig
 FrameLevel: 1
 X: 1102
 Y: -204
-Frame: RDXWin25
+Frame: RDXWin26
 FrameLevel: 1
 X: 1608
 Y: -139
-Frame: RDXWin26
-FrameLevel: 1
-X: 1611
-Y: -337
 Frame: RDXEncPane
 FrameLevel: 1
 X: 462

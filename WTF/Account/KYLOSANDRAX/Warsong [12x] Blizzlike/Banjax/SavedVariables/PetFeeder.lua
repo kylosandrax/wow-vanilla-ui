@@ -498,16 +498,16 @@ PetFeederPlayer_Foods = {
 	},
 }
 PeetFeederPlayer_Config = {
-	["Enabled"] = 1,
+	["skipBuffFoods"] = 1,
 	["SortOption1"] = 1,
 	["FeedOnlyApproved"] = 1,
-	["skipBuffFoods"] = 1,
+	["SkipBuffFoods"] = 1,
 	["SortOption2"] = 1,
 	["Alert"] = 1,
-	["SkipBuffFoods"] = 1,
-	["RequireApproval"] = 1,
+	["Enabled"] = 1,
+	["BarEnabled"] = 1,
 	["AutoFindFood"] = 1,
 	["Level"] = 2,
 	["SortOption"] = 1,
-	["BarEnabled"] = 1,
+	["RequireApproval"] = 1,
 }

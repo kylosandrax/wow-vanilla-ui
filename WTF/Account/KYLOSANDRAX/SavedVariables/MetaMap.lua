@@ -33,7 +33,7 @@ MetaMapOptions = {
 	["MiniParty"] = true,
 	["MetaMapScale2"] = 0.550000011920929,
 	["ZoneShiftVersion"] = 0,
-	["MetaMapZone"] = 29,
+	["MetaMapZone"] = 18,
 	["LastHighlight"] = true,
 	["SortList"] = false,
 	["NBKalwaysOn"] = true,
@@ -3833,10 +3833,6 @@ MetaMapNotes_Data = {
 	},
 	["Alterac Valley"] = {
 	},
-	["Thunder Bluff"] = {
-	},
-	["Warsong Gulch"] = {
-	},
 	[0] = {
 		[1] = {
 		},
@@ -3902,6 +3898,10 @@ MetaMapNotes_Data = {
 		},
 		[32] = {
 		},
+	},
+	["Thunder Bluff"] = {
+	},
+	["Warsong Gulch"] = {
 	},
 	["Orgrimmar"] = {
 	},
@@ -4005,10 +4005,6 @@ MetaMapNotes_Lines = {
 	},
 	["Alterac Valley"] = {
 	},
-	["Thunder Bluff"] = {
-	},
-	["Warsong Gulch"] = {
-	},
 	[0] = {
 		[1] = {
 		},
@@ -4074,6 +4070,10 @@ MetaMapNotes_Lines = {
 		},
 		[32] = {
 		},
+	},
+	["Thunder Bluff"] = {
+	},
+	["Warsong Gulch"] = {
 	},
 	["Orgrimmar"] = {
 	},

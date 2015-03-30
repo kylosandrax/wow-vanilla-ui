@@ -15,7 +15,7 @@ FrameLevel: 9
 X: 1296
 Y: -491
 Frame: ATSWFrame
-FrameLevel: 64
+FrameLevel: 34
 X: 349
 Y: -105
 Frame: ATSWCSFrame
@@ -55,7 +55,7 @@ FrameLevel: 1
 X: 1386
 Y: -284
 Frame: TargetRangeInfo
-FrameLevel: 10
+FrameLevel: 9
 X: 1365
 Y: -136
 W: 135

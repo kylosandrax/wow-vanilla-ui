@@ -12,24 +12,33 @@ TheoryCraft_Settings = {
 	["embed"] = true,
 	["buttontextx"] = 1.111,
 	["ColG2"] = 1,
-	["nextstr"] = true,
+	["combinedot"] = true,
 	["ColR2"] = 1,
+	["embedstyle1"] = true,
 	["ColB"] = 1,
-	["crit"] = true,
 	["tryfirst"] = "averagedam",
 	["trysecondsfg"] = -1,
-	["ColG"] = 1,
+	["dataversion"] = "1.06",
 	["tryfirstsfg"] = 0,
-	["ColB2"] = 0.6862745098039216,
-	["mitigation"] = true,
-	["FontPath"] = "Fonts\\ArialN.TTF",
+	["procs"] = true,
 	["nextcrit"] = true,
-	["dontresist"] = true,
+	["mitigation"] = true,
+	["GenerateList"] = "",
 	["trysecond"] = "averagehealnocrit",
+	["dontresist"] = true,
 	["ColR"] = 1,
 	["buttontext"] = true,
-	["GenerateList"] = "",
+	["FontPath"] = "Fonts\\ArialN.TTF",
 	["CustomOutfit"] = {
+		["intellect"] = 0,
+		["newstat"] = {
+		},
+		["strength"] = 0,
+		["agility"] = 0,
+		["name"] = "Naked",
+		["stamina"] = 0,
+		["wear"] = {
+		},
 		["destat"] = {
 			[1] = "Head",
 			[2] = "Neck",
@@ -51,23 +60,20 @@ TheoryCraft_Settings = {
 			[18] = "Tabard",
 			[19] = "Ammo",
 		},
-		["newstat"] = {
-		},
-		["strength"] = 0,
-		["agility"] = 0,
-		["name"] = "Naked",
+		["spirit"] = 0,
 		["slots"] = {
-			["Waist"] = {
+			["Ranged"] = {
 				["stats"] = {
-					["stamina"] = 11,
-					["strength"] = 12,
 				},
-				["name"] = "|cff1eff00|Hitem:10122:0:1211:0|h[Ornate Girdle of the Bear]|h|r",
+				["name"] = "|cff1eff00|Hitem:15284:0:0:0|h[Long Battle Bow]|h|r",
 				["data"] = {
-					["name"] = "Ornate Girdle of the Bear",
+					["name"] = "Long Battle Bow",
 					["procs"] = {
 					},
-					["numlines"] = 7,
+					["RangedSpeed"] = 2.2,
+					["RangedMax"] = 34,
+					["RangedMin"] = 18,
+					["numlines"] = 6,
 				},
 			},
 			["Finger0"] = {
@@ -182,17 +188,17 @@ TheoryCraft_Settings = {
 					["numlines"] = 11,
 				},
 			},
-			["Finger1"] = {
+			["Feet"] = {
 				["stats"] = {
-					["intellect"] = 9,
-					["spirit"] = 9,
+					["stamina"] = 7,
+					["strength"] = 7,
 				},
-				["name"] = "|cff1eff00|Hitem:11992:0:778:0|h[Vermilion Band of the Owl]|h|r",
+				["name"] = "|cff1eff00|Hitem:9864:0:1197:0|h[Renegade Boots of the Bear]|h|r",
 				["data"] = {
-					["name"] = "Vermilion Band of the Owl",
+					["name"] = "Renegade Boots of the Bear",
 					["procs"] = {
 					},
-					["numlines"] = 6,
+					["numlines"] = 7,
 				},
 			},
 			["Chest"] = {
@@ -216,37 +222,38 @@ TheoryCraft_Settings = {
 				["data"] = {
 					["numlines"] = 8,
 					["MeleeMax"] = 146,
-					["name"] = "Greater Maul of the Tiger",
+					["MeleeMin"] = 97,
 					["procs"] = {
 					},
 					["MeleeAPMult"] = 3.3,
 					["MainSpeed"] = 3.4,
-					["MeleeMin"] = 97,
+					["name"] = "Greater Maul of the Tiger",
 				},
 			},
-			["Legs"] = {
+			["Finger1"] = {
 				["stats"] = {
+					["intellect"] = 9,
+					["spirit"] = 9,
 				},
-				["name"] = "|cff1eff00|Hitem:15746:0:0:0|h[Pattern: Chimeric Leggings]|h|r",
+				["name"] = "|cff1eff00|Hitem:11992:0:778:0|h[Vermilion Band of the Owl]|h|r",
 				["data"] = {
-					["name"] = "Pattern: Chimeric Leggings",
+					["name"] = "Vermilion Band of the Owl",
 					["procs"] = {
 					},
-					["numlines"] = 12,
-				},
-			},
-			["Ranged"] = {
-				["stats"] = {
-				},
-				["name"] = "|cff1eff00|Hitem:15284:0:0:0|h[Long Battle Bow]|h|r",
-				["data"] = {
-					["name"] = "Long Battle Bow",
-					["procs"] = {
-					},
-					["RangedSpeed"] = 2.2,
-					["RangedMax"] = 34,
 					["numlines"] = 6,
-					["RangedMin"] = 18,
+				},
+			},
+			["Waist"] = {
+				["stats"] = {
+					["stamina"] = 11,
+					["strength"] = 12,
+				},
+				["name"] = "|cff1eff00|Hitem:10122:0:1211:0|h[Ornate Girdle of the Bear]|h|r",
+				["data"] = {
+					["name"] = "Ornate Girdle of the Bear",
+					["procs"] = {
+					},
+					["numlines"] = 7,
 				},
 			},
 			["Shoulder"] = {
@@ -261,29 +268,22 @@ TheoryCraft_Settings = {
 					["numlines"] = 11,
 				},
 			},
-			["Feet"] = {
+			["Legs"] = {
 				["stats"] = {
-					["stamina"] = 7,
-					["strength"] = 7,
 				},
-				["name"] = "|cff1eff00|Hitem:9864:0:1197:0|h[Renegade Boots of the Bear]|h|r",
+				["name"] = "|cff1eff00|Hitem:15746:0:0:0|h[Pattern: Chimeric Leggings]|h|r",
 				["data"] = {
-					["name"] = "Renegade Boots of the Bear",
+					["name"] = "Pattern: Chimeric Leggings",
 					["procs"] = {
 					},
-					["numlines"] = 7,
+					["numlines"] = 12,
 				},
 			},
 		},
-		["wear"] = {
-		},
-		["intellect"] = 0,
-		["spirit"] = 0,
-		["stamina"] = 0,
 	},
-	["procs"] = true,
-	["dataversion"] = "1.06",
-	["embedstyle1"] = true,
-	["combinedot"] = true,
+	["ColB2"] = 0.6862745098039216,
+	["ColG"] = 1,
+	["crit"] = true,
+	["nextstr"] = true,
 	["healanddamage"] = true,
 }

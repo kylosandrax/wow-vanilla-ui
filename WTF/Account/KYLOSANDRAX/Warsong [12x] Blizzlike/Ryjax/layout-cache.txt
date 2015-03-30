@@ -185,4 +185,4 @@ Y: -922
 Frame: TrinketMenu_MenuFrame
 FrameLevel: 1
 X: 923
-Y: -802
+Y: -762

@@ -230,7 +230,7 @@ ItemRack_Settings = {
 	["TinyTooltip"] = "OFF",
 	["FlipBar"] = "OFF",
 	["TooltipFollow"] = "ON",
-	["CompactList"] = "OFF",
+	["CompactList"] = "ON",
 	["CooldownNumbers"] = "OFF",
 	["MenuShift"] = "OFF",
 	["ShowAllEvents"] = "OFF",
@@ -366,97 +366,202 @@ ItemRack_Events = {
 Rack_User = {
 	["Kylosandrax of Warsong [12x] Blizzlike"] = {
 		["Sets"] = {
-			["Tank"] = {
+			["Rack-CombatQueue"] = {
 				[1] = {
-					["name"] = "Gyth's Skull of Frost Resistance",
-					["id"] = "12952:2545:1366",
-					["old"] = "12640:0:0",
 				},
 				[2] = {
-					["name"] = "Talisman of Protection",
-					["id"] = "19871:0:0",
-					["old"] = "21809:0:0",
 				},
 				[3] = {
-					["name"] = "Darksoul Shoulders",
-					["id"] = "19695:0:0",
-					["old"] = "21805:0:0",
+				},
+				[4] = {
 				},
 				[5] = {
-					["name"] = "Darksoul Breastplate",
-					["id"] = "19693:1892:0",
-					["old"] = "18503:1892:0",
 				},
 				[6] = {
-					["name"] = "Belt of the Sand Reaver",
-					["id"] = "21503:0:0",
-					["old"] = "19823:0:0",
 				},
 				[7] = {
-					["name"] = "Darksoul Leggings",
-					["id"] = "19694:2545:0",
-					["old"] = "14623:2545:0",
 				},
 				[8] = {
-					["name"] = "Bloodsoaked Greaves",
-					["id"] = "19913:929:0",
-					["old"] = "21490:1887:0",
 				},
 				[9] = {
-					["name"] = "Bracers of Heroism",
-					["id"] = "21996:1886:0",
-					["old"] = "21457:927:0",
 				},
 				[10] = {
-					["name"] = "Gauntlets of the Immovable",
-					["id"] = "21479:856:0",
-					["old"] = "22714:856:0",
 				},
 				[11] = {
-					["name"] = "Naglering",
-					["id"] = "11669:0:0",
-					["old"] = "19898:0:0",
 				},
 				[12] = {
-					["name"] = "Band of the Steadfast Hero",
-					["id"] = "22331:0:0",
-					["old"] = "21393:0:0",
 				},
 				[13] = {
-					["name"] = "Vigilance Charm",
-					["id"] = "18370:0:0",
-					["old"] = "13965:0:0",
 				},
 				[14] = {
-					["name"] = "Mark of Tyranny",
-					["id"] = "13966:0:0",
-					["old"] = "11815:0:0",
 				},
 				[15] = {
-					["name"] = "Sandstorm Cloak",
-					["id"] = "21456:0:0",
-					["old"] = "21394:0:0",
 				},
 				[16] = {
-					["name"] = "Thekal's Grasp",
-					["id"] = "19896:1900:0",
-					["old"] = "12940:1900:0",
 				},
 				[17] = {
-					["name"] = "Aegis of the Blood God",
-					["id"] = "19862:929:0",
-					["old"] = "19852:1900:0",
 				},
 				[18] = {
-					["name"] = "Willey's Portable Howitzer",
+				},
+				[19] = {
+				},
+				[0] = {
+				},
+			},
+			["Tank-MaxDEF"] = {
+				[1] = {
+					["id"] = "12952:2545:1366",
+					["name"] = "Gyth's Skull of Frost Resistance",
+				},
+				[2] = {
+					["id"] = "19871:0:0",
+					["name"] = "Talisman of Protection",
+				},
+				[3] = {
+					["name"] = "Polished Obsidian Pauldrons",
+					["id"] = "21805:0:0",
+					["old"] = "19695:0:0",
+				},
+				[5] = {
+					["name"] = "Deathbone Chestplate",
+					["id"] = "14624:0:0",
+					["old"] = "19693:1892:0",
+				},
+				[6] = {
+					["id"] = "21503:0:0",
+					["name"] = "Belt of the Sand Reaver",
+				},
+				[7] = {
+					["name"] = "Deathbone Legguards",
+					["id"] = "14623:2545:0",
+					["old"] = "19694:2545:0",
+				},
+				[8] = {
+					["name"] = "Deathbone Sabatons",
+					["id"] = "14621:929:0",
+					["old"] = "19913:929:0",
+				},
+				[9] = {
+					["id"] = "21996:1886:0",
+					["name"] = "Bracers of Heroism",
+				},
+				[10] = {
+					["name"] = "Stonegrip Gauntlets",
+					["id"] = "13072:856:0",
+					["old"] = "21479:856:0",
+				},
+				[11] = {
+					["id"] = "11669:0:0",
+					["name"] = "Naglering",
+				},
+				[12] = {
+					["id"] = "22331:0:0",
+					["name"] = "Band of the Steadfast Hero",
+				},
+				[13] = {
+					["name"] = "Force of Will",
+					["id"] = "11810:0:0",
+					["old"] = "18370:0:0",
+				},
+				[14] = {
+					["id"] = "13966:0:0",
+					["name"] = "Mark of Tyranny",
+				},
+				[15] = {
+					["id"] = "21456:0:0",
+					["name"] = "Sandstorm Cloak",
+				},
+				[16] = {
+					["id"] = "19896:1900:0",
+					["name"] = "Thekal's Grasp",
+				},
+				[17] = {
+					["id"] = "19862:929:0",
+					["name"] = "Aegis of the Blood God",
+				},
+				[18] = {
 					["id"] = "13380:0:0",
-					["old"] = "22347:2523:0",
+					["name"] = "Willey's Portable Howitzer",
 				},
 				["oldsetname"] = "Tank",
 				[0] = {
-					["name"] = "Accurate Slugs",
 					["id"] = "11284:0:0",
-					["old"] = "11285:0:0",
+					["name"] = "Accurate Slugs",
+				},
+				["icon"] = "Interface\\Icons\\Ability_Warrior_Safeguard",
+			},
+			["Tank-Raid"] = {
+				[1] = {
+					["id"] = "12952:2545:1366",
+					["name"] = "Gyth's Skull of Frost Resistance",
+				},
+				[2] = {
+					["id"] = "19871:0:0",
+					["name"] = "Talisman of Protection",
+				},
+				[3] = {
+					["id"] = "21805:0:0",
+					["name"] = "Polished Obsidian Pauldrons",
+				},
+				[5] = {
+					["id"] = "18503:1892:0",
+					["name"] = "Kromcrush's Chestplate",
+				},
+				[6] = {
+					["id"] = "21503:0:0",
+					["name"] = "Belt of the Sand Reaver",
+				},
+				[7] = {
+					["id"] = "14623:2545:0",
+					["name"] = "Deathbone Legguards",
+				},
+				[8] = {
+					["id"] = "19913:929:0",
+					["name"] = "Bloodsoaked Greaves",
+				},
+				[9] = {
+					["id"] = "21996:1886:0",
+					["name"] = "Bracers of Heroism",
+				},
+				[10] = {
+					["id"] = "21479:856:0",
+					["name"] = "Gauntlets of the Immovable",
+				},
+				[11] = {
+					["id"] = "11669:0:0",
+					["name"] = "Naglering",
+				},
+				[12] = {
+					["id"] = "22331:0:0",
+					["name"] = "Band of the Steadfast Hero",
+				},
+				[13] = {
+					["id"] = "13966:0:0",
+					["name"] = "Mark of Tyranny",
+				},
+				[14] = {
+					["id"] = "11810:0:0",
+					["name"] = "Force of Will",
+				},
+				[15] = {
+					["id"] = "21456:0:0",
+					["name"] = "Sandstorm Cloak",
+				},
+				[16] = {
+					["id"] = "19896:1900:0",
+					["name"] = "Thekal's Grasp",
+				},
+				[17] = {
+					["id"] = "19862:929:0",
+					["name"] = "Aegis of the Blood God",
+				},
+				[18] = {
+					["id"] = "13380:0:0",
+					["name"] = "Willey's Portable Howitzer",
+				},
+				[0] = {
+					["id"] = "11284:0:0",
+					["name"] = "Accurate Slugs",
 				},
 				["icon"] = "Interface\\Icons\\INV_Helmet_20",
 			},
@@ -554,48 +659,6 @@ Rack_User = {
 				},
 				["icon"] = "Interface\\Icons\\Ability_BackStab",
 			},
-			["Rack-CombatQueue"] = {
-				[1] = {
-				},
-				[2] = {
-				},
-				[3] = {
-				},
-				[4] = {
-				},
-				[5] = {
-				},
-				[6] = {
-				},
-				[7] = {
-				},
-				[8] = {
-				},
-				[9] = {
-				},
-				[10] = {
-				},
-				[11] = {
-				},
-				[12] = {
-				},
-				[13] = {
-				},
-				[14] = {
-				},
-				[15] = {
-				},
-				[16] = {
-				},
-				[17] = {
-				},
-				[18] = {
-				},
-				[19] = {
-				},
-				[0] = {
-				},
-			},
 			["Nekkid"] = {
 				[1] = {
 					["name"] = "(empty)",
@@ -685,90 +748,116 @@ Rack_User = {
 				["oldsetname"] = "Tank",
 				["icon"] = "Interface\\Icons\\Ability_CheapShot",
 			},
-			["Tank-MaxDEF"] = {
+			["Tank-FR"] = {
+				["oldsetname"] = "Tank-Raid",
+				[17] = {
+					["name"] = "Draconian Deflector",
+					["id"] = "12602:929:0",
+					["old"] = "19862:929:0",
+				},
+				["icon"] = "Interface\\Icons\\INV_Helmet_20",
+				[15] = {
+					["name"] = "Cape of the Fire Salamander",
+					["id"] = "11812:0:0",
+					["old"] = "21456:0:0",
+				},
+			},
+			["Tank"] = {
 				[1] = {
-					["id"] = "12952:2545:1366",
 					["name"] = "Gyth's Skull of Frost Resistance",
+					["id"] = "12952:2545:1366",
+					["old"] = "12640:0:0",
 				},
 				[2] = {
-					["id"] = "19871:0:0",
 					["name"] = "Talisman of Protection",
+					["id"] = "19871:0:0",
+					["old"] = "21809:0:0",
 				},
 				[3] = {
-					["name"] = "Polished Obsidian Pauldrons",
-					["id"] = "21805:0:0",
-					["old"] = "19695:0:0",
+					["name"] = "Darksoul Shoulders",
+					["id"] = "19695:0:0",
+					["old"] = "12927:0:0",
 				},
 				[5] = {
-					["name"] = "Deathbone Chestplate",
-					["id"] = "14624:0:0",
-					["old"] = "19693:1892:0",
+					["name"] = "Darksoul Breastplate",
+					["id"] = "19693:1892:0",
+					["old"] = "11926:928:0",
 				},
 				[6] = {
-					["id"] = "21503:0:0",
 					["name"] = "Belt of the Sand Reaver",
+					["id"] = "21503:0:0",
+					["old"] = "19823:0:0",
 				},
 				[7] = {
-					["name"] = "Deathbone Legguards",
-					["id"] = "14623:2545:0",
-					["old"] = "19694:2545:0",
+					["name"] = "Darksoul Leggings",
+					["id"] = "19694:2545:0",
+					["old"] = "22385:0:0",
 				},
 				[8] = {
-					["name"] = "Deathbone Sabatons",
-					["id"] = "14621:929:0",
-					["old"] = "19913:929:0",
+					["name"] = "Bloodsoaked Greaves",
+					["id"] = "19913:929:0",
+					["old"] = "21490:1887:0",
 				},
 				[9] = {
-					["id"] = "21996:1886:0",
 					["name"] = "Bracers of Heroism",
+					["id"] = "21996:1886:0",
+					["old"] = "21457:927:0",
 				},
 				[10] = {
-					["name"] = "Stonegrip Gauntlets",
-					["id"] = "13072:856:0",
-					["old"] = "21479:856:0",
+					["name"] = "Gauntlets of the Immovable",
+					["id"] = "21479:856:0",
+					["old"] = "22714:856:0",
 				},
 				[11] = {
-					["id"] = "11669:0:0",
 					["name"] = "Naglering",
+					["id"] = "11669:0:0",
+					["old"] = "19898:0:0",
 				},
 				[12] = {
-					["id"] = "22331:0:0",
 					["name"] = "Band of the Steadfast Hero",
+					["id"] = "22331:0:0",
+					["old"] = "21393:0:0",
 				},
 				[13] = {
-					["name"] = "Force of Will",
-					["id"] = "11810:0:0",
-					["old"] = "19948:0:0",
+					["name"] = "Vigilance Charm",
+					["id"] = "18370:0:0",
+					["old"] = "13965:0:0",
 				},
 				[14] = {
-					["id"] = "13966:0:0",
 					["name"] = "Mark of Tyranny",
+					["id"] = "13966:0:0",
+					["old"] = "11815:0:0",
 				},
 				[15] = {
-					["id"] = "21456:0:0",
 					["name"] = "Sandstorm Cloak",
+					["id"] = "21456:0:0",
+					["old"] = "21394:0:0",
 				},
 				[16] = {
-					["id"] = "19896:1900:0",
 					["name"] = "Thekal's Grasp",
+					["id"] = "19896:1900:0",
+					["old"] = "12940:1900:0",
 				},
 				[17] = {
-					["id"] = "19862:929:0",
 					["name"] = "Aegis of the Blood God",
+					["id"] = "19862:929:0",
+					["old"] = "19852:1900:0",
 				},
 				[18] = {
-					["id"] = "13380:0:0",
 					["name"] = "Willey's Portable Howitzer",
+					["id"] = "13380:0:0",
+					["old"] = "22347:2523:0",
 				},
-				["oldsetname"] = "Tank",
+				["oldsetname"] = "DPS",
 				[0] = {
-					["id"] = "11284:0:0",
 					["name"] = "Accurate Slugs",
+					["id"] = "11284:0:0",
+					["old"] = "11285:0:0",
 				},
-				["icon"] = "Interface\\Icons\\Ability_Warrior_Safeguard",
+				["icon"] = "Interface\\Icons\\INV_Helmet_20",
 			},
 		},
-		["CurrentSet"] = "DPS",
+		["CurrentSet"] = "Tank-Raid",
 	},
 	["Zapunzel of Warsong [12x] Blizzlike"] = {
 		["Sets"] = {
@@ -1134,8 +1223,6 @@ Rack_User = {
 					["id"] = "22397:0:0",
 					["old"] = "23198:0:0",
 				},
-				["key"] = "F9",
-				["keyindex"] = 1,
 				["icon"] = "Interface\\Icons\\Ability_Druid_CatForm",
 				["oldsetname"] = "Tanking",
 			},
@@ -1185,7 +1272,7 @@ Rack_User = {
 				[1] = {
 					["name"] = "Blooddrenched Mask",
 					["id"] = "22718:0:0",
-					["old"] = "12587:0:0",
+					["old"] = "16900:0:0",
 				},
 				[2] = {
 					["name"] = "Obsidian Pendant of the Bear",
@@ -1195,7 +1282,7 @@ Rack_User = {
 				[3] = {
 					["name"] = "Golden Mantle of the Dawn",
 					["id"] = "19058:0:0",
-					["old"] = "10228:0:1215",
+					["old"] = "22234:0:0",
 				},
 				[5] = {
 					["name"] = "Mixologist's Tunic",
@@ -1205,12 +1292,12 @@ Rack_User = {
 				[6] = {
 					["name"] = "Serpentine Sash",
 					["id"] = "13118:0:0",
-					["old"] = "20216:0:0",
+					["old"] = "18327:0:0",
 				},
 				[7] = {
 					["name"] = "Warstrife Leggings",
 					["id"] = "11821:2545:0",
-					["old"] = "12963:0:0",
+					["old"] = "18386:0:0",
 				},
 				[8] = {
 					["name"] = "Abyssal Leather Boots of Striking",
@@ -1220,42 +1307,42 @@ Rack_User = {
 				[9] = {
 					["name"] = "Wristguards of Renown",
 					["id"] = "22204:1886:0",
-					["old"] = "22108:927:0",
+					["old"] = "19840:905:0",
 				},
 				[10] = {
 					["name"] = "Toughened Silithid Hide Gloves",
 					["id"] = "21501:904:0",
-					["old"] = "19869:0:0",
+					["old"] = "21458:0:0",
 				},
 				[11] = {
 					["name"] = "Thrall's Resolve",
 					["id"] = "12544:0:0",
-					["old"] = "12002:0:947",
+					["old"] = "19863:0:0",
 				},
 				[12] = {
 					["name"] = "Ring of Protection",
 					["id"] = "15855:0:0",
-					["old"] = "18522:0:0",
+					["old"] = "19920:0:0",
 				},
 				[13] = {
 					["name"] = "Mark of Tyranny",
 					["id"] = "13966:0:0",
-					["old"] = "19120:0:0",
+					["old"] = "18470:0:0",
 				},
 				[14] = {
 					["name"] = "Smoking Heart of the Mountain",
 					["id"] = "11811:0:0",
-					["old"] = "13965:0:0",
+					["old"] = "11819:0:0",
 				},
 				[15] = {
 					["name"] = "Overlord's Embrace",
 					["id"] = "19888:849:0",
-					["old"] = "10071:0:604",
+					["old"] = "21470:0:0",
 				},
 				[16] = {
 					["name"] = "Warden Staff",
 					["id"] = "943:249:0",
-					["old"] = "18420:1896:0",
+					["old"] = "22713:0:0",
 				},
 				[17] = {
 					["id"] = 0,
@@ -1264,18 +1351,16 @@ Rack_User = {
 				[18] = {
 					["name"] = "Idol of Brutality",
 					["id"] = "23198:0:0",
-					["old"] = "22397:0:0",
+					["old"] = "22398:0:0",
 				},
-				["key"] = "F10",
-				["keyindex"] = 3,
 				["icon"] = "Interface\\Icons\\Ability_Warrior_DefensiveStance",
-				["oldsetname"] = "DPS",
+				["oldsetname"] = "Tanking",
 			},
 			["HealBot"] = {
 				[1] = {
 					["name"] = "Stormrage Cover",
 					["id"] = "16900:0:0",
-					["old"] = "12587:0:0",
+					["old"] = "22718:0:0",
 				},
 				[2] = {
 					["name"] = "Jeklik's Opaline Talisman",
@@ -1285,7 +1370,7 @@ Rack_User = {
 				[3] = {
 					["name"] = "Mantle of Lost Hope",
 					["id"] = "22234:0:0",
-					["old"] = "10228:0:1215",
+					["old"] = "19058:0:0",
 				},
 				[5] = {
 					["name"] = "Cenarion Vestments",
@@ -1295,12 +1380,12 @@ Rack_User = {
 				[6] = {
 					["name"] = "Whipvine Cord",
 					["id"] = "18327:0:0",
-					["old"] = "20216:0:0",
+					["old"] = "13118:0:0",
 				},
 				[7] = {
 					["name"] = "Padre's Trousers",
 					["id"] = "18386:0:0",
-					["old"] = "12963:0:0",
+					["old"] = "11821:2545:0",
 				},
 				[8] = {
 					["name"] = "Firemoss Boots",
@@ -1308,44 +1393,43 @@ Rack_User = {
 					["old"] = "20658:852:2149",
 				},
 				[9] = {
-					["name"] = "Zandalar Haruspex's Bracers",
 					["id"] = "19840:905:0",
-					["old"] = "22108:927:0",
+					["name"] = "Zandalar Haruspex's Bracers",
 				},
 				[10] = {
 					["name"] = "Gauntlets of New Life",
 					["id"] = "21458:0:0",
-					["old"] = "19869:0:0",
+					["old"] = "21501:904:0",
 				},
 				[11] = {
 					["name"] = "Primalist's Seal",
 					["id"] = "19863:0:0",
-					["old"] = "12002:0:947",
+					["old"] = "12544:0:0",
 				},
 				[12] = {
-					["name"] = "Fordring's Seal",
-					["id"] = "16058:0:0",
-					["old"] = "18522:0:0",
+					["name"] = "Primalist's Band",
+					["id"] = "19920:0:0",
+					["old"] = "15855:0:0",
 				},
 				[13] = {
 					["name"] = "Royal Seal of Eldre'Thalas",
 					["id"] = "18470:0:0",
-					["old"] = "19120:0:0",
+					["old"] = "13966:0:0",
 				},
 				[14] = {
-					["name"] = "Second Wind",
-					["id"] = "11819:0:0",
-					["old"] = "13965:0:0",
+					["name"] = "Mindtap Talisman",
+					["id"] = "18371:0:0",
+					["old"] = "11811:0:0",
 				},
 				[15] = {
 					["name"] = "Cloak of the Savior",
 					["id"] = "21470:0:0",
-					["old"] = "10071:0:604",
+					["old"] = "19888:849:0",
 				},
 				[16] = {
 					["name"] = "Zulian Scepter of Rites",
 					["id"] = "22713:0:0",
-					["old"] = "18420:1896:0",
+					["old"] = "943:249:0",
 				},
 				[17] = {
 					["name"] = "Thaurissan's Royal Scepter",
@@ -1355,12 +1439,10 @@ Rack_User = {
 				[18] = {
 					["name"] = "Idol of Rejuvenation",
 					["id"] = "22398:0:0",
-					["old"] = "22397:0:0",
+					["old"] = "23198:0:0",
 				},
-				["key"] = "F12",
-				["keyindex"] = 2,
 				["icon"] = "Interface\\Icons\\Ability_DeathKnight_RemorselessWinters",
-				["oldsetname"] = "DPS",
+				["oldsetname"] = "Tanking",
 			},
 		},
 		["CurrentSet"] = "HealBot",
@@ -1369,78 +1451,89 @@ Rack_User = {
 		["Sets"] = {
 			["Healbot-MaxMP5"] = {
 				[1] = {
-					["id"] = "18870:0:0",
 					["name"] = "Helm of the Lifegiver",
+					["id"] = "18870:0:0",
+					["old"] = "11925:0:0",
 				},
 				[2] = {
-					["id"] = "19303:0:0",
 					["name"] = "Darkmoon Necklace",
+					["id"] = "19303:0:0",
+					["old"] = "12025:0:861",
 				},
 				[3] = {
 					["name"] = "Mantle of Lost Hope",
 					["id"] = "22234:0:0",
-					["old"] = "18810:0:0",
+					["old"] = "13358:0:0",
 				},
 				[5] = {
-					["id"] = "10007:0:0",
 					["name"] = "Red Mageweave Vest",
+					["id"] = "10007:0:0",
+					["old"] = "11926:0:0",
 				},
 				[6] = {
-					["id"] = "18104:0:0",
 					["name"] = "Feralsurge Girdle",
+					["id"] = "18104:0:0",
+					["old"] = "16680:0:0",
 				},
 				[7] = {
 					["name"] = "Earthfury Legguards",
 					["id"] = "16843:0:0",
-					["old"] = "18682:0:0",
+					["old"] = "18524:0:0",
 				},
 				[8] = {
 					["name"] = "Abyssal Mail Sabatons of Restoration",
 					["id"] = "20656:0:2153",
-					["old"] = "22275:0:0",
+					["old"] = "20656:0:2151",
 				},
 				[9] = {
-					["id"] = "22095:0:0",
 					["name"] = "Bindings of The Five Thunders",
+					["id"] = "22095:0:0",
+					["old"] = "22204:0:0",
 				},
 				[10] = {
 					["name"] = "Abyssal Mail Handguards of Restoration",
 					["id"] = "20659:0:2153",
-					["old"] = "12554:0:0",
+					["old"] = "11814:0:0",
 				},
 				[11] = {
-					["id"] = "22257:0:0",
 					["name"] = "Bloodclot Band",
+					["id"] = "22257:0:0",
+					["old"] = "6414:0:0",
 				},
 				[12] = {
-					["id"] = "17110:0:0",
 					["name"] = "Seal of the Archmagus",
+					["id"] = "17110:0:0",
+					["old"] = "18522:0:0",
 				},
 				[13] = {
 					["id"] = "12930:0:0",
 					["name"] = "Briarwood Reed",
 				},
 				[14] = {
-					["id"] = "18371:0:0",
 					["name"] = "Mindtap Talisman",
+					["id"] = "18371:0:0",
+					["old"] = "11815:0:0",
 				},
 				[15] = {
-					["id"] = "11623:0:0",
 					["name"] = "Spritecaster Cape",
+					["id"] = "11623:0:0",
+					["old"] = "11858:0:0",
 				},
 				[16] = {
-					["id"] = "17105:0:0",
 					["name"] = "Aurastone Hammer",
+					["id"] = "17105:0:0",
+					["old"] = "22404:0:0",
 				},
 				[17] = {
-					["id"] = "22319:0:0",
 					["name"] = "Tome of Divine Right",
+					["id"] = "22319:0:0",
+					["old"] = "18485:0:0",
 				},
 				[18] = {
 					["id"] = "22395:0:0",
 					["name"] = "Totem of Rage",
 				},
-				["oldsetname"] = "Healbot-MaxSP",
+				["oldsetname"] = "Melee",
 				["icon"] = "Interface\\Icons\\Ability_Druid_TreeofLife",
 			},
 			["Melee"] = {
@@ -1523,10 +1616,8 @@ Rack_User = {
 					["id"] = "22395:0:0",
 					["name"] = "Totem of Rage",
 				},
-				["key"] = "F9",
-				["keyindex"] = 2,
-				["icon"] = "Interface\\Icons\\Ability_DualWield",
 				["oldsetname"] = "Healbot-MaxSP",
+				["icon"] = "Interface\\Icons\\Ability_DualWield",
 			},
 			["Rack-CombatQueue"] = {
 				[1] = {
@@ -1584,7 +1675,7 @@ Rack_User = {
 				[3] = {
 					["name"] = "Wild Growth Spaulders",
 					["id"] = "18810:0:0",
-					["old"] = "13358:0:0",
+					["old"] = "22234:0:0",
 				},
 				[5] = {
 					["name"] = "Red Mageweave Vest",
@@ -1604,7 +1695,7 @@ Rack_User = {
 				[8] = {
 					["name"] = "Firemoss Boots",
 					["id"] = "22275:0:0",
-					["old"] = "20656:0:2151",
+					["old"] = "20656:0:2153",
 				},
 				[9] = {
 					["name"] = "Bindings of The Five Thunders",
@@ -1614,7 +1705,7 @@ Rack_User = {
 				[10] = {
 					["name"] = "Hands of the Exalted Herald",
 					["id"] = "12554:0:0",
-					["old"] = "11814:0:0",
+					["old"] = "20659:0:2153",
 				},
 				[11] = {
 					["name"] = "Bloodclot Band",
@@ -1655,7 +1746,7 @@ Rack_User = {
 					["name"] = "Totem of Rage",
 				},
 				["icon"] = "Interface\\Icons\\Ability_Druid_TreeofLife",
-				["oldsetname"] = "Melee",
+				["oldsetname"] = "Healbot-MaxMP5",
 			},
 		},
 		["CurrentSet"] = "Healbot-MaxSP",

@@ -4,26 +4,26 @@ CliqueDB = {
 		["Default"] = {
 			["archud"] = true,
 			["squeaky"] = true,
-			["nuf"] = true,
 			["duf"] = true,
-			["blizzraid"] = true,
+			["perfectraid"] = true,
 			["ouf"] = true,
 			["healassist"] = true,
-			["aofhclique"] = true,
-			["needylist"] = true,
-			["ctra"] = true,
 			["oramtf"] = true,
+			["needylist"] = true,
+			["nuf"] = true,
 			["mg2-64pre"] = true,
 			["sageuf"] = true,
 			["xperl"] = true,
-			["xraid"] = true,
 			["ora2mtf"] = true,
-			["marsraid"] = true,
+			["aofhclique"] = true,
+			["xraid"] = true,
 			["squishy"] = true,
+			["marsraid"] = true,
+			["ctra"] = true,
 			["pcuf"] = true,
 			["watchdog"] = true,
 			["easyraid"] = true,
-			["perfectraid"] = true,
+			["blizzraid"] = true,
 		},
 	},
 	["chars"] = {
@@ -35,7 +35,7 @@ CliqueDB = {
 			["Default Hostile"] = {
 			},
 		},
-		["Zapunzel of Warsong [12x] Blizzlike"] = {
+		["Kylosandrax of Al'Akir [instant 60] Blizzlike"] = {
 			["Default Friendly"] = {
 			},
 			["Out-of-combat"] = {
@@ -112,9 +112,9 @@ CliqueDB = {
 				[3] = {
 					["name"] = "Healing Wave",
 					["button"] = "RightButton",
-					["rank"] = "9",
-					["modifiers"] = 4,
 					["texture"] = "Interface\\Icons\\Spell_Nature_MagicImmunity",
+					["modifiers"] = 4,
+					["rank"] = "6",
 				},
 				[4] = {
 					["name"] = "Lesser Healing Wave",
@@ -194,7 +194,7 @@ CliqueDB = {
 			["Default Hostile"] = {
 			},
 		},
-		["Kylosandrax of Al'Akir [instant 60] Blizzlike"] = {
+		["Zapunzel of Warsong [12x] Blizzlike"] = {
 			["Default Friendly"] = {
 			},
 			["Out-of-combat"] = {

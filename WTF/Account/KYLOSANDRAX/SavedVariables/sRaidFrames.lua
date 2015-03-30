@@ -13,7 +13,7 @@ sRaidFramesDB = {
 				["g"] = 0.4509803921568628,
 				["b"] = 0.4509803921568628,
 			},
-			["BuffType"] = "buffs",
+			["BuffType"] = "buffsanddebuffs",
 			["BackgroundColor"] = {
 				["a"] = 0,
 				["r"] = 0,
