@@ -41,7 +41,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Load predefined settings for best visual effect"] = true,
 	
 	["_Load profiles"] = true,
-	["Classic - 8 per column"] = true,
+	["Classic - 5 per column"] = true,
 	["Classic - 8 per column"] = true,
 	["Classic - 10 per column"] = true,
 	["Classic - 20 per column"] = true,
@@ -51,7 +51,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Compact - Horizontal 8 per row"] = true,
 	
 	["_Focus frame"] = true,
-	["Use keybinding to add/remove units manually or select Polpulate with range feature"] = true,
+	["Use keybinding to add/remove focus units."] = true,
 	
 	["Load predefined settings"] = true,
 	["Common"] = true,
@@ -118,7 +118,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Unlocked"] = true,
 	["Locked"] = true,
 
-	["_Hide party interface"] = true,
+	["Hide party interface"] = true,
 	["Hide party interface in raid - Blizzard's version may fail sometimes"] = true,
 
 	["Health text"] = true,
@@ -248,7 +248,8 @@ L:RegisterTranslations("enUS", function() return {
 	["Turn the border of units who have aggro red"] = true,
 	["_Range"] = true,
 	["Set about range"] = true,
-	
+	["Show estimated range"] = true,
+	["Show estimated range next to player's name"] = true,
 	["Enable light range check"] = true,
 	["Enable 28y range check in Instances and 40y coordinates dependant range check in Outdoors and Bgs - Suggested when you neither play healing class nor using Blizzard frames, agUnitFrames or LunaUnitFrames"] = true,
 	
@@ -257,7 +258,16 @@ L:RegisterTranslations("enUS", function() return {
 	
 	["Enable combined range check"] = true,
 	["Enable 40y accurate range check only in combat otherwise light range check is active"] = true,
-	
+
+
+	["_Arrows"] = true,
+	["Coordinates dependant functionality, won't work in instances"] = true,
+	["Enable arrows"] = true,
+	["Enable unit arrows"] = true,
+	["Focus unit arrows"] = true,
+	["Enable arrows only for focus units"] = true,
+
+
 	["_Debug"] = true,
 	["Set about debug"] = true,
 	["Enable range calculation debug"] = true,

@@ -85,6 +85,8 @@ sRaidFrames.SpellCheck = false
 sRaidFrames.MenuOpen = false
 sRaidFrames.MapEnable = false
 sRaidFrames.MultidragInfo = false
+sRaidFrames.BuffsDebuffsInfo = false
+sRaidFrames.PopulateFocusInfo = false
 
 sRaidFrames.debuffSlots = {}
 sRaidFrames.buffsupdatecounter = 0
@@ -92,9 +94,11 @@ sRaidFrames.JoiningWorld = 0
 sRaidFrames.NextScan = 0
 sRaidFrames.MapScale = 0
 
+sRaidFrames.ArrowsDisable = false
 
-sRaidFrames.ClassSpellArray = {Paladin = "Holy Light", Priest = "Flash Heal", Druid = "Healing Touch", Shaman = "Healing Wave"}
 
+--sRaidFrames.ClassSpellArray = {Paladin = "Holy Light", Priest = "Flash Heal", Druid = "Healing Touch", Shaman = "Healing Wave"}
+sRaidFrames.ClassSpellArray = {Paladin = BS["Holy Light"], Priest = BS["Flash Heal"], Druid = BS["Healing Touch"], Shaman = BS["Healing Wave"]}
 
 function sRaidFrames:OnInitialize()
 
@@ -154,7 +158,9 @@ function sRaidFrames:OnInitialize()
 		Buff_Growth			= "vertical",
 		Buff_Anchor 		= "topright",
 		Bordertexture		= "Interface\\AddOns\\sRaidFrames\\borders\\UI-Tooltip-Border_Original.blp",
-		heal 				= "round"
+		heal 				= "round",
+		RangeShow			= false,
+		ArrowsEnable		= true
 
 		
 	})
@@ -177,6 +183,9 @@ function sRaidFrames:OnInitialize()
 	--self.tooltip:SetOwner(WorldFrame, "ANCHOR_TOPRIGHT", 0,0);
 
 	self.master:Hide()
+	
+	
+	
 	
 	--self:LoadProfile()
 
@@ -229,7 +238,8 @@ function sRaidFrames:OnEnable()
 	self:UpdateRoster()
 	
 	Zorlen_MakeFirstMacros = nil
-	
+
+
 	if LunaUnitFrames then
 		LunaUnitFrames.UpdateTargetFrameOld = LunaUnitFrames.UpdateTargetFrame
 		LunaUnitFrames.UpdateTargetFrame = self.Luna_Target_Hook
@@ -253,6 +263,9 @@ function sRaidFrames:OnEnable()
 	end
 end
 
+
+
+
 function sRaidFrames:PatchUpdate()
 	if not self.opt.DebuffFilter then
 		self.opt.DebuffFilter = {}
@@ -260,6 +273,13 @@ function sRaidFrames:PatchUpdate()
 	if not self.opt.heal then
 		self.opt.heal = "none"
 	end
+	
+	--patch 1.1
+	self.opt.fill_range = false
+	self.opt.dynamic_sort = false
+	self.opt.dynamic_range_sort = false
+	self.opt.dynamic_overheal_sort = false
+	self.opt.dynamic_aggro_sort = false
 end
 
 
@@ -640,36 +660,43 @@ function sRaidFrames:RangeCheck()
 	if not self.opt.RangeCheck and not self.opt.ExtendedRangeCheck and not self.opt.ExtendedRangeCheckCombat then 
 		return 
 	end	
-	--DEFAULT_CHAT_FRAME:AddMessage("|cff00eeeeDebug: |cffffffffRange Check")
+	
 	if not self.ClassCheck then 
-		self.ClassCheck = UnitClass("player") 
+		self.ClassCheck = Zorlen_UnitClass("player")
 		self.SpellCheck = self.ClassSpellArray[self.ClassCheck]
 	end
-	
-	--if not UnitIsDeadOrGhost("player") and table.getn(self.ExtendedRangeScan) == 0 then --now > self.NextScan or and (self.MapEnable and self.MapScale == 0 or not self.MapEnable)
-	if not UnitIsDeadOrGhost("player") and self:ExtendedRangeArrayUtilize("calc") == 0 then --now > self.NextScan or and (self.MapEnable and self.MapScale == 0 or not self.MapEnable)
-		self:CancelScheduledEvent("sRaidFramesExtendedRangeCheck")
-		
-		--self.ExtendedRangeScan = {} 
-		--self.ExtendedRangeScan = Compost and Compost:Acquire() or {}
-		self:ExtendedRangeArrayUtilize("reset")
 
-		local counter = 1		
+	if not UnitIsDeadOrGhost("player") and self:ExtendedRangeArrayUtilize("calc") == 0 then
+		local counter = 1	
+		self:CancelScheduledEvent("sRaidFramesExtendedRangeCheck")
+		self:ExtendedRangeArrayUtilize("reset")
+	
 		for unit in pairs(self.visible) do
 			local unitcheck = UnitExists(unit) and UnitIsVisible(unit) and UnitIsConnected(unit) and not UnitIsGhost(unit)
 			local deadcheck = UnitIsDead(unit)
+			local _tx, _ty, dist = nil, nil, 28
+			
+			if self.MapEnable and unitcheck and not deadcheck then
+				_tx, _ty = GetPlayerMapPosition(unit)
+				dist = sqrt((_px - _tx)^2 + (_py - _ty)^2)*1000
+			end
+
+			local check_accurate = unitcheck and self.SpellCheck and (self.opt.ExtendedRangeCheck or self.opt.ExtendedRangeCheckCombat and UnitAffectingCombat("player")) and not deadcheck
+			local check_light = unitcheck and self.MapEnable and (self.opt.RangeCheck or self.opt.ExtendedRangeCheckCombat and not UnitAffectingCombat("player")) and not deadcheck
+
 			if unitcheck and UnitIsUnit("player", unit) then
-				--self.frames[unit]:SetAlpha(1)
-				self.UnitRangeArray[unit] = " 28Y"
+				self.UnitRangeArray[unit] = 0
 			elseif unitcheck and CheckInteractDistance(unit, 4) then
-				--self.frames[unit]:SetAlpha(1)
-				self.UnitRangeArray[unit] = " 28Y"
-				if self.MapEnable and (self.opt.RangeCheck or self.opt.ExtendedRangeCheckCombat and not UnitAffectingCombat("player")) then
-					local _tx, _ty = GetPlayerMapPosition(unit)
-					local dist = sqrt((_px - _tx)^2 + (_py - _ty)^2)*1000
-					if _tx > 0 and _ty > 0 then
-						if (dist/11.11) > self.MapScale and CheckInteractDistance(unit, 2) then
-							self.UnitRangeArray[unit] = " 11Y"
+				local close_range = CheckInteractDistance(unit, 2)
+				if close_range then
+					self.UnitRangeArray[unit] = 11
+				else
+					self.UnitRangeArray[unit] = 28
+				end
+				if self.MapEnable then
+					self.UnitRangeArray[unit] = math.floor(dist/self.MapScale)
+					if _tx and _tx > 0 and _ty and _ty > 0 then
+						if (dist/11.11) > self.MapScale and close_range then
 							local adjust = dist/11.11
 							self:DebugRange("RC_INC "..GetUnitName(unit).."_11Y: "..adjust.." - "..math.floor(adjust/self.MapScale*100 - 100).."% ")
 							self.MapScale = adjust
@@ -680,24 +707,24 @@ function sRaidFrames:RangeCheck()
 						end
 					end	
 				end
-			elseif unitcheck and self.MapEnable and (self.opt.RangeCheck or self.opt.ExtendedRangeCheckCombat and not UnitAffectingCombat("player")) and not deadcheck then
-				local _tx, _ty = GetPlayerMapPosition(unit)
-				local dist = sqrt((_px - _tx)^2 + (_py - _ty)^2)*1000
-				if _tx > 0 and _ty > 0 and self:VerifyUnitRange(unit, dist) then
-					--self.frames[unit]:SetAlpha(1)
-					self.UnitRangeArray[unit] = " 40Y*"
-				else
+			elseif check_light or check_accurate then
+				if unitcheck and self.MapEnable and not deadcheck and _tx and _tx > 0 and _ty and _ty > 0 and self:VerifyUnitRange(unit, dist) then
+					if check_light or check_accurate and self.UnitRangeArray[unit] ~= "" then
+						self.UnitRangeArray[unit] = math.floor(dist/self.MapScale)
+					end
+				elseif check_light then
 					self.UnitRangeArray[unit] = ""
-					--self.frames[unit]:SetAlpha(self.opt.RangeAlpha)
+				elseif self.UnitRangeArray[unit] ~= "" then
+					self.UnitRangeArray[unit] = 40
 				end
-			elseif unitcheck and self.SpellCheck and (self.opt.ExtendedRangeCheck or self.opt.ExtendedRangeCheckCombat and UnitAffectingCombat("player")) and not deadcheck then
-				--self.ExtendedRangeScan[counter] = unit
-				self:ExtendedRangeArrayUtilize("add", unit)
-				counter = counter + 1
+				
+				if check_accurate then
+					self:ExtendedRangeArrayUtilize("add", unit)
+					counter = counter + 1
+				end
 				
 			else
 				self.UnitRangeArray[unit] = ""
-				--self.frames[unit]:SetAlpha(self.opt.RangeAlpha)
 			end
 		end	
 		if counter > 1 then 
@@ -709,8 +736,6 @@ function sRaidFrames:RangeCheck()
 			local table_val = self:ExtendedRangeArrayUtilize("calc")
 			local step, freq = self:Freqcalc(table_val)
 			self:DebugRange("RC_STATUS: |cff00eeee"..status.."|cffffffff - TOTAL: |cff00eeee"..table_val.."|cffffffff - PERIOD: |cff00eeee"..((math.floor(freq *100))/100).."s |cffffffff")
-
-			
 			self:ScheduleRepeatingEvent("sRaidFramesExtendedRangeCheck", self.ExtendedRangeCheck, step , self)	
 		end
 	end
@@ -722,7 +747,6 @@ function sRaidFrames:ExtendedRangeCheck()
 	
 	if not (self.opt.ExtendedRangeCheck or self.opt.ExtendedRangeCheckCombat and UnitAffectingCombat("player")) or not UnitExists(j) or self.MenuOpen and self.MenuOpen > now or (InspectFrame and InspectFrame:IsVisible() or XLootFrame and XLootFrame:IsVisible() or LootFrame and LootFrame:IsVisible() or TradeFrame and TradeFrame:IsVisible()) or Zorlen_isEnemy("target") and isShootActive() then	
 		self:CancelScheduledEvent("sRaidFramesExtendedRangeCheck")
-		--Compost:Reclaim(self.ExtendedRangeScan)
 		self:ExtendedRangeArrayUtilize("reset")
 		return 
 	end
@@ -734,28 +758,23 @@ function sRaidFrames:ExtendedRangeCheck()
 		if not UnitExists("target") or UnitExists("target") and not UnitIsUnit("target", j) then
 			self.TargetMonitor = true
 			targetchanged = true
-			--DEFAULT_CHAT_FRAME:AddMessage("TargetUnit")
-			TargetUnit(j)
-			
+			TargetUnit(j)		
 		end
 		if self:IsSpellInRangeAndActionBar(self.SpellCheck) then
-			--self.frames[j]:SetAlpha(1)
-			if self.MapEnable and (self.opt.RangeCheck or self.opt.ExtendedRangeCheckCombat and not UnitAffectingCombat("player")) then self.UnitRangeArray[j] = " 40Y*" else self.UnitRangeArray[j] = " 40Y"	end
+			if self.UnitRangeArray[j] == "" then
+				self.UnitRangeArray[j] = 40
+			end	
 			self:DebugRange("RC "..GetUnitName(j).."_40y - " .."|cff00FF00 PASS")
 			jumpnext = nil
 		end
 		if targetchanged then 
 			self.TargetMonitorEnd = true
-			--DEFAULT_CHAT_FRAME:AddMessage("TargetLastTarget")
 			TargetLastTarget()
-			
 		end
 		if jumpnext then
-			--self.frames[j]:SetAlpha(self.opt.RangeAlpha)
 			self.UnitRangeArray[j] = ""
 			self:DebugRange("RC "..GetUnitName(j).."_40y - " .."|cffFF0000 NOT PASS")
 		end
-		--self.ExtendedRangeScan[i] = nil
 		self:ExtendedRangeArrayUtilize("remove", j)
 	end
 end
@@ -777,7 +796,7 @@ function sRaidFrames:VerifyUnitRange(unit, dist)
 		else
 			return nil
 		end
-	elseif dist < (self.MapScale*40*0.85) then
+	elseif dist < (self.MapScale*40*0.95) then
 		return true
 	else
 		return nil
@@ -789,6 +808,8 @@ function sRaidFrames:ZoneCheck()
 	self.MapEnable = false
 	SetMapToCurrentZone()
 	self:ResetHealIndicators()
+	self:ScheduleEvent("SRF_ZoneCheck", 2)
+	sRaidFrames:SetDegTex(true)
 	self:DebugRange("RC_RST")
 end
 
@@ -834,23 +855,26 @@ function sRaidFrames:UpdateUnit(units, force_focus)
 				local _, _, subgroup = GetRaidRosterInfo(id_str)
 				
 				if self.opt.grp_name then
-					subgroup = "G"..subgroup
+					subgroup = "("..subgroup..")"
 				else
 					subgroup = ""
 				end
 				
-				if self.opt.DebugRange then
+				if self.opt.RangeShow then
 					range = self.UnitRangeArray[unit]
-					if not range then
+					if not range or range == "" or range == 0 or UnitIsDeadOrGhost("player") then
 						range =  ""
+					else
+						range =  " "..range.."Y"
 					end
+					
 				end
 
 				local _, class = UnitClass(unit)
-				local unit_name = UnitName(unit).." "..subgroup
+				local unit_name = subgroup..UnitName(unit)
 				
-				if self.opt.unit_name_lenght or self.opt.DebugRange then
-					unit_name = string.sub(UnitName(unit), 1, 3).." "..subgroup --UnitName(unit)
+				if self.opt.unit_name_lenght or self.opt.RangeShow then
+					unit_name = subgroup..string.sub(UnitName(unit), 1, 3) --UnitName(unit)
 				end
 				
 				local unit_aggro = Banzai:GetUnitAggroByUnitId(unit)
@@ -907,7 +931,6 @@ function sRaidFrames:UpdateUnit(units, force_focus)
 						--f:SetBackdropColor(0.3, 0.3, 0.3, 1)
 					
 						self:HideHealIndicator(unit, true)
-						
 					else
 						
 						--self:CreateHealIndicator(unit)
@@ -1029,7 +1052,7 @@ function sRaidFrames:UpdateBuffs(units, update_counter)
 							
 						
 						if not self.opt.show_txt_buff then
-							if texture == "Interface\\Icons\\INV_BannerPVP_01" then
+							if texture == "Interface\\Icons\\INV_BannerPVP_01" or self.carrier == strlower(GetUnitName(unit)) then
 								f.mpbar.text:SetText("|cffFF0000"..L["Carrier"].."|r")
 								self.carrier = strlower(GetUnitName(unit))
 							elseif texture == "Interface\\Icons\\Spell_Nature_Lightning" and self:GetBuffName(unit, i) == BS["Innervate"] then
@@ -1092,7 +1115,7 @@ function sRaidFrames:UpdateBuffs(units, update_counter)
 								
 							elseif j == 2 then
 								process1 = self.opt.ShowOnlyDispellable
-								process2 = not self.opt.ShowDebuffsOnlyRange or self.opt.ShowDebuffsOnlyRange and self.UnitRangeArray[unit] and string.find(self.UnitRangeArray[unit], "28Y")
+								process2 = not self.opt.ShowDebuffsOnlyRange or self.opt.ShowDebuffsOnlyRange and self.UnitRangeArray[unit] and self.UnitRangeArray[unit] ~= "" and self.UnitRangeArray[unit] < 28
 								process2 = process2 and not self.TempTooltipDebuffs[debuffName]
 								
 							end
@@ -1313,6 +1336,11 @@ function sRaidFrames:CreateUnitFrame(id)
 	f.title:SetFontObject(GameFontNormalSmall)
 	f.title:SetJustifyH("LEFT")
 
+
+
+
+
+
 	f.buff1 = CreateFrame("Button", nil, f)
 	f.buff1.texture = f.buff1:CreateTexture(nil, "ARTWORK")
 	f.buff1.texture:SetAllPoints(f.buff1)
@@ -1369,13 +1397,17 @@ function sRaidFrames:CreateUnitFrame(id)
 	f.hpbar.indicator1:SetAlpha(1)
 	f.hpbar.indicator1:SetTexture("Interface\\Addons\\sRaidFrames\\textures\\round16x16")
 	f.hpbar.indicator1:Hide()
-	
+
 	f.hpbar.indicator2 = f.hpbar:CreateTexture(nil, "OVERLAY")
 	f.hpbar.indicator2:SetAlpha(1)
 	f.hpbar.indicator2:SetTexture("Interface\\Addons\\sRaidFrames\\textures\\square16x16")
 	f.hpbar.indicator2:Hide()
 	
-
+	f.hpbar.arrow = f.hpbar:CreateTexture(nil, "OVERLAY")
+	f.hpbar.arrow:SetAlpha(1)
+	f.hpbar.arrow:SetTexture("Interface\\Addons\\sRaidFrames\\textures\\arrows\\forward")
+	f.hpbar.arrow:Hide()	
+	
 	f.hpbar.text = f.hpbar:CreateFontString(nil, "ARTWORK")
 	f.hpbar.text:SetFontObject(GameFontHighlightSmall)
 	f.hpbar.text:SetJustifyH("CENTER")
@@ -1488,6 +1520,7 @@ function sRaidFrames:SetStyle(f, unit, width, aggro)
 	self:SetWHP(f, frame_width, 40)
 	self:SetWHP(f.title, frame_width - 10, 16, "TOPLEFT", f, "TOPLEFT",  5, -6)
 
+
 	if self.opt.Buff_Anchor == "topright" then
 		self:SetWHP(f.buff1, self.opt.buff_size, self.opt.buff_size, "TOPRIGHT", f.hpbar, "TOPRIGHT", 0.35, 0)
 		
@@ -1549,6 +1582,8 @@ function sRaidFrames:SetStyle(f, unit, width, aggro)
 
 	self:SetBackdrop(f, unit, aggro)
 	
+	self:SetWHP(f.hpbar.arrow, 20, 30, "CENTER", f, "CENTER", 0, 0)
+
 	if self.opt.vertical_hp then
 		f.hpbar:SetOrientation("VERTICAL")
 	else
@@ -1567,16 +1602,20 @@ function sRaidFrames:SetWHP(frame, width, height, p1, relative, p2, x, y)
 end
 
 function sRaidFrames:Sort_Force()
-	--DEFAULT_CHAT_FRAME:AddMessage("Sort_Force")
-	if self.opt.dynamic_sort or self.opt.SortBy == "fixed" then 
+	
+	if self.opt.dynamic_sort then
+	--if self.opt.dynamic_sort then or self.opt.SortBy == "fixed" then 	
 		self:Sort(true)
+		--DEFAULT_CHAT_FRAME:AddMessage("Sort_Force")
 	end
+	
+	sRaidFrames:SetDegTex()
 	
 	if self.opt.RangeCheck or self.opt.ExtendedRangeCheck or self.opt.ExtendedRangeCheckCombat then
 		for id = 1, MAX_RAID_MEMBERS do
 			if self.visible["raid" .. id] then
 				if self.UnitRangeArray["raid" .. id] ~= "" or UnitIsDeadOrGhost("player") then
-					self.frames["raid" .. id]:SetAlpha(1)
+					self.frames["raid" .. id]:SetAlpha(1)			
 				else
 					self.frames["raid" .. id]:SetAlpha(self.opt.RangeAlpha)
 				end
@@ -1593,7 +1632,7 @@ function sRaidFrames:ReturnClassCount(class)
 
 	while counter <= NumMembers do
 		u = "raid"..counter
-		if Zorlen_UnitClass(u) == class then
+		if Zorlen_UnitClass(u) == class and not self:CheckFocusUnit(u) then
 			counter_class = counter_class + 1
 		end
 		counter = counter + 1	
@@ -1639,7 +1678,7 @@ function sRaidFrames:Sort(force_sort)
 	local sort = {}
 	local counter={0,0,0,0,0,0,0,0,0}
 
-	self:RefreshFocusWithRange()
+	--self:RefreshFocusWithRange()
 
 
 	for id = 1, MAX_RAID_MEMBERS do
@@ -1723,9 +1762,9 @@ function sRaidFrames:Sort(force_sort)
 		end
 	end
 	
-	if self.opt.dynamic_sort then
-		table.sort(focus_units1, function(a,b) return self:UnitModHP("raid".. a) < self:UnitModHP("raid"..b) end)
-	end	
+	--if self.opt.dynamic_sort then
+	--	table.sort(focus_units1, function(a,b) return self:UnitModHP("raid".. a) < self:UnitModHP("raid"..b) end)
+	--end	
 	
 	local index = 40
 	for id in pairs(self.UnitSortOrder) do
@@ -1982,7 +2021,6 @@ function sRaidFrames:SetHealIndicator(unit)
 		end
 		
 		f:Show()
-
 	end	
 end
 
@@ -2024,7 +2062,7 @@ function sRaidFrames:LoadStyle()
 	self:Sort();
 end
 
-
+--[[
 function sRaidFrames:RefreshFocusWithRange()
 	self:CheckRangeFocus(nil, "reset")
 	for id = 1, MAX_RAID_MEMBERS do
@@ -2057,6 +2095,8 @@ function sRaidFrames:RefreshFocusWithRange()
 		end
 	end	
 end
+--]]
+
 
 function sRaidFrames:OverHealCalc(unit)
 	local bonus = 0
@@ -2083,7 +2123,7 @@ function sRaidFrames:OrderCalc(unit)
 	
 	return order
 end
-
+--[[
 function sRaidFrames:UnitModHP(unit)
 	local percent = nil
 	local treshhold = 3
@@ -2120,11 +2160,13 @@ function sRaidFrames:UnitModHP(unit)
 
 	return percent
 end
+--]]
 
 function sRaidFrames:CheckRangeHpCalc(unit)
 	return Zorlen_HealthPercent(unit) + self:OrderCalc(unit)
 end
 
+--[[
 function sRaidFrames:CheckRangeFocus(unit, mode)
 	if not self.opt.fill_range then
 		return nil
@@ -2160,7 +2202,7 @@ function sRaidFrames:CheckRangeFocus(unit, mode)
 		return nil
 	end	
 end
-
+--]]
 function sRaidFrames:CheckFocusUnit(unit)
 	if not unit then 
 		return 
@@ -2170,7 +2212,7 @@ function sRaidFrames:CheckFocusUnit(unit)
 		return
 	end	
 	
-	if self.UnitFocusArray[name] or self:CheckRangeFocus(unit, "check") then
+	if self.UnitFocusArray[name] then--or self:CheckRangeFocus(unit, "check") then
 		return true	
 	end
 	
@@ -2252,7 +2294,96 @@ function sRaidFrames:TrackCarrier(msg)
 	end
 end
 
-function sRaidFrames:xcv()
-	
-	
+function sRaidFrames:SetDegTex(force)
+	if force then
+		self.ArrowsDisable = nil
+	elseif self.ArrowsDisable then
+		return
+	end	
+		
+	if not self.opt.RangeCheck and not self.opt.ExtendedRangeCheck and not self.opt.ExtendedRangeCheckCombat or not sRaidFrames.opt.ArrowsEnable or not self.MapEnable or not UnitInRaid("player") then
+		self.ArrowsDisable = true
+	end
+		
+	for id = 1, MAX_RAID_MEMBERS do
+		if self.visible["raid" .. id] then
+			local unit = "raid" .. id
+			local dir = sRaidFramesArrows:CalcDegUnit(unit) - sRaidFramesArrows.direction - 180
+			local ArrowIcon
+			local OffSet
+			local FILE_PATH = "Interface\\Addons\\sRaidFrames\\textures\\arrows\\"
+			
+			if(dir and not self.ArrowsDisable) then
+				OffSet = tonumber(dir)
+				if(OffSet)then
+					if(OffSet > 180 )then
+						OffSet = OffSet - 360
+					elseif(OffSet < -180) then
+						OffSet = OffSet + 360
+					end
+				end
+				if(dir == "Arrived!") then
+					ArrowIcon = FILE_PATH.."Arrived"
+				elseif(OffSet)and ((OffSet >=-5) and ( OffSet <= 5))or(OffSet < -355) then 
+					ArrowIcon = FILE_PATH.."forward"
+				elseif(OffSet)and (OffSet < -5) and (OffSet >= -15) then
+					ArrowIcon = FILE_PATH.."FLeft+2"
+				elseif(OffSet)and (OffSet < -15) and (OffSet >= -35) then
+					ArrowIcon = FILE_PATH.."FLeft+1"
+				elseif(OffSet)and (OffSet < -35) and (OffSet >= -55) then	
+					ArrowIcon = FILE_PATH.."FLeft"
+				elseif(OffSet)and (OffSet < -55) and (OffSet >= -65) then	
+					ArrowIcon = FILE_PATH.."FLeft-1"
+				elseif(OffSet)and (OffSet < -65) and (OffSet >= -80) then	
+					ArrowIcon = FILE_PATH.."FLeft-2"
+				elseif(OffSet)and (OffSet < -80) and (OffSet >= -100) then	
+					ArrowIcon = FILE_PATH.."left"
+				elseif(OffSet)and (OffSet < -100) and (OffSet >= -115) then	
+					ArrowIcon = FILE_PATH.."BLeft-2"
+				elseif(OffSet)and (OffSet < -115) and (OffSet >= -135) then	
+					ArrowIcon = FILE_PATH.."BLeft-1"
+				elseif(OffSet)and (OffSet < -135) and (OffSet >= -155) then	
+					ArrowIcon = FILE_PATH.."BLeft"
+				elseif(OffSet)and (OffSet < -155) and (OffSet >= -165) then	
+					ArrowIcon = FILE_PATH.."BLeft+1"
+				elseif(OffSet)and (OffSet < -165) and (OffSet >= -175) then	
+					ArrowIcon = FILE_PATH.."BLeft+2"
+				elseif(OffSet)and ((OffSet < -175) and (OffSet >= -190)) or((OffSet > 175) and (OffSet <= 190)) then	
+					ArrowIcon = FILE_PATH.."Backward"
+				elseif(OffSet)and (OffSet > 165) and (OffSet <= 175) then	
+					ArrowIcon = FILE_PATH.."BRight+2"
+				elseif(OffSet)and (OffSet > 155) and (OffSet <= 165) then	
+					ArrowIcon = FILE_PATH.."BRight+1"
+				elseif(OffSet)and (OffSet > 135) and (OffSet <= 155) then	
+					ArrowIcon = FILE_PATH.."BRight"
+				elseif(OffSet)and (OffSet > 115) and (OffSet <= 135) then	
+					ArrowIcon = FILE_PATH.."BRight-1"
+				elseif(OffSet)and (OffSet > 100) and (OffSet <= 115) then	
+					ArrowIcon = FILE_PATH.."BRight-2"
+				elseif(OffSet)and (OffSet > 80) and (OffSet <= 100) then	
+					ArrowIcon = FILE_PATH.."right"
+				elseif(OffSet)and (OffSet > 65) and (OffSet <= 80) then	
+					ArrowIcon = FILE_PATH.."FRight-2"
+				elseif(OffSet)and (OffSet > 55) and (OffSet <= 65) then	
+					ArrowIcon = FILE_PATH.."FRight-1"
+				elseif(OffSet)and (OffSet > 35) and (OffSet <= 55) then	
+					ArrowIcon = FILE_PATH.."FRight"
+				elseif(OffSet)and (OffSet > 15) and (OffSet <= 35) then	
+					ArrowIcon = FILE_PATH.."FRight+1"
+				elseif(OffSet)and (OffSet > 5) and (OffSet <= 15) then	
+					ArrowIcon = FILE_PATH.."FRight+2"
+				end
+			end
+
+			if not self.ArrowsDisable and self.visible[unit] and not self.unavail[unit] and not UnitIsDeadOrGhost("player") and self.UnitRangeArray[unit] == "" and sRaidFramesArrows.direction ~= 0 and sRaidFramesArrows.ZoneUnit[unit] and (not self.opt.FocusArrows or self.opt.FocusArrows and self:CheckFocusUnit(unit)) then
+				self.frames[unit].hpbar.arrow:SetTexture(ArrowIcon);				
+				self.frames[unit].hpbar.arrow:Show()
+			else
+				self.frames[unit].hpbar.arrow:Hide()
+			end
+		end
+	end
+
+
 end
+
