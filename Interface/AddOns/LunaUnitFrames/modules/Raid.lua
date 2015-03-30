@@ -8,8 +8,23 @@ ScanTip:SetOwner(WorldFrame, "ANCHOR_NONE")
 LunaUnitFrames.frames.RaidFrames = {}
 
 local function Luna_Raid_OnClick()
-	local button = arg1
-	if (button == "LeftButton") then
+	local button, modifier
+	if (arg1 == "LeftButton") then
+		button = 1
+	else
+		button = 2
+	end
+	if IsShiftKeyDown() then
+		modifier = 2
+	elseif IsAltKeyDown() then
+		modifier = 3
+	elseif IsControlKeyDown() then
+		modifier = 4
+	else
+		modifier = 1
+	end
+	local func = loadstring(LunaOptions.clickcast[modifier][button])
+	if LunaOptions.clickcast[modifier][button] == "target" then
 		if (SpellIsTargeting()) then
 			SpellTargetUnit(this.unit)
 		elseif (CursorHasItem()) then
@@ -18,13 +33,25 @@ local function Luna_Raid_OnClick()
 			TargetUnit(this.unit)
 		end
 		return
-	end
-
-	if (button == "RightButton") then
+	elseif LunaOptions.clickcast[modifier][button] == "menu" then
 		if (SpellIsTargeting()) then
 			SpellStopTargeting()
 			return;
 		end
+	elseif UnitIsUnit("target", this.unit) then
+		if func then
+			func()
+		else
+			CastSpellByName(LunaOptions.clickcast[modifier][button])
+		end
+	else
+		TargetUnit(this.unit)
+		if func then
+			func()
+		else
+			CastSpellByName(LunaOptions.clickcast[modifier][button])
+		end
+		TargetLastTarget()
 	end
 end
 
@@ -271,7 +298,7 @@ function LunaUnitFrames:CreateRaidFrames()
 end
 
 function LunaUnitFrames:UpdateRaidRoster()
-	if ((GetNumRaidMembers() == 0 or not RAID_SUBGROUP_LISTS) and (GetNumPartyMembers() == 0 or not LunaOptions.partyraidframe)) or LunaOptions.enableRaid == 0 then
+	if ((GetNumRaidMembers() == 0 or not RAID_SUBGROUP_LISTS) and ((GetNumPartyMembers() == 0 or not LunaOptions.partyraidframe) and not LunaOptions.AlwaysRaid)) or LunaOptions.enableRaid == 0 then
 		for i=1,8 do
 			LunaUnitFrames.frames.RaidFrames[i]:Hide()
 			for z=1,5 do
@@ -281,7 +308,7 @@ function LunaUnitFrames:UpdateRaidRoster()
 		end
 		return
 	end
-	if GetNumPartyMembers() > 0 and GetNumRaidMembers() == 0 then
+	if GetNumRaidMembers() == 0 then
 		if (LunaOptions.frames["LunaRaidFrames"].ShowRaidGroupTitles or 1) == 1 then
 			LunaUnitFrames.frames.RaidFrames[1]:Show()
 		else
@@ -553,7 +580,7 @@ function LunaUnitFrames.Raid_Aura(unitid)
 	if LunaOptions.Raidbuff ~= "" then
 		for i=1,16 do
 			ScanTip:SetUnitBuff(this.unit, i)
-			if ScanTipTextLeft1:GetText() and string.find(ScanTipTextLeft1:GetText(), LunaOptions.Raidbuff) then
+			if ScanTipTextLeft1:GetText() and LunaOptions.Raidbuff and string.find(ScanTipTextLeft1:GetText(), LunaOptions.Raidbuff) then
 				this.buff:Show()
 				ScanTipTextLeft1:SetText("")
 				return

@@ -1,32 +1,6 @@
 local Luna_PartyPet_Events = {}
 LunaPartyPetFrames = {}
 
-function Luna_PartyPet_OnClick()
-	local button = arg1
-	if (button == "LeftButton") then
-		if (SpellIsTargeting()) then
-			SpellTargetUnit(this.unit)
-		elseif (CursorHasItem()) then
-			DropItemOnUnit(this.unit)
-		else
-			TargetUnit(this.unit)
-		end
-		return
-	end
-
-	if (button == "RightButton") then
-		if (SpellIsTargeting()) then
-			SpellStopTargeting()
-			return;
-		end
-	end
-
-	if (not (IsAltKeyDown() or IsControlKeyDown() or IsShiftKeyDown())) then
-		ToggleDropDownMenu(1, nil, this.dropdown, "cursor", 0, 0)
-	end
-
-end
-
 function Luna_PartyPet_OnEvent()
 	local func = Luna_PartyPet_Events[event]
 	if (func) then
@@ -50,13 +24,13 @@ function LunaUnitFrames:CreatePartyPetFrames()
 		LunaPartyPetFrames[i].unit = "partypet"..i
 		LunaPartyPetFrames[i]:SetScript("OnEnter", UnitFrame_OnEnter)
 		LunaPartyPetFrames[i]:SetScript("OnLeave", UnitFrame_OnLeave)
-		LunaPartyPetFrames[i]:SetScript("OnClick", Luna_PartyPet_OnClick)
+		LunaPartyPetFrames[i]:SetScript("OnClick", Luna_OnClick)
 		LunaPartyPetFrames[i]:SetScript("OnEvent", Luna_PartyPet_OnEvent)
 		LunaPartyPetFrames[i]:RegisterEvent("UNIT_HEALTH")
 		LunaPartyPetFrames[i]:RegisterEvent("UNIT_MAXHEALTH")
 		LunaPartyPetFrames[i]:RegisterEvent("UNIT_NAME_UPDATE")
 		LunaPartyPetFrames[i].dropdown = CreateFrame("Frame", "LunaUnitDropDownMenuPartyPet"..i, UIParent, "UIDropDownMenuTemplate")
-		LunaPartyPetFrames[i].DropDown_Initialize = function () UnitPopup_ShowMenu(LunaPartyPetFrames[i].dropdown, "RAID_TARGET_ICON", ("partypet"..i), RAID_TARGET_ICON) end
+		LunaPartyPetFrames[i].DropDown_Initialize = function () UnitPopup_ShowMenu(LunaPartyPetFrames[i].dropdown, "RAID_TARGET_ICON", LunaPartyPetFrames[i].unit, "RAID_TARGET_ICON", RAID_TARGET_ICON) end
 		UIDropDownMenu_Initialize(LunaPartyPetFrames[i].dropdown, LunaPartyPetFrames[i].DropDown_Initialize, "MENU")
 
 		-- Healthbar
@@ -75,33 +49,41 @@ function LunaUnitFrames:CreatePartyPetFrames()
 
 		-- Healthbar text
 		LunaPartyPetFrames[i].HealthBar.hpp = LunaPartyPetFrames[i].HealthBar:CreateFontString(nil, "OVERLAY", LunaPartyPetFrames[i].HealthBar)
-		LunaPartyPetFrames[i].HealthBar.hpp:SetPoint("RIGHT", -2, -1)
+		LunaPartyPetFrames[i].HealthBar.hpp:SetPoint("RIGHT", -2, 0)
 		LunaPartyPetFrames[i].HealthBar.hpp:SetFont(LunaOptions.font, LunaOptions.fontHeight)
 		LunaPartyPetFrames[i].HealthBar.hpp:SetShadowColor(0, 0, 0)
 		LunaPartyPetFrames[i].HealthBar.hpp:SetShadowOffset(0.8, -0.8)
 		LunaPartyPetFrames[i].HealthBar.hpp:SetTextColor(1,1,1)
+		LunaPartyPetFrames[i].HealthBar.hpp:SetHeight(LunaOptions.fontHeight)
+		LunaPartyPetFrames[i].HealthBar.hpp:SetWidth(LunaPartyPetFrames[i]:GetWidth()/2)
+		LunaPartyPetFrames[i].HealthBar.hpp:SetJustifyH("RIGHT")
+		LunaPartyPetFrames[i].HealthBar.hpp:SetJustifyV("MIDDLE")
 		
 		LunaPartyPetFrames[i].name = LunaPartyPetFrames[i].HealthBar:CreateFontString(nil, "OVERLAY", LunaPartyPetFrames[i].HealthBar)
-		LunaPartyPetFrames[i].name:SetPoint("LEFT", 2, -1)
+		LunaPartyPetFrames[i].name:SetPoint("LEFT", 2, 0)
 		LunaPartyPetFrames[i].name:SetJustifyH("LEFT")
 		LunaPartyPetFrames[i].name:SetFont(LunaOptions.font, LunaOptions.fontHeight)
 		LunaPartyPetFrames[i].name:SetShadowColor(0, 0, 0)
 		LunaPartyPetFrames[i].name:SetShadowOffset(0.8, -0.8)
 		LunaPartyPetFrames[i].name:SetTextColor(1,1,1)
+		LunaPartyPetFrames[i].name:SetHeight(LunaOptions.fontHeight)
+		LunaPartyPetFrames[i].name:SetWidth(LunaPartyPetFrames[i]:GetWidth()/2)
 	end
 	LunaUnitFrames:UpdatePartyPetFrames()
 end
 
 function LunaUnitFrames:UpdatePartyPetFrames()
 	for i=1,4 do
-		if UnitIsVisible(LunaPartyPetFrames[i].unit) and LunaOptions.frames["LunaPartyPetFrames"].enabled == 1 then
+		if UnitIsVisible(LunaPartyFrames[i].unit) and UnitExists(LunaPartyPetFrames[i].unit) and LunaOptions.frames["LunaPartyPetFrames"].enabled == 1 then
 			LunaPartyPetFrames[i].HealthBar:SetMinMaxValues(0, UnitHealthMax(LunaPartyPetFrames[i].unit))
 			LunaPartyPetFrames[i].HealthBar:SetValue(UnitHealth(LunaPartyPetFrames[i].unit))
 			LunaPartyPetFrames[i].HealthBar.hpp:SetText(LunaUnitFrames:GetHealthString(LunaPartyPetFrames[i].unit))
+			LunaPartyPetFrames[i].HealthBar.hpp:SetWidth(LunaPartyPetFrames[i]:GetWidth()/2)
 			if UnitIsDead(LunaPartyPetFrames[i].unit) then			-- This prevents negative health
 				LunaPartyPetFrames[i].HealthBar:SetValue(0)
 			end
 			LunaPartyPetFrames[i].name:SetText(UnitName(LunaPartyPetFrames[i].unit))
+			LunaPartyPetFrames[i].name:SetWidth(LunaPartyPetFrames[i]:GetWidth()/2)
 			LunaPartyPetFrames[i]:Show()
 		else
 			LunaPartyPetFrames[i]:Hide()

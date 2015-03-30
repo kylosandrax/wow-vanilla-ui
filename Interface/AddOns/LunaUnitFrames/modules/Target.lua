@@ -11,7 +11,6 @@ local function Luna_Target_OnEvent()
 	end
 end
 
-local dropdown = CreateFrame("Frame", "LunaUnitDropDownMenuTarget", UIParent, "UIDropDownMenuTemplate")
 function Luna_TargetDropDown_Initialize()
 	local menu, name;
 	if (UnitIsUnit("target", "player")) then
@@ -29,33 +28,7 @@ function Luna_TargetDropDown_Initialize()
 		name = RAID_TARGET_ICON;
 	end
 	if (menu) then
-		UnitPopup_ShowMenu(dropdown, menu, "target", name);
-	end
-end
-UIDropDownMenu_Initialize(dropdown, Luna_TargetDropDown_Initialize, "MENU");
-
-function Luna_Target_OnClick()
-	local button = arg1
-	if (button == "LeftButton") then
-		if (SpellIsTargeting()) then
-			SpellTargetUnit("target");
-		elseif (CursorHasItem()) then
-			DropItemOnUnit("target");
-		else
-			TargetUnit("target");
-		end
-		return;
-	end
-
-	if (button == "RightButton") then
-		if (SpellIsTargeting()) then
-			SpellStopTargeting();
-			return;
-		end
-	end
-
-	if (not (IsAltKeyDown() or IsControlKeyDown() or IsShiftKeyDown())) then
-		ToggleDropDownMenu(1, nil, dropdown, "cursor", 0, 0)
+		UnitPopup_ShowMenu(LunaTargetFrame.dropdown, menu, "target", name);
 	end
 end
 
@@ -283,9 +256,10 @@ function LunaUnitFrames:CreateTargetFrame()
 	LunaTargetFrame.bars["Healthbar"].hpp:SetShadowOffset(0.8, -0.8)
 	LunaTargetFrame.bars["Healthbar"].hpp:SetTextColor(1,1,1)
 	LunaTargetFrame.bars["Healthbar"].hpp:SetJustifyH("RIGHT")
+	LunaTargetFrame.bars["Healthbar"].hpp:SetJustifyV("MIDDLE")
 
 	LunaTargetFrame.name = LunaTargetFrame.bars["Healthbar"]:CreateFontString(nil, "OVERLAY", LunaTargetFrame.bars["Healthbar"])
-	LunaTargetFrame.name:SetPoint("LEFT", 2, -1)
+	LunaTargetFrame.name:SetPoint("LEFT", 2, 0)
 	LunaTargetFrame.name:SetJustifyH("LEFT")
 	LunaTargetFrame.name:SetFont(LunaOptions.font, LunaOptions.fontHeight)
 	LunaTargetFrame.name:SetShadowColor(0, 0, 0)
@@ -310,7 +284,7 @@ function LunaUnitFrames:CreateTargetFrame()
 	LunaTargetFrame.bars["Powerbar"].ppp:SetJustifyH("RIGHT")
 
 	LunaTargetFrame.lvl = LunaTargetFrame.bars["Powerbar"]:CreateFontString(nil, "OVERLAY")
-	LunaTargetFrame.lvl:SetPoint("LEFT", LunaTargetFrame.bars["Powerbar"], "LEFT", 2, -1)
+	LunaTargetFrame.lvl:SetPoint("LEFT", LunaTargetFrame.bars["Powerbar"], "LEFT", 2, 0)
 	LunaTargetFrame.lvl:SetFont(LunaOptions.font, LunaOptions.fontHeight)
 	LunaTargetFrame.lvl:SetShadowColor(0, 0, 0)
 	LunaTargetFrame.lvl:SetShadowOffset(0.8, -0.8)
@@ -416,10 +390,14 @@ function LunaUnitFrames:CreateTargetFrame()
 	LunaTargetFrame:RegisterEvent("UNIT_SPELLMISS")
 	LunaTargetFrame:RegisterEvent("UNIT_COMBAT")
 	LunaTargetFrame:RegisterEvent("UNIT_FACTION")
-	LunaTargetFrame:SetScript("OnClick", Luna_Target_OnClick)
+	LunaTargetFrame:RegisterEvent("UNIT_AURA")
+	LunaTargetFrame:SetScript("OnClick", Luna_OnClick)
 	LunaTargetFrame:SetScript("OnEvent", Luna_Target_OnEvent)
 	LunaTargetFrame:SetScript("OnUpdate", CombatFeedback_OnUpdate)
 	LunaTargetFrame.bars["Castbar"]:SetScript("OnUpdate", Castbar_OnUpdate)
+	
+	LunaTargetFrame.dropdown = CreateFrame("Frame", "LunaUnitDropDownMenuTarget", UIParent, "UIDropDownMenuTemplate")
+	UIDropDownMenu_Initialize(LunaTargetFrame.dropdown, Luna_TargetDropDown_Initialize, "MENU")
 	
 	if not LunaOptions.BlizzTarget then
 		Luna_HideBlizz(TargetFrame)
@@ -500,9 +478,12 @@ function LunaUnitFrames:CreateTargetFrame()
 		local healthheight = (LunaTargetFrame.bars["Healthbar"]:GetHeight()/23.4)*11
 		if healthheight > 0 then
 			LunaTargetFrame.bars["Healthbar"].hpp:SetFont(LunaOptions.font, healthheight)
+			LunaTargetFrame.bars["Healthbar"].hpp:SetHeight(LunaTargetFrame.bars["Healthbar"]:GetHeight())
+			LunaTargetFrame.bars["Healthbar"].hpp:SetWidth(LunaTargetFrame.bars["Healthbar"]:GetWidth()*0.35)
 			LunaTargetFrame.name:SetFont(LunaOptions.font, healthheight)
+			LunaTargetFrame.name:SetWidth(LunaTargetFrame.bars["Healthbar"]:GetWidth()*0.65)
 		end
-		if healthheight < 6 then
+		if LunaTargetFrame.bars["Healthbar"]:GetHeight() < 6 then
 			LunaTargetFrame.bars["Healthbar"].hpp:Hide()
 			LunaTargetFrame.name:Hide()
 		else
@@ -515,7 +496,7 @@ function LunaUnitFrames:CreateTargetFrame()
 			LunaTargetFrame.lvl:SetFont(LunaOptions.font, powerheight)
 			LunaTargetFrame.class:SetFont(LunaOptions.font, powerheight)
 		end
-		if powerheight < 6 then
+		if LunaTargetFrame.bars["Powerbar"]:GetHeight() < 6 then
 			LunaTargetFrame.bars["Powerbar"].ppp:Hide()
 			LunaTargetFrame.lvl:Hide()
 			LunaTargetFrame.class:Hide()
@@ -527,7 +508,7 @@ function LunaUnitFrames:CreateTargetFrame()
 		local castheight = (LunaTargetFrame.bars["Castbar"]:GetHeight()/11.7)*11
 		LunaTargetFrame.bars["Castbar"].Text:SetFont(LunaOptions.font, castheight)
 		LunaTargetFrame.bars["Castbar"].Time:SetFont(LunaOptions.font, castheight)
-		if castheight < 6 then
+		if LunaTargetFrame.bars["Castbar"]:GetHeight() < 6 then
 			LunaTargetFrame.bars["Castbar"].Text:Hide()
 			LunaTargetFrame.bars["Castbar"].Time:Hide()
 		else
@@ -539,14 +520,12 @@ function LunaUnitFrames:CreateTargetFrame()
 	LunaTargetFrame.UpdateBuffSize = function ()
 		local buffcount = LunaOptions.frames["LunaTargetFrame"].BuffInRow or 16
 		if LunaOptions.frames["LunaTargetFrame"].ShowBuffs == 1 then
-			LunaTargetFrame:UnregisterEvent("UNIT_AURA")
 			for i=1, 16 do
 				LunaTargetFrame.Buffs[i]:Hide()
 				LunaTargetFrame.Debuffs[i]:Hide()
 			end
 		elseif LunaOptions.frames["LunaTargetFrame"].ShowBuffs == 2 then
 			local buffsize = ((LunaTargetFrame:GetWidth()-(buffcount-1))/buffcount)
-			LunaTargetFrame:RegisterEvent("UNIT_AURA")
 			LunaTargetFrame.AuraAnchor:ClearAllPoints()
 			LunaTargetFrame.AuraAnchor:SetPoint("BOTTOMLEFT", LunaTargetFrame, "TOPLEFT", -1, 3)
 			LunaTargetFrame.AuraAnchor:SetWidth(LunaTargetFrame:GetWidth())
@@ -576,7 +555,6 @@ function LunaUnitFrames:CreateTargetFrame()
 			Luna_Target_Events:UNIT_AURA()
 		elseif LunaOptions.frames["LunaTargetFrame"].ShowBuffs == 3 then
 			local buffsize = ((LunaTargetFrame:GetWidth()-(buffcount-1))/buffcount)
-			LunaTargetFrame:RegisterEvent("UNIT_AURA")
 			LunaTargetFrame.AuraAnchor:ClearAllPoints()
 			LunaTargetFrame.AuraAnchor:SetWidth(LunaTargetFrame:GetWidth())
 			local buffid = 1
@@ -606,7 +584,6 @@ function LunaUnitFrames:CreateTargetFrame()
 			Luna_Target_Events:UNIT_AURA()
 		elseif LunaOptions.frames["LunaTargetFrame"].ShowBuffs == 4 then
 			local buffsize = (((LunaTargetFrame:GetHeight()/2)-(math.ceil(16/buffcount)-1))/math.ceil(16/buffcount))
-			LunaTargetFrame:RegisterEvent("UNIT_AURA")
 			LunaTargetFrame.AuraAnchor:ClearAllPoints()
 			LunaTargetFrame.AuraAnchor:SetWidth((buffsize*buffcount)+(buffcount-1))
 			local buffid = 1
@@ -636,7 +613,6 @@ function LunaUnitFrames:CreateTargetFrame()
 			Luna_Target_Events:UNIT_AURA()
 		else
 			local buffsize = (((LunaTargetFrame:GetHeight()/2)-(math.ceil(16/buffcount)-1))/math.ceil(16/buffcount))
-			LunaTargetFrame:RegisterEvent("UNIT_AURA")
 			LunaTargetFrame.AuraAnchor:ClearAllPoints()
 			LunaTargetFrame.AuraAnchor:SetWidth((buffsize*buffcount)+(buffcount-1))
 			local buffid = 1
@@ -682,6 +658,9 @@ function LunaUnitFrames.TargetUpdateHeal(target)
 	end
 	local healed = HealComm:getHeal(target)
 	local health, maxHealth = UnitHealth(LunaTargetFrame.unit), UnitHealthMax(LunaTargetFrame.unit)
+	if MobHealth3 then
+		health, maxHealth = MobHealth3:GetUnitHealth("target")
+	end
 	if( LunaOptions.HideHealing == nil and healed > 0 and (health < maxHealth or (LunaOptions.overheal or 20) > 0 )) then
 		LunaTargetFrame.incHeal:Show()
 		local healthWidth = LunaTargetFrame.bars["Healthbar"]:GetWidth() * (health / maxHealth)
@@ -773,7 +752,21 @@ function Luna_Target_Events:RAID_TARGET_UPDATE()
 end
 
 function Luna_Target_Events:UNIT_AURA()
+	local found, dtype
 	local pos
+	for i=1,16 do
+		_,_,dtype = UnitDebuff("target", i, 1)
+		if dtype and LunaOptions.HighlightDebuffs and not UnitIsEnemy("target","player") then
+			LunaTargetFrame:SetBackdropColor(unpack(LunaOptions.DebuffTypeColor[dtype],1))
+			found = true
+		end
+	end
+	if not found then
+		LunaTargetFrame:SetBackdropColor(0,0,0,1)
+	end
+	if LunaOptions.frames["LunaTargetFrame"].ShowBuffs == 1 then
+		return
+	end
 	for i=1, 16 do
 		local path, stacks = UnitBuff("target",i)
 		LunaTargetFrame.Buffs[i].texturepath = path
@@ -831,22 +824,29 @@ Luna_Target_Events.UNIT_FACTION = Luna_Target_Events.PLAYER_TARGET_CHANGED
 
 function Luna_Target_Events:UNIT_HEALTH()
 	LunaUnitFrames.TargetUpdateHeal(UnitName("target"))
-	LunaTargetFrame.bars["Healthbar"]:SetMinMaxValues(0, UnitHealthMax("target"))
+	local Health, maxHealth
+	if MobHealth3 then
+		Health, maxHealth = MobHealth3:GetUnitHealth("target")
+	else
+		Health = UnitHealth("target")
+		maxHealth = UnitHealthMax("target")
+	end
+	LunaTargetFrame.bars["Healthbar"]:SetMinMaxValues(0, maxHealth)
 	if not UnitIsConnected("target") then
 		LunaTargetFrame.bars["Healthbar"].hpp:SetText("OFFLINE")
 		LunaTargetFrame.bars["Healthbar"]:SetValue(0)
-	elseif UnitHealth("target") < 2 then			-- This prevents negative health
+	elseif Health < 1 then			-- This prevents negative health
 		LunaTargetFrame.bars["Healthbar"].hpp:SetText("DEAD")
 		LunaTargetFrame.bars["Healthbar"]:SetValue(0)
 	else
-		LunaTargetFrame.bars["Healthbar"]:SetValue(UnitHealth("target"))
+		LunaTargetFrame.bars["Healthbar"]:SetValue(Health)
 		LunaTargetFrame.bars["Healthbar"].hpp:SetText(LunaUnitFrames:GetHealthString("target"))
 	end
 end
 Luna_Target_Events.UNIT_MAXHEALTH = Luna_Target_Events.UNIT_HEALTH;
 
 function Luna_Target_Events:UNIT_MANA()
-	if UnitHealth("target") < 2 or not UnitIsConnected("target") then
+	if UnitHealth("target") < 1 or not UnitIsConnected("target") then
 		LunaTargetFrame.bars["Powerbar"]:SetMinMaxValues(0, UnitManaMax("target"))
 		LunaTargetFrame.bars["Powerbar"]:SetValue(0)
 		LunaTargetFrame.bars["Powerbar"].ppp:SetText(LunaUnitFrames:GetPowerString("target"))
@@ -951,12 +951,9 @@ function Luna_Target_Events:UNIT_DISPLAYPOWER()
 	elseif targetpower == 3 then
 		LunaTargetFrame.bars["Powerbar"]:SetStatusBarColor(LunaOptions.PowerColors["Energy"][1], LunaOptions.PowerColors["Energy"][2], LunaOptions.PowerColors["Energy"][3])
 		LunaTargetFrame.bars["Powerbar"].ppbg:SetVertexColor(LunaOptions.PowerColors["Energy"][1], LunaOptions.PowerColors["Energy"][2], LunaOptions.PowerColors["Energy"][3], .25)
-	elseif not UnitIsDeadOrGhost("target") then
+	else
 		LunaTargetFrame.bars["Powerbar"]:SetStatusBarColor(LunaOptions.PowerColors["Mana"][1], LunaOptions.PowerColors["Mana"][2], LunaOptions.PowerColors["Mana"][3])
 		LunaTargetFrame.bars["Powerbar"].ppbg:SetVertexColor(LunaOptions.PowerColors["Mana"][1], LunaOptions.PowerColors["Mana"][2], LunaOptions.PowerColors["Mana"][3], .25)
-	else
-		LunaTargetFrame.bars["Powerbar"]:SetStatusBarColor(0, 0, 0, .25)
-		LunaTargetFrame.bars["Powerbar"].ppbg:SetVertexColor(0, 0, 0, .25)
 	end
 	Luna_Target_Events.UNIT_MANA()
 end
@@ -984,6 +981,8 @@ function Luna_Target_Events:UNIT_LEVEL()
 	else
 		LunaTargetFrame.lvl:SetText(lvl)
 	end
+	local color = GetDifficultyColor(lvl)
+	LunaTargetFrame.lvl:SetVertexColor(color.r, color.g, color.b)
 end
 
 function Luna_Target_Events:UNIT_COMBAT()

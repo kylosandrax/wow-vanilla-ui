@@ -5,7 +5,17 @@ LunaPartyFrames = {}
 
 GrpRangeCheck = CreateFrame("Frame")
 GrpRangeCheck.time = 0
+GrpRangeCheck.pettime = 0
 GrpRangeCheck.onUpdate = function ()
+	GrpRangeCheck.pettime = GrpRangeCheck.pettime + arg1
+	if (GrpRangeCheck.pettime > 2) then
+		GrpRangeCheck.pettime = 0
+		for i=1, 4 do
+			if UnitIsVisible(LunaPartyPetFrames[i].unit) then
+				LunaUnitFrames:UpdatePartyPetFrames()
+			end
+		end
+	end
 	if LunaOptions.PartyRange == 1 then
 		GrpRangeCheck.time = GrpRangeCheck.time + arg1
 		if (GrpRangeCheck.time > 0.2) then
@@ -31,32 +41,6 @@ local function Luna_Party_OnEvent()
 	else
 		DEFAULT_CHAT_FRAME:AddMessage("Luna Unit Frames - Party: Report the following event error to the author: "..event)
 	end
-end
-
-function Luna_Party_OnClick()
-	local button = arg1
-	if (button == "LeftButton") then
-		if (SpellIsTargeting()) then
-			SpellTargetUnit(this.unit)
-		elseif (CursorHasItem()) then
-			DropItemOnUnit(this.unit)
-		else
-			TargetUnit(this.unit)
-		end
-		return
-	end
-
-	if (button == "RightButton") then
-		if (SpellIsTargeting()) then
-			SpellStopTargeting()
-			return;
-		end
-	end
-
-	if (not (IsAltKeyDown() or IsControlKeyDown() or IsShiftKeyDown())) then
-		ToggleDropDownMenu(1, nil, this.dropdown, "cursor", 0, 0)
-	end
-
 end
 
 function Luna_Party_SetBuffTooltip()
@@ -170,8 +154,9 @@ function LunaUnitFrames:CreatePartyFrames()
 		LunaPartyFrames[i]:RegisterEvent("UNIT_AURA")
 		LunaPartyFrames[i]:RegisterEvent("RAID_ROSTER_UPDATE")
 		LunaPartyFrames[i]:RegisterEvent("UNIT_PET")
+		LunaPartyFrames[i]:RegisterEvent("UNIT_AURA")
 		LunaPartyFrames[i]:SetScript("OnEvent", Luna_Party_OnEvent)
-		LunaPartyFrames[i]:SetScript("OnClick", Luna_Party_OnClick)
+		LunaPartyFrames[i]:SetScript("OnClick", Luna_OnClick)
 		LunaPartyFrames[i]:SetScript("OnEnter", UnitFrame_OnEnter)
 		LunaPartyFrames[i]:SetScript("OnLeave", UnitFrame_OnLeave)
 		LunaPartyFrames[i].dropdown = CreateFrame("Frame", "LunaUnitDropDownMenuParty"..i, LunaPartyFrames[i], "UIDropDownMenuTemplate")
@@ -290,9 +275,10 @@ function LunaUnitFrames:CreatePartyFrames()
 		LunaPartyFrames[i].bars["Healthbar"].hpp:SetShadowOffset(0.8, -0.8)
 		LunaPartyFrames[i].bars["Healthbar"].hpp:SetTextColor(1,1,1)
 		LunaPartyFrames[i].bars["Healthbar"].hpp:SetJustifyH("RIGHT")
+		LunaPartyFrames[i].bars["Healthbar"].hpp:SetJustifyV("MIDDLE")
 
 		LunaPartyFrames[i].name = LunaPartyFrames[i].bars["Healthbar"]:CreateFontString(nil, "OVERLAY", LunaPartyFrames[i].bars["Healthbar"])
-		LunaPartyFrames[i].name:SetPoint("LEFT", 2, -1)
+		LunaPartyFrames[i].name:SetPoint("LEFT", 2, 0)
 		LunaPartyFrames[i].name:SetJustifyH("LEFT")
 		LunaPartyFrames[i].name:SetFont(LunaOptions.font, LunaOptions.fontHeight)
 		LunaPartyFrames[i].name:SetShadowColor(0, 0, 0)
@@ -318,11 +304,13 @@ function LunaUnitFrames:CreatePartyFrames()
 		LunaPartyFrames[i].bars["Powerbar"].ppp:SetJustifyH("RIGHT")
 
 		LunaPartyFrames[i].lvl = LunaPartyFrames[i].bars["Powerbar"]:CreateFontString(nil, "OVERLAY")
-		LunaPartyFrames[i].lvl:SetPoint("LEFT", LunaPartyFrames[i].bars["Powerbar"], "LEFT", 2, -1)
+		LunaPartyFrames[i].lvl:SetPoint("LEFT", LunaPartyFrames[i].bars["Powerbar"], "LEFT", 2, 0)
 		LunaPartyFrames[i].lvl:SetFont(LunaOptions.font, LunaOptions.fontHeight)
 		LunaPartyFrames[i].lvl:SetShadowColor(0, 0, 0)
 		LunaPartyFrames[i].lvl:SetShadowOffset(0.8, -0.8)
 		LunaPartyFrames[i].lvl:SetText(UnitLevel("party"..i))
+		local color = GetDifficultyColor(UnitLevel("party"..i))
+		LunaPartyFrames[i].lvl:SetVertexColor(color.r, color.g, color.b)
 
 		LunaPartyFrames[i].class = LunaPartyFrames[i].bars["Powerbar"]:CreateFontString(nil, "OVERLAY")
 		LunaPartyFrames[i].class:SetPoint("LEFT", LunaPartyFrames[i].lvl, "RIGHT",  1, 0)
@@ -430,14 +418,12 @@ function LunaUnitFrames:UpdatePartyBuffSize()
 	local buffcount = LunaOptions.frames["LunaPartyFrames"].BuffInRow or 16
 	for id=1,4 do
 		if LunaOptions.frames["LunaPartyFrames"].ShowBuffs == 1 then
-			LunaPartyFrames[id]:UnregisterEvent("UNIT_AURA")
 			for i=1, 16 do
 				LunaPartyFrames[id].Buffs[i]:Hide()
 				LunaPartyFrames[id].Debuffs[i]:Hide()
 			end
 		elseif LunaOptions.frames["LunaPartyFrames"].ShowBuffs == 2 then
 			local buffsize = ((LunaPartyFrames[id]:GetWidth()-(buffcount-1))/buffcount)
-			LunaPartyFrames[id]:RegisterEvent("UNIT_AURA")
 			LunaPartyFrames[id].AuraAnchor:ClearAllPoints()
 			LunaPartyFrames[id].AuraAnchor:SetPoint("BOTTOMLEFT", LunaPartyFrames[id], "TOPLEFT", -1, 3)
 			LunaPartyFrames[id].AuraAnchor:SetWidth(LunaPartyFrames[id]:GetWidth())
@@ -467,7 +453,6 @@ function LunaUnitFrames:UpdatePartyBuffSize()
 			updateBuffs()
 		elseif LunaOptions.frames["LunaPartyFrames"].ShowBuffs == 3 then
 			local buffsize = ((LunaPartyFrames[id]:GetWidth()-(buffcount-1))/buffcount)
-			LunaPartyFrames[id]:RegisterEvent("UNIT_AURA")
 			LunaPartyFrames[id].AuraAnchor:ClearAllPoints()
 			LunaPartyFrames[id].AuraAnchor:SetWidth(LunaPartyFrames[id]:GetWidth())
 			local buffid = 1
@@ -497,7 +482,6 @@ function LunaUnitFrames:UpdatePartyBuffSize()
 			updateBuffs()
 		elseif LunaOptions.frames["LunaPartyFrames"].ShowBuffs == 4 then
 			local buffsize = (((LunaPartyFrames[id]:GetHeight()/2)-(math.ceil(16/buffcount)-1))/math.ceil(16/buffcount))
-			LunaPartyFrames[id]:RegisterEvent("UNIT_AURA")
 			LunaPartyFrames[id].AuraAnchor:ClearAllPoints()
 			LunaPartyFrames[id].AuraAnchor:SetWidth((buffsize*buffcount)+(buffcount-1))
 			local buffid = 1
@@ -527,7 +511,6 @@ function LunaUnitFrames:UpdatePartyBuffSize()
 			updateBuffs()
 		else
 			local buffsize = (((LunaPartyFrames[id]:GetHeight()/2)-(math.ceil(16/buffcount)-1))/math.ceil(16/buffcount))
-			LunaPartyFrames[id]:RegisterEvent("UNIT_AURA")
 			LunaPartyFrames[id].AuraAnchor:ClearAllPoints()
 			LunaPartyFrames[id].AuraAnchor:SetWidth((buffsize*buffcount)+(buffcount-1))
 			local buffid = 1
@@ -655,9 +638,12 @@ function LunaUnitFrames:UpdatePartyUnitFrameSize()
 		local healthheight = (LunaPartyFrames[i].bars["Healthbar"]:GetHeight()/23.4)*11
 		if healthheight > 0 then
 			LunaPartyFrames[i].bars["Healthbar"].hpp:SetFont(LunaOptions.font, healthheight)
+			LunaPartyFrames[i].bars["Healthbar"].hpp:SetHeight(LunaPartyFrames[i].bars["Healthbar"]:GetHeight())
+			LunaPartyFrames[i].bars["Healthbar"].hpp:SetWidth(LunaPartyFrames[i].bars["Healthbar"]:GetWidth()*0.45)
 			LunaPartyFrames[i].name:SetFont(LunaOptions.font, healthheight)
+			LunaPartyFrames[i].name:SetWidth(LunaPartyFrames[i].bars["Healthbar"]:GetWidth()*0.55)
 		end
-		if healthheight < 6 then
+		if LunaPartyFrames[i].bars["Healthbar"]:GetHeight() < 6 then
 			LunaPartyFrames[i].bars["Healthbar"].hpp:Hide()
 			LunaPartyFrames[i].name:Hide()
 		else
@@ -670,7 +656,7 @@ function LunaUnitFrames:UpdatePartyUnitFrameSize()
 			LunaPartyFrames[i].lvl:SetFont(LunaOptions.font, powerheight)
 			LunaPartyFrames[i].class:SetFont(LunaOptions.font, powerheight)
 		end
-		if powerheight < 6 then
+		if LunaPartyFrames[i].bars["Powerbar"]:GetHeight() < 6 then
 			LunaPartyFrames[i].bars["Powerbar"].ppp:Hide()
 			LunaPartyFrames[i].lvl:Hide()
 			LunaPartyFrames[i].class:Hide()
@@ -770,16 +756,15 @@ function LunaUnitFrames:UpdatePartyFrames()
 			elseif targetpower == 3 then
 				LunaPartyFrames[i].bars["Powerbar"]:SetStatusBarColor(LunaOptions.PowerColors["Energy"][1], LunaOptions.PowerColors["Energy"][2], LunaOptions.PowerColors["Energy"][3])
 				LunaPartyFrames[i].bars["Powerbar"].ppbg:SetVertexColor(LunaOptions.PowerColors["Energy"][1], LunaOptions.PowerColors["Energy"][2], LunaOptions.PowerColors["Energy"][3], .25)
-			elseif not UnitIsDeadOrGhost("target") then
+			else
 				LunaPartyFrames[i].bars["Powerbar"]:SetStatusBarColor(LunaOptions.PowerColors["Mana"][1], LunaOptions.PowerColors["Mana"][2], LunaOptions.PowerColors["Mana"][3])
 				LunaPartyFrames[i].bars["Powerbar"].ppbg:SetVertexColor(LunaOptions.PowerColors["Mana"][1], LunaOptions.PowerColors["Mana"][2], LunaOptions.PowerColors["Mana"][3], .25)
-			else
-				LunaPartyFrames[i].bars["Powerbar"]:SetStatusBarColor(0, 0, 0, .25)
-				LunaPartyFrames[i].bars["Powerbar"].ppbg:SetVertexColor(0, 0, 0, .25)
-				end
+			end
 			
 			LunaPartyFrames[i].name:SetText(UnitName(LunaPartyFrames[i].unit))
 			LunaPartyFrames[i].class:SetText(UnitClass(LunaPartyFrames[i].unit))
+			local difcolor = GetDifficultyColor(UnitLevel(LunaPartyFrames[i].unit))
+			LunaPartyFrames[i].lvl:SetVertexColor(difcolor.r, difcolor.g, difcolor.b)
 			if UnitLevel(LunaPartyFrames[i].unit) > 0 then
 				LunaPartyFrames[i].lvl:SetText(UnitLevel(LunaPartyFrames[i].unit))
 			else
@@ -818,7 +803,21 @@ end
 
 function Luna_Party_Events:UNIT_AURA()
 	if this.unit == arg1 then
+		local found, dtype
 		local pos
+		for i=1,16 do
+			_,_,dtype = UnitDebuff(this.unit, i, 1)
+			if dtype and LunaOptions.HighlightDebuffs then
+				this:SetBackdropColor(unpack(LunaOptions.DebuffTypeColor[dtype],1))
+				found = true
+			end
+		end
+		if not found then
+			this:SetBackdropColor(0,0,0,1)
+		end
+		if LunaOptions.frames["LunaPartyFrames"].ShowBuffs == 1 then
+			return
+		end
 		for i=1, 16 do
 			local path, stacks = UnitBuff(this.unit,i)
 			this.Buffs[i].texturepath = path
@@ -859,6 +858,11 @@ function Luna_Party_Events:UNIT_AURA()
 			else
 				this.Debuffs[i]:EnableMouse(0)
 				this.Debuffs[i]:Hide()
+			end
+			_,_,dtype = UnitDebuff(this.unit, i, 1)
+			if dtype and LunaOptions.HighlightDebuffs then
+				this:SetBackdropColor(unpack(LunaOptions.DebuffTypeColor[dtype],1))
+				found = true
 			end
 			this.Debuffs[i]:SetNormalTexture(this.Debuffs[i].texturepath)
 		end
@@ -928,23 +932,17 @@ end
 
 function Luna_Party_Events:UNIT_DISPLAYPOWER()
 	if arg1 == this.unit then
-		targetpower = UnitPowerType(arg1)
+		local power = UnitPowerType(arg1)
 		
-		if UnitManaMax(arg1) == 0 then
-			this.bars["Powerbar"]:SetStatusBarColor(0, 0, 0, .25)
-			this.bars["Powerbar"].ppbg:SetVertexColor(0, 0, 0, .25)
-		elseif targetpower == 1 then
+		if power == 1 then
 			this.bars["Powerbar"]:SetStatusBarColor(LunaOptions.PowerColors["Rage"][1], LunaOptions.PowerColors["Rage"][2], LunaOptions.PowerColors["Rage"][3])
 			this.bars["Powerbar"].ppbg:SetVertexColor(LunaOptions.PowerColors["Rage"][1], LunaOptions.PowerColors["Rage"][2], LunaOptions.PowerColors["Rage"][3], .25)
-		elseif targetpower == 3 then
+		elseif power == 3 then
 			this.bars["Powerbar"]:SetStatusBarColor(LunaOptions.PowerColors["Energy"][1], LunaOptions.PowerColors["Energy"][2], LunaOptions.PowerColors["Energy"][3])
 			this.bars["Powerbar"].ppbg:SetVertexColor(LunaOptions.PowerColors["Energy"][1], LunaOptions.PowerColors["Energy"][2], LunaOptions.PowerColors["Energy"][3], .25)
-		elseif not UnitIsDeadOrGhost("target") then
+		else
 			this.bars["Powerbar"]:SetStatusBarColor(LunaOptions.PowerColors["Mana"][1], LunaOptions.PowerColors["Mana"][2], LunaOptions.PowerColors["Mana"][3])
 			this.bars["Powerbar"].ppbg:SetVertexColor(LunaOptions.PowerColors["Mana"][1], LunaOptions.PowerColors["Mana"][2], LunaOptions.PowerColors["Mana"][3], .25)
-		else
-			this.bars["Powerbar"]:SetStatusBarColor(0, 0, 0, .25)
-			this.bars["Powerbar"].ppbg:SetVertexColor(0, 0, 0, .25)
 		end
 		Luna_Party_Events.UNIT_MANA()
 	end
@@ -963,6 +961,8 @@ end
 function Luna_Party_Events:UNIT_LEVEL()
 	if arg1 == this.unit then
 		local lvl = UnitLevel(this.unit)
+		local color = GetDifficultyColor(lvl)
+		this.lvl:SetVertexColor(color.r, color.g, color.b)
 		if lvl < 1 then
 			this.lvl:SetText("??")
 		else

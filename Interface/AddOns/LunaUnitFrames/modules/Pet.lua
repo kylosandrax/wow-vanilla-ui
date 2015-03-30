@@ -18,31 +18,6 @@ function Luna_PlayerDropDown_Initialize()
 	UnitPopup_ShowMenu(dropdown, "PET" , "pet")
 end
 
-local function Luna_Pet_OnClick()
-	local button = arg1
-	if (button == "LeftButton") then
-		if (SpellIsTargeting()) then
-			SpellTargetUnit("pet");
-		elseif (CursorHasItem()) then
-			DropItemOnUnit("pet");
-		else
-			TargetUnit("pet");
-		end
-		return;
-	end
-
-	if (button == "RightButton") then
-		if (SpellIsTargeting()) then
-			SpellStopTargeting();
-			return;
-		end
-	end
-
-	if (not (IsAltKeyDown() or IsControlKeyDown() or IsShiftKeyDown())) then
-		ToggleDropDownMenu(1, nil, dropdown, "cursor", 0, 0);
-	end
-end
-
 local function Luna_Pet_OnEvent()
 	local func = Luna_Pet_Events[event]
 	if (func) then
@@ -188,9 +163,10 @@ function LunaUnitFrames:CreatePetFrame()
 	LunaPetFrame.bars["Healthbar"].hpp:SetShadowOffset(0.8, -0.8)
 	LunaPetFrame.bars["Healthbar"].hpp:SetTextColor(1,1,1)
 	LunaPetFrame.bars["Healthbar"].hpp:SetJustifyH("RIGHT")
+	LunaPetFrame.bars["Healthbar"].hpp:SetJustifyV("MIDDLE")
 
 	LunaPetFrame.name = LunaPetFrame.bars["Healthbar"]:CreateFontString(nil, "OVERLAY", LunaPetFrame.bars["Healthbar"])
-	LunaPetFrame.name:SetPoint("LEFT", 2, -1)
+	LunaPetFrame.name:SetPoint("LEFT", 2, 0)
 	LunaPetFrame.name:SetJustifyH("LEFT")
 	LunaPetFrame.name:SetFont(LunaOptions.font, LunaOptions.fontHeight)
 	LunaPetFrame.name:SetShadowColor(0, 0, 0)
@@ -216,11 +192,13 @@ function LunaUnitFrames:CreatePetFrame()
 	LunaPetFrame.bars["Powerbar"].ppp:SetJustifyH("RIGHT")
 
 	LunaPetFrame.lvl = LunaPetFrame.bars["Powerbar"]:CreateFontString(nil, "OVERLAY")
-	LunaPetFrame.lvl:SetPoint("LEFT", LunaPetFrame.bars["Powerbar"], "LEFT", 2, -1)
+	LunaPetFrame.lvl:SetPoint("LEFT", LunaPetFrame.bars["Powerbar"], "LEFT", 2, 0)
 	LunaPetFrame.lvl:SetFont(LunaOptions.font, LunaOptions.fontHeight)
 	LunaPetFrame.lvl:SetShadowColor(0, 0, 0)
 	LunaPetFrame.lvl:SetShadowOffset(0.8, -0.8)
 	LunaPetFrame.lvl:SetText(UnitLevel("pet"))
+	local color = GetDifficultyColor(UnitLevel("pet"))
+	LunaPetFrame.lvl:SetVertexColor(color.r, color.g, color.b)
 
 	LunaPetFrame.class = LunaPetFrame.bars["Powerbar"]:CreateFontString(nil, "OVERLAY")
 	LunaPetFrame.class:SetPoint("LEFT", LunaPetFrame.lvl, "RIGHT",  1, 0)
@@ -245,9 +223,16 @@ function LunaUnitFrames:CreatePetFrame()
 	LunaPetFrame:RegisterEvent("UNIT_PET")
 	LunaPetFrame:RegisterEvent("UNIT_LEVEL")
 	LunaPetFrame:RegisterEvent("UNIT_NAME_UPDATE")
-	LunaPetFrame:SetScript("OnClick", Luna_Pet_OnClick)
+	LunaPetFrame:SetScript("OnClick", Luna_OnClick)
 	LunaPetFrame:SetScript("OnEvent", Luna_Pet_OnEvent)
-	UIDropDownMenu_Initialize(dropdown, Luna_PlayerDropDown_Initialize, "MENU")
+	LunaPetFrame.dropdown = CreateFrame("Frame", "LunaPetDropDownMenu", UIParent, "UIDropDownMenuTemplate")
+	LunaPetFrame.initialize = function() 	if this.dropdown then 
+												UnitPopup_ShowMenu(this.dropdown, "PET", this.unit)
+											elseif UIDROPDOWNMENU_OPEN_MENU then 
+												UnitPopup_ShowMenu(getglobal(UIDROPDOWNMENU_OPEN_MENU), "PET", getglobal(UIDROPDOWNMENU_OPEN_MENU):GetParent().unit)
+											end
+							end
+	UIDropDownMenu_Initialize(LunaPetFrame.dropdown, LunaPetFrame.initialize, "MENU")
 	LunaUnitFrames:UpdatePetFrame()
 	
 	LunaPetFrame.AdjustBars = function()
@@ -295,9 +280,12 @@ function LunaUnitFrames:CreatePetFrame()
 		local healthheight = (LunaPetFrame.bars["Healthbar"]:GetHeight()/23.4)*11
 		if healthheight > 0 then
 			LunaPetFrame.bars["Healthbar"].hpp:SetFont(LunaOptions.font, healthheight)
+			LunaPetFrame.bars["Healthbar"].hpp:SetHeight(LunaPetFrame.bars["Healthbar"]:GetHeight())
+			LunaPetFrame.bars["Healthbar"].hpp:SetWidth(LunaPetFrame.bars["Healthbar"]:GetWidth()*0.45)
 			LunaPetFrame.name:SetFont(LunaOptions.font, healthheight)
+			LunaPetFrame.name:SetWidth(LunaPetFrame.bars["Healthbar"]:GetWidth()*0.55)
 		end
-		if healthheight < 6 then
+		if LunaPetFrame.bars["Healthbar"]:GetHeight() < 6 then
 			LunaPetFrame.bars["Healthbar"].hpp:Hide()
 			LunaPetFrame.name:Hide()
 		else
@@ -310,7 +298,7 @@ function LunaUnitFrames:CreatePetFrame()
 			LunaPetFrame.lvl:SetFont(LunaOptions.font, powerheight)
 			LunaPetFrame.class:SetFont(LunaOptions.font, powerheight)
 		end
-		if powerheight < 6 then
+		if LunaPetFrame.bars["Powerbar"]:GetHeight() < 6 then
 			LunaPetFrame.bars["Powerbar"].ppp:Hide()
 			LunaPetFrame.lvl:Hide()
 			LunaPetFrame.class:Hide()
@@ -503,7 +491,7 @@ function LunaUnitFrames:UpdatePetFrame()
 	end
 	Luna_Pet_Events.UNIT_HAPPINESS()
 
-	petpower = UnitPowerType("pet")
+	local petpower = UnitPowerType("pet")
 	if UnitManaMax("pet") == 0 then
 		LunaPetFrame.bars["Powerbar"]:SetStatusBarColor(0, 0, 0, .25)
 		LunaPetFrame.bars["Powerbar"].ppbg:SetVertexColor(0, 0, 0, .25)
@@ -516,12 +504,9 @@ function LunaUnitFrames:UpdatePetFrame()
 	elseif petpower == 3 then
 		LunaPetFrame.bars["Powerbar"]:SetStatusBarColor(LunaOptions.PowerColors["Energy"][1], LunaOptions.PowerColors["Energy"][2], LunaOptions.PowerColors["Energy"][3])
 		LunaPetFrame.bars["Powerbar"].ppbg:SetVertexColor(LunaOptions.PowerColors["Energy"][1], LunaOptions.PowerColors["Energy"][2], LunaOptions.PowerColors["Energy"][3], .25)
-	elseif not UnitIsDeadOrGhost("pet") then
+	else
 		LunaPetFrame.bars["Powerbar"]:SetStatusBarColor(LunaOptions.PowerColors["Mana"][1], LunaOptions.PowerColors["Mana"][2], LunaOptions.PowerColors["Mana"][3])
 		LunaPetFrame.bars["Powerbar"].ppbg:SetVertexColor(LunaOptions.PowerColors["Mana"][1], LunaOptions.PowerColors["Mana"][2], LunaOptions.PowerColors["Mana"][3], .25)
-	else
-		LunaPetFrame.bars["Powerbar"]:SetStatusBarColor(0, 0, 0, .25)
-		LunaPetFrame.bars["Powerbar"].ppbg:SetVertexColor(0, 0, 0, .25)
 	end
 	
 	for z=1, 16 do
@@ -565,6 +550,8 @@ function LunaUnitFrames:UpdatePetFrame()
 	LunaPetFrame.name:SetText(UnitName(LunaPetFrame.unit))
 	LunaPetFrame.class:SetText(UnitCreatureFamily(LunaPetFrame.unit))
 	LunaPetFrame.lvl:SetText(UnitLevel(LunaPetFrame.unit))
+	local color = GetDifficultyColor(UnitLevel(LunaPetFrame.unit))
+	LunaPetFrame.lvl:SetVertexColor(color.r, color.g, color.b)
 	Luna_Pet_Events.UNIT_HEALTH()
 	Luna_Pet_Events.UNIT_MANA()
 end
@@ -677,6 +664,8 @@ Luna_Pet_Events.UNIT_MODEL_CHANGED = Luna_Pet_Events.UNIT_PORTRAIT_UPDATE
 
 function Luna_Pet_Events:UNIT_LEVEL()
 	LunaPetFrame.lvl:SetText(UnitLevel(LunaPetFrame.unit))
+	local color = GetDifficultyColor(UnitLevel(LunaPetFrame.unit))
+	LunaPetFrame.lvl:SetVertexColor(color.r, color.g, color.b)
 end
 
 function Luna_Pet_Events:UNIT_PET()
