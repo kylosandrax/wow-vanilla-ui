@@ -2,7 +2,6 @@
 sRaidFramesDB = {
 	["profiles"] = {
 		["Default"] = {
-			["fill_range"] = true,
 			["profile3"] = false,
 			["SortBy"] = "group",
 			["SubSort"] = "none",
@@ -25,8 +24,9 @@ sRaidFramesDB = {
 			["profile4"] = false,
 			["Growth"] = "up",
 			["WidthFocus"] = 99,
-			["grp_name"] = false,
+			["dynamic_range_sort"] = false,
 			["unitname_color"] = false,
+			["dynamic_sort"] = false,
 			["Texture"] = "Flat",
 			["detachedTooltip"] = {
 			},
@@ -34,15 +34,14 @@ sRaidFramesDB = {
 			["heal"] = true,
 			["unit_name_lenght"] = false,
 			["Growth_Focus"] = "up",
-			["aggro_aura"] = true,
 			["lock_focus"] = true,
 			["hp_limit"] = 1,
 			["dynamic_overheal_sort"] = false,
-			["dynamic_sort"] = true,
+			["aggro_aura"] = true,
 			["Border"] = false,
 			["vertical_hp"] = false,
-			["redbar"] = false,
 			["lock"] = true,
+			["redbar"] = false,
 			["Positions"] = {
 				[1] = {
 					["y"] = 247.0881222875439,
@@ -84,7 +83,7 @@ sRaidFramesDB = {
 			["healthDisplayType"] = "deficit",
 			["units_limit"] = 5,
 			["dynamic_aggro_sort"] = false,
-			["dynamic_range_sort"] = false,
+			["grp_name"] = false,
 		},
 	},
 }

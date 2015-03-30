@@ -144,9 +144,9 @@ XPerl_TeamSpeak: enabled
 XPerl_Target: enabled
 XPerl: enabled
 HealBot: disabled
-ag_UnitFrames: enabled
+ag_UnitFrames: disabled
 sRaidFrames: enabled
-LunaUnitFrames: disabled
+LunaUnitFrames: enabled
 BonusScanner: enabled
 coolDown: enabled
 ElkBuffBar: enabled

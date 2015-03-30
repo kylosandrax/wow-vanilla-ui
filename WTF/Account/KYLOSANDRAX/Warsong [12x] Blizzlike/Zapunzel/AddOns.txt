@@ -68,9 +68,9 @@ Bagnon: enabled
 Bagnon_Core: enabled
 Bagnon_Forever: enabled
 Bagnon_Options: enabled
-ag_UnitFrames: enabled
+ag_UnitFrames: disabled
 sRaidFrames: enabled
-LunaUnitFrames: disabled
+LunaUnitFrames: enabled
 SpellAlertOptions: enabled
 GridEnhanced: disabled
 XLoot: enabled

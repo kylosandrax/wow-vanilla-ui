@@ -9,18 +9,7 @@ FuBar2DB = {
 					["xPercent"] = -9.315609195148511e-008,
 					["attachPoint"] = "TOP",
 					["lock"] = true,
-					["widthPercent"] = 1,
 					["plugins"] = {
-						["center"] = {
-							[1] = "ItemBonusesFu",
-							[2] = "DurabilityFu",
-							[3] = "sRaidFrames Improved 0.71",
-							[4] = "GridEnhanced (0.11)",
-							[5] = "sRaidFrames Improved 0.88",
-							[6] = "sRaidFrames Improved 0.94",
-							[7] = "ItemRackFu",
-							[8] = "sRaidFrames Improved 0.99",
-						},
 						["right"] = {
 							[1] = "ClockFu",
 							[2] = "VolumeFu",
@@ -45,8 +34,20 @@ FuBar2DB = {
 							[13] = "FriendsFu",
 							[14] = "MetaMap",
 							[15] = "TinyTipFu",
+							[16] = "sRaidFrames Improved 1.10",
+						},
+						["center"] = {
+							[1] = "ItemBonusesFu",
+							[2] = "DurabilityFu",
+							[3] = "sRaidFrames Improved 0.71",
+							[4] = "GridEnhanced (0.11)",
+							[5] = "sRaidFrames Improved 0.88",
+							[6] = "sRaidFrames Improved 0.94",
+							[7] = "ItemRackFu",
+							[8] = "sRaidFrames Improved 0.99",
 						},
 					},
+					["widthPercent"] = 1,
 					["yPercent"] = 0.9849999652217268,
 				},
 			},
@@ -55,27 +56,28 @@ FuBar2DB = {
 			["skin"] = "Interface\\AddOns\\FuTextures\\blackorange",
 			["centerSpacing"] = 20,
 			["loadOnDemand"] = {
-				["FuBar_DurabilityFu"] = {
-					["title"] = "DurabilityFu",
-					["category"] = "Inventory",
-				},
-				["Fubar_AtlasFu2"] = {
-					["title"] = "AtlasFu2",
-					["category"] = "Map",
+				["ItemRackFu"] = {
+					["title"] = "ItemRackFu",
+					["category"] = "Other",
 				},
 				["FuBar_ClockFu"] = {
 					["title"] = "ClockFu",
 					["category"] = "Interface Enhancements",
 				},
+				["FuBar_DurabilityFu"] = {
+					["title"] = "DurabilityFu",
+					["category"] = "Inventory",
+				},
 				["FuBar_PerformanceFu"] = {
 					["title"] = "PerformanceFu",
 					["category"] = "Interface Enhancements",
 				},
-				["ItemRackFu"] = {
-					["title"] = "ItemRackFu",
-					["category"] = "Other",
+				["Fubar_AtlasFu2"] = {
+					["title"] = "AtlasFu2",
+					["category"] = "Map",
 				},
 			},
+			["thickness"] = 7,
 			["tooltip"] = {
 				["fontSizePercent"] = 1,
 			},
@@ -84,17 +86,16 @@ FuBar2DB = {
 			},
 			["autohideTop"] = false,
 			["transparency"] = 0.5,
-			["overflow"] = false,
 			["leftSpacing"] = 20,
 			["places"] = {
-				["center"] = {
-				},
 				["right"] = {
 				},
 				["left"] = {
 				},
+				["center"] = {
+				},
 			},
-			["thickness"] = 7,
+			["overflow"] = false,
 		},
 	},
 }

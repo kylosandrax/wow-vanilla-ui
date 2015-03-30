@@ -104,7 +104,7 @@ ItemRack_Users = {
 		["Bar"] = {
 		},
 	},
-	["Sixofnine of Warsong [12x] Blizzlike"] = {
+	["Kylosandrax of Al'Akir [instant 60] Blizzlike"] = {
 		["Visible"] = "OFF",
 		["MainScale"] = 1,
 		["XPos"] = 400,
@@ -144,7 +144,7 @@ ItemRack_Users = {
 		["Bar"] = {
 		},
 	},
-	["Nameplate of Emerald Dream [1x] Blizzlike"] = {
+	["Sixofnine of Warsong [12x] Blizzlike"] = {
 		["Visible"] = "OFF",
 		["MainScale"] = 1,
 		["XPos"] = 400,
@@ -184,7 +184,7 @@ ItemRack_Users = {
 		["Bar"] = {
 		},
 	},
-	["Kylosandrax of Al'Akir [instant 60] Blizzlike"] = {
+	["Nameplate of Emerald Dream [1x] Blizzlike"] = {
 		["Visible"] = "OFF",
 		["MainScale"] = 1,
 		["XPos"] = 400,
@@ -207,33 +207,33 @@ ItemRack_Users = {
 }
 ItemRack_Settings = {
 	["Notify"] = "ON",
-	["AllowHidden"] = "OFF",
+	["EnableEvents"] = "OFF",
 	["Minimap"] = {
 	},
-	["BigCooldown"] = "OFF",
-	["SquareMinimap"] = "ON",
+	["ShowAllEvents"] = "OFF",
+	["MenuShift"] = "OFF",
 	["Soulbound"] = "OFF",
-	["EnableEvents"] = "OFF",
+	["AllowHidden"] = "OFF",
 	["RotateMenu"] = "OFF",
 	["AutoToggle"] = "OFF",
-	["ShowEmpty"] = "ON",
+	["BigCooldown"] = "OFF",
 	["LargeFont"] = "OFF",
 	["ShowIcon"] = "OFF",
-	["SetLabels"] = "ON",
-	["Bindings"] = "ON",
-	["NotifyThirty"] = "ON",
-	["IconPos"] = 162.6867869007372,
-	["FlipMenu"] = "OFF",
-	["RightClick"] = "OFF",
-	["DisableToggle"] = "ON",
-	["ShowTooltips"] = "ON",
-	["TinyTooltip"] = "OFF",
-	["FlipBar"] = "OFF",
 	["TooltipFollow"] = "ON",
+	["Bindings"] = "ON",
+	["FlipBar"] = "OFF",
+	["SetLabels"] = "ON",
+	["ShowTooltips"] = "ON",
+	["NotifyThirty"] = "ON",
+	["DisableToggle"] = "ON",
+	["FlipMenu"] = "OFF",
+	["TinyTooltip"] = "OFF",
+	["RightClick"] = "OFF",
+	["IconPos"] = 162.6867869007372,
 	["CompactList"] = "ON",
 	["CooldownNumbers"] = "OFF",
-	["MenuShift"] = "OFF",
-	["ShowAllEvents"] = "OFF",
+	["SquareMinimap"] = "ON",
+	["ShowEmpty"] = "ON",
 }
 ItemRack_Events = {
 	["Druid:Caster Form"] = {
@@ -307,10 +307,10 @@ ItemRack_Events = {
 		["trigger"] = "CHAT_MSG_COMBAT_SELF_MISSES",
 		["delay"] = 5,
 	},
-	["Priest:Spirit Tap End"] = {
-		["script"] = "local found=arg1[\"Interface\\\\Icons\\\\Spell_Shadow_Requiem\"]\nif IR_SPIRIT and not found then\nLoadSet() IR_SPIRIT = nil\nend\n--[[Returns to normal gear when Spirit Tap ends. Associate the same spirit set as Spirit Tap Begin.]]",
-		["trigger"] = "ITEMRACK_BUFFS_CHANGED",
-		["delay"] = 0.5,
+	["Warrior:Overpower Begin"] = {
+		["script"] = "--[[Equip a set when the opponent dodges.  Associate a heavy-hitting 2h set with this event. ]]\nlocal _,_,i = GetShapeshiftFormInfo(1)\nif string.find(arg1 or \"\",\"^You.+dodge[sd]\") and i then\nEquipSet()\nIR_OVERPOWER=1\nend",
+		["trigger"] = "CHAT_MSG_COMBAT_SELF_MISSES",
+		["delay"] = 0,
 	},
 	["Insignia Used"] = {
 		["script"] = "if arg1==\"Insignia of the Alliance\" or arg1==\"Insignia of the Horde\" then EquipSet() end --[[Equips a set when the Insignia of the Alliance/Horde has been used.]]",
@@ -327,14 +327,14 @@ ItemRack_Events = {
 		["trigger"] = "PLAYER_AURAS_CHANGED",
 		["delay"] = 0,
 	},
-	["Druid:Travel Form"] = {
-		["script"] = "local form=ItemRack_GetForm() if form==\"Travel Form\" and IR_FORM~=form then EquipSet() IR_FORM=form end --[[Equip a set when in travel form.]]",
-		["trigger"] = "PLAYER_AURAS_CHANGED",
-		["delay"] = 0,
+	["Priest:Spirit Tap Begin"] = {
+		["script"] = "local found=ItemRack.Buffs[\"Interface\\\\Icons\\\\Spell_Shadow_Requiem\"]\nif not IR_SPIRIT and found then\nEquipSet() IR_SPIRIT=1\nend\n--[[Equips a set when you leave combat with Spirit Tap. Associate a set of spirit gear to this event.]]",
+		["trigger"] = "PLAYER_REGEN_ENABLED",
+		["delay"] = 0.25,
 	},
-	["Mount"] = {
-		["script"] = "local mount\nif UnitIsMounted then mount = UnitIsMounted(\"player\") else mount = ItemRack_PlayerMounted() end\nif not IR_MOUNT and mount then\n  EquipSet()\nelseif IR_MOUNT and not mount then\n  LoadSet()\nend\nIR_MOUNT=mount\n--[[Equips set to be worn while mounted.]]",
-		["trigger"] = "PLAYER_AURAS_CHANGED",
+	["Insignia"] = {
+		["script"] = "if arg1==\"Insignia of the Alliance\" or arg1==\"Insignia of the Horde\" then EquipSet() end --[[Equips a set when the Insignia of the Alliance/Horde finishes cooldown.]]",
+		["trigger"] = "ITEMRACK_NOTIFY",
 		["delay"] = 0,
 	},
 	["Eating-Drinking"] = {
@@ -342,25 +342,25 @@ ItemRack_Events = {
 		["trigger"] = "ITEMRACK_BUFFS_CHANGED",
 		["delay"] = 0,
 	},
-	["Insignia"] = {
-		["script"] = "if arg1==\"Insignia of the Alliance\" or arg1==\"Insignia of the Horde\" then EquipSet() end --[[Equips a set when the Insignia of the Alliance/Horde finishes cooldown.]]",
-		["trigger"] = "ITEMRACK_NOTIFY",
+	["Mount"] = {
+		["script"] = "local mount\nif UnitIsMounted then mount = UnitIsMounted(\"player\") else mount = ItemRack_PlayerMounted() end\nif not IR_MOUNT and mount then\n  EquipSet()\nelseif IR_MOUNT and not mount then\n  LoadSet()\nend\nIR_MOUNT=mount\n--[[Equips set to be worn while mounted.]]",
+		["trigger"] = "PLAYER_AURAS_CHANGED",
 		["delay"] = 0,
 	},
-	["Priest:Spirit Tap Begin"] = {
-		["script"] = "local found=ItemRack.Buffs[\"Interface\\\\Icons\\\\Spell_Shadow_Requiem\"]\nif not IR_SPIRIT and found then\nEquipSet() IR_SPIRIT=1\nend\n--[[Equips a set when you leave combat with Spirit Tap. Associate a set of spirit gear to this event.]]",
-		["trigger"] = "PLAYER_REGEN_ENABLED",
-		["delay"] = 0.25,
+	["Druid:Travel Form"] = {
+		["script"] = "local form=ItemRack_GetForm() if form==\"Travel Form\" and IR_FORM~=form then EquipSet() IR_FORM=form end --[[Equip a set when in travel form.]]",
+		["trigger"] = "PLAYER_AURAS_CHANGED",
+		["delay"] = 0,
 	},
 	["Priest:Shadowform"] = {
 		["script"] = "local f=arg1[\"Interface\\\\Icons\\\\Spell_Shadow_Shadowform\"]\nif not IR_Shadowform and f then\n  EquipSet() IR_Shadowform=1\nelseif IR_Shadowform and not f then\n  LoadSet() IR_Shadowform=nil\nend\n--[[Equips a set while under Shadowform]]",
 		["trigger"] = "ITEMRACK_BUFFS_CHANGED",
 		["delay"] = 0,
 	},
-	["Warrior:Overpower Begin"] = {
-		["script"] = "--[[Equip a set when the opponent dodges.  Associate a heavy-hitting 2h set with this event. ]]\nlocal _,_,i = GetShapeshiftFormInfo(1)\nif string.find(arg1 or \"\",\"^You.+dodge[sd]\") and i then\nEquipSet()\nIR_OVERPOWER=1\nend",
-		["trigger"] = "CHAT_MSG_COMBAT_SELF_MISSES",
-		["delay"] = 0,
+	["Priest:Spirit Tap End"] = {
+		["script"] = "local found=arg1[\"Interface\\\\Icons\\\\Spell_Shadow_Requiem\"]\nif IR_SPIRIT and not found then\nLoadSet() IR_SPIRIT = nil\nend\n--[[Returns to normal gear when Spirit Tap ends. Associate the same spirit set as Spirit Tap Begin.]]",
+		["trigger"] = "ITEMRACK_BUFFS_CHANGED",
+		["delay"] = 0.5,
 	},
 }
 Rack_User = {
@@ -745,8 +745,8 @@ Rack_User = {
 					["id"] = 0,
 					["old"] = "13380:0:0",
 				},
-				["oldsetname"] = "Tank",
 				["icon"] = "Interface\\Icons\\Ability_CheapShot",
+				["oldsetname"] = "Tank",
 			},
 			["Tank-FR"] = {
 				["oldsetname"] = "Tank-Raid",
@@ -999,8 +999,8 @@ Rack_User = {
 					["id"] = "15280:0:936",
 					["name"] = "Wizard's Hand of the Gorilla",
 				},
-				["icon"] = "Interface\\Icons\\Ability_Mage_ArcaneBarrage",
 				["oldsetname"] = "Frost",
+				["icon"] = "Interface\\Icons\\Ability_Mage_ArcaneBarrage",
 			},
 			["Rack-CombatQueue"] = {
 				[1] = {
@@ -1130,8 +1130,8 @@ Rack_User = {
 					["id"] = 0,
 					["old"] = "15280:0:936",
 				},
-				["oldsetname"] = "Frost",
 				["icon"] = "Interface\\Icons\\Ability_Kick",
+				["oldsetname"] = "Frost",
 			},
 		},
 		["CurrentSet"] = "Frost",
@@ -1223,50 +1223,8 @@ Rack_User = {
 					["id"] = "22397:0:0",
 					["old"] = "23198:0:0",
 				},
-				["icon"] = "Interface\\Icons\\Ability_Druid_CatForm",
 				["oldsetname"] = "Tanking",
-			},
-			["Rack-CombatQueue"] = {
-				[1] = {
-				},
-				[2] = {
-				},
-				[3] = {
-				},
-				[4] = {
-				},
-				[5] = {
-				},
-				[6] = {
-				},
-				[7] = {
-				},
-				[8] = {
-				},
-				[9] = {
-				},
-				[10] = {
-				},
-				[11] = {
-				},
-				[12] = {
-				},
-				[13] = {
-				},
-				[14] = {
-				},
-				[15] = {
-				},
-				[16] = {
-				},
-				[17] = {
-				},
-				[18] = {
-				},
-				[19] = {
-				},
-				[0] = {
-				},
+				["icon"] = "Interface\\Icons\\Ability_Druid_CatForm",
 			},
 			["Tanking"] = {
 				[1] = {
@@ -1353,8 +1311,50 @@ Rack_User = {
 					["id"] = "23198:0:0",
 					["old"] = "22398:0:0",
 				},
-				["icon"] = "Interface\\Icons\\Ability_Warrior_DefensiveStance",
 				["oldsetname"] = "Tanking",
+				["icon"] = "Interface\\Icons\\Ability_Warrior_DefensiveStance",
+			},
+			["Rack-CombatQueue"] = {
+				[1] = {
+				},
+				[2] = {
+				},
+				[3] = {
+				},
+				[4] = {
+				},
+				[5] = {
+				},
+				[6] = {
+				},
+				[7] = {
+				},
+				[8] = {
+				},
+				[9] = {
+				},
+				[10] = {
+				},
+				[11] = {
+				},
+				[12] = {
+				},
+				[13] = {
+				},
+				[14] = {
+				},
+				[15] = {
+				},
+				[16] = {
+				},
+				[17] = {
+				},
+				[18] = {
+				},
+				[19] = {
+				},
+				[0] = {
+				},
 			},
 			["HealBot"] = {
 				[1] = {
@@ -1441,8 +1441,8 @@ Rack_User = {
 					["id"] = "22398:0:0",
 					["old"] = "23198:0:0",
 				},
-				["icon"] = "Interface\\Icons\\Ability_DeathKnight_RemorselessWinters",
 				["oldsetname"] = "Tanking",
+				["icon"] = "Interface\\Icons\\Ability_DeathKnight_RemorselessWinters",
 			},
 		},
 		["CurrentSet"] = "HealBot",
@@ -1533,8 +1533,8 @@ Rack_User = {
 					["id"] = "22395:0:0",
 					["name"] = "Totem of Rage",
 				},
-				["oldsetname"] = "Melee",
 				["icon"] = "Interface\\Icons\\Ability_Druid_TreeofLife",
+				["oldsetname"] = "Melee",
 			},
 			["Melee"] = {
 				[1] = {
@@ -1616,8 +1616,8 @@ Rack_User = {
 					["id"] = "22395:0:0",
 					["name"] = "Totem of Rage",
 				},
-				["oldsetname"] = "Healbot-MaxSP",
 				["icon"] = "Interface\\Icons\\Ability_DualWield",
+				["oldsetname"] = "Healbot-MaxSP",
 			},
 			["Rack-CombatQueue"] = {
 				[1] = {
@@ -1745,8 +1745,8 @@ Rack_User = {
 					["id"] = "22395:0:0",
 					["name"] = "Totem of Rage",
 				},
-				["icon"] = "Interface\\Icons\\Ability_Druid_TreeofLife",
 				["oldsetname"] = "Healbot-MaxMP5",
+				["icon"] = "Interface\\Icons\\Ability_Druid_TreeofLife",
 			},
 		},
 		["CurrentSet"] = "Healbot-MaxSP",
@@ -1816,48 +1816,6 @@ Rack_User = {
 				},
 				["icon"] = "Interface\\Icons\\Ability_Paladin_SanctifiedWrath",
 			},
-			["Rack-CombatQueue"] = {
-				[1] = {
-				},
-				[2] = {
-				},
-				[3] = {
-				},
-				[4] = {
-				},
-				[5] = {
-				},
-				[6] = {
-				},
-				[7] = {
-				},
-				[8] = {
-				},
-				[9] = {
-				},
-				[10] = {
-				},
-				[11] = {
-				},
-				[12] = {
-				},
-				[13] = {
-				},
-				[14] = {
-				},
-				[15] = {
-				},
-				[16] = {
-				},
-				[17] = {
-				},
-				[18] = {
-				},
-				[19] = {
-				},
-				[0] = {
-				},
-			},
 			["Holy"] = {
 				[1] = {
 					["name"] = "Zulian Headdress",
@@ -1923,10 +1881,52 @@ Rack_User = {
 				},
 				["icon"] = "Interface\\Icons\\Ability_Vehicle_ShellShieldGenerator",
 			},
+			["Rack-CombatQueue"] = {
+				[1] = {
+				},
+				[2] = {
+				},
+				[3] = {
+				},
+				[4] = {
+				},
+				[5] = {
+				},
+				[6] = {
+				},
+				[7] = {
+				},
+				[8] = {
+				},
+				[9] = {
+				},
+				[10] = {
+				},
+				[11] = {
+				},
+				[12] = {
+				},
+				[13] = {
+				},
+				[14] = {
+				},
+				[15] = {
+				},
+				[16] = {
+				},
+				[17] = {
+				},
+				[18] = {
+				},
+				[19] = {
+				},
+				[0] = {
+				},
+			},
 		},
 		["CurrentSet"] = "Ret",
 	},
-	["Sixofnine of Warsong [12x] Blizzlike"] = {
+	["Kylosandrax of Al'Akir [instant 60] Blizzlike"] = {
 		["Sets"] = {
 			["Rack-CombatQueue"] = {
 				[1] = {
@@ -2018,7 +2018,7 @@ Rack_User = {
 			},
 		},
 	},
-	["Nameplate of Emerald Dream [1x] Blizzlike"] = {
+	["Sixofnine of Warsong [12x] Blizzlike"] = {
 		["Sets"] = {
 			["Rack-CombatQueue"] = {
 				[1] = {
@@ -2110,7 +2110,7 @@ Rack_User = {
 			},
 		},
 	},
-	["Kylosandrax of Al'Akir [instant 60] Blizzlike"] = {
+	["Nameplate of Emerald Dream [1x] Blizzlike"] = {
 		["Sets"] = {
 			["Rack-CombatQueue"] = {
 				[1] = {

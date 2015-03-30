@@ -6,10 +6,10 @@ AtlasOptions = {
 	["AtlasType"] = 1,
 	["AtlasButtonShown"] = false,
 	["AtlasVersion"] = "1.8.1",
-	["AtlasAlpha"] = 1,
 	["AtlasButtonPosition"] = 268,
+	["AtlasRightClick"] = false,
 	["AtlasZone"] = 29,
 	["AtlasAutoSelect"] = true,
 	["AtlasLocked"] = false,
-	["AtlasRightClick"] = false,
+	["AtlasAlpha"] = 1,
 }

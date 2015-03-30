@@ -74,9 +74,13 @@ Frame: KLHTM_Frame
 FrameLevel: 1
 X: 1037
 Y: -1024
+Frame: LunaOptionsMenu
+FrameLevel: 1
+X: 903
+Y: -87
 Frame: FuBarPluginMetaMapFrame
 FrameLevel: 7
-X: 514
+X: 515
 Y: 4
 Frame: PowaBarConfigFrame
 FrameLevel: 1

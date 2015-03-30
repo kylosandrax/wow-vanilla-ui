@@ -13,7 +13,7 @@ BankItems_Save = {
 		["money"] = 25752590,
 	},
 	["Sixofnine|Warsong [12x] Blizzlike"] = {
-		["money"] = 53061,
+		["money"] = 0,
 	},
 	["Kylosandrax|Warsong [12x] Blizzlike"] = {
 		["money"] = 0,
@@ -28,6 +28,6 @@ BankItems_Save = {
 		["money"] = 0,
 	},
 	["Stormslinger|Warsong [12x] Blizzlike"] = {
-		["money"] = 97364,
+		["money"] = 94809,
 	},
 }

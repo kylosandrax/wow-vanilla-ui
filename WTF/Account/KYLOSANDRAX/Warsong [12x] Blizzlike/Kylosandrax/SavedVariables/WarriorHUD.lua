@@ -36,9 +36,9 @@ WHUD_VARS = {
 		["enabled"] = true,
 		["scale"] = 1,
 		["Y"] = -200,
-		["X"] = 0,
+		["transparency"] = 1,
 		["fontsize"] = 25,
 		["strata"] = "HIGH",
-		["transparency"] = 1,
+		["X"] = 0,
 	},
 }
