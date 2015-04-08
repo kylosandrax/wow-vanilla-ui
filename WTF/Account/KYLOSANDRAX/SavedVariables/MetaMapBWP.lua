@@ -2,12 +2,12 @@
 BWP_Options = {
 	["ShowNPC"] = true,
 	["ShowCorpse"] = false,
-	["SetAlpha"] = 1,
-	["ShowOnGuard"] = false,
-	["ClearDest"] = true,
-	["ShowYards"] = false,
 	["SetDistance"] = 0.004100000020116568,
 	["ShowPoints"] = true,
+	["ClearDest"] = true,
+	["ShowYards"] = false,
+	["SetAlpha"] = 1,
+	["ShowOnGuard"] = false,
 }
 BWP_Destination = nil
 BWP_QuestList = {
@@ -918,7 +918,7 @@ BWP_QuestList = {
 		["Y"] = 0.3780048787593842,
 		["X"] = 0.3183958828449249,
 		["Zone"] = 12,
-		["QuestName"] = "What the Wind Carries,The Champion of the Horde,For The Horde!",
+		["QuestName"] = "What the Wind Carries,The Champion of the Horde,For The Horde!,Hidden Enemies",
 		["QuestGiver"] = "Thrall",
 	},
 	[131] = {
@@ -1452,6 +1452,27 @@ BWP_QuestList = {
 		["Zone"] = 13,
 		["QuestName"] = "Drape of Unyielding Strength",
 		["QuestGiver"] = "Keyl Swiftclaw",
+	},
+	[207] = {
+		["Y"] = 0.4352120757102966,
+		["X"] = 0.5195865035057068,
+		["Zone"] = 6,
+		["QuestName"] = ",",
+		["QuestGiver"] = "Gar'Thok",
+	},
+	[208] = {
+		["Y"] = 0.4374785721302033,
+		["X"] = 0.5192133784294128,
+		["Zone"] = 6,
+		["QuestName"] = "Therzok",
+		["QuestGiver"] = "Kaplak",
+	},
+	[209] = {
+		["Y"] = 0.5340325832366943,
+		["X"] = 0.4284004867076874,
+		["Zone"] = 12,
+		["QuestName"] = "The Shattered Hand",
+		["QuestGiver"] = "Therzok",
 	},
 }
 BWP_AbandonedQuests = nil

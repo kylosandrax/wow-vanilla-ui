@@ -15,7 +15,7 @@ FrameLevel: 9
 X: 1296
 Y: -491
 Frame: ATSWFrame
-FrameLevel: 34
+FrameLevel: 60
 X: 349
 Y: -105
 Frame: ATSWCSFrame
@@ -32,8 +32,8 @@ X: 1636
 Y: -1173
 Frame: coolDownDock
 FrameLevel: 1
-X: 1536
-Y: -925
+X: 1549
+Y: -923
 Frame: DiscordMiniInventoryFrame
 FrameLevel: 1
 X: 1692
@@ -91,7 +91,7 @@ Y: -904
 Frame: TrinketMenu_MenuFrame
 FrameLevel: 14
 X: 1179
-Y: -864
+Y: -824
 Frame: TrinketMenu_OptFrame
 FrameLevel: 1
 X: 582

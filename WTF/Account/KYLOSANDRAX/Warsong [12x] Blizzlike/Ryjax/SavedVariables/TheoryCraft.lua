@@ -12,59 +12,37 @@ TheoryCraft_Settings = {
 	["ColG"] = 1,
 	["ColG2"] = 1,
 	["ColR2"] = 1,
-	["ColB"] = 1,
 	["embedstyle1"] = true,
+	["ColB"] = 1,
 	["tryfirst"] = "averagedam",
 	["dataversion"] = "1.06",
-	["embed"] = true,
+	["combinedot"] = true,
 	["tryfirstsfg"] = 0,
 	["trysecondsfg"] = -1,
-	["ColR"] = 1,
-	["procs"] = true,
+	["buttontextx"] = 1.111,
+	["ColB2"] = 0.6862745098039216,
 	["FontPath"] = "Fonts\\ArialN.TTF",
 	["GenerateList"] = "",
 	["dontresist"] = true,
-	["mitigation"] = true,
-	["buttontext"] = true,
 	["trysecond"] = "averagehealnocrit",
+	["buttontext"] = true,
+	["mitigation"] = true,
 	["CustomOutfit"] = {
-		["destat"] = {
-			[1] = "Head",
-			[2] = "Neck",
-			[3] = "Shoulder",
-			[4] = "Chest",
-			[5] = "Waist",
-			[6] = "Legs",
-			[7] = "Feet",
-			[8] = "Wrist",
-			[9] = "Hands",
-			[10] = "Finger0",
-			[11] = "Finger1",
-			[12] = "Trinket0",
-			[13] = "Trinket1",
-			[14] = "Back",
-			[15] = "MainHand",
-			[16] = "SecondaryHand",
-			[17] = "Ranged",
-			[18] = "Tabard",
-			[19] = "Ammo",
-		},
+		["intellect"] = 0,
 		["newstat"] = {
 		},
 		["slots"] = {
-			["Ranged"] = {
+			["Waist"] = {
 				["stats"] = {
+					["stamina"] = 12,
+					["strength"] = 13,
 				},
-				["name"] = "|cff0070dd|Hitem:18338:0:0:0|h[Wand of Arcane Potency]|h|r",
+				["name"] = "|cff1eff00|Hitem:10370:0:0:0|h[Imbued Plate Girdle]|h|r",
 				["data"] = {
-					["RangedSpeed"] = 1.6,
-					["name"] = "Wand of Arcane Potency",
+					["name"] = "Imbued Plate Girdle",
 					["procs"] = {
 					},
 					["numlines"] = 7,
-					["RangedMax"] = 122,
-					["Arcane"] = 16,
-					["RangedMin"] = 65,
 				},
 			},
 			["Trinket1"] = {
@@ -138,16 +116,19 @@ TheoryCraft_Settings = {
 					["numlines"] = 12,
 				},
 			},
-			["Back"] = {
+			["Ranged"] = {
 				["stats"] = {
 				},
-				["name"] = "|cff1eff00|Hitem:14484:0:0:0|h[Pattern: Brightcloth Cloak]|h|r",
+				["name"] = "|cff0070dd|Hitem:18338:0:0:0|h[Wand of Arcane Potency]|h|r",
 				["data"] = {
-					["Frost"] = 10,
-					["name"] = "Pattern: Brightcloth Cloak",
+					["RangedSpeed"] = 1.6,
+					["name"] = "Wand of Arcane Potency",
+					["Arcane"] = 16,
+					["RangedMin"] = 65,
+					["RangedMax"] = 122,
 					["procs"] = {
 					},
-					["numlines"] = 12,
+					["numlines"] = 7,
 				},
 			},
 			["Main"] = {
@@ -159,29 +140,27 @@ TheoryCraft_Settings = {
 				["data"] = {
 					["numlines"] = 14,
 					["MeleeMax"] = 145,
-					["MeleeMin"] = 60,
+					["name"] = "Thunderfury, Blessed Blade of the Windseeker",
 					["procs"] = {
 					},
 					["MeleeAPMult"] = 2.4,
 					["MainSpeed"] = 1.9,
-					["name"] = "Thunderfury, Blessed Blade of the Windseeker",
+					["MeleeMin"] = 60,
 				},
 			},
-			["Off Hand"] = {
+			["Wrist"] = {
 				["stats"] = {
-					["stamina"] = 8,
-					["agility"] = 20,
+					["intellect"] = 10,
+					["settype"] = "Vestments of the Devout",
+					["spirit"] = 10,
+					["stamina"] = 7,
 				},
-				["name"] = "|cffff8000|Hitem:19019:2564:0:0|h[Thunderfury, Blessed Blade of the Windseeker]|h|r",
+				["name"] = "|cff0070dd|Hitem:16697:0:0:0|h[Devout Bracers]|h|r",
 				["data"] = {
-					["numlines"] = 14,
-					["MeleeMax"] = 145,
-					["MeleeMin"] = 60,
+					["name"] = "Devout Bracers",
 					["procs"] = {
 					},
-					["MeleeAPMult"] = 2.4,
-					["MainSpeed"] = 1.9,
-					["name"] = "Thunderfury, Blessed Blade of the Windseeker",
+					["numlines"] = 23,
 				},
 			},
 			["Hands"] = {
@@ -198,19 +177,21 @@ TheoryCraft_Settings = {
 					["numlines"] = 8,
 				},
 			},
-			["Wrist"] = {
+			["Off Hand"] = {
 				["stats"] = {
-					["intellect"] = 10,
-					["stamina"] = 7,
-					["spirit"] = 10,
-					["settype"] = "Vestments of the Devout",
+					["stamina"] = 8,
+					["agility"] = 20,
 				},
-				["name"] = "|cff0070dd|Hitem:16697:0:0:0|h[Devout Bracers]|h|r",
+				["name"] = "|cffff8000|Hitem:19019:2564:0:0|h[Thunderfury, Blessed Blade of the Windseeker]|h|r",
 				["data"] = {
-					["name"] = "Devout Bracers",
+					["numlines"] = 14,
+					["MeleeMax"] = 145,
+					["name"] = "Thunderfury, Blessed Blade of the Windseeker",
 					["procs"] = {
 					},
-					["numlines"] = 23,
+					["MeleeAPMult"] = 2.4,
+					["MainSpeed"] = 1.9,
+					["MeleeMin"] = 60,
 				},
 			},
 			["Shoulder"] = {
@@ -226,31 +207,50 @@ TheoryCraft_Settings = {
 					["numlines"] = 7,
 				},
 			},
-			["Waist"] = {
+			["Back"] = {
 				["stats"] = {
-					["stamina"] = 12,
-					["strength"] = 13,
 				},
-				["name"] = "|cff1eff00|Hitem:10370:0:0:0|h[Imbued Plate Girdle]|h|r",
+				["name"] = "|cff1eff00|Hitem:14484:0:0:0|h[Pattern: Brightcloth Cloak]|h|r",
 				["data"] = {
-					["name"] = "Imbued Plate Girdle",
+					["Frost"] = 10,
+					["name"] = "Pattern: Brightcloth Cloak",
 					["procs"] = {
 					},
-					["numlines"] = 7,
+					["numlines"] = 12,
 				},
 			},
 		},
 		["agility"] = 0,
 		["name"] = "Naked",
-		["strength"] = 0,
+		["stamina"] = 0,
 		["wear"] = {
 		},
-		["intellect"] = 0,
+		["destat"] = {
+			[1] = "Head",
+			[2] = "Neck",
+			[3] = "Shoulder",
+			[4] = "Chest",
+			[5] = "Waist",
+			[6] = "Legs",
+			[7] = "Feet",
+			[8] = "Wrist",
+			[9] = "Hands",
+			[10] = "Finger0",
+			[11] = "Finger1",
+			[12] = "Trinket0",
+			[13] = "Trinket1",
+			[14] = "Back",
+			[15] = "MainHand",
+			[16] = "SecondaryHand",
+			[17] = "Ranged",
+			[18] = "Tabard",
+			[19] = "Ammo",
+		},
 		["spirit"] = 0,
-		["stamina"] = 0,
+		["strength"] = 0,
 	},
-	["ColB2"] = 0.6862745098039216,
-	["buttontextx"] = 1.111,
+	["procs"] = true,
+	["ColR"] = 1,
 	["critchancedata"] = {
 		["30:0"] = {
 			["casts"] = 1,
@@ -316,9 +316,9 @@ TheoryCraft_Settings = {
 			["casts"] = 1,
 			["crits"] = 0,
 		},
-		["160:50"] = {
-			["casts"] = 1,
-			["crits"] = 1,
+		["43:0"] = {
+			["casts"] = 2,
+			["crits"] = 0,
 		},
 		["128:0"] = {
 			["casts"] = 37,
@@ -380,17 +380,17 @@ TheoryCraft_Settings = {
 			["casts"] = 5,
 			["crits"] = 0,
 		},
-		["194:0"] = {
-			["casts"] = 1,
-			["crits"] = 0,
+		["290:0"] = {
+			["casts"] = 69,
+			["crits"] = 12,
 		},
 		["294:0"] = {
 			["casts"] = 14,
 			["crits"] = 1,
 		},
-		["340:0"] = {
-			["casts"] = 16,
-			["crits"] = 1,
+		["357:0"] = {
+			["casts"] = 127,
+			["crits"] = 16,
 		},
 		["114:0"] = {
 			["casts"] = 26,
@@ -528,9 +528,9 @@ TheoryCraft_Settings = {
 			["casts"] = 1,
 			["crits"] = 0,
 		},
-		["347:50"] = {
-			["casts"] = 1,
-			["crits"] = 1,
+		["193:0"] = {
+			["casts"] = 10,
+			["crits"] = 0,
 		},
 		["376:0"] = {
 			["casts"] = 86,
@@ -620,53 +620,53 @@ TheoryCraft_Settings = {
 			["casts"] = 220,
 			["crits"] = 13,
 		},
-		["175:0"] = {
-			["casts"] = 1,
-			["crits"] = 0,
-		},
-		["231:0"] = {
+		["51:0"] = {
 			["casts"] = 4,
 			["crits"] = 0,
 		},
-		["111:0"] = {
-			["casts"] = 2,
+		["255:0"] = {
+			["casts"] = 5,
 			["crits"] = 0,
 		},
-		["71:0"] = {
-			["casts"] = 3,
+		["218:0"] = {
+			["casts"] = 6,
+			["crits"] = 0,
+		},
+		["96:0"] = {
+			["casts"] = 7,
 			["crits"] = 0,
 		},
 		["333:0"] = {
 			["casts"] = 102,
 			["crits"] = 9,
 		},
-		["255:0"] = {
-			["casts"] = 5,
-			["crits"] = 0,
+		["106:0"] = {
+			["casts"] = 6,
+			["crits"] = 1,
 		},
 		["133:0"] = {
 			["casts"] = 27,
 			["crits"] = 4,
 		},
-		["296:0"] = {
-			["casts"] = 422,
-			["crits"] = 36,
+		["319:0"] = {
+			["casts"] = 146,
+			["crits"] = 10,
 		},
 		["100:0"] = {
 			["casts"] = 7,
 			["crits"] = 0,
 		},
-		["295:0"] = {
-			["casts"] = 55,
-			["crits"] = 5,
+		["339:0"] = {
+			["casts"] = 36,
+			["crits"] = 4,
 		},
 		["300:0"] = {
 			["casts"] = 1,
 			["crits"] = 0,
 		},
-		["159:0"] = {
-			["casts"] = 4,
-			["crits"] = 0,
+		["375:0"] = {
+			["casts"] = 240,
+			["crits"] = 21,
 		},
 		["356:0"] = {
 			["casts"] = 743,
@@ -684,37 +684,37 @@ TheoryCraft_Settings = {
 			["casts"] = 10,
 			["crits"] = 0,
 		},
-		["339:0"] = {
-			["casts"] = 36,
-			["crits"] = 4,
-		},
-		["319:0"] = {
-			["casts"] = 146,
-			["crits"] = 10,
-		},
-		["218:0"] = {
-			["casts"] = 6,
+		["231:0"] = {
+			["casts"] = 4,
 			["crits"] = 0,
 		},
-		["357:0"] = {
-			["casts"] = 127,
-			["crits"] = 16,
+		["296:0"] = {
+			["casts"] = 422,
+			["crits"] = 36,
 		},
-		["380:0"] = {
-			["casts"] = 211,
-			["crits"] = 14,
+		["340:0"] = {
+			["casts"] = 16,
+			["crits"] = 1,
 		},
-		["106:0"] = {
-			["casts"] = 6,
+		["145:50"] = {
+			["casts"] = 1,
+			["crits"] = 1,
+		},
+		["160:50"] = {
+			["casts"] = 1,
+			["crits"] = 1,
+		},
+		["347:50"] = {
+			["casts"] = 1,
 			["crits"] = 1,
 		},
 		["369:0"] = {
 			["casts"] = 410,
 			["crits"] = 44,
 		},
-		["153:0"] = {
+		["85:0"] = {
 			["casts"] = 1,
-			["crits"] = 0,
+			["crits"] = 1,
 		},
 		["318:50"] = {
 			["casts"] = 3,
@@ -728,9 +728,9 @@ TheoryCraft_Settings = {
 			["casts"] = 1,
 			["crits"] = 0,
 		},
-		["280:0"] = {
-			["casts"] = 50,
-			["crits"] = 3,
+		["287:0"] = {
+			["casts"] = 2,
+			["crits"] = 0,
 		},
 		["41:0"] = {
 			["casts"] = 10,
@@ -764,65 +764,65 @@ TheoryCraft_Settings = {
 			["casts"] = 33,
 			["crits"] = 3,
 		},
-		["364:0"] = {
-			["casts"] = 94,
-			["crits"] = 10,
+		["29:0"] = {
+			["casts"] = 3,
+			["crits"] = 0,
 		},
 		["347:0"] = {
 			["casts"] = 122,
 			["crits"] = 17,
 		},
-		["372:0"] = {
-			["casts"] = 413,
-			["crits"] = 48,
+		["134:0"] = {
+			["casts"] = 4,
+			["crits"] = 0,
 		},
 		["123:0"] = {
 			["casts"] = 2,
 			["crits"] = 0,
 		},
-		["274:0"] = {
-			["casts"] = 55,
-			["crits"] = 12,
+		["374:0"] = {
+			["casts"] = 68,
+			["crits"] = 4,
 		},
 		["332:0"] = {
 			["casts"] = 59,
 			["crits"] = 7,
 		},
-		["374:0"] = {
-			["casts"] = 68,
-			["crits"] = 4,
+		["274:0"] = {
+			["casts"] = 55,
+			["crits"] = 12,
 		},
-		["134:0"] = {
-			["casts"] = 4,
-			["crits"] = 0,
+		["372:0"] = {
+			["casts"] = 413,
+			["crits"] = 48,
 		},
-		["29:0"] = {
-			["casts"] = 3,
-			["crits"] = 0,
+		["364:0"] = {
+			["casts"] = 94,
+			["crits"] = 10,
 		},
-		["145:50"] = {
-			["casts"] = 1,
-			["crits"] = 1,
+		["280:0"] = {
+			["casts"] = 50,
+			["crits"] = 3,
 		},
 		["342:0"] = {
 			["casts"] = 105,
 			["crits"] = 5,
 		},
-		["85:0"] = {
+		["153:0"] = {
+			["casts"] = 1,
+			["crits"] = 0,
+		},
+		["110:0"] = {
 			["casts"] = 1,
 			["crits"] = 1,
 		},
-		["193:0"] = {
-			["casts"] = 10,
-			["crits"] = 0,
+		["380:0"] = {
+			["casts"] = 211,
+			["crits"] = 14,
 		},
-		["43:0"] = {
+		["111:0"] = {
 			["casts"] = 2,
 			["crits"] = 0,
-		},
-		["290:0"] = {
-			["casts"] = 69,
-			["crits"] = 12,
 		},
 		["246:0"] = {
 			["casts"] = 16,
@@ -832,35 +832,35 @@ TheoryCraft_Settings = {
 			["casts"] = 4,
 			["crits"] = 0,
 		},
-		["375:0"] = {
-			["casts"] = 240,
-			["crits"] = 21,
+		["159:0"] = {
+			["casts"] = 4,
+			["crits"] = 0,
 		},
-		["110:0"] = {
-			["casts"] = 1,
-			["crits"] = 1,
+		["295:0"] = {
+			["casts"] = 55,
+			["crits"] = 5,
 		},
 		["91:0"] = {
 			["casts"] = 22,
 			["crits"] = 3,
 		},
-		["287:0"] = {
-			["casts"] = 2,
+		["194:0"] = {
+			["casts"] = 1,
 			["crits"] = 0,
 		},
-		["96:0"] = {
-			["casts"] = 7,
+		["71:0"] = {
+			["casts"] = 3,
 			["crits"] = 0,
 		},
 		["61:0"] = {
 			["casts"] = 4,
 			["crits"] = 0,
 		},
-		["51:0"] = {
-			["casts"] = 4,
+		["175:0"] = {
+			["casts"] = 1,
 			["crits"] = 0,
 		},
 	},
-	["combinedot"] = true,
+	["embed"] = true,
 	["healanddamage"] = true,
 }

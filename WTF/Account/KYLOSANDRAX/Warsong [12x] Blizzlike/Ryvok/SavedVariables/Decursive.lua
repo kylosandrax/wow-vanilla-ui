@@ -8,17 +8,17 @@ Dcr_Saved = {
 	["Amount_Of_Afflicted"] = 5,
 	["CureBlacklist"] = 5,
 	["Show_LiveList"] = false,
-	["Print_ChatFrame"] = false,
-	["PlaySound"] = true,
+	["ScanTime"] = 0.2,
+	["Check_For_Abolish"] = true,
 	["HideButtons"] = false,
 	["DoNot_Blacklist_Prio_List"] = false,
 	["Print_Error"] = true,
 	["Scan_Pets"] = true,
-	["ScanTime"] = 0.2,
+	["Print_ChatFrame"] = false,
 	["PriorityList"] = {
 	},
 	["Random_Order"] = false,
-	["Check_For_Abolish"] = true,
+	["PlaySound"] = true,
 }
 DCR_REMOTE_DEBUG = {
 }

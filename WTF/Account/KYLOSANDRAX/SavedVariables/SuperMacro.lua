@@ -18,7 +18,7 @@ SM_EXTEND = {
 SM_ACTION_SUPER = {
 	["Kylosandrax of Warsong [12x] Blizzlike"] = {
 	},
-	["Zapunzel of Warsong [12x] Blizzlike"] = {
+	["Kashonar of Warsong [12x] Blizzlike"] = {
 	},
 	["Ryjax of Warsong [12x] Blizzlike"] = {
 	},
@@ -26,15 +26,17 @@ SM_ACTION_SUPER = {
 	},
 	["Ryvok of Warsong [12x] Blizzlike"] = {
 	},
-	["Sixofnine of Warsong [12x] Blizzlike"] = {
-	},
-	["Banjax of Warsong [12x] Blizzlike"] = {
+	["Kylosandrax of Al'Akir [instant 60] Blizzlike"] = {
 	},
 	["Nameplate of Emerald Dream [1x] Blizzlike"] = {
 	},
+	["Banjax of Warsong [12x] Blizzlike"] = {
+	},
+	["Sixofnine of Warsong [12x] Blizzlike"] = {
+	},
 	["Ryvok of Emerald Dream [1x] Blizzlike"] = {
 	},
-	["Kylosandrax of Al'Akir [instant 60] Blizzlike"] = {
+	["Zapunzel of Warsong [12x] Blizzlike"] = {
 	},
 }
 SM_SUPER = {

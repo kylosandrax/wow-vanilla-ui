@@ -10,8 +10,8 @@ ElkBuffBarOptions = {
 	["x"] = 2842,
 	["sort"] = "DEFAULT",
 	["spacing"] = 0,
-	["timer"] = "DEFAULT",
-	["anchor"] = "TOPRIGHT",
-	["icon"] = "LEFT",
 	["locked"] = true,
+	["timer"] = "DEFAULT",
+	["icon"] = "LEFT",
+	["anchor"] = "TOPRIGHT",
 }

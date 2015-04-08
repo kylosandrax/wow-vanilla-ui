@@ -1,0 +1,10 @@
+RDX: disabled
+RDXM_Assists: disabled
+RDXM_Bootstrap: disabled
+RDXM_BossMods: disabled
+RDXM_Buffs: disabled
+RDXM_DamageMeter: disabled
+RDXM_Debuffs: disabled
+RDXM_Logistics: disabled
+RDXM_ThreatMeter: disabled
+RDXM_Windows: disabled

@@ -8,7 +8,7 @@ TheoryCraft_Settings = {
 		["Shadow"] = 0,
 		["Nature"] = 0,
 	},
-	["ColR"] = 1,
+	["buttontexty"] = 10.22,
 	["ColG"] = 1,
 	["ColG2"] = 1,
 	["ColR2"] = 1,
@@ -19,9 +19,9 @@ TheoryCraft_Settings = {
 	["embed"] = true,
 	["tryfirstsfg"] = 0,
 	["buttontextx"] = 1.111,
-	["buttontexty"] = 10.22,
+	["ColR"] = 1,
 	["ColB2"] = 0.6862745098039216,
-	["mitigation"] = true,
+	["FontPath"] = "Fonts\\ArialN.TTF",
 	["GenerateList"] = "",
 	["trysecond"] = "averagehealnocrit",
 	["dataversion"] = "1.06",
@@ -51,9 +51,6 @@ TheoryCraft_Settings = {
 		},
 		["newstat"] = {
 		},
-		["strength"] = 0,
-		["agility"] = 0,
-		["name"] = "Naked",
 		["slots"] = {
 			["Ranged"] = {
 				["stats"] = {
@@ -84,18 +81,18 @@ TheoryCraft_Settings = {
 					["numlines"] = 6,
 				},
 			},
-			["Legs"] = {
+			["Neck"] = {
 				["stats"] = {
-					["settype"] = "Stormshroud Armor",
-					["meleecritchance"] = 2,
+					["agility"] = 13,
+					["strength"] = 5,
+					["spirit"] = 3,
 				},
-				["name"] = "|cffffffff|Hitem:15741:0:0:0|h[Pattern: Stormshroud Pants]|h|r",
+				["name"] = "|cff0070dd|Hitem:13089:0:0:0|h[Skibi's Pendant]|h|r",
 				["data"] = {
-					["name"] = "Pattern: Stormshroud Pants",
+					["name"] = "Skibi's Pendant",
 					["procs"] = {
 					},
-					["numlines"] = 22,
-					["CritReport"] = 2,
+					["numlines"] = 7,
 				},
 			},
 			["Back"] = {
@@ -217,18 +214,18 @@ TheoryCraft_Settings = {
 					["numlines"] = 7,
 				},
 			},
-			["Neck"] = {
+			["Legs"] = {
 				["stats"] = {
-					["agility"] = 13,
-					["strength"] = 5,
-					["spirit"] = 3,
+					["settype"] = "Stormshroud Armor",
+					["meleecritchance"] = 2,
 				},
-				["name"] = "|cff0070dd|Hitem:13089:0:0:0|h[Skibi's Pendant]|h|r",
+				["name"] = "|cffffffff|Hitem:15741:0:0:0|h[Pattern: Stormshroud Pants]|h|r",
 				["data"] = {
-					["name"] = "Skibi's Pendant",
+					["name"] = "Pattern: Stormshroud Pants",
 					["procs"] = {
 					},
-					["numlines"] = 7,
+					["numlines"] = 22,
+					["CritReport"] = 2,
 				},
 			},
 			["Shoulder"] = {
@@ -259,6 +256,9 @@ TheoryCraft_Settings = {
 				},
 			},
 		},
+		["agility"] = 0,
+		["name"] = "Naked",
+		["strength"] = 0,
 		["wear"] = {
 		},
 		["intellect"] = 0,
@@ -266,7 +266,7 @@ TheoryCraft_Settings = {
 		["stamina"] = 0,
 	},
 	["procs"] = true,
-	["FontPath"] = "Fonts\\ArialN.TTF",
+	["mitigation"] = true,
 	["critchancedata"] = {
 		["40:0"] = {
 			["casts"] = 5,
@@ -324,9 +324,9 @@ TheoryCraft_Settings = {
 			["casts"] = 29,
 			["crits"] = 0,
 		},
-		["187:5"] = {
-			["casts"] = 8,
-			["crits"] = 1,
+		["23:0"] = {
+			["casts"] = 4,
+			["crits"] = 0,
 		},
 		["43:0"] = {
 			["casts"] = 1,
@@ -380,8 +380,8 @@ TheoryCraft_Settings = {
 			["casts"] = 5,
 			["crits"] = 0,
 		},
-		["193:5"] = {
-			["casts"] = 9,
+		["22:0"] = {
+			["casts"] = 1,
 			["crits"] = 0,
 		},
 		["32:0"] = {
@@ -464,9 +464,9 @@ TheoryCraft_Settings = {
 			["casts"] = 62,
 			["crits"] = 6,
 		},
-		["275:5"] = {
-			["casts"] = 1,
-			["crits"] = 0,
+		["95:0"] = {
+			["casts"] = 6,
+			["crits"] = 1,
 		},
 		["96:0"] = {
 			["casts"] = 15,
@@ -476,9 +476,9 @@ TheoryCraft_Settings = {
 			["casts"] = 135,
 			["crits"] = 22,
 		},
-		["23:0"] = {
-			["casts"] = 4,
-			["crits"] = 0,
+		["187:5"] = {
+			["casts"] = 8,
+			["crits"] = 1,
 		},
 		["104:0"] = {
 			["casts"] = 2,
@@ -520,8 +520,8 @@ TheoryCraft_Settings = {
 			["casts"] = 2,
 			["crits"] = 1,
 		},
-		["22:0"] = {
-			["casts"] = 1,
+		["193:5"] = {
+			["casts"] = 9,
 			["crits"] = 0,
 		},
 		["26:0"] = {
@@ -548,9 +548,9 @@ TheoryCraft_Settings = {
 			["casts"] = 18,
 			["crits"] = 1,
 		},
-		["95:0"] = {
-			["casts"] = 6,
-			["crits"] = 1,
+		["275:5"] = {
+			["casts"] = 1,
+			["crits"] = 0,
 		},
 		["71:0"] = {
 			["casts"] = 23,

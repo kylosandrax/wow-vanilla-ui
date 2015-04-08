@@ -15,9 +15,9 @@ RDX5Data = {
 			["mqDelay"] = 0.75,
 			["bAuraUpdateDelay"] = 0.25,
 			["bAuraRealtimeSyncDelay"] = 2,
-			["enableHOT"] = true,
-			["uiWindowUpdateDelay"] = 0.25,
 			["bAuraTimerSyncDelay"] = 10,
+			["uiWindowUpdateDelay"] = 0.25,
+			["enableHOT"] = true,
 		},
 		["vis"] = {
 			["cStatusText"] = {
@@ -113,7 +113,10 @@ RDX5Data = {
 				["smbtn"] = {
 					["iid"] = 1,
 				},
-				["scale"] = 1.216663479804993,
+				["slbtn"] = {
+					["sptitle"] = "healing touch(rank 4)",
+					["iid"] = 4,
+				},
 				["sort"] = 2,
 				["srbtn"] = {
 					["sptitle"] = "rejuvenation(rank 10)",
@@ -123,15 +126,12 @@ RDX5Data = {
 				["stext"] = 3,
 				["truncate"] = 8,
 				["layout"] = 1,
-				["width"] = 152.5184936523438,
 				["rbtn"] = {
 					["iid"] = 1,
 				},
-				["slbtn"] = {
-					["sptitle"] = "healing touch(rank 4)",
-					["iid"] = 4,
-				},
-				["name"] = "raid healing",
+				["width"] = 152.5184936523438,
+				["scale"] = 1.216663479804993,
+				["title"] = "Raid Healing",
 				["filter"] = {
 					["desync"] = 3,
 					["hpmin"] = 1,
@@ -171,14 +171,17 @@ RDX5Data = {
 				["mbtn"] = {
 					["iid"] = 1,
 				},
-				["title"] = "Raid Healing",
+				["name"] = "raid healing",
 			},
 			["main tanks"] = {
 				["smbtn"] = {
 					["sptitle"] = "swiftmend",
 					["iid"] = 4,
 				},
-				["scale"] = 1.216663479804993,
+				["slbtn"] = {
+					["sptitle"] = "healing touch(rank 4)",
+					["iid"] = 4,
+				},
 				["sort"] = 2,
 				["srbtn"] = {
 					["sptitle"] = "rejuvenation(rank 10)",
@@ -188,13 +191,12 @@ RDX5Data = {
 				["stext"] = 3,
 				["truncate"] = 5,
 				["layout"] = 1,
-				["width"] = 152.5184936523438,
-				["name"] = "main tanks",
-				["slbtn"] = {
-					["sptitle"] = "healing touch(rank 4)",
-					["iid"] = 4,
+				["rbtn"] = {
+					["iid"] = 1,
 				},
 				["title"] = "Main Tanks",
+				["scale"] = 1.216663479804993,
+				["name"] = "main tanks",
 				["filter"] = {
 					["desync"] = 3,
 					["hpmin"] = 1,
@@ -220,9 +222,7 @@ RDX5Data = {
 				["mbtn"] = {
 					["iid"] = 1,
 				},
-				["rbtn"] = {
-					["iid"] = 1,
-				},
+				["width"] = 152.5184936523438,
 			},
 		},
 	},
@@ -233,12 +233,12 @@ RDX5Data = {
 			},
 			["enc_default"] = {
 				["mod_debuffs"] = {
-					["y"] = 1157.777913544159,
-					["slice"] = 1,
-					["relevance"] = {
-					},
 					["show"] = 4,
 					["x"] = 311.1111449233229,
+					["relevance"] = {
+					},
+					["y"] = 1157.777913544159,
+					["slice"] = 1,
 				},
 				["mod_assists"] = {
 					["auxarray"] = {
@@ -324,6 +324,20 @@ RDX5Data = {
 			},
 			["noesync"] = true,
 			["active_encounter"] = "default",
+		},
+		["kashonar|warsong [12x] blizzlike"] = {
+			["enabled"] = true,
+			["venc"] = {
+			},
+			["active_encounter"] = "default",
+			["enc_default"] = {
+				["mod_assists"] = {
+					["auxarray"] = {
+					},
+					["mtarray"] = {
+					},
+				},
+			},
 		},
 	},
 	["BootstrapVer"] = 19,

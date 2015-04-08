@@ -9,7 +9,18 @@ FuBar2DB = {
 					["xPercent"] = -9.315609195148511e-008,
 					["attachPoint"] = "TOP",
 					["lock"] = true,
+					["widthPercent"] = 1,
 					["plugins"] = {
+						["center"] = {
+							[1] = "ItemBonusesFu",
+							[2] = "DurabilityFu",
+							[3] = "sRaidFrames Improved 0.71",
+							[4] = "GridEnhanced (0.11)",
+							[5] = "sRaidFrames Improved 0.88",
+							[6] = "sRaidFrames Improved 0.94",
+							[7] = "ItemRackFu",
+							[8] = "sRaidFrames Improved 0.99",
+						},
 						["right"] = {
 							[1] = "ClockFu",
 							[2] = "VolumeFu",
@@ -36,18 +47,7 @@ FuBar2DB = {
 							[15] = "TinyTipFu",
 							[16] = "sRaidFrames Improved 1.10",
 						},
-						["center"] = {
-							[1] = "ItemBonusesFu",
-							[2] = "DurabilityFu",
-							[3] = "sRaidFrames Improved 0.71",
-							[4] = "GridEnhanced (0.11)",
-							[5] = "sRaidFrames Improved 0.88",
-							[6] = "sRaidFrames Improved 0.94",
-							[7] = "ItemRackFu",
-							[8] = "sRaidFrames Improved 0.99",
-						},
 					},
-					["widthPercent"] = 1,
 					["yPercent"] = 0.9849999652217268,
 				},
 			},
@@ -60,24 +60,23 @@ FuBar2DB = {
 					["title"] = "ItemRackFu",
 					["category"] = "Other",
 				},
+				["Fubar_AtlasFu2"] = {
+					["title"] = "AtlasFu2",
+					["category"] = "Map",
+				},
 				["FuBar_ClockFu"] = {
 					["title"] = "ClockFu",
+					["category"] = "Interface Enhancements",
+				},
+				["FuBar_PerformanceFu"] = {
+					["title"] = "PerformanceFu",
 					["category"] = "Interface Enhancements",
 				},
 				["FuBar_DurabilityFu"] = {
 					["title"] = "DurabilityFu",
 					["category"] = "Inventory",
 				},
-				["FuBar_PerformanceFu"] = {
-					["title"] = "PerformanceFu",
-					["category"] = "Interface Enhancements",
-				},
-				["Fubar_AtlasFu2"] = {
-					["title"] = "AtlasFu2",
-					["category"] = "Map",
-				},
 			},
-			["thickness"] = 7,
 			["tooltip"] = {
 				["fontSizePercent"] = 1,
 			},
@@ -87,15 +86,16 @@ FuBar2DB = {
 			["autohideTop"] = false,
 			["transparency"] = 0.5,
 			["leftSpacing"] = 20,
+			["overflow"] = false,
 			["places"] = {
+				["center"] = {
+				},
 				["right"] = {
 				},
 				["left"] = {
 				},
-				["center"] = {
-				},
 			},
-			["overflow"] = false,
+			["thickness"] = 7,
 		},
 	},
 }

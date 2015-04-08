@@ -5,6 +5,7 @@ PerformanceFuDB = {
 			["showRate"] = false,
 			["detachedTooltip"] = {
 			},
+			["showMemory"] = false,
 		},
 	},
 }

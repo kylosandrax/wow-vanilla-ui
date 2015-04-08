@@ -9,34 +9,25 @@ TheoryCraft_Settings = {
 		["Nature"] = 0,
 	},
 	["buttontexty"] = 10.22,
-	["buttontextx"] = 1.111,
+	["ColG"] = 1,
 	["ColG2"] = 1,
 	["ColR2"] = 1,
 	["ColB"] = 1,
-	["embedstyle3"] = true,
+	["combinedot"] = true,
 	["tryfirst"] = "averagedam",
 	["trysecondsfg"] = -1,
-	["combinedot"] = true,
+	["embed"] = true,
 	["tryfirstsfg"] = 0,
-	["ColG"] = 1,
+	["buttontextx"] = 1.111,
+	["GenerateList"] = "",
+	["ColB2"] = 0.6862745098039216,
 	["mitigation"] = true,
-	["procs"] = true,
-	["FontPath"] = "Fonts\\ArialN.TTF",
-	["trysecond"] = "averagehealnocrit",
 	["dontresist"] = true,
-	["dataversion"] = "1.06",
-	["buttontext"] = true,
+	["trysecond"] = "averagehealnocrit",
 	["ColR"] = 1,
+	["buttontext"] = true,
+	["dataversion"] = "1.06",
 	["CustomOutfit"] = {
-		["intellect"] = 0,
-		["newstat"] = {
-		},
-		["strength"] = 0,
-		["agility"] = 0,
-		["name"] = "Naked",
-		["stamina"] = 0,
-		["wear"] = {
-		},
 		["destat"] = {
 			[1] = "Head",
 			[2] = "Neck",
@@ -58,22 +49,23 @@ TheoryCraft_Settings = {
 			[18] = "Tabard",
 			[19] = "Ammo",
 		},
-		["spirit"] = 0,
+		["newstat"] = {
+		},
+		["strength"] = 0,
+		["agility"] = 0,
+		["name"] = "Naked",
 		["slots"] = {
-			["Ranged"] = {
+			["Waist"] = {
 				["stats"] = {
-					["rangedattackpower"] = 14,
+					["intellect"] = 14,
+					["spirit"] = 9,
 				},
-				["name"] = "|cff1eff00|Hitem:10604:0:0:0|h[Schematic: Mithril Heavy-bore Rifle]|h|r",
+				["name"] = "|cff1eff00|Hitem:15745:0:0:0|h[Pattern: Runic Leather Belt]|h|r",
 				["data"] = {
-					["RangedMin"] = 41,
-					["name"] = "Schematic: Mithril Heavy-bore Rifle",
+					["name"] = "Pattern: Runic Leather Belt",
 					["procs"] = {
 					},
 					["numlines"] = 11,
-					["RangedMax"] = 76,
-					["RangedSpeed"] = 2.9,
-					["RangedAttackPowerReport"] = 14,
 				},
 			},
 			["Head"] = {
@@ -126,14 +118,13 @@ TheoryCraft_Settings = {
 					["numlines"] = 7,
 				},
 			},
-			["Waist"] = {
+			["Back"] = {
 				["stats"] = {
-					["intellect"] = 14,
-					["spirit"] = 9,
+					["agility"] = 8,
 				},
-				["name"] = "|cff1eff00|Hitem:15745:0:0:0|h[Pattern: Runic Leather Belt]|h|r",
+				["name"] = "|cff1eff00|Hitem:10606:0:0:0|h[Schematic: Parachute Cloak]|h|r",
 				["data"] = {
-					["name"] = "Pattern: Runic Leather Belt",
+					["name"] = "Schematic: Parachute Cloak",
 					["procs"] = {
 					},
 					["numlines"] = 11,
@@ -141,45 +132,19 @@ TheoryCraft_Settings = {
 			},
 			["Main"] = {
 				["stats"] = {
-					["strength"] = 10,
 					["spirit"] = 10,
+					["strength"] = 10,
 				},
 				["name"] = "|cff1eff00|Hitem:15260:0:1121:0|h[Stone Hammer of the Boar]|h|r",
 				["data"] = {
 					["numlines"] = 8,
 					["MeleeMax"] = 96,
-					["name"] = "Stone Hammer of the Boar",
+					["MeleeMin"] = 64,
 					["procs"] = {
 					},
 					["MeleeAPMult"] = 3.3,
 					["MainSpeed"] = 3,
-					["MeleeMin"] = 64,
-				},
-			},
-			["Wrist"] = {
-				["stats"] = {
-					["stamina"] = 11,
-					["spirit"] = 4,
-				},
-				["name"] = "|cff1eff00|Hitem:14861:0:0:0|h[Vanguard Vambraces]|h|r",
-				["data"] = {
-					["name"] = "Vanguard Vambraces",
-					["procs"] = {
-					},
-					["numlines"] = 7,
-				},
-			},
-			["Hands"] = {
-				["stats"] = {
-					["stamina"] = 11,
-					["strength"] = 12,
-				},
-				["name"] = "|cff1eff00|Hitem:10165:0:1211:0|h[Templar Gauntlets of the Bear]|h|r",
-				["data"] = {
-					["name"] = "Templar Gauntlets of the Bear",
-					["procs"] = {
-					},
-					["numlines"] = 7,
+					["name"] = "Stone Hammer of the Boar",
 				},
 			},
 			["Off Hand"] = {
@@ -196,6 +161,32 @@ TheoryCraft_Settings = {
 					["BlockValueReport"] = 17,
 				},
 			},
+			["Hands"] = {
+				["stats"] = {
+					["stamina"] = 11,
+					["strength"] = 12,
+				},
+				["name"] = "|cff1eff00|Hitem:10165:0:1211:0|h[Templar Gauntlets of the Bear]|h|r",
+				["data"] = {
+					["name"] = "Templar Gauntlets of the Bear",
+					["procs"] = {
+					},
+					["numlines"] = 7,
+				},
+			},
+			["Wrist"] = {
+				["stats"] = {
+					["stamina"] = 11,
+					["spirit"] = 4,
+				},
+				["name"] = "|cff1eff00|Hitem:14861:0:0:0|h[Vanguard Vambraces]|h|r",
+				["data"] = {
+					["name"] = "Vanguard Vambraces",
+					["procs"] = {
+					},
+					["numlines"] = 7,
+				},
+			},
 			["Shoulder"] = {
 				["stats"] = {
 					["settype"] = "Twilight Trappings",
@@ -208,22 +199,31 @@ TheoryCraft_Settings = {
 					["numlines"] = 11,
 				},
 			},
-			["Back"] = {
+			["Ranged"] = {
 				["stats"] = {
-					["agility"] = 8,
+					["rangedattackpower"] = 14,
 				},
-				["name"] = "|cff1eff00|Hitem:10606:0:0:0|h[Schematic: Parachute Cloak]|h|r",
+				["name"] = "|cff1eff00|Hitem:10604:0:0:0|h[Schematic: Mithril Heavy-bore Rifle]|h|r",
 				["data"] = {
-					["name"] = "Schematic: Parachute Cloak",
+					["RangedSpeed"] = 2.9,
+					["name"] = "Schematic: Mithril Heavy-bore Rifle",
 					["procs"] = {
 					},
+					["RangedMin"] = 41,
+					["RangedMax"] = 76,
 					["numlines"] = 11,
+					["RangedAttackPowerReport"] = 14,
 				},
 			},
 		},
+		["wear"] = {
+		},
+		["intellect"] = 0,
+		["spirit"] = 0,
+		["stamina"] = 0,
 	},
-	["ColB2"] = 0.6862745098039216,
-	["GenerateList"] = "",
+	["procs"] = true,
+	["FontPath"] = "Fonts\\ArialN.TTF",
 	["critchancedata"] = {
 		["190:5"] = {
 			["casts"] = 39,
@@ -641,9 +641,9 @@ TheoryCraft_Settings = {
 			["casts"] = 3,
 			["crits"] = 0,
 		},
-		["51:0"] = {
-			["casts"] = 9,
-			["crits"] = 0,
+		["279:5"] = {
+			["casts"] = 121,
+			["crits"] = 16,
 		},
 		["256:5"] = {
 			["casts"] = 39,
@@ -693,29 +693,29 @@ TheoryCraft_Settings = {
 			["casts"] = 17,
 			["crits"] = 2,
 		},
-		["95:0"] = {
-			["casts"] = 6,
-			["crits"] = 0,
+		["249:5"] = {
+			["casts"] = 428,
+			["crits"] = 81,
 		},
 		["186:5"] = {
 			["casts"] = 6,
 			["crits"] = 0,
 		},
-		["56:0"] = {
-			["casts"] = 29,
-			["crits"] = 1,
+		["345:5"] = {
+			["casts"] = 216,
+			["crits"] = 29,
 		},
-		["219:5"] = {
-			["casts"] = 37,
-			["crits"] = 1,
+		["319:5"] = {
+			["casts"] = 42,
+			["crits"] = 4,
 		},
-		["135:5"] = {
-			["casts"] = 6,
-			["crits"] = 2,
+		["53:0"] = {
+			["casts"] = 17,
+			["crits"] = 0,
 		},
-		["149:5"] = {
-			["casts"] = 58,
-			["crits"] = 11,
+		["114:0"] = {
+			["casts"] = 5,
+			["crits"] = 0,
 		},
 		["187:5"] = {
 			["casts"] = 23,
@@ -737,29 +737,29 @@ TheoryCraft_Settings = {
 			["casts"] = 17,
 			["crits"] = 3,
 		},
-		["329:5"] = {
-			["casts"] = 102,
-			["crits"] = 13,
-		},
-		["158:5"] = {
-			["casts"] = 6,
-			["crits"] = 0,
-		},
-		["203:0"] = {
-			["casts"] = 125,
-			["crits"] = 8,
-		},
-		["178:0"] = {
-			["casts"] = 2,
+		["65:0"] = {
+			["casts"] = 12,
 			["crits"] = 0,
 		},
 		["137:5"] = {
 			["casts"] = 21,
 			["crits"] = 2,
 		},
-		["65:0"] = {
-			["casts"] = 12,
+		["178:0"] = {
+			["casts"] = 2,
 			["crits"] = 0,
+		},
+		["203:0"] = {
+			["casts"] = 125,
+			["crits"] = 8,
+		},
+		["158:5"] = {
+			["casts"] = 6,
+			["crits"] = 0,
+		},
+		["329:5"] = {
+			["casts"] = 102,
+			["crits"] = 13,
 		},
 		["242:5"] = {
 			["casts"] = 105,
@@ -773,29 +773,29 @@ TheoryCraft_Settings = {
 			["casts"] = 89,
 			["crits"] = 12,
 		},
-		["114:0"] = {
-			["casts"] = 5,
-			["crits"] = 0,
+		["149:5"] = {
+			["casts"] = 58,
+			["crits"] = 11,
 		},
-		["53:0"] = {
-			["casts"] = 17,
-			["crits"] = 0,
+		["135:5"] = {
+			["casts"] = 6,
+			["crits"] = 2,
 		},
-		["319:5"] = {
-			["casts"] = 42,
-			["crits"] = 4,
+		["219:5"] = {
+			["casts"] = 37,
+			["crits"] = 1,
 		},
-		["345:5"] = {
-			["casts"] = 216,
-			["crits"] = 29,
+		["56:0"] = {
+			["casts"] = 29,
+			["crits"] = 1,
 		},
 		["66:0"] = {
 			["casts"] = 7,
 			["crits"] = 0,
 		},
-		["249:5"] = {
-			["casts"] = 428,
-			["crits"] = 81,
+		["95:0"] = {
+			["casts"] = 6,
+			["crits"] = 0,
 		},
 		["86:0"] = {
 			["casts"] = 37,
@@ -809,11 +809,11 @@ TheoryCraft_Settings = {
 			["casts"] = 8,
 			["crits"] = 0,
 		},
-		["279:5"] = {
-			["casts"] = 121,
-			["crits"] = 16,
+		["51:0"] = {
+			["casts"] = 9,
+			["crits"] = 0,
 		},
 	},
-	["embed"] = true,
+	["embedstyle3"] = true,
 	["healanddamage"] = true,
 }

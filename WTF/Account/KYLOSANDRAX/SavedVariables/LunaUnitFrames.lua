@@ -55,11 +55,13 @@ LunaOptions = {
 		},
 		["LunaTargetTargetFrame"] = {
 			["enabled"] = 1,
-			["position"] = {
-				["y"] = -902.2227773635351,
-				["x"] = 1793.333597793132,
-			},
 			["scale"] = 1,
+			["ShowBuffs"] = 3,
+			["BuffInRow"] = 10,
+			["position"] = {
+				["y"] = -958.8898360620952,
+				["x"] = 1821.111436553649,
+			},
 			["bars"] = {
 				[1] = {
 					[1] = "Healthbar",
@@ -120,11 +122,13 @@ LunaOptions = {
 		},
 		["LunaTargetTargetTargetFrame"] = {
 			["enabled"] = 1,
-			["position"] = {
-				["y"] = -846.6665698878362,
-				["x"] = 1995.55674622844,
-			},
 			["scale"] = 1,
+			["ShowBuffs"] = 3,
+			["BuffInRow"] = 10,
+			["position"] = {
+				["y"] = -960.0002235746244,
+				["x"] = 2053.333198774531,
+			},
 			["bars"] = {
 				[1] = {
 					[1] = "Healthbar",
@@ -181,6 +185,7 @@ LunaOptions = {
 			["portrait"] = 2,
 			["scale"] = 1,
 			["ShowBuffs"] = 3,
+			["BuffInRow"] = 10,
 			["position"] = {
 				["y"] = -958.8890411300973,
 				["x"] = 1551.111458548838,
@@ -208,13 +213,15 @@ LunaOptions = {
 				["x"] = 240,
 			},
 		},
-		["LunaPartyPetFrames"] = {
+		["LunaPartyFrames"] = {
 			["enabled"] = 1,
-			["position"] = {
-				["y"] = 0,
-				["x"] = 0,
-			},
+			["portrait"] = 2,
 			["scale"] = 1,
+			["ShowBuffs"] = 4,
+			["position"] = {
+				["y"] = -371.1111216342995,
+				["x"] = 492.2212638357824,
+			},
 			["bars"] = {
 				[1] = {
 					[1] = "Healthbar",
@@ -226,8 +233,8 @@ LunaOptions = {
 				},
 			},
 			["size"] = {
-				["y"] = 20,
-				["x"] = 110,
+				["y"] = 40,
+				["x"] = 200,
 			},
 		},
 		["LunaPetFrame"] = {
@@ -254,15 +261,13 @@ LunaOptions = {
 				["x"] = 240,
 			},
 		},
-		["LunaPartyFrames"] = {
+		["LunaPartyPetFrames"] = {
 			["enabled"] = 1,
-			["portrait"] = 2,
-			["scale"] = 1,
-			["ShowBuffs"] = 4,
 			["position"] = {
-				["y"] = -735.5557448004345,
-				["x"] = 776.6666467416134,
+				["y"] = 0,
+				["x"] = 0,
 			},
+			["scale"] = 1,
 			["bars"] = {
 				[1] = {
 					[1] = "Healthbar",
@@ -274,38 +279,13 @@ LunaOptions = {
 				},
 			},
 			["size"] = {
-				["y"] = 40,
-				["x"] = 200,
+				["y"] = 20,
+				["x"] = 110,
 			},
 		},
 	},
+	["BTimers"] = 0,
 	["XPBar"] = 1,
-	["PartySpace"] = 15,
-	["statusbartexture"] = "Interface\\AddOns\\LunaUnitFrames\\media\\statusbar",
-	["VerticalParty"] = 1,
-	["enableRaid"] = 0,
-	["DebuffTypeColor"] = {
-		["Disease"] = {
-			[1] = 0.6,
-			[2] = 0.4,
-			[3] = 0,
-		},
-		["Curse"] = {
-			[1] = 0.6,
-			[2] = 0,
-			[3] = 1,
-		},
-		["Magic"] = {
-			[1] = 0.2,
-			[2] = 0.6,
-			[3] = 1,
-		},
-		["Poison"] = {
-			[1] = 0,
-			[2] = 0.6,
-			[3] = 0,
-		},
-	},
 	["MiscColors"] = {
 		["neutral"] = {
 			[1] = 0.9300000000000001,
@@ -342,15 +322,15 @@ LunaOptions = {
 			[2] = 0.9,
 			[3] = 0.2,
 		},
-		["offline"] = {
-			[1] = 0.5,
-			[2] = 0.5,
-			["b"] = 0.5,
-		},
 		["yellow"] = {
 			[1] = 0.9300000000000001,
 			[2] = 0.9300000000000001,
 			[3] = 0,
+		},
+		["offline"] = {
+			[1] = 0.5,
+			[2] = 0.5,
+			["b"] = 0.5,
 		},
 		["inc"] = {
 			[1] = 0,
@@ -363,10 +343,36 @@ LunaOptions = {
 			[3] = 0,
 		},
 	},
-	["Raidbuff"] = "",
-	["overheal"] = 20,
+	["statusbartexture"] = "Interface\\AddOns\\LunaUnitFrames\\media\\statusbar",
+	["VerticalParty"] = 1,
+	["enableRaid"] = 0,
+	["DebuffTypeColor"] = {
+		["Disease"] = {
+			[1] = 0.6,
+			[2] = 0.4,
+			[3] = 0,
+		},
+		["Curse"] = {
+			[1] = 0.6,
+			[2] = 0,
+			[3] = 1,
+		},
+		["Magic"] = {
+			[1] = 0.2,
+			[2] = 0.6,
+			[3] = 1,
+		},
+		["Poison"] = {
+			[1] = 0,
+			[2] = 0.6,
+			[3] = 0,
+		},
+	},
+	["Rangefreq"] = 0.2,
 	["hideCastbar"] = 1,
-	["RaidRange"] = 1,
+	["overheal"] = 20,
+	["Raidbuff"] = "",
+	["fontHeight"] = 11,
 	["clickcast"] = {
 		[1] = {
 			[1] = "target",
@@ -385,8 +391,6 @@ LunaOptions = {
 			[2] = "",
 		},
 	},
-	["fontHeight"] = 11,
-	["bordertexture"] = "Interface\\AddOns\\LunaUnitFrames\\media\\border",
 	["backdrop"] = {
 		["bgFile"] = "Interface\\Tooltips\\UI-Tooltip-Background",
 		["tileSize"] = 16,
@@ -398,10 +402,12 @@ LunaOptions = {
 			["left"] = -1.5,
 		},
 	},
+	["bordertexture"] = "Interface\\AddOns\\LunaUnitFrames\\media\\border",
+	["hideBlizzCastbar"] = 1,
 	["icontexture"] = "Interface\\AddOns\\LunaUnitFrames\\media\\icon",
 	["fliptarget"] = 1,
 	["font"] = "Interface\\AddOns\\LunaUnitFrames\\media\\barframes.ttf",
-	["hideBlizzCastbar"] = 1,
+	["RaidRange"] = 1,
 	["ClassColors"] = {
 		["HUNTER"] = {
 			[1] = 0.67,
@@ -451,6 +457,6 @@ LunaOptions = {
 	},
 	["PartyinRaids"] = 0,
 	["Raidlayout"] = "GRID",
-	["Rangefreq"] = 0.2,
+	["PartySpace"] = 15,
 	["EnergyTicker"] = 1,
 }

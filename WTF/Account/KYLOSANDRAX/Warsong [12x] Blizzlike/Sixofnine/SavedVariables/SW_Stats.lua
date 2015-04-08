@@ -1,13 +1,13 @@
 
 SW_Settings = {
 	["QuickOptCount"] = 5,
-	["IsRunning"] = false,
+	["SW_TL_AutoDelete"] = true,
 	["ReportAmount"] = 5,
 	["LAST_V_RUN"] = "1.5.3",
 	["InfoSettings"] = {
 		[1] = {
-			["BFS"] = 10,
-			["BT"] = 3,
+			["IN"] = 1,
+			["COLC"] = 1,
 			["BC"] = {
 				[1] = 0,
 				[2] = 0.8,
@@ -20,8 +20,8 @@ SW_Settings = {
 				[3] = 1,
 				[4] = 1,
 			},
-			["IN"] = 1,
-			["COLC"] = 1,
+			["BFS"] = 10,
+			["BT"] = 3,
 			["BH"] = 10,
 			["OC"] = {
 				[1] = 1,
@@ -32,14 +32,7 @@ SW_Settings = {
 		},
 	},
 	["TL_SafeMode"] = true,
-	["BarFrames"] = {
-		["SW_BarFrame1"] = {
-			["Docked"] = {
-				[1] = 1,
-			},
-			["Selected"] = 1,
-		},
-	},
+	["SyncBCTarget"] = "SW_BarSyncFrame_OptRaid",
 	["Colors"] = {
 		["HUNTER"] = {
 			[1] = 0.67,
@@ -53,10 +46,10 @@ SW_Settings = {
 			[3] = 0.43,
 			[4] = 1,
 		},
-		["SHAMAN"] = {
-			[1] = 0.96,
-			[2] = 0.55,
-			[3] = 0.73,
+		["ROGUE"] = {
+			[1] = 1,
+			[2] = 0.96,
+			[3] = 0.41,
 			[4] = 1,
 		},
 		["MAGE"] = {
@@ -107,22 +100,10 @@ SW_Settings = {
 			[3] = 0.79,
 			[4] = 1,
 		},
-		["ROGUE"] = {
-			[1] = 1,
-			[2] = 0.96,
-			[3] = 0.41,
-			[4] = 1,
-		},
-		["PALADIN"] = {
+		["SHAMAN"] = {
 			[1] = 0.96,
 			[2] = 0.55,
 			[3] = 0.73,
-			[4] = 1,
-		},
-		["TitleBars"] = {
-			[1] = 1,
-			[2] = 0,
-			[3] = 0,
 			[4] = 1,
 		},
 		["Backdrops"] = {
@@ -131,23 +112,42 @@ SW_Settings = {
 			[3] = 1,
 			[4] = 1,
 		},
+		["TitleBars"] = {
+			[1] = 1,
+			[2] = 0,
+			[3] = 0,
+			[4] = 1,
+		},
+		["PALADIN"] = {
+			[1] = 0.96,
+			[2] = 0.55,
+			[3] = 0.73,
+			[4] = 1,
+		},
 	},
 	["lastWOWBuild"] = "1.12.15875Sep 19 2006",
-	["SW_TL_AutoDelete"] = true,
-	["SyncBCTarget"] = "SW_BarSyncFrame_OptRaid",
+	["IsRunning"] = false,
+	["BarFrames"] = {
+		["SW_BarFrame1"] = {
+			["Docked"] = {
+				[1] = 1,
+			},
+			["Selected"] = 1,
+		},
+	},
 }
 SW_S_Details = {
 	["Sixofnine"] = {
 		["CLASSE"] = "PRIEST",
-		["Total"] = {
-			[1] = 0,
-			[2] = 0,
-		},
+		["UTYPE"] = "GPC",
 		["Recieved"] = {
 			[1] = 0,
 			[2] = 0,
 		},
-		["UTYPE"] = "GPC",
+		["Total"] = {
+			[1] = 0,
+			[2] = 0,
+		},
 	},
 }
 SW_S_Healed = {
@@ -167,22 +167,22 @@ SW_RPS = {
 	["allowLastFightUpdate"] = false,
 	["isRunning"] = false,
 	["startTimer"] = {
-		["epochTS"] = 1400053050,
+		["uTS"] = -28376649.53299999,
 		["msO"] = -0.5329999999999018,
-		["uTS"] = -27700598.53299999,
+		["epochTS"] = 1400053050,
 	},
 	["uglyTruthStarted"] = false,
 	["lastFightDmg"] = 0,
 	["baseTimer"] = {
-		["epochTS"] = 1400053050,
+		["uTS"] = -28376649.53299999,
 		["msO"] = -0.5329999999999018,
-		["uTS"] = -27700598.53299999,
+		["epochTS"] = 1400053050,
 	},
-	["currentSecs"] = 0,
-	["totalSecs"] = 0,
-	["startDmg"] = 0,
-	["maxDPS"] = 0,
 	["resetPoint"] = 0,
+	["totalSecs"] = 0,
+	["maxDPS"] = 0,
+	["startDmg"] = 0,
+	["currentSecs"] = 0,
 }
 SW_Sync_MsgTrack = {
 }
