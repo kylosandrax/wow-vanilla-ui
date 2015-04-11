@@ -738,9 +738,27 @@ local function EvaluateUnitCondition(unit,condition,debugText,explain)
     end
 end
 
+-- Only used by  UnitIsWarlock
+local function UnitIsWarlock(unit)
+	-- 'Nothing' can't be a warlock
+    if not unit then return false end
+	
+	local playerClass, englishClass = UnitClass(unit);
+	if not englishClass then return false end
+	
+	if englishClass == 'WARLOCK' then
+		-- QuickHeal_debug(unit, 'is a WARLOCK and will not be healed');
+		return true
+	end
+	-- QuickHeal_debug(unit, 'is NOT a Warlock and will be healed');
+	return false
+end
+
 -- Return true if the unit is healable by player
 local function UnitIsHealable(unit,explain)
     if UnitExists(unit) then
+		-- Don't auto-heal Warlocks. Fuck 'em
+		if EvaluateUnitCondition(unit, not UnitIsWarlock(unit), "is a Warlock so Fuck'em",explain) then return false end
         if EvaluateUnitCondition(unit, UnitIsFriend('player', unit), "is not a friend",explain) then return false end
         if EvaluateUnitCondition(unit, not UnitIsEnemy(unit, 'player'), "is an enemy",explain) then return false end
         if EvaluateUnitCondition(unit, not UnitCanAttack('player', unit), "can be attacked by player",explain) then return false end
@@ -1027,6 +1045,7 @@ local function FindWhoToHeal(Restrict,extParam)
     PlaySound = OldPlaySound;
 
     -- Examine External Target
+	QuickHeal_debug('Examining external target');
     if AllPlayersAreFull and (AllPetsAreFull or QHV.PetPriority == 0) then
         if not QuickHeal_UnitHasHealthInfo('target') and UnitIsHealable('target',true) then
             QuickHeal_debug(string.format("%s (%s) : %d/%d",UnitFullName('target'),'target',UnitHealth('target'),UnitHealthMax('target')));
