@@ -1,2 +1,2 @@
 
-DickThreshold = 9999
+DickThreshold = 5

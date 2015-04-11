@@ -8,8 +8,8 @@ TheoryCraft_Settings = {
 		["Shadow"] = 0,
 		["Nature"] = 0,
 	},
-	["ColR"] = 1,
-	["ColG"] = 1,
+	["buttontexty"] = 10.22,
+	["buttontextx"] = 1.111,
 	["ColG2"] = 1,
 	["ColR2"] = 1,
 	["embedstyle1"] = true,
@@ -18,9 +18,9 @@ TheoryCraft_Settings = {
 	["ColB"] = 1,
 	["tryfirstsfg"] = 0,
 	["embed"] = true,
-	["buttontextx"] = 1.111,
-	["buttontexty"] = 10.22,
-	["GenerateList"] = "",
+	["ColG"] = 1,
+	["ColR"] = 1,
+	["mitigation"] = true,
 	["ColB2"] = 0.6862745098039216,
 	["dontresist"] = true,
 	["trysecond"] = "averagehealnocrit",
@@ -50,9 +50,6 @@ TheoryCraft_Settings = {
 		},
 		["newstat"] = {
 		},
-		["strength"] = 0,
-		["agility"] = 0,
-		["name"] = "Naked",
 		["slots"] = {
 			["Waist"] = {
 				["stats"] = {
@@ -80,17 +77,18 @@ TheoryCraft_Settings = {
 					["numlines"] = 6,
 				},
 			},
-			["Neck"] = {
+			["Legs"] = {
 				["stats"] = {
-					["intellect"] = 4,
-					["strength"] = 4,
+					["intellect"] = 11,
+					["spirit"] = 11,
+					["agility"] = 11,
 				},
-				["name"] = "|cff1eff00|Hitem:12029:0:933:0|h[Greenstone Talisman of the Gorilla]|h|r",
+				["name"] = "|cff1eff00|Hitem:8112:0:0:0|h[Hibernal Pants]|h|r",
 				["data"] = {
-					["name"] = "Greenstone Talisman of the Gorilla",
+					["name"] = "Hibernal Pants",
 					["procs"] = {
 					},
-					["numlines"] = 6,
+					["numlines"] = 8,
 				},
 			},
 			["Back"] = {
@@ -252,21 +250,23 @@ TheoryCraft_Settings = {
 					["numlines"] = 6,
 				},
 			},
-			["Legs"] = {
+			["Neck"] = {
 				["stats"] = {
-					["intellect"] = 11,
-					["spirit"] = 11,
-					["agility"] = 11,
+					["intellect"] = 4,
+					["strength"] = 4,
 				},
-				["name"] = "|cff1eff00|Hitem:8112:0:0:0|h[Hibernal Pants]|h|r",
+				["name"] = "|cff1eff00|Hitem:12029:0:933:0|h[Greenstone Talisman of the Gorilla]|h|r",
 				["data"] = {
-					["name"] = "Hibernal Pants",
+					["name"] = "Greenstone Talisman of the Gorilla",
 					["procs"] = {
 					},
-					["numlines"] = 8,
+					["numlines"] = 6,
 				},
 			},
 		},
+		["agility"] = 0,
+		["name"] = "Naked",
+		["strength"] = 0,
 		["wear"] = {
 		},
 		["intellect"] = 0,
@@ -274,8 +274,8 @@ TheoryCraft_Settings = {
 		["stamina"] = 0,
 	},
 	["procs"] = true,
-	["mitigation"] = true,
 	["FontPath"] = "Fonts\\ArialN.TTF",
+	["GenerateList"] = "",
 	["combinedot"] = true,
 	["healanddamage"] = true,
 }

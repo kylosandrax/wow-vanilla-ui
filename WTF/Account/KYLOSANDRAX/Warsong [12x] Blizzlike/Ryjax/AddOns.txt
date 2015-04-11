@@ -137,3 +137,12 @@ Banknon: enabled
 EngBags: disabled
 TankStats: disabled
 TankPoints: disabled
+RDXM_Windows: enabled
+RDXM_ThreatMeter: enabled
+RDXM_Logistics: enabled
+RDXM_DamageMeter: enabled
+RDXM_Buffs: enabled
+RDXM_Debuffs: enabled
+RDXM_Assists: enabled
+RDXM_Bootstrap: enabled
+RDXM_BossMods: enabled

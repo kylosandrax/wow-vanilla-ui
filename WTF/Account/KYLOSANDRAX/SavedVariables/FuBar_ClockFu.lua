@@ -5,7 +5,6 @@ ClockFuDB = {
 			["detachedTooltip"] = {
 			},
 			["twentyFour"] = true,
-			["localTime"] = true,
 		},
 	},
 }

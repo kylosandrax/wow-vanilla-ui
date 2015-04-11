@@ -8,34 +8,25 @@ TheoryCraft_Settings = {
 		["Shadow"] = 0,
 		["Nature"] = 0,
 	},
-	["ColR"] = 1,
-	["buttontextx"] = 1.111,
+	["buttontexty"] = 10.22,
+	["ColG"] = 1,
 	["ColG2"] = 1,
 	["ColR2"] = 1,
 	["embedstyle1"] = true,
 	["tryfirst"] = "averagedam",
-	["dataversion"] = "1.06",
 	["trysecondsfg"] = -1,
+	["dataversion"] = "1.06",
 	["tryfirstsfg"] = 0,
-	["embed"] = true,
-	["ColG"] = 1,
-	["buttontexty"] = 10.22,
+	["combinedot"] = true,
+	["ColB"] = 1,
+	["FontPath"] = "Fonts\\ArialN.TTF",
 	["GenerateList"] = "",
-	["ColB2"] = 0.6862745098039216,
+	["procs"] = true,
 	["trysecond"] = "averagehealnocrit",
 	["mitigation"] = true,
 	["buttontext"] = true,
 	["dontresist"] = true,
 	["CustomOutfit"] = {
-		["intellect"] = 0,
-		["newstat"] = {
-		},
-		["strength"] = 0,
-		["agility"] = 0,
-		["name"] = "Naked",
-		["stamina"] = 0,
-		["wear"] = {
-		},
 		["destat"] = {
 			[1] = "Head",
 			[2] = "Neck",
@@ -57,22 +48,26 @@ TheoryCraft_Settings = {
 			[18] = "Tabard",
 			[19] = "Ammo",
 		},
-		["spirit"] = 0,
+		["newstat"] = {
+		},
+		["strength"] = 0,
+		["agility"] = 0,
+		["name"] = "Naked",
 		["slots"] = {
-			["Waist"] = {
+			["Ranged"] = {
 				["stats"] = {
-					["intellect"] = 15,
-					["stamina"] = 9,
-					["settype"] = "Lightforge Armor",
-					["spirit"] = 6,
-					["strength"] = 10,
+					["rangedattackpower"] = 14,
 				},
-				["name"] = "|cff0070dd|Hitem:16723:0:0:0|h[Lightforge Belt]|h|r",
+				["name"] = "|cff1eff00|Hitem:10604:0:0:0|h[Schematic: Mithril Heavy-bore Rifle]|h|r",
 				["data"] = {
-					["name"] = "Lightforge Belt",
+					["RangedMin"] = 41,
+					["name"] = "Schematic: Mithril Heavy-bore Rifle",
 					["procs"] = {
 					},
-					["numlines"] = 24,
+					["numlines"] = 11,
+					["RangedMax"] = 76,
+					["RangedSpeed"] = 2.9,
+					["RangedAttackPowerReport"] = 14,
 				},
 			},
 			["Finger0"] = {
@@ -112,8 +107,8 @@ TheoryCraft_Settings = {
 			},
 			["Feet"] = {
 				["stats"] = {
-					["intellect"] = 12,
 					["stamina"] = 12,
+					["intellect"] = 12,
 				},
 				["name"] = "|cff1eff00|Hitem:14299:0:872:0|h[Bonecaster's Boots of the Eagle]|h|r",
 				["data"] = {
@@ -137,20 +132,16 @@ TheoryCraft_Settings = {
 					["numlines"] = 8,
 				},
 			},
-			["Ranged"] = {
+			["Back"] = {
 				["stats"] = {
-					["rangedattackpower"] = 14,
 				},
-				["name"] = "|cff1eff00|Hitem:10604:0:0:0|h[Schematic: Mithril Heavy-bore Rifle]|h|r",
+				["name"] = "|cff1eff00|Hitem:10060:0:1848:0|h[Duskwoven Cape of Shadow Wrath]|h|r",
 				["data"] = {
-					["RangedSpeed"] = 2.9,
-					["name"] = "Schematic: Mithril Heavy-bore Rifle",
+					["Shadow"] = 17,
+					["name"] = "Duskwoven Cape of Shadow Wrath",
 					["procs"] = {
 					},
-					["RangedMin"] = 41,
-					["RangedMax"] = 76,
-					["numlines"] = 11,
-					["RangedAttackPowerReport"] = 14,
+					["numlines"] = 6,
 				},
 			},
 			["Main"] = {
@@ -162,12 +153,12 @@ TheoryCraft_Settings = {
 				["data"] = {
 					["numlines"] = 8,
 					["MeleeMax"] = 184,
-					["MeleeMin"] = 122,
+					["name"] = "Magus Long Staff of the Wolf",
 					["procs"] = {
 					},
 					["MeleeAPMult"] = 3.3,
 					["MainSpeed"] = 3.4,
-					["name"] = "Magus Long Staff of the Wolf",
+					["MeleeMin"] = 122,
 				},
 			},
 			["Head"] = {
@@ -221,23 +212,32 @@ TheoryCraft_Settings = {
 					["numlines"] = 12,
 				},
 			},
-			["Back"] = {
+			["Waist"] = {
 				["stats"] = {
+					["intellect"] = 15,
+					["settype"] = "Lightforge Armor",
+					["strength"] = 10,
+					["spirit"] = 6,
+					["stamina"] = 9,
 				},
-				["name"] = "|cff1eff00|Hitem:10060:0:1848:0|h[Duskwoven Cape of Shadow Wrath]|h|r",
+				["name"] = "|cff0070dd|Hitem:16723:0:0:0|h[Lightforge Belt]|h|r",
 				["data"] = {
-					["Shadow"] = 17,
-					["name"] = "Duskwoven Cape of Shadow Wrath",
+					["name"] = "Lightforge Belt",
 					["procs"] = {
 					},
-					["numlines"] = 6,
+					["numlines"] = 24,
 				},
 			},
 		},
+		["wear"] = {
+		},
+		["intellect"] = 0,
+		["spirit"] = 0,
+		["stamina"] = 0,
 	},
-	["procs"] = true,
-	["FontPath"] = "Fonts\\ArialN.TTF",
-	["ColB"] = 1,
-	["combinedot"] = true,
+	["ColB2"] = 0.6862745098039216,
+	["ColR"] = 1,
+	["buttontextx"] = 1.111,
+	["embed"] = true,
 	["healanddamage"] = true,
 }

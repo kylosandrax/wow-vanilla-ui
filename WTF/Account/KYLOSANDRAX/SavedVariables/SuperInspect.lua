@@ -5,7 +5,6 @@ SI_Save = {
 	["scale"] = 0.6399999856948853,
 	["items"] = 1,
 	["default"] = 1,
-	["btab"] = 1,
+	["mi"] = 0,
 	["itemscached"] = false,
-	["bonus"] = 1,
 }

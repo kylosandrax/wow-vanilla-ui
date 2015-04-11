@@ -8,7 +8,7 @@ TheoryCraft_Settings = {
 		["Shadow"] = 0,
 		["Nature"] = 0,
 	},
-	["buttontexty"] = 10.22,
+	["ColR"] = 1,
 	["ColG"] = 1,
 	["ColG2"] = 1,
 	["ColR2"] = 1,
@@ -31,15 +31,45 @@ TheoryCraft_Settings = {
 		["intellect"] = 0,
 		["newstat"] = {
 		},
+		["strength"] = 0,
+		["agility"] = 0,
+		["name"] = "Naked",
+		["stamina"] = 0,
+		["wear"] = {
+		},
+		["destat"] = {
+			[1] = "Head",
+			[2] = "Neck",
+			[3] = "Shoulder",
+			[4] = "Chest",
+			[5] = "Waist",
+			[6] = "Legs",
+			[7] = "Feet",
+			[8] = "Wrist",
+			[9] = "Hands",
+			[10] = "Finger0",
+			[11] = "Finger1",
+			[12] = "Trinket0",
+			[13] = "Trinket1",
+			[14] = "Back",
+			[15] = "MainHand",
+			[16] = "SecondaryHand",
+			[17] = "Ranged",
+			[18] = "Tabard",
+			[19] = "Ammo",
+		},
+		["spirit"] = 0,
 		["slots"] = {
-			["Waist"] = {
+			["Ranged"] = {
 				["stats"] = {
-					["stamina"] = 12,
-					["strength"] = 13,
 				},
-				["name"] = "|cff1eff00|Hitem:10370:0:0:0|h[Imbued Plate Girdle]|h|r",
+				["name"] = "|cff0070dd|Hitem:18338:0:0:0|h[Wand of Arcane Potency]|h|r",
 				["data"] = {
-					["name"] = "Imbued Plate Girdle",
+					["RangedSpeed"] = 1.6,
+					["name"] = "Wand of Arcane Potency",
+					["Arcane"] = 16,
+					["RangedMin"] = 65,
+					["RangedMax"] = 122,
 					["procs"] = {
 					},
 					["numlines"] = 7,
@@ -116,16 +146,14 @@ TheoryCraft_Settings = {
 					["numlines"] = 12,
 				},
 			},
-			["Ranged"] = {
+			["Waist"] = {
 				["stats"] = {
+					["stamina"] = 12,
+					["strength"] = 13,
 				},
-				["name"] = "|cff0070dd|Hitem:18338:0:0:0|h[Wand of Arcane Potency]|h|r",
+				["name"] = "|cff1eff00|Hitem:10370:0:0:0|h[Imbued Plate Girdle]|h|r",
 				["data"] = {
-					["RangedSpeed"] = 1.6,
-					["name"] = "Wand of Arcane Potency",
-					["Arcane"] = 16,
-					["RangedMin"] = 65,
-					["RangedMax"] = 122,
+					["name"] = "Imbued Plate Girdle",
 					["procs"] = {
 					},
 					["numlines"] = 7,
@@ -220,37 +248,9 @@ TheoryCraft_Settings = {
 				},
 			},
 		},
-		["agility"] = 0,
-		["name"] = "Naked",
-		["stamina"] = 0,
-		["wear"] = {
-		},
-		["destat"] = {
-			[1] = "Head",
-			[2] = "Neck",
-			[3] = "Shoulder",
-			[4] = "Chest",
-			[5] = "Waist",
-			[6] = "Legs",
-			[7] = "Feet",
-			[8] = "Wrist",
-			[9] = "Hands",
-			[10] = "Finger0",
-			[11] = "Finger1",
-			[12] = "Trinket0",
-			[13] = "Trinket1",
-			[14] = "Back",
-			[15] = "MainHand",
-			[16] = "SecondaryHand",
-			[17] = "Ranged",
-			[18] = "Tabard",
-			[19] = "Ammo",
-		},
-		["spirit"] = 0,
-		["strength"] = 0,
 	},
 	["procs"] = true,
-	["ColR"] = 1,
+	["buttontexty"] = 10.22,
 	["critchancedata"] = {
 		["30:0"] = {
 			["casts"] = 1,
@@ -264,9 +264,9 @@ TheoryCraft_Settings = {
 			["casts"] = 1,
 			["crits"] = 0,
 		},
-		["337:0"] = {
-			["casts"] = 639,
-			["crits"] = 74,
+		["153:0"] = {
+			["casts"] = 1,
+			["crits"] = 0,
 		},
 		["360:0"] = {
 			["casts"] = 99,
@@ -316,9 +316,9 @@ TheoryCraft_Settings = {
 			["casts"] = 1,
 			["crits"] = 0,
 		},
-		["43:0"] = {
-			["casts"] = 2,
-			["crits"] = 0,
+		["160:50"] = {
+			["casts"] = 1,
+			["crits"] = 1,
 		},
 		["128:0"] = {
 			["casts"] = 37,
@@ -360,9 +360,9 @@ TheoryCraft_Settings = {
 			["casts"] = 1,
 			["crits"] = 0,
 		},
-		["58:0"] = {
-			["casts"] = 12,
-			["crits"] = 2,
+		["295:0"] = {
+			["casts"] = 55,
+			["crits"] = 5,
 		},
 		["53:0"] = {
 			["casts"] = 2,
@@ -380,17 +380,17 @@ TheoryCraft_Settings = {
 			["casts"] = 5,
 			["crits"] = 0,
 		},
-		["290:0"] = {
-			["casts"] = 69,
-			["crits"] = 12,
+		["194:0"] = {
+			["casts"] = 1,
+			["crits"] = 0,
 		},
 		["294:0"] = {
 			["casts"] = 14,
 			["crits"] = 1,
 		},
-		["357:0"] = {
-			["casts"] = 127,
-			["crits"] = 16,
+		["340:0"] = {
+			["casts"] = 16,
+			["crits"] = 1,
 		},
 		["114:0"] = {
 			["casts"] = 26,
@@ -461,8 +461,8 @@ TheoryCraft_Settings = {
 			["crits"] = 0,
 		},
 		["337:50"] = {
-			["casts"] = 23,
-			["crits"] = 15,
+			["casts"] = 26,
+			["crits"] = 18,
 		},
 		["308:0"] = {
 			["casts"] = 5,
@@ -493,8 +493,8 @@ TheoryCraft_Settings = {
 			["crits"] = 1,
 		},
 		["306:0"] = {
-			["casts"] = 2,
-			["crits"] = 0,
+			["casts"] = 54,
+			["crits"] = 3,
 		},
 		["219:0"] = {
 			["casts"] = 5,
@@ -528,9 +528,9 @@ TheoryCraft_Settings = {
 			["casts"] = 1,
 			["crits"] = 0,
 		},
-		["193:0"] = {
-			["casts"] = 10,
-			["crits"] = 0,
+		["347:50"] = {
+			["casts"] = 1,
+			["crits"] = 1,
 		},
 		["376:0"] = {
 			["casts"] = 86,
@@ -624,9 +624,9 @@ TheoryCraft_Settings = {
 			["casts"] = 4,
 			["crits"] = 0,
 		},
-		["255:0"] = {
-			["casts"] = 5,
-			["crits"] = 0,
+		["85:0"] = {
+			["casts"] = 1,
+			["crits"] = 1,
 		},
 		["218:0"] = {
 			["casts"] = 6,
@@ -640,25 +640,25 @@ TheoryCraft_Settings = {
 			["casts"] = 102,
 			["crits"] = 9,
 		},
-		["106:0"] = {
-			["casts"] = 6,
-			["crits"] = 1,
+		["357:0"] = {
+			["casts"] = 127,
+			["crits"] = 16,
 		},
 		["133:0"] = {
 			["casts"] = 27,
 			["crits"] = 4,
 		},
-		["319:0"] = {
-			["casts"] = 146,
-			["crits"] = 10,
+		["106:0"] = {
+			["casts"] = 6,
+			["crits"] = 1,
 		},
 		["100:0"] = {
 			["casts"] = 7,
 			["crits"] = 0,
 		},
-		["339:0"] = {
-			["casts"] = 36,
-			["crits"] = 4,
+		["58:0"] = {
+			["casts"] = 12,
+			["crits"] = 2,
 		},
 		["300:0"] = {
 			["casts"] = 1,
@@ -684,37 +684,37 @@ TheoryCraft_Settings = {
 			["casts"] = 10,
 			["crits"] = 0,
 		},
-		["231:0"] = {
-			["casts"] = 4,
-			["crits"] = 0,
-		},
-		["296:0"] = {
-			["casts"] = 422,
-			["crits"] = 36,
-		},
-		["340:0"] = {
-			["casts"] = 16,
-			["crits"] = 1,
+		["339:0"] = {
+			["casts"] = 36,
+			["crits"] = 4,
 		},
 		["145:50"] = {
 			["casts"] = 1,
 			["crits"] = 1,
 		},
-		["160:50"] = {
-			["casts"] = 1,
-			["crits"] = 1,
+		["290:0"] = {
+			["casts"] = 117,
+			["crits"] = 20,
 		},
-		["347:50"] = {
-			["casts"] = 1,
-			["crits"] = 1,
+		["255:0"] = {
+			["casts"] = 5,
+			["crits"] = 0,
+		},
+		["43:0"] = {
+			["casts"] = 2,
+			["crits"] = 0,
+		},
+		["193:0"] = {
+			["casts"] = 10,
+			["crits"] = 0,
 		},
 		["369:0"] = {
 			["casts"] = 410,
 			["crits"] = 44,
 		},
-		["85:0"] = {
-			["casts"] = 1,
-			["crits"] = 1,
+		["231:0"] = {
+			["casts"] = 4,
+			["crits"] = 0,
 		},
 		["318:50"] = {
 			["casts"] = 3,
@@ -728,13 +728,13 @@ TheoryCraft_Settings = {
 			["casts"] = 1,
 			["crits"] = 0,
 		},
-		["287:0"] = {
-			["casts"] = 2,
-			["crits"] = 0,
+		["110:0"] = {
+			["casts"] = 1,
+			["crits"] = 1,
 		},
-		["41:0"] = {
-			["casts"] = 10,
-			["crits"] = 0,
+		["380:0"] = {
+			["casts"] = 211,
+			["crits"] = 14,
 		},
 		["31:0"] = {
 			["casts"] = 1,
@@ -760,8 +760,8 @@ TheoryCraft_Settings = {
 			["casts"] = 3,
 			["crits"] = 0,
 		},
-		["121:0"] = {
-			["casts"] = 33,
+		["280:0"] = {
+			["casts"] = 50,
 			["crits"] = 3,
 		},
 		["29:0"] = {
@@ -769,8 +769,8 @@ TheoryCraft_Settings = {
 			["crits"] = 0,
 		},
 		["347:0"] = {
-			["casts"] = 122,
-			["crits"] = 17,
+			["casts"] = 160,
+			["crits"] = 20,
 		},
 		["134:0"] = {
 			["casts"] = 4,
@@ -800,29 +800,29 @@ TheoryCraft_Settings = {
 			["casts"] = 94,
 			["crits"] = 10,
 		},
-		["280:0"] = {
-			["casts"] = 50,
+		["121:0"] = {
+			["casts"] = 33,
 			["crits"] = 3,
 		},
 		["342:0"] = {
 			["casts"] = 105,
 			["crits"] = 5,
 		},
-		["153:0"] = {
-			["casts"] = 1,
+		["337:0"] = {
+			["casts"] = 997,
+			["crits"] = 108,
+		},
+		["319:0"] = {
+			["casts"] = 146,
+			["crits"] = 10,
+		},
+		["41:0"] = {
+			["casts"] = 10,
 			["crits"] = 0,
 		},
-		["110:0"] = {
-			["casts"] = 1,
-			["crits"] = 1,
-		},
-		["380:0"] = {
-			["casts"] = 211,
-			["crits"] = 14,
-		},
-		["111:0"] = {
-			["casts"] = 2,
-			["crits"] = 0,
+		["296:0"] = {
+			["casts"] = 422,
+			["crits"] = 36,
 		},
 		["246:0"] = {
 			["casts"] = 16,
@@ -836,16 +836,16 @@ TheoryCraft_Settings = {
 			["casts"] = 4,
 			["crits"] = 0,
 		},
-		["295:0"] = {
-			["casts"] = 55,
-			["crits"] = 5,
+		["287:0"] = {
+			["casts"] = 2,
+			["crits"] = 0,
 		},
 		["91:0"] = {
 			["casts"] = 22,
 			["crits"] = 3,
 		},
-		["194:0"] = {
-			["casts"] = 1,
+		["111:0"] = {
+			["casts"] = 2,
 			["crits"] = 0,
 		},
 		["71:0"] = {

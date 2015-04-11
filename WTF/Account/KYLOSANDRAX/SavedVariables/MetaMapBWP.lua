@@ -2,12 +2,12 @@
 BWP_Options = {
 	["ShowNPC"] = true,
 	["ShowCorpse"] = false,
-	["SetDistance"] = 0.004100000020116568,
-	["ShowPoints"] = true,
-	["ClearDest"] = true,
-	["ShowYards"] = false,
 	["SetAlpha"] = 1,
 	["ShowOnGuard"] = false,
+	["ClearDest"] = true,
+	["ShowYards"] = false,
+	["SetDistance"] = 0.004100000020116568,
+	["ShowPoints"] = true,
 }
 BWP_Destination = nil
 BWP_QuestList = {
@@ -1016,7 +1016,7 @@ BWP_QuestList = {
 		["Y"] = 0.1598518043756485,
 		["X"] = 0.1529724299907684,
 		["Zone"] = 18,
-		["QuestName"] = "Enchanted South Seas Kelp,,Paragons of Power: The Haruspex's Bracers",
+		["QuestName"] = "Enchanted South Seas Kelp,,Paragons of Power: The Haruspex's Bracers,Paragons of Power: The Haruspex's Belt,Paragons of Power: The Haruspex's Tunic",
 		["QuestGiver"] = "Maywiki of Zuldazar",
 	},
 	[145] = {
@@ -1473,6 +1473,13 @@ BWP_QuestList = {
 		["Zone"] = 12,
 		["QuestName"] = "The Shattered Hand",
 		["QuestGiver"] = "Therzok",
+	},
+	[210] = {
+		["Y"] = 0.7130916714668274,
+		["X"] = 0.3071988523006439,
+		["Zone"] = 19,
+		["QuestName"] = "Giant Goblin Eggs!",
+		["QuestGiver"] = "Spring Commoner",
 	},
 }
 BWP_AbandonedQuests = nil

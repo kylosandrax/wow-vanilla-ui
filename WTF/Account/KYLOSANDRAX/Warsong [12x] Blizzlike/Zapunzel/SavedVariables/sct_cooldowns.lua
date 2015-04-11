@@ -1,10 +1,6 @@
 
 sctcOptions = {
 	["disabled"] = {
-		["Revenge"] = true,
-		["Throw"] = true,
-		["Shoot Crossbow"] = true,
-		["Shoot Bow"] = true,
 	},
 	["color"] = {
 		["r"] = 1,
@@ -13,11 +9,10 @@ sctcOptions = {
 	},
 	["on"] = true,
 	["version"] = "1.4.2",
-	["members"] = {
+	["groups"] = {
 	},
 	["wformat"] = "[%s Ready In 10]",
 	["format"] = "[%s Ready]",
-	["crit"] = 1,
-	["groups"] = {
+	["members"] = {
 	},
 }

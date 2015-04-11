@@ -4,7 +4,6 @@ AtlasFuDB = {
 		["Default"] = {
 			["detachedTooltip"] = {
 			},
-			["showText"] = false,
 		},
 	},
 }

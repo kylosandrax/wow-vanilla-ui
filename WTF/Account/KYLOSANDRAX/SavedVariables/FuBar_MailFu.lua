@@ -4,7 +4,6 @@ FuBar_MailDB = {
 		["Default"] = {
 			["detachedTooltip"] = {
 			},
-			["textformat"] = "text",
 		},
 	},
 }

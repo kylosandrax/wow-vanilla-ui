@@ -13,15 +13,15 @@ TheoryCraft_Settings = {
 	["ColG2"] = 1,
 	["ColR2"] = 1,
 	["ColB"] = 1,
-	["combinedot"] = true,
+	["embedstyle3"] = true,
 	["tryfirst"] = "averagedam",
 	["trysecondsfg"] = -1,
-	["embed"] = true,
+	["combinedot"] = true,
 	["tryfirstsfg"] = 0,
 	["buttontextx"] = 1.111,
-	["GenerateList"] = "",
-	["ColB2"] = 0.6862745098039216,
 	["mitigation"] = true,
+	["ColB2"] = 0.6862745098039216,
+	["FontPath"] = "Fonts\\ArialN.TTF",
 	["dontresist"] = true,
 	["trysecond"] = "averagehealnocrit",
 	["ColR"] = 1,
@@ -51,21 +51,21 @@ TheoryCraft_Settings = {
 		},
 		["newstat"] = {
 		},
-		["strength"] = 0,
-		["agility"] = 0,
-		["name"] = "Naked",
 		["slots"] = {
-			["Waist"] = {
+			["Ranged"] = {
 				["stats"] = {
-					["intellect"] = 14,
-					["spirit"] = 9,
+					["rangedattackpower"] = 14,
 				},
-				["name"] = "|cff1eff00|Hitem:15745:0:0:0|h[Pattern: Runic Leather Belt]|h|r",
+				["name"] = "|cff1eff00|Hitem:10604:0:0:0|h[Schematic: Mithril Heavy-bore Rifle]|h|r",
 				["data"] = {
-					["name"] = "Pattern: Runic Leather Belt",
+					["RangedMin"] = 41,
+					["name"] = "Schematic: Mithril Heavy-bore Rifle",
 					["procs"] = {
 					},
 					["numlines"] = 11,
+					["RangedMax"] = 76,
+					["RangedSpeed"] = 2.9,
+					["RangedAttackPowerReport"] = 14,
 				},
 			},
 			["Head"] = {
@@ -199,23 +199,23 @@ TheoryCraft_Settings = {
 					["numlines"] = 11,
 				},
 			},
-			["Ranged"] = {
+			["Waist"] = {
 				["stats"] = {
-					["rangedattackpower"] = 14,
+					["intellect"] = 14,
+					["spirit"] = 9,
 				},
-				["name"] = "|cff1eff00|Hitem:10604:0:0:0|h[Schematic: Mithril Heavy-bore Rifle]|h|r",
+				["name"] = "|cff1eff00|Hitem:15745:0:0:0|h[Pattern: Runic Leather Belt]|h|r",
 				["data"] = {
-					["RangedSpeed"] = 2.9,
-					["name"] = "Schematic: Mithril Heavy-bore Rifle",
+					["name"] = "Pattern: Runic Leather Belt",
 					["procs"] = {
 					},
-					["RangedMin"] = 41,
-					["RangedMax"] = 76,
 					["numlines"] = 11,
-					["RangedAttackPowerReport"] = 14,
 				},
 			},
 		},
+		["agility"] = 0,
+		["name"] = "Naked",
+		["strength"] = 0,
 		["wear"] = {
 		},
 		["intellect"] = 0,
@@ -223,7 +223,7 @@ TheoryCraft_Settings = {
 		["stamina"] = 0,
 	},
 	["procs"] = true,
-	["FontPath"] = "Fonts\\ArialN.TTF",
+	["GenerateList"] = "",
 	["critchancedata"] = {
 		["190:5"] = {
 			["casts"] = 39,
@@ -814,6 +814,6 @@ TheoryCraft_Settings = {
 			["crits"] = 0,
 		},
 	},
-	["embedstyle3"] = true,
+	["embed"] = true,
 	["healanddamage"] = true,
 }

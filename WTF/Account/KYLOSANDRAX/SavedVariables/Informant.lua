@@ -5,8 +5,8 @@ InformantConfig = {
 		},
 	},
 	["position"] = {
-		["y"] = 548.5714427666428,
-		["x"] = 877.7144276664283,
+		["y"] = 599.9999658427657,
+		["x"] = 1422.222774258332,
 	},
 	["welcomed"] = true,
 	["filters"] = {
@@ -15,11 +15,11 @@ InformantConfig = {
 		["show-merchant"] = "on",
 		["show-stack"] = "on",
 		["locale"] = "default",
-		["show-icon"] = "on",
+		["show-quest"] = "on",
 		["show-vendor-sell"] = "on",
 		["show-vendor"] = "on",
 		["all"] = "on",
 		["embed"] = "off",
-		["show-quest"] = "on",
+		["show-icon"] = "on",
 	},
 }

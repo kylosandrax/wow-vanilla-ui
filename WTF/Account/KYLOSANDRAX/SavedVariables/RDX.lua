@@ -15,9 +15,9 @@ RDX5Data = {
 			["mqDelay"] = 0.75,
 			["bAuraUpdateDelay"] = 0.25,
 			["bAuraRealtimeSyncDelay"] = 2,
-			["bAuraTimerSyncDelay"] = 10,
-			["uiWindowUpdateDelay"] = 0.25,
 			["enableHOT"] = true,
+			["uiWindowUpdateDelay"] = 0.25,
+			["bAuraTimerSyncDelay"] = 10,
 		},
 		["vis"] = {
 			["cStatusText"] = {
@@ -113,10 +113,7 @@ RDX5Data = {
 				["smbtn"] = {
 					["iid"] = 1,
 				},
-				["slbtn"] = {
-					["sptitle"] = "healing touch(rank 4)",
-					["iid"] = 4,
-				},
+				["scale"] = 1.216663479804993,
 				["sort"] = 2,
 				["srbtn"] = {
 					["sptitle"] = "rejuvenation(rank 10)",
@@ -126,12 +123,15 @@ RDX5Data = {
 				["stext"] = 3,
 				["truncate"] = 8,
 				["layout"] = 1,
+				["width"] = 152.5184936523438,
 				["rbtn"] = {
 					["iid"] = 1,
 				},
-				["width"] = 152.5184936523438,
-				["scale"] = 1.216663479804993,
-				["title"] = "Raid Healing",
+				["slbtn"] = {
+					["sptitle"] = "healing touch(rank 4)",
+					["iid"] = 4,
+				},
+				["name"] = "raid healing",
 				["filter"] = {
 					["desync"] = 3,
 					["hpmin"] = 1,
@@ -171,17 +171,14 @@ RDX5Data = {
 				["mbtn"] = {
 					["iid"] = 1,
 				},
-				["name"] = "raid healing",
+				["title"] = "Raid Healing",
 			},
 			["main tanks"] = {
 				["smbtn"] = {
 					["sptitle"] = "swiftmend",
 					["iid"] = 4,
 				},
-				["slbtn"] = {
-					["sptitle"] = "healing touch(rank 4)",
-					["iid"] = 4,
-				},
+				["scale"] = 1.216663479804993,
 				["sort"] = 2,
 				["srbtn"] = {
 					["sptitle"] = "rejuvenation(rank 10)",
@@ -191,12 +188,13 @@ RDX5Data = {
 				["stext"] = 3,
 				["truncate"] = 5,
 				["layout"] = 1,
-				["rbtn"] = {
-					["iid"] = 1,
+				["width"] = 152.5184936523438,
+				["name"] = "main tanks",
+				["slbtn"] = {
+					["sptitle"] = "healing touch(rank 4)",
+					["iid"] = 4,
 				},
 				["title"] = "Main Tanks",
-				["scale"] = 1.216663479804993,
-				["name"] = "main tanks",
 				["filter"] = {
 					["desync"] = 3,
 					["hpmin"] = 1,
@@ -211,6 +209,7 @@ RDX5Data = {
 					["hm"] = 1,
 					["groups"] = {
 						[1] = true,
+						[2] = true,
 					},
 					["hptype"] = 1,
 					["followdistance"] = 1,
@@ -222,7 +221,9 @@ RDX5Data = {
 				["mbtn"] = {
 					["iid"] = 1,
 				},
-				["width"] = 152.5184936523438,
+				["rbtn"] = {
+					["iid"] = 1,
+				},
 			},
 		},
 	},
@@ -233,12 +234,12 @@ RDX5Data = {
 			},
 			["enc_default"] = {
 				["mod_debuffs"] = {
-					["show"] = 4,
-					["x"] = 311.1111449233229,
-					["relevance"] = {
-					},
 					["y"] = 1157.777913544159,
 					["slice"] = 1,
+					["relevance"] = {
+					},
+					["show"] = 4,
+					["x"] = 311.1111449233229,
 				},
 				["mod_assists"] = {
 					["auxarray"] = {

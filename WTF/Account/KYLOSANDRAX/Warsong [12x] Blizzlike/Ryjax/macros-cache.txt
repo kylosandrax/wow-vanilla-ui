@@ -1,8 +1,10 @@
 MACRO 16777219 "BearForm" Ability_Racial_BearForm
 /script local _,_,active=GetShapeshiftFormInfo(1);if active~=1 then CastSpellByName("Dire Bear Form");end;
+/script EquipSet("Tanking")
 END
 MACRO 16777220 "CatForm" Ability_Druid_CatForm
 /script local _,_,active=GetShapeshiftFormInfo(3);if active~=1 then CastSpellByName("Cat Form");end;
+/script EquipSet("DPS")
 END
 MACRO 16777231 "DCUR" TalentSpec_Druid_Balance
 /decursive
