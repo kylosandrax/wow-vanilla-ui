@@ -12,59 +12,40 @@ TheoryCraft_Settings = {
 	["embed"] = true,
 	["buttontextx"] = 1.111,
 	["ColG2"] = 1,
-	["nextstr"] = true,
+	["combinedot"] = true,
 	["ColR2"] = 1,
+	["ColB"] = 1,
 	["embedstyle1"] = true,
-	["crit"] = true,
 	["tryfirst"] = "averagedam",
 	["trysecondsfg"] = -1,
-	["ColG"] = 1,
+	["dataversion"] = "1.06",
 	["tryfirstsfg"] = 0,
-	["ColB2"] = 0.6862745098039216,
-	["GenerateList"] = "",
-	["nextcrit"] = true,
+	["procs"] = true,
 	["FontPath"] = "Fonts\\ArialN.TTF",
-	["dontresist"] = true,
+	["GenerateList"] = "",
+	["mitigation"] = true,
 	["trysecond"] = "averagehealnocrit",
+	["dontresist"] = true,
 	["ColR"] = 1,
 	["buttontext"] = true,
-	["mitigation"] = true,
+	["nextcrit"] = true,
 	["CustomOutfit"] = {
-		["destat"] = {
-			[1] = "Head",
-			[2] = "Neck",
-			[3] = "Shoulder",
-			[4] = "Chest",
-			[5] = "Waist",
-			[6] = "Legs",
-			[7] = "Feet",
-			[8] = "Wrist",
-			[9] = "Hands",
-			[10] = "Finger0",
-			[11] = "Finger1",
-			[12] = "Trinket0",
-			[13] = "Trinket1",
-			[14] = "Back",
-			[15] = "MainHand",
-			[16] = "SecondaryHand",
-			[17] = "Ranged",
-			[18] = "Tabard",
-			[19] = "Ammo",
-		},
+		["intellect"] = 0,
 		["newstat"] = {
 		},
 		["slots"] = {
-			["Waist"] = {
+			["Ranged"] = {
 				["stats"] = {
-					["stamina"] = 11,
-					["strength"] = 12,
 				},
-				["name"] = "|cff1eff00|Hitem:10122:0:1211:0|h[Ornate Girdle of the Bear]|h|r",
+				["name"] = "|cff1eff00|Hitem:15284:0:0:0|h[Long Battle Bow]|h|r",
 				["data"] = {
-					["name"] = "Ornate Girdle of the Bear",
+					["name"] = "Long Battle Bow",
 					["procs"] = {
 					},
-					["numlines"] = 7,
+					["RangedSpeed"] = 2.2,
+					["RangedMax"] = 34,
+					["RangedMin"] = 18,
+					["numlines"] = 6,
 				},
 			},
 			["Finger0"] = {
@@ -176,17 +157,17 @@ TheoryCraft_Settings = {
 					["numlines"] = 11,
 				},
 			},
-			["Feet"] = {
+			["Finger1"] = {
 				["stats"] = {
-					["stamina"] = 7,
-					["strength"] = 7,
+					["intellect"] = 9,
+					["spirit"] = 9,
 				},
-				["name"] = "|cff1eff00|Hitem:9864:0:1197:0|h[Renegade Boots of the Bear]|h|r",
+				["name"] = "|cff1eff00|Hitem:11992:0:778:0|h[Vermilion Band of the Owl]|h|r",
 				["data"] = {
-					["name"] = "Renegade Boots of the Bear",
+					["name"] = "Vermilion Band of the Owl",
 					["procs"] = {
 					},
-					["numlines"] = 7,
+					["numlines"] = 6,
 				},
 			},
 			["Chest"] = {
@@ -210,12 +191,50 @@ TheoryCraft_Settings = {
 				["data"] = {
 					["numlines"] = 8,
 					["MeleeMax"] = 146,
-					["name"] = "Greater Maul of the Tiger",
+					["MeleeMin"] = 97,
 					["procs"] = {
 					},
 					["MeleeAPMult"] = 3.3,
 					["MainSpeed"] = 3.4,
-					["MeleeMin"] = 97,
+					["name"] = "Greater Maul of the Tiger",
+				},
+			},
+			["Feet"] = {
+				["stats"] = {
+					["stamina"] = 7,
+					["strength"] = 7,
+				},
+				["name"] = "|cff1eff00|Hitem:9864:0:1197:0|h[Renegade Boots of the Bear]|h|r",
+				["data"] = {
+					["name"] = "Renegade Boots of the Bear",
+					["procs"] = {
+					},
+					["numlines"] = 7,
+				},
+			},
+			["Waist"] = {
+				["stats"] = {
+					["stamina"] = 11,
+					["strength"] = 12,
+				},
+				["name"] = "|cff1eff00|Hitem:10122:0:1211:0|h[Ornate Girdle of the Bear]|h|r",
+				["data"] = {
+					["name"] = "Ornate Girdle of the Bear",
+					["procs"] = {
+					},
+					["numlines"] = 7,
+				},
+			},
+			["Shoulder"] = {
+				["stats"] = {
+					["settype"] = "Twilight Trappings",
+				},
+				["name"] = "|cff1eff00|Hitem:20406:0:0:0|h[Twilight Cultist Mantle]|h|r",
+				["data"] = {
+					["name"] = "Twilight Cultist Mantle",
+					["procs"] = {
+					},
+					["numlines"] = 11,
 				},
 			},
 			["Neck"] = {
@@ -232,58 +251,39 @@ TheoryCraft_Settings = {
 					["numlines"] = 7,
 				},
 			},
-			["Ranged"] = {
-				["stats"] = {
-				},
-				["name"] = "|cff1eff00|Hitem:15284:0:0:0|h[Long Battle Bow]|h|r",
-				["data"] = {
-					["name"] = "Long Battle Bow",
-					["procs"] = {
-					},
-					["RangedSpeed"] = 2.2,
-					["RangedMax"] = 34,
-					["numlines"] = 6,
-					["RangedMin"] = 18,
-				},
-			},
-			["Shoulder"] = {
-				["stats"] = {
-					["settype"] = "Twilight Trappings",
-				},
-				["name"] = "|cff1eff00|Hitem:20406:0:0:0|h[Twilight Cultist Mantle]|h|r",
-				["data"] = {
-					["name"] = "Twilight Cultist Mantle",
-					["procs"] = {
-					},
-					["numlines"] = 11,
-				},
-			},
-			["Finger1"] = {
-				["stats"] = {
-					["intellect"] = 9,
-					["spirit"] = 9,
-				},
-				["name"] = "|cff1eff00|Hitem:11992:0:778:0|h[Vermilion Band of the Owl]|h|r",
-				["data"] = {
-					["name"] = "Vermilion Band of the Owl",
-					["procs"] = {
-					},
-					["numlines"] = 6,
-				},
-			},
 		},
 		["agility"] = 0,
 		["name"] = "Naked",
-		["strength"] = 0,
+		["stamina"] = 0,
 		["wear"] = {
 		},
-		["intellect"] = 0,
+		["destat"] = {
+			[1] = "Head",
+			[2] = "Neck",
+			[3] = "Shoulder",
+			[4] = "Chest",
+			[5] = "Waist",
+			[6] = "Legs",
+			[7] = "Feet",
+			[8] = "Wrist",
+			[9] = "Hands",
+			[10] = "Finger0",
+			[11] = "Finger1",
+			[12] = "Trinket0",
+			[13] = "Trinket1",
+			[14] = "Back",
+			[15] = "MainHand",
+			[16] = "SecondaryHand",
+			[17] = "Ranged",
+			[18] = "Tabard",
+			[19] = "Ammo",
+		},
 		["spirit"] = 0,
-		["stamina"] = 0,
+		["strength"] = 0,
 	},
-	["procs"] = true,
-	["dataversion"] = "1.06",
-	["ColB"] = 1,
-	["combinedot"] = true,
+	["ColB2"] = 0.6862745098039216,
+	["ColG"] = 1,
+	["crit"] = true,
+	["nextstr"] = true,
 	["healanddamage"] = true,
 }

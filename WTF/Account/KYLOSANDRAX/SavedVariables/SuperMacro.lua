@@ -28,11 +28,11 @@ SM_ACTION_SUPER = {
 	},
 	["Kylosandrax of Al'Akir [instant 60] Blizzlike"] = {
 	},
-	["Sixofnine of Warsong [12x] Blizzlike"] = {
+	["Nameplate of Emerald Dream [1x] Blizzlike"] = {
 	},
 	["Banjax of Warsong [12x] Blizzlike"] = {
 	},
-	["Nameplate of Emerald Dream [1x] Blizzlike"] = {
+	["Sixofnine of Warsong [12x] Blizzlike"] = {
 	},
 	["Ryvok of Emerald Dream [1x] Blizzlike"] = {
 	},

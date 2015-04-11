@@ -170,8 +170,8 @@ X: 1140
 Y: -903
 Frame: TrinketMenu_MenuFrame
 FrameLevel: 31
-X: 1140
-Y: -783
+X: 1180
+Y: -824
 Frame: TrinketMenu_OptFrame
 FrameLevel: 24
 X: 697
@@ -182,13 +182,9 @@ X: 868
 Y: -302
 Frame: XLootFrame
 FrameLevel: 5
-X: 1274
-Y: -482
+X: 1394
+Y: -529
 Frame: BWP_MainFrame
 FrameLevel: 8
 X: 1402
 Y: -580
-Frame: WIM_msgFrameKamra
-FrameLevel: 1
-X: 110
-Y: -658
