@@ -1,6 +1,10 @@
 if UnitClass("player") == "Warrior" then
 
 local version = 2.2
+
+WHUD_DEFAULT_SCALE = 1.5
+WHUD_DEFAULT_ICON_WIDTH = 100
+WHUD_DEFAULT_ICON_HEIGHT = 100
 	
 function WHUD_Variables_Init()
 	WHUD_RegisterEvent("ACTIONBAR_SLOT_CHANGED")
@@ -13,7 +17,7 @@ end
 					enabled = true,
 					X = 0,
 					Y = -100,
-					scale = 1,
+					scale = WHUD_DEFAULT_SCALE,
 					strata = "HIGH",
 					transparency = 1,
 					fontsize = 25,
@@ -24,7 +28,7 @@ end
 					enabled = true,
 					X = 0,
 					Y = -50,
-					scale = 1,
+					scale = WHUD_DEFAULT_SCALE,
 					strata = "HIGH",
 					transparency = 1,
 					flashtime = 2,
@@ -37,7 +41,7 @@ end
 					enabled = true,
 					X = 0,
 					Y = 50,
-					scale = 1,
+					scale = WHUD_DEFAULT_SCALE,
 					strata = "HIGH",
 					transparency = 1,
 					MSG = "USE OVERPOWER NOW",
@@ -50,7 +54,7 @@ end
 					enabled = true,
 					X = 0,
 					Y = 120,
-					scale = 1,
+					scale = WHUD_DEFAULT_SCALE,
 					strata = "HIGH",
 					transparency = 1,
 					fontsize = 33,

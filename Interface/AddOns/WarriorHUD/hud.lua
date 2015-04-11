@@ -1,5 +1,8 @@
 if UnitClass("player") == "Warrior" then
 -- Warrior HUD by Lyq(Virose) @ Feenix(wow-one.com)
+
+
+
 CreateFrame("Frame", "WHUD_CORE")
 	-- INIT some vars
 	local _G = getfenv(0)
