@@ -151,7 +151,9 @@ end
 
 function WHUD_Overpower_IsUseable()
 	-- this function will return if Overpower is not on CD and usable
-	if cooldown == 0 and WHUD_OP_TIME >= GetTime() then
+	-- with an extra check to ignore Overpower if Rage > X
+	local rage = UnitMana("player");
+	if cooldown == 0 and WHUD_OP_TIME >= GetTime() and rage <= 40 then
 		return true
 	else
 		return false

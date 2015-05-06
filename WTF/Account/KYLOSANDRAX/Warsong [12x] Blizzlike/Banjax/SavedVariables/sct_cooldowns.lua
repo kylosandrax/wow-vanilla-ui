@@ -13,11 +13,11 @@ sctcOptions = {
 	},
 	["on"] = true,
 	["version"] = "1.4.2",
-	["groups"] = {
+	["members"] = {
 	},
 	["wformat"] = "[%s Ready In 10]",
 	["format"] = "[%s Ready]",
 	["crit"] = 1,
-	["members"] = {
+	["groups"] = {
 	},
 }

@@ -9,7 +9,7 @@ FuBar2DB = {
 					["xPercent"] = -9.315609195148511e-008,
 					["attachPoint"] = "TOP",
 					["lock"] = true,
-					["widthPercent"] = 1,
+					["widthPercent"] = 1.000000093156092,
 					["plugins"] = {
 						["center"] = {
 							[1] = "ItemBonusesFu",
@@ -85,8 +85,8 @@ FuBar2DB = {
 			},
 			["autohideTop"] = false,
 			["transparency"] = 0.5,
-			["leftSpacing"] = 20,
 			["overflow"] = false,
+			["thickness"] = 7,
 			["places"] = {
 				["center"] = {
 				},
@@ -95,7 +95,7 @@ FuBar2DB = {
 				["left"] = {
 				},
 			},
-			["thickness"] = 7,
+			["leftSpacing"] = 20,
 		},
 	},
 }

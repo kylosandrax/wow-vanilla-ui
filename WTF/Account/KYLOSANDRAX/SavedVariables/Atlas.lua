@@ -1,15 +1,15 @@
 
 AtlasOptions = {
-	["AtlasMapName"] = true,
+	["AtlasRightClick"] = false,
 	["AtlasReplaceWorldMap"] = false,
 	["AtlasAcronyms"] = true,
 	["AtlasType"] = 1,
 	["AtlasButtonShown"] = false,
 	["AtlasVersion"] = "1.8.1",
 	["AtlasAlpha"] = 1,
-	["AtlasButtonPosition"] = 268,
-	["AtlasZone"] = 12,
+	["AtlasMapName"] = true,
+	["AtlasZone"] = 26,
 	["AtlasAutoSelect"] = true,
 	["AtlasLocked"] = false,
-	["AtlasRightClick"] = false,
+	["AtlasButtonPosition"] = 268,
 }

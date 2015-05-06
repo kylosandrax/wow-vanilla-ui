@@ -43,7 +43,6 @@ sRaidFramesDB = {
 			["vertical_hp"] = false,
 			["lock"] = true,
 			["redbar"] = false,
-			["grp_name"] = false,
 			["Positions"] = {
 				[1] = {
 					["y"] = 247.0881222875439,
@@ -82,9 +81,10 @@ sRaidFramesDB = {
 					["x"] = 1090.837360304548,
 				},
 			},
+			["healthDisplayType"] = "deficit",
 			["units_limit"] = 5,
 			["dynamic_aggro_sort"] = false,
-			["healthDisplayType"] = "deficit",
+			["grp_name"] = false,
 		},
 	},
 }

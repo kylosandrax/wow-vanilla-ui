@@ -79,7 +79,7 @@ RangeConfig = {
 		["enable rangehelp"] = 1,
 	},
 	["Version"] = "4.1",
-	["Nameplate of Emerald Dream [1x] Blizzlike"] = {
+	["Sixofnine of Warsong [12x] Blizzlike"] = {
 		["hide rangeinfo"] = 0,
 		["switch at deadzone"] = 0,
 		["melee name"] = "wing clip",
@@ -105,7 +105,7 @@ RangeConfig = {
 		["range slot"] = 6,
 		["enable rangehelp"] = 1,
 	},
-	["Sixofnine of Warsong [12x] Blizzlike"] = {
+	["Nameplate of Emerald Dream [1x] Blizzlike"] = {
 		["hide rangeinfo"] = 0,
 		["switch at deadzone"] = 0,
 		["melee name"] = "wing clip",
@@ -148,32 +148,13 @@ RangeConfig = {
 RangeHelpOption = {
 	["Kylosandrax of Warsong [12x] Blizzlike"] = {
 		["lock back"] = 0,
-		["dead ui"] = {
-			["BGColor"] = {
-				["r"] = 1,
-				["b"] = 0,
-				["g"] = 0.5,
-				["alpha"] = 0.7,
-			},
-			["FontColor"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["Text"] = "Dead Zone",
-			["BorColor"] = {
-				["r"] = 1,
-				["b"] = 0,
-				["g"] = 0.5,
-				["alpha"] = 0.7,
-			},
-		},
+		["move"] = 1,
 		["oorange ui"] = {
 			["BGColor"] = {
 				["r"] = 1,
-				["b"] = 0,
 				["g"] = 0,
 				["alpha"] = 0.7,
+				["b"] = 0,
 			},
 			["FontColor"] = {
 				["r"] = 1,
@@ -183,17 +164,17 @@ RangeHelpOption = {
 			["Text"] = "Out of Range",
 			["BorColor"] = {
 				["r"] = 1,
-				["b"] = 0,
 				["g"] = 0,
 				["alpha"] = 0.7,
+				["b"] = 0,
 			},
 		},
 		["range ui"] = {
 			["BGColor"] = {
 				["r"] = 0,
-				["b"] = 1,
 				["g"] = 0,
 				["alpha"] = 0.7,
+				["b"] = 1,
 			},
 			["FontColor"] = {
 				["r"] = 1,
@@ -203,17 +184,17 @@ RangeHelpOption = {
 			["Text"] = "Range",
 			["BorColor"] = {
 				["r"] = 0,
-				["b"] = 1,
 				["g"] = 0,
 				["alpha"] = 0.7,
+				["b"] = 1,
 			},
 		},
 		["melee ui"] = {
 			["BGColor"] = {
 				["r"] = 0,
-				["b"] = 0,
 				["g"] = 1,
 				["alpha"] = 0.7,
+				["b"] = 0,
 			},
 			["FontColor"] = {
 				["r"] = 1,
@@ -223,13 +204,32 @@ RangeHelpOption = {
 			["Text"] = "Melee",
 			["BorColor"] = {
 				["r"] = 0,
-				["b"] = 0,
 				["g"] = 1,
 				["alpha"] = 0.7,
+				["b"] = 0,
 			},
 		},
 		["lock border"] = 0,
-		["move"] = 1,
+		["dead ui"] = {
+			["BGColor"] = {
+				["r"] = 1,
+				["g"] = 0.5,
+				["alpha"] = 0.7,
+				["b"] = 0,
+			},
+			["FontColor"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["Text"] = "Dead Zone",
+			["BorColor"] = {
+				["r"] = 1,
+				["g"] = 0.5,
+				["alpha"] = 0.7,
+				["b"] = 0,
+			},
+		},
 		["font height"] = 1,
 		["lock font"] = 0,
 		["resize"] = 0,
@@ -237,32 +237,13 @@ RangeHelpOption = {
 	},
 	["Kashonar of Warsong [12x] Blizzlike"] = {
 		["lock back"] = 0,
-		["dead ui"] = {
-			["BGColor"] = {
-				["r"] = 1,
-				["b"] = 0,
-				["g"] = 0.5,
-				["alpha"] = 0.7,
-			},
-			["FontColor"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["Text"] = "Dead Zone",
-			["BorColor"] = {
-				["r"] = 1,
-				["b"] = 0,
-				["g"] = 0.5,
-				["alpha"] = 0.7,
-			},
-		},
+		["move"] = 1,
 		["oorange ui"] = {
 			["BGColor"] = {
 				["r"] = 1,
-				["b"] = 0,
 				["g"] = 0,
 				["alpha"] = 0.7,
+				["b"] = 0,
 			},
 			["FontColor"] = {
 				["r"] = 1,
@@ -272,17 +253,17 @@ RangeHelpOption = {
 			["Text"] = "Out of Range",
 			["BorColor"] = {
 				["r"] = 1,
-				["b"] = 0,
 				["g"] = 0,
 				["alpha"] = 0.7,
+				["b"] = 0,
 			},
 		},
 		["range ui"] = {
 			["BGColor"] = {
 				["r"] = 0,
-				["b"] = 1,
 				["g"] = 0,
 				["alpha"] = 0.7,
+				["b"] = 1,
 			},
 			["FontColor"] = {
 				["r"] = 1,
@@ -292,17 +273,17 @@ RangeHelpOption = {
 			["Text"] = "Range",
 			["BorColor"] = {
 				["r"] = 0,
-				["b"] = 1,
 				["g"] = 0,
 				["alpha"] = 0.7,
+				["b"] = 1,
 			},
 		},
 		["melee ui"] = {
 			["BGColor"] = {
 				["r"] = 0,
-				["b"] = 0,
 				["g"] = 1,
 				["alpha"] = 0.7,
+				["b"] = 0,
 			},
 			["FontColor"] = {
 				["r"] = 1,
@@ -312,13 +293,32 @@ RangeHelpOption = {
 			["Text"] = "Melee",
 			["BorColor"] = {
 				["r"] = 0,
-				["b"] = 0,
 				["g"] = 1,
 				["alpha"] = 0.7,
+				["b"] = 0,
 			},
 		},
 		["lock border"] = 0,
-		["move"] = 1,
+		["dead ui"] = {
+			["BGColor"] = {
+				["r"] = 1,
+				["g"] = 0.5,
+				["alpha"] = 0.7,
+				["b"] = 0,
+			},
+			["FontColor"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["Text"] = "Dead Zone",
+			["BorColor"] = {
+				["r"] = 1,
+				["g"] = 0.5,
+				["alpha"] = 0.7,
+				["b"] = 0,
+			},
+		},
 		["font height"] = 1,
 		["lock font"] = 0,
 		["resize"] = 0,
@@ -326,74 +326,12 @@ RangeHelpOption = {
 	},
 	["Ryjax of Warsong [12x] Blizzlike"] = {
 		["lock back"] = 0,
-		["move"] = 1,
-		["oorange ui"] = {
-			["BGColor"] = {
-				["r"] = 1,
-				["g"] = 0,
-				["alpha"] = 0.7,
-				["b"] = 0,
-			},
-			["FontColor"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["Text"] = "Out of Range",
-			["BorColor"] = {
-				["r"] = 1,
-				["g"] = 0,
-				["alpha"] = 0.7,
-				["b"] = 0,
-			},
-		},
-		["range ui"] = {
-			["BGColor"] = {
-				["r"] = 0,
-				["g"] = 0,
-				["alpha"] = 0.7,
-				["b"] = 1,
-			},
-			["FontColor"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["Text"] = "Range",
-			["BorColor"] = {
-				["r"] = 0,
-				["g"] = 0,
-				["alpha"] = 0.7,
-				["b"] = 1,
-			},
-		},
-		["melee ui"] = {
-			["BGColor"] = {
-				["r"] = 0,
-				["g"] = 1,
-				["alpha"] = 0.7,
-				["b"] = 0,
-			},
-			["FontColor"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["Text"] = "Melee",
-			["BorColor"] = {
-				["r"] = 0,
-				["g"] = 1,
-				["alpha"] = 0.7,
-				["b"] = 0,
-			},
-		},
-		["lock border"] = 0,
 		["dead ui"] = {
 			["BGColor"] = {
 				["r"] = 1,
-				["g"] = 0.5,
-				["alpha"] = 0.7,
 				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 0.5,
 			},
 			["FontColor"] = {
 				["r"] = 1,
@@ -403,11 +341,73 @@ RangeHelpOption = {
 			["Text"] = "Dead Zone",
 			["BorColor"] = {
 				["r"] = 1,
-				["g"] = 0.5,
-				["alpha"] = 0.7,
 				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 0.5,
 			},
 		},
+		["oorange ui"] = {
+			["BGColor"] = {
+				["r"] = 1,
+				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 0,
+			},
+			["FontColor"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["Text"] = "Out of Range",
+			["BorColor"] = {
+				["r"] = 1,
+				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 0,
+			},
+		},
+		["range ui"] = {
+			["BGColor"] = {
+				["r"] = 0,
+				["b"] = 1,
+				["alpha"] = 0.7,
+				["g"] = 0,
+			},
+			["FontColor"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["Text"] = "Range",
+			["BorColor"] = {
+				["r"] = 0,
+				["b"] = 1,
+				["alpha"] = 0.7,
+				["g"] = 0,
+			},
+		},
+		["melee ui"] = {
+			["BGColor"] = {
+				["r"] = 0,
+				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 1,
+			},
+			["FontColor"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["Text"] = "Melee",
+			["BorColor"] = {
+				["r"] = 0,
+				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 1,
+			},
+		},
+		["lock border"] = 0,
+		["move"] = 1,
 		["font height"] = 1,
 		["lock font"] = 0,
 		["resize"] = 0,
@@ -415,74 +415,12 @@ RangeHelpOption = {
 	},
 	["Stormslinger of Warsong [12x] Blizzlike"] = {
 		["lock back"] = 0,
-		["move"] = 1,
-		["oorange ui"] = {
-			["BGColor"] = {
-				["r"] = 1,
-				["g"] = 0,
-				["alpha"] = 0.7,
-				["b"] = 0,
-			},
-			["FontColor"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["Text"] = "Out of Range",
-			["BorColor"] = {
-				["r"] = 1,
-				["g"] = 0,
-				["alpha"] = 0.7,
-				["b"] = 0,
-			},
-		},
-		["range ui"] = {
-			["BGColor"] = {
-				["r"] = 0,
-				["g"] = 0,
-				["alpha"] = 0.7,
-				["b"] = 1,
-			},
-			["FontColor"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["Text"] = "Range",
-			["BorColor"] = {
-				["r"] = 0,
-				["g"] = 0,
-				["alpha"] = 0.7,
-				["b"] = 1,
-			},
-		},
-		["melee ui"] = {
-			["BGColor"] = {
-				["r"] = 0,
-				["g"] = 1,
-				["alpha"] = 0.7,
-				["b"] = 0,
-			},
-			["FontColor"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["Text"] = "Melee",
-			["BorColor"] = {
-				["r"] = 0,
-				["g"] = 1,
-				["alpha"] = 0.7,
-				["b"] = 0,
-			},
-		},
-		["lock border"] = 0,
 		["dead ui"] = {
 			["BGColor"] = {
 				["r"] = 1,
-				["g"] = 0.5,
-				["alpha"] = 0.7,
 				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 0.5,
 			},
 			["FontColor"] = {
 				["r"] = 1,
@@ -492,11 +430,73 @@ RangeHelpOption = {
 			["Text"] = "Dead Zone",
 			["BorColor"] = {
 				["r"] = 1,
-				["g"] = 0.5,
-				["alpha"] = 0.7,
 				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 0.5,
 			},
 		},
+		["oorange ui"] = {
+			["BGColor"] = {
+				["r"] = 1,
+				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 0,
+			},
+			["FontColor"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["Text"] = "Out of Range",
+			["BorColor"] = {
+				["r"] = 1,
+				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 0,
+			},
+		},
+		["range ui"] = {
+			["BGColor"] = {
+				["r"] = 0,
+				["b"] = 1,
+				["alpha"] = 0.7,
+				["g"] = 0,
+			},
+			["FontColor"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["Text"] = "Range",
+			["BorColor"] = {
+				["r"] = 0,
+				["b"] = 1,
+				["alpha"] = 0.7,
+				["g"] = 0,
+			},
+		},
+		["melee ui"] = {
+			["BGColor"] = {
+				["r"] = 0,
+				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 1,
+			},
+			["FontColor"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["Text"] = "Melee",
+			["BorColor"] = {
+				["r"] = 0,
+				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 1,
+			},
+		},
+		["lock border"] = 0,
+		["move"] = 1,
 		["font height"] = 1,
 		["lock font"] = 0,
 		["resize"] = 0,
@@ -504,32 +504,13 @@ RangeHelpOption = {
 	},
 	["Ryvok of Warsong [12x] Blizzlike"] = {
 		["lock back"] = 0,
-		["dead ui"] = {
-			["BGColor"] = {
-				["r"] = 1,
-				["b"] = 0,
-				["g"] = 0.5,
-				["alpha"] = 0.7,
-			},
-			["FontColor"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["Text"] = "Dead Zone",
-			["BorColor"] = {
-				["r"] = 1,
-				["b"] = 0,
-				["g"] = 0.5,
-				["alpha"] = 0.7,
-			},
-		},
+		["move"] = 1,
 		["oorange ui"] = {
 			["BGColor"] = {
 				["r"] = 1,
-				["b"] = 0,
 				["g"] = 0,
 				["alpha"] = 0.7,
+				["b"] = 0,
 			},
 			["FontColor"] = {
 				["r"] = 1,
@@ -539,17 +520,17 @@ RangeHelpOption = {
 			["Text"] = "Out of Range",
 			["BorColor"] = {
 				["r"] = 1,
-				["b"] = 0,
 				["g"] = 0,
 				["alpha"] = 0.7,
+				["b"] = 0,
 			},
 		},
 		["range ui"] = {
 			["BGColor"] = {
 				["r"] = 0,
-				["b"] = 1,
 				["g"] = 0,
 				["alpha"] = 0.7,
+				["b"] = 1,
 			},
 			["FontColor"] = {
 				["r"] = 1,
@@ -559,17 +540,17 @@ RangeHelpOption = {
 			["Text"] = "Range",
 			["BorColor"] = {
 				["r"] = 0,
-				["b"] = 1,
 				["g"] = 0,
 				["alpha"] = 0.7,
+				["b"] = 1,
 			},
 		},
 		["melee ui"] = {
 			["BGColor"] = {
 				["r"] = 0,
-				["b"] = 0,
 				["g"] = 1,
 				["alpha"] = 0.7,
+				["b"] = 0,
 			},
 			["FontColor"] = {
 				["r"] = 1,
@@ -579,13 +560,32 @@ RangeHelpOption = {
 			["Text"] = "Melee",
 			["BorColor"] = {
 				["r"] = 0,
-				["b"] = 0,
 				["g"] = 1,
 				["alpha"] = 0.7,
+				["b"] = 0,
 			},
 		},
 		["lock border"] = 0,
-		["move"] = 1,
+		["dead ui"] = {
+			["BGColor"] = {
+				["r"] = 1,
+				["g"] = 0.5,
+				["alpha"] = 0.7,
+				["b"] = 0,
+			},
+			["FontColor"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["Text"] = "Dead Zone",
+			["BorColor"] = {
+				["r"] = 1,
+				["g"] = 0.5,
+				["alpha"] = 0.7,
+				["b"] = 0,
+			},
+		},
 		["font height"] = 1,
 		["lock font"] = 0,
 		["resize"] = 0,
@@ -593,32 +593,13 @@ RangeHelpOption = {
 	},
 	["Zapunzel of Warsong [12x] Blizzlike"] = {
 		["lock back"] = 0,
-		["dead ui"] = {
-			["BGColor"] = {
-				["r"] = 1,
-				["b"] = 0,
-				["g"] = 0.5,
-				["alpha"] = 0.7,
-			},
-			["FontColor"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["Text"] = "Dead Zone",
-			["BorColor"] = {
-				["r"] = 1,
-				["b"] = 0,
-				["g"] = 0.5,
-				["alpha"] = 0.7,
-			},
-		},
+		["move"] = 1,
 		["oorange ui"] = {
 			["BGColor"] = {
 				["r"] = 1,
-				["b"] = 0,
 				["g"] = 0,
 				["alpha"] = 0.7,
+				["b"] = 0,
 			},
 			["FontColor"] = {
 				["r"] = 1,
@@ -628,17 +609,17 @@ RangeHelpOption = {
 			["Text"] = "Out of Range",
 			["BorColor"] = {
 				["r"] = 1,
-				["b"] = 0,
 				["g"] = 0,
 				["alpha"] = 0.7,
+				["b"] = 0,
 			},
 		},
 		["range ui"] = {
 			["BGColor"] = {
 				["r"] = 0,
-				["b"] = 1,
 				["g"] = 0,
 				["alpha"] = 0.7,
+				["b"] = 1,
 			},
 			["FontColor"] = {
 				["r"] = 1,
@@ -648,17 +629,17 @@ RangeHelpOption = {
 			["Text"] = "Range",
 			["BorColor"] = {
 				["r"] = 0,
-				["b"] = 1,
 				["g"] = 0,
 				["alpha"] = 0.7,
+				["b"] = 1,
 			},
 		},
 		["melee ui"] = {
 			["BGColor"] = {
 				["r"] = 0,
-				["b"] = 0,
 				["g"] = 1,
 				["alpha"] = 0.7,
+				["b"] = 0,
 			},
 			["FontColor"] = {
 				["r"] = 1,
@@ -668,89 +649,46 @@ RangeHelpOption = {
 			["Text"] = "Melee",
 			["BorColor"] = {
 				["r"] = 0,
-				["b"] = 0,
 				["g"] = 1,
 				["alpha"] = 0.7,
+				["b"] = 0,
 			},
 		},
 		["lock border"] = 0,
-		["move"] = 1,
+		["dead ui"] = {
+			["BGColor"] = {
+				["r"] = 1,
+				["g"] = 0.5,
+				["alpha"] = 0.7,
+				["b"] = 0,
+			},
+			["FontColor"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["Text"] = "Dead Zone",
+			["BorColor"] = {
+				["r"] = 1,
+				["g"] = 0.5,
+				["alpha"] = 0.7,
+				["b"] = 0,
+			},
+		},
 		["font height"] = 1,
 		["lock font"] = 0,
 		["resize"] = 0,
 		["link backbg"] = 0,
 	},
 	["Version"] = "4.1",
-	["Nameplate of Emerald Dream [1x] Blizzlike"] = {
+	["Sixofnine of Warsong [12x] Blizzlike"] = {
 		["lock back"] = 0,
-		["move"] = 1,
-		["oorange ui"] = {
-			["BGColor"] = {
-				["r"] = 1,
-				["g"] = 0,
-				["alpha"] = 0.7,
-				["b"] = 0,
-			},
-			["FontColor"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["Text"] = "Out of Range",
-			["BorColor"] = {
-				["r"] = 1,
-				["g"] = 0,
-				["alpha"] = 0.7,
-				["b"] = 0,
-			},
-		},
-		["range ui"] = {
-			["BGColor"] = {
-				["r"] = 0,
-				["g"] = 0,
-				["alpha"] = 0.7,
-				["b"] = 1,
-			},
-			["FontColor"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["Text"] = "Range",
-			["BorColor"] = {
-				["r"] = 0,
-				["g"] = 0,
-				["alpha"] = 0.7,
-				["b"] = 1,
-			},
-		},
-		["melee ui"] = {
-			["BGColor"] = {
-				["r"] = 0,
-				["g"] = 1,
-				["alpha"] = 0.7,
-				["b"] = 0,
-			},
-			["FontColor"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["Text"] = "Melee",
-			["BorColor"] = {
-				["r"] = 0,
-				["g"] = 1,
-				["alpha"] = 0.7,
-				["b"] = 0,
-			},
-		},
-		["lock border"] = 0,
 		["dead ui"] = {
 			["BGColor"] = {
 				["r"] = 1,
-				["g"] = 0.5,
-				["alpha"] = 0.7,
 				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 0.5,
 			},
 			["FontColor"] = {
 				["r"] = 1,
@@ -760,11 +698,73 @@ RangeHelpOption = {
 			["Text"] = "Dead Zone",
 			["BorColor"] = {
 				["r"] = 1,
-				["g"] = 0.5,
-				["alpha"] = 0.7,
 				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 0.5,
 			},
 		},
+		["oorange ui"] = {
+			["BGColor"] = {
+				["r"] = 1,
+				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 0,
+			},
+			["FontColor"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["Text"] = "Out of Range",
+			["BorColor"] = {
+				["r"] = 1,
+				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 0,
+			},
+		},
+		["range ui"] = {
+			["BGColor"] = {
+				["r"] = 0,
+				["b"] = 1,
+				["alpha"] = 0.7,
+				["g"] = 0,
+			},
+			["FontColor"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["Text"] = "Range",
+			["BorColor"] = {
+				["r"] = 0,
+				["b"] = 1,
+				["alpha"] = 0.7,
+				["g"] = 0,
+			},
+		},
+		["melee ui"] = {
+			["BGColor"] = {
+				["r"] = 0,
+				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 1,
+			},
+			["FontColor"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["Text"] = "Melee",
+			["BorColor"] = {
+				["r"] = 0,
+				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 1,
+			},
+		},
+		["lock border"] = 0,
+		["move"] = 1,
 		["font height"] = 1,
 		["lock font"] = 0,
 		["resize"] = 0,
@@ -772,32 +772,13 @@ RangeHelpOption = {
 	},
 	["Banjax of Warsong [12x] Blizzlike"] = {
 		["lock back"] = 0,
-		["dead ui"] = {
-			["BGColor"] = {
-				["r"] = 1,
-				["b"] = 0,
-				["alpha"] = 0.7,
-				["g"] = 0.5,
-			},
-			["FontColor"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["Text"] = "Dead Zone",
-			["BorColor"] = {
-				["r"] = 1,
-				["b"] = 0,
-				["alpha"] = 0.7,
-				["g"] = 0.5,
-			},
-		},
+		["move"] = 1,
 		["oorange ui"] = {
 			["BGColor"] = {
 				["r"] = 1,
-				["b"] = 0,
 				["alpha"] = 0.7,
 				["g"] = 0,
+				["b"] = 0,
 			},
 			["FontColor"] = {
 				["r"] = 1,
@@ -807,17 +788,17 @@ RangeHelpOption = {
 			["Text"] = "Out of Range",
 			["BorColor"] = {
 				["r"] = 1,
-				["b"] = 0,
 				["alpha"] = 0.7,
 				["g"] = 0,
+				["b"] = 0,
 			},
 		},
 		["range ui"] = {
 			["BGColor"] = {
 				["r"] = 0,
-				["b"] = 1,
 				["alpha"] = 0.7,
 				["g"] = 0,
+				["b"] = 1,
 			},
 			["FontColor"] = {
 				["r"] = 1,
@@ -827,17 +808,17 @@ RangeHelpOption = {
 			["Text"] = "Range",
 			["BorColor"] = {
 				["r"] = 0,
-				["b"] = 1,
 				["alpha"] = 0.7,
 				["g"] = 0,
+				["b"] = 1,
 			},
 		},
 		["melee ui"] = {
 			["BGColor"] = {
 				["r"] = 0,
-				["b"] = 0,
 				["alpha"] = 0.7,
 				["g"] = 1,
+				["b"] = 0,
 			},
 			["FontColor"] = {
 				["r"] = 1,
@@ -847,88 +828,45 @@ RangeHelpOption = {
 			["Text"] = "Melee",
 			["BorColor"] = {
 				["r"] = 0,
-				["b"] = 0,
 				["alpha"] = 0.7,
 				["g"] = 1,
+				["b"] = 0,
 			},
 		},
 		["lock border"] = 0,
-		["move"] = 1,
+		["dead ui"] = {
+			["BGColor"] = {
+				["r"] = 1,
+				["alpha"] = 0.7,
+				["g"] = 0.5,
+				["b"] = 0,
+			},
+			["FontColor"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["Text"] = "Dead Zone",
+			["BorColor"] = {
+				["r"] = 1,
+				["alpha"] = 0.7,
+				["g"] = 0.5,
+				["b"] = 0,
+			},
+		},
 		["font height"] = 1,
 		["lock font"] = 0,
 		["resize"] = 0,
 		["link backbg"] = 0,
 	},
-	["Sixofnine of Warsong [12x] Blizzlike"] = {
+	["Nameplate of Emerald Dream [1x] Blizzlike"] = {
 		["lock back"] = 0,
-		["move"] = 1,
-		["oorange ui"] = {
-			["BGColor"] = {
-				["r"] = 1,
-				["g"] = 0,
-				["alpha"] = 0.7,
-				["b"] = 0,
-			},
-			["FontColor"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["Text"] = "Out of Range",
-			["BorColor"] = {
-				["r"] = 1,
-				["g"] = 0,
-				["alpha"] = 0.7,
-				["b"] = 0,
-			},
-		},
-		["range ui"] = {
-			["BGColor"] = {
-				["r"] = 0,
-				["g"] = 0,
-				["alpha"] = 0.7,
-				["b"] = 1,
-			},
-			["FontColor"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["Text"] = "Range",
-			["BorColor"] = {
-				["r"] = 0,
-				["g"] = 0,
-				["alpha"] = 0.7,
-				["b"] = 1,
-			},
-		},
-		["melee ui"] = {
-			["BGColor"] = {
-				["r"] = 0,
-				["g"] = 1,
-				["alpha"] = 0.7,
-				["b"] = 0,
-			},
-			["FontColor"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["Text"] = "Melee",
-			["BorColor"] = {
-				["r"] = 0,
-				["g"] = 1,
-				["alpha"] = 0.7,
-				["b"] = 0,
-			},
-		},
-		["lock border"] = 0,
 		["dead ui"] = {
 			["BGColor"] = {
 				["r"] = 1,
-				["g"] = 0.5,
-				["alpha"] = 0.7,
 				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 0.5,
 			},
 			["FontColor"] = {
 				["r"] = 1,
@@ -938,11 +876,73 @@ RangeHelpOption = {
 			["Text"] = "Dead Zone",
 			["BorColor"] = {
 				["r"] = 1,
-				["g"] = 0.5,
-				["alpha"] = 0.7,
 				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 0.5,
 			},
 		},
+		["oorange ui"] = {
+			["BGColor"] = {
+				["r"] = 1,
+				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 0,
+			},
+			["FontColor"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["Text"] = "Out of Range",
+			["BorColor"] = {
+				["r"] = 1,
+				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 0,
+			},
+		},
+		["range ui"] = {
+			["BGColor"] = {
+				["r"] = 0,
+				["b"] = 1,
+				["alpha"] = 0.7,
+				["g"] = 0,
+			},
+			["FontColor"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["Text"] = "Range",
+			["BorColor"] = {
+				["r"] = 0,
+				["b"] = 1,
+				["alpha"] = 0.7,
+				["g"] = 0,
+			},
+		},
+		["melee ui"] = {
+			["BGColor"] = {
+				["r"] = 0,
+				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 1,
+			},
+			["FontColor"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["Text"] = "Melee",
+			["BorColor"] = {
+				["r"] = 0,
+				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 1,
+			},
+		},
+		["lock border"] = 0,
+		["move"] = 1,
 		["font height"] = 1,
 		["lock font"] = 0,
 		["resize"] = 0,
@@ -950,32 +950,13 @@ RangeHelpOption = {
 	},
 	["Ryvok of Emerald Dream [1x] Blizzlike"] = {
 		["lock back"] = 0,
-		["dead ui"] = {
-			["BGColor"] = {
-				["r"] = 1,
-				["b"] = 0,
-				["g"] = 0.5,
-				["alpha"] = 0.7,
-			},
-			["FontColor"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["Text"] = "Dead Zone",
-			["BorColor"] = {
-				["r"] = 1,
-				["b"] = 0,
-				["g"] = 0.5,
-				["alpha"] = 0.7,
-			},
-		},
+		["move"] = 1,
 		["oorange ui"] = {
 			["BGColor"] = {
 				["r"] = 1,
-				["b"] = 0,
 				["g"] = 0,
 				["alpha"] = 0.7,
+				["b"] = 0,
 			},
 			["FontColor"] = {
 				["r"] = 1,
@@ -985,17 +966,17 @@ RangeHelpOption = {
 			["Text"] = "Out of Range",
 			["BorColor"] = {
 				["r"] = 1,
-				["b"] = 0,
 				["g"] = 0,
 				["alpha"] = 0.7,
+				["b"] = 0,
 			},
 		},
 		["range ui"] = {
 			["BGColor"] = {
 				["r"] = 0,
-				["b"] = 1,
 				["g"] = 0,
 				["alpha"] = 0.7,
+				["b"] = 1,
 			},
 			["FontColor"] = {
 				["r"] = 1,
@@ -1005,17 +986,17 @@ RangeHelpOption = {
 			["Text"] = "Range",
 			["BorColor"] = {
 				["r"] = 0,
-				["b"] = 1,
 				["g"] = 0,
 				["alpha"] = 0.7,
+				["b"] = 1,
 			},
 		},
 		["melee ui"] = {
 			["BGColor"] = {
 				["r"] = 0,
-				["b"] = 0,
 				["g"] = 1,
 				["alpha"] = 0.7,
+				["b"] = 0,
 			},
 			["FontColor"] = {
 				["r"] = 1,
@@ -1025,13 +1006,32 @@ RangeHelpOption = {
 			["Text"] = "Melee",
 			["BorColor"] = {
 				["r"] = 0,
-				["b"] = 0,
 				["g"] = 1,
 				["alpha"] = 0.7,
+				["b"] = 0,
 			},
 		},
 		["lock border"] = 0,
-		["move"] = 1,
+		["dead ui"] = {
+			["BGColor"] = {
+				["r"] = 1,
+				["g"] = 0.5,
+				["alpha"] = 0.7,
+				["b"] = 0,
+			},
+			["FontColor"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["Text"] = "Dead Zone",
+			["BorColor"] = {
+				["r"] = 1,
+				["g"] = 0.5,
+				["alpha"] = 0.7,
+				["b"] = 0,
+			},
+		},
 		["font height"] = 1,
 		["lock font"] = 0,
 		["resize"] = 0,
@@ -1039,74 +1039,12 @@ RangeHelpOption = {
 	},
 	["Kylosandrax of Al'Akir [instant 60] Blizzlike"] = {
 		["lock back"] = 0,
-		["move"] = 1,
-		["oorange ui"] = {
-			["BGColor"] = {
-				["r"] = 1,
-				["g"] = 0,
-				["alpha"] = 0.7,
-				["b"] = 0,
-			},
-			["FontColor"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["Text"] = "Out of Range",
-			["BorColor"] = {
-				["r"] = 1,
-				["g"] = 0,
-				["alpha"] = 0.7,
-				["b"] = 0,
-			},
-		},
-		["range ui"] = {
-			["BGColor"] = {
-				["r"] = 0,
-				["g"] = 0,
-				["alpha"] = 0.7,
-				["b"] = 1,
-			},
-			["FontColor"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["Text"] = "Range",
-			["BorColor"] = {
-				["r"] = 0,
-				["g"] = 0,
-				["alpha"] = 0.7,
-				["b"] = 1,
-			},
-		},
-		["melee ui"] = {
-			["BGColor"] = {
-				["r"] = 0,
-				["g"] = 1,
-				["alpha"] = 0.7,
-				["b"] = 0,
-			},
-			["FontColor"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["Text"] = "Melee",
-			["BorColor"] = {
-				["r"] = 0,
-				["g"] = 1,
-				["alpha"] = 0.7,
-				["b"] = 0,
-			},
-		},
-		["lock border"] = 0,
 		["dead ui"] = {
 			["BGColor"] = {
 				["r"] = 1,
-				["g"] = 0.5,
-				["alpha"] = 0.7,
 				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 0.5,
 			},
 			["FontColor"] = {
 				["r"] = 1,
@@ -1116,11 +1054,73 @@ RangeHelpOption = {
 			["Text"] = "Dead Zone",
 			["BorColor"] = {
 				["r"] = 1,
-				["g"] = 0.5,
-				["alpha"] = 0.7,
 				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 0.5,
 			},
 		},
+		["oorange ui"] = {
+			["BGColor"] = {
+				["r"] = 1,
+				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 0,
+			},
+			["FontColor"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["Text"] = "Out of Range",
+			["BorColor"] = {
+				["r"] = 1,
+				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 0,
+			},
+		},
+		["range ui"] = {
+			["BGColor"] = {
+				["r"] = 0,
+				["b"] = 1,
+				["alpha"] = 0.7,
+				["g"] = 0,
+			},
+			["FontColor"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["Text"] = "Range",
+			["BorColor"] = {
+				["r"] = 0,
+				["b"] = 1,
+				["alpha"] = 0.7,
+				["g"] = 0,
+			},
+		},
+		["melee ui"] = {
+			["BGColor"] = {
+				["r"] = 0,
+				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 1,
+			},
+			["FontColor"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["Text"] = "Melee",
+			["BorColor"] = {
+				["r"] = 0,
+				["b"] = 0,
+				["alpha"] = 0.7,
+				["g"] = 1,
+			},
+		},
+		["lock border"] = 0,
+		["move"] = 1,
 		["font height"] = 1,
 		["lock font"] = 0,
 		["resize"] = 0,
@@ -1141,11 +1141,11 @@ RangeHelpSpellSetup = {
 	["Zapunzel of Warsong [12x] Blizzlike"] = {
 	},
 	["Version"] = "4.1",
-	["Nameplate of Emerald Dream [1x] Blizzlike"] = {
+	["Sixofnine of Warsong [12x] Blizzlike"] = {
 	},
 	["Banjax of Warsong [12x] Blizzlike"] = {
 	},
-	["Sixofnine of Warsong [12x] Blizzlike"] = {
+	["Nameplate of Emerald Dream [1x] Blizzlike"] = {
 	},
 	["Ryvok of Emerald Dream [1x] Blizzlike"] = {
 	},

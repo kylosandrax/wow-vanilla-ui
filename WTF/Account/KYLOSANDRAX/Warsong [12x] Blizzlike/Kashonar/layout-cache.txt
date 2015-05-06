@@ -21,7 +21,7 @@ Y: -1018
 Frame: RecapFrame
 FrameLevel: 5
 X: 1792
-Y: -1014
+Y: -988
 Frame: SmartLoot_LootFrame
 FrameLevel: 1
 X: 534
