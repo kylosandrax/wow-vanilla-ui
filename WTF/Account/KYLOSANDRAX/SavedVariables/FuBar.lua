@@ -9,7 +9,6 @@ FuBar2DB = {
 					["xPercent"] = -9.315609195148511e-008,
 					["attachPoint"] = "TOP",
 					["lock"] = true,
-					["widthPercent"] = 1.000000093156092,
 					["plugins"] = {
 						["center"] = {
 							[1] = "ItemBonusesFu",
@@ -48,6 +47,7 @@ FuBar2DB = {
 							[16] = "sRaidFrames Improved 1.10",
 						},
 					},
+					["widthPercent"] = 1,
 					["yPercent"] = 0.9849999652217268,
 				},
 			},
@@ -56,9 +56,9 @@ FuBar2DB = {
 			["skin"] = "Interface\\AddOns\\FuTextures\\blackorange",
 			["centerSpacing"] = 20,
 			["loadOnDemand"] = {
-				["ItemRackFu"] = {
-					["title"] = "ItemRackFu",
-					["category"] = "Other",
+				["FuBar_DurabilityFu"] = {
+					["title"] = "DurabilityFu",
+					["category"] = "Inventory",
 				},
 				["Fubar_AtlasFu2"] = {
 					["title"] = "AtlasFu2",
@@ -72,21 +72,21 @@ FuBar2DB = {
 					["title"] = "PerformanceFu",
 					["category"] = "Interface Enhancements",
 				},
-				["FuBar_DurabilityFu"] = {
-					["title"] = "DurabilityFu",
-					["category"] = "Inventory",
+				["ItemRackFu"] = {
+					["title"] = "ItemRackFu",
+					["category"] = "Other",
 				},
 			},
+			["leftSpacing"] = 20,
 			["tooltip"] = {
 				["fontSizePercent"] = 1,
 			},
 			["rightSpacing"] = 20,
 			["detached"] = {
 			},
-			["autohideTop"] = false,
+			["thickness"] = 7,
 			["transparency"] = 0.5,
 			["overflow"] = false,
-			["thickness"] = 7,
 			["places"] = {
 				["center"] = {
 				},
@@ -95,7 +95,7 @@ FuBar2DB = {
 				["left"] = {
 				},
 			},
-			["leftSpacing"] = 20,
+			["autohideTop"] = false,
 		},
 	},
 }

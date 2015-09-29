@@ -1,45 +1,41 @@
 
 oCBDB = {
-	["currentProfile"] = {
-		["Ryjax of Warsong [12x] Blizzlike"] = "Ryjax - Tank/DPS",
-		["Stormslinger of Warsong [12x] Blizzlike"] = "Stormslinger - Tank/DPS",
-	},
 	["profiles"] = {
 		["Ryjax - Tank/DPS"] = {
 			["MirrorBar"] = {
 				["edgeFile"] = "None",
 				["height"] = 28,
-				["width"] = 386,
 				["texture"] = "Striped",
+				["width"] = 386,
 			},
 			["CastingBar"] = {
 				["edgeFile"] = "None",
 				["height"] = 29,
-				["width"] = 385,
 				["texture"] = "Striped",
+				["width"] = 385,
 			},
 			["lock"] = false,
 			["Colors"] = {
 				["Channel"] = {
-					["r"] = 0.4117647058823529,
-					["g"] = 0.4117647058823529,
 					["b"] = 0.4117647058823529,
+					["g"] = 0.4117647058823529,
+					["r"] = 0.4117647058823529,
 				},
 				["Casting"] = {
-					["r"] = 0.4117647058823529,
-					["g"] = 0.4117647058823529,
 					["b"] = 0.4117647058823529,
+					["g"] = 0.4117647058823529,
+					["r"] = 0.4117647058823529,
 				},
 				["Complete"] = {
-					["r"] = 0.2901960784313726,
-					["g"] = 0.2901960784313726,
 					["b"] = 0.2901960784313726,
+					["g"] = 0.2901960784313726,
+					["r"] = 0.2901960784313726,
 				},
 			},
 			["Pos"] = {
-				["CastingBar"] = "783.85143395112 92.495921621153",
-				["BREATH"] = "476.31578911158 606.05143620858",
 				["EXHAUSTION"] = "476.34304625668 635.26978579633",
+				["BREATH"] = "476.31578911158 606.05143620858",
+				["CastingBar"] = "783.85143395112 92.495921621153",
 			},
 		},
 		["Default"] = {
@@ -52,5 +48,9 @@ oCBDB = {
 				["CastingBar"] = "823.47067426001 105.77046956073",
 			},
 		},
+	},
+	["currentProfile"] = {
+		["Stormslinger of Warsong [12x] Blizzlike"] = "Stormslinger - Tank/DPS",
+		["Ryjax of Warsong [12x] Blizzlike"] = "Ryjax - Tank/DPS",
 	},
 }

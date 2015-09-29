@@ -2,31 +2,28 @@
 CliqueDB = {
 	["disabledModules"] = {
 		["Default"] = {
-			["resurrection"] = true,
 			["archud"] = true,
-			["squeaky"] = true,
+			["sageuf"] = true,
 			["duf"] = true,
+			["squeaky"] = true,
 			["perfectraid"] = true,
 			["ouf"] = true,
 			["nuf"] = true,
+			["oramtf"] = true,
+			["healassist"] = true,
+			["mg2-64pre"] = true,
 			["aofhclique"] = true,
 			["needylist"] = true,
-			["healselect"] = true,
-			["sageuf"] = true,
-			["blizzraid"] = true,
-			["mg2-64pre"] = true,
-			["healassist"] = true,
-			["oramtf"] = true,
 			["ora2mtf"] = true,
 			["xperl"] = true,
 			["xraid"] = true,
 			["aguf"] = true,
 			["marsraid"] = true,
-			["ctra"] = true,
+			["squishy"] = true,
 			["pcuf"] = true,
 			["watchdog"] = true,
 			["easyraid"] = true,
-			["squishy"] = true,
+			["ctra"] = true,
 		},
 	},
 	["chars"] = {
@@ -38,7 +35,7 @@ CliqueDB = {
 			["Default Hostile"] = {
 			},
 		},
-		["Kashonar of Warsong [12x] Blizzlike"] = {
+		["Kylosandrax of Al'Akir [instant 60] Blizzlike"] = {
 			["Default Friendly"] = {
 			},
 			["Out-of-combat"] = {
@@ -59,30 +56,30 @@ CliqueDB = {
 				[2] = {
 					["name"] = "Healing Touch",
 					["button"] = "LeftButton",
-					["rank"] = "10",
-					["modifiers"] = 4,
 					["texture"] = "Interface\\Icons\\Spell_Nature_HealingTouch",
+					["modifiers"] = 4,
+					["rank"] = "10",
 				},
 				[3] = {
 					["name"] = "Healing Touch",
 					["button"] = "RightButton",
-					["rank"] = "3",
-					["modifiers"] = 1,
 					["texture"] = "Interface\\Icons\\Spell_Nature_HealingTouch",
+					["modifiers"] = 1,
+					["rank"] = "3",
 				},
 				[4] = {
 					["name"] = "Healing Touch",
 					["button"] = "LeftButton",
-					["rank"] = "4",
-					["modifiers"] = 1,
 					["texture"] = "Interface\\Icons\\Spell_Nature_HealingTouch",
+					["modifiers"] = 1,
+					["rank"] = "4",
 				},
 				[5] = {
 					["name"] = "Rejuvenation",
 					["button"] = "RightButton",
-					["rank"] = "10",
-					["modifiers"] = 4,
 					["texture"] = "Interface\\Icons\\Spell_Nature_Rejuvenation",
+					["modifiers"] = 4,
+					["rank"] = "10",
 				},
 				[6] = {
 					["name"] = "Remove Curse",
@@ -115,16 +112,16 @@ CliqueDB = {
 				[3] = {
 					["name"] = "Healing Wave",
 					["button"] = "RightButton",
-					["rank"] = "6",
-					["modifiers"] = 4,
 					["texture"] = "Interface\\Icons\\Spell_Nature_MagicImmunity",
+					["modifiers"] = 4,
+					["rank"] = "6",
 				},
 				[4] = {
 					["name"] = "Lesser Healing Wave",
 					["button"] = "LeftButton",
-					["rank"] = "6",
-					["modifiers"] = 4,
 					["texture"] = "Interface\\Icons\\Spell_Nature_HealingWaveLesser",
+					["modifiers"] = 4,
+					["rank"] = "6",
 				},
 			},
 			["Out-of-combat"] = {
@@ -139,16 +136,16 @@ CliqueDB = {
 				[1] = {
 					["name"] = "Blessing of Protection",
 					["button"] = "LeftButton",
-					["rank"] = "3",
-					["modifiers"] = 2,
 					["texture"] = "Interface\\Icons\\Spell_Holy_SealOfProtection",
+					["modifiers"] = 2,
+					["rank"] = "3",
 				},
 				[2] = {
 					["name"] = "Blessing of Sacrifice",
 					["button"] = "RightButton",
-					["rank"] = "2",
-					["modifiers"] = 2,
 					["texture"] = "Interface\\Icons\\Spell_Holy_SealOfSacrifice",
+					["modifiers"] = 2,
+					["rank"] = "2",
 				},
 				[3] = {
 					["name"] = "Cleanse",
@@ -159,46 +156,38 @@ CliqueDB = {
 				[4] = {
 					["name"] = "Flash of Light",
 					["button"] = "RightButton",
-					["texture"] = "Interface\\Icons\\Spell_Holy_FlashHeal",
-					["modifiers"] = 4,
 					["rank"] = "6",
+					["modifiers"] = 4,
+					["texture"] = "Interface\\Icons\\Spell_Holy_FlashHeal",
 				},
 				[5] = {
 					["name"] = "Holy Light",
 					["button"] = "LeftButton",
-					["texture"] = "Interface\\Icons\\Spell_Holy_HolyBolt",
+					["rank"] = "4",
 					["modifiers"] = 4,
-					["rank"] = "5",
+					["texture"] = "Interface\\Icons\\Spell_Holy_HolyBolt",
 				},
 				[6] = {
 					["name"] = "Holy Shock",
 					["button"] = "Button4",
-					["rank"] = "3",
-					["modifiers"] = 4,
 					["texture"] = "Interface\\Icons\\Spell_Holy_SearingLight",
+					["modifiers"] = 4,
+					["rank"] = "3",
 				},
 				[7] = {
 					["name"] = "Lay on Hands",
 					["button"] = "Button5",
-					["rank"] = "3",
-					["modifiers"] = 4,
 					["texture"] = "Interface\\Icons\\Spell_Holy_LayOnHands",
+					["modifiers"] = 4,
+					["rank"] = "3",
 				},
 				[8] = {
 					["name"] = "Redemption",
 					["button"] = "MiddleButton",
-					["rank"] = "1",
-					["modifiers"] = 2,
 					["texture"] = "Interface\\Icons\\Spell_Holy_Resurrection",
+					["modifiers"] = 2,
+					["rank"] = "1",
 				},
-			},
-			["Out-of-combat"] = {
-			},
-			["Default Hostile"] = {
-			},
-		},
-		["Kylosandrax of Al'Akir [instant 60] Blizzlike"] = {
-			["Default Friendly"] = {
 			},
 			["Out-of-combat"] = {
 			},
@@ -206,6 +195,14 @@ CliqueDB = {
 			},
 		},
 		["Zapunzel of Warsong [12x] Blizzlike"] = {
+			["Default Friendly"] = {
+			},
+			["Out-of-combat"] = {
+			},
+			["Default Hostile"] = {
+			},
+		},
+		["Kashonar of Warsong [12x] Blizzlike"] = {
 			["Default Friendly"] = {
 			},
 			["Out-of-combat"] = {
@@ -221,7 +218,9 @@ CliqueDB = {
 			["Default Hostile"] = {
 			},
 		},
-		["Nameplate of Emerald Dream [1x] Blizzlike"] = {
+		["Sixofnine of Warsong [12x] Blizzlike"] = {
+			["Click on Dead Unit"] = {
+			},
 			["Default Friendly"] = {
 			},
 			["Out-of-combat"] = {
@@ -236,9 +235,9 @@ CliqueDB = {
 				[1] = {
 					["name"] = "Holy Light",
 					["button"] = "LeftButton",
-					["rank"] = "1",
-					["modifiers"] = 4,
 					["texture"] = "Interface\\Icons\\Spell_Holy_HolyBolt",
+					["modifiers"] = 4,
+					["rank"] = "1",
 				},
 			},
 			["Out-of-combat"] = {
@@ -246,9 +245,7 @@ CliqueDB = {
 			["Default Hostile"] = {
 			},
 		},
-		["Sixofnine of Warsong [12x] Blizzlike"] = {
-			["Click on Dead Unit"] = {
-			},
+		["Nameplate of Emerald Dream [1x] Blizzlike"] = {
 			["Default Friendly"] = {
 			},
 			["Out-of-combat"] = {

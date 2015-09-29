@@ -8,7 +8,7 @@ TheoryCraft_Settings = {
 		["Shadow"] = 0,
 		["Nature"] = 0,
 	},
-	["ColR"] = 1,
+	["buttontexty"] = 10.22,
 	["buttontextx"] = 1.111,
 	["ColG2"] = 1,
 	["ColR2"] = 1,
@@ -19,9 +19,9 @@ TheoryCraft_Settings = {
 	["combinedot"] = true,
 	["tryfirstsfg"] = 0,
 	["ColG"] = 1,
-	["mitigation"] = true,
-	["procs"] = true,
 	["FontPath"] = "Fonts\\ArialN.TTF",
+	["procs"] = true,
+	["mitigation"] = true,
 	["GenerateList"] = "",
 	["trysecond"] = "averagehealnocrit",
 	["dontresist"] = true,
@@ -31,34 +31,6 @@ TheoryCraft_Settings = {
 		["intellect"] = 0,
 		["newstat"] = {
 		},
-		["strength"] = 0,
-		["agility"] = 0,
-		["name"] = "Naked",
-		["stamina"] = 0,
-		["wear"] = {
-		},
-		["destat"] = {
-			[1] = "Head",
-			[2] = "Neck",
-			[3] = "Shoulder",
-			[4] = "Chest",
-			[5] = "Waist",
-			[6] = "Legs",
-			[7] = "Feet",
-			[8] = "Wrist",
-			[9] = "Hands",
-			[10] = "Finger0",
-			[11] = "Finger1",
-			[12] = "Trinket0",
-			[13] = "Trinket1",
-			[14] = "Back",
-			[15] = "MainHand",
-			[16] = "SecondaryHand",
-			[17] = "Ranged",
-			[18] = "Tabard",
-			[19] = "Ammo",
-		},
-		["spirit"] = 0,
 		["slots"] = {
 			["Waist"] = {
 				["stats"] = {
@@ -86,18 +58,18 @@ TheoryCraft_Settings = {
 					["numlines"] = 6,
 				},
 			},
-			["Legs"] = {
+			["Neck"] = {
 				["stats"] = {
-					["meleecritchance"] = 2,
-					["settype"] = "Stormshroud Armor",
+					["agility"] = 13,
+					["spirit"] = 3,
+					["strength"] = 5,
 				},
-				["name"] = "|cffffffff|Hitem:15741:0:0:0|h[Pattern: Stormshroud Pants]|h|r",
+				["name"] = "|cff0070dd|Hitem:13089:0:0:0|h[Skibi's Pendant]|h|r",
 				["data"] = {
-					["name"] = "Pattern: Stormshroud Pants",
+					["name"] = "Skibi's Pendant",
 					["procs"] = {
 					},
-					["numlines"] = 22,
-					["CritReport"] = 2,
+					["numlines"] = 7,
 				},
 			},
 			["Back"] = {
@@ -249,28 +221,60 @@ TheoryCraft_Settings = {
 					["numlines"] = 7,
 				},
 			},
-			["Neck"] = {
+			["Legs"] = {
 				["stats"] = {
-					["agility"] = 13,
-					["spirit"] = 3,
-					["strength"] = 5,
+					["meleecritchance"] = 2,
+					["settype"] = "Stormshroud Armor",
 				},
-				["name"] = "|cff0070dd|Hitem:13089:0:0:0|h[Skibi's Pendant]|h|r",
+				["name"] = "|cffffffff|Hitem:15741:0:0:0|h[Pattern: Stormshroud Pants]|h|r",
 				["data"] = {
-					["name"] = "Skibi's Pendant",
+					["name"] = "Pattern: Stormshroud Pants",
 					["procs"] = {
 					},
-					["numlines"] = 7,
+					["numlines"] = 22,
+					["CritReport"] = 2,
 				},
 			},
 		},
+		["agility"] = 0,
+		["name"] = "Naked",
+		["stamina"] = 0,
+		["wear"] = {
+		},
+		["destat"] = {
+			[1] = "Head",
+			[2] = "Neck",
+			[3] = "Shoulder",
+			[4] = "Chest",
+			[5] = "Waist",
+			[6] = "Legs",
+			[7] = "Feet",
+			[8] = "Wrist",
+			[9] = "Hands",
+			[10] = "Finger0",
+			[11] = "Finger1",
+			[12] = "Trinket0",
+			[13] = "Trinket1",
+			[14] = "Back",
+			[15] = "MainHand",
+			[16] = "SecondaryHand",
+			[17] = "Ranged",
+			[18] = "Tabard",
+			[19] = "Ammo",
+		},
+		["spirit"] = 0,
+		["strength"] = 0,
 	},
 	["ColB2"] = 0.6862745098039216,
-	["buttontexty"] = 10.22,
+	["ColR"] = 1,
 	["critchancedata"] = {
 		["40:0"] = {
 			["casts"] = 5,
 			["crits"] = 0,
+		},
+		["351:6"] = {
+			["casts"] = 46,
+			["crits"] = 11,
 		},
 		["313:89.389830508475"] = {
 			["casts"] = 1,
@@ -288,6 +292,10 @@ TheoryCraft_Settings = {
 			["casts"] = 122,
 			["crits"] = 15,
 		},
+		["324:6"] = {
+			["casts"] = 318,
+			["crits"] = 47,
+		},
 		["192:93.491525423729"] = {
 			["casts"] = 1,
 			["crits"] = 1,
@@ -304,9 +312,9 @@ TheoryCraft_Settings = {
 			["casts"] = 38,
 			["crits"] = 2,
 		},
-		["192:5"] = {
-			["casts"] = 133,
-			["crits"] = 19,
+		["90:0"] = {
+			["casts"] = 49,
+			["crits"] = 3,
 		},
 		["211:5"] = {
 			["casts"] = 1,
@@ -335,6 +343,14 @@ TheoryCraft_Settings = {
 		["283:5"] = {
 			["casts"] = 17,
 			["crits"] = 4,
+		},
+		["341:6"] = {
+			["casts"] = 8,
+			["crits"] = 3,
+		},
+		["360:6"] = {
+			["casts"] = 93,
+			["crits"] = 15,
 		},
 		["243:5"] = {
 			["casts"] = 13,
@@ -380,8 +396,8 @@ TheoryCraft_Settings = {
 			["casts"] = 5,
 			["crits"] = 0,
 		},
-		["22:0"] = {
-			["casts"] = 1,
+		["193:5"] = {
+			["casts"] = 9,
 			["crits"] = 0,
 		},
 		["32:0"] = {
@@ -392,6 +408,10 @@ TheoryCraft_Settings = {
 			["casts"] = 6,
 			["crits"] = 0,
 		},
+		["346:6"] = {
+			["casts"] = 132,
+			["crits"] = 10,
+		},
 		["313:5"] = {
 			["casts"] = 205,
 			["crits"] = 27,
@@ -400,13 +420,33 @@ TheoryCraft_Settings = {
 			["casts"] = 15,
 			["crits"] = 1,
 		},
+		["296:5"] = {
+			["casts"] = 2,
+			["crits"] = 0,
+		},
 		["213:5"] = {
 			["casts"] = 9,
 			["crits"] = 4,
 		},
+		["360:87.796610169492"] = {
+			["casts"] = 1,
+			["crits"] = 1,
+		},
 		["29:0"] = {
 			["casts"] = 1,
 			["crits"] = 0,
+		},
+		["310:6"] = {
+			["casts"] = 3,
+			["crits"] = 0,
+		},
+		["304:6"] = {
+			["casts"] = 64,
+			["crits"] = 11,
+		},
+		["294:6"] = {
+			["casts"] = 52,
+			["crits"] = 9,
 		},
 		["35:0"] = {
 			["casts"] = 1,
@@ -415,6 +455,10 @@ TheoryCraft_Settings = {
 		["25:0"] = {
 			["casts"] = 7,
 			["crits"] = 0,
+		},
+		["71:0"] = {
+			["casts"] = 23,
+			["crits"] = 3,
 		},
 		["140:0"] = {
 			["casts"] = 1,
@@ -460,41 +504,57 @@ TheoryCraft_Settings = {
 			["casts"] = 7,
 			["crits"] = 0,
 		},
-		["95:0"] = {
-			["casts"] = 6,
+		["192:5"] = {
+			["casts"] = 133,
+			["crits"] = 19,
+		},
+		["106:0"] = {
+			["casts"] = 18,
 			["crits"] = 1,
 		},
 		["221:5"] = {
 			["casts"] = 62,
 			["crits"] = 6,
 		},
-		["71:0"] = {
-			["casts"] = 23,
-			["crits"] = 3,
+		["267:90.949152542373"] = {
+			["casts"] = 1,
+			["crits"] = 1,
 		},
-		["240:5"] = {
-			["casts"] = 135,
-			["crits"] = 22,
+		["285:6"] = {
+			["casts"] = 6,
+			["crits"] = 0,
+		},
+		["119:5"] = {
+			["casts"] = 9,
+			["crits"] = 1,
 		},
 		["275:5"] = {
 			["casts"] = 1,
 			["crits"] = 0,
 		},
+		["240:5"] = {
+			["casts"] = 135,
+			["crits"] = 22,
+		},
+		["243:6"] = {
+			["casts"] = 105,
+			["crits"] = 11,
+		},
 		["104:0"] = {
 			["casts"] = 2,
 			["crits"] = 1,
 		},
-		["106:0"] = {
-			["casts"] = 18,
+		["95:0"] = {
+			["casts"] = 6,
 			["crits"] = 1,
 		},
 		["300:5"] = {
 			["casts"] = 10,
 			["crits"] = 1,
 		},
-		["119:5"] = {
-			["casts"] = 9,
-			["crits"] = 1,
+		["33:0"] = {
+			["casts"] = 1,
+			["crits"] = 0,
 		},
 		["175:5"] = {
 			["casts"] = 11,
@@ -504,25 +564,25 @@ TheoryCraft_Settings = {
 			["casts"] = 13,
 			["crits"] = 0,
 		},
-		["90:0"] = {
-			["casts"] = 49,
-			["crits"] = 3,
-		},
-		["44:0"] = {
-			["casts"] = 9,
-			["crits"] = 0,
-		},
-		["52:0"] = {
-			["casts"] = 57,
-			["crits"] = 1,
-		},
-		["193:5"] = {
-			["casts"] = 9,
+		["22:0"] = {
+			["casts"] = 1,
 			["crits"] = 0,
 		},
 		["100:0"] = {
 			["casts"] = 2,
 			["crits"] = 1,
+		},
+		["52:0"] = {
+			["casts"] = 57,
+			["crits"] = 1,
+		},
+		["44:0"] = {
+			["casts"] = 9,
+			["crits"] = 0,
+		},
+		["313:6"] = {
+			["casts"] = 5,
+			["crits"] = 0,
 		},
 		["26:0"] = {
 			["casts"] = 16,
@@ -540,9 +600,9 @@ TheoryCraft_Settings = {
 			["casts"] = 4,
 			["crits"] = 0,
 		},
-		["33:0"] = {
-			["casts"] = 1,
-			["crits"] = 0,
+		["267:6"] = {
+			["casts"] = 26,
+			["crits"] = 6,
 		},
 		["91:0"] = {
 			["casts"] = 16,

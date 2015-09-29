@@ -6,15 +6,20 @@ SAConfig = {
 	["drag"] = 5,
 	["cc"] = 1,
 	["damage"] = 1,
-	["zoom"] = 37,
+	["heals"] = 1,
 	["radio"] = 1,
 	["emote_on"] = 1,
 	["on"] = 1,
+	["version"] = 1.5,
 	["targetonly"] = 1,
+	["livingBomb"] = 1,
+	["zoom"] = 37,
+	["dispelable"] = 1,
+	["shadow"] = 1,
 	["color"] = {
-		["bu"] = {
-			["r"] = 0,
-			["g"] = 1,
+		["at"] = {
+			["r"] = 1,
+			["g"] = 0,
 			["b"] = 0,
 		},
 		["to"] = {
@@ -22,9 +27,9 @@ SAConfig = {
 			["g"] = 0.5,
 			["b"] = 0.5,
 		},
-		["at"] = {
-			["r"] = 1,
-			["g"] = 0,
+		["bu"] = {
+			["r"] = 0,
+			["g"] = 1,
 			["b"] = 0,
 		},
 		["he"] = {
@@ -38,10 +43,5 @@ SAConfig = {
 			["b"] = 0,
 		},
 	},
-	["version"] = 1.5,
-	["heals"] = 1,
-	["dispelable"] = 1,
-	["shadow"] = 1,
-	["livingBomb"] = 1,
 	["pos"] = -350,
 }

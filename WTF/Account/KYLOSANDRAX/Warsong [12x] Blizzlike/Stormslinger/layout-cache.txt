@@ -15,7 +15,7 @@ FrameLevel: 10
 X: 1272
 Y: -556
 Frame: ATSWFrame
-FrameLevel: 38
+FrameLevel: 30
 X: 356
 Y: -103
 Frame: AtlasFrame

@@ -1,10 +1,10 @@
 
 TALENTS_SAVED = {
-	["INFO"] = {
+	["LIST"] = {
 	},
 	["VERSION"] = 1.1,
 	["DELAY"] = -1,
-	["LIST"] = {
+	["INFO"] = {
 	},
 	["BUILDS"] = {
 	},

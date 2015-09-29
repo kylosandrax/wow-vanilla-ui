@@ -8,25 +8,34 @@ TheoryCraft_Settings = {
 		["Shadow"] = 0,
 		["Nature"] = 0,
 	},
-	["buttontexty"] = 10.22,
-	["buttontextx"] = 1.111,
+	["ColR"] = 1,
+	["ColG"] = 1,
 	["ColG2"] = 1,
 	["ColR2"] = 1,
 	["embedstyle1"] = true,
 	["tryfirst"] = "averagedam",
-	["trysecondsfg"] = -1,
 	["dataversion"] = "1.06",
+	["trysecondsfg"] = -1,
 	["tryfirstsfg"] = 0,
-	["combinedot"] = true,
-	["ColB"] = 1,
-	["FontPath"] = "Fonts\\ArialN.TTF",
+	["embed"] = true,
+	["buttontextx"] = 1.111,
+	["buttontexty"] = 10.22,
 	["GenerateList"] = "",
-	["procs"] = true,
+	["ColB2"] = 0.6862745098039216,
 	["trysecond"] = "averagehealnocrit",
 	["mitigation"] = true,
 	["buttontext"] = true,
 	["dontresist"] = true,
 	["CustomOutfit"] = {
+		["intellect"] = 0,
+		["newstat"] = {
+		},
+		["strength"] = 0,
+		["agility"] = 0,
+		["name"] = "Naked",
+		["stamina"] = 0,
+		["wear"] = {
+		},
 		["destat"] = {
 			[1] = "Head",
 			[2] = "Neck",
@@ -48,26 +57,21 @@ TheoryCraft_Settings = {
 			[18] = "Tabard",
 			[19] = "Ammo",
 		},
-		["newstat"] = {
-		},
-		["strength"] = 0,
-		["agility"] = 0,
-		["name"] = "Naked",
+		["spirit"] = 0,
 		["slots"] = {
-			["Ranged"] = {
+			["Waist"] = {
 				["stats"] = {
-					["rangedattackpower"] = 14,
+					["intellect"] = 17,
+					["settype"] = "Wildheart Raiment",
+					["spirit"] = 10,
+					["stamina"] = 9,
 				},
-				["name"] = "|cff1eff00|Hitem:10604:0:0:0|h[Schematic: Mithril Heavy-bore Rifle]|h|r",
+				["name"] = "|cff0070dd|Hitem:16716:0:0:0|h[Wildheart Belt]|h|r",
 				["data"] = {
-					["RangedMin"] = 41,
-					["name"] = "Schematic: Mithril Heavy-bore Rifle",
+					["name"] = "Wildheart Belt",
 					["procs"] = {
 					},
-					["numlines"] = 11,
-					["RangedMax"] = 76,
-					["RangedSpeed"] = 2.9,
-					["RangedAttackPowerReport"] = 14,
+					["numlines"] = 24,
 				},
 			},
 			["Finger0"] = {
@@ -83,17 +87,17 @@ TheoryCraft_Settings = {
 					["numlines"] = 6,
 				},
 			},
-			["Legs"] = {
+			["Neck"] = {
 				["stats"] = {
-					["intellect"] = 5,
-					["spirit"] = 4,
+					["stamina"] = 10,
+					["spirit"] = 15,
 				},
-				["name"] = "|cff1eff00|Hitem:5972:0:0:0|h[Pattern: Fine Leather Pants]|h|r",
+				["name"] = "|cffa335ee|Hitem:1315:0:0:0|h[Lei of Lilies]|h|r",
 				["data"] = {
-					["name"] = "Pattern: Fine Leather Pants",
+					["name"] = "Lei of Lilies",
 					["procs"] = {
 					},
-					["numlines"] = 11,
+					["numlines"] = 7,
 				},
 			},
 			["Trinket0"] = {
@@ -133,9 +137,9 @@ TheoryCraft_Settings = {
 			["Hands"] = {
 				["stats"] = {
 					["intellect"] = 14,
-					["stamina"] = 9,
-					["spirit"] = 14,
 					["settype"] = "Magister's Regalia",
+					["spirit"] = 14,
+					["stamina"] = 9,
 				},
 				["name"] = "|cff0070dd|Hitem:16684:0:0:0|h[Magister's Gloves]|h|r",
 				["data"] = {
@@ -171,22 +175,21 @@ TheoryCraft_Settings = {
 					["numlines"] = 11,
 				},
 			},
-			["Finger1"] = {
+			["Feet"] = {
 				["stats"] = {
-					["intellect"] = 14,
 				},
-				["name"] = "|cff1eff00|Hitem:11991:0:214:0|h[Quicksilver Ring of Intellect]|h|r",
+				["name"] = "|cffffffff|Hitem:9743:0:0:0|h[Simple Shoes]|h|r",
 				["data"] = {
-					["name"] = "Quicksilver Ring of Intellect",
+					["name"] = "Simple Shoes",
 					["procs"] = {
 					},
-					["numlines"] = 5,
+					["numlines"] = 4,
 				},
 			},
 			["Chest"] = {
 				["stats"] = {
-					["stamina"] = 7,
 					["intellect"] = 6,
+					["stamina"] = 7,
 				},
 				["name"] = "|cff1eff00|Hitem:14380:0:0:0|h[Sanguine Robe]|h|r",
 				["data"] = {
@@ -204,55 +207,53 @@ TheoryCraft_Settings = {
 				["data"] = {
 					["numlines"] = 11,
 					["MeleeMax"] = 57,
-					["name"] = "Plans: Mighty Iron Hammer",
+					["MeleeMin"] = 30,
 					["procs"] = {
 					},
 					["MeleeAPMult"] = 2.4,
 					["MainSpeed"] = 2.8,
-					["MeleeMin"] = 30,
+					["name"] = "Plans: Mighty Iron Hammer",
 				},
 			},
-			["Off Hand"] = {
+			["Legs"] = {
 				["stats"] = {
-					["stamina"] = 2,
-					["strength"] = 2,
+					["intellect"] = 5,
+					["spirit"] = 4,
 				},
-				["name"] = "|cff1eff00|Hitem:4439:0:0:0|h[Bruiser Club]|h|r",
+				["name"] = "|cff1eff00|Hitem:5972:0:0:0|h[Pattern: Fine Leather Pants]|h|r",
 				["data"] = {
-					["numlines"] = 8,
-					["MeleeMax"] = 32,
-					["MeleeMin"] = 17,
+					["name"] = "Pattern: Fine Leather Pants",
 					["procs"] = {
 					},
-					["MeleeAPMult"] = 2.4,
-					["MainSpeed"] = 2.2,
-					["name"] = "Bruiser Club",
+					["numlines"] = 11,
 				},
 			},
-			["Waist"] = {
+			["Ranged"] = {
 				["stats"] = {
-					["intellect"] = 17,
-					["stamina"] = 9,
-					["spirit"] = 10,
-					["settype"] = "Wildheart Raiment",
+					["rangedattackpower"] = 14,
 				},
-				["name"] = "|cff0070dd|Hitem:16716:0:0:0|h[Wildheart Belt]|h|r",
+				["name"] = "|cff1eff00|Hitem:10604:0:0:0|h[Schematic: Mithril Heavy-bore Rifle]|h|r",
 				["data"] = {
-					["name"] = "Wildheart Belt",
+					["numlines"] = 11,
+					["name"] = "Schematic: Mithril Heavy-bore Rifle",
 					["procs"] = {
 					},
-					["numlines"] = 24,
+					["RangedSpeed"] = 2.9,
+					["RangedMax"] = 76,
+					["RangedMin"] = 41,
+					["RangedAttackPowerReport"] = 14,
 				},
 			},
-			["Feet"] = {
+			["Finger1"] = {
 				["stats"] = {
+					["intellect"] = 14,
 				},
-				["name"] = "|cffffffff|Hitem:9743:0:0:0|h[Simple Shoes]|h|r",
+				["name"] = "|cff1eff00|Hitem:11991:0:214:0|h[Quicksilver Ring of Intellect]|h|r",
 				["data"] = {
-					["name"] = "Simple Shoes",
+					["name"] = "Quicksilver Ring of Intellect",
 					["procs"] = {
 					},
-					["numlines"] = 4,
+					["numlines"] = 5,
 				},
 			},
 			["Shoulder"] = {
@@ -266,29 +267,28 @@ TheoryCraft_Settings = {
 					["numlines"] = 4,
 				},
 			},
-			["Neck"] = {
+			["Off Hand"] = {
 				["stats"] = {
-					["stamina"] = 10,
-					["spirit"] = 15,
+					["stamina"] = 2,
+					["strength"] = 2,
 				},
-				["name"] = "|cffa335ee|Hitem:1315:0:0:0|h[Lei of Lilies]|h|r",
+				["name"] = "|cff1eff00|Hitem:4439:0:0:0|h[Bruiser Club]|h|r",
 				["data"] = {
-					["name"] = "Lei of Lilies",
+					["numlines"] = 8,
+					["MeleeMax"] = 32,
+					["name"] = "Bruiser Club",
 					["procs"] = {
 					},
-					["numlines"] = 7,
+					["MeleeAPMult"] = 2.4,
+					["MainSpeed"] = 2.2,
+					["MeleeMin"] = 17,
 				},
 			},
 		},
-		["wear"] = {
-		},
-		["intellect"] = 0,
-		["spirit"] = 0,
-		["stamina"] = 0,
 	},
-	["ColB2"] = 0.6862745098039216,
-	["ColR"] = 1,
-	["ColG"] = 1,
-	["embed"] = true,
+	["procs"] = true,
+	["FontPath"] = "Fonts\\ArialN.TTF",
+	["ColB"] = 1,
+	["combinedot"] = true,
 	["healanddamage"] = true,
 }

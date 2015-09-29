@@ -142,13 +142,13 @@ TheoryCraft_Settings = {
 				},
 				["name"] = "|cff1eff00|Hitem:10604:0:0:0|h[Schematic: Mithril Heavy-bore Rifle]|h|r",
 				["data"] = {
-					["RangedMin"] = 41,
+					["numlines"] = 11,
 					["name"] = "Schematic: Mithril Heavy-bore Rifle",
 					["procs"] = {
 					},
-					["numlines"] = 11,
-					["RangedMax"] = 76,
 					["RangedSpeed"] = 2.9,
+					["RangedMax"] = 76,
+					["RangedMin"] = 41,
 					["RangedAttackPowerReport"] = 14,
 				},
 			},

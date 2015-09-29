@@ -124,7 +124,7 @@ ItemRack_Users = {
 		["Bar"] = {
 		},
 	},
-	["Sixofnine of Warsong [12x] Blizzlike"] = {
+	["Nameplate of Emerald Dream [1x] Blizzlike"] = {
 		["Visible"] = "OFF",
 		["MainScale"] = 1,
 		["XPos"] = 400,
@@ -164,7 +164,7 @@ ItemRack_Users = {
 		["Bar"] = {
 		},
 	},
-	["Nameplate of Emerald Dream [1x] Blizzlike"] = {
+	["Sixofnine of Warsong [12x] Blizzlike"] = {
 		["Visible"] = "OFF",
 		["MainScale"] = 1,
 		["XPos"] = 400,
@@ -227,33 +227,33 @@ ItemRack_Users = {
 }
 ItemRack_Settings = {
 	["Notify"] = "ON",
-	["EnableEvents"] = "OFF",
+	["AllowHidden"] = "OFF",
 	["Minimap"] = {
 	},
-	["LargeFont"] = "OFF",
-	["MenuShift"] = "OFF",
+	["ShowEmpty"] = "ON",
+	["SquareMinimap"] = "ON",
 	["Soulbound"] = "OFF",
-	["AllowHidden"] = "OFF",
+	["EnableEvents"] = "OFF",
 	["RotateMenu"] = "OFF",
 	["AutoToggle"] = "OFF",
-	["ShowEmpty"] = "ON",
+	["BigCooldown"] = "OFF",
 	["ShowAllEvents"] = "OFF",
 	["ShowIcon"] = "OFF",
-	["Bindings"] = "ON",
-	["TooltipFollow"] = "ON",
-	["DisableToggle"] = "ON",
 	["IconPos"] = 162.6867869007372,
-	["ShowTooltips"] = "ON",
+	["TooltipFollow"] = "ON",
 	["RightClick"] = "OFF",
-	["FlipBar"] = "OFF",
-	["FlipMenu"] = "OFF",
-	["TinyTooltip"] = "OFF",
-	["NotifyThirty"] = "ON",
 	["SetLabels"] = "ON",
+	["FlipMenu"] = "OFF",
+	["NotifyThirty"] = "ON",
+	["FlipBar"] = "OFF",
+	["ShowTooltips"] = "ON",
+	["TinyTooltip"] = "OFF",
+	["DisableToggle"] = "ON",
+	["Bindings"] = "ON",
 	["CompactList"] = "ON",
 	["CooldownNumbers"] = "OFF",
-	["SquareMinimap"] = "ON",
-	["BigCooldown"] = "OFF",
+	["MenuShift"] = "OFF",
+	["LargeFont"] = "OFF",
 }
 ItemRack_Events = {
 	["Druid:Caster Form"] = {
@@ -327,10 +327,10 @@ ItemRack_Events = {
 		["trigger"] = "CHAT_MSG_COMBAT_SELF_MISSES",
 		["delay"] = 5,
 	},
-	["Warrior:Overpower Begin"] = {
-		["script"] = "--[[Equip a set when the opponent dodges.  Associate a heavy-hitting 2h set with this event. ]]\nlocal _,_,i = GetShapeshiftFormInfo(1)\nif string.find(arg1 or \"\",\"^You.+dodge[sd]\") and i then\nEquipSet()\nIR_OVERPOWER=1\nend",
-		["trigger"] = "CHAT_MSG_COMBAT_SELF_MISSES",
-		["delay"] = 0,
+	["Priest:Spirit Tap End"] = {
+		["script"] = "local found=arg1[\"Interface\\\\Icons\\\\Spell_Shadow_Requiem\"]\nif IR_SPIRIT and not found then\nLoadSet() IR_SPIRIT = nil\nend\n--[[Returns to normal gear when Spirit Tap ends. Associate the same spirit set as Spirit Tap Begin.]]",
+		["trigger"] = "ITEMRACK_BUFFS_CHANGED",
+		["delay"] = 0.5,
 	},
 	["Insignia Used"] = {
 		["script"] = "if arg1==\"Insignia of the Alliance\" or arg1==\"Insignia of the Horde\" then EquipSet() end --[[Equips a set when the Insignia of the Alliance/Horde has been used.]]",
@@ -347,19 +347,9 @@ ItemRack_Events = {
 		["trigger"] = "PLAYER_AURAS_CHANGED",
 		["delay"] = 0,
 	},
-	["Priest:Spirit Tap Begin"] = {
-		["script"] = "local found=ItemRack.Buffs[\"Interface\\\\Icons\\\\Spell_Shadow_Requiem\"]\nif not IR_SPIRIT and found then\nEquipSet() IR_SPIRIT=1\nend\n--[[Equips a set when you leave combat with Spirit Tap. Associate a set of spirit gear to this event.]]",
-		["trigger"] = "PLAYER_REGEN_ENABLED",
-		["delay"] = 0.25,
-	},
-	["Insignia"] = {
-		["script"] = "if arg1==\"Insignia of the Alliance\" or arg1==\"Insignia of the Horde\" then EquipSet() end --[[Equips a set when the Insignia of the Alliance/Horde finishes cooldown.]]",
-		["trigger"] = "ITEMRACK_NOTIFY",
-		["delay"] = 0,
-	},
-	["Eating-Drinking"] = {
-		["script"] = "local found=arg1[\"Interface\\\\Icons\\\\INV_Misc_Fork&Knife\"] or arg1[\"Drink\"]\nif not IR_DRINK and found then\nEquipSet() IR_DRINK=1\nelseif IR_DRINK and not found then\nLoadSet() IR_DRINK=nil\nend\n--[[Equips a set while eating or drinking.]]",
-		["trigger"] = "ITEMRACK_BUFFS_CHANGED",
+	["Druid:Travel Form"] = {
+		["script"] = "local form=ItemRack_GetForm() if form==\"Travel Form\" and IR_FORM~=form then EquipSet() IR_FORM=form end --[[Equip a set when in travel form.]]",
+		["trigger"] = "PLAYER_AURAS_CHANGED",
 		["delay"] = 0,
 	},
 	["Mount"] = {
@@ -367,20 +357,30 @@ ItemRack_Events = {
 		["trigger"] = "PLAYER_AURAS_CHANGED",
 		["delay"] = 0,
 	},
-	["Druid:Travel Form"] = {
-		["script"] = "local form=ItemRack_GetForm() if form==\"Travel Form\" and IR_FORM~=form then EquipSet() IR_FORM=form end --[[Equip a set when in travel form.]]",
-		["trigger"] = "PLAYER_AURAS_CHANGED",
+	["Eating-Drinking"] = {
+		["script"] = "local found=arg1[\"Interface\\\\Icons\\\\INV_Misc_Fork&Knife\"] or arg1[\"Drink\"]\nif not IR_DRINK and found then\nEquipSet() IR_DRINK=1\nelseif IR_DRINK and not found then\nLoadSet() IR_DRINK=nil\nend\n--[[Equips a set while eating or drinking.]]",
+		["trigger"] = "ITEMRACK_BUFFS_CHANGED",
 		["delay"] = 0,
+	},
+	["Insignia"] = {
+		["script"] = "if arg1==\"Insignia of the Alliance\" or arg1==\"Insignia of the Horde\" then EquipSet() end --[[Equips a set when the Insignia of the Alliance/Horde finishes cooldown.]]",
+		["trigger"] = "ITEMRACK_NOTIFY",
+		["delay"] = 0,
+	},
+	["Priest:Spirit Tap Begin"] = {
+		["script"] = "local found=ItemRack.Buffs[\"Interface\\\\Icons\\\\Spell_Shadow_Requiem\"]\nif not IR_SPIRIT and found then\nEquipSet() IR_SPIRIT=1\nend\n--[[Equips a set when you leave combat with Spirit Tap. Associate a set of spirit gear to this event.]]",
+		["trigger"] = "PLAYER_REGEN_ENABLED",
+		["delay"] = 0.25,
 	},
 	["Priest:Shadowform"] = {
 		["script"] = "local f=arg1[\"Interface\\\\Icons\\\\Spell_Shadow_Shadowform\"]\nif not IR_Shadowform and f then\n  EquipSet() IR_Shadowform=1\nelseif IR_Shadowform and not f then\n  LoadSet() IR_Shadowform=nil\nend\n--[[Equips a set while under Shadowform]]",
 		["trigger"] = "ITEMRACK_BUFFS_CHANGED",
 		["delay"] = 0,
 	},
-	["Priest:Spirit Tap End"] = {
-		["script"] = "local found=arg1[\"Interface\\\\Icons\\\\Spell_Shadow_Requiem\"]\nif IR_SPIRIT and not found then\nLoadSet() IR_SPIRIT = nil\nend\n--[[Returns to normal gear when Spirit Tap ends. Associate the same spirit set as Spirit Tap Begin.]]",
-		["trigger"] = "ITEMRACK_BUFFS_CHANGED",
-		["delay"] = 0.5,
+	["Warrior:Overpower Begin"] = {
+		["script"] = "--[[Equip a set when the opponent dodges.  Associate a heavy-hitting 2h set with this event. ]]\nlocal _,_,i = GetShapeshiftFormInfo(1)\nif string.find(arg1 or \"\",\"^You.+dodge[sd]\") and i then\nEquipSet()\nIR_OVERPOWER=1\nend",
+		["trigger"] = "CHAT_MSG_COMBAT_SELF_MISSES",
+		["delay"] = 0,
 	},
 }
 Rack_User = {
@@ -796,8 +796,8 @@ Rack_User = {
 					["id"] = 0,
 					["old"] = "13380:0:0",
 				},
-				["icon"] = "Interface\\Icons\\Ability_CheapShot",
 				["oldsetname"] = "Tank",
+				["icon"] = "Interface\\Icons\\Ability_CheapShot",
 			},
 		},
 		["CurrentSet"] = "DPS",
@@ -852,91 +852,127 @@ Rack_User = {
 		["Sets"] = {
 			["DPS"] = {
 				[1] = {
-					["name"] = "Eye of Rend",
 					["id"] = "12587:0:0",
+					["name"] = "Eye of Rend",
+				},
+				[2] = {
+					["id"] = "19611:0:0",
+					["name"] = "Enchanted South Seas Kelp",
+				},
+				[3] = {
+					["id"] = "10228:0:1215",
+					["name"] = "Nightshade Spaulders of the Bear",
+				},
+				[5] = {
+					["id"] = "13944:0:0",
+					["name"] = "Tombstone Breastplate",
+				},
+				[6] = {
+					["id"] = "20216:0:0",
+					["name"] = "Belt of Preserved Heads",
+				},
+				[7] = {
+					["id"] = "12963:0:0",
+					["name"] = "Blademaster Leggings",
+				},
+				[8] = {
+					["id"] = "20658:852:2149",
+					["name"] = "Abyssal Leather Boots of Striking",
+				},
+				[9] = {
+					["id"] = "22108:927:0",
+					["name"] = "Feralheart Bracers",
+				},
+				[10] = {
+					["id"] = "19869:0:0",
+					["name"] = "Blooddrenched Grips",
+				},
+				[11] = {
+					["id"] = "12002:0:947",
+					["name"] = "Marble Circle of the Gorilla",
+				},
+				[12] = {
+					["id"] = "18522:0:0",
+					["name"] = "Band of the Ogre King",
+				},
+				[13] = {
+					["id"] = "19120:0:0",
+					["name"] = "Rune of the Guard Captain",
+				},
+				[14] = {
+					["id"] = "13965:0:0",
+					["name"] = "Blackhand's Breadth",
+				},
+				[15] = {
+					["id"] = "10071:0:604",
+					["name"] = "Righteous Cloak of the Monkey",
+				},
+				[16] = {
+					["id"] = "18420:1896:0",
+					["name"] = "Bonecrusher",
+				},
+				[18] = {
+					["id"] = "22397:0:0",
+					["name"] = "Idol of Ferocity",
+				},
+				["icon"] = "Interface\\Icons\\Ability_Druid_CatForm",
+			},
+			["Rack-CombatQueue"] = {
+				[1] = {
 					["old"] = "16900:0:0",
 				},
 				[2] = {
-					["name"] = "Enchanted South Seas Kelp",
-					["id"] = "19611:0:0",
 					["old"] = "19923:0:0",
 				},
 				[3] = {
-					["name"] = "Nightshade Spaulders of the Bear",
-					["id"] = "10228:0:1215",
 					["old"] = "22234:0:0",
 				},
+				[4] = {
+				},
 				[5] = {
-					["name"] = "Mixologist's Tunic",
-					["id"] = "12793:1892:0",
 					["old"] = "16833:913:0",
 				},
 				[6] = {
-					["name"] = "Belt of Preserved Heads",
-					["id"] = "20216:0:0",
 					["old"] = "18327:0:0",
 				},
 				[7] = {
-					["name"] = "Blademaster Leggings",
-					["id"] = "12963:0:0",
 					["old"] = "18386:0:0",
 				},
 				[8] = {
-					["name"] = "Abyssal Leather Boots of Striking",
-					["id"] = "20658:852:2149",
 					["old"] = "22275:929:0",
 				},
 				[9] = {
-					["name"] = "Feralheart Bracers",
-					["id"] = "22108:927:0",
 					["old"] = "19840:905:0",
 				},
 				[10] = {
-					["name"] = "Blooddrenched Grips",
-					["id"] = "19869:0:0",
 					["old"] = "21458:0:0",
 				},
 				[11] = {
-					["name"] = "Marble Circle of the Gorilla",
-					["id"] = "12002:0:947",
 					["old"] = "19863:0:0",
 				},
 				[12] = {
-					["name"] = "Band of the Ogre King",
-					["id"] = "18522:0:0",
 					["old"] = "19920:0:0",
 				},
 				[13] = {
-					["name"] = "Rune of the Guard Captain",
-					["id"] = "19120:0:0",
 					["old"] = "18470:0:0",
 				},
 				[14] = {
-					["name"] = "Blackhand's Breadth",
-					["id"] = "13965:0:0",
 					["old"] = "18371:0:0",
 				},
 				[15] = {
-					["name"] = "Righteous Cloak of the Monkey",
-					["id"] = "10071:0:604",
 					["old"] = "21470:0:0",
 				},
 				[16] = {
-					["name"] = "Bonecrusher",
-					["id"] = "18420:1896:0",
-					["old"] = "22713:0:0",
 				},
 				[17] = {
-					["id"] = 0,
-					["old"] = "11928:0:0",
 				},
 				[18] = {
-					["name"] = "Idol of Ferocity",
-					["id"] = "22397:0:0",
-					["old"] = "22398:0:0",
 				},
-				["oldsetname"] = "HealBot",
-				["icon"] = "Interface\\Icons\\Ability_Druid_CatForm",
+				[19] = {
+				},
+				[0] = {
+				},
+				["oldsetname"] = "Tanking",
 			},
 			["Tanking"] = {
 				[1] = {
@@ -1023,56 +1059,14 @@ Rack_User = {
 					["id"] = "23198:0:0",
 					["old"] = "22398:0:0",
 				},
-				["oldsetname"] = "HealBot",
 				["icon"] = "Interface\\Icons\\Ability_Warrior_DefensiveStance",
-			},
-			["Rack-CombatQueue"] = {
-				[1] = {
-				},
-				[2] = {
-				},
-				[3] = {
-				},
-				[4] = {
-				},
-				[5] = {
-				},
-				[6] = {
-				},
-				[7] = {
-				},
-				[8] = {
-				},
-				[9] = {
-				},
-				[10] = {
-				},
-				[11] = {
-				},
-				[12] = {
-				},
-				[13] = {
-				},
-				[14] = {
-				},
-				[15] = {
-				},
-				[16] = {
-				},
-				[17] = {
-				},
-				[18] = {
-				},
-				[19] = {
-				},
-				[0] = {
-				},
+				["oldsetname"] = "HealBot",
 			},
 			["HealBot"] = {
 				[1] = {
 					["name"] = "Stormrage Cover",
 					["id"] = "16900:0:0",
-					["old"] = "12587:0:0",
+					["old"] = "22718:0:0",
 				},
 				[2] = {
 					["name"] = "Jeklik's Opaline Talisman",
@@ -1082,7 +1076,7 @@ Rack_User = {
 				[3] = {
 					["name"] = "Mantle of Lost Hope",
 					["id"] = "22234:0:0",
-					["old"] = "10228:0:1215",
+					["old"] = "19058:0:0",
 				},
 				[5] = {
 					["name"] = "Cenarion Vestments",
@@ -1092,12 +1086,12 @@ Rack_User = {
 				[6] = {
 					["name"] = "Whipvine Cord",
 					["id"] = "18327:0:0",
-					["old"] = "20216:0:0",
+					["old"] = "13118:0:0",
 				},
 				[7] = {
 					["name"] = "Padre's Trousers",
 					["id"] = "18386:0:0",
-					["old"] = "12963:0:0",
+					["old"] = "11821:2545:0",
 				},
 				[8] = {
 					["name"] = "Firemoss Boots",
@@ -1107,42 +1101,42 @@ Rack_User = {
 				[9] = {
 					["name"] = "Zandalar Haruspex's Bracers",
 					["id"] = "19840:905:0",
-					["old"] = "22108:927:0",
+					["old"] = "22204:1886:0",
 				},
 				[10] = {
 					["name"] = "Gauntlets of New Life",
 					["id"] = "21458:0:0",
-					["old"] = "19869:0:0",
+					["old"] = "21501:904:0",
 				},
 				[11] = {
 					["name"] = "Primalist's Seal",
 					["id"] = "19863:0:0",
-					["old"] = "12002:0:947",
+					["old"] = "12544:0:0",
 				},
 				[12] = {
 					["name"] = "Primalist's Band",
 					["id"] = "19920:0:0",
-					["old"] = "18522:0:0",
+					["old"] = "15855:0:0",
 				},
 				[13] = {
 					["name"] = "Royal Seal of Eldre'Thalas",
 					["id"] = "18470:0:0",
-					["old"] = "19120:0:0",
+					["old"] = "13966:0:0",
 				},
 				[14] = {
 					["name"] = "Mindtap Talisman",
 					["id"] = "18371:0:0",
-					["old"] = "13965:0:0",
+					["old"] = "11811:0:0",
 				},
 				[15] = {
 					["name"] = "Cloak of the Savior",
 					["id"] = "21470:0:0",
-					["old"] = "10071:0:604",
+					["old"] = "19888:849:0",
 				},
 				[16] = {
 					["name"] = "Zulian Scepter of Rites",
 					["id"] = "22713:0:0",
-					["old"] = "18420:1896:0",
+					["old"] = "943:249:0",
 				},
 				[17] = {
 					["name"] = "Thaurissan's Royal Scepter",
@@ -1152,10 +1146,10 @@ Rack_User = {
 				[18] = {
 					["name"] = "Idol of Rejuvenation",
 					["id"] = "22398:0:0",
-					["old"] = "22397:0:0",
+					["old"] = "23198:0:0",
 				},
-				["oldsetname"] = "DPS",
 				["icon"] = "Interface\\Icons\\Ability_DeathKnight_RemorselessWinters",
+				["oldsetname"] = "Tanking",
 			},
 		},
 		["CurrentSet"] = "HealBot",
@@ -1246,8 +1240,8 @@ Rack_User = {
 					["id"] = "22395:0:0",
 					["name"] = "Totem of Rage",
 				},
-				["icon"] = "Interface\\Icons\\Ability_Druid_TreeofLife",
 				["oldsetname"] = "Melee",
+				["icon"] = "Interface\\Icons\\Ability_Druid_TreeofLife",
 			},
 			["Melee"] = {
 				[1] = {
@@ -1329,8 +1323,8 @@ Rack_User = {
 					["id"] = "22395:0:0",
 					["name"] = "Totem of Rage",
 				},
-				["icon"] = "Interface\\Icons\\Ability_DualWield",
 				["oldsetname"] = "Healbot-MaxSP",
+				["icon"] = "Interface\\Icons\\Ability_DualWield",
 			},
 			["Rack-CombatQueue"] = {
 				[1] = {
@@ -1458,8 +1452,8 @@ Rack_User = {
 					["id"] = "22395:0:0",
 					["name"] = "Totem of Rage",
 				},
-				["oldsetname"] = "Healbot-MaxMP5",
 				["icon"] = "Interface\\Icons\\Ability_Druid_TreeofLife",
+				["oldsetname"] = "Healbot-MaxMP5",
 			},
 		},
 		["CurrentSet"] = "Healbot-MaxSP",
@@ -1478,8 +1472,9 @@ Rack_User = {
 					["old"] = "22234:0:0",
 				},
 				[5] = {
-					["id"] = "18312:0:0",
 					["name"] = "Energized Chestplate",
+					["id"] = "18312:0:0",
+					["old"] = "22409:44:0",
 				},
 				[6] = {
 					["name"] = "Cord of Elements",
@@ -1493,42 +1488,57 @@ Rack_User = {
 				},
 				[8] = {
 					["name"] = "Scarlet Boots",
-					["id"] = "10332:0:0",
-					["old"] = "22275:0:0",
+					["id"] = "10332:66:0",
+					["old"] = "21810:852:0",
 				},
 				[9] = {
 					["name"] = "Bracers of Valor",
-					["id"] = "16735:0:0",
-					["old"] = "16671:66:0",
+					["id"] = "16735:724:0",
+					["old"] = "18459:905:0",
 				},
 				[10] = {
 					["name"] = "Molten Fists",
 					["id"] = "11814:0:0",
-					["old"] = "19123:0:0",
+					["old"] = "18527:0:0",
 				},
 				[11] = {
-					["id"] = "11992:0:778",
-					["name"] = "Vermilion Band of the Owl",
+					["name"] = "Primalist's Band",
+					["id"] = "19920:0:0",
+					["old"] = "19863:0:0",
 				},
 				[12] = {
-					["id"] = "11669:0:0",
 					["name"] = "Naglering",
+					["id"] = "11669:0:0",
+					["old"] = "19920:0:0",
+				},
+				[13] = {
+					["id"] = "18371:0:0",
+					["name"] = "Mindtap Talisman",
+				},
+				[14] = {
+					["id"] = "11819:0:0",
+					["name"] = "Second Wind",
 				},
 				[15] = {
-					["id"] = "9838:0:1187",
-					["name"] = "Banded Cloak of the Bear",
+					["name"] = "Overlord's Embrace",
+					["id"] = "19888:0:0",
+					["old"] = "19870:884:0",
 				},
 				[16] = {
 					["name"] = "Twig of the World Tree",
 					["id"] = "13047:0:0",
 					["old"] = "22713:0:0",
 				},
-				["oldsetname"] = "Holy",
 				[17] = {
 					["id"] = 0,
 					["old"] = "22319:0:0",
 				},
+				[18] = {
+					["id"] = "23201:0:0",
+					["name"] = "Libram of Divinity",
+				},
 				["icon"] = "Interface\\Icons\\Ability_Paladin_SanctifiedWrath",
+				["oldsetname"] = "Holy",
 			},
 			["Holy"] = {
 				[1] = {
@@ -1546,8 +1556,9 @@ Rack_User = {
 					["old"] = "16729:0:0",
 				},
 				[5] = {
-					["id"] = "18312:0:0",
-					["name"] = "Energized Chestplate",
+					["name"] = "Tunic of the Crescent Moon",
+					["id"] = "22409:44:0",
+					["old"] = "18312:0:0",
 				},
 				[6] = {
 					["name"] = "Belt of the Inquisition",
@@ -1560,40 +1571,171 @@ Rack_User = {
 					["old"] = "10330:18:0",
 				},
 				[8] = {
-					["name"] = "Firemoss Boots",
-					["id"] = "22275:0:0",
-					["old"] = "10332:0:0",
+					["name"] = "Treads of the Wandering Nomad",
+					["id"] = "21810:0:0",
+					["old"] = "21810:852:0",
 				},
 				[9] = {
-					["name"] = "Bindings of Elements",
-					["id"] = "16671:66:0",
-					["old"] = "16735:0:0",
+					["name"] = "Gallant's Wristguards",
+					["id"] = "18459:724:0",
+					["old"] = "16735:856:0",
 				},
 				[10] = {
-					["name"] = "Everwarm Handwraps",
-					["id"] = "19123:0:0",
-					["old"] = "11814:0:0",
+					["name"] = "Harmonious Gauntlets",
+					["id"] = "18527:0:0",
+					["old"] = "19894:0:0",
 				},
 				[11] = {
-					["id"] = "11992:0:778",
-					["name"] = "Vermilion Band of the Owl",
+					["name"] = "Primalist's Seal",
+					["id"] = "19863:0:0",
+					["old"] = "11669:0:0",
+				},
+				[12] = {
+					["name"] = "Primalist's Band",
+					["id"] = "19920:0:0",
+					["old"] = "11669:0:0",
+				},
+				[13] = {
+					["id"] = "18371:0:0",
+					["name"] = "Mindtap Talisman",
+				},
+				[14] = {
+					["id"] = "11819:0:0",
+					["name"] = "Second Wind",
 				},
 				[15] = {
-					["id"] = "9838:0:1187",
-					["name"] = "Banded Cloak of the Bear",
+					["name"] = "Hakkari Loa Cloak",
+					["id"] = "19870:0:0",
+					["old"] = "19870:884:0",
 				},
 				[16] = {
 					["name"] = "Zulian Scepter of Rites",
 					["id"] = "22713:0:0",
-					["old"] = "13047:0:0",
+					["old"] = "2815:0:0",
 				},
-				["oldsetname"] = "Ret",
 				[17] = {
 					["name"] = "Tome of Divine Right",
 					["id"] = "22319:0:0",
-					["old"] = 0,
+					["old"] = "18485:0:0",
+				},
+				[18] = {
+					["id"] = "23201:0:0",
+					["name"] = "Libram of Divinity",
 				},
 				["icon"] = "Interface\\Icons\\Ability_Vehicle_ShellShieldGenerator",
+				["oldsetname"] = "Holy",
+			},
+			["Holy-5-Man"] = {
+				[1] = {
+					["id"] = "22720:0:0",
+					["name"] = "Zulian Headdress",
+				},
+				[2] = {
+					["id"] = "18723:0:0",
+					["name"] = "Animated Chain Necklace",
+				},
+				[3] = {
+					["id"] = "22234:0:0",
+					["name"] = "Mantle of Lost Hope",
+				},
+				[5] = {
+					["id"] = "22409:44:0",
+					["name"] = "Tunic of the Crescent Moon",
+				},
+				[6] = {
+					["id"] = "21500:0:0",
+					["name"] = "Belt of the Inquisition",
+				},
+				[7] = {
+					["id"] = "18386:0:0",
+					["name"] = "Padre's Trousers",
+				},
+				[8] = {
+					["id"] = "21810:852:0",
+					["name"] = "Treads of the Wandering Nomad",
+				},
+				[9] = {
+					["id"] = "18459:724:0",
+					["name"] = "Gallant's Wristguards",
+				},
+				[10] = {
+					["id"] = "18527:0:0",
+					["name"] = "Harmonious Gauntlets",
+				},
+				[11] = {
+					["id"] = "19863:0:0",
+					["name"] = "Primalist's Seal",
+				},
+				[12] = {
+					["id"] = "19920:0:0",
+					["name"] = "Primalist's Band",
+				},
+				[13] = {
+					["id"] = "18371:0:0",
+					["name"] = "Mindtap Talisman",
+				},
+				[14] = {
+					["id"] = "11819:0:0",
+					["name"] = "Second Wind",
+				},
+				[15] = {
+					["id"] = "19870:884:0",
+					["name"] = "Hakkari Loa Cloak",
+				},
+				[16] = {
+					["id"] = "22713:0:0",
+					["name"] = "Zulian Scepter of Rites",
+				},
+				[17] = {
+					["name"] = "Observer's Shield",
+					["id"] = "18485:0:0",
+					["old"] = "22319:0:0",
+				},
+				[18] = {
+					["id"] = "23201:0:0",
+					["name"] = "Libram of Divinity",
+				},
+				["oldsetname"] = "Holy",
+				["icon"] = "Interface\\Icons\\Ability_Monk_HealthSphere",
+			},
+			["Tanking"] = {
+				[3] = {
+					["id"] = "16729:0:0",
+					["name"] = "Lightforge Spaulders",
+				},
+				[7] = {
+					["id"] = "10330:18:0",
+					["name"] = "Scarlet Leggings",
+				},
+				[15] = {
+					["id"] = "19888:0:0",
+					["name"] = "Overlord's Embrace",
+				},
+				[16] = {
+					["id"] = "22713:0:0",
+					["name"] = "Zulian Scepter of Rites",
+				},
+				[17] = {
+					["id"] = "18485:0:0",
+					["name"] = "Observer's Shield",
+				},
+				[9] = {
+					["id"] = "16735:856:0",
+					["name"] = "Bracers of Valor",
+				},
+				[11] = {
+					["id"] = "11669:0:0",
+					["name"] = "Naglering",
+				},
+				[10] = {
+					["id"] = "19894:0:0",
+					["name"] = "Bloodsoaked Gauntlets",
+				},
+				[5] = {
+					["id"] = "18312:0:0",
+					["name"] = "Energized Chestplate",
+				},
+				["icon"] = "Interface\\Icons\\INV_Relics_LibramofHope",
 			},
 			["Rack-CombatQueue"] = {
 				[1] = {
@@ -1638,7 +1780,7 @@ Rack_User = {
 				},
 			},
 		},
-		["CurrentSet"] = "Ret",
+		["CurrentSet"] = "Tanking",
 	},
 	["Zapunzel of Warsong [12x] Blizzlike"] = {
 		["Sets"] = {
@@ -1837,13 +1979,13 @@ Rack_User = {
 					["id"] = 0,
 					["old"] = "15280:0:936",
 				},
-				["icon"] = "Interface\\Icons\\Ability_Kick",
 				["oldsetname"] = "Frost",
+				["icon"] = "Interface\\Icons\\Ability_Kick",
 			},
 		},
 		["CurrentSet"] = "Frost",
 	},
-	["Sixofnine of Warsong [12x] Blizzlike"] = {
+	["Nameplate of Emerald Dream [1x] Blizzlike"] = {
 		["Sets"] = {
 			["Rack-CombatQueue"] = {
 				[1] = {
@@ -1935,7 +2077,7 @@ Rack_User = {
 			},
 		},
 	},
-	["Nameplate of Emerald Dream [1x] Blizzlike"] = {
+	["Sixofnine of Warsong [12x] Blizzlike"] = {
 		["Sets"] = {
 			["Rack-CombatQueue"] = {
 				[1] = {

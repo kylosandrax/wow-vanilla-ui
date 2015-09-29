@@ -10,27 +10,27 @@ BankItems_Save = {
 		["money"] = 0,
 	},
 	["Ryjax|Warsong [12x] Blizzlike"] = {
-		["money"] = 74253,
+		["money"] = 102190,
 	},
 	["Sixofnine|Warsong [12x] Blizzlike"] = {
-		["money"] = 14668,
+		["money"] = 14578,
 	},
 	["Kashonar|Warsong [12x] Blizzlike"] = {
-		["money"] = 0,
+		["money"] = 96198,
 	},
 	["Kylosandrax|Warsong [12x] Blizzlike"] = {
-		["money"] = 0,
+		["money"] = 1832844,
 	},
 	["Ryvok|Warsong [12x] Blizzlike"] = {
-		["money"] = 0,
+		["money"] = 29145643,
 	},
 	["Zapunzel|Warsong [12x] Blizzlike"] = {
-		["money"] = 1864415,
+		["money"] = 0,
 	},
 	["Banjax|Warsong [12x] Blizzlike"] = {
-		["money"] = 89144,
+		["money"] = 3550970,
 	},
 	["Stormslinger|Warsong [12x] Blizzlike"] = {
-		["money"] = 94749,
+		["money"] = 85189,
 	},
 }

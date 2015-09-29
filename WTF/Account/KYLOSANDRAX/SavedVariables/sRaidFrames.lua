@@ -12,7 +12,6 @@ sRaidFramesDB = {
 				["g"] = 0.4509803921568628,
 				["b"] = 0.4509803921568628,
 			},
-			["BuffType"] = "buffs",
 			["BackgroundColor"] = {
 				["a"] = 0,
 				["r"] = 0,
@@ -24,7 +23,7 @@ sRaidFramesDB = {
 			["profile4"] = false,
 			["Growth"] = "up",
 			["WidthFocus"] = 99,
-			["dynamic_range_sort"] = false,
+			["grp_name"] = false,
 			["unitname_color"] = false,
 			["dynamic_sort"] = false,
 			["Texture"] = "Flat",
@@ -35,7 +34,6 @@ sRaidFramesDB = {
 			["unit_name_lenght"] = false,
 			["Growth_Focus"] = "up",
 			["ShowFilteredBuffs"] = false,
-			["aggro_aura"] = true,
 			["lock_focus"] = true,
 			["hp_limit"] = 1,
 			["dynamic_overheal_sort"] = false,
@@ -43,6 +41,7 @@ sRaidFramesDB = {
 			["vertical_hp"] = false,
 			["lock"] = true,
 			["redbar"] = false,
+			["dynamic_range_sort"] = false,
 			["Positions"] = {
 				[1] = {
 					["y"] = 247.0881222875439,
@@ -81,10 +80,10 @@ sRaidFramesDB = {
 					["x"] = 1090.837360304548,
 				},
 			},
-			["healthDisplayType"] = "deficit",
+			["aggro_aura"] = true,
 			["units_limit"] = 5,
 			["dynamic_aggro_sort"] = false,
-			["grp_name"] = false,
+			["healthDisplayType"] = "deficit",
 		},
 	},
 }
