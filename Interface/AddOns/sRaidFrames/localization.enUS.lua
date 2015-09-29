@@ -52,6 +52,8 @@ L:RegisterTranslations("enUS", function() return {
 	
 	["_Focus frame"] = true,
 	["Use keybinding to add/remove focus units."] = true,
+	["Add WSG carrier to focus"] = true;
+	["Auto add WSG carrier to focus frame"] = true,
 	
 	["Load predefined settings"] = true,
 	["Common"] = true,
@@ -155,7 +157,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Group sort"] = true,
 	["Group method"] = true,
 	["Dead and offline units sub sort"] = true,
-	["Dead or offline units are moved to the bottom of frame - effect only if Grid like group sort is enabled"] = true,
+	["Dead or offline units are moved to the bottom of frame"] = true,
 	["Reverse sort"] = true,
 	
 	["Select how you wish to show the groups"] = true,
@@ -250,6 +252,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Set about range"] = true,
 	["Show estimated range"] = true,
 	["Show estimated range next to player's name"] = true,
+	["Show estimated range only for focus units"] = true,
 	["Enable light range check"] = true,
 	["Enable 28y range check in Instances and 40y coordinates dependant range check in Outdoors and Bgs - Suggested when you neither play healing class nor using Blizzard frames, agUnitFrames or LunaUnitFrames"] = true,
 	
@@ -264,7 +267,7 @@ L:RegisterTranslations("enUS", function() return {
 	["Coordinates dependant functionality, won't work in instances"] = true,
 	["Enable arrows"] = true,
 	["Enable unit arrows"] = true,
-	["Focus unit arrows"] = true,
+	["Focus units only"] = true,
 	["Enable arrows only for focus units"] = true,
 
 

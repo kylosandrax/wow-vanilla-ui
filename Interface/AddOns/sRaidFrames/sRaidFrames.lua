@@ -74,10 +74,14 @@ sRaidFrames.defaultMinimapPosition = 180
 sRaidFrames.cannotDetachTooltip = true
 sRaidFrames.hasNoColor = true
 sRaidFrames.clickableTooltip = false
-sRaidFrames.hideWithoutStandby = true
+sRaidFrames.hideWithoutStandby = false
 sRaidFrames.independentProfile = true
 sRaidFrames.TargetMonitor = nil
 sRaidFrames.TargetMonitorEnd = nil
+sRaidFrames.TargetMonitorManual = nil
+sRaidFrames.TargetMonitorCycleName = nil
+sRaidFrames.UpdateTargetIndex = {}
+
 
 sRaidFrames.FocusWithRange = false
 sRaidFrames.ClassCheck = false
@@ -160,7 +164,9 @@ function sRaidFrames:OnInitialize()
 		Bordertexture		= "Interface\\AddOns\\sRaidFrames\\borders\\UI-Tooltip-Border_Original.blp",
 		heal 				= "round",
 		RangeShow			= false,
-		ArrowsEnable		= true
+		FocusRangeShow		= false,
+		ArrowsEnable		= true,
+		WSG_Focus 			= false
 
 		
 	})
@@ -213,6 +219,8 @@ function sRaidFrames:OnInitialize()
 	
 	--==Added by Ogrisch 
 	self:Hook("TargetFrame_OnEvent")
+	self:Hook("TargetFrame_OnShow")
+	self:Hook("TargetFrame_OnHide")
 
 	
 	Zorlen_MakeFirstMacros = nil
@@ -239,7 +247,9 @@ function sRaidFrames:OnEnable()
 	
 	Zorlen_MakeFirstMacros = nil
 
-
+	
+	--HOOKS--
+	
 	if LunaUnitFrames then
 		LunaUnitFrames.UpdateTargetFrameOld = LunaUnitFrames.UpdateTargetFrame
 		LunaUnitFrames.UpdateTargetFrame = self.Luna_Target_Hook
@@ -263,9 +273,6 @@ function sRaidFrames:OnEnable()
 	end
 end
 
-
-
-
 function sRaidFrames:PatchUpdate()
 	if not self.opt.DebuffFilter then
 		self.opt.DebuffFilter = {}
@@ -283,11 +290,11 @@ function sRaidFrames:PatchUpdate()
 end
 
 
-
 function sRaidFrames:XPerl_Target_UpdateDisplay_Hook()
 	if not sRaidFrames.TargetMonitor then
 		--DEFAULT_CHAT_FRAME:AddMessage("XPerl_Target_UpdateDisplay_Hook")
 		XPerl_Target_UpdateDisplay_OLD()
+		sRaidFrames.UpdateTargetIndex[1] = true
 	end	
 end
 
@@ -295,20 +302,7 @@ function sRaidFrames:XPerl_Target_UpdatePortrait_Hook()
 	if not sRaidFrames.TargetMonitor then
 		--DEFAULT_CHAT_FRAME:AddMessage("XPerl_Target_UpdatePortrait_Hook")
 		XPerl_Target_UpdatePortrait_OLD()
-	end	
-end
---[[
-function sRaidFrames:XPerl_Target_CombatFlash_Hook(a1, a2)
-	if not sRaidFrames.TargetMonitor then	
-		DEFAULT_CHAT_FRAME:AddMessage("XPerl_Target_CombatFlash")
-		XPerl_Target_CombatFlash_OLD(a1, a2)
-	end	
-end
---]]
-function sRaidFrames:TargetFrame_OnEvent(event)
-	if not self.TargetMonitor then
-		--DEFAULT_CHAT_FRAME:AddMessage("sRaidFrames:TargetFrame_OnEvent")
-		self.hooks.TargetFrame_OnEvent.orig(event)
+		sRaidFrames.UpdateTargetIndex[1] = true
 	end	
 end
 
@@ -316,6 +310,7 @@ function sRaidFrames:Luna_Target_Hook()
 	if not sRaidFrames.TargetMonitor then
 		--DEFAULT_CHAT_FRAME:AddMessage("LunaUnitFrames:UpdateTargetFrameOld")	
 		LunaUnitFrames:UpdateTargetFrameOld()
+		sRaidFrames.UpdateTargetIndex[2] = true
 	end	
 end
 
@@ -323,7 +318,26 @@ function sRaidFrames:ag_PLAYER_TARGET_CHANGED_Hook()
 	if not sRaidFrames.TargetMonitor then
 		--DEFAULT_CHAT_FRAME:AddMessage("aUF:PLAYER_TARGET_CHANGED_OLD")	
 		aUF:PLAYER_TARGET_CHANGED_OLD()
+		sRaidFrames.UpdateTargetIndex[3] = true
 	end
+end
+
+function sRaidFrames:TargetFrame_OnEvent(event)
+	if not self.TargetMonitor then
+		--DEFAULT_CHAT_FRAME:AddMessage("sRaidFrames:TargetFrame_OnEvent")
+		self.hooks.TargetFrame_OnEvent.orig(event)
+		sRaidFrames.UpdateTargetIndex[4] = true
+	end	
+end
+
+function sRaidFrames:TargetFrame_OnShow()
+	--self.hooks.TargetFrame_OnShow.orig()
+	--DEFAULT_CHAT_FRAME:AddMessage("TargetFrame_OnShow")
+end
+
+function sRaidFrames:TargetFrame_OnHide()
+	--self.hooks.TargetFrame_OnHide.orig()
+	--DEFAULT_CHAT_FRAME:AddMessage("TargetFrame_OnHide")
 end
 
 function sRaidFrames:OnDisable()
@@ -392,12 +406,68 @@ function sRaidFrames:PLAYER_ENTERING_WORLD()
 end
 
 function sRaidFrames:PLAYER_TARGET_CHANGED()
+	local skipp_blizz = nil
+	--if not self.TargetMonitor then
+	if self.TargetMonitorCycleName ~= GetUnitName("target") then
+		self.TargetMonitorManual = true
+	end
+	
 	if self.TargetMonitor and self.TargetMonitorEnd then
 		self.TargetMonitorEnd = nil
 		self.TargetMonitor = nil
-		--DEFAULT_CHAT_FRAME:AddMessage("sRaidFrames:PLAYER_TARGET_CHANGED")
 	end
 end
+
+function sRaidFrames:UtilizeTarget()
+	--if self.TargetMonitorCycleEnd then
+		if self.TargetMonitorManual then
+			self:DebugRange("____Target Changed Manually______") 
+			for blockindex,blockmatch in pairs(self.UpdateTargetIndex) do
+				if blockindex == 1 then
+				--DEFAULT_CHAT_FRAME:AddMessage("1")
+					skipp_blizz = true
+					XPerl_Target_UpdateDisplay_OLD()
+					XPerl_Target_UpdatePortrait_OLD()
+					
+				elseif blockindex == 2 then
+				--DEFAULT_CHAT_FRAME:AddMessage("2")
+					skipp_blizz = true
+					LunaUnitFrames:UpdateTargetFrameOld()
+				
+				elseif blockindex == 3 then
+				--	DEFAULT_CHAT_FRAME:AddMessage("3")
+					skipp_blizz = true
+					aUF:PLAYER_TARGET_CHANGED_OLD()
+				
+				elseif blockindex == 4 and not skipp_blizz then
+					if UnitExists("target") then
+						--if TargetFrame and TargetFrame.name and TargetFrame.name:GetText() ~= GetUnitName("target") then
+						--	DEFAULT_CHAT_FRAME:AddMessage("************BLIZZARD "..TargetFrame.name:GetText().." diff "..GetUnitName("target"))
+						--end
+						
+						TargetFrame.name:SetText(UnitName("target"));
+						SetPortraitTexture(TargetFrame.portrait, "target");	
+						UnitFrameHealthBar_Update(TargetFrame.healthbar, "target");
+						UnitFrameManaBar_Update(TargetFrame.manabar, "target");
+						UnitFrame_UpdateManaType();
+						TargetFrame_CheckLevel();
+						TargetFrame_CheckFaction();
+						TargetFrame_CheckClassification();
+						TargetFrame_CheckDead();
+						TargetFrame:Show()
+						--DEFAULT_CHAT_FRAME:AddMessage("4")
+					else
+						TargetFrame:Hide()
+						--DEFAULT_CHAT_FRAME:AddMessage("2")
+					end	
+				end
+			end	
+			self.TargetMonitorManual = nil
+		end
+		--self.TargetMonitorCycleEnd = nil
+	--end
+end
+
 
 function sRaidFrames:LeftRaid()
 	--self:Print("Left raid, disabling raid frames")
@@ -435,7 +505,9 @@ function sRaidFrames:UpdateAllBuffs()
 end
 
 function sRaidFrames:Variables()
+	self.mouseoverunit = nil
 	self.enabled = false
+	self.preparesort = false
 	self.frames, self.visible, self.groupframes = {}, {}, {}
 	self.feign, self.unavail, self.res, self.hpaura = {}, {}, {}, {}
 	
@@ -497,8 +569,7 @@ function sRaidFrames:UpdateRoster()
 	end
 	
 	self:ResetHealIndicators()
-	self:UpdateVisibility()
-	self:LoadStyle()
+	self:UpdateRaidFrames()
 end
 
 function sRaidFrames:QueryVisibility(id)
@@ -539,25 +610,12 @@ function sRaidFrames:UpdateVisibility()
 end
 
 function sRaidFrames:Banzai_UnitGainedAggro(unit, unitTable)
-	--self.UnitAggro[unit] = true
-	if self.opt.dynamic_aggro_sort then
-		sRaidFrames:Sort_Force()
-	end
-	
 	
 	if not unit or not self.visible[unit] or not self.opt.aggro then return end
 	self.frames[unit]:SetBackdropBorderColor(1, 0, 0, self.opt.BorderColor.a)
 end
 
 function sRaidFrames:Banzai_UnitLostAggro(unit)
-	--self.UnitAggro[unit] = nil
-	if self.opt.dynamic_aggro_sort then
-		sRaidFrames:Sort_Force()
-		local units = {}
-		units[unit] = true
-		self:UpdateUnit(units)
-	end	
-
 	if not unit or not self.visible[unit] or not self.opt.aggro then return end
 	self.frames[unit]:SetBackdropBorderColor(self.opt.BorderColor.r, self.opt.BorderColor.g, self.opt.BorderColor.b, self.opt.BorderColor.a)
 end
@@ -604,7 +662,7 @@ function sRaidFrames:IsSpellInRangeAndActionBar(SpellName)
 				return false
 			end
 		else
-			if self.JoiningWorld > 0 and (GetTime() - self.JoiningWorld > 5) then
+			if self.JoiningWorld > 0 and (GetTime() - self.JoiningWorld > 6) then
 				UIErrorsFrame:AddMessage("|cff00eeee sRaidFrames: |cff00FF00"..SpellName.." - not on Actionbar")
 			end	
 			return false
@@ -670,7 +728,8 @@ function sRaidFrames:RangeCheck()
 		local counter = 1	
 		self:CancelScheduledEvent("sRaidFramesExtendedRangeCheck")
 		self:ExtendedRangeArrayUtilize("reset")
-	
+		
+
 		for unit in pairs(self.visible) do
 			local unitcheck = UnitExists(unit) and UnitIsVisible(unit) and UnitIsConnected(unit) and not UnitIsGhost(unit)
 			local deadcheck = UnitIsDead(unit)
@@ -754,8 +813,13 @@ function sRaidFrames:ExtendedRangeCheck()
 	if j then
 		local jumpnext = true
 		local targetchanged = nil
-
+		local tempcyclename = nil
+		
+		self.TargetMonitorCycleName = GetUnitName("target")
+		
 		if not UnitExists("target") or UnitExists("target") and not UnitIsUnit("target", j) then
+			tempcyclename = GetUnitName("target")
+			self.TargetMonitorCycleName = GetUnitName(j)
 			self.TargetMonitor = true
 			targetchanged = true
 			TargetUnit(j)		
@@ -768,6 +832,7 @@ function sRaidFrames:ExtendedRangeCheck()
 			jumpnext = nil
 		end
 		if targetchanged then 
+			self.TargetMonitorCycleName = tempcyclename
 			self.TargetMonitorEnd = true
 			TargetLastTarget()
 		end
@@ -776,6 +841,13 @@ function sRaidFrames:ExtendedRangeCheck()
 			self:DebugRange("RC "..GetUnitName(j).."_40y - " .."|cffFF0000 NOT PASS")
 		end
 		self:ExtendedRangeArrayUtilize("remove", j)
+		
+		if self:ExtendedRangeArrayUtilize("calc") == 0 then
+			--self.TargetMonitorCycleEnd = true
+			sRaidFrames:UtilizeTarget()
+			
+			
+		end
 	end
 end
 
@@ -842,12 +914,12 @@ function sRaidFrames:UpdateRangeFrequency(value)
 	self:ScheduleRepeatingEvent("sRaidFramesRangeCheck", self.RangeCheck, value, self)
 end
 
-function sRaidFrames:UpdateUnit(units, force_focus)
+function sRaidFrames:UpdateUnit(units)
 	local class_color = self.opt.statusbar_color
 	for unit in pairs(units) do
-		local focus_unit = self:CheckFocusUnit(unit)
+		--local focus_unit = self:CheckFocusUnit(unit)
 		if self.visible[unit] and UnitExists(unit) then
-			if (not self.opt.dynamic_sort or not focus_unit and not force_focus or focus_unit and force_focus) then
+			--if (not self.opt.dynamic_sort or not focus_unit and not force_focus or focus_unit and force_focus) then
 				local f = self.frames[unit]
 				local range = ""
 				
@@ -860,7 +932,7 @@ function sRaidFrames:UpdateUnit(units, force_focus)
 					subgroup = ""
 				end
 				
-				if self.opt.RangeShow then
+				if self.opt.RangeShow and (not self.opt.FocusRangeShow or self.opt.FocusRangeShow and self:CheckFocusUnit(unit)) then
 					range = self.UnitRangeArray[unit]
 					if not range or range == "" or range == 0 or UnitIsDeadOrGhost("player") then
 						range =  ""
@@ -921,6 +993,12 @@ function sRaidFrames:UpdateUnit(units, force_focus)
 					elseif ghost then status = "|cffff0000"..L["Ghost"].."|r"
 					elseif dead or UnitHealth(unit) <= 1 then status = "|cffff0000"..L["Dead"].."|r"
 					end				
+					
+					
+					if status and not self.unavail[unit] or not status and self.unavail[unit] then
+						self.preparesort = true
+					end
+					
 					
 					if status then
 						self.unavail[unit] = true
@@ -1000,7 +1078,7 @@ function sRaidFrames:UpdateUnit(units, force_focus)
 					f.hpbar:SetStatusBarColor(0, 0.9, 0.5)
 					f.mpbar:SetValue(0)
 				end
-			end	
+			--end	
 		end
 	end
 end
@@ -1054,7 +1132,10 @@ function sRaidFrames:UpdateBuffs(units, update_counter)
 						if not self.opt.show_txt_buff then
 							if texture == "Interface\\Icons\\INV_BannerPVP_01" or self.carrier == strlower(GetUnitName(unit)) then
 								f.mpbar.text:SetText("|cffFF0000"..L["Carrier"].."|r")
-								self.carrier = strlower(GetUnitName(unit))
+								if self.carrier ~= strlower(GetUnitName(unit)) then
+									self.carrier = strlower(GetUnitName(unit))
+									self:UpdateRaidFrames()
+								end
 							elseif texture == "Interface\\Icons\\Spell_Nature_Lightning" and self:GetBuffName(unit, i) == BS["Innervate"] then
 								f.mpbar.text:SetText("|cff00ff00"..L["Innervate"].."|r")
 							elseif texture == "Interface\\Icons\\Ability_Warrior_ShieldWall" and self:GetBuffName(unit, i) == BS["Shield Wall"] then
@@ -1290,13 +1371,16 @@ function sRaidFrames:StopMovingOrSizingAll()
 end
 
 function sRaidFrames:UnitTooltip(frame)
+	local name, rank, subgroup, level, class, fileName, zone, online, isDead = GetRaidRosterInfo(frame.id);
+	if not fileName then return end
+	self.mouseoverunit = frame.unit
+	
 	if self.opt.TooltipMethod == "never" then
 		return
 	elseif self.opt.TooltipMethod == "notincombat" and UnitAffectingCombat("player") then
 		return
 	end
-	local name, rank, subgroup, level, class, fileName, zone, online, isDead = GetRaidRosterInfo(frame.id);
-	if not fileName then return end
+
 	GameTooltip:SetOwner(frame)
 	GameTooltip:AddDoubleLine(name, level, self.RAID_CLASS_COLORS[fileName].r, self.RAID_CLASS_COLORS[fileName].g, self.RAID_CLASS_COLORS[fileName].b, 1, 1, 1)
 	GameTooltip:AddLine(UnitRace(frame.unit) .. " " .. class, 1, 1, 1);
@@ -1330,15 +1414,11 @@ function sRaidFrames:CreateUnitFrame(id)
 	f:RegisterForClicks("LeftButtonUp", "RightButtonUp", "MiddleButtonUp", "Button4Up", "Button5Up")
 	f:SetScript("OnClick", self.OnUnitClick)
 	f:SetScript("OnEnter", function() self:UnitTooltip(this) sRaidFrames:MouseOverHighlight(f, "ENTER") end)
-	f:SetScript("OnLeave", function() GameTooltip:Hide() sRaidFrames:MouseOverHighlight(f, "LEAVE") end)
+	f:SetScript("OnLeave", function() GameTooltip:Hide() sRaidFrames:MouseOverHighlight(f, "LEAVE") sRaidFrames.mouseoverunit = nil end)
 
 	f.title = f:CreateFontString(nil, "ARTWORK")
 	f.title:SetFontObject(GameFontNormalSmall)
 	f.title:SetJustifyH("LEFT")
-
-
-
-
 
 
 	f.buff1 = CreateFrame("Button", nil, f)
@@ -1603,11 +1683,13 @@ end
 
 function sRaidFrames:Sort_Force()
 	
-	if self.opt.dynamic_sort then
-	--if self.opt.dynamic_sort then or self.opt.SortBy == "fixed" then 	
-		self:Sort(true)
+	--if self.opt.dynamic_sort then
+	if self.preparesort and self.opt.dead_sort then
+		self.preparesort = false 	
+		self:Sort()
 		--DEFAULT_CHAT_FRAME:AddMessage("Sort_Force")
 	end
+	
 	
 	sRaidFrames:SetDegTex()
 	
@@ -1641,14 +1723,43 @@ function sRaidFrames:ReturnClassCount(class)
 	return counter_class
 end
 
+function sRaidFrames:ReturnClassPrefix(class)
+	if class == "Warrior" then
+		return 1
+	elseif class == "Rogue" then 	
+		return 2
+	elseif class == "Mage" then 	
+		return 3
+	elseif class == "Warlock" then 	
+		return 4
+	elseif class == "Druid" then 	
+		return 5
+	elseif class == "Priest" then 	
+		return 6
+	elseif class == "Shaman" then 	
+		return 7	
+	elseif class == "Paladin" then 	
+		return 7
+	elseif class == "Hunter" then 	
+		return 8		
+	else
+		return ""
+	end	
+end
+
 function sRaidFrames:MembersSortBy(id)
 	local sort_by = ""
 	local unit = "raid" .. id
-	--DEFAULT_CHAT_FRAME:AddMessage(Zorlen_UnitClass(unit).." ")
 	if self.opt.SubSort == "class" then
-		if UnitExists(unit) and Zorlen_UnitClass(unit) then
-			local prefix = self:ReturnClassCount(Zorlen_UnitClass(unit)) or 0
-			sort_by = prefix..Zorlen_UnitClass(unit) or ""
+		local class = Zorlen_UnitClass(unit) or ""
+		if UnitExists(unit) and class then
+			local prefix = 0
+			if self.opt.SortBy == "class" then
+				prefix = self:ReturnClassCount(class) or 0
+			else
+				prefix = self:ReturnClassPrefix(class) or 0
+			end	
+			sort_by = prefix..class or ""
 		end
 	elseif self.opt.SubSort == "name" then
 		sort_by = UnitName(unit) or ""
@@ -1657,7 +1768,7 @@ function sRaidFrames:MembersSortBy(id)
 		sort_by = subgroup..id
 	end	
 	
-	if self.opt.SortBy == "fixed" and self.opt.dead_sort and not self.feign[unit] then
+	if self.opt.dead_sort and not self.feign[unit] then
 		if not UnitIsConnected(unit) then
 			sort_by = "zzz"..sort_by
 		elseif UnitIsDead(unit) then
@@ -1668,7 +1779,6 @@ function sRaidFrames:MembersSortBy(id)
 			sort_by = "zzw"..sort_by
 		end	
 	end
-	--DEFAULT_CHAT_FRAME:AddMessage(sort_by)
 	return sort_by
 end
 
@@ -1837,7 +1947,7 @@ function sRaidFrames:Sort(force_sort)
 	end
 
 	-- Hide group frames which contain no children
-	if not force_sort then	
+	--if not force_sort then	
 		for k,v in pairs(counter) do
 			if v == 0 then
 				self.groupframes[k]:Hide()
@@ -1845,9 +1955,9 @@ function sRaidFrames:Sort(force_sort)
 		end
 
 		self:UpdateAllUnits()
-	else
-		self:UpdateUnit(self.visible, force_sort)
-	end	
+	--else
+		--self:UpdateUnit(self.visible, force_sort)
+	--end	
 	
 end
 
@@ -1897,6 +2007,9 @@ end
 
 function sRaidFrames:ResetPosition()
 	self:PositionLayout("sticky", 200, -300)
+	self:S("ScaleFocus", sRaidFrames.opt.Scale)
+	self:S("WidthFocus", sRaidFrames.opt.Width)
+	self:LoadStyle()
 end
 
 function sRaidFrames:PositionLayout(layout, xBuffer, yBuffer)
@@ -2062,147 +2175,6 @@ function sRaidFrames:LoadStyle()
 	self:Sort();
 end
 
---[[
-function sRaidFrames:RefreshFocusWithRange()
-	self:CheckRangeFocus(nil, "reset")
-	for id = 1, MAX_RAID_MEMBERS do
-		if self:QueryVisibility(id) then
-			self:CheckRangeFocus("raid" .. id, "add")
-			if not self.visible["raid" .. id] then
-				self.frames["raid" .. id]:Show()
-				self.visible["raid" .. id] = true;
-			end
-		else
-			if self.visible["raid" .. id] then
-				self.frames["raid" .. id]:Hide()
-				self.visible["raid" .. id] = nil;
-			end
-		end
-	end
-	
-	self:CheckRangeFocus(nil, "sort")
-		
-	if self.opt.fill_range then
-		for unit in pairs(self.visible) do
-			local aggro = Banzai:GetUnitAggroByUnitId(unit)
-			if self:CheckFocusUnit(unit) then
-				self:SetStyle(self.frames[unit], unit, self.opt.WidthFocus, aggro)
-				self.frames[unit]:SetScale(self.opt.ScaleFocus)
-			else
-				self:SetStyle(self.frames[unit], unit, self.opt.Width, aggro)
-				self.frames[unit]:SetScale(self.opt.Scale)
-			end
-		end
-	end	
-end
---]]
-
-
-function sRaidFrames:OverHealCalc(unit)
-	local bonus = 0
-	if self.opt.dynamic_overheal_sort and not Banzai:GetUnitAggroByUnitId(unit) then
-		local indicator = self.indicator and self.indicator[unit] and self.indicator[unit]
-		if indicator and indicator > 0 then
-			bonus = bonus + 15*indicator
-		end
-	end
-	return bonus
-end
-
-function sRaidFrames:OrderCalc(unit)
-	local order = 0
-	local id_str = string.gsub(unit,"raid","")
-	local id_fix = tonumber(id_str)
-	local group_order = self.UnitSortOrder[id_fix]
-
-	order = group_order/10000
-	
-	if self.opt.dynamic_aggro_sort and not Banzai:GetUnitAggroByUnitId(unit) then
-		order = order + 200
-	end
-	
-	return order
-end
---[[
-function sRaidFrames:UnitModHP(unit)
-	local percent = nil
-	local treshhold = 3
-	
-	local order = self:OrderCalc(unit)
-	local overheal = self:OverHealCalc(unit)
-	
-	if UnitHealth(unit) <= 1 or not UnitIsConnected(unit) then
-		percent = 1000
-	else
-		local health = math.ceil(Zorlen_HealthPercent(unit))
-		local health_old = self.UnitFocusHPArray[unit]
-
-		if health_old and health and health_old ~= health and health ~= 100 and math.abs(health - health_old) <= treshhold then ---fixed
-			health = health_old
-		else
-			self.UnitFocusHPArray[unit] = health
-		end
-
-		if health >= 100 then
-			--
-		elseif overheal > 0 and (health + overheal) >= 100 then
-			health = 99
-		else
-			health = health + overheal
-		end
-
-		if self.opt.dynamic_range_sort and self.UnitRangeArray[unit] ~= "" then
-			percent = health + order
-		else
-			percent = health + order + 800
-		end
-	end
-
-	return percent
-end
---]]
-
-function sRaidFrames:CheckRangeHpCalc(unit)
-	return Zorlen_HealthPercent(unit) + self:OrderCalc(unit)
-end
-
---[[
-function sRaidFrames:CheckRangeFocus(unit, mode)
-	if not self.opt.fill_range then
-		return nil
-	end
-	
-	if mode == "sort" then
-		table.sort(self.UnitRangeFocus, function(a,b) return self:CheckRangeHpCalc(a) < self:CheckRangeHpCalc(b) end)
-		return
-	elseif mode == "reset" then
-		Compost:Reclaim(self.UnitRangeFocus)
-		self.UnitRangeFocus = Compost and Compost:Acquire() or {}
-		return
-	end
-	
-	local hplimit = self.opt.hp_limit or 100
-	local check1 = UnitIsConnected(unit) and hplimit >= Zorlen_HealthPercent(unit) and UnitHealth(unit) > 1 or self.opt.dynamic_aggro_sort and Banzai:GetUnitAggroByUnitId(unit)
-	local check2 = self.UnitRangeArray[unit] ~= ""
-
-	if mode == "add" then
-		if check1 and check2 and not self:CheckFocusUnit(unit) then
-			table.insert(self.UnitRangeFocus, unit)
-		end
-		
-	elseif mode == "check" then
-		if check1 and check2 then
-			local units_limit = self.opt.units_limit or 5
-			for blockindex,blockmatch in pairs(self.UnitRangeFocus) do
-				if blockmatch == unit and blockindex <= units_limit then
-					return true
-				end
-			end
-		end
-		return nil
-	end	
-end
---]]
 function sRaidFrames:CheckFocusUnit(unit)
 	if not unit then 
 		return 
@@ -2212,7 +2184,7 @@ function sRaidFrames:CheckFocusUnit(unit)
 		return
 	end	
 	
-	if self.UnitFocusArray[name] then--or self:CheckRangeFocus(unit, "check") then
+	if self.UnitFocusArray[name] or self.opt.WSG_Focus and self:CheckCarrier(unit) then
 		return true	
 	end
 	
@@ -2241,10 +2213,9 @@ function sRaidFrames:AddRemoveFocusUnit(unit)
 		UIErrorsFrame:Clear()
 		UIErrorsFrame:AddMessage(color.."Remove Focus: "..name)
 		
-		self:UpdateVisibility()
-		self:LoadStyle()
+		self:UpdateRaidFrames()
 		
-		return
+		return true
 	end
 	
 	local unit = roster:GetUnitIDFromName(name)
@@ -2254,11 +2225,12 @@ function sRaidFrames:AddRemoveFocusUnit(unit)
 		UIErrorsFrame:Clear()
 		UIErrorsFrame:AddMessage(color.."Add Focus : "..name)
 
-		self:UpdateVisibility()
-		self:LoadStyle()
+		self:UpdateRaidFrames()
+		return true
 	else
 		UIErrorsFrame:Clear()
 		UIErrorsFrame:AddMessage("|cFFFF0000"..err_txt)
+		return nil
 	end
 	return
 end
@@ -2266,11 +2238,15 @@ end
 
 function sRaidFrames:CheckCarrier(unit)
 	local name = GetUnitName(unit)
-	if self.carrier and name and strlower(name) == self.carrier then
-		
+	if self.carrier and name and strlower(name) == self.carrier and not UnitIsDeadOrGhost(unit) then	
 		return true
 	end
 	return nil
+end
+
+function sRaidFrames:UpdateRaidFrames()
+	self:UpdateVisibility()
+	self:LoadStyle()
 end
 
 function sRaidFrames:TrackCarrier(msg)
@@ -2287,9 +2263,11 @@ function sRaidFrames:TrackCarrier(msg)
 		local find3 = " was dropped "
 		
 		if string.find(msg, strlower(find1..find2)) then
-			_, _, self.carrier = string.find(msg, strlower(find1..find2.."by (.+)%!"))	
+			_, _, self.carrier = string.find(msg, strlower(find1..find2.."by (.+)%!"))
+			self:UpdateRaidFrames()
 		elseif string.find(msg, strlower(find1..find3)) or string.find(msg, strlower(find0..find1)) then
 			self.carrier = nil
+			self:UpdateRaidFrames()
 		end
 	end
 end
@@ -2322,9 +2300,8 @@ function sRaidFrames:SetDegTex(force)
 						OffSet = OffSet + 360
 					end
 				end
-				if(dir == "Arrived!") then
-					ArrowIcon = FILE_PATH.."Arrived"
-				elseif(OffSet)and ((OffSet >=-5) and ( OffSet <= 5))or(OffSet < -355) then 
+
+				if(OffSet)and ((OffSet >=-5) and ( OffSet <= 5))or(OffSet < -355) then 
 					ArrowIcon = FILE_PATH.."forward"
 				elseif(OffSet)and (OffSet < -5) and (OffSet >= -15) then
 					ArrowIcon = FILE_PATH.."FLeft+2"
@@ -2372,6 +2349,8 @@ function sRaidFrames:SetDegTex(force)
 					ArrowIcon = FILE_PATH.."FRight+1"
 				elseif(OffSet)and (OffSet > 5) and (OffSet <= 15) then	
 					ArrowIcon = FILE_PATH.."FRight+2"
+				else
+					ArrowIcon = FILE_PATH.."Arrived"
 				end
 			end
 
@@ -2387,3 +2366,9 @@ function sRaidFrames:SetDegTex(force)
 
 end
 
+
+
+function cba()
+	DEFAULT_CHAT_FRAME:AddMessage(igCreatureAggroSelect)
+	
+end

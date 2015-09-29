@@ -281,6 +281,7 @@ sRaidFrames.options = {
 								sRaidFrames:S("unit_name_lenght", nil)
 								sRaidFrames:S("vertical_hp", nil)
 								sRaidFrames:S("Growth", "down")
+								sRaidFrames:S("ReverseSort", false)
 							end
 							sRaidFrames:ProfileFeedClassic()
 						end,
@@ -332,6 +333,7 @@ sRaidFrames.options = {
 								sRaidFrames:S("unit_name_lenght", nil)
 								sRaidFrames:S("vertical_hp", nil)
 								sRaidFrames:S("Growth", "down")
+								sRaidFrames:S("ReverseSort", false)
 							end
 							sRaidFrames:ProfileFeedClassic()
 
@@ -359,6 +361,7 @@ sRaidFrames.options = {
 								sRaidFrames:S("unit_name_lenght", nil)
 								sRaidFrames:S("vertical_hp", nil)
 								sRaidFrames:S("Growth", "down")
+								sRaidFrames:S("ReverseSort", false)
 							end
 							sRaidFrames:ProfileFeedClassic()
 						end,
@@ -553,6 +556,14 @@ sRaidFrames.options = {
 						order = 10,
 					},
 					
+					reset = {
+						name = L["Reset layout"],
+						type = "execute",
+						desc = L["Reset the position of sRaidFrames"],
+						func = "ResetPosition",
+						order = 12
+					},
+					
 								
 					}	
 				},				
@@ -626,166 +637,19 @@ sRaidFrames.options = {
 				},
 				
 				
-				--[[
-				range_populate = {
-				name = L["Populate with range"],
-				type = "group",
-				desc = L["Automatically populate focus frame with units in range"],
-				order = 5,
-				args = {
-					
-					
-					fill_range = {
-						name = L["Populate with range"],
-						type = "toggle",
-						desc = L["Automatically populate focus frame with units in range"],
-						get = function()
-							return sRaidFrames.opt.fill_range
-						end,
-						set = function(set)
-							if set then
-								sRaidFrames.opt.dynamic_sort = set
-								if not sRaidFrames.opt.RangeCheck and not sRaidFrames.opt.ExtendedRangeCheck and not sRaidFrames.opt.ExtendedRangeCheckCombat then
-									sRaidFrames.opt.ExtendedRangeCheckCombat = set
-								end
-								sRaidFrames:PopulateFocusMsg()
-							else
-								sRaidFrames.opt.dynamic_sort = set
-								sRaidFrames.opt.dynamic_range_sort = set
-								sRaidFrames.opt.dynamic_overheal_sort = set
-								sRaidFrames.opt.dynamic_aggro_sort = set
-	
-							end
-							sRaidFrames:S("fill_range", set)
-							sRaidFrames:UpdateVisibility()
-							sRaidFrames:LoadStyle()
-						end,
-						order = 1,
-					},
-					
-					
-					hp_limit = {
-						name = L["Set unit HP filter"],
-						type = "range",
-						desc = L["Unit filtering treshold"],
-						min = 1,
-						max = 100,
-						step = 1,
-						get = function()
-							return sRaidFrames.opt.hp_limit
-						end,
-						set = function(set)
-							sRaidFrames:S("hp_limit", set)
-						end,
-					},
-					
-					fill_range_limit = {
-						name = L["Units limit number"],
-						type = "range",
-						desc = L["Units limit number"],
-						min = 1,
-						max = 40,
-						step = 1,
-						get = function()
-							return sRaidFrames.opt.units_limit 
-						end,
-						set = function(set)
-							sRaidFrames:S("units_limit", set)
-						end,
-					},
-					
-					
-					
-					
-					
-					
-					
-			sort_focus = {
-				name = L["Sort focus"],
-				type = "group",
-				desc = L["Sort focus"],
-				order = 4,
-				args = {	
-					
-					sort_focus_hp = {
-						name = L["Dynamic sort lvl1 - health"],
-						type = "toggle",
-						desc = L["Dynamic sort lvl1 - health"],
-						get = function()
-							return sRaidFrames.opt.dynamic_sort
-						end,
-						set = function(sort)
-							sRaidFrames:S("dynamic_sort", sort)
-							
-							if not sort then
-								sRaidFrames.opt.dynamic_range_sort = sort
-								sRaidFrames.opt.dynamic_overheal_sort = sort
-								sRaidFrames.opt.dynamic_aggro_sort = sort
-							end	
-							
-						end,
-					},
-					
-					sort_focus_range = {
-						name = L["Dynamic sort lvl2 - range"],
-						type = "toggle",
-						desc = L["Dynamic sort lvl2 - range"],
-						get = function()
-							return sRaidFrames.opt.dynamic_range_sort
-						end,
-						set = function(sort)
-							sRaidFrames:S("dynamic_range_sort", sort)
-							if sort  then
-								sRaidFrames.opt.dynamic_sort = sort
-							else
-								sRaidFrames.opt.dynamic_overheal_sort = sort
-							end		
-						end,
-					},
-					
-					
-					sort_focus_overheal = {
-						name = L["Dynamic sort lvl3 - anti overheal"],
-						type = "toggle",
-						desc = L["Dynamic sort lvl3 - anti overheal"],
-						get = function()
-							return sRaidFrames.opt.dynamic_overheal_sort
-						end,
-						set = function(sort)
-							sRaidFrames:S("dynamic_overheal_sort", sort)
-							if sort then
-								sRaidFrames.opt.dynamic_sort = sort
-								sRaidFrames.opt.dynamic_range_sort = sort
-							end		
-						end,
-					},
-					
-					
-					sort_focus_aggro = {
-						name = L["Aggro units on top"],
-						type = "toggle",
-						desc = L["Aggro units on top"],
-						get = function()
-							return sRaidFrames.opt.dynamic_aggro_sort
-						end,
-						set = function(sort)
-							sRaidFrames:S("dynamic_aggro_sort", sort)
-							if sort  then
-								sRaidFrames.opt.dynamic_sort = sort
-							end		
-						end,
-					},
-					
-					
-				}
-			},
-					
-
-				}
+				wsg_focus = {
+					name = L["Add WSG carrier to focus"],
+					type = "toggle",
+					desc = L["Auto add WSG carrier to focus frame"],
+					get = function()
+						return sRaidFrames.opt.WSG_Focus
+					end,
+					set = function(value)
+						sRaidFrames:S("WSG_Focus", value)
+						sRaidFrames:UpdateFocusCarrier()
+					end,
+					order = 3,
 				},
-					
-				--]]
-				
 				
 				focus_size = {
 				name = L["Size"],
@@ -829,136 +693,7 @@ sRaidFrames.options = {
 				}
 				},
 				
-			--[[	
-			profiles = {
-			name = L["Load focus profiles"],
-			type = "group",
-			desc = L["Load predefined profiles"],
-			args = {
-				
 			
-				profile1 = {
-						name = L["Common"],
-						type = "toggle",
-						desc = L["Load predefined settings"],
-						get = function()
-							return sRaidFrames.opt.profile1
-						end,
-						set = function(value)
-							if value then
-								sRaidFrames.opt.dynamic_aggro_sort = not value
-								sRaidFrames.opt.fill_range = not value
-								
-								sRaidFrames.opt.dynamic_sort = value
-								sRaidFrames.opt.dynamic_range_sort = value
-
-								sRaidFrames:UpdateAllUnits()
-								sRaidFrames:Sort()
-								
-								sRaidFrames.opt.profile2 = not value
-								sRaidFrames.opt.profile3 = not value
-								sRaidFrames.opt.profile4 = not value
-							end
-							sRaidFrames:S("profile1", value)
-							sRaidFrames:LoadStyle()
-						end,
-						order = 1,
-					},
-				
-				profile2 = {
-						name = L["Aggro"],
-						type = "toggle",
-						desc = L["Load predefined settings"],
-						get = function()
-							return sRaidFrames.opt.profile2
-						end,
-						set = function(value)
-							if value then
-								sRaidFrames.opt.dynamic_aggro_sort = value
-								sRaidFrames.opt.fill_range = value
-								
-								sRaidFrames.opt.hp_limit = 1
-								sRaidFrames.opt.units_limit = 5
-								
-								sRaidFrames:UpdateAllUnits()
-								sRaidFrames:Sort()
-								
-								sRaidFrames.opt.profile1 = not value
-								sRaidFrames.opt.profile3 = not value
-								sRaidFrames.opt.profile4 = not value
-							end
-							sRaidFrames:S("profile2", value)
-							sRaidFrames:LoadStyle()
-						end,
-						order = 2,
-					},
-					
-				profile3 = {
-						name = L["Healer"],
-						type = "toggle",
-						desc = L["Load predefined settings"],
-						get = function()
-							return sRaidFrames.opt.profile3
-						end,
-						set = function(value)
-							if value then
-								sRaidFrames.opt.fill_range = value
-								sRaidFrames.opt.dynamic_range_sort = value
-								sRaidFrames.opt.dynamic_overheal_sort = value
-								sRaidFrames.opt.dynamic_sort = value
-								sRaidFrames.opt.dynamic_aggro_sort = not value
-								
-								sRaidFrames.opt.hp_limit = 100
-								sRaidFrames.opt.units_limit = 5
-								
-								sRaidFrames:UpdateAllUnits()
-								sRaidFrames:Sort()
-
-								sRaidFrames.opt.profile1 = not value
-								sRaidFrames.opt.profile2 = not value
-								sRaidFrames.opt.profile4 = not value
-							end
-							sRaidFrames:S("profile3", value)
-							sRaidFrames:LoadStyle()
-						end,
-						order = 3,
-					},	
-				--[[	
-				profile4 = {
-						name = L["Healer2"],
-						type = "toggle",
-						desc = L["Load predefined settings"],
-						get = function()
-							return sRaidFrames.opt.profile4
-						end,
-						set = function(value)
-							if value then
-								sRaidFrames.opt.fill_range = value
-								sRaidFrames.opt.dynamic_range_sort = value
-								sRaidFrames.opt.dynamic_overheal_sort = value
-								sRaidFrames.opt.dynamic_sort = value
-								sRaidFrames.opt.dynamic_aggro_sort = not value
-								
-								sRaidFrames.opt.hp_limit = 100
-								sRaidFrames.opt.units_limit = 5
-								
-								sRaidFrames:UpdateAllUnits()
-								sRaidFrames:Sort()
-
-								sRaidFrames.opt.profile1 = not value
-								sRaidFrames.opt.profile2 = not value
-								sRaidFrames.opt.profile3 = not value
-							end
-							sRaidFrames:S("profile4", value)
-						end,
-						order = 4,
-					},		
-					--]]
-								
-					}
-					
-				},
-			--]]
 			}
 			
 		},	
@@ -1045,7 +780,7 @@ sRaidFrames.options = {
 			order = 2,
 		},
 
-
+		--[[
 		layout = {
 			name = L["Layout"],
 			type = "group",
@@ -1070,7 +805,7 @@ sRaidFrames.options = {
 				--]]
 			},
 		},
-
+	--]]
 
 
 		sorting_method = {
@@ -1128,12 +863,13 @@ sRaidFrames.options = {
 			dead_sort = {
 				name = L["Dead and offline units sub sort"],
 				type = "toggle",
-				desc = L["Dead or offline units are moved to the bottom of frame - effect only if Grid like group sort is enabled"],
+				desc = L["Dead or offline units are moved to the bottom of frame"],
 				get = function()
 					return sRaidFrames.opt.dead_sort
 				end,
 				set = function(value)
 					sRaidFrames:S("dead_sort", value)
+					sRaidFrames:Sort()
 				end,
 				order = 9,
 			},	
@@ -1862,17 +1598,44 @@ sRaidFrames.options = {
 					order = 3,		
 				},
 				
-				rangeshow = {
+				range_show = {
 					name = L["Show estimated range"],
-					type = "toggle",
-					desc = L["Show estimated range next to player's name"],
-					get = function() return sRaidFrames.opt.RangeShow end,
-					set = function(value)
-						sRaidFrames.opt.RangeShow = value
-					end,
-					order = 4,
-					--disabled = function() return not sRaidFrames.opt.RangeCheck end,
+					type = "group",
+					desc = L["Show estimated range"],
+					args = {
+
+
+					rangeshow = {
+						name = L["Show estimated range"],
+						type = "toggle",
+						desc = L["Show estimated range next to player's name"],
+						get = function() return sRaidFrames.opt.RangeShow end,
+						set = function(value)
+							sRaidFrames.opt.RangeShow = value
+							if not value then
+								sRaidFrames.opt.FocusRangeShow = value
+							end
+						end,
+						order = 1,
+						--disabled = function() return not sRaidFrames.opt.RangeCheck end,
+					},
+
+					enable_focus = {
+						name = L["Focus units only"],
+						type = "toggle",
+						desc = L["Show estimated range only for focus units"],
+						get = function() return sRaidFrames.opt.FocusRangeShow end,
+						set = function(value)
+							if sRaidFrames.opt.RangeShow then
+								sRaidFrames.opt.FocusRangeShow = value
+							end	
+						end,
+						order = 2,
+					},	
+					
 				},
+				},	
+					
 				
 				alpha = {
 					name = L["Alpha"],
@@ -1936,17 +1699,22 @@ sRaidFrames.options = {
 					set = function(value)
 						sRaidFrames.opt.ArrowsEnable = value
 						sRaidFrames:SetDegTex(true)
+						if not value then
+							sRaidFrames.opt.FocusArrows = value
+						end
 					end,
 					order = 1,
 				},
 			
 				enable_focus = {
-					name = L["Focus unit arrows"],
+					name = L["Focus units only"],
 					type = "toggle",
 					desc = L["Enable arrows only for focus units"],
 					get = function() return sRaidFrames.opt.FocusArrows end,
 					set = function(value)
-						sRaidFrames.opt.FocusArrows = value
+						if sRaidFrames.opt.ArrowsEnable then
+							sRaidFrames.opt.FocusArrows = value
+						end	
 					end,
 					order = 2,
 				},
@@ -2213,13 +1981,15 @@ function sRaidFrames:ProfileFeedCommon()
 	sRaidFrames:S("healthDisplayType", "none")
 	
 	sRaidFrames:S("statusbar_color", true)
+	sRaidFrames:S("ScaleFocus", sRaidFrames.opt.Scale)
+	sRaidFrames:S("WidthFocus", sRaidFrames.opt.Width)
 
 end
 
 function sRaidFrames:ProfileFeedClassic()
 	sRaidFrames:chatSortBy("fixed")
 	sRaidFrames:ProfileFeedCommon()
-	sRaidFrames:S("Spacing", -4)
+	sRaidFrames:S("Spacing", -5)
 	sRaidFrames:S("show_txt_buff", nil)
 	sRaidFrames:S("Buff_Growth", "horizontal")
 	sRaidFrames:S("Buff_Anchor", "bottomright")
@@ -2227,12 +1997,13 @@ function sRaidFrames:ProfileFeedClassic()
 	sRaidFrames:chatTexture("Gradient")
 	sRaidFrames:S("buff_size", 12)
 	sRaidFrames:chatHealingIndicators("round")
-	sRaidFrames:S("Bordertexture", "Interface\\AddOns\\sRaidFrames\\borders\\UI-Tooltip-Border_Original.blp")
-	sRaidFrames:chatBorderColor(0.5, 0.5, 0.5, 1)
+	sRaidFrames:S("Bordertexture", "Interface\\AddOns\\sRaidFrames\\borders\\UI-Tooltip-Border_Grid.tga")
+	sRaidFrames:chatBorderColor(0, 0, 0, 1)
+	sRaidFrames:PositionLayout("sticky", 200, -200)
+	sRaidFrames:S("Invert", true)
 	sRaidFrames:MultidragMsg()
 	sRaidFrames:LoadStyle()
-	sRaidFrames:PositionLayout("sticky", 200, -200)
-	
+
 end
 
 function sRaidFrames:ProfileFeedGrid()
@@ -2248,9 +2019,11 @@ function sRaidFrames:ProfileFeedGrid()
 	sRaidFrames:chatHealingIndicators("square")
 	sRaidFrames:S("Bordertexture", "Interface\\AddOns\\sRaidFrames\\borders\\UI-Tooltip-Border_Grid.tga")
 	sRaidFrames:chatBorderColor(0.3, 0.3, 0.3, 1)
+	sRaidFrames:PositionLayout("sticky", 200, -200)
+	sRaidFrames:S("Invert", nil)
 	sRaidFrames:MultidragMsg()
 	sRaidFrames:LoadStyle()
-	sRaidFrames:PositionLayout("sticky", 200, -200)
+
 end
 
 function sRaidFrames:ProfileFeedPyramid()
@@ -2266,15 +2039,16 @@ function sRaidFrames:ProfileFeedPyramid()
 	sRaidFrames:chatHealingIndicators("square")
 	sRaidFrames:S("Bordertexture", "Interface\\AddOns\\sRaidFrames\\borders\\UI-Tooltip-Border_Grid.tga")
 	sRaidFrames:chatBorderColor(1, 1, 1, 1)
+	sRaidFrames:PositionLayout("sticky", 200, -200)
+	sRaidFrames:S("Invert", nil)
 	sRaidFrames:MultidragMsg()
 	sRaidFrames:LoadStyle()
-	sRaidFrames:PositionLayout("sticky", 200, -200)
 end
 
 function sRaidFrames:ProfileFeedCompact()
 	sRaidFrames:chatSortBy("fixed")
 	sRaidFrames:ProfileFeedCommon()
-	sRaidFrames:S("Spacing", -6)
+	sRaidFrames:S("Spacing", -4)
 	sRaidFrames:S("show_txt_buff", nil)
 	sRaidFrames:S("Buff_Growth", "vertical")
 	sRaidFrames:S("Buff_Anchor", "topright")
@@ -2282,15 +2056,12 @@ function sRaidFrames:ProfileFeedCompact()
 	sRaidFrames:chatTexture("BantoBar")
 	sRaidFrames:S("buff_size", 10)
 	sRaidFrames:chatHealingIndicators("square")
-	sRaidFrames:S("Bordertexture", "Interface\\AddOns\\sRaidFrames\\borders\\UI-Tooltip-Border_Grid.tga")
+	sRaidFrames:S("Bordertexture", "Interface\\AddOns\\sRaidFrames\\borders\\UI-Tooltip-Border_Original.blp")
 	sRaidFrames:chatBorderColor(0.3, 0.3, 0.3, 1)
+	sRaidFrames:PositionLayout("sticky", 200, -200)
+	sRaidFrames:S("Invert", nil)
 	sRaidFrames:MultidragMsg()
 	sRaidFrames:LoadStyle()
-	sRaidFrames:PositionLayout("sticky", 200, -200)
 end
 
-					
-function xxx()
-DEFAULT_CHAT_FRAME:AddMessage(sRaidFrames.opt.BackgroundColor.r..sRaidFrames.opt.BackgroundColor.g..sRaidFrames.opt.BackgroundColor.b)
-
-end
+				
