@@ -9,40 +9,63 @@ TheoryCraft_Settings = {
 		["Nature"] = 0,
 	},
 	["buttontexty"] = 10.22,
-	["buttontextx"] = 1.111,
+	["ColG"] = 1,
 	["ColG2"] = 1,
 	["ColR2"] = 1,
-	["ColB"] = 1,
 	["embedstyle1"] = true,
+	["ColB"] = 1,
 	["tryfirst"] = "averagedam",
 	["trysecondsfg"] = -1,
-	["combinedot"] = true,
+	["embed"] = true,
 	["tryfirstsfg"] = 0,
-	["ColG"] = 1,
+	["buttontextx"] = 1.111,
+	["ColR"] = 1,
+	["ColB2"] = 0.6862745098039216,
 	["FontPath"] = "Fonts\\ArialN.TTF",
-	["procs"] = true,
-	["mitigation"] = true,
 	["GenerateList"] = "",
 	["trysecond"] = "averagehealnocrit",
-	["dontresist"] = true,
-	["buttontext"] = true,
 	["dataversion"] = "1.06",
+	["buttontext"] = true,
+	["dontresist"] = true,
 	["CustomOutfit"] = {
-		["intellect"] = 0,
+		["destat"] = {
+			[1] = "Head",
+			[2] = "Neck",
+			[3] = "Shoulder",
+			[4] = "Chest",
+			[5] = "Waist",
+			[6] = "Legs",
+			[7] = "Feet",
+			[8] = "Wrist",
+			[9] = "Hands",
+			[10] = "Finger0",
+			[11] = "Finger1",
+			[12] = "Trinket0",
+			[13] = "Trinket1",
+			[14] = "Back",
+			[15] = "MainHand",
+			[16] = "SecondaryHand",
+			[17] = "Ranged",
+			[18] = "Tabard",
+			[19] = "Ammo",
+		},
 		["newstat"] = {
 		},
 		["slots"] = {
-			["Waist"] = {
+			["Ranged"] = {
 				["stats"] = {
-					["intellect"] = 8,
-					["stamina"] = 8,
+					["agility"] = 4,
+					["spirit"] = 4,
 				},
-				["name"] = "|cff1eff00|Hitem:14258:0:860:0|h[Bloodwoven Cord of the Eagle]|h|r",
+				["name"] = "|cff1eff00|Hitem:5216:0:508:0|h[Umbral Wand of the Wolf]|h|r",
 				["data"] = {
-					["name"] = "Bloodwoven Cord of the Eagle",
+					["name"] = "Umbral Wand of the Wolf",
 					["procs"] = {
 					},
-					["numlines"] = 7,
+					["RangedSpeed"] = 1.5,
+					["RangedMax"] = 70,
+					["numlines"] = 8,
+					["RangedMin"] = 37,
 				},
 			},
 			["Finger0"] = {
@@ -61,8 +84,8 @@ TheoryCraft_Settings = {
 			["Neck"] = {
 				["stats"] = {
 					["agility"] = 13,
-					["spirit"] = 3,
 					["strength"] = 5,
+					["spirit"] = 3,
 				},
 				["name"] = "|cff0070dd|Hitem:13089:0:0:0|h[Skibi's Pendant]|h|r",
 				["data"] = {
@@ -98,8 +121,8 @@ TheoryCraft_Settings = {
 			},
 			["Hands"] = {
 				["stats"] = {
-					["intellect"] = 6,
 					["stamina"] = 5,
+					["intellect"] = 6,
 				},
 				["name"] = "|cff1eff00|Hitem:9832:0:852:0|h[Scaled Leather Gloves of the Eagle]|h|r",
 				["data"] = {
@@ -118,11 +141,11 @@ TheoryCraft_Settings = {
 					["MainSpeed"] = 3.4,
 					["numlines"] = 12,
 					["MeleeMax"] = 118,
-					["name"] = "Plans: Frost Tiger Blade",
+					["MeleeMin"] = 78,
 					["procs"] = {
 					},
 					["MeleeAPMult"] = 3.3,
-					["MeleeMin"] = 78,
+					["name"] = "Plans: Frost Tiger Blade",
 					["CritReport"] = 1,
 				},
 			},
@@ -167,31 +190,55 @@ TheoryCraft_Settings = {
 				},
 				["name"] = "|cff1eff00|Hitem:7992:0:0:0|h[Plans: Blue Glittering Axe]|h|r",
 				["data"] = {
-					["MainSpeed"] = 1.8,
+					["AxeEquipped"] = 1,
 					["numlines"] = 11,
 					["MeleeMax"] = 61,
-					["MeleeMin"] = 32,
+					["name"] = "Plans: Blue Glittering Axe",
 					["procs"] = {
 					},
 					["MeleeAPMult"] = 2.4,
-					["AxeEquipped"] = 1,
-					["name"] = "Plans: Blue Glittering Axe",
+					["MainSpeed"] = 1.8,
+					["MeleeMin"] = 32,
 				},
 			},
-			["Ranged"] = {
+			["Waist"] = {
 				["stats"] = {
-					["agility"] = 4,
-					["spirit"] = 4,
+					["stamina"] = 8,
+					["intellect"] = 8,
 				},
-				["name"] = "|cff1eff00|Hitem:5216:0:508:0|h[Umbral Wand of the Wolf]|h|r",
+				["name"] = "|cff1eff00|Hitem:14258:0:860:0|h[Bloodwoven Cord of the Eagle]|h|r",
 				["data"] = {
-					["name"] = "Umbral Wand of the Wolf",
+					["name"] = "Bloodwoven Cord of the Eagle",
 					["procs"] = {
 					},
-					["RangedSpeed"] = 1.5,
-					["RangedMax"] = 70,
-					["RangedMin"] = 37,
-					["numlines"] = 8,
+					["numlines"] = 7,
+				},
+			},
+			["Legs"] = {
+				["stats"] = {
+					["settype"] = "Stormshroud Armor",
+					["meleecritchance"] = 2,
+				},
+				["name"] = "|cffffffff|Hitem:15741:0:0:0|h[Pattern: Stormshroud Pants]|h|r",
+				["data"] = {
+					["name"] = "Pattern: Stormshroud Pants",
+					["procs"] = {
+					},
+					["numlines"] = 22,
+					["CritReport"] = 2,
+				},
+			},
+			["Shoulder"] = {
+				["stats"] = {
+					["intellect"] = 9,
+					["agility"] = 9,
+				},
+				["name"] = "|cff1eff00|Hitem:9904:0:440:0|h[Jazeraint Pauldrons of the Falcon]|h|r",
+				["data"] = {
+					["name"] = "Jazeraint Pauldrons of the Falcon",
+					["procs"] = {
+					},
+					["numlines"] = 7,
 				},
 			},
 			["Wrist"] = {
@@ -208,65 +255,18 @@ TheoryCraft_Settings = {
 					["numlines"] = 22,
 				},
 			},
-			["Shoulder"] = {
-				["stats"] = {
-					["intellect"] = 9,
-					["agility"] = 9,
-				},
-				["name"] = "|cff1eff00|Hitem:9904:0:440:0|h[Jazeraint Pauldrons of the Falcon]|h|r",
-				["data"] = {
-					["name"] = "Jazeraint Pauldrons of the Falcon",
-					["procs"] = {
-					},
-					["numlines"] = 7,
-				},
-			},
-			["Legs"] = {
-				["stats"] = {
-					["meleecritchance"] = 2,
-					["settype"] = "Stormshroud Armor",
-				},
-				["name"] = "|cffffffff|Hitem:15741:0:0:0|h[Pattern: Stormshroud Pants]|h|r",
-				["data"] = {
-					["name"] = "Pattern: Stormshroud Pants",
-					["procs"] = {
-					},
-					["numlines"] = 22,
-					["CritReport"] = 2,
-				},
-			},
 		},
 		["agility"] = 0,
 		["name"] = "Naked",
-		["stamina"] = 0,
+		["strength"] = 0,
 		["wear"] = {
 		},
-		["destat"] = {
-			[1] = "Head",
-			[2] = "Neck",
-			[3] = "Shoulder",
-			[4] = "Chest",
-			[5] = "Waist",
-			[6] = "Legs",
-			[7] = "Feet",
-			[8] = "Wrist",
-			[9] = "Hands",
-			[10] = "Finger0",
-			[11] = "Finger1",
-			[12] = "Trinket0",
-			[13] = "Trinket1",
-			[14] = "Back",
-			[15] = "MainHand",
-			[16] = "SecondaryHand",
-			[17] = "Ranged",
-			[18] = "Tabard",
-			[19] = "Ammo",
-		},
+		["intellect"] = 0,
 		["spirit"] = 0,
-		["strength"] = 0,
+		["stamina"] = 0,
 	},
-	["ColB2"] = 0.6862745098039216,
-	["ColR"] = 1,
+	["procs"] = true,
+	["mitigation"] = true,
 	["critchancedata"] = {
 		["40:0"] = {
 			["casts"] = 5,
@@ -420,33 +420,33 @@ TheoryCraft_Settings = {
 			["casts"] = 15,
 			["crits"] = 1,
 		},
-		["296:5"] = {
-			["casts"] = 2,
-			["crits"] = 0,
+		["304:6"] = {
+			["casts"] = 64,
+			["crits"] = 11,
 		},
 		["213:5"] = {
 			["casts"] = 9,
 			["crits"] = 4,
 		},
-		["360:87.796610169492"] = {
-			["casts"] = 1,
-			["crits"] = 1,
+		["267:6"] = {
+			["casts"] = 26,
+			["crits"] = 6,
 		},
 		["29:0"] = {
 			["casts"] = 1,
 			["crits"] = 0,
 		},
-		["310:6"] = {
-			["casts"] = 3,
+		["96:0"] = {
+			["casts"] = 15,
+			["crits"] = 1,
+		},
+		["59:0"] = {
+			["casts"] = 25,
+			["crits"] = 1,
+		},
+		["91:0"] = {
+			["casts"] = 16,
 			["crits"] = 0,
-		},
-		["304:6"] = {
-			["casts"] = 64,
-			["crits"] = 11,
-		},
-		["294:6"] = {
-			["casts"] = 52,
-			["crits"] = 9,
 		},
 		["35:0"] = {
 			["casts"] = 1,
@@ -456,9 +456,9 @@ TheoryCraft_Settings = {
 			["casts"] = 7,
 			["crits"] = 0,
 		},
-		["71:0"] = {
-			["casts"] = 23,
-			["crits"] = 3,
+		["23:0"] = {
+			["casts"] = 4,
+			["crits"] = 0,
 		},
 		["140:0"] = {
 			["casts"] = 1,
@@ -484,17 +484,17 @@ TheoryCraft_Settings = {
 			["casts"] = 2,
 			["crits"] = 0,
 		},
-		["59:0"] = {
-			["casts"] = 25,
-			["crits"] = 1,
+		["296:5"] = {
+			["casts"] = 2,
+			["crits"] = 0,
 		},
 		["49:0"] = {
 			["casts"] = 6,
 			["crits"] = 0,
 		},
-		["39:0"] = {
-			["casts"] = 23,
-			["crits"] = 2,
+		["294:6"] = {
+			["casts"] = 52,
+			["crits"] = 9,
 		},
 		["41:0"] = {
 			["casts"] = 2,
@@ -504,13 +504,9 @@ TheoryCraft_Settings = {
 			["casts"] = 7,
 			["crits"] = 0,
 		},
-		["192:5"] = {
-			["casts"] = 133,
-			["crits"] = 19,
-		},
-		["106:0"] = {
-			["casts"] = 18,
-			["crits"] = 1,
+		["39:0"] = {
+			["casts"] = 23,
+			["crits"] = 2,
 		},
 		["221:5"] = {
 			["casts"] = 62,
@@ -520,65 +516,69 @@ TheoryCraft_Settings = {
 			["casts"] = 1,
 			["crits"] = 1,
 		},
-		["285:6"] = {
-			["casts"] = 6,
-			["crits"] = 0,
-		},
 		["119:5"] = {
 			["casts"] = 9,
 			["crits"] = 1,
 		},
+		["285:6"] = {
+			["casts"] = 6,
+			["crits"] = 0,
+		},
 		["275:5"] = {
 			["casts"] = 1,
+			["crits"] = 0,
+		},
+		["44:0"] = {
+			["casts"] = 9,
 			["crits"] = 0,
 		},
 		["240:5"] = {
 			["casts"] = 135,
 			["crits"] = 22,
 		},
-		["243:6"] = {
-			["casts"] = 105,
-			["crits"] = 11,
+		["52:0"] = {
+			["casts"] = 57,
+			["crits"] = 1,
 		},
 		["104:0"] = {
 			["casts"] = 2,
 			["crits"] = 1,
 		},
-		["95:0"] = {
-			["casts"] = 6,
+		["100:0"] = {
+			["casts"] = 2,
 			["crits"] = 1,
 		},
 		["300:5"] = {
 			["casts"] = 10,
 			["crits"] = 1,
 		},
-		["33:0"] = {
+		["22:0"] = {
 			["casts"] = 1,
+			["crits"] = 0,
+		},
+		["226:5"] = {
+			["casts"] = 13,
+			["crits"] = 0,
+		},
+		["310:6"] = {
+			["casts"] = 3,
 			["crits"] = 0,
 		},
 		["175:5"] = {
 			["casts"] = 11,
 			["crits"] = 1,
 		},
-		["226:5"] = {
-			["casts"] = 13,
-			["crits"] = 0,
-		},
-		["22:0"] = {
+		["33:0"] = {
 			["casts"] = 1,
 			["crits"] = 0,
 		},
-		["100:0"] = {
-			["casts"] = 2,
+		["95:0"] = {
+			["casts"] = 6,
 			["crits"] = 1,
 		},
-		["52:0"] = {
-			["casts"] = 57,
-			["crits"] = 1,
-		},
-		["44:0"] = {
-			["casts"] = 9,
-			["crits"] = 0,
+		["243:6"] = {
+			["casts"] = 105,
+			["crits"] = 11,
 		},
 		["313:6"] = {
 			["casts"] = 5,
@@ -600,21 +600,21 @@ TheoryCraft_Settings = {
 			["casts"] = 4,
 			["crits"] = 0,
 		},
-		["267:6"] = {
-			["casts"] = 26,
-			["crits"] = 6,
-		},
-		["91:0"] = {
-			["casts"] = 16,
-			["crits"] = 0,
-		},
-		["23:0"] = {
-			["casts"] = 4,
-			["crits"] = 0,
-		},
-		["96:0"] = {
-			["casts"] = 15,
+		["360:87.796610169492"] = {
+			["casts"] = 1,
 			["crits"] = 1,
+		},
+		["106:0"] = {
+			["casts"] = 18,
+			["crits"] = 1,
+		},
+		["192:5"] = {
+			["casts"] = 133,
+			["crits"] = 19,
+		},
+		["71:0"] = {
+			["casts"] = 23,
+			["crits"] = 3,
 		},
 		["61:0"] = {
 			["casts"] = 1,
@@ -625,6 +625,6 @@ TheoryCraft_Settings = {
 			["crits"] = 4,
 		},
 	},
-	["embed"] = true,
+	["combinedot"] = true,
 	["healanddamage"] = true,
 }

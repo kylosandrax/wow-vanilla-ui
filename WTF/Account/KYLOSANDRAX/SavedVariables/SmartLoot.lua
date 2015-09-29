@@ -3,22 +3,22 @@ SmartLoot_Options = {
 	["AutoConfirm"] = 1,
 	["ShowAnchor"] = false,
 	["LootFrameCount"] = 4,
-	["ShowMinimapButton"] = 1,
+	["AutoLoot"] = true,
 	["HideDefaultFrames"] = true,
 	["MinimapButtonPosition"] = 281,
-	["AutoLoot"] = true,
+	["ShowMinimapButton"] = 1,
 }
 SmartLoot_Autoroll = {
-	["Green Hakkari Bijou"] = {
-		["roll"] = 1,
-		["quality"] = 3,
+	["Essence of Undeath"] = {
+		["roll"] = 2,
+		["quality"] = 2,
 	},
 	["Pattern: Runecloth Headband"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Gold Hakkari Bijou"] = {
-		["roll"] = 1,
+	["Lambent Idol"] = {
+		["roll"] = 2,
 		["quality"] = 3,
 	},
 	["Four of Beasts"] = {
@@ -53,7 +53,7 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Plans: Thorium Leggings"] = {
+	["Aquamarine"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -249,7 +249,7 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Emerald Legplates of Strength"] = {
+	["Recipe: Purification Potion"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -381,36 +381,36 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Essence of Undeath"] = {
-		["roll"] = 2,
-		["quality"] = 2,
+	["Green Hakkari Bijou"] = {
+		["roll"] = 1,
+		["quality"] = 3,
 	},
 	["Lunar Raiment of the Owl"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Lambent Idol"] = {
-		["roll"] = 2,
+	["Gold Hakkari Bijou"] = {
+		["roll"] = 1,
 		["quality"] = 3,
 	},
-	["Clay Scarab"] = {
-		["roll"] = 1,
+	["Pattern: Brightcloth Pants"] = {
+		["roll"] = 2,
 		["quality"] = 2,
 	},
 	["Belt of Valor"] = {
 		["roll"] = 2,
 		["quality"] = 3,
 	},
-	["Pattern: Brightcloth Robe"] = {
+	["Shadowcraft Belt"] = {
 		["roll"] = 2,
-		["quality"] = 2,
+		["quality"] = 3,
 	},
 	["Pattern: Chimeric Leggings"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Libram of Rapidity"] = {
-		["roll"] = 2,
+	["Razzashi Coin"] = {
+		["roll"] = 1,
 		["quality"] = 2,
 	},
 	["Pattern: Frostweave Tunic"] = {
@@ -421,17 +421,17 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Recipe: Purification Potion"] = {
+	["Emerald Legplates of Strength"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Vilebranch Coin"] = {
+	["Witherbark Coin"] = {
 		["roll"] = 1,
 		["quality"] = 2,
 	},
-	["Grimoire of Shadow Ward IV"] = {
+	["Pattern: Brightcloth Gloves"] = {
 		["roll"] = 2,
-		["quality"] = 3,
+		["quality"] = 2,
 	},
 	["Pattern: Runecloth Shoulders"] = {
 		["roll"] = 2,
@@ -441,7 +441,7 @@ SmartLoot_Autoroll = {
 		["roll"] = 1,
 		["quality"] = 3,
 	},
-	["Recipe: Greater Fire Protection Potion"] = {
+	["Pattern: Runecloth Tunic"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -449,11 +449,11 @@ SmartLoot_Autoroll = {
 		["roll"] = 1,
 		["quality"] = 2,
 	},
-	["Pattern: Brightcloth Cloak"] = {
+	["Plans: Radiant Breastplate"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Living Essence"] = {
+	["Plans: Thorium Leggings"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -461,19 +461,19 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Plans: Radiant Leggings"] = {
-		["roll"] = 2,
-		["quality"] = 2,
-	},
 	["Essence of Water"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Aquamarine"] = {
+	["Plans: Radiant Leggings"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Plans: Radiant Breastplate"] = {
+	["Living Essence"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
+	["Pattern: Brightcloth Cloak"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -481,7 +481,7 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Pattern: Runecloth Tunic"] = {
+	["Recipe: Greater Fire Protection Potion"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -493,11 +493,11 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Pattern: Brightcloth Gloves"] = {
+	["Grimoire of Shadow Ward IV"] = {
 		["roll"] = 2,
-		["quality"] = 2,
+		["quality"] = 3,
 	},
-	["Witherbark Coin"] = {
+	["Vilebranch Coin"] = {
 		["roll"] = 1,
 		["quality"] = 2,
 	},
@@ -505,16 +505,16 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Razzashi Coin"] = {
-		["roll"] = 1,
+	["Libram of Rapidity"] = {
+		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Shadowcraft Belt"] = {
+	["Pattern: Brightcloth Robe"] = {
 		["roll"] = 2,
-		["quality"] = 3,
+		["quality"] = 2,
 	},
-	["Pattern: Brightcloth Pants"] = {
-		["roll"] = 2,
+	["Clay Scarab"] = {
+		["roll"] = 1,
 		["quality"] = 2,
 	},
 }

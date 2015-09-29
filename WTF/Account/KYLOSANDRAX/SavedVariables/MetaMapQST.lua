@@ -2,14 +2,14 @@
 QST_Options = {
 	["MapQuery"] = true,
 	["LoadAlways"] = false,
-	["Padding"] = 10,
+	["SaveDesc"] = true,
 	["SortOrder"] = "logtime",
 	["SaveHistory"] = true,
 	["ShowPlayers"] = false,
 	["ShowAll"] = false,
 	["SaveRew"] = true,
 	["ShowActive"] = false,
-	["SaveDesc"] = true,
+	["Padding"] = 10,
 }
 QST_QuestLog = {
 	[1] = {
@@ -17,7 +17,8 @@ QST_QuestLog = {
 		["qIndex"] = 2,
 		["qTitle"] = "Invaders of Alterac Valley",
 		["qDesc"] = "Listen up, Banjax.  No matter what you might have heard about the battle raging in Alterac Valley, one thing remains true: the Stormpike Expedition invaded Frostwolf Territory.  The day we allow the Alliance to invade Horde lands without a forceful response is the day I hang up my axe and live the rest of my life in shame.  Go forth and expel the invaders!",
-		["qArea"] = "Unknown",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 			[1] = "Alterac Valley Mark of Honor: 1/3",
 		},
@@ -29,8 +30,7 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
+		["qArea"] = "Unknown",
 		["qNote"] = "",
 		["qMoney"] = 58950,
 		["qZone"] = "Alterac Valley",
@@ -42,16 +42,20 @@ QST_QuestLog = {
 		["qIndex"] = 4,
 		["qTitle"] = "Proving Grounds",
 		["qDesc"] = "Hail, hunter. It has been a long time since we have had the chance to answer the call of battle. The old feelings are slow to rise but once awakened, the blood does rush. The battle rage returns...\n\nAll newcomers to the Valley must first complete the rite of battle.\n\nDeep within the Wildpaw gnoll cave is a banner of the Frostwolf. Venture forth and recover the banner. Return it to me and I shall grant you the Frostwolf initiate's insignia.",
-		["qZone"] = "Alterac Valley",
+		["qArea"] = "Unknown",
 		["qLogged"] = 1400285526,
 		["qObj"] = "Travel to the Wildpaw cavern located southeast of the main base in Alterac Valley and find the Frostwolf Banner. Return the Frostwolf Banner to Warmaster Laggrond. ",
-		["qArea"] = "Unknown",
+		["qZone"] = "Alterac Valley",
 		["qPlayer"] = {
 			["Banjax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFFFFFF00Active",
 			},
 		},
 		["qLevel"] = 60,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 5700,
 		["qReward"] = {
 			[1] = {
 				["qAmount"] = 1,
@@ -60,17 +64,14 @@ QST_QuestLog = {
 				["qAmount"] = 1,
 			},
 		},
-		["qNote"] = "",
-		["qMoney"] = 5700,
-		["qNPC"] = {
-		},
 	},
 	[3] = {
 		["qLogged"] = 1400285526,
 		["qIndex"] = 4,
 		["qTitle"] = "The Battle for Alterac",
 		["qDesc"] = "The Stormpike dwarves and their allies have invaded Alterac Valley, and we must drive them out!  To win the battle for Alterac, we must defeat their general, Vanndar Stormpike!\n\nYou will find Vanndar in Dun Baldar, in the north of Alterac Valley.\n\nDestroy him, Banjax, and then return to me.",
-		["qArea"] = "Unknown",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 		},
 		["qObj"] = "Enter Alterac Valley and defeat the dwarven general, Vanndar Stormpike.  Then, return to Voggah Deathgrip in the Alterac Mountains.",
@@ -81,8 +82,7 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
+		["qArea"] = "Unknown",
 		["qNote"] = "",
 		["qMoney"] = 8700,
 		["qZone"] = "Alterac Valley",
@@ -92,7 +92,8 @@ QST_QuestLog = {
 		["qIndex"] = 3,
 		["qTitle"] = "The Graveyards of Alterac",
 		["qDesc"] = "The battle lines of Alterac Valley are ever shifting.  Territories swing back and forth as we meet our opponents in deadly combat.  And graveyards, Banjax, are where battles rage most fierce.\n\nI want you to attack an Alliance held graveyard!  Find a graveyard with an Alliance banner in its midst and pull it from the ground.\n\nDo that and your task for me will be complete, but... if you hold the graveyard for a few minutes, then it will be ours and troops will come and relieve you.",
-		["qArea"] = "Unknown",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 			[1] = "Graveyard Assaulted: 0/1",
 		},
@@ -104,18 +105,13 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
+		["qArea"] = "Unknown",
 		["qNote"] = "",
 		["qMoney"] = 5700,
 		["qZone"] = "Alterac Valley",
 	},
 	[5] = {
-		["qReward"] = {
-			[1] = {
-				["qAmount"] = 1,
-			},
-		},
+		["qLogged"] = 1400285526,
 		["qDesc"] = "The invading Stormpike are not the only threat in the region, soldier. The war in the Valley is waged on two fronts. The cannibal Winterax trolls also vie for power.\n\nThey are lead by Korrak the Bloodrager - a cruel and cunning beast.\n\nA strike against Korrak could prove to be a crushing blow to the Winterax clan. Slay the beast and be rewarded!",
 		["qNPC"] = {
 		},
@@ -142,21 +138,22 @@ QST_QuestLog = {
 		["qZone"] = "Alterac Valley",
 		["qObj"] = "According to legend, the leader of the mighty Winterax trolls appears at will to wreak havoc on the denizens of Alterac Valley.\n\nShould Korrak make himself known, destroy him and return to Warmaster Laggrond.",
 		["qLevel"] = 60,
-		["qLogged"] = 1400285526,
-		["qNote"] = "",
-		["qItems"] = {
-			[1] = "Korrak the Bloodrager slain: 0/1",
-		},
-		["qArea"] = "Unknown",
-	},
-	[6] = {
 		["qReward"] = {
 			[1] = {
 				["qAmount"] = 1,
 			},
 		},
-		["qDesc"] = "While it is true that Korrak has been slain, one question remains: Will he remain dead? Trolls are notorious for their other-worldly tribal magics. I would not be surprised if the fallen leader was raised from the dead to once more rule over his clan.\n\nYou know what to do should this ever occur.\n\n<Warmaster Laggrond makes a cutting motion across his neck with his index finger.>\n\nAnd  this time, I want his skull. Just keep your eyes peeled, soldier.\n\nDismissed!",
+		["qNote"] = "",
 		["qArea"] = "Unknown",
+		["qItems"] = {
+			[1] = "Korrak the Bloodrager slain: 0/1",
+		},
+	},
+	[6] = {
+		["qLogged"] = 1400285526,
+		["qDesc"] = "While it is true that Korrak has been slain, one question remains: Will he remain dead? Trolls are notorious for their other-worldly tribal magics. I would not be surprised if the fallen leader was raised from the dead to once more rule over his clan.\n\nYou know what to do should this ever occur.\n\n<Warmaster Laggrond makes a cutting motion across his neck with his index finger.>\n\nAnd  this time, I want his skull. Just keep your eyes peeled, soldier.\n\nDismissed!",
+		["qNPC"] = {
+		},
 		["qTag"] = "Raid",
 		["qPlayer"] = {
 			["Banjax of Warsong [12x] Blizzlike"] = {
@@ -168,13 +165,16 @@ QST_QuestLog = {
 		["qTitle"] = "The Return of Korrak",
 		["qZone"] = "Alterac Valley",
 		["qObj"] = "Should Korrak the Bloodrager make a return to the Field of Strife, seek him out and destroy him.\n\nReturn the Skull of Korrak to Warmaster Laggrond in the Hillsbrad Foothills.",
-		["qLogged"] = 1400285526,
+		["qReward"] = {
+			[1] = {
+				["qAmount"] = 1,
+			},
+		},
 		["qLevel"] = 60,
 		["qNote"] = "",
+		["qArea"] = "Unknown",
 		["qItems"] = {
 			[1] = "Skull of Korrak: 0/1",
-		},
-		["qNPC"] = {
 		},
 	},
 	[7] = {
@@ -191,14 +191,14 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 52,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 53100,
 		["qItems"] = {
 			[1] = "Anvilrage Guardsman slain: 15/15",
 			[2] = "Anvilrage Warden slain: 1/10",
 			[3] = "Anvilrage Footman slain: 5/5",
-		},
-		["qNote"] = "",
-		["qMoney"] = 53100,
-		["qNPC"] = {
 		},
 	},
 	[8] = {
@@ -215,12 +215,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 55,
-		["qItems"] = {
-			[1] = "The Heart of the Mountain: 0/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 33000,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "The Heart of the Mountain: 0/1",
 		},
 	},
 	[9] = {
@@ -256,13 +256,13 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "Immol'thar slain: 1/1",
-			[2] = "Prince Tortheldrin slain: 1/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 8700,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Immol'thar slain: 1/1",
+			[2] = "Prince Tortheldrin slain: 1/1",
 		},
 	},
 	[11] = {
@@ -274,7 +274,8 @@ QST_QuestLog = {
 		["qDesc"] = "Without the help of adventurers, my caravan would have never made it! Scourge were coming out of the woodwork to try and stop us from getting here.\n\n<Guard Didier wipes his brow.>\n\nNow we need to wait here for Field Marshal Chambers to arrive. He'll sign your writ of safe passage to take back to Dispatch Commander Metz at Light's Hope Chapel.\n\nAnd Banjax, watch what you say around Chambers. He's the 'bite off your head and spit down your wind pipe' type of guy - except that he'll actually do it...",
 		["qZone"] = "Eastern Plaguelands",
 		["qObj"] = "Deliver the signed Writ of Safe Passage to Dispatch Commander Metz at Light's Hope Chapel in the Eastern Plaguelands.",
-		["qLogged"] = 1400285526,
+		["qNPC"] = {
+		},
 		["qPlayer"] = {
 			["Banjax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFFFFFF00Active",
@@ -291,8 +292,7 @@ QST_QuestLog = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1400285526,
 	},
 	[12] = {
 		["qLogged"] = 1400285526,
@@ -308,25 +308,16 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 58,
-		["qItems"] = {
-			[1] = "Plagued Hatchling slain: 0/20",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 35100,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Plagued Hatchling slain: 0/20",
 		},
 	},
 	[13] = {
-		["qReward"] = {
-			[1] = {
-				["qAmount"] = 1,
-			},
-			[2] = {
-				["qLink"] = "|cffffffff|Hitem:6149:0:0:0|h[Greater Mana Potion]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Potion_73",
-				["qAmount"] = 5,
-			},
-		},
+		["qLogged"] = 1400285526,
 		["qDesc"] = "I look at my undeath as a malady, orc. An illness that merely requires treatment; however, it is also a great blessing for the Argent Dawn. What better vessel to smite the heathens of the Scourge than through the undead?\n\nI am revered by my colleagues because of the sacrifices I have made, but the accolades mean nothing to me.\n\nIf you are interested in assisting the Argent Dawn, then a job I can offer.\n\nVenture to Stratholme and recover our surplus of holy water. Search the supply crates.\n",
 		["qNPC"] = {
 		},
@@ -350,7 +341,16 @@ QST_QuestLog = {
 		["qZone"] = "Stratholme",
 		["qObj"] = "Travel to Stratholme, in the north. Search the supply crates that litter the city and recover 5 Stratholme Holy Water. Return to Leonid Barthalomew the Revered when you have collected enough of the blessed fluid.",
 		["qLevel"] = 60,
-		["qLogged"] = 1400285526,
+		["qReward"] = {
+			[1] = {
+				["qAmount"] = 1,
+			},
+			[2] = {
+				["qLink"] = "|cffffffff|Hitem:6149:0:0:0|h[Greater Mana Potion]|h|r",
+				["qAmount"] = 5,
+				["qTex"] = "Interface\\Icons\\INV_Potion_73",
+			},
+		},
 		["qNote"] = "",
 		["qItems"] = {
 			[1] = "Stratholme Holy Water: 3/5",
@@ -370,13 +370,13 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "Archivist Galford slain: 0/1",
-			[2] = "Archive Burned: 0/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 62700,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Archivist Galford slain: 0/1",
+			[2] = "Archive Burned: 0/1",
 		},
 	},
 	[15] = {
@@ -393,12 +393,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "Plagued Flesh Sample: 20/20",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 62700,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Plagued Flesh Sample: 20/20",
 		},
 	},
 	[16] = {
@@ -406,7 +406,8 @@ QST_QuestLog = {
 		["qIndex"] = 25,
 		["qTitle"] = "The Great Fras Siabi",
 		["qDesc"] = "Terrible thing... what happened to Fras. You see, the town was sacked and Fras didn't want to leave his precious goods behind. The last thing I remember him saying was, 'I'll burn every last leaf before they get their damned, dirty hands on them!'\n\nI may love a good stogie but I'm no fool. I left Fras and his delightful store that day. I assume he went down in flames but if there's a chance that even one box of his famous tobacco is still intact...\n\nWhat do you say, Banjax? Find a box for ol' Smokey?",
-		["qZone"] = "Stratholme",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 			[1] = "Siabi's Premium Tobacco: 0/1",
 		},
@@ -418,8 +419,7 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
+		["qZone"] = "Stratholme",
 		["qNote"] = "",
 		["qMoney"] = 8700,
 		["qReward"] = {
@@ -442,12 +442,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 56,
-		["qItems"] = {
-			[1] = "Ursius slain: 0/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 5100,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Ursius slain: 0/1",
 		},
 	},
 	[18] = {
@@ -464,12 +464,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "Frostmaul Shards: 0/4",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 32700,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Frostmaul Shards: 0/4",
 		},
 	},
 	[19] = {
@@ -495,8 +495,7 @@ QST_QuestLog = {
 		["qIndex"] = 28,
 		["qTitle"] = "Wanted: Vile Priestess Hexx and Her Minions",
 		["qDesc"] = "By order of Primal Torntusk, Vile Priestess Hexx and her minions are to be brought to justice!\n\nA grand reward is offered for any that slay the Vile Priestess Hexx and all of her Aman'zasi elite guard.",
-		["qNPC"] = {
-		},
+		["qZone"] = "The Hinterlands",
 		["qItems"] = {
 			[1] = "Vile Priestess Hexx slain: 0/1",
 			[2] = "Vilebranch Aman'zasi Guard slain: 0/10",
@@ -504,13 +503,13 @@ QST_QuestLog = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff0070dd|Hitem:19159:0:0:0|h[Woven Ivy Necklace]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Misc_Herb_15",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qLink"] = "|cff0070dd|Hitem:19121:0:0:0|h[Deep Woodlands Cloak]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Misc_Cape_17",
+				["qAmount"] = 1,
 			},
 		},
 		["qTag"] = "Elite",
@@ -520,7 +519,8 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 51,
-		["qZone"] = "The Hinterlands",
+		["qNPC"] = {
+		},
 		["qNote"] = "",
 		["qMoney"] = 72750,
 		["qObj"] = "You have been ordered to slay Vile Priestess Hexx and 10 Vilebranch Aman'zasi Guards. See Primal Torntusk at Revantusk Village in the Hinterlands once this task is complete.\n\nVile Priestess Hexx and the Aman'zasi Guards can be found atop Jintha'alor in the Hinterlands.",
@@ -530,8 +530,7 @@ QST_QuestLog = {
 		["qIndex"] = 27,
 		["qTitle"] = "Job Opening: Guard Captain of Revantusk Village",
 		["qDesc"] = "With the loss of Guard Captain Malkhor, the position of Guard Captain of Revantusk is once again open. If you are interested in becoming Captain of the Guard for Revantusk, complete the following tasks and submit your application to Primal Torntusk:\n\nExterminate Vilebranch Berserkers.\n\nExterminate Vilebranch Shadow Hunters.\n\nExterminate Vilebranch Blood Drinkers.\n\nExterminate Vilebranch Soul Eaters.",
-		["qNPC"] = {
-		},
+		["qZone"] = "The Hinterlands",
 		["qItems"] = {
 			[1] = "Vilebranch Berserker slain: 10/10",
 			[2] = "Vilebranch Shadow Hunter slain: 0/5",
@@ -546,14 +545,15 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 51,
-		["qZone"] = "The Hinterlands",
+		["qNPC"] = {
+		},
 		["qNote"] = "",
 		["qMoney"] = 26700,
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:19120:0:0:0|h[Rune of the Guard Captain]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Misc_Rune_07",
+				["qAmount"] = 1,
 			},
 		},
 	},
@@ -581,8 +581,7 @@ QST_QuestLog = {
 		["qIndex"] = 22,
 		["qTitle"] = "Dark Vessels",
 		["qDesc"] = "The Vilebranch fight with supernatural ferocity. This is due to the foul magical weavings of the Vile Priestess Hexx.\n\nThroughout Jintha'alor you will find dark vessels of tainted blood. The vessels radiate the foul magic of the faceless blood God, empowering the Vilebranch and also driving them to madness.\n\nSteal those vessels and return them to me so that I may remove the taint and ultimately loosen the grip of the blood God.",
-		["qNPC"] = {
-		},
+		["qZone"] = "The Hinterlands",
 		["qItems"] = {
 			[1] = "Vessel of Tainted Blood: 0/10",
 		},
@@ -594,14 +593,15 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 50,
-		["qZone"] = "The Hinterlands",
+		["qNPC"] = {
+		},
 		["qNote"] = "",
 		["qMoney"] = 5100,
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:19118:0:0:0|h[Nature's Breath]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Wand_12",
+				["qAmount"] = 1,
 			},
 		},
 	},
@@ -619,11 +619,11 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
+		["qItems"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 62700,
-		["qItems"] = {
+		["qNPC"] = {
 		},
 	},
 	[25] = {
@@ -639,20 +639,22 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 1,
-		["qZone"] = "Northshire Valley",
-		["qNote"] = "",
-		["qMoney"] = 0,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qZone"] = "Northshire Valley",
 	},
 	[26] = {
-		["qLogged"] = 1407781670,
+		["qItems"] = {
+			[1] = "Kobold Vermin slain: 0/10",
+		},
 		["qIndex"] = 2,
 		["qTitle"] = "Kobold Camp Cleanup",
 		["qDesc"] = "Your first task is one of cleansing, Ryvok.  A clan of kobolds have infested the woods to the north.  Go there and fight the kobold vermin you find.  Reduce their numbers so that we may one day drive them from Northshire.",
 		["qArea"] = "Unknown",
 		["qObj"] = "Kill 10 Kobold Vermin, then return to Marshal McBride.",
-		["qZone"] = "Northshire Valley",
+		["qLogged"] = 1407781670,
 		["qPlayer"] = {
 			["Ryvok of Emerald Dream [1x] Blizzlike"] = {
 				["qStatus"] = "|cFFFFFF00Active",
@@ -663,16 +665,15 @@ QST_QuestLog = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 25,
-		["qItems"] = {
-			[1] = "Kobold Vermin slain: 0/10",
-		},
+		["qZone"] = "Northshire Valley",
 	},
 	[27] = {
 		["qLogged"] = 1427321999,
 		["qIndex"] = 2,
 		["qTitle"] = "Dark Iron Legacy",
 		["qDesc"] = "You will find Fineous Darkvire beyond the Ring of Law, in the Hall of Crafting. Kill the miserable cur and recover Ironfel.\n\nTake Ironfel to the Shrine of Thaurissan and place the hammer in its rightful place: In the hands of the statue erected in my honor.\n\nWhen this is done, the compartment in which I stored the master key will open. More importantly, Ironfel will remain forever in my grasp. Should they make an attempt to remove the hammer; both the statue and hammer will shatter, lost forever.",
-		["qZone"] = "Blackrock Depths",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 			[1] = "Ironfel: 0/1",
 		},
@@ -684,8 +685,7 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 52,
-		["qNPC"] = {
-		},
+		["qZone"] = "Blackrock Depths",
 		["qNote"] = "",
 		["qMoney"] = 75600,
 		["qReward"] = {
@@ -708,14 +708,14 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 52,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 53100,
 		["qItems"] = {
 			[1] = "Anvilrage Guardsman slain: 15/15",
 			[2] = "Anvilrage Warden slain: 5/10",
 			[3] = "Anvilrage Footman slain: 5/5",
-		},
-		["qNote"] = "",
-		["qMoney"] = 53100,
-		["qNPC"] = {
 		},
 	},
 	[29] = {
@@ -732,12 +732,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 55,
-		["qItems"] = {
-			[1] = "The Heart of the Mountain: 0/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 33000,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "The Heart of the Mountain: 0/1",
 		},
 	},
 	[30] = {
@@ -754,12 +754,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 59,
-		["qItems"] = {
-			[1] = "Bijou's Belongings: 0/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 8400,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Bijou's Belongings: 0/1",
 		},
 	},
 	[31] = {
@@ -767,7 +767,8 @@ QST_QuestLog = {
 		["qIndex"] = 7,
 		["qTitle"] = "The Pack Mistress",
 		["qDesc"] = "Some say the worg controlled by the Blackrock orcs are the creation of a supernatural force. Others say they are not true worg but instead a breed of demon dog, granted to the orcs by a fallen pit lord.\n\nThe truth is far less contrived but every bit as frightening. The worg of Blackrock come from Halycon and her mate. Halycon is the gigantic den mother of the worg. Her mate? Nobody has ever lived to tell the tale of that one.\n\nStrike at the heart of the worg. Destroy Halycon... and Stormslinger, watch your back.",
-		["qZone"] = "Blackrock Spire",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 			[1] = "Halycon slain: 0/1",
 		},
@@ -789,8 +790,7 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 59,
-		["qNPC"] = {
-		},
+		["qZone"] = "Blackrock Spire",
 		["qNote"] = "",
 		["qMoney"] = 62400,
 		["qObj"] = "Slay Halycon, pack mistress of the Bloodaxe worg.",
@@ -819,7 +819,8 @@ QST_QuestLog = {
 		["qIndex"] = 9,
 		["qTitle"] = "Mother's Milk",
 		["qDesc"] = "It's probably one of the most potent poisons in the world, orc!\n\nI've overheard the Blackrock speaking about its lethality in my jaunts into the Spire. They call it 'Mother's Milk', named after Mother Smolderweb, the big nasty spider in the Skitterweb cave.\n\nNow here's what I need from you: A live sample of the Milk, flowing through YOUR veins. Just bringing me the gland won't be enough! Get her to poison you and come back to me!\n\nThen... I get to milk ya!\n\n<Rubs his hands together in anticipation.>",
-		["qZone"] = "Blackrock Spire",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 		},
 		["qObj"] = "In the heart of Blackrock Spire you will find Mother Smolderweb. Engage her and get her to poison you. Chances are good that you will have to kill her as well. Return to Ragged John when you are poisoned so that he can 'milk' you.",
@@ -830,8 +831,7 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
+		["qZone"] = "Blackrock Spire",
 		["qNote"] = "",
 		["qMoney"] = 62700,
 		["qReward"] = {
@@ -845,7 +845,8 @@ QST_QuestLog = {
 		["qIndex"] = 10,
 		["qTitle"] = "Warlord's Command",
 		["qDesc"] = "By order of Warlord Goretooth, the following inhabitants of Blackrock Spire must be destroyed:\n\nThe rotund menace, Highlord Omokk.\n\nThe cruel and ruthless troll, War Master Voone.\n\nOverlord Wyrmthalak, taskmaster of the lesser city.\n\nYou will also be required to return any important documents that you may find.\n\nSucceed and be honored.\n\nFail and be forgotten.",
-		["qZone"] = "Blackrock Spire",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 			[1] = "Overlord Wyrmthalak slain: 0/1",
 			[2] = "Highlord Omokk slain: 1/1",
@@ -876,8 +877,7 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
+		["qZone"] = "Blackrock Spire",
 		["qNote"] = "",
 		["qMoney"] = 62700,
 		["qObj"] = "Slay Highlord Omokk, War Master Voone, and Overlord Wyrmthalak. Recover Important Blackrock Documents. Return to Warlord Goretooth in Kargath when the mission has been accomplished.",
@@ -887,7 +887,8 @@ QST_QuestLog = {
 		["qIndex"] = 12,
 		["qTitle"] = "Lethtendris's Web",
 		["qDesc"] = "The blood elf Lethtendris has overstepped her bounds.  So eager was she to gather magical power that she defied her brethren and created a device of insidious design, a web meant to siphon the tainted magical energies of Dire Maul.  Even now she gathers those energies and plans to release them against her enemies.\n\nLethtendris must be stopped.  Find her within the Warpwood Quarter of Dire Maul, defeat her and bring her web to me so that it might be returned to more clear-headed blood elves for study.",
-		["qZone"] = "Dire Maul",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 			[1] = "Lethtendris's Web: 0/1",
 		},
@@ -899,8 +900,7 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 57,
-		["qNPC"] = {
-		},
+		["qZone"] = "Dire Maul",
 		["qNote"] = "",
 		["qMoney"] = 58800,
 		["qReward"] = {
@@ -923,11 +923,11 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 62700,
-		["qNPC"] = {
+		["qItems"] = {
 		},
 	},
 	[37] = {
@@ -944,12 +944,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 58,
-		["qItems"] = {
-			[1] = "Plagued Hatchling slain: 0/20",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 35100,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Plagued Hatchling slain: 0/20",
 		},
 	},
 	[38] = {
@@ -966,22 +966,18 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 8700,
 		["qItems"] = {
 			[1] = "Doctor Theolen Krastinov slain: 1/1",
 			[2] = "Remains of Eva Sarkhoff Burned: 0/1",
 			[3] = "Remains of Lucien Sarkhoff Burned: 0/1",
 		},
-		["qNote"] = "",
-		["qMoney"] = 8700,
-		["qNPC"] = {
-		},
 	},
 	[39] = {
-		["qItems"] = {
-			[1] = "Amber Voodoo Feather: 0/2",
-			[2] = "Blue Voodoo Feather: 0/2",
-			[3] = "Green Voodoo Feather: 0/2",
-		},
+		["qLogged"] = 1427321999,
 		["qDesc"] = "The spirit totem just isn't enough.  We be needin' some voodoo magic to make it work jus' right.\n\nThe trolls in the sunken temple have feathers strong with voodoo magics.  Go there and kill Gasher, Mijan, Zolo, Hukku, Zul'lor, and Loro.  Then we have magic enough for a real spirit totem.",
 		["qNPC"] = {
 		},
@@ -1008,18 +1004,19 @@ QST_QuestLog = {
 		["qZone"] = "Shaman",
 		["qObj"] = "Bring the voodoo feathers to Bath'rah the Windwatcher.",
 		["qLevel"] = 52,
-		["qLogged"] = 1427321999,
+		["qItems"] = {
+			[1] = "Amber Voodoo Feather: 0/2",
+			[2] = "Blue Voodoo Feather: 0/2",
+			[3] = "Green Voodoo Feather: 0/2",
+		},
 		["qNote"] = "",
 		["qArea"] = "Unknown",
 	},
 	[40] = {
-		["qReward"] = {
-			[1] = {
-				["qAmount"] = 1,
-			},
-		},
+		["qLogged"] = 1427321999,
 		["qDesc"] = "Death Knight Darkreaver lords over the Great Ossuary in the Scholomance.  He threatens to twist the spirit realm to do his own bidding, and he must be stopped!  This is where the scryer you helped make comes into play.\n\nUse the divination scryer in the heart of the Great Ossuary's basement to call forth Darkreaver's spirit minions.  Defeat the spirits and the death knight himself will appear.  Stormslinger, bring me his head!  Only his demise will reverse the damage done to the spirit realm!",
-		["qArea"] = "Unknown",
+		["qNPC"] = {
+		},
 		["qTag"] = "Dungeon",
 		["qPlayer"] = {
 			["Stormslinger of Warsong [12x] Blizzlike"] = {
@@ -1031,13 +1028,16 @@ QST_QuestLog = {
 		["qTitle"] = "The Darkreaver Menace",
 		["qZone"] = "Shaman",
 		["qObj"] = "Use the Divination Scryer in the heart of the Great Ossuary's basement in the Scholomance.  Doing so will bring forth spirits you must fight.  Defeating these spirits will summon forth Death Knight Darkreaver; defeat him.\n\nBring Darkreaver's Head to Sagorne Creststrider in the Valley of Wisdom, Orgrimmar.",
-		["qLogged"] = 1427321999,
+		["qReward"] = {
+			[1] = {
+				["qAmount"] = 1,
+			},
+		},
 		["qLevel"] = 60,
 		["qNote"] = "",
+		["qArea"] = "Unknown",
 		["qItems"] = {
 			[1] = "Darkreaver's Head: 0/1",
-		},
-		["qNPC"] = {
 		},
 	},
 	[41] = {
@@ -1053,12 +1053,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 58,
-		["qItems"] = {
-			[1] = "Twilight Tablet Fragment: 0/8",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 32400,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Twilight Tablet Fragment: 0/8",
 		},
 	},
 	[42] = {
@@ -1074,12 +1074,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "Twilight Geolord slain: 8/10",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 32700,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Twilight Geolord slain: 8/10",
 		},
 	},
 	[43] = {
@@ -1096,13 +1096,13 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "Archivist Galford slain: 1/1",
-			[2] = "Archive Burned: 1/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 62700,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Archivist Galford slain: 1/1",
+			[2] = "Archive Burned: 1/1",
 		},
 	},
 	[44] = {
@@ -1119,12 +1119,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "Plagued Flesh Sample: 0/20",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 62700,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Plagued Flesh Sample: 0/20",
 		},
 	},
 	[45] = {
@@ -1139,7 +1139,8 @@ QST_QuestLog = {
 		["qDesc"] = "Ah, you're in need of my latest project... the extra-dimensional ghost revealer!  Unfortunately I've run out of funds and manpower.\n\nYou're willing to help?  Excellent!  Our first task is to build a device to harvest the very fabric of death!  Building an ectoplasmic distiller won't be an easy task, Stormslinger.\n\nI'll need you to bring me an arcanite converter, some greater eternal essences and stonescale oil. I'll also need some volcanic ash from the lava pools in the Burning Steppes to build a filter.",
 		["qZone"] = "Tanaris",
 		["qObj"] = "Return to Mux Manascrambler in Gadgetzan with 1 Delicate Arcanite Converter, 4 Greater Eternal Essence, 10 Stonescale Oil, 25 Volcanic Ash and 40 gold.",
-		["qLogged"] = 1427321999,
+		["qNPC"] = {
+		},
 		["qPlayer"] = {
 			["Stormslinger of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFFFFFF00Active",
@@ -1153,8 +1154,7 @@ QST_QuestLog = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1427321999,
 	},
 	[46] = {
 		["qLogged"] = 1427584281,
@@ -1189,12 +1189,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 55,
-		["qItems"] = {
-			[1] = "The Heart of the Mountain: 0/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 33000,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "The Heart of the Mountain: 0/1",
 		},
 	},
 	[48] = {
@@ -1202,7 +1202,8 @@ QST_QuestLog = {
 		["qIndex"] = 4,
 		["qTitle"] = "Disharmony of Fire",
 		["qDesc"] = "I can taste the foulness in the air that surrounds you, Unknown. There is another, hidden in the depths of Blackrock, who does control this foulness.\n\nThe wind and earth cry his name: Lord Incendius... but someone... something... commands this being. He is merely an emissary.\n\nFind him and discover where his master hides. Return to me when you have collected this information.\n",
-		["qZone"] = "Blackrock Depths",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 			[1] = "Lord Incendius slain: 0/1",
 			[2] = "Tablet of Kurniya: 0/1",
@@ -1228,8 +1229,7 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 56,
-		["qNPC"] = {
-		},
+		["qZone"] = "Blackrock Depths",
 		["qNote"] = "",
 		["qMoney"] = 84000,
 		["qObj"] = "Enter Blackrock Depths and track down Lord Incendius. Slay him and return any source of information you may find to Thunderheart.\n",
@@ -1248,12 +1248,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 59,
-		["qItems"] = {
-			[1] = "Bijou's Belongings: 0/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 8400,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Bijou's Belongings: 0/1",
 		},
 	},
 	[50] = {
@@ -1261,7 +1261,8 @@ QST_QuestLog = {
 		["qIndex"] = 7,
 		["qTitle"] = "En-Ay-Es-Tee-Why",
 		["qDesc"] = "Believe it or not, there are people out there willing to pay for the most vile of domesticated beast!\n\nI'd sent Bijou into the Spire to try and collect some of those spire spider eggs but I haven't heard from her in weeks. Maybe you can help me out?\n\nI'll tell you what, Unknown. Go to Blackrock Spire and collect some spire spider eggs for me. Bring them back here and not only will I give you a little cash, but I'll even domesticate one for you!",
-		["qZone"] = "Blackrock Spire",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 			[1] = "Spire Spider Egg: 0/15",
 		},
@@ -1273,8 +1274,7 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 59,
-		["qNPC"] = {
-		},
+		["qZone"] = "Blackrock Spire",
 		["qNote"] = "",
 		["qMoney"] = 35400,
 		["qReward"] = {
@@ -1288,7 +1288,8 @@ QST_QuestLog = {
 		["qIndex"] = 8,
 		["qTitle"] = "Mother's Milk",
 		["qDesc"] = "It's probably one of the most potent poisons in the world, tauren!\n\nI've overheard the Blackrock speaking about its lethality in my jaunts into the Spire. They call it 'Mother's Milk', named after Mother Smolderweb, the big nasty spider in the Skitterweb cave.\n\nNow here's what I need from you: A live sample of the Milk, flowing through YOUR veins. Just bringing me the gland won't be enough! Get her to poison you and come back to me!\n\nThen... I get to milk ya!\n\n<Rubs his hands together in anticipation.>",
-		["qZone"] = "Blackrock Spire",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 		},
 		["qObj"] = "In the heart of Blackrock Spire you will find Mother Smolderweb. Engage her and get her to poison you. Chances are good that you will have to kill her as well. Return to Ragged John when you are poisoned so that he can 'milk' you.",
@@ -1299,8 +1300,7 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
+		["qZone"] = "Blackrock Spire",
 		["qNote"] = "",
 		["qMoney"] = 62700,
 		["qReward"] = {
@@ -1314,7 +1314,8 @@ QST_QuestLog = {
 		["qIndex"] = 10,
 		["qTitle"] = "Lethtendris's Web",
 		["qDesc"] = "The blood elf Lethtendris has overstepped her bounds.  So eager was she to gather magical power that she defied her brethren and created a device of insidious design, a web meant to siphon the tainted magical energies of Dire Maul.  Even now she gathers those energies and plans to release them against her enemies.\n\nLethtendris must be stopped.  Find her within the Warpwood Quarter of Dire Maul, defeat her and bring her web to me so that it might be returned to more clear-headed blood elves for study.",
-		["qZone"] = "Dire Maul",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 			[1] = "Lethtendris's Web: 0/1",
 		},
@@ -1326,8 +1327,7 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 57,
-		["qNPC"] = {
-		},
+		["qZone"] = "Dire Maul",
 		["qNote"] = "",
 		["qMoney"] = 58800,
 		["qReward"] = {
@@ -1350,17 +1350,15 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 62700,
-		["qNPC"] = {
+		["qItems"] = {
 		},
 	},
 	[54] = {
-		["qItems"] = {
-			[1] = "Putrid Vine: 0/1",
-		},
+		["qLogged"] = 1427584281,
 		["qDesc"] = "It is as I feared -- the toxin is simply too weak for such a powerful creature.\n\nIf we are to create a toxin of high enough potency, you must venture to the bottom of the Temple of Atal'Hakkar, unlock the secrets of the altar and recover a putrid vine from the guardian there.  The temple is dangerous, and it would behoove you to bring friends.\n\nReturn to me when this is done.",
 		["qNPC"] = {
 		},
@@ -1387,7 +1385,9 @@ QST_QuestLog = {
 		["qZone"] = "Druid",
 		["qObj"] = "Retrieve a Putrid Vine from the guardian at the bottom of the Sunken Temple and return to Torwa Pathfinder.",
 		["qLevel"] = 52,
-		["qLogged"] = 1427584281,
+		["qItems"] = {
+			[1] = "Putrid Vine: 0/1",
+		},
 		["qNote"] = "",
 		["qArea"] = "Unknown",
 	},
@@ -1423,15 +1423,15 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 62700,
 		["qItems"] = {
 			[1] = "The Deed to Brill: 0/1",
 			[2] = "The Deed to Caer Darrow: 0/1",
 			[3] = "The Deed to Southshore: 0/1",
 			[4] = "The Deed to Tarren Mill: 0/1",
-		},
-		["qNote"] = "",
-		["qMoney"] = 62700,
-		["qNPC"] = {
 		},
 	},
 	[57] = {
@@ -1448,12 +1448,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "Krastinov's Bag of Horrors: 0/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 8700,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Krastinov's Bag of Horrors: 0/1",
 		},
 	},
 	[58] = {
@@ -1469,18 +1469,19 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
+		["qZone"] = "Seasonal",
 		["qNote"] = "",
 		["qMoney"] = 390,
-		["qZone"] = "Seasonal",
+		["qNPC"] = {
+		},
 	},
 	[59] = {
 		["qLogged"] = 1427584281,
 		["qIndex"] = 23,
 		["qTitle"] = "Into The Maw of Madness",
 		["qDesc"] = "I need you to venture into Hive'Regal and find what became of my dearest Natalia, Unknown. This will be no easy task for you. Before you dive headlong into the maw of madness, make sure that you go back and speak with those dwarves. They might be able to give you some tips on dealing with the silithid that inhabit that hive.\n\nAnd Unknown, if she truly is as mad as they say... do what you must.\n\n<Commander Mar'alith turns away from you.>\n",
-		["qZone"] = "Silithus",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 			[1] = "The Fate of Mistress Natalia Mar'alith: 0/1",
 		},
@@ -1492,8 +1493,7 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
+		["qZone"] = "Silithus",
 		["qNote"] = "",
 		["qMoney"] = 61200,
 		["qReward"] = {
@@ -1535,12 +1535,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 58,
-		["qItems"] = {
-			[1] = "Plagued Hatchling slain: 0/20",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 35100,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Plagued Hatchling slain: 0/20",
 		},
 	},
 	[62] = {
@@ -1557,12 +1557,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "Plagued Flesh Sample: 8/20",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 62700,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Plagued Flesh Sample: 8/20",
 		},
 	},
 	[63] = {
@@ -1579,12 +1579,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 58,
-		["qItems"] = {
-			[1] = "Plagued Hatchling slain: 0/20",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 35100,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Plagued Hatchling slain: 0/20",
 		},
 	},
 	[64] = {
@@ -1592,7 +1592,8 @@ QST_QuestLog = {
 		["qIndex"] = 18,
 		["qTitle"] = "The Perfect Poison",
 		["qDesc"] = "My brother and I run the poison operations out of the manor Ravenholdt.\n\nLord Ravenholdt tasked me to track down a new and extremely effective poison compound that can be crafted from the venom sacs of the inhabitants of Zul'Gurub and the Ruins of Ahn'Qiraj.\n\nThere are two particularly venomous beasts residing in those blasted ruins that possess what it is that we might be looking for, paladin. Bring me a venom sac from the beasts Kurinnaxx and Venoxis and we would be eternally grateful.",
-		["qZone"] = "Silithus",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 			[1] = "Venoxis's Venom Sac: 0/1",
 			[2] = "Kurinnaxx's Venom Sac: 1/1",
@@ -1612,13 +1613,13 @@ QST_QuestLog = {
 			},
 			[5] = {
 				["qLink"] = "|cff0070dd|Hitem:22347:0:0:0|h[Fahrad's Reloading Repeater]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Weapon_Crossbow_04",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Weapon_Crossbow_04",
 			},
 			[6] = {
 				["qLink"] = "|cff0070dd|Hitem:22380:0:0:0|h[Simone's Cultivating Hammer]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Hammer_05",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Hammer_05",
 			},
 		},
 		["qTag"] = "Raid",
@@ -1628,8 +1629,7 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
+		["qZone"] = "Silithus",
 		["qNote"] = "",
 		["qMoney"] = 5700,
 		["qObj"] = "Dirk Thunderwood at Cenarion Hold wants you to bring him Venoxis's Venom Sac and Kurinnaxx's Venom Sac.",
@@ -1648,13 +1648,13 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "Archivist Galford slain: 0/1",
-			[2] = "Archive Burned: 0/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 62700,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Archivist Galford slain: 0/1",
+			[2] = "Archive Burned: 0/1",
 		},
 	},
 	[66] = {
@@ -1671,12 +1671,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "Plagued Flesh Sample: 20/20",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 62700,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Plagued Flesh Sample: 20/20",
 		},
 	},
 	[67] = {
@@ -1749,11 +1749,11 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
+		["qItems"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 62700,
-		["qItems"] = {
+		["qNPC"] = {
 		},
 	},
 	[71] = {
@@ -1769,11 +1769,11 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 52,
-		["qZone"] = "Paladin",
-		["qNote"] = "",
-		["qMoney"] = 450,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 450,
+		["qZone"] = "Paladin",
 	},
 	[72] = {
 		["qLogged"] = 1427752542,
@@ -1788,11 +1788,11 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qZone"] = "Paladin",
-		["qNote"] = "",
-		["qMoney"] = 0,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qZone"] = "Paladin",
 	},
 	[73] = {
 		["qLogged"] = 1427752542,
@@ -1808,15 +1808,15 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 62700,
 		["qItems"] = {
 			[1] = "The Deed to Brill: 0/1",
 			[2] = "The Deed to Caer Darrow: 0/1",
 			[3] = "The Deed to Southshore: 0/1",
 			[4] = "The Deed to Tarren Mill: 0/1",
+		},
+		["qNote"] = "",
+		["qMoney"] = 62700,
+		["qNPC"] = {
 		},
 	},
 	[74] = {
@@ -1832,11 +1832,11 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 70,
-		["qZone"] = "Seasonal",
-		["qNote"] = "",
-		["qMoney"] = 0,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qZone"] = "Seasonal",
 	},
 	[75] = {
 		["qLogged"] = 1427752542,
@@ -1852,13 +1852,13 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 5700,
 		["qItems"] = {
 			[1] = "Frankal Questioned: 0/1",
 			[2] = "Rutgar Questioned: 0/1",
+		},
+		["qNote"] = "",
+		["qMoney"] = 5700,
+		["qNPC"] = {
 		},
 	},
 	[76] = {
@@ -1866,8 +1866,7 @@ QST_QuestLog = {
 		["qIndex"] = 16,
 		["qTitle"] = "Field Duty",
 		["qDesc"] = "Greetings, Ryvok.  Before I assign you to more involved tasks in the war, you'll need to do your share of field duty.  \n\nYou will find Captain Blackanvil's Ironforge Brigade outside Hive'Zora.\n\nReport to him or his lieutenant, Janela Stouthammer and come back to me.  I shall have a more advanced assignment for you ready.\n\nOh and please do us a favor and stay away from the Orgrimmar Legion.  We've been forced to keep the two forces well apart from one another due to mutual animosity.",
-		["qNPC"] = {
-		},
+		["qZone"] = "Silithus",
 		["qItems"] = {
 			[1] = "Signed Field Duty Papers: 0/1",
 		},
@@ -1880,8 +1879,8 @@ QST_QuestLog = {
 			},
 			[3] = {
 				["qLink"] = "|cffffffff|Hitem:20809:0:0:0|h[Tactical Assignment]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Letter_04",
+				["qAmount"] = 1,
 			},
 		},
 		["qTag"] = "Elite",
@@ -1891,7 +1890,8 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qZone"] = "Silithus",
+		["qNPC"] = {
+		},
 		["qNote"] = "",
 		["qMoney"] = 0,
 		["qObj"] = "Report for duty at the Ironforge Brigade post near Hive'Zora.  Prepare your Unsigned Field Duty Papers and obtain Signed Field Duty Papers from Captain Blackanvil and return to Windcaller Kaldon at Cenarion Hold in Silithus.\n\nNote: Healing or casting beneficial spells on a member of the Ironforge Brigade will flag you for PvP.",
@@ -1901,21 +1901,20 @@ QST_QuestLog = {
 		["qIndex"] = 17,
 		["qTitle"] = "Scouring the Desert",
 		["qDesc"] = "We recently found out that the Horde has been scavenging the Silithus desert for resources, but paid them little mind. We thought it could not be worth it to station large numbers in this sweltering desert.\n\nHowever, it was discovered the importance of the resources, and now we are scrambling to catch up.\n\nIf I have your assistance, you must go into the desert and recover the silithyst and return it here.",
-		["qNPC"] = {
-		},
+		["qZone"] = "Silithus",
 		["qItems"] = {
 			[1] = "Return Silithyst: 0/1",
 		},
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cffffffff|Hitem:13446:0:0:0|h[Major Healing Potion]|h|r",
-				["qAmount"] = 2,
 				["qTex"] = "Interface\\Icons\\INV_Potion_54",
+				["qAmount"] = 2,
 			},
 			[2] = {
 				["qLink"] = "|cffffffff|Hitem:13444:0:0:0|h[Major Mana Potion]|h|r",
-				["qAmount"] = 2,
 				["qTex"] = "Interface\\Icons\\INV_Potion_76",
+				["qAmount"] = 2,
 			},
 		},
 		["qTag"] = "PvP",
@@ -1925,7 +1924,8 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qZone"] = "Silithus",
+		["qNPC"] = {
+		},
 		["qNote"] = "",
 		["qMoney"] = 5700,
 		["qObj"] = "Find and deliver Silithyst to the Silithyst Extractor, then speak with Marshal Bluewall at the Alliance encampment near Hive'Zora.",
@@ -1943,12 +1943,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Twilight Geolord slain: 0/10",
 		},
 		["qNote"] = "",
 		["qMoney"] = 32700,
-		["qItems"] = {
-			[1] = "Twilight Geolord slain: 0/10",
+		["qNPC"] = {
 		},
 	},
 	[79] = {
@@ -1964,11 +1964,11 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
+		["qItems"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 5700,
-		["qItems"] = {
+		["qNPC"] = {
 		},
 	},
 	[80] = {
@@ -1984,12 +1984,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 57,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Skeletal Fragments: 0/15",
 		},
 		["qNote"] = "",
 		["qMoney"] = 3900,
-		["qItems"] = {
-			[1] = "Skeletal Fragments: 0/15",
+		["qNPC"] = {
 		},
 	},
 	[81] = {
@@ -1997,8 +1997,7 @@ QST_QuestLog = {
 		["qIndex"] = 26,
 		["qTitle"] = "Alas, Andorhal",
 		["qDesc"] = "Alas, the time to attack Andorhal and drive out the lich that controls it is upon us!\n\nInside the ruins of the city is where the lich - Araj the Summoner - holds dominion.  He is guarded by numerous Scourge surrounding the remains of city's center, and his personal retinue of guardians attached to him directly is formidable.  You will need numerous allies to even stand a chance of facing him successfully.\n\nDestroy Araj, Ryvok, and bring me a shard from his phylactery as proof!",
-		["qNPC"] = {
-		},
+		["qZone"] = "Western Plaguelands",
 		["qItems"] = {
 			[1] = "Araj's Phylactery Shard: 0/1",
 		},
@@ -2010,7 +2009,8 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qZone"] = "Western Plaguelands",
+		["qNPC"] = {
+		},
 		["qNote"] = "",
 		["qMoney"] = 7200,
 		["qReward"] = {
@@ -2033,14 +2033,14 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 54,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 56700,
 		["qItems"] = {
 			[1] = "Anvilrage Medic slain: 10/10",
 			[2] = "Anvilrage Soldier slain: 2/10",
 			[3] = "Anvilrage Officer slain: 2/10",
+		},
+		["qNote"] = "",
+		["qMoney"] = 56700,
+		["qNPC"] = {
 		},
 	},
 	[83] = {
@@ -2048,8 +2048,7 @@ QST_QuestLog = {
 		["qIndex"] = 7,
 		["qTitle"] = "Disharmony of Flame",
 		["qDesc"] = "The elders have felt a disturbance amongst the elements. The Dark Iron dwarves have summoned a foul spirit into our world that threatens to plague our lands with an eternal draught. This disharmony of flame must be investigated.\n\nTravel to Blackrock Mountain, through the Chasm of Flame, into the quarry. It is there that you shall find this lord of fire: Overmaster Pyron.\n\nEnd the disruption and return to me.",
-		["qNPC"] = {
-		},
+		["qArea"] = "Unknown",
 		["qItems"] = {
 			[1] = "Overmaster Pyron slain: 0/1",
 		},
@@ -2061,20 +2060,24 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 52,
-		["qArea"] = "Unknown",
+		["qNPC"] = {
+		},
 		["qNote"] = "",
 		["qMoney"] = 50850,
 		["qZone"] = "Blackrock Mountain",
 	},
 	[84] = {
-		["qLogged"] = 1428687729,
+		["qItems"] = {
+			[1] = "Blasted Boar Lung: 0/3",
+			[2] = "Scorpok Pincer: 0/2",
+			[3] = "Basilisk Brain: 0/1",
+		},
 		["qIndex"] = 9,
 		["qTitle"] = "Spirit of the Boar",
 		["qDesc"] = "When I first administered the elixir, Kylosandrax, I could tell that one or two applications would not satiate your appetite. Even now, I can see the hunger in your eyes. The concoction has addictive properties of which, seemingly, the most strong of will cannot resist.\n\nSo be it! Should you require more of the lung juice cocktail, venture back into the wasteland and find for me three blasted boar lungs, two scorpok pincers, and one basilisk brain.",
 		["qZone"] = "Blasted Lands",
 		["qObj"] = "Bring three Blasted Boar Lungs, two Scorpok Pincers, and one Basilisk Brain to Bloodmage Drazial.\n",
-		["qNPC"] = {
-		},
+		["qLogged"] = 1428687729,
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFFFFFF00Active",
@@ -2084,16 +2087,13 @@ QST_QuestLog = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffffffff|Hitem:8411:0:0:0|h[Lung Juice Cocktail]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Drink_12",
+				["qAmount"] = 1,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qItems"] = {
-			[1] = "Blasted Boar Lung: 0/3",
-			[2] = "Scorpok Pincer: 0/2",
-			[3] = "Basilisk Brain: 0/1",
+		["qNPC"] = {
 		},
 	},
 	[85] = {
@@ -2110,11 +2110,11 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
+		["qItems"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 62700,
-		["qItems"] = {
+		["qNPC"] = {
 		},
 	},
 	[86] = {
@@ -2122,23 +2122,23 @@ QST_QuestLog = {
 		["qIndex"] = 12,
 		["qTitle"] = "Libram of Protection",
 		["qDesc"] = "He wept like an infant at the loss of this libram. Mind you, I myself have wept over texts - there is no greater loss than that of knowledge and history - but to cry over this nearly useless jumbling of incantations? Preposterous! It left me to believe that the Prince was doing him a favor in flaying the flesh from his bones.\n\nBring the Libram along with a pristine black diamond, large brilliant shards, and a frayed abomination stitching and I shall recreate the Arcanum.\n\nOh, and check the north wing.",
-		["qNPC"] = {
-		},
+		["qZone"] = "Dire Maul",
 		["qItems"] = {
 			[1] = "Libram of Protection: 1/1",
 			[2] = "Pristine Black Diamond: 1/1",
-			[3] = "Large Brilliant Shard: 2/2",
+			[3] = "Large Brilliant Shard: 0/2",
 			[4] = "Frayed Abomination Stitching: 1/1",
 		},
 		["qObj"] = "Bring a Libram of Protection, 1 Pristine Black Diamond, 2 Large Brilliant Shards, and 1 Frayed Abomination Stitching to Lorekeeper Lydros in Dire Maul to receive an Arcanum of Protection.",
 		["qTag"] = "Dungeon",
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFF00FF19Completed",
+				["qStatus"] = "|cFFFFFF00Active",
 			},
 		},
 		["qLevel"] = 60,
-		["qZone"] = "Dire Maul",
+		["qNPC"] = {
+		},
 		["qNote"] = "",
 		["qMoney"] = 0,
 		["qReward"] = {
@@ -2148,14 +2148,15 @@ QST_QuestLog = {
 		},
 	},
 	[87] = {
-		["qLogged"] = 1428687729,
+		["qItems"] = {
+			[1] = "Writ of Safe Passage Signed: 0/1",
+		},
 		["qIndex"] = 11,
 		["qTitle"] = "Writ of Safe Passage",
 		["qDesc"] = "Without the help of adventurers, my caravan would have never made it! Scourge were coming out of the woodwork to try and stop us from getting here.\n\n<Guard Didier wipes his brow.>\n\nNow we need to wait here for Field Marshal Chambers to arrive. He'll sign your writ of safe passage to take back to Dispatch Commander Metz at Light's Hope Chapel.\n\nAnd Kylosandrax, watch what you say around Chambers. He's the 'bite off your head and spit down your wind pipe' type of guy - except that he'll actually do it...",
 		["qZone"] = "Eastern Plaguelands",
 		["qObj"] = "Deliver the signed Writ of Safe Passage to Dispatch Commander Metz at Light's Hope Chapel in the Eastern Plaguelands.",
-		["qNPC"] = {
-		},
+		["qLogged"] = 1428687729,
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFFFFFF00Active",
@@ -2165,23 +2166,24 @@ QST_QuestLog = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:22523:0:0:0|h[Insignia of the Dawn]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Misc_Token_ArgentDawn",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:22524:0:0:0|h[Insignia of the Crusade]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Misc_Token_ScarletCrusade",
+				["qAmount"] = 1,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qItems"] = {
-			[1] = "Writ of Safe Passage Signed: 0/1",
+		["qNPC"] = {
 		},
 	},
 	[88] = {
-		["qLogged"] = 1428687729,
+		["qItems"] = {
+			[1] = "Shadow of Doom slain: 0/1",
+		},
 		["qDesc"] = "After you bring down the defenses of the Scourge summoning circles that have appeared in the zones under attack, you will be able to confront the acolytes who protect them.\n\nIn truth, these are not men. They are shadows, some of the Lich King's most frightening creatures. They can be revealed using the necrotic runes they carry, and then destroyed with magic or strength of arms.",
 		["qNPC"] = {
 		},
@@ -2205,9 +2207,7 @@ QST_QuestLog = {
 		["qZone"] = "Invasion",
 		["qObj"] = "Go to a summoning circle and kill a Shadow of Doom, then return to Commander Thomas Helleran at Light's Hope Chapel in Eastern Plaguelands.",
 		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "Shadow of Doom slain: 0/1",
-		},
+		["qLogged"] = 1428687729,
 		["qNote"] = "",
 		["qArea"] = "Unknown",
 	},
@@ -2218,20 +2218,8 @@ QST_QuestLog = {
 		["qIndex"] = 13,
 		["qTitle"] = "Under the Shadow",
 		["qDesc"] = "The floating necropolises of the Scourge plague the lands of Horde and Alliance alike. Tanaris, the Blasted Lands, Winterspring and the Burning Steppes are blanketed in the shadows of the flying fortresses.\n\nOnly through our combined efforts will they be turned away.\n\nThe necropolises are supported by magical circles at various points in the invaded areas. We have determined that destroying the mindless hordes that surround these circles will destroy their defenses.",
-		["qArea"] = "Unknown",
-		["qLogged"] = 1428687729,
-		["qObj"] = "Check your map to find an area under Scourge attack. Go there and damage a necropolis by defeating the Scourge around them. Return 10 of their Necrotic Runes to Commander Thomas Helleran at Light's Hope Chapel in the Eastern Plaguelands.",
 		["qZone"] = "Invasion",
-		["qPlayer"] = {
-			["Kylosandrax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFFFFFF00Active",
-			},
-		},
-		["qLevel"] = 60,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 0,
+		["qLogged"] = 1428687729,
 		["qChoice"] = {
 			[1] = {
 				["qAmount"] = 1,
@@ -2239,6 +2227,18 @@ QST_QuestLog = {
 			[2] = {
 				["qAmount"] = 1,
 			},
+		},
+		["qArea"] = "Unknown",
+		["qPlayer"] = {
+			["Kylosandrax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFFFFFF00Active",
+			},
+		},
+		["qLevel"] = 60,
+		["qObj"] = "Check your map to find an area under Scourge attack. Go there and damage a necropolis by defeating the Scourge around them. Return 10 of their Necrotic Runes to Commander Thomas Helleran at Light's Hope Chapel in the Eastern Plaguelands.",
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qNPC"] = {
 		},
 	},
 	[90] = {
@@ -2273,12 +2273,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 58,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Plagued Hatchling slain: 18/20",
 		},
 		["qNote"] = "",
 		["qMoney"] = 35100,
-		["qItems"] = {
-			[1] = "Plagued Hatchling slain: 18/20",
+		["qNPC"] = {
 		},
 	},
 	[92] = {
@@ -2295,15 +2295,15 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 62700,
 		["qItems"] = {
 			[1] = "The Deed to Brill: 1/1",
 			[2] = "The Deed to Caer Darrow: 1/1",
 			[3] = "The Deed to Southshore: 0/1",
 			[4] = "The Deed to Tarren Mill: 1/1",
+		},
+		["qNote"] = "",
+		["qMoney"] = 62700,
+		["qNPC"] = {
 		},
 	},
 	[93] = {
@@ -2320,14 +2320,14 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 8700,
 		["qItems"] = {
 			[1] = "Doctor Theolen Krastinov slain: 1/1",
 			[2] = "Remains of Eva Sarkhoff Burned: 1/1",
 			[3] = "Remains of Lucien Sarkhoff Burned: 1/1",
+		},
+		["qNote"] = "",
+		["qMoney"] = 8700,
+		["qNPC"] = {
 		},
 	},
 	[94] = {
@@ -2335,8 +2335,7 @@ QST_QuestLog = {
 		["qIndex"] = 22,
 		["qTitle"] = "Field Duty",
 		["qDesc"] = "Greetings, Kylosandrax.  Before I assign you to more involved tasks in the war, you'll need to do your share of field duty.  \n\nYou will find Captain Skullsplit's Orgrimmar Legion outside Hive'Regal.\n\nReport to him and come back to me with proof of your field service.  I shall have a more advanced assignment ready for you.\n\nOh, please do your best to stay away from the Ironforge Brigade.  Tensions are high among our Alliance and Horde volunteers.",
-		["qNPC"] = {
-		},
+		["qZone"] = "Silithus",
 		["qItems"] = {
 			[1] = "Signed Field Duty Papers: 0/1",
 		},
@@ -2349,8 +2348,8 @@ QST_QuestLog = {
 			},
 			[3] = {
 				["qLink"] = "|cffffffff|Hitem:20809:0:0:0|h[Tactical Assignment]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Letter_04",
+				["qAmount"] = 1,
 			},
 		},
 		["qTag"] = "Elite",
@@ -2360,7 +2359,8 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qZone"] = "Silithus",
+		["qNPC"] = {
+		},
 		["qNote"] = "",
 		["qMoney"] = 0,
 		["qObj"] = "Report to Krug Skullsplit at the Orgrimmar Legion post in front of Hive'Regal.  Prepare your Unsigned Field Duty Papers, obtain Signed Field Duty Papers and bring them to Windcaller Kaldon in Cenarion Hold.\n\nNote: Healing or casting beneficial spells on a member of the Orgrimmar Legion will flag you for PvP.",
@@ -2370,8 +2370,7 @@ QST_QuestLog = {
 		["qIndex"] = 23,
 		["qTitle"] = "Hive'Ashi Scout Report",
 		["qDesc"] = "We've sent our best scouts deep into the silithid hives to gather intelligence.  Scout Jalia has been watching the silithid movements at Hive'Ashi for several days now.  Find her and obtain a written report.  We need to be able to act on that information as soon as possible, Kylosandrax.",
-		["qNPC"] = {
-		},
+		["qZone"] = "Silithus",
 		["qItems"] = {
 			[1] = "Hive'Ashi Scout Report: 0/1",
 		},
@@ -2383,19 +2382,20 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qZone"] = "Silithus",
+		["qNPC"] = {
+		},
 		["qNote"] = "",
 		["qMoney"] = 0,
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:20801:0:0:0|h[Cenarion Tactical Badge]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Jewelry_Amulet_02",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qLink"] = "|cffffffff|Hitem:20809:0:0:0|h[Tactical Assignment]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Letter_04",
+				["qAmount"] = 1,
 			},
 		},
 	},
@@ -2404,8 +2404,7 @@ QST_QuestLog = {
 		["qIndex"] = 24,
 		["qTitle"] = "Hive'Regal Scout Report",
 		["qDesc"] = "We've sent our best scouts deep into the silithid hives to gather intelligence.  Scout Landion has been watching the silithid movements at Hive'Regal for several days now.  Find him and obtain a written report.  We need to be able to act on that information as soon as possible, Kylosandrax.",
-		["qNPC"] = {
-		},
+		["qZone"] = "Silithus",
 		["qItems"] = {
 			[1] = "Hive'Regal Scout Report: 0/1",
 		},
@@ -2417,14 +2416,15 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qZone"] = "Silithus",
+		["qNPC"] = {
+		},
 		["qNote"] = "",
 		["qMoney"] = 0,
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:20801:0:0:0|h[Cenarion Tactical Badge]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Jewelry_Amulet_02",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qAmount"] = 1,
@@ -2436,10 +2436,9 @@ QST_QuestLog = {
 		["qIndex"] = 25,
 		["qTitle"] = "Lords of the Council",
 		["qDesc"] = "Lords of the Abyssal Council can only be summoned through the greater wind stones, and only the top ranking members of the Twilight's Council may speak to them.  But... I have found a way to upgrade your disguise and fool the Abyssal Lords!\n\nThe disguise calls for a ring of lordship, worn only by the highest members of the cult.  I will craft one for you if you can bring me large brilliant shards and abyssal signets.",
-		["qNPC"] = {
-		},
+		["qZone"] = "Silithus",
 		["qItems"] = {
-			[1] = "Large Brilliant Shard: 2/5",
+			[1] = "Large Brilliant Shard: 0/5",
 			[2] = "Abyssal Signet: 0/3",
 		},
 		["qObj"] = "Bring 5 Large Brilliant Shards and 3 Abyssal Signets to Aurel Goldleaf in Cenarion Hold.",
@@ -2450,7 +2449,8 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qZone"] = "Silithus",
+		["qNPC"] = {
+		},
 		["qNote"] = "",
 		["qMoney"] = 5730,
 		["qReward"] = {
@@ -2464,8 +2464,7 @@ QST_QuestLog = {
 		["qIndex"] = 26,
 		["qTitle"] = "Signet of the Dukes",
 		["qDesc"] = "Huum tells me you've figured out how to summon the Abyssal Dukes!  That's quite an accomplishment.\n\nYou know what else would be quite the accomplishment?  Smashing up one of those things really good.  That'll cause an impression on their underlings, if you know what I mean.  Bring back its signet as proof of the deed.",
-		["qNPC"] = {
-		},
+		["qZone"] = "Silithus",
 		["qItems"] = {
 			[1] = "Abyssal Signet: 0/1",
 		},
@@ -2477,7 +2476,8 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qZone"] = "Silithus",
+		["qNPC"] = {
+		},
 		["qNote"] = "",
 		["qMoney"] = 61200,
 		["qReward"] = {
@@ -2499,18 +2499,22 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 34200,
 		["qItems"] = {
 			[1] = "Twilight Lexicon - Chapter 1: 1/1",
 			[2] = "Twilight Lexicon - Chapter 2: 0/1",
 			[3] = "Twilight Lexicon - Chapter 3: 0/1",
 		},
+		["qNote"] = "",
+		["qMoney"] = 34200,
+		["qNPC"] = {
+		},
 	},
 	[100] = {
-		["qLogged"] = 1428690760,
+		["qReward"] = {
+			[1] = {
+				["qAmount"] = 1,
+			},
+		},
 		["qDesc"] = "I have a buyer who is interested in one of those Giant Goblin Eggs. He mentioned something about adding a couple of them as a zoo attraction.\n\nIf you are interested in the reward I am offering, travel to any dungeon and defeat any boss that may hold the egg.",
 		["qNPC"] = {
 		},
@@ -2525,24 +2529,21 @@ QST_QuestLog = {
 		["qTitle"] = "Giant Goblin Eggs!",
 		["qZone"] = "Seasonal",
 		["qObj"] = "The Spring Collector has asked you to obtain a Giant Goblin Egg for him.",
-		["qReward"] = {
-			[1] = {
-				["qAmount"] = 1,
-			},
-		},
+		["qLogged"] = 1428690760,
 		["qLevel"] = 60,
 		["qNote"] = "",
-		["qArea"] = "Unknown",
 		["qItems"] = {
 			[1] = "Giant Egg: 1/1",
 		},
+		["qArea"] = "Unknown",
 	},
 	[101] = {
 		["qLogged"] = 1428770296,
 		["qIndex"] = 28,
 		["qTitle"] = "Paragons of Power: The Haruspex's Belt",
 		["qDesc"] = "We Zandalar know not of druidic ways; nature is to be shaped by our need, not the other way around.  Still, a haruspex is the one of us most in tune with nature, and rightly so.  To give up the ghost of a beastie is to know what it is to be one of them.  That is the real power of nature.\n\nBring me an offerin' of the Paragons of Power from inside Zul'Gurub, proving yourself to us.  Do this, and I'll give ya a powerful item - a belt used by many of the Zandalar's haruspices.\n\nStrong mojo, ya mon!",
-		["qZone"] = "Zul'Gurub",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 			[1] = "Primal Hakkari Sash: 0/1",
 		},
@@ -2554,15 +2555,14 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
+		["qZone"] = "Zul'Gurub",
 		["qNote"] = "",
 		["qMoney"] = 3900,
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffa335ee|Hitem:19839:0:0:0|h[Zandalar Haruspex's Belt]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Belt_01",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Belt_01",
 			},
 		},
 	},
@@ -2571,7 +2571,8 @@ QST_QuestLog = {
 		["qIndex"] = 28,
 		["qTitle"] = "Paragons of Power: The Haruspex's Tunic",
 		["qDesc"] = "The ultimate symbol of a haruspex's power is what they wear, Ryjax.  Of these, the tunic symbolizes the connection between themselves and the divine wisdom they seek.  It often weaves parts of the beasties they sacrifice into the tunic; this reminds them of the connection they have to their gifts.\n\nBring me an offerin' of the Paragons of Power from inside Zul'Gurub and prove your worth to us.  Do this, and a tunic seeping with the true power of a haruspex is yours.",
-		["qZone"] = "Zul'Gurub",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 			[1] = "Primal Hakkari Tabard: 0/1",
 		},
@@ -2583,15 +2584,14 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
+		["qZone"] = "Zul'Gurub",
 		["qNote"] = "",
 		["qMoney"] = 5730,
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffa335ee|Hitem:19838:0:0:0|h[Zandalar Haruspex's Tunic]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Chest_Leather_06",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Chest_Leather_06",
 			},
 		},
 	},
@@ -2600,7 +2600,8 @@ QST_QuestLog = {
 		["qIndex"] = 29,
 		["qTitle"] = "Paragons of Power: The Vindicator's Breastplate",
 		["qDesc"] = "The vindicator's symbol of power is the breastplate.  It is forged with powerful mojo.  It is trusted only to those we revere.  It is the Zandalar symbol of vengeance.\n\nTo become a vindicator is to become vengeance.  Take the Paragons of Power we need from Zul'Gurub.  Bring them to us.  We will take the mojo stolen from us.  We will make the minions of Hakkar pay.  We will reward you with the vindicator's breastplate.\n\nGo.  Be our vengeance, Unknown.",
-		["qZone"] = "Zul'Gurub",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 			[1] = "Primal Hakkari Kossack: 0/1",
 		},
@@ -2612,15 +2613,14 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
+		["qZone"] = "Zul'Gurub",
 		["qNote"] = "",
 		["qMoney"] = 3900,
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffa335ee|Hitem:19822:0:0:0|h[Zandalar Vindicator's Breastplate]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Chest_Plate07",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Chest_Plate07",
 			},
 		},
 	},
@@ -2637,12 +2637,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 56,
-		["qItems"] = {
-			[1] = "Discordant Bracers: 0/12",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 3750,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Discordant Bracers: 0/12",
 		},
 	},
 	[105] = {
@@ -2658,13 +2658,13 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 57,
-		["qItems"] = {
-			[1] = "Dust Stormer slain: 0/15",
-			[2] = "Desert Rumbler slain: 0/15",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 5250,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Dust Stormer slain: 0/15",
+			[2] = "Desert Rumbler slain: 0/15",
 		},
 	},
 	[106] = {
@@ -2700,12 +2700,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 55,
-		["qItems"] = {
-			[1] = "The Heart of the Mountain: 0/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 33000,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "The Heart of the Mountain: 0/1",
 		},
 	},
 	[108] = {
@@ -2713,7 +2713,8 @@ QST_QuestLog = {
 		["qIndex"] = 5,
 		["qTitle"] = "Kibler's Exotic Pets",
 		["qDesc"] = "You're probably wondering what I'm doing out here. Look at the cages! Ain't it obvious?\n\nI'm an animal lover, first and foremost, but a salesman by trade. I track down exotic animals for the rich and famous and domesticate the beasts so they behave as proper pets.\n\nNow you're probably wondering, \"What can I do for you, Kibler.\" The answer is simple: Take this here beast cage and find me some worg pups. For that, I'll domesticate a worg for you!\n",
-		["qZone"] = "Blackrock Spire",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 			[1] = "Caged Worg Pup: 0/1",
 		},
@@ -2725,8 +2726,7 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 59,
-		["qNPC"] = {
-		},
+		["qZone"] = "Blackrock Spire",
 		["qNote"] = "",
 		["qMoney"] = 35400,
 		["qReward"] = {
@@ -2759,7 +2759,8 @@ QST_QuestLog = {
 		["qIndex"] = 7,
 		["qTitle"] = "The Pack Mistress",
 		["qDesc"] = "Some say the worg controlled by the Blackrock orcs are the creation of a supernatural force. Others say they are not true worg but instead a breed of demon dog, granted to the orcs by a fallen pit lord.\n\nThe truth is far less contrived but every bit as frightening. The worg of Blackrock come from Halycon and her mate. Halycon is the gigantic den mother of the worg. Her mate? Nobody has ever lived to tell the tale of that one.\n\nStrike at the heart of the worg. Destroy Halycon... and Zapunzel, watch your back.",
-		["qZone"] = "Blackrock Spire",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 			[1] = "Halycon slain: 0/1",
 		},
@@ -2781,8 +2782,7 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 59,
-		["qNPC"] = {
-		},
+		["qZone"] = "Blackrock Spire",
 		["qNote"] = "",
 		["qMoney"] = 62400,
 		["qObj"] = "Slay Halycon, pack mistress of the Bloodaxe worg.",
@@ -2792,7 +2792,8 @@ QST_QuestLog = {
 		["qIndex"] = 8,
 		["qTitle"] = "Mother's Milk",
 		["qDesc"] = "It's probably one of the most potent poisons in the world, troll!\n\nI've overheard the Blackrock speaking about its lethality in my jaunts into the Spire. They call it 'Mother's Milk', named after Mother Smolderweb, the big nasty spider in the Skitterweb cave.\n\nNow here's what I need from you: A live sample of the Milk, flowing through YOUR veins. Just bringing me the gland won't be enough! Get her to poison you and come back to me!\n\nThen... I get to milk ya!\n\n<Rubs his hands together in anticipation.>",
-		["qZone"] = "Blackrock Spire",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 		},
 		["qObj"] = "In the heart of Blackrock Spire you will find Mother Smolderweb. Engage her and get her to poison you. Chances are good that you will have to kill her as well. Return to Ragged John when you are poisoned so that he can 'milk' you.",
@@ -2803,8 +2804,7 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
+		["qZone"] = "Blackrock Spire",
 		["qNote"] = "",
 		["qMoney"] = 62700,
 		["qReward"] = {
@@ -2818,7 +2818,8 @@ QST_QuestLog = {
 		["qIndex"] = 9,
 		["qTitle"] = "Warlord's Command",
 		["qDesc"] = "By order of Warlord Goretooth, the following inhabitants of Blackrock Spire must be destroyed:\n\nThe rotund menace, Highlord Omokk.\n\nThe cruel and ruthless troll, War Master Voone.\n\nOverlord Wyrmthalak, taskmaster of the lesser city.\n\nYou will also be required to return any important documents that you may find.\n\nSucceed and be honored.\n\nFail and be forgotten.",
-		["qZone"] = "Blackrock Spire",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 			[1] = "Overlord Wyrmthalak slain: 1/1",
 			[2] = "Highlord Omokk slain: 0/1",
@@ -2849,8 +2850,7 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
+		["qZone"] = "Blackrock Spire",
 		["qNote"] = "",
 		["qMoney"] = 62700,
 		["qObj"] = "Slay Highlord Omokk, War Master Voone, and Overlord Wyrmthalak. Recover Important Blackrock Documents. Return to Warlord Goretooth in Kargath when the mission has been accomplished.",
@@ -2868,12 +2868,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 54,
-		["qItems"] = {
-			[1] = "Fractured Elemental Shard: 0/10",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 56700,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Fractured Elemental Shard: 0/10",
 		},
 	},
 	[114] = {
@@ -2881,7 +2881,8 @@ QST_QuestLog = {
 		["qIndex"] = 13,
 		["qTitle"] = "Pusillin and the Elder Azj'Tordin",
 		["qDesc"] = "I had let my guard down for only one moment, stranger. In my haste to escape the grip of the fallen Prince, I was robbed. A most foul demon, the imp Pusillin, pilfered my book of incantations and the key to the once great halls of Eldre'Thalas.\n\nI no longer hold interest in the key, as I have exchanged my immortality for freedom, but I desperately need my book of incantations.\n\nFind the imp, Pusillin, and recover my book.\n\nSearch the Warpwood Quarter of Dire Maul for Pusillin.",
-		["qZone"] = "Dire Maul",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 			[1] = "Book of Incantations: 1/1",
 		},
@@ -2900,8 +2901,7 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 58,
-		["qNPC"] = {
-		},
+		["qZone"] = "Dire Maul",
 		["qNote"] = "",
 		["qMoney"] = 60600,
 		["qObj"] = "Travel to Dire Maul and locate the Imp, Pusillin. Convince Pusillin to give you Azj'Tordin's Book of Incantations through any means necessary.\n\nReturn to Azj'Tordin at the Lariss Pavilion in Feralas should you recover the Book of Incantations.",
@@ -2920,11 +2920,11 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 62700,
-		["qNPC"] = {
+		["qItems"] = {
 		},
 	},
 	[116] = {
@@ -2940,11 +2940,11 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 52,
-		["qNPC"] = {
-		},
+		["qZone"] = "Mage",
 		["qNote"] = "",
 		["qMoney"] = 450,
-		["qZone"] = "Mage",
+		["qNPC"] = {
+		},
 	},
 	[117] = {
 		["qLogged"] = 1431297826,
@@ -2960,12 +2960,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 58,
-		["qItems"] = {
-			[1] = "Plagued Hatchling slain: 0/20",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 35100,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Plagued Hatchling slain: 0/20",
 		},
 	},
 	[118] = {
@@ -2982,15 +2982,15 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 62700,
 		["qItems"] = {
 			[1] = "The Deed to Brill: 1/1",
 			[2] = "The Deed to Caer Darrow: 0/1",
 			[3] = "The Deed to Southshore: 0/1",
 			[4] = "The Deed to Tarren Mill: 0/1",
-		},
-		["qNote"] = "",
-		["qMoney"] = 62700,
-		["qNPC"] = {
 		},
 	},
 	[119] = {
@@ -2998,7 +2998,8 @@ QST_QuestLog = {
 		["qIndex"] = 21,
 		["qTitle"] = "The Perfect Poison",
 		["qDesc"] = "My brother and I run the poison operations out of the manor Ravenholdt.\n\nLord Ravenholdt tasked me to track down a new and extremely effective poison compound that can be crafted from the venom sacs of the inhabitants of Zul'Gurub and the Ruins of Ahn'Qiraj.\n\nThere are two particularly venomous beasts residing in those blasted ruins that possess what it is that we might be looking for, mage. Bring me a venom sac from the beasts Kurinnaxx and Venoxis and we would be eternally grateful.",
-		["qZone"] = "Silithus",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 			[1] = "Venoxis's Venom Sac: 0/1",
 			[2] = "Kurinnaxx's Venom Sac: 0/1",
@@ -3030,8 +3031,7 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
+		["qZone"] = "Silithus",
 		["qNote"] = "",
 		["qMoney"] = 5700,
 		["qObj"] = "Dirk Thunderwood at Cenarion Hold wants you to bring him Venoxis's Venom Sac and Kurinnaxx's Venom Sac.",
@@ -3050,13 +3050,13 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "Archivist Galford slain: 0/1",
-			[2] = "Archive Burned: 0/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 62700,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Archivist Galford slain: 0/1",
+			[2] = "Archive Burned: 0/1",
 		},
 	},
 	[121] = {
@@ -3073,12 +3073,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "Plagued Flesh Sample: 11/20",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 62700,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Plagued Flesh Sample: 11/20",
 		},
 	},
 	[122] = {
@@ -3131,12 +3131,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 56,
-		["qItems"] = {
-			[1] = "Ursius slain: 0/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 5100,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Ursius slain: 0/1",
 		},
 	},
 	[125] = {
@@ -3153,12 +3153,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "Frostmaul Shards: 0/4",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 32700,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Frostmaul Shards: 0/4",
 		},
 	},
 	[126] = {
@@ -3166,7 +3166,8 @@ QST_QuestLog = {
 		["qIndex"] = 19,
 		["qTitle"] = "The Perfect Poison",
 		["qDesc"] = "My brother and I run the poison operations out of the manor Ravenholdt.\n\nLord Ravenholdt tasked me to track down a new and extremely effective poison compound that can be crafted from the venom sacs of the inhabitants of Zul'Gurub and the Ruins of Ahn'Qiraj.\n\nThere are two particularly venomous beasts residing in those blasted ruins that possess what it is that we might be looking for, hunter. Bring me a venom sac from the beasts Kurinnaxx and Venoxis and we would be eternally grateful.",
-		["qZone"] = "Silithus",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 			[1] = "Venoxis's Venom Sac: 0/1",
 			[2] = "Kurinnaxx's Venom Sac: 0/1",
@@ -3174,33 +3175,33 @@ QST_QuestLog = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff0070dd|Hitem:22378:0:0:0|h[Ravenholdt Slicer]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Sword_38",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Sword_38",
 			},
 			[2] = {
 				["qLink"] = "|cff0070dd|Hitem:22379:0:0:0|h[Shivsprocket's Shiv]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Sword_21",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Sword_21",
 			},
 			[3] = {
 				["qLink"] = "|cff0070dd|Hitem:22377:0:0:0|h[The Thunderwood Poker]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Sword_17",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Sword_17",
 			},
 			[4] = {
 				["qLink"] = "|cff0070dd|Hitem:22348:0:0:0|h[Doomulus Prime]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Hammer_10",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Hammer_10",
 			},
 			[5] = {
 				["qLink"] = "|cff0070dd|Hitem:22347:0:0:0|h[Fahrad's Reloading Repeater]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Weapon_Crossbow_04",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Weapon_Crossbow_04",
 			},
 			[6] = {
 				["qLink"] = "|cff0070dd|Hitem:22380:0:0:0|h[Simone's Cultivating Hammer]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Hammer_05",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Hammer_05",
 			},
 		},
 		["qTag"] = "Raid",
@@ -3210,8 +3211,7 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
+		["qZone"] = "Silithus",
 		["qNote"] = "",
 		["qMoney"] = 5700,
 		["qObj"] = "Dirk Thunderwood at Cenarion Hold wants you to bring him Venoxis's Venom Sac and Kurinnaxx's Venom Sac.",
@@ -3221,7 +3221,8 @@ QST_QuestLog = {
 		["qIndex"] = 2,
 		["qTitle"] = "Cloak of the Unseen Path",
 		["qDesc"] = "I'm glad to hear you're aiding us in our attack on Ahn'Qiraj, Banjax.  I can make you a protective item that'll be of assistance in the fight against our enemy, hunter.\n\nI shall need a Qiraji drape, which I'll resize for you of course.  I'll also need idols and scarabs which I'll use to create a suitable clasp.\n\nI promise you won't be disappointed.",
-		["qZone"] = "Ahn'Qiraj",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 			[1] = "Qiraji Regal Drape: 0/1",
 			[2] = "Lambent Idol: 0/2",
@@ -3236,15 +3237,14 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
+		["qZone"] = "Ahn'Qiraj",
 		["qNote"] = "",
 		["qMoney"] = 5730,
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffa335ee|Hitem:21403:0:0:0|h[Cloak of the Unseen Path]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_Cape_15",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Misc_Cape_15",
 			},
 		},
 	},
@@ -3253,7 +3253,8 @@ QST_QuestLog = {
 		["qIndex"] = 2,
 		["qTitle"] = "Scythe of the Unseen Path",
 		["qDesc"] = "The Qiraji and their servants wield items made with the rarest and finest materials: bones from gargantuan ancient creatures, gems from the depths of the earth, metals pure and strong.\n\nJust the sight of Qiraji artifacts fills me with an urge to practice my craft with their shattered and smelted pieces.  Prove your allegiance to the Circle, Banjax, and I will make you a powerful weapon from the finest Qiraji materials.",
-		["qZone"] = "Ahn'Qiraj",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 			[1] = "Qiraji Spiked Hilt: 0/1",
 			[2] = "Azure Idol: 0/2",
@@ -3268,15 +3269,14 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
+		["qZone"] = "Ahn'Qiraj",
 		["qNote"] = "",
 		["qMoney"] = 5730,
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffa335ee|Hitem:21401:0:0:0|h[Scythe of the Unseen Path]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Axe_15",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Axe_15",
 			},
 		},
 	},
@@ -3287,10 +3287,7 @@ QST_QuestLog = {
 		["qDesc"] = "The badges you collect from performing combat, logistics and tactical assignments for Cenarion Hold are more than just for show, Banjax.\n\nYou'd be wise to hold on to them.  As you prove your loyalty to our organization I can offer you some of the gear we reserve for our closest allies in exchange for those badges.  ",
 		["qZone"] = "Silithus",
 		["qObj"] = "Bring 5 Cenarion Combat Badges, 3 Cenarion Logistics Badges and 7 Cenarion Tactical Badges to Vargus at Cenarion Hold in Silithus.  You must also attain Friendly reputation with Cenarion Circle to be able to complete this quest.",
-		["qItems"] = {
-			[1] = "Cenarion Combat Badge: 0/5",
-			[2] = "Cenarion Logistics Badge: 0/3",
-			[3] = "Cenarion Tactical Badge: 0/7",
+		["qNPC"] = {
 		},
 		["qPlayer"] = {
 			["Banjax of Warsong [12x] Blizzlike"] = {
@@ -3301,23 +3298,26 @@ QST_QuestLog = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff0070dd|Hitem:21178:0:0:0|h[Gloves of Earthen Power]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Gauntlets_18",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Gauntlets_18",
 			},
 			[2] = {
 				["qLink"] = "|cff0070dd|Hitem:21179:0:0:0|h[Band of Earthen Wrath]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Jewelry_Ring_18",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Jewelry_Ring_18",
 			},
 			[3] = {
 				["qLink"] = "|cff0070dd|Hitem:21187:0:0:0|h[Earthweave Cloak]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_Cape_07",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Misc_Cape_07",
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Cenarion Combat Badge: 0/5",
+			[2] = "Cenarion Logistics Badge: 0/3",
+			[3] = "Cenarion Tactical Badge: 0/7",
 		},
 	},
 	[130] = {
@@ -3333,11 +3333,11 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 5700,
-		["qNPC"] = {
+		["qItems"] = {
 		},
 	},
 	[131] = {
@@ -3345,8 +3345,7 @@ QST_QuestLog = {
 		["qIndex"] = 17,
 		["qTitle"] = "Abyssal Contacts",
 		["qDesc"] = "We've seen the Twilight's Hammer cultists performing rituals to summon powerful elemental nobles.  We don't know if these are the beings the cultists worship or if they act as intermediaries to even more powerful forces.  One thing is for sure: they are receiving orders from these elementals.\n\nI want you to find a way to contact an Abyssal Templar and give it a proper beating!  Nothing throws the troops in disarray like taking out the chain of command.  Bring back proof while you're at it.",
-		["qNPC"] = {
-		},
+		["qZone"] = "Silithus",
 		["qItems"] = {
 			[1] = "Abyssal Crest: 0/1",
 		},
@@ -3358,7 +3357,8 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qZone"] = "Silithus",
+		["qNPC"] = {
+		},
 		["qNote"] = "",
 		["qMoney"] = 32700,
 		["qReward"] = {
@@ -3380,12 +3380,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Twilight Geolord slain: 10/10",
 		},
 		["qNote"] = "",
 		["qMoney"] = 32700,
-		["qItems"] = {
-			[1] = "Twilight Geolord slain: 10/10",
+		["qNPC"] = {
 		},
 	},
 	[133] = {
@@ -3401,12 +3401,12 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 58,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Twilight Tablet Fragment: 8/8",
 		},
 		["qNote"] = "",
 		["qMoney"] = 32400,
-		["qItems"] = {
-			[1] = "Twilight Tablet Fragment: 8/8",
+		["qNPC"] = {
 		},
 	},
 	[134] = {
@@ -3423,13 +3423,13 @@ QST_QuestLog = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 5700,
 		["qItems"] = {
 			[1] = "Frankal Questioned: 0/1",
 			[2] = "Rutgar Questioned: 0/1",
+		},
+		["qNote"] = "",
+		["qMoney"] = 5700,
+		["qNPC"] = {
 		},
 	},
 	[135] = {
@@ -3451,14 +3451,15 @@ QST_QuestLog = {
 		},
 	},
 	[136] = {
-		["qLogged"] = 1442874468,
+		["qItems"] = {
+			[1] = "Vyral's Signet Ring: 0/1",
+		},
 		["qIndex"] = 20,
 		["qTitle"] = "Vyral the Vile",
 		["qDesc"] = "We have discovered another base of operations for the Twilight's Hammer.  It is called Twilight's Run; it is a cave tucked in the northeast corner of Silithus.  The local leader of the cult, Vyral the Vile, haunts that cave - it is he who you must next defeat.  When you have done this, bring me his signet ring.\n\nFortune to you, Banjax.  The horrors of Twilight's Run are formidable indeed.",
 		["qZone"] = "Silithus",
 		["qObj"] = "Bring Vyral's Signet Ring to Huum Wildmane in Cenarion Hold.",
-		["qNPC"] = {
-		},
+		["qLogged"] = 1442874468,
 		["qPlayer"] = {
 			["Banjax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFFFFFF00Active",
@@ -3468,19 +3469,18 @@ QST_QuestLog = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:20650:0:0:0|h[Desert Wind Gauntlets]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Gauntlets_28",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:20649:0:0:0|h[Sunprism Pendant]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Jewelry_Necklace_15",
+				["qAmount"] = 1,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 32700,
-		["qItems"] = {
-			[1] = "Vyral's Signet Ring: 0/1",
+		["qNPC"] = {
 		},
 	},
 	[137] = {
@@ -3492,7 +3492,7 @@ QST_QuestLog = {
 		["qDesc"] = "The Warchief is too subtle in his methods. He is cautious to unleash the might of the Horde. Once we were stronger, mighty conquerors all. That pride we must regain, and the Shattered Hand will do so.\n\nWe build strength from the shadows and strike at the exposed, secretly laying our enemies low. A task you must complete for me, to prove your worth.\n\nThe troll Tazan trades with the pirates near Ratchet. He has information I must have. Kill him and bring me his satchel.",
 		["qArea"] = "Unknown",
 		["qObj"] = "Kill Tazan and bring his Satchel to Therzok in the Cleft of Shadow in Orgrimmar.",
-		["qLogged"] = 1442951470,
+		["qZone"] = "Rogue",
 		["qPlayer"] = {
 			["Kashonar of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFFFFFF00Active",
@@ -3503,7 +3503,43 @@ QST_QuestLog = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qZone"] = "Rogue",
+		["qLogged"] = 1442951470,
+	},
+	[138] = {
+		["qLogged"] = 1443560521,
+		["qIndex"] = 28,
+		["qTitle"] = "Duke Nicholas Zverenhoff",
+		["qDesc"] = "A recluse medium found in these parts by the name of Umbranse has provided the Argent Dawn with quite a literary masterpiece... one that amounts to quite possibly the largest collection of jibber-jabber I've ever seen written.\n\nOne of the Dawn's most respected leaders, Duke Nicholas Zverenhoff, is a brilliant linguist.  Could you take this to him for me - for a reward, of course?  Light's Hope Chapel - that's where he's currently at, far in the eastern part of the Eastern Plaguelands.",
+		["qZone"] = "Winterspring",
+		["qObj"] = "Deliver the book, \"Studies in Spirit Speaking\", to Duke Nicholas Zverenhoff at Light's Hope Chapel, Eastern Plaguelands.",
+		["qPlayer"] = {
+			["Ryvok of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFF00FF19Completed",
+			},
+		},
+		["qLevel"] = 52,
+		["qNote"] = "",
+		["qMoney"] = 14220,
+		["qNPC"] = {
+		},
+	},
+	[139] = {
+		["qLogged"] = 1443560528,
+		["qIndex"] = 29,
+		["qTitle"] = "The Everlook Report",
+		["qDesc"] = "I am looking for a responsible individual to aid me in a small but nonetheless important matter.  I'm here as a representative of the Argent Dawn's interests to the local governance of Everlook.  I need to get a progress report to Argent Officer Pureheart at Chillwind Camp; it's a ways from here, located along the southern fringe of the Western Plaguelands.\n\nIf I may be so bold - this would be a perfect means to introduce yourself to my superior and perhaps earn some work from her!",
+		["qZone"] = "Winterspring",
+		["qObj"] = "Deliver the Everlook Report to Argent Officer Pureheart at Chillwind Camp, Western Plaguelands.",
+		["qPlayer"] = {
+			["Ryvok of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFF00FF19Completed",
+			},
+		},
+		["qLevel"] = 52,
+		["qNote"] = "",
+		["qMoney"] = 14220,
+		["qNPC"] = {
+		},
 	},
 }
 QST_QuestBase = {
@@ -3525,13 +3561,14 @@ QST_QuestBase = {
 		},
 	},
 	[2] = {
-		["qLogged"] = 1396091709,
+		["qItems"] = {
+			[1] = "Bristleback Quilboar Tusk: 0/60",
+		},
 		["qTitle"] = "Consumed by Hatred",
 		["qDesc"] = "Perhaps you know the pain of uncertainty, perhaps not, druid. But know this: I stand here every day, from the sun's rising till its decline, scouring the horizon for more of those monsters. I've killed every pig man I've come across since, but my thirst for their blood is far from quenched. Perhaps instead of heading north to the Crossroads I should have headed to Taurajo.\n\nYou, druid--you  could help me.\n\nKill them. Kill as many as you can. Bring me their tusks, and we will celebrate their deaths together.",
 		["qZone"] = "The Barrens",
 		["qObj"] = "Bring 60 Bristleback Quilboar Tusks to Mankrik at the Crossroads.",
-		["qNPC"] = {
-		},
+		["qLogged"] = 1396091709,
 		["qPlayer"] = {
 			["Ryjax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -3544,23 +3581,26 @@ QST_QuestBase = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:5314:0:0:0|h[Boar Hunter's Cape]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Misc_Cape_10",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:6477:0:0:0|h[Grassland Sash]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Belt_02",
+				["qAmount"] = 1,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qItems"] = {
-			[1] = "Bristleback Quilboar Tusk: 0/60",
+		["qNPC"] = {
 		},
 	},
 	[3] = {
-		["qLogged"] = 1396091709,
+		["qItems"] = {
+			[1] = "Bristleback Water Seeker slain: 6/6",
+			[2] = "Bristleback Thornweaver slain: 0/12",
+			[3] = "Bristleback Geomancer slain: 0/12",
+		},
 		["qTitle"] = "Tribes at War",
 		["qDesc"] = "You must strike my enemies. <snort> You must help Mangletooth and the Razormane by weakening the Bristlebacks. Both tribes are very spiritual--tied to the earth and its power. <snort> It gives us strength in all things... especially war.\n\nIf you want to find out who really causes Thork <snort> and the Horde such anguish, then help Mangletooth! You attack the spiritual leaders of the Bristlebacks to the north; weaken them so the Razormanes can defeat them and rule the Barrens.",
 		["qZone"] = "The Barrens",
@@ -3571,14 +3611,10 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 21,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1396091709,
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qItems"] = {
-			[1] = "Bristleback Water Seeker slain: 6/6",
-			[2] = "Bristleback Thornweaver slain: 0/12",
-			[3] = "Bristleback Geomancer slain: 0/12",
+		["qNPC"] = {
 		},
 	},
 	[4] = {
@@ -3602,13 +3638,16 @@ QST_QuestBase = {
 		},
 	},
 	[5] = {
-		["qLogged"] = 1396091709,
+		["qItems"] = {
+			[1] = "Secret Note #1: 0/1",
+			[2] = "Secret Note #2: 0/1",
+			[3] = "Secret Note #3: 0/1",
+		},
 		["qTitle"] = "Grimtotem Spying",
 		["qDesc"] = "Ryjax, you have served us well in the past, so I now entrust to you an important mission. The Grimtotem Clan is up to something secretive. Three agents of unknown origin were seen visiting the Grimtotem over the recent weeks. We discovered that separate chests in Darkcloud Pinnacle hold these guarded messages.\n\nRyjax, if you succeed in this dangerous mission, I will reward you in kind.\n",
 		["qZone"] = "Thousand Needles",
 		["qObj"] = "Locate and retrieve the three Secret Notes in Darkcloud Pinnacle.",
-		["qNPC"] = {
-		},
+		["qLogged"] = 1396091709,
 		["qPlayer"] = {
 			["Ryjax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -3618,36 +3657,34 @@ QST_QuestBase = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:15457:0:0:0|h[Desert Shoulders]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Shoulder_05",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:15458:0:0:0|h[Tundra Boots]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Boots_03",
+				["qAmount"] = 1,
 			},
 			[3] = {
 				["qLink"] = "|cff1eff00|Hitem:15459:0:0:0|h[Grimtoll Wristguards]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Bracer_02",
+				["qAmount"] = 1,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qItems"] = {
-			[1] = "Secret Note #1: 0/1",
-			[2] = "Secret Note #2: 0/1",
-			[3] = "Secret Note #3: 0/1",
+		["qNPC"] = {
 		},
 	},
 	[6] = {
-		["qLogged"] = 1396091709,
+		["qItems"] = {
+			[1] = "Highperch Wyvern Egg: 0/10",
+		},
 		["qTitle"] = "Wind Rider",
 		["qDesc"] = "I've been tasked to recruit more wyverns for the master wind riders. Their numbers are growing and I myself hope to become a wind rider one day. However, we cannot train enough wyverns to keep up with the demand. Perhaps you can help me, Ryjax.\n\nI need you to travel to Highperch to gather some wyvern eggs. From here, head northwest along the canyon walls to a ramp that will lead you into Highperch. Be careful, wyverns are very protective over their eggs and they will not be kind to intruders.",
 		["qZone"] = "Thousand Needles",
 		["qObj"] = "Bring 10 Highperch Wyvern Eggs to Elu in Freewind Post.",
-		["qNPC"] = {
-		},
+		["qLogged"] = 1396091709,
 		["qPlayer"] = {
 			["Ryjax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -3660,14 +3697,13 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffffffff|Hitem:4265:0:0:0|h[Heavy Armor Kit]|h|r",
-				["qAmount"] = 2,
 				["qTex"] = "Interface\\Icons\\INV_Misc_ArmorKit_16",
+				["qAmount"] = 2,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 5700,
-		["qItems"] = {
-			[1] = "Highperch Wyvern Egg: 0/10",
+		["qNPC"] = {
 		},
 	},
 	[7] = {
@@ -3689,16 +3725,18 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 30,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 0,
 		["qItems"] = {
 			[1] = "Grenka's Claw: 0/1",
 		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qNPC"] = {
+		},
 	},
 	[8] = {
-		["qLogged"] = 1396091709,
+		["qItems"] = {
+			[1] = "Filled Etched Phial: 0/1",
+		},
 		["qTitle"] = "The Sacred Flame",
 		["qDesc"] = "The Galak centaur in the Thousand Needles are protecting an artifact from the time of the centaurs' creation.\n\nWe would like to retrieve it, but we require a phial of water from one of the night elves' moonwells.\n\nTo collect the water, you will first need to obtain one of the phials carried by the dryads near the Raynewood Retreat in the heart of Ashenvale Forest. There is a moonwell near the western bank of the Falfarren River, south of the main road, where you can fill the phial.",
 		["qZone"] = "Thunder Bluff",
@@ -3712,16 +3750,16 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 25,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1396091709,
 		["qNote"] = "",
 		["qMoney"] = 10500,
-		["qItems"] = {
-			[1] = "Filled Etched Phial: 0/1",
+		["qNPC"] = {
 		},
 	},
 	[9] = {
-		["qLogged"] = 1396091709,
+		["qItems"] = {
+			[1] = "Steelsnap's Rib: 0/1",
+		},
 		["qTitle"] = "Steelsnap",
 		["qDesc"] = "At times we hunt for food.  At times we hunt for honor.  And at times we hunt to earn the Earthmother's teachings.\n\nBut the hunt I now set upon you is none of these things.  It is to slay a creature outside the Earthmother's blessing.\n\nThe hyena Steelsnap roams the Thousand Needles, south of the Barrens.  He is a tyrant, attracting other hyenas to him and spreading fear and bloodshed among more peaceful beasts.\n\nFind Steelsnap, Ryjax.  Find him, and defeat him.",
 		["qZone"] = "Thunder Bluff",
@@ -3735,12 +3773,10 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 30,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1396091709,
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qItems"] = {
-			[1] = "Steelsnap's Rib: 0/1",
+		["qNPC"] = {
 		},
 	},
 	[10] = {
@@ -3749,29 +3785,24 @@ QST_QuestBase = {
 		["qDesc"] = "Naralex had a noble goal.\n\nOur great leader aspired to enter the Emerald Dream and help regrow these harsh lands back into the lush forest it once was. But something went terribly wrong.\n\nNaralex's dream turned into a nightmare and corrupt creatures began to inhabit the caverns.\n\nWhile some Disciples of Naralex seek to awake our master, my concern is with ridding these caves of the evil beasts.\n\nBrave the caverns, Ryjax, and eradicate the deviate spawn.",
 		["qNPC"] = {
 		},
-		["qItems"] = {
-			[1] = "Deviate Ravager slain: 7/7",
-			[2] = "Deviate Viper slain: 0/7",
-			[3] = "Deviate Shambler slain: 1/7",
-			[4] = "Deviate Dreadfang slain: 0/7",
-		},
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:6476:0:0:0|h[Pattern: Deviate Scale Belt]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Scroll_06",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:8071:0:0:0|h[Sizzle Stick]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Staff_02",
+				["qAmount"] = 1,
 			},
 			[3] = {
 				["qLink"] = "|cff1eff00|Hitem:6481:0:0:0|h[Dagmire Gauntlets]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Gauntlets_05",
+				["qAmount"] = 1,
 			},
 		},
+		["qObj"] = "Ebru in the Wailing Caverns wants you to kill 7 Deviate Ravagers, 7 Deviate Vipers, 7 Deviate Shamblers and 7 Deviate Dreadfangs.",
 		["qTag"] = "Dungeon",
 		["qPlayer"] = {
 			["Ryjax of Warsong [12x] Blizzlike"] = {
@@ -3785,7 +3816,12 @@ QST_QuestBase = {
 		["qZone"] = "Wailing Caverns",
 		["qNote"] = "",
 		["qMoney"] = 7500,
-		["qObj"] = "Ebru in the Wailing Caverns wants you to kill 7 Deviate Ravagers, 7 Deviate Vipers, 7 Deviate Shamblers and 7 Deviate Dreadfangs.",
+		["qItems"] = {
+			[1] = "Deviate Ravager slain: 7/7",
+			[2] = "Deviate Viper slain: 0/7",
+			[3] = "Deviate Shambler slain: 1/7",
+			[4] = "Deviate Dreadfang slain: 0/7",
+		},
 	},
 	[11] = {
 		["qLogged"] = 1397063234,
@@ -3832,14 +3868,14 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 52,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 53100,
 		["qItems"] = {
 			[1] = "Anvilrage Guardsman slain: 15/15",
 			[2] = "Anvilrage Warden slain: 9/10",
 			[3] = "Anvilrage Footman slain: 5/5",
-		},
-		["qNote"] = "",
-		["qMoney"] = 53100,
-		["qNPC"] = {
 		},
 	},
 	[13] = {
@@ -3852,8 +3888,8 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:12038:0:0:0|h[Lagrave's Seal]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Jewelry_Ring_03",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Jewelry_Ring_03",
 			},
 		},
 		["qObj"] = "Travel to Blackrock Depths and recover 10 Essence of the Elements. Your first inclination is to search the golems and golem makers. You remember Vivian Lagrave also muttering something about elementals.\n",
@@ -3880,10 +3916,8 @@ QST_QuestBase = {
 		["qLogged"] = 1397063234,
 		["qTitle"] = "Disharmony of Flame",
 		["qDesc"] = "The elders have felt a disturbance amongst the elements. The Dark Iron dwarves have summoned a foul spirit into our world that threatens to plague our lands with an eternal draught. This disharmony of flame must be investigated.\n\nTravel to Blackrock Mountain, through the Chasm of Flame, into the quarry. It is there that you shall find this lord of fire: Overmaster Pyron.\n\nEnd the disruption and return to me.",
+		["qZone"] = "Blackrock Mountain",
 		["qArea"] = "Unknown",
-		["qItems"] = {
-			[1] = "Overmaster Pyron slain: 1/1",
-		},
 		["qObj"] = "Travel to the quarry in Blackrock Mountain and slay Overmaster Pyron. Return to Thunderheart when you have completed this assignment.\n",
 		["qTag"] = "Dungeon",
 		["qPlayer"] = {
@@ -3905,7 +3939,9 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 50850,
-		["qZone"] = "Blackrock Mountain",
+		["qItems"] = {
+			[1] = "Overmaster Pyron slain: 1/1",
+		},
 	},
 	[15] = {
 		["qItems"] = {
@@ -3917,8 +3953,8 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffffffff|Hitem:12264:0:0:0|h[Worg Carrier]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Box_PetCarrier_01",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Box_PetCarrier_01",
 			},
 		},
 		["qObj"] = "Travel to Blackrock Spire and find Bloodaxe Worg Pups. Use the cage to carry the ferocious little beasts. Bring back a Caged Worg Pup to Kibler.",
@@ -3976,26 +4012,24 @@ QST_QuestBase = {
 		["qTitle"] = "For The Horde!",
 		["qDesc"] = "Rend dares make such grand claims because of the protection he is afforded by the black flight.\n\nYou, Unknown, will find a way to pass through the Halls of Ascension. You will then find 'Warchief' Rend Blackhand and you will destroy him - FOR THE HORDE!\n\n<Thrall slams a fist down upon his throne.>\n\nThe next time you return to my chambers, you will hold his head high in triumph and then you shall present it to your Warchief. Do this and be honored as a hero of the Horde.",
 		["qZone"] = "Blackrock Spire",
-		["qItems"] = {
-			[1] = "Head of Rend Blackhand: 1/1",
-		},
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff0070dd|Hitem:13966:0:0:0|h[Mark of Tyranny]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Jewelry_Talisman_09",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Jewelry_Talisman_09",
 			},
 			[2] = {
 				["qLink"] = "|cff0070dd|Hitem:13968:0:0:0|h[Eye of the Beast]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Jewelry_Talisman_08",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Jewelry_Talisman_08",
 			},
 			[3] = {
 				["qLink"] = "|cff0070dd|Hitem:13965:0:0:0|h[Blackhand's Breadth]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_ArmorKit_09",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Misc_ArmorKit_09",
 			},
 		},
+		["qObj"] = "Travel to Blackrock Spire and slay Warchief Rend Blackhand. Take his head and return to Orgrimmar.",
 		["qTag"] = "Raid",
 		["qPlayer"] = {
 			["Ryjax of Warsong [12x] Blizzlike"] = {
@@ -4010,7 +4044,9 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 89700,
-		["qObj"] = "Travel to Blackrock Spire and slay Warchief Rend Blackhand. Take his head and return to Orgrimmar.",
+		["qItems"] = {
+			[1] = "Head of Rend Blackhand: 1/1",
+		},
 	},
 	[18] = {
 		["qItems"] = {
@@ -4021,8 +4057,8 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff0070dd|Hitem:15873:0:0:0|h[Ragged John's Neverending Cup]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Drink_03",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Drink_03",
 			},
 		},
 		["qObj"] = "In the heart of Blackrock Spire you will find Mother Smolderweb. Engage her and get her to poison you. Chances are good that you will have to kill her as well. Return to Ragged John when you are poisoned so that he can 'milk' you.",
@@ -4055,8 +4091,8 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:15867:0:0:0|h[Prismcharm]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_Gem_Variety_02",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Misc_Gem_Variety_02",
 			},
 		},
 		["qObj"] = "Read Warosh's Scroll.  Bring Warosh's Mojo to Warosh.",
@@ -4091,12 +4127,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 54,
-		["qItems"] = {
-			[1] = "Fractured Elemental Shard: 0/10",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 56700,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Fractured Elemental Shard: 0/10",
 		},
 	},
 	[21] = {
@@ -4121,11 +4157,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 62700,
-		["qNPC"] = {
+		["qItems"] = {
 		},
 	},
 	[22] = {
@@ -4135,24 +4171,24 @@ QST_QuestBase = {
 		},
 		["qTitle"] = "A Better Ingredient",
 		["qDesc"] = "It is as I feared -- the toxin is simply too weak for such a powerful creature.\n\nIf we are to create a toxin of high enough potency, you must venture to the bottom of the Temple of Atal'Hakkar, unlock the secrets of the altar and recover a putrid vine from the guardian there.  The temple is dangerous, and it would behoove you to bring friends.\n\nReturn to me when this is done.",
+		["qZone"] = "Druid",
 		["qNPC"] = {
 		},
-		["qObj"] = "Retrieve a Putrid Vine from the guardian at the bottom of the Sunken Temple and return to Torwa Pathfinder.",
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff0070dd|Hitem:22274:0:0:0|h[Grizzled Pelt]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Chest_Leather_08",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Chest_Leather_08",
 			},
 			[2] = {
 				["qLink"] = "|cff0070dd|Hitem:22272:0:0:0|h[Forest's Embrace]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Chest_Leather_08",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Chest_Leather_08",
 			},
 			[3] = {
 				["qLink"] = "|cff0070dd|Hitem:22458:0:0:0|h[Moonshadow Stave]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Staff_28",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Staff_28",
 			},
 		},
 		["qTag"] = "Dungeon",
@@ -4162,10 +4198,10 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 52,
-		["qZone"] = "Druid",
+		["qArea"] = "Unknown",
 		["qNote"] = "",
 		["qMoney"] = 6600,
-		["qArea"] = "Unknown",
+		["qObj"] = "Retrieve a Putrid Vine from the guardian at the bottom of the Sunken Temple and return to Torwa Pathfinder.",
 	},
 	[23] = {
 		["qLogged"] = 1397063234,
@@ -4186,15 +4222,15 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 62700,
 		["qItems"] = {
 			[1] = "The Deed to Brill: 0/1",
 			[2] = "The Deed to Caer Darrow: 0/1",
 			[3] = "The Deed to Southshore: 0/1",
 			[4] = "The Deed to Tarren Mill: 0/1",
-		},
-		["qNote"] = "",
-		["qMoney"] = 62700,
-		["qNPC"] = {
 		},
 	},
 	[24] = {
@@ -4210,12 +4246,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "Krastinov's Bag of Horrors: 0/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 8700,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Krastinov's Bag of Horrors: 0/1",
 		},
 	},
 	[25] = {
@@ -4228,8 +4264,8 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:20724:0:0:0|h[Corrupted Blackwood Staff]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Staff_07",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Staff_07",
 			},
 		},
 		["qObj"] = "Commander Mar'alith at Cenarion Hold in Silithus wants you to find his beloved Natalia. The information that you gathered points to Hive'Regal in the south as being the area in which you may find Mistress Natalia Mar'alith.\n\nDo not forget to visit the dwarves at Bronzebeard's camp before venturing into the hive. They might have some additional work and advice for you.\n\nAnd Unknown, remember the Commander's words: \"Do what you must...\"",
@@ -4267,12 +4303,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "Twilight Geolord slain: 0/10",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 32700,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Twilight Geolord slain: 0/10",
 		},
 	},
 	[27] = {
@@ -4281,11 +4317,7 @@ QST_QuestBase = {
 		["qDesc"] = "Ah, you're in need of my latest project... the extra-dimensional ghost revealer!  Unfortunately I've run out of funds and manpower.\n\nYou're willing to help?  Excellent!  Our first task is to build a device to harvest the very fabric of death!  Building an ectoplasmic distiller won't be an easy task, Unknown.\n\nI'll need you to bring me an arcanite converter, some greater eternal essences and stonescale oil. I'll also need some volcanic ash from the lava pools in the Burning Steppes to build a filter.",
 		["qZone"] = "Tanaris",
 		["qObj"] = "Return to Mux Manascrambler in Gadgetzan with 1 Delicate Arcanite Converter, 4 Greater Eternal Essence, 10 Stonescale Oil, 25 Volcanic Ash and 40 gold.",
-		["qItems"] = {
-			[1] = "Delicate Arcanite Converter: 0/1",
-			[2] = "Greater Eternal Essence: 4/4",
-			[3] = "Stonescale Oil: 0/10",
-			[4] = "Volcanic Ash: 0/25",
+		["qNPC"] = {
 		},
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
@@ -4302,13 +4334,17 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffffffff|Hitem:22320:0:0:0|h[Mux's Quality Goods]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_Bag_12",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Misc_Bag_12",
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Delicate Arcanite Converter: 0/1",
+			[2] = "Greater Eternal Essence: 4/4",
+			[3] = "Stonescale Oil: 0/10",
+			[4] = "Volcanic Ash: 0/25",
 		},
 	},
 	[28] = {
@@ -4347,11 +4383,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 570,
-		["qNPC"] = {
+		["qItems"] = {
 		},
 	},
 	[30] = {
@@ -4384,20 +4420,20 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:13171:0:0:0|h[Smokey's Lighter]|h|r",
-				["qTex"] = "Interface\\Icons\\Spell_Fire_SearingTotem",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\Spell_Fire_SearingTotem",
 			},
 		},
 		["qObj"] = "Find Fras Siabi's smoke shop in Stratholme and recover a box of Siabi's Premium Tobacco. Return to Smokey LaRue when the job is done.\n",
 		["qTag"] = "Dungeon",
 		["qPlayer"] = {
+			["Kylosandrax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFF7F7F7FUnknown",
+			},
 			["Banjax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
 			},
 			["Ryjax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFF7F7F7FUnknown",
-			},
-			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
 			},
 		},
@@ -4418,8 +4454,8 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff0070dd|Hitem:18491:0:0:0|h[Lorespinner]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Weapon_ShortBlade_21",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Weapon_ShortBlade_21",
 			},
 		},
 		["qObj"] = "Bring Lethtendris's Web to Talo Thornhoof at Camp Mojache in Feralas.",
@@ -4461,44 +4497,45 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 8700,
 		["qItems"] = {
 			[1] = "Immol'thar slain: 1/1",
 			[2] = "Prince Tortheldrin slain: 1/1",
 		},
+		["qNote"] = "",
+		["qMoney"] = 8700,
+		["qNPC"] = {
+		},
 	},
 	[34] = {
-		["qLogged"] = 1398115932,
+		["qItems"] = {
+			[1] = "Stratholme Holy Water: 0/5",
+		},
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffffffff|Hitem:3928:0:0:0|h[Superior Healing Potion]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Potion_53",
 				["qAmount"] = 5,
+				["qTex"] = "Interface\\Icons\\INV_Potion_53",
 			},
 			[2] = {
 				["qLink"] = "|cffffffff|Hitem:6149:0:0:0|h[Greater Mana Potion]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Potion_73",
 				["qAmount"] = 5,
+				["qTex"] = "Interface\\Icons\\INV_Potion_73",
 			},
 		},
 		["qTitle"] = "Houses of the Holy",
 		["qDesc"] = "I look at my undeath as a malady, tauren. An illness that merely requires treatment; however, it is also a great blessing for the Argent Dawn. What better vessel to smite the heathens of the Scourge than through the undead?\n\nI am revered by my colleagues because of the sacrifices I have made, but the accolades mean nothing to me.\n\nIf you are interested in assisting the Argent Dawn, then a job I can offer.\n\nVenture to Stratholme and recover our surplus of holy water. Search the supply crates.\n",
-		["qNPC"] = {
-		},
-		["qObj"] = "Travel to Stratholme, in the north. Search the supply crates that litter the city and recover 5 Stratholme Holy Water. Return to Leonid Barthalomew the Revered when you have collected enough of the blessed fluid.",
+		["qZone"] = "Stratholme",
+		["qLogged"] = 1398115932,
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:13216:0:0:0|h[Crown of the Penitent]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Helmet_06",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Helmet_06",
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:13217:0:0:0|h[Band of the Penitent]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Jewelry_Ring_30",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Jewelry_Ring_30",
 			},
 		},
 		["qTag"] = "Dungeon",
@@ -4517,12 +4554,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qZone"] = "Stratholme",
+		["qNPC"] = {
+		},
 		["qNote"] = "",
 		["qMoney"] = 62700,
-		["qItems"] = {
-			[1] = "Stratholme Holy Water: 0/5",
-		},
+		["qObj"] = "Travel to Stratholme, in the north. Search the supply crates that litter the city and recover 5 Stratholme Holy Water. Return to Leonid Barthalomew the Revered when you have collected enough of the blessed fluid.",
 	},
 	[35] = {
 		["qLogged"] = 1398273596,
@@ -4543,26 +4579,26 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qChoice"] = {
-			[1] = {
-				["qLink"] = "|cff0070dd|Hitem:18420:0:0:0|h[Bonecrusher]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Mace_02",
-				["qAmount"] = 1,
-			},
-			[2] = {
-				["qLink"] = "|cff0070dd|Hitem:18421:0:0:0|h[Backwood Helm]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Helmet_19",
-				["qAmount"] = 1,
-			},
-			[3] = {
-				["qLink"] = "|cff0070dd|Hitem:18424:0:0:0|h[Sedge Boots]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Boots_05",
-				["qAmount"] = 1,
-			},
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 81570,
-		["qNPC"] = {
+		["qChoice"] = {
+			[1] = {
+				["qLink"] = "|cff0070dd|Hitem:18420:0:0:0|h[Bonecrusher]|h|r",
+				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Mace_02",
+			},
+			[2] = {
+				["qLink"] = "|cff0070dd|Hitem:18421:0:0:0|h[Backwood Helm]|h|r",
+				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Helmet_19",
+			},
+			[3] = {
+				["qLink"] = "|cff0070dd|Hitem:18424:0:0:0|h[Sedge Boots]|h|r",
+				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Boots_05",
+			},
 		},
 	},
 	[36] = {
@@ -4570,32 +4606,29 @@ QST_QuestBase = {
 		["qTitle"] = "Disharmony of Fire",
 		["qDesc"] = "I can taste the foulness in the air that surrounds you, Ryjax. There is another, hidden in the depths of Blackrock, who does control this foulness.\n\nThe wind and earth cry his name: Lord Incendius... but someone... something... commands this being. He is merely an emissary.\n\nFind him and discover where his master hides. Return to me when you have collected this information.\n",
 		["qZone"] = "Blackrock Depths",
-		["qItems"] = {
-			[1] = "Lord Incendius slain: 0/1",
-			[2] = "Tablet of Kurniya: 0/1",
-		},
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:12113:0:0:0|h[Sunborne Cape]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_Cape_08",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Misc_Cape_08",
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:12114:0:0:0|h[Nightfall Gloves]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Gauntlets_17",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Gauntlets_17",
 			},
 			[3] = {
 				["qLink"] = "|cff1eff00|Hitem:12112:0:0:0|h[Crypt Demon Bracers]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Bracer_17",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Bracer_17",
 			},
 			[4] = {
 				["qLink"] = "|cff1eff00|Hitem:12115:0:0:0|h[Stalwart Clutch]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Belt_34",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Belt_34",
 			},
 		},
+		["qObj"] = "Enter Blackrock Depths and track down Lord Incendius. Slay him and return any source of information you may find to Thunderheart.\n",
 		["qTag"] = "Dungeon",
 		["qPlayer"] = {
 			["Zapunzel of Warsong [12x] Blizzlike"] = {
@@ -4613,7 +4646,10 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 84000,
-		["qObj"] = "Enter Blackrock Depths and track down Lord Incendius. Slay him and return any source of information you may find to Thunderheart.\n",
+		["qItems"] = {
+			[1] = "Lord Incendius slain: 0/1",
+			[2] = "Tablet of Kurniya: 0/1",
+		},
 	},
 	[37] = {
 		["qLogged"] = 1398292434,
@@ -4637,12 +4673,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 59,
-		["qItems"] = {
-			[1] = "Bijou's Belongings: 0/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 8400,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Bijou's Belongings: 0/1",
 		},
 	},
 	[38] = {
@@ -4651,17 +4687,16 @@ QST_QuestBase = {
 		["qDesc"] = "Without the help of adventurers, my caravan would have never made it! Scourge were coming out of the woodwork to try and stop us from getting here.\n\n<Guard Didier wipes his brow.>\n\nNow we need to wait here for Field Marshal Chambers to arrive. He'll sign your writ of safe passage to take back to Dispatch Commander Metz at Light's Hope Chapel.\n\nAnd Ryjax, watch what you say around Chambers. He's the 'bite off your head and spit down your wind pipe' type of guy - except that he'll actually do it...",
 		["qZone"] = "Eastern Plaguelands",
 		["qObj"] = "Deliver the signed Writ of Safe Passage to Dispatch Commander Metz at Light's Hope Chapel in the Eastern Plaguelands.",
-		["qItems"] = {
-			[1] = "Writ of Safe Passage Signed: 0/1",
+		["qNPC"] = {
 		},
 		["qPlayer"] = {
+			["Kylosandrax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFF7F7F7FUnknown",
+			},
 			["Banjax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
 			},
 			["Ryjax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFF7F7F7FUnknown",
-			},
-			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
 			},
 		},
@@ -4669,18 +4704,19 @@ QST_QuestBase = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:22523:0:0:0|h[Insignia of the Dawn]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_Token_ArgentDawn",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Misc_Token_ArgentDawn",
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:22524:0:0:0|h[Insignia of the Crusade]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_Token_ScarletCrusade",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Misc_Token_ScarletCrusade",
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Writ of Safe Passage Signed: 0/1",
 		},
 	},
 	[39] = {
@@ -4711,12 +4747,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "Plagued Flesh Sample: 8/20",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 62700,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Plagued Flesh Sample: 8/20",
 		},
 	},
 	[40] = {
@@ -4747,12 +4783,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 58,
-		["qItems"] = {
-			[1] = "Plagued Hatchling slain: 0/20",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 35100,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Plagued Hatchling slain: 0/20",
 		},
 	},
 	[41] = {
@@ -4763,7 +4799,8 @@ QST_QuestBase = {
 		["qDesc"] = "I make a special type of armor for the brave heroes that enter Naxxramas known as Dreamwalker. They are able to provide me with most of the materials I require but I am always looking for those able to retrieve savage fronds from the flora of our world.\n\nYou may think of this job as beneath you, but without the fronds, the armor could not be made.\n\nI am also in a unique position to pay you with an insignia of your choice as both the Dawn and the Crusade supply me with funds.\n",
 		["qZone"] = "Eastern Plaguelands",
 		["qObj"] = "Rayne at Light's Hope Chapel in the Eastern Plaguelands wants 30 Savage Fronds.",
-		["qLogged"] = 1398403988,
+		["qNPC"] = {
+		},
 		["qPlayer"] = {
 			["Ryjax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -4776,19 +4813,18 @@ QST_QuestBase = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:22524:0:0:0|h[Insignia of the Crusade]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_Token_ScarletCrusade",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Misc_Token_ScarletCrusade",
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:22523:0:0:0|h[Insignia of the Dawn]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_Token_ArgentDawn",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Misc_Token_ArgentDawn",
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 5700,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1398403988,
 	},
 	[42] = {
 		["qItems"] = {
@@ -4798,15 +4834,16 @@ QST_QuestBase = {
 		["qDesc"] = "How would you like to earn yourself one of these shiny coins?\n\n<Leopold holds up an insignia of the Crusade.>\n\nI've got a little problem that you might be able to help me with, Ryjax. You see, I make Cryptstalker armor for those daft enough to venture into Naxxramas. While they supply me with the core material requirements for the armor, I always run out of the crypt fiend parts. Bring me back a bundle of parts and I'll pay you with an insignia - usable at the quartermaster.",
 		["qZone"] = "Eastern Plaguelands",
 		["qObj"] = "Huntsman Leopold at Light's Hope Chapel in the Eastern Plaguelands wants 30 Crypt Fiend Parts.",
-		["qLogged"] = 1398404070,
+		["qNPC"] = {
+		},
 		["qPlayer"] = {
+			["Kylosandrax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFF7F7F7FUnknown",
+			},
 			["Banjax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
 			},
 			["Ryjax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFF7F7F7FUnknown",
-			},
-			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
 			},
 		},
@@ -4814,17 +4851,20 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:22524:0:0:0|h[Insignia of the Crusade]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_Token_ScarletCrusade",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Misc_Token_ScarletCrusade",
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 5700,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1398404070,
 	},
 	[43] = {
-		["qLogged"] = 1398408694,
+		["qItems"] = {
+			[1] = "Plaguehound Runt slain: 20/20",
+			[2] = "Plaguehound slain: 5/5",
+			[3] = "Frenzied Plaguehound slain: 5/5",
+		},
 		["qTitle"] = "Demon Dogs",
 		["qDesc"] = "If you are going to remain here, I ask only that you earn your keep. We have many nuisances that could use some 'discipline.'\n\nYou can start with the Plaguehounds and their runts.\n\nI cannot offer much in return, but you are guaranteed a warm meal and some conversation should you succeed.",
 		["qZone"] = "Eastern Plaguelands",
@@ -4835,18 +4875,16 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 56,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1398408694,
 		["qNote"] = "",
 		["qMoney"] = 5100,
-		["qItems"] = {
-			[1] = "Plaguehound Runt slain: 20/20",
-			[2] = "Plaguehound slain: 5/5",
-			[3] = "Frenzied Plaguehound slain: 5/5",
+		["qNPC"] = {
 		},
 	},
 	[44] = {
-		["qLogged"] = 1398408697,
+		["qItems"] = {
+			[1] = "Plaguebat slain: 30/30",
+		},
 		["qTitle"] = "Blood Tinged Skies",
 		["qDesc"] = "Woe to those that foolishly wander into the Plaguelands. All manner of foulness inhabit these woods - from the fanatical Scarlet Crusade, who will kill any that do not bear the mark of the Crusade, to the murderous Scourge, who only look to bolster their numbers by adding more undead to their ranks.\n\nEven the wildlife have been transformed into rapacious, man eating beasts. I ask that you destroy those that would strike from the skies: The Plaguebats.",
 		["qZone"] = "Eastern Plaguelands",
@@ -4857,16 +4895,16 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 56,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1398408697,
 		["qNote"] = "",
 		["qMoney"] = 5100,
-		["qItems"] = {
-			[1] = "Plaguebat slain: 30/30",
+		["qNPC"] = {
 		},
 	},
 	[45] = {
-		["qLogged"] = 1398408701,
+		["qItems"] = {
+			[1] = "Slab of Carrion Worm Meat: 15/15",
+		},
 		["qTitle"] = "Carrion Grubbage",
 		["qDesc"] = "My food supplies are running low, tauren. I am ashamed to admit that I might not have enough food to share with you.\n\nCould you assist an old man with a simple task? Around here, the only manner of beast unaffected by the ravages of the Plague are the Carrion worms. While rather bland in taste, the meat of the worms can easily be preserved to last for months. I will need several hundred pounds to restock for the coming winter!",
 		["qZone"] = "Eastern Plaguelands",
@@ -4877,16 +4915,15 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 56,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1398408701,
 		["qNote"] = "",
 		["qMoney"] = 5100,
-		["qItems"] = {
-			[1] = "Slab of Carrion Worm Meat: 15/15",
+		["qNPC"] = {
 		},
 	},
 	[46] = {
-		["qLogged"] = 1398413485,
+		["qItems"] = {
+		},
 		["qTitle"] = "Redemption",
 		["qDesc"] = "You have worked hard, friend. Rest your weary bones and allow me to properly introduce myself.\n",
 		["qZone"] = "Eastern Plaguelands",
@@ -4897,11 +4934,10 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 56,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1398413485,
 		["qNote"] = "",
 		["qMoney"] = 510,
-		["qItems"] = {
+		["qNPC"] = {
 		},
 	},
 	[47] = {
@@ -4916,12 +4952,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 57,
-		["qItems"] = {
-			[1] = "Taelan's Hammer: 1/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 5250,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Taelan's Hammer: 1/1",
 		},
 	},
 	[48] = {
@@ -4936,12 +4972,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 58,
-		["qItems"] = {
-			[1] = "Symbol of Lost Honor: 1/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 5400,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Symbol of Lost Honor: 1/1",
 		},
 	},
 	[49] = {
@@ -4956,41 +4992,41 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 58,
-		["qItems"] = {
-			[1] = "Of Love and Family: 0/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 5400,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Of Love and Family: 0/1",
 		},
 	},
 	[50] = {
+		["qLogged"] = 1396988675,
+		["qTitle"] = "Into The Scarlet Monastery",
+		["qDesc"] = "Whilst the Dark Lady tends to the pressing issue of the Lich King's advance to the north, I am seeing to it that matters closer to home are being taken care of accordingly.\n\nNo doubt, the human pests who call themselves the Scarlet Crusade are proving to be the sharpest thorn in our side domestically. Tirisfal Glades is literally crawling with the little red ants.\n\nTravel to the Monastery, mage, and lay waste to High Inquisitor Whitemane and her top lieutenants.",
+		["qNPC"] = {
+		},
 		["qItems"] = {
 			[1] = "High Inquisitor Whitemane slain: 0/1",
 			[2] = "Scarlet Commander Mograine slain: 0/1",
 			[3] = "Herod slain: 1/1",
 			[4] = "Houndmaster Loksey slain: 1/1",
 		},
-		["qTitle"] = "Into The Scarlet Monastery",
-		["qDesc"] = "Whilst the Dark Lady tends to the pressing issue of the Lich King's advance to the north, I am seeing to it that matters closer to home are being taken care of accordingly.\n\nNo doubt, the human pests who call themselves the Scarlet Crusade are proving to be the sharpest thorn in our side domestically. Tirisfal Glades is literally crawling with the little red ants.\n\nTravel to the Monastery, mage, and lay waste to High Inquisitor Whitemane and her top lieutenants.",
-		["qNPC"] = {
-		},
-		["qObj"] = "Kill High Inquisitor Whitemane, Scarlet Commander Mograine, Herod, the Scarlet Champion and Houndmaster Loksey and then report back to Varimathras in the Undercity.",
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff0070dd|Hitem:6802:0:0:0|h[Sword of Omen]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Sword_19",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Sword_19",
 			},
 			[2] = {
 				["qLink"] = "|cff0070dd|Hitem:6803:0:0:0|h[Prophetic Cane]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Staff_01",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Staff_01",
 			},
 			[3] = {
 				["qLink"] = "|cff0070dd|Hitem:10711:0:0:0|h[Dragon's Blood Necklace]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Jewelry_Necklace_02",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Jewelry_Necklace_02",
 			},
 		},
 		["qTag"] = "Dungeon",
@@ -5003,7 +5039,7 @@ QST_QuestBase = {
 		["qZone"] = "Scarlet Monastery",
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1396988675,
+		["qObj"] = "Kill High Inquisitor Whitemane, Scarlet Commander Mograine, Herod, the Scarlet Champion and Houndmaster Loksey and then report back to Varimathras in the Undercity.",
 	},
 	[51] = {
 		["qLogged"] = 1396988675,
@@ -5017,12 +5053,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 48,
-		["qItems"] = {
-			[1] = "Skylord Plume: 0/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 42000,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Skylord Plume: 0/1",
 		},
 	},
 	[52] = {
@@ -5037,13 +5073,13 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 48,
-		["qItems"] = {
-			[1] = "Vilebranch Scalper slain: 0/15",
-			[2] = "Vilebranch Soothsayer slain: 0/10",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 42000,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Vilebranch Scalper slain: 0/15",
+			[2] = "Vilebranch Soothsayer slain: 0/10",
 		},
 	},
 	[53] = {
@@ -5059,12 +5095,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 48,
-		["qItems"] = {
-			[1] = "Katoom's Best Lure: 0/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 42000,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Katoom's Best Lure: 0/1",
 		},
 	},
 	[54] = {
@@ -5079,12 +5115,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 48,
-		["qItems"] = {
-			[1] = "Savage Owlbeast slain: 2/20",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 42000,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Savage Owlbeast slain: 2/20",
 		},
 	},
 	[55] = {
@@ -5100,15 +5136,15 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 48,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 0,
 		["qItems"] = {
 			[1] = "Highvale Scout slain: 0/15",
 			[2] = "Highvale Outrunner slain: 0/15",
 			[3] = "Highvale Ranger slain: 0/15",
 			[4] = "Highvale Marksman slain: 0/15",
-		},
-		["qNote"] = "",
-		["qMoney"] = 0,
-		["qNPC"] = {
 		},
 	},
 	[56] = {
@@ -5123,13 +5159,13 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 48,
-		["qItems"] = {
-			[1] = "Silvermane Stalker slain: 6/10",
-			[2] = "Silvermane Howler slain: 0/10",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 42000,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Silvermane Stalker slain: 6/10",
+			[2] = "Silvermane Howler slain: 0/10",
 		},
 	},
 	[57] = {
@@ -5143,8 +5179,8 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:19118:0:0:0|h[Nature's Breath]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Wand_12",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Wand_12",
 			},
 		},
 		["qObj"] = "Primal Torntusk at Revantusk Village in the Hinterlands wants you to recover 10 Vessels of Tainted Blood from Jintha'alor. Return to Primal Torntusk when this task is complete.",
@@ -5164,25 +5200,25 @@ QST_QuestBase = {
 		["qLogged"] = 1396988675,
 	},
 	[58] = {
-		["qItems"] = {
-			[1] = "Huntsman Malkhor's Skull: 0/1",
-			[2] = "Huntsman Malkhor's Bones: 0/1",
-		},
+		["qLogged"] = 1396988675,
 		["qTitle"] = "Separation Anxiety",
 		["qDesc"] = "Like many in our village, I too have lost a loved one to the wilds. Alas, it was my twin brother Malkhor - taken in the same raid as Torntusk's mate by the Vilebranch.\n\nSadly, he was not fated to live and was given a swift, brutal execution; his remains fed to the oozes and wolves of the Vilebranch.\n\nIt is too late to save his life but not too late to save his soul. Recover his remains, Unknown.",
 		["qNPC"] = {
 		},
-		["qObj"] = "Huntsman Markhor at Revantusk Village in the Hinterlands wants you to recover his twin brother's remains. Find and return Huntsman Malkhor's Skull and Huntsman Malkhor's Bones to Huntsman Markhor.\n\nMarkhor mentioned that his brother's remains were fed to the oozes and wolves of the Vilebranch. He also mentioned that there is a refuse pit filled with oozes in Jintha'alor as well as a wolf den. Both of these places are near the top of the temple.",
+		["qItems"] = {
+			[1] = "Huntsman Malkhor's Skull: 0/1",
+			[2] = "Huntsman Malkhor's Bones: 0/1",
+		},
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:19117:0:0:0|h[Laquered Wooden Plate Legplates]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Pants_05",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Pants_05",
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:19116:0:0:0|h[Greenleaf Handwraps]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Gauntlets_16",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Gauntlets_16",
 			},
 		},
 		["qTag"] = "Elite",
@@ -5198,7 +5234,7 @@ QST_QuestBase = {
 		["qZone"] = "The Hinterlands",
 		["qNote"] = "",
 		["qMoney"] = 22500,
-		["qLogged"] = 1396988675,
+		["qObj"] = "Huntsman Markhor at Revantusk Village in the Hinterlands wants you to recover his twin brother's remains. Find and return Huntsman Malkhor's Skull and Huntsman Malkhor's Bones to Huntsman Markhor.\n\nMarkhor mentioned that his brother's remains were fed to the oozes and wolves of the Vilebranch. He also mentioned that there is a refuse pit filled with oozes in Jintha'alor as well as a wolf den. Both of these places are near the top of the temple.",
 	},
 	[59] = {
 		["qItems"] = {
@@ -5214,8 +5250,8 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:19120:0:0:0|h[Rune of the Guard Captain]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_Rune_07",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Misc_Rune_07",
 			},
 		},
 		["qObj"] = "You have been tasked with the decimation of 10 Vilebranch Berserkers, 5 Vilebranch Shadow Hunters, 5 Vilebranch Blood Drinkers, and 5 Vilebranch Soul Eaters.\n\nShould you complete this task, return to Primal Torntusk at Revantusk Village in the Hinterlands.",
@@ -5256,25 +5292,25 @@ QST_QuestBase = {
 		},
 	},
 	[61] = {
-		["qItems"] = {
-			[1] = "Vile Priestess Hexx slain: 0/1",
-			[2] = "Vilebranch Aman'zasi Guard slain: 0/10",
-		},
+		["qLogged"] = 1396988675,
 		["qTitle"] = "Wanted: Vile Priestess Hexx and Her Minions",
 		["qDesc"] = "By order of Primal Torntusk, Vile Priestess Hexx and her minions are to be brought to justice!\n\nA grand reward is offered for any that slay the Vile Priestess Hexx and all of her Aman'zasi elite guard.",
 		["qNPC"] = {
 		},
-		["qObj"] = "You have been ordered to slay Vile Priestess Hexx and 10 Vilebranch Aman'zasi Guards. See Primal Torntusk at Revantusk Village in the Hinterlands once this task is complete.\n\nVile Priestess Hexx and the Aman'zasi Guards can be found atop Jintha'alor in the Hinterlands.",
+		["qItems"] = {
+			[1] = "Vile Priestess Hexx slain: 0/1",
+			[2] = "Vilebranch Aman'zasi Guard slain: 0/10",
+		},
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff0070dd|Hitem:19159:0:0:0|h[Woven Ivy Necklace]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_Herb_15",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Misc_Herb_15",
 			},
 			[2] = {
 				["qLink"] = "|cff0070dd|Hitem:19121:0:0:0|h[Deep Woodlands Cloak]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_Cape_17",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Misc_Cape_17",
 			},
 		},
 		["qTag"] = "Elite",
@@ -5290,7 +5326,7 @@ QST_QuestBase = {
 		["qZone"] = "The Hinterlands",
 		["qNote"] = "",
 		["qMoney"] = 67500,
-		["qLogged"] = 1396988675,
+		["qObj"] = "You have been ordered to slay Vile Priestess Hexx and 10 Vilebranch Aman'zasi Guards. See Primal Torntusk at Revantusk Village in the Hinterlands once this task is complete.\n\nVile Priestess Hexx and the Aman'zasi Guards can be found atop Jintha'alor in the Hinterlands.",
 	},
 	[62] = {
 		["qItems"] = {
@@ -5303,13 +5339,13 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:9527:0:0:0|h[Spellshifter Rod]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Wand_11",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Wand_11",
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:9531:0:0:0|h[Gemshale Pauldrons]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Shoulder_23",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Shoulder_23",
 			},
 		},
 		["qObj"] = "Bring the Tiara of the Deep to Tabetha in Dustwallow Marsh.",
@@ -5364,12 +5400,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "Of Love and Family: 1/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 8700,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Of Love and Family: 1/1",
 		},
 	},
 	[65] = {
@@ -5412,36 +5448,34 @@ QST_QuestBase = {
 		["qTitle"] = "In Dreams",
 		["qDesc"] = "For so long, I have been a puppet of the Grand Crusader. What reason was there to fight against what the Scarlet Crusade had become? It has been decades, yet the memories of my father; those precious memories, they are what have kept me alive.\n\nI have dreams, stranger. In these dreams my father is with me. He stands proudly at my side as I am inducted into the Order. We battle legion of Scourge, side by side. We bring honor to the Alliance, to Lordaeron.\n\nI want not to dream anymore.\n\nTake me to him.",
 		["qZone"] = "Western Plaguelands",
-		["qItems"] = {
-			[1] = "Grand Inquisitor Isillien slain: 1/1",
-		},
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff0070dd|Hitem:15411:0:0:0|h[Mark of Fordring]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Jewelry_Talisman_07",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Jewelry_Talisman_07",
 			},
 			[2] = {
 				["qLink"] = "|cff0070dd|Hitem:15413:0:0:0|h[Ornate Adamantium Breastplate]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Chest_Plate09",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Chest_Plate09",
 			},
 			[3] = {
 				["qLink"] = "|cff0070dd|Hitem:15418:0:0:0|h[Shimmering Platinum Warhammer]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Hammer_07",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Hammer_07",
 			},
 			[4] = {
 				["qLink"] = "|cff0070dd|Hitem:15421:0:0:0|h[Shroud of the Exile]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_Cape_07",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Misc_Cape_07",
 			},
 			[5] = {
 				["qLink"] = "|cff0070dd|Hitem:16058:0:0:0|h[Fordring's Seal]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Jewelry_Ring_19",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Jewelry_Ring_19",
 			},
 		},
+		["qObj"] = "Escort Taelan Fordring out of Hearthglen.",
 		["qTag"] = "Elite",
 		["qPlayer"] = {
 			["Ryjax of Warsong [12x] Blizzlike"] = {
@@ -5453,7 +5487,9 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 8700,
-		["qObj"] = "Escort Taelan Fordring out of Hearthglen.",
+		["qItems"] = {
+			[1] = "Grand Inquisitor Isillien slain: 1/1",
+		},
 	},
 	[68] = {
 		["qLogged"] = 1398521065,
@@ -5468,16 +5504,16 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qReward"] = {
-			[1] = {
-				["qLink"] = "|cff0070dd|Hitem:18470:0:0:0|h[Royal Seal of Eldre'Thalas]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Jewelry_Talisman_10",
-				["qAmount"] = 1,
-			},
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 3900,
-		["qNPC"] = {
+		["qReward"] = {
+			[1] = {
+				["qLink"] = "|cff0070dd|Hitem:18470:0:0:0|h[Royal Seal of Eldre'Thalas]|h|r",
+				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Jewelry_Talisman_10",
+			},
 		},
 	},
 	[69] = {
@@ -5489,19 +5525,13 @@ QST_QuestBase = {
 		},
 		["qTitle"] = "Clamlette Surprise",
 		["qDesc"] = "Ever heard of a clamlette? Of course you haven't! It's my latest and greatest culinary masterpiece. Oh, Ryjax, just thinking about a clamlette makes my mouth water.\n\nUnfortunately, I'm all out of supplies to make any! How about I make you a deal? You gather the supplies I need to make a clamlette and I'll teach you the finer points of exotic cuisine and I'll even throw in a couple of clamlettes to boot! Deal??\n\nHere's what I need:",
-		["qNPC"] = {
-		},
+		["qZone"] = "Cooking",
 		["qSpell"] = {
 			["qTex"] = "Interface\\Icons\\INV_Misc_Food_15",
 			["qLink"] = "Cooking",
 		},
 		["qObj"] = "Dirge Quikcleave wants you to get the following items:\n\n12 Giant Eggs. You will find those on the Rocs wandering Tanaris or any other species of large bird.\n\n10 pieces of Zesty Clam Meat. You can find those in clams, naturally!\n\n20 pieces of Alterac Swiss. Get thee to a cheesery!\n\nGather all of the items and return to Dirge.",
-		["qReward"] = {
-			[1] = {
-				["qLink"] = "|cffffffff|Hitem:16971:0:0:0|h[Clamlette Surprise]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_Shell_03",
-				["qAmount"] = 20,
-			},
+		["qNPC"] = {
 		},
 		["qPlayer"] = {
 			["Ryjax of Warsong [12x] Blizzlike"] = {
@@ -5509,10 +5539,16 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 45,
-		["qZone"] = "Cooking",
+		["qArea"] = "Unknown",
 		["qNote"] = "",
 		["qMoney"] = 3300,
-		["qArea"] = "Unknown",
+		["qReward"] = {
+			[1] = {
+				["qLink"] = "|cffffffff|Hitem:16971:0:0:0|h[Clamlette Surprise]|h|r",
+				["qAmount"] = 20,
+				["qTex"] = "Interface\\Icons\\INV_Misc_Shell_03",
+			},
+		},
 	},
 	[70] = {
 		["qLogged"] = 1398617776,
@@ -5526,11 +5562,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 57,
-		["qNPC"] = {
-		},
+		["qZone"] = "Cooking",
 		["qNote"] = "",
 		["qMoney"] = 2640,
-		["qZone"] = "Cooking",
+		["qNPC"] = {
+		},
 	},
 	[71] = {
 		["qLogged"] = 1398617960,
@@ -5544,11 +5580,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 57,
-		["qNPC"] = {
-		},
+		["qZone"] = "Cooking",
 		["qNote"] = "",
 		["qMoney"] = 30750,
-		["qZone"] = "Cooking",
+		["qNPC"] = {
+		},
 	},
 	[72] = {
 		["qLogged"] = 1398618099,
@@ -5556,9 +5592,7 @@ QST_QuestBase = {
 		["qDesc"] = "That recipe sure will come in handy.  I'd better get to work so I can have some smoked desert dumplings ready for today.  I could use a hand in making some, I'll make it worth your while.",
 		["qArea"] = "Unknown",
 		["qObj"] = "Calandrath at Cenarion Hold needs a batch of 10 Smoked Desert Dumplings.",
-		["qItems"] = {
-			[1] = "Smoked Desert Dumplings: 10/10",
-		},
+		["qZone"] = "Cooking",
 		["qPlayer"] = {
 			["Ryjax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -5569,38 +5603,38 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 53640,
-		["qZone"] = "Cooking",
+		["qItems"] = {
+			[1] = "Smoked Desert Dumplings: 10/10",
+		},
 	},
 	[73] = {
 		["qLogged"] = 1398678832,
 		["qTitle"] = "A Collection of Heads",
 		["qDesc"] = "It is true.  Hakkar now dwells in Zul'Gurub, bathing in the power of our gods.  Enthralled high priests now channel the energies of our most sacred divinities into the Soulflayer, who will soon have a strength beyond any being of Azeroth.  He must be stopped!\n\nTake this sacred cord, and string through it the heads of the high priests responsible for channeling our gods' energy.\n\nWhen you have done this, return to me.",
 		["qZone"] = "Zul'Gurub",
-		["qItems"] = {
-			[1] = "Gurubashi Head Collection: 0/1",
-		},
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff0070dd|Hitem:20213:0:0:0|h[Belt of Shrunken Heads]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Belt_13",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Belt_13",
 			},
 			[2] = {
 				["qLink"] = "|cff0070dd|Hitem:20215:0:0:0|h[Belt of Shriveled Heads]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Belt_12",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Belt_12",
 			},
 			[3] = {
 				["qLink"] = "|cff0070dd|Hitem:20216:0:0:0|h[Belt of Preserved Heads]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Belt_14",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Belt_14",
 			},
 			[4] = {
 				["qLink"] = "|cff0070dd|Hitem:20217:0:0:0|h[Belt of Tiny Heads]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Belt_13",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Belt_13",
 			},
 		},
+		["qObj"] = "String 5 Channeler's Heads, then return the Collection of Troll Heads to Exzhal on Yojamba Isle.",
 		["qTag"] = "Raid",
 		["qPlayer"] = {
 			["Ryjax of Warsong [12x] Blizzlike"] = {
@@ -5615,7 +5649,9 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 89700,
-		["qObj"] = "String 5 Channeler's Heads, then return the Collection of Troll Heads to Exzhal on Yojamba Isle.",
+		["qItems"] = {
+			[1] = "Gurubashi Head Collection: 0/1",
+		},
 	},
 	[74] = {
 		["qItems"] = {
@@ -5627,8 +5663,8 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffa335ee|Hitem:19840:0:0:0|h[Zandalar Haruspex's Bracers]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Bracer_08",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Bracer_08",
 			},
 		},
 		["qObj"] = "Bring Maywiki of Zuldazar a Primal Hakkari Stanchion.  You must also have a reputation equal to or greater than Friendly with the Zandalar Tribe.\n\nMaywiki of Zuldazar is located on Yojamba Isle, Stranglethorn Vale.",
@@ -5652,7 +5688,7 @@ QST_QuestBase = {
 		["qDesc"] = "For your first trial, search the depths of Lake Elune'ara to locate a Shrine Bauble.  It decays rapidly, so proceed with it to the Shrine of Remulos post haste.  Use the bauble at the shrine, and then speak with Tajarri there; she is one of Moonglade's most trusted wardens.\n\nYou only have a set amount of time to complete the task, and you may be competing against other druids searching for baubles themselves.  Mental and physical dexterity will be critical to your success.\n\nGood luck, Ryjax.",
 		["qArea"] = "Unknown",
 		["qObj"] = "Find a Shrine Bauble in Lake Elune'ara, and take it to the Shrine of Remulos in northwestern Moonglade.  Once there, use the Shrine Bauble.\n\nYou must speak with Tajarri at the shrine afterwards in order to complete the trial.",
-		["qLogged"] = 1398679467,
+		["qZone"] = "Druid",
 		["qPlayer"] = {
 			["Ryjax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -5663,7 +5699,7 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qZone"] = "Druid",
+		["qLogged"] = 1398679467,
 	},
 	[76] = {
 		["qItems"] = {
@@ -5673,7 +5709,7 @@ QST_QuestBase = {
 		["qDesc"] = "For the second trial, you'll need the two halves that make the Pendant of the Sea Lion.  One half draws power from the agility of the sea lion aspect, gliding through water; the other draws power from the incredible endurance of the sea lion aspect.  Druids draw on both these traits equally to embody the aspect of their aquatic form.\n\nSpeak with the locals of Moonglade to learn where the parts may lie, and bring both here to join them together.  Once formed, take the pendant to Dendrite Starblaze.",
 		["qArea"] = "Unknown",
 		["qObj"] = "Find the Half Pendant of Aquatic Agility and the Half Pendant of Aquatic Endurance.  Speak with the residents of Moonglade to learn clues as to where these items may be located.\n\nForm the Pendant of the Sea Lion from the two pendant halves.  You need to be in proximity of the Shrine of Remulos to do this.\n\nBring the joined pendant to Dendrite Starblaze in the village of Nighthaven, Moonglade.",
-		["qLogged"] = 1398680294,
+		["qZone"] = "Druid",
 		["qPlayer"] = {
 			["Ryjax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -5684,7 +5720,7 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qZone"] = "Druid",
+		["qLogged"] = 1398680294,
 	},
 	[77] = {
 		["qItems"] = {
@@ -5737,27 +5773,27 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 55,
-		["qItems"] = {
-			[1] = "The Heart of the Mountain: 0/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 33000,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "The Heart of the Mountain: 0/1",
 		},
 	},
 	[79] = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:16608:0:0:0|h[Aquarius Belt]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Belt_26",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Belt_26",
 			},
 		},
 		["qTitle"] = "Aquatic Form",
 		["qDesc"] = "You have completed the necessary lessons all young druids are taught before they can adopt an aquatic aspect.  Go now back to your trainer, Turak Runetotem, in Thunder Bluff.  Show him your pendant and prove to him you are ready to learn what he has to teach you.  He will complete your training, allowing you to become one with the water.\n\nGoodbye, young druid.  We shall speak again.",
 		["qArea"] = "Unknown",
 		["qObj"] = "Return to Thunder Bluff and show Turak Runetotem the Pendant of the Sea Lion.",
-		["qLogged"] = 1398683699,
+		["qZone"] = "Druid",
 		["qPlayer"] = {
 			["Ryjax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -5768,26 +5804,17 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qZone"] = "Druid",
+		["qLogged"] = 1398683699,
 	},
 	[80] = {
-		["qLogged"] = 1376470798,
+		["qItems"] = {
+			[1] = "Befouled Bloodstone Orb: 0/1",
+		},
 		["qTitle"] = "Foul Magics",
 		["qDesc"] = "There is no doubt in my mind that a powerful warlock resides within the walls of Stromgarde. From time to time, using an arcane magical relic, this warlock has summoned forth terrible demons in large numbers. We must remove the source of his energy.\n\nFind the warlock and kill him. Bring me whatever magical object you find on his person, and I will take steps to destroy it and see that its power is not used to taint this land any longer.",
 		["qNPC"] = {
 		},
-		["qChoice"] = {
-			[1] = {
-				["qLink"] = "|cff1eff00|Hitem:4543:0:0:0|h[White Drakeskin Cap]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Helmet_13",
-				["qAmount"] = 1,
-			},
-			[2] = {
-				["qLink"] = "|cff1eff00|Hitem:4545:0:0:0|h[Radiant Silver Bracers]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Bracer_07",
-				["qAmount"] = 1,
-			},
-		},
+		["qLogged"] = 1376470798,
 		["qObj"] = "Retrieve Marez Cowl's Bloodstone Orb and bring it to Tor'gan in Hammerfall.",
 		["qTag"] = "Elite",
 		["qPlayer"] = {
@@ -5799,8 +5826,17 @@ QST_QuestBase = {
 		["qZone"] = "Arathi Highlands",
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qItems"] = {
-			[1] = "Befouled Bloodstone Orb: 0/1",
+		["qChoice"] = {
+			[1] = {
+				["qLink"] = "|cff1eff00|Hitem:4543:0:0:0|h[White Drakeskin Cap]|h|r",
+				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Helmet_13",
+			},
+			[2] = {
+				["qLink"] = "|cff1eff00|Hitem:4545:0:0:0|h[Radiant Silver Bracers]|h|r",
+				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Bracer_07",
+			},
 		},
 	},
 	[81] = {
@@ -5817,11 +5853,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 37,
-		["qLogged"] = 1376470798,
-		["qNote"] = "",
-		["qMoney"] = 0,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qLogged"] = 1376470798,
 	},
 	[82] = {
 		["qItems"] = {
@@ -5840,11 +5876,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 37,
-		["qLogged"] = 1376470798,
-		["qNote"] = "",
-		["qMoney"] = 0,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qLogged"] = 1376470798,
 	},
 	[83] = {
 		["qLogged"] = 1376470798,
@@ -5852,8 +5888,7 @@ QST_QuestBase = {
 		["qDesc"] = "Oh yes, my barbecued buzzard wings are a favorite!  The sauce is rich and the meat is tangy.  And the smell will bring the hungry running from miles away!\n\nI have everything I need to cook up a batch.  Everything...except the buzzard wings!\n\nIf you want some then get me the buzzard wings.  Bring me enough, and I might even share the recipe with you!",
 		["qZone"] = "Badlands",
 		["qObj"] = "Bring 4 Buzzard Wings to Rigglefuzz.",
-		["qItems"] = {
-			[1] = "Buzzard Wing: 0/4",
+		["qNPC"] = {
 		},
 		["qPlayer"] = {
 			["Banjax of Warsong [12x] Blizzlike"] = {
@@ -5874,7 +5909,8 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Buzzard Wing: 0/4",
 		},
 	},
 	[84] = {
@@ -5903,9 +5939,7 @@ QST_QuestBase = {
 		["qDesc"] = "A while ago, I had an incident with the Shadowforge Dwarves.  They brought me to Angor Fortress to study two types of strange stones from Uldaman.  I discovered that the stones were sustained, stable power sources if treated correctly.  It's amazing the things one can find in that old dig site!\n\nAnyway, after I told them the secret of the stones they kicked me out of Angor Fortress and began digging for more in Uldaman.\n\nI want those stones for myself!  Bring me both types and I'll pay you plenty!",
 		["qZone"] = "Uldaman",
 		["qObj"] = "Bring 8 Dentrium Power Stones and 8 An'Alleum Power Stones to Rigglefuzz in the Badlands.",
-		["qItems"] = {
-			[1] = "Dentrium Power Stone: 0/8",
-			[2] = "An'Alleum Power Stone: 0/8",
+		["qNPC"] = {
 		},
 		["qPlayer"] = {
 			["Banjax of Warsong [12x] Blizzlike"] = {
@@ -5926,15 +5960,17 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Dentrium Power Stone: 0/8",
+			[2] = "An'Alleum Power Stone: 0/8",
 		},
 	},
 	[86] = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffa335ee|Hitem:21401:0:0:0|h[Scythe of the Unseen Path]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Axe_15",
+				["qAmount"] = 1,
 			},
 		},
 		["qTitle"] = "Scythe of the Unseen Path",
@@ -5961,11 +5997,13 @@ QST_QuestBase = {
 		},
 	},
 	[87] = {
-		["qLogged"] = 1396989589,
+		["qItems"] = {
+			[1] = "Alterac Valley Mark of Honor: 1/3",
+		},
 		["qTitle"] = "Invaders of Alterac Valley",
 		["qDesc"] = "Listen up, Unknown.  No matter what you might have heard about the battle raging in Alterac Valley, one thing remains true: the Stormpike Expedition invaded Frostwolf Territory.  The day we allow the Alliance to invade Horde lands without a forceful response is the day I hang up my axe and live the rest of my life in shame.  Go forth and expel the invaders!",
 		["qZone"] = "Alterac Valley",
-		["qArea"] = "Unknown",
+		["qLogged"] = 1396989589,
 		["qObj"] = "Bring 3 Alterac Valley Marks of Honor to a Horde Warbringer outside the battlegrounds.",
 		["qTag"] = "PvP",
 		["qPlayer"] = {
@@ -5981,30 +6019,28 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 58950,
-		["qItems"] = {
-			[1] = "Alterac Valley Mark of Honor: 1/3",
-		},
+		["qArea"] = "Unknown",
 	},
 	[88] = {
-		["qLogged"] = 1396989589,
+		["qReward"] = {
+			[1] = {
+				["qLink"] = "|cff1eff00|Hitem:17690:0:0:0|h[Frostwolf Insignia Rank 1]|h|r",
+				["qTex"] = "Interface\\Icons\\INV_Jewelry_FrostwolfTrinket_01",
+				["qAmount"] = 1,
+			},
+			[2] = {
+				["qLink"] = "|cffffffff|Hitem:19483:0:0:0|h[Peeling the Onion]|h|r",
+				["qTex"] = "Interface\\Icons\\INV_Misc_Book_07",
+				["qAmount"] = 1,
+			},
+		},
 		["qTitle"] = "Proving Grounds",
 		["qDesc"] = "Hail, hunter. It has been a long time since we have had the chance to answer the call of battle. The old feelings are slow to rise but once awakened, the blood does rush. The battle rage returns...\n\nAll newcomers to the Valley must first complete the rite of battle.\n\nDeep within the Wildpaw gnoll cave is a banner of the Frostwolf. Venture forth and recover the banner. Return it to me and I shall grant you the Frostwolf initiate's insignia.",
 		["qNPC"] = {
 		},
 		["qArea"] = "Unknown",
 		["qObj"] = "Travel to the Wildpaw cavern located southeast of the main base in Alterac Valley and find the Frostwolf Banner. Return the Frostwolf Banner to Warmaster Laggrond. ",
-		["qReward"] = {
-			[1] = {
-				["qLink"] = "|cff1eff00|Hitem:17690:0:0:0|h[Frostwolf Insignia Rank 1]|h|r",
-				["qAmount"] = 1,
-				["qTex"] = "Interface\\Icons\\INV_Jewelry_FrostwolfTrinket_01",
-			},
-			[2] = {
-				["qLink"] = "|cffffffff|Hitem:19483:0:0:0|h[Peeling the Onion]|h|r",
-				["qAmount"] = 1,
-				["qTex"] = "Interface\\Icons\\INV_Misc_Book_07",
-			},
-		},
+		["qLogged"] = 1396989589,
 		["qPlayer"] = {
 			["Zapunzel of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -6025,11 +6061,12 @@ QST_QuestBase = {
 		["qZone"] = "Alterac Valley",
 	},
 	[89] = {
-		["qLogged"] = 1396989589,
+		["qItems"] = {
+		},
 		["qTitle"] = "The Battle for Alterac",
 		["qDesc"] = "The Stormpike dwarves and their allies have invaded Alterac Valley, and we must drive them out!  To win the battle for Alterac, we must defeat their general, Vanndar Stormpike!\n\nYou will find Vanndar in Dun Baldar, in the north of Alterac Valley.\n\nDestroy him, Unknown, and then return to me.",
 		["qZone"] = "Alterac Valley",
-		["qArea"] = "Unknown",
+		["qLogged"] = 1396989589,
 		["qObj"] = "Enter Alterac Valley and defeat the dwarven general, Vanndar Stormpike.  Then, return to Voggah Deathgrip in the Alterac Mountains.",
 		["qTag"] = "PvP",
 		["qPlayer"] = {
@@ -6048,15 +6085,16 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 8700,
-		["qItems"] = {
-		},
+		["qArea"] = "Unknown",
 	},
 	[90] = {
-		["qLogged"] = 1396989589,
+		["qItems"] = {
+			[1] = "Graveyard Assaulted: 0/1",
+		},
 		["qTitle"] = "The Graveyards of Alterac",
 		["qDesc"] = "The battle lines of Alterac Valley are ever shifting.  Territories swing back and forth as we meet our opponents in deadly combat.  And graveyards, Unknown, are where battles rage most fierce.\n\nI want you to attack an Alliance held graveyard!  Find a graveyard with an Alliance banner in its midst and pull it from the ground.\n\nDo that and your task for me will be complete, but... if you hold the graveyard for a few minutes, then it will be ours and troops will come and relieve you.",
 		["qZone"] = "Alterac Valley",
-		["qArea"] = "Unknown",
+		["qLogged"] = 1396989589,
 		["qObj"] = "Assault a graveyard, then return to Corporal Teeka Bloodsnarl in the Alterac Mountains.",
 		["qTag"] = "PvP",
 		["qPlayer"] = {
@@ -6069,30 +6107,34 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 5700,
-		["qItems"] = {
-			[1] = "Graveyard Assaulted: 0/1",
-		},
+		["qArea"] = "Unknown",
 	},
 	[91] = {
-		["qLogged"] = 1396989589,
+		["qReward"] = {
+			[1] = {
+				["qLink"] = "|cff1eff00|Hitem:18149:0:0:0|h[Rune of Recall]|h|r",
+				["qTex"] = "Interface\\Icons\\INV_Misc_Rune_05",
+				["qAmount"] = 1,
+			},
+		},
 		["qDesc"] = "The invading Stormpike are not the only threat in the region, soldier. The war in the Valley is waged on two fronts. The cannibal Winterax trolls also vie for power.\n\nThey are lead by Korrak the Bloodrager - a cruel and cunning beast.\n\nA strike against Korrak could prove to be a crushing blow to the Winterax clan. Slay the beast and be rewarded!",
 		["qNPC"] = {
 		},
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff0070dd|Hitem:19107:0:0:0|h[Bloodseeker]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Weapon_Crossbow_07",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qLink"] = "|cff0070dd|Hitem:19106:0:0:0|h[Ice Barbed Spear]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Spear_04",
+				["qAmount"] = 1,
 			},
 			[3] = {
 				["qLink"] = "|cff0070dd|Hitem:19108:0:0:0|h[Wand of Biting Cold]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Wand_01",
+				["qAmount"] = 1,
 			},
 		},
 		["qTag"] = "Raid",
@@ -6105,35 +6147,28 @@ QST_QuestBase = {
 		["qTitle"] = "The Legend of Korrak",
 		["qZone"] = "Alterac Valley",
 		["qObj"] = "According to legend, the leader of the mighty Winterax trolls appears at will to wreak havoc on the denizens of Alterac Valley.\n\nShould Korrak make himself known, destroy him and return to Warmaster Laggrond.",
-		["qReward"] = {
-			[1] = {
-				["qLink"] = "|cff1eff00|Hitem:18149:0:0:0|h[Rune of Recall]|h|r",
-				["qAmount"] = 1,
-				["qTex"] = "Interface\\Icons\\INV_Misc_Rune_05",
-			},
-		},
+		["qLogged"] = 1396989589,
 		["qLevel"] = 60,
 		["qNote"] = "",
-		["qArea"] = "Unknown",
 		["qItems"] = {
 			[1] = "Korrak the Bloodrager slain: 0/1",
 		},
+		["qArea"] = "Unknown",
 	},
 	[92] = {
-		["qItems"] = {
-			[1] = "Skull of Korrak: 0/1",
-		},
+		["qLogged"] = 1396989589,
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:18149:0:0:0|h[Rune of Recall]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Misc_Rune_05",
+				["qAmount"] = 1,
 			},
 		},
 		["qTitle"] = "The Return of Korrak",
 		["qDesc"] = "While it is true that Korrak has been slain, one question remains: Will he remain dead? Trolls are notorious for their other-worldly tribal magics. I would not be surprised if the fallen leader was raised from the dead to once more rule over his clan.\n\nYou know what to do should this ever occur.\n\n<Warmaster Laggrond makes a cutting motion across his neck with his index finger.>\n\nAnd  this time, I want his skull. Just keep your eyes peeled, soldier.\n\nDismissed!",
-		["qZone"] = "Alterac Valley",
-		["qNPC"] = {
+		["qArea"] = "Unknown",
+		["qItems"] = {
+			[1] = "Skull of Korrak: 0/1",
 		},
 		["qObj"] = "Should Korrak the Bloodrager make a return to the Field of Strife, seek him out and destroy him.\n\nReturn the Skull of Korrak to Warmaster Laggrond in the Hillsbrad Foothills.",
 		["qTag"] = "Raid",
@@ -6143,10 +6178,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qArea"] = "Unknown",
+		["qZone"] = "Alterac Valley",
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1396989589,
+		["qNPC"] = {
+		},
 	},
 	[93] = {
 		["qLogged"] = 1396989589,
@@ -6173,13 +6209,13 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 62700,
 		["qItems"] = {
 			[1] = "Archivist Galford slain: 0/1",
 			[2] = "Archive Burned: 0/1",
+		},
+		["qNote"] = "",
+		["qMoney"] = 62700,
+		["qNPC"] = {
 		},
 	},
 	[94] = {
@@ -6235,12 +6271,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Frostmaul Shards: 0/4",
 		},
 		["qNote"] = "",
 		["qMoney"] = 32700,
-		["qItems"] = {
-			[1] = "Frostmaul Shards: 0/4",
+		["qNPC"] = {
 		},
 	},
 	[97] = {
@@ -6259,23 +6295,23 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 56,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 5100,
 		["qItems"] = {
 			[1] = "Ursius slain: 0/1",
 		},
+		["qNote"] = "",
+		["qMoney"] = 5100,
+		["qNPC"] = {
+		},
 	},
 	[98] = {
-		["qItems"] = {
-			[1] = "Thick Leather: 10/10",
-		},
+		["qLogged"] = 1398289228,
 		["qTitle"] = "Wild Leather Armor",
 		["qDesc"] = "Banjax, your skill as a leatherworker precedes you.  I possess leatherworking lore you would be wise to acquire... Wild Leather armor!  Wild Leather taps into the potent and chaotic properties of wildvines, found in areas of lush vegetation and on some of the creatures there.  Armor made using it is second to none for a crafter of your skill, guaranteed.\n\nI'll teach you, but you'll be working for me for a while.  The first cost is simply ten pieces of thick leather.  After this, we'll talk specifics.",
 		["qArea"] = "Unknown",
 		["qObj"] = "Bring 10 Thick Leather to Jangdor Swiftstrider in Camp Mojache.",
-		["qZone"] = "Leatherworking",
+		["qItems"] = {
+			[1] = "Thick Leather: 10/10",
+		},
 		["qPlayer"] = {
 			["Banjax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -6286,23 +6322,19 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 1680,
-		["qLogged"] = 1398289228,
+		["qZone"] = "Leatherworking",
 	},
 	[99] = {
-		["qLogged"] = 1398959866,
-		["qTitle"] = "Wild Leather Shoulders",
-		["qDesc"] = "Wild Leather shoulders support a wearer's frame extremely well, offering superior protection of the upper arms as well as the shoulders.  As with all Wild Leather armor, a random yet very potent enhancement is imbued within the item as the wildvine is stitched in.\n\nFor this pattern, I will require six thick armor kits and a wildvine.  That shouldn't be too tall of an order for you to fill.",
-		["qZone"] = "Leatherworking",
-		["qReward"] = {
-			[1] = {
-				["qAmount"] = 1,
-			},
-		},
-		["qObj"] = "Bring 6 Thick Armor Kits and a Wildvine to Jangdor Swiftstrider in Camp Mojache.",
 		["qItems"] = {
 			[1] = "Thick Armor Kit: 3/6",
 			[2] = "Wildvine: 1/1",
 		},
+		["qTitle"] = "Wild Leather Shoulders",
+		["qDesc"] = "Wild Leather shoulders support a wearer's frame extremely well, offering superior protection of the upper arms as well as the shoulders.  As with all Wild Leather armor, a random yet very potent enhancement is imbued within the item as the wildvine is stitched in.\n\nFor this pattern, I will require six thick armor kits and a wildvine.  That shouldn't be too tall of an order for you to fill.",
+		["qArea"] = "Unknown",
+		["qZone"] = "Leatherworking",
+		["qObj"] = "Bring 6 Thick Armor Kits and a Wildvine to Jangdor Swiftstrider in Camp Mojache.",
+		["qLogged"] = 1398959866,
 		["qPlayer"] = {
 			["Banjax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -6313,21 +6345,25 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 2520,
-		["qArea"] = "Unknown",
+		["qReward"] = {
+			[1] = {
+				["qAmount"] = 1,
+			},
+		},
 	},
 	[100] = {
-		["qLogged"] = 1399067731,
+		["qReward"] = {
+			[1] = {
+				["qAmount"] = 1,
+			},
+		},
 		["qTitle"] = "Wild Leather Vest",
 		["qDesc"] = "Wild Leather vests are the staple of any Wild Leather armor set.  The frame of the vest and the wildvine weave within it produces a product that offers maximum protection of the torso while allowing for potent magic to work its way through the garment.\n\nFor this pattern, I will require two Turtle Scale breastplates, two sets of Turtle Scale gloves, and a wildvine.  This is not an easy lesson, but it is one you certainly have the skill to complete.",
 		["qNPC"] = {
 		},
 		["qArea"] = "Unknown",
 		["qObj"] = "Bring 2 Turtle Scale Breastplates, 2 Turtle Scale Gloves, and a Wildvine to Jangdor Swiftstrider in Camp Mojache.",
-		["qReward"] = {
-			[1] = {
-				["qAmount"] = 1,
-			},
-		},
+		["qLogged"] = 1399067731,
 		["qPlayer"] = {
 			["Banjax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -6344,18 +6380,18 @@ QST_QuestBase = {
 		["qZone"] = "Leatherworking",
 	},
 	[101] = {
-		["qLogged"] = 1399067784,
+		["qReward"] = {
+			[1] = {
+				["qAmount"] = 1,
+			},
+		},
 		["qTitle"] = "Wild Leather Helmet",
 		["qDesc"] = "A Wild Leather helmet offers the wearer superior protection to the vital areas of the head without a sacrifice in comfort.  As with all Wild Leather armor, the integrated wildvine yields a powerful but random magic imbuement to the helm's frame.  Leather wearers will definitely want this piece!\n\nFor this pattern, I will need two Nightscape tunics, 2 Nightscape headbands, and a wildvine.  Complete this lesson and the pattern will be yours!",
 		["qNPC"] = {
 		},
 		["qArea"] = "Unknown",
 		["qObj"] = "Bring 2 Nightscape Tunics, 2 Nightscape Headbands, and a Wildvine to Jangdor Swiftstrider in Camp Mojache.",
-		["qReward"] = {
-			[1] = {
-				["qAmount"] = 1,
-			},
-		},
+		["qLogged"] = 1399067784,
 		["qPlayer"] = {
 			["Banjax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -6372,15 +6408,15 @@ QST_QuestBase = {
 		["qZone"] = "Leatherworking",
 	},
 	[102] = {
-		["qItems"] = {
-			[1] = "Wild Leather Vest: 1/1",
-			[2] = "Wild Leather Helmet: 1/1",
-		},
+		["qLogged"] = 1399069218,
 		["qTitle"] = "Tribal Leatherworking",
 		["qDesc"] = "To learn tribal leatherworking demands an understanding of how primal nature truly is; I know that you have already mastered the art of making wild leather armor, and I am willing to complete your training.\n\nKnow this, hunter: by choosing this path you agree never to learn dragonscale or elemental leatherworking; there is only room for practice of one of the three arts.  Furthermore, bring to me the finest samples of your wild leather armor.  From there, we will begin your mastery.",
 		["qArea"] = "Unknown",
 		["qObj"] = "Bring a Wild Leather Vest and a Wild Leather Helmet to Se'Jib in Stranglethorn Vale.\n\nCompleting this quest will give you access to the Tribal Leatherworking arts.\n\nThe completion of this quest will prevent you from learning Dragonscale Leatherworking and Elemental Leatherworking; be sure this is the path you wish to follow before doing so.",
-		["qZone"] = "Leatherworking",
+		["qItems"] = {
+			[1] = "Wild Leather Vest: 1/1",
+			[2] = "Wild Leather Helmet: 1/1",
+		},
 		["qPlayer"] = {
 			["Banjax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -6391,10 +6427,12 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 2520,
-		["qLogged"] = 1399069218,
+		["qZone"] = "Leatherworking",
 	},
 	[103] = {
-		["qLogged"] = 1375908656,
+		["qItems"] = {
+			[1] = "Bloodstone Amulet: 0/10",
+		},
 		["qTitle"] = "Foul Magics",
 		["qDesc"] = "I have felt a strangeness in the air... a feeling that simmers in my blood. I had my suspicions. I set off to find the source of my unease and discovered to the west, at Northfold Manor, the residual traces of demonic summoning. As I got close, my blood began to boil and the rage within me grew.\n\nOn the ground I spied an amulet of bloodstone, used to assist in demonic summoning. The one I found was depleted, however. I'll need another to examine, but I dare not return to the manor. Can you bring me some?",
 		["qZone"] = "Arathi Highlands",
@@ -6408,16 +6446,16 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 33,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1375908656,
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qItems"] = {
-			[1] = "Bloodstone Amulet: 0/10",
+		["qNPC"] = {
 		},
 	},
 	[104] = {
-		["qLogged"] = 1375908656,
+		["qItems"] = {
+			[1] = "Raptor Heart: 0/12",
+		},
 		["qTitle"] = "Guile of the Raptor",
 		["qDesc"] = "With some additional objects, I will be able to create an item that will imbue Gor'mul with the guile of the raptor! With the power of the raptor flowing through him, Gor'mul will know our new power and rediscover the warrior that lies dormant!\n\nI will require raptor hearts to fashion the item and spell.",
 		["qZone"] = "Arathi Highlands",
@@ -6431,34 +6469,21 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 37,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1375908656,
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qItems"] = {
-			[1] = "Raptor Heart: 0/12",
+		["qNPC"] = {
 		},
 	},
 	[105] = {
-		["qItems"] = {
-			[1] = "Dig Rat: 0/8",
-		},
+		["qLogged"] = 1375908656,
 		["qTitle"] = "Dig Rat Stew",
 		["qDesc"] = "A warrior like you must get pretty hungry out here in The Barrens. Me, I'm starving all day long.\n\nTell you what, I'll fix you up a nice stew. Just need a few dig rats.\n\nSeems those filthy dwarves at Bael Modan are overrun with everyone's favorite feast. Now head on down south to Bael Modan and bring me back some dig rats.\n\nYou can't call yourself a seasoned adventurer until you've spent some time killing rats! Haw!",
 		["qZone"] = "Cooking",
-		["qArea"] = "Unknown",
+		["qItems"] = {
+			[1] = "Dig Rat: 0/8",
+		},
 		["qObj"] = "Bring 8 Dig Rats to Grub east of the Crossroads.",
-		["qLogged"] = 1375908656,
-		["qPlayer"] = {
-			["Kylosandrax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFF7F7F7FUnknown",
-			},
-		},
-		["qLevel"] = 23,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 0,
 		["qReward"] = {
 			[1] = {
 				["qAmount"] = 1,
@@ -6470,6 +6495,17 @@ QST_QuestBase = {
 				["qAmount"] = 1,
 			},
 		},
+		["qPlayer"] = {
+			["Kylosandrax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFF7F7F7FUnknown",
+			},
+		},
+		["qLevel"] = 23,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qArea"] = "Unknown",
 	},
 	[106] = {
 		["qLogged"] = 1375908656,
@@ -6484,12 +6520,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 33,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Kraul Guano: 0/1",
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qItems"] = {
-			[1] = "Kraul Guano: 0/1",
+		["qNPC"] = {
 		},
 	},
 	[107] = {
@@ -6497,9 +6533,6 @@ QST_QuestBase = {
 		["qTitle"] = "The Book of Ur",
 		["qDesc"] = "Kylosandrax, Shadowfang Keep holds a book, the Book of Ur, which would be much prized in my collection.  Ur was a great mage of Dalaran before the coming of the Scourge, his studies in other worlds are of much value to ... certain parties among the Forsaken.\n\nEnter Shadowfang Keep and find the book.  Bring it to me, and I will report your service to our Dark Lady...",
 		["qNPC"] = {
-		},
-		["qItems"] = {
-			[1] = "The Book of Ur: 0/1",
 		},
 		["qChoice"] = {
 			[1] = {
@@ -6509,6 +6542,7 @@ QST_QuestBase = {
 				["qAmount"] = 1,
 			},
 		},
+		["qObj"] = "Bring the Book of Ur to Keeper Bel'dugur at the Apothecarium in the Undercity.",
 		["qTag"] = "Dungeon",
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
@@ -6519,10 +6553,16 @@ QST_QuestBase = {
 		["qZone"] = "Shadowfang Keep",
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qObj"] = "Bring the Book of Ur to Keeper Bel'dugur at the Apothecarium in the Undercity.",
+		["qItems"] = {
+			[1] = "The Book of Ur: 0/1",
+		},
 	},
 	[108] = {
-		["qLogged"] = 1375908656,
+		["qItems"] = {
+			[1] = "Galak Scout slain: 0/12",
+			[2] = "Galak Wrangler slain: 0/10",
+			[3] = "Galak Windchaser slain: 0/6",
+		},
 		["qTitle"] = "Pacify the Centaur",
 		["qDesc"] = "Kylosandrax, I entreat you to hunt these centaur down. They shall feel the wrath of our revenge. Attack the centaur camp to the north of Freewind Post!  Let wrath guide your hand!\n",
 		["qZone"] = "Thousand Needles",
@@ -6533,18 +6573,16 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 25,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1375908656,
 		["qNote"] = "",
 		["qMoney"] = 5400,
-		["qItems"] = {
-			[1] = "Galak Scout slain: 0/12",
-			[2] = "Galak Wrangler slain: 0/10",
-			[3] = "Galak Windchaser slain: 0/6",
+		["qNPC"] = {
 		},
 	},
 	[109] = {
-		["qLogged"] = 1375908656,
+		["qItems"] = {
+			[1] = "Incendia Agave: 0/10",
+		},
 		["qTitle"] = "Sacred Fire",
 		["qDesc"] = "Arikara is a deadly creature that must be dealt with swiftly. In order to hunt her down you will need to light the sacred fire of life - this will summon Arikara.\n\nGo now and harvest the rare Incendia agave plant. Once you have harvested enough agave, seek council with Magatha Grimtotem on Elder Rise in Thunder Bluff. She is a powerful shaman that can enchant the agave plant to create a powder that will light the fire.\n\nTravel northeast to the Boiling Pool and gather Incendia Agave.",
 		["qZone"] = "Thousand Needles",
@@ -6555,16 +6593,16 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 27,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1375908656,
 		["qNote"] = "",
 		["qMoney"] = 6600,
-		["qItems"] = {
-			[1] = "Incendia Agave: 0/10",
+		["qNPC"] = {
 		},
 	},
 	[110] = {
-		["qLogged"] = 1375908656,
+		["qItems"] = {
+			[1] = "Garrett Family Treasure: 0/1",
+		},
 		["qTitle"] = "Reclaimed Treasures",
 		["qDesc"] = "Sweeping the bat pens with this broom is not befitting a Garrett!  I've earned a little coin from this accursed job, and I'm willing to spend it on you to better my station.\n\nThe Garrett family weapon of choice is locked away in our chest in the South Common Hall of Uldaman from when we Garretts toiled there as diggers.  Without it, I will be stuck here forever - literally - sweeping up after these infernal bats.\n\nReclaim my family's treasure and bring it to me!  Help me restore my birthright!",
 		["qZone"] = "Uldaman",
@@ -6575,24 +6613,26 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 43,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1375908656,
 		["qNote"] = "",
 		["qMoney"] = 18000,
-		["qItems"] = {
-			[1] = "Garrett Family Treasure: 0/1",
+		["qNPC"] = {
 		},
 	},
 	[111] = {
-		["qItems"] = {
-			[1] = "Twitching Antenna: 0/5",
-		},
+		["qLogged"] = 1375908656,
 		["qTitle"] = "Trial at the Field of Giants",
 		["qDesc"] = "To pass this trial, you must travel south to the Field of Giants.  There you will find a host of crawling, insect creatures.  They are new to the Barrens and I do not like what they herald.\n\nBring me their still-twitching antennae, and waste no time, Kylosandrax, for harvested antennae will not twitch for long.  Bring me the antennae in the time allowed, and you will pass the trial.",
 		["qZone"] = "Warrior",
-		["qArea"] = "Unknown",
+		["qItems"] = {
+			[1] = "Twitching Antenna: 0/5",
+		},
 		["qObj"] = "Bring 5 twitching antennae to Ruga Ragetotem at Camp Taurajo",
-		["qLogged"] = 1375908656,
+		["qReward"] = {
+			[1] = {
+				["qAmount"] = 1,
+			},
+		},
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -6603,11 +6643,7 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qReward"] = {
-			[1] = {
-				["qAmount"] = 1,
-			},
-		},
+		["qArea"] = "Unknown",
 	},
 	[112] = {
 		["qLogged"] = 1375908656,
@@ -6621,11 +6657,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 30,
-		["qZone"] = "Warrior",
-		["qNote"] = "",
-		["qMoney"] = 0,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qZone"] = "Warrior",
 	},
 	[113] = {
 		["qLogged"] = 1397490205,
@@ -6640,11 +6676,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
+		["qZone"] = "Alterac Valley",
 		["qNote"] = "",
 		["qMoney"] = 5700,
-		["qZone"] = "Alterac Valley",
+		["qNPC"] = {
+		},
 	},
 	[114] = {
 		["qLogged"] = 1397490205,
@@ -6659,14 +6695,14 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 54,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 56700,
 		["qItems"] = {
 			[1] = "Anvilrage Medic slain: 2/10",
 			[2] = "Anvilrage Soldier slain: 0/10",
 			[3] = "Anvilrage Officer slain: 0/10",
-		},
-		["qNote"] = "",
-		["qMoney"] = 56700,
-		["qNPC"] = {
 		},
 	},
 	[115] = {
@@ -6698,26 +6734,24 @@ QST_QuestBase = {
 		["qTitle"] = "The Pack Mistress",
 		["qDesc"] = "Some say the worg controlled by the Blackrock orcs are the creation of a supernatural force. Others say they are not true worg but instead a breed of demon dog, granted to the orcs by a fallen pit lord.\n\nThe truth is far less contrived but every bit as frightening. The worg of Blackrock come from Halycon and her mate. Halycon is the gigantic den mother of the worg. Her mate? Nobody has ever lived to tell the tale of that one.\n\nStrike at the heart of the worg. Destroy Halycon... and Unknown, watch your back.",
 		["qZone"] = "Blackrock Spire",
-		["qItems"] = {
-			[1] = "Halycon slain: 0/1",
-		},
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:15824:0:0:0|h[Astoria Robes]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Chest_Cloth_07",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Chest_Cloth_07",
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:15825:0:0:0|h[Traphook Jerkin]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Chest_Plate06",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Chest_Plate06",
 			},
 			[3] = {
 				["qLink"] = "|cff1eff00|Hitem:15827:0:0:0|h[Jadescale Breastplate]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Chest_Chain_04",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Chest_Chain_04",
 			},
 		},
+		["qObj"] = "Slay Halycon, pack mistress of the Bloodaxe worg.",
 		["qTag"] = "Dungeon",
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
@@ -6735,46 +6769,43 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 62400,
-		["qObj"] = "Slay Halycon, pack mistress of the Bloodaxe worg.",
+		["qItems"] = {
+			[1] = "Halycon slain: 0/1",
+		},
 	},
 	[117] = {
 		["qLogged"] = 1397490205,
 		["qTitle"] = "Warlord's Command",
 		["qDesc"] = "By order of Warlord Goretooth, the following inhabitants of Blackrock Spire must be destroyed:\n\nThe rotund menace, Highlord Omokk.\n\nThe cruel and ruthless troll, War Master Voone.\n\nOverlord Wyrmthalak, taskmaster of the lesser city.\n\nYou will also be required to return any important documents that you may find.\n\nSucceed and be honored.\n\nFail and be forgotten.",
 		["qZone"] = "Blackrock Spire",
-		["qItems"] = {
-			[1] = "Overlord Wyrmthalak slain: 0/1",
-			[2] = "Highlord Omokk slain: 0/1",
-			[3] = "War Master Voone slain: 0/1",
-			[4] = "Important Blackrock Documents: 0/1",
-		},
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff0070dd|Hitem:13958:0:0:0|h[Wyrmthalak's Shackles]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Bracer_04",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Bracer_04",
 			},
 			[2] = {
 				["qLink"] = "|cff0070dd|Hitem:13959:0:0:0|h[Omokk's Girth Restrainer]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Belt_13",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Belt_13",
 			},
 			[3] = {
 				["qLink"] = "|cff0070dd|Hitem:13961:0:0:0|h[Halycon's Muzzle]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Shoulder_24",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Shoulder_24",
 			},
 			[4] = {
 				["qLink"] = "|cff0070dd|Hitem:13962:0:0:0|h[Vosh'gajin's Strand]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Belt_15",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Belt_15",
 			},
 			[5] = {
 				["qLink"] = "|cff0070dd|Hitem:13963:0:0:0|h[Voone's Vice Grips]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Gauntlets_15",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Gauntlets_15",
 			},
 		},
+		["qObj"] = "Slay Highlord Omokk, War Master Voone, and Overlord Wyrmthalak. Recover Important Blackrock Documents. Return to Warlord Goretooth in Kargath when the mission has been accomplished.",
 		["qTag"] = "Dungeon",
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
@@ -6792,7 +6823,12 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 62700,
-		["qObj"] = "Slay Highlord Omokk, War Master Voone, and Overlord Wyrmthalak. Recover Important Blackrock Documents. Return to Warlord Goretooth in Kargath when the mission has been accomplished.",
+		["qItems"] = {
+			[1] = "Overlord Wyrmthalak slain: 0/1",
+			[2] = "Highlord Omokk slain: 0/1",
+			[3] = "War Master Voone slain: 0/1",
+			[4] = "Important Blackrock Documents: 0/1",
+		},
 	},
 	[118] = {
 		["qItems"] = {
@@ -6804,7 +6840,7 @@ QST_QuestBase = {
 		["qDesc"] = "Satisfaction. It is what I draw from the hammer and the anvil. To see a proud Horde warrior protected under my steel reminds me of what it is to be alive. It is an addiction that I dare never give up, Unknown.\n\nI can not grant you this satisfaction, merely set you upon the path. As with all of life's endeavors, the path of the armorsmith is a journey.\n\nIf you wish to be one of the select few, you need only to ask and I shall train, but, a task you must first complete.",
 		["qArea"] = "Unknown",
 		["qObj"] = "To become an armorsmith, you must make the following items and return them to Okothos: 4 Ornate Mithril Helms, 2 Ornate Mithril Boots, 1 Ornate Mithril Breastplate.",
-		["qLogged"] = 1397490205,
+		["qZone"] = "Blacksmithing",
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -6815,7 +6851,7 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 1920,
-		["qZone"] = "Blacksmithing",
+		["qLogged"] = 1397490205,
 	},
 	[119] = {
 		["qLogged"] = 1397490205,
@@ -6843,8 +6879,8 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffffffff|Hitem:20603:0:0:0|h[Bag of Spoils]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_Bag_21",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Misc_Bag_21",
 			},
 		},
 	},
@@ -6869,12 +6905,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "Encrypted Twilight Text: 0/10",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 59700,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Encrypted Twilight Text: 0/10",
 		},
 	},
 	[121] = {
@@ -6882,42 +6918,39 @@ QST_QuestBase = {
 		["qTitle"] = "The Perfect Poison",
 		["qDesc"] = "My brother and I run the poison operations out of the manor Ravenholdt.\n\nLord Ravenholdt tasked me to track down a new and extremely effective poison compound that can be crafted from the venom sacs of the inhabitants of Zul'Gurub and the Ruins of Ahn'Qiraj.\n\nThere are two particularly venomous beasts residing in those blasted ruins that possess what it is that we might be looking for, warrior. Bring me a venom sac from the beasts Kurinnaxx and Venoxis and we would be eternally grateful.",
 		["qZone"] = "Silithus",
-		["qItems"] = {
-			[1] = "Venoxis's Venom Sac: 0/1",
-			[2] = "Kurinnaxx's Venom Sac: 0/1",
-		},
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff0070dd|Hitem:22378:0:0:0|h[Ravenholdt Slicer]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Sword_38",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Sword_38",
 			},
 			[2] = {
 				["qLink"] = "|cff0070dd|Hitem:22379:0:0:0|h[Shivsprocket's Shiv]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Sword_21",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Sword_21",
 			},
 			[3] = {
 				["qLink"] = "|cff0070dd|Hitem:22377:0:0:0|h[The Thunderwood Poker]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Sword_17",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Sword_17",
 			},
 			[4] = {
 				["qLink"] = "|cff0070dd|Hitem:22348:0:0:0|h[Doomulus Prime]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Hammer_10",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Hammer_10",
 			},
 			[5] = {
 				["qLink"] = "|cff0070dd|Hitem:22347:0:0:0|h[Fahrad's Reloading Repeater]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Weapon_Crossbow_04",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Weapon_Crossbow_04",
 			},
 			[6] = {
 				["qLink"] = "|cff0070dd|Hitem:22380:0:0:0|h[Simone's Cultivating Hammer]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Hammer_05",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Hammer_05",
 			},
 		},
+		["qObj"] = "Dirk Thunderwood at Cenarion Hold wants you to bring him Venoxis's Venom Sac and Kurinnaxx's Venom Sac.",
 		["qTag"] = "Raid",
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
@@ -6938,7 +6971,10 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 5700,
-		["qObj"] = "Dirk Thunderwood at Cenarion Hold wants you to bring him Venoxis's Venom Sac and Kurinnaxx's Venom Sac.",
+		["qItems"] = {
+			[1] = "Venoxis's Venom Sac: 0/1",
+			[2] = "Kurinnaxx's Venom Sac: 0/1",
+		},
 	},
 	[122] = {
 		["qLogged"] = 1397490205,
@@ -6958,11 +6994,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 5700,
-		["qNPC"] = {
+		["qItems"] = {
 		},
 	},
 	[123] = {
@@ -6993,7 +7029,8 @@ QST_QuestBase = {
 		["qDesc"] = "I've heard about a newly discovered plant called the magenta fungus caps.  They grow in clusters at the Uldaman dig site and can be found in the early tunnels and deep within the less-explored areas.  I want to study their potential use in alchemy, and that's where you come in.\n\nFind the magenta cap clusters and bring me a dozen caps.  Be warned, the clusters may spew out poison spores if jostled.\n\nDo this for me, and I'll whip up a batch of one of my famous restorative elixirs for you!",
 		["qZone"] = "Uldaman",
 		["qObj"] = "Bring 12 Magenta Fungus Caps to Jarkal Mossmeld in Kargath.",
-		["qLogged"] = 1397490205,
+		["qNPC"] = {
+		},
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -7003,14 +7040,13 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffffffff|Hitem:9030:0:0:0|h[Restorative Potion]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Potion_01",
 				["qAmount"] = 5,
+				["qTex"] = "Interface\\Icons\\INV_Potion_01",
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 19380,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1397490205,
 	},
 	[125] = {
 		["qLogged"] = 1397490205,
@@ -7024,11 +7060,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 52,
-		["qNPC"] = {
-		},
+		["qZone"] = "Warrior",
 		["qNote"] = "",
 		["qMoney"] = 450,
-		["qZone"] = "Warrior",
+		["qNPC"] = {
+		},
 	},
 	[126] = {
 		["qLogged"] = 1397490205,
@@ -7058,7 +7094,7 @@ QST_QuestBase = {
 		["qDesc"] = "<The Hero looks you over.>\n\nYou are a warrior, no doubt.  I would ask an honorable task of you, but I must test your strength.\n\nIt is said that Rexxar would measure the sharpness of his blades by killing a helboar with a single, swift strike.  Now I will measure your strength by killing them.",
 		["qArea"] = "Unknown",
 		["qObj"] = "Kill 7 Helboar in the Blasted Lands and return to the Fallen Hero of the Horde.",
-		["qLogged"] = 1400057577,
+		["qZone"] = "Warrior",
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -7069,7 +7105,7 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 4350,
-		["qZone"] = "Warrior",
+		["qLogged"] = 1400057577,
 	},
 	[128] = {
 		["qLogged"] = 1400057583,
@@ -7083,11 +7119,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 50,
-		["qItems"] = {
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 420,
-		["qNPC"] = {
+		["qItems"] = {
 		},
 	},
 	[129] = {
@@ -7140,13 +7176,13 @@ QST_QuestBase = {
 		},
 	},
 	[131] = {
-		["qItems"] = {
-			[1] = "Tower Captured: 0/1",
-		},
+		["qLogged"] = 1399322895,
 		["qTitle"] = "Towers and Bunkers",
 		["qDesc"] = "Towers and bunkers are important positions, and we must capture and hold them all!  So to that end, I want you to attack a bunker that is controlled by the enemy.\n\nTo do that, enter one with an Alliance banner.  You will see another banner inside.  Pull out that banner, and a white Horde banner will appear in its place.  Well done!\n\nAt that point your task for me will be complete, but if you hold the place long enough, and if the Alliance doesn't take it back, then it will be destroyed!",
 		["qArea"] = "Unknown",
-		["qZone"] = "Alterac Valley",
+		["qItems"] = {
+			[1] = "Tower Captured: 0/1",
+		},
 		["qObj"] = "Capture an enemy tower, then return to Corporal Teeka Bloodsnarl in the Alterac Mountains.",
 		["qTag"] = "PvP",
 		["qPlayer"] = {
@@ -7159,7 +7195,7 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 5700,
-		["qLogged"] = 1399322895,
+		["qZone"] = "Alterac Valley",
 	},
 	[132] = {
 		["qLogged"] = 1399324927,
@@ -7183,11 +7219,7 @@ QST_QuestBase = {
 		},
 	},
 	[133] = {
-		["qReward"] = {
-			[1] = {
-				["qAmount"] = 1,
-			},
-		},
+		["qLogged"] = 1399590868,
 		["qTitle"] = "A Bijou for Zanza",
 		["qDesc"] = "The destruction of the various Hakkari Bijous is of grave importance to us, so much so that we welcome outsiders of the tribe to do so for themselves!\n\nTake any one of the bijous that you find in Zul'Gurub to the Altar of Zanza and destroy it.  For this one time alone, I will give you an additional Honor Token from our tribe; this is above and beyond what you would normally receive.\n\nWitness for yourself the blessings of Zanza!",
 		["qZone"] = "Zul'Gurub",
@@ -7201,11 +7233,15 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
+		["qReward"] = {
+			[1] = {
+				["qAmount"] = 1,
+			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 59700,
-		["qLogged"] = 1399590868,
+		["qNPC"] = {
+		},
 	},
 	[134] = {
 		["qLogged"] = 1399591108,
@@ -7220,28 +7256,31 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
+		["qReward"] = {
+			[1] = {
+				["qAmount"] = 1,
+			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 5730,
-		["qReward"] = {
-			[1] = {
-				["qAmount"] = 1,
-			},
+		["qNPC"] = {
 		},
 	},
 	[135] = {
+		["qLogged"] = 1374599947,
+		["qTitle"] = "Call of Fire",
+		["qDesc"] = "But you did not come here for a history lesson, did you? You came for the Eternal Flame and fire totem.\n\nThe first step is to create a sapta and bind you to the flame.\n\nI can create the fire sapta for you if you bring me two items. The first is fire tar, a simple item usually carried by Razormane spellcasters in eastern Barrens.\n\nThe second item will be more dangerous: a reagent pouch from one of the cultists of the Burning Blade. You can find them in a cave above the ravines northeast of Razor Hill.",
+		["qArea"] = "Unknown",
 		["qReward"] = {
 			[1] = {
 				["qAmount"] = 1,
 			},
 		},
-		["qTitle"] = "Call of Fire",
-		["qDesc"] = "But you did not come here for a history lesson, did you? You came for the Eternal Flame and fire totem.\n\nThe first step is to create a sapta and bind you to the flame.\n\nI can create the fire sapta for you if you bring me two items. The first is fire tar, a simple item usually carried by Razormane spellcasters in eastern Barrens.\n\nThe second item will be more dangerous: a reagent pouch from one of the cultists of the Burning Blade. You can find them in a cave above the ravines northeast of Razor Hill.",
-		["qArea"] = "Unknown",
-		["qZone"] = "Shaman",
 		["qObj"] = "Bring 1 Fire Tar and 1 Reagent Pouch to Telf Joolam in Durotar.",
-		["qLogged"] = 1374599947,
+		["qItems"] = {
+			[1] = "Fire Tar: 0/1",
+			[2] = "Reagent Pouch: 0/1",
+		},
 		["qPlayer"] = {
 			["Stormslinger of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -7252,10 +7291,7 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qItems"] = {
-			[1] = "Fire Tar: 0/1",
-			[2] = "Reagent Pouch: 0/1",
-		},
+		["qZone"] = "Shaman",
 	},
 	[136] = {
 		["qLogged"] = 1374599947,
@@ -7275,11 +7311,7 @@ QST_QuestBase = {
 		},
 	},
 	[137] = {
-		["qItems"] = {
-			[1] = "Razormane Water Seeker slain: 0/8",
-			[2] = "Razormane Thornweaver slain: 0/8",
-			[3] = "Razormane Hunter slain: 0/3",
-		},
+		["qLogged"] = 1374599947,
 		["qTitle"] = "Disrupt the Attacks",
 		["qDesc"] = "All the quilboars are our enemies, Stormslinger. Some just prove to be more of a nuisance than others.\n\nThe Razormane tribe has been attacking our supply lines from Durotar, causing us no end of annoyance. I have scouts seeking the leader of these raids, but until then, any losses you can inflict on the filthy pig men would aid us.\n\nStart in the northeast towards Durotar. You can always tell their dens from the huge thorny vines that come up from the earth. Seek them out, and slay them.",
 		["qZone"] = "The Barrens",
@@ -7290,16 +7322,18 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 12,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Razormane Water Seeker slain: 0/8",
+			[2] = "Razormane Thornweaver slain: 0/8",
+			[3] = "Razormane Hunter slain: 0/3",
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1374599947,
+		["qNPC"] = {
+		},
 	},
 	[138] = {
-		["qItems"] = {
-			[1] = "Plainstrider Beak: 7/7",
-		},
+		["qLogged"] = 1374599947,
 		["qTitle"] = "Plainstrider Menace",
 		["qDesc"] = "Your first prey will be easy.\n\nThe plainstriders to the east have been harassing our food supplies and have become a nuisance.\n\nPut down the plainstriders and return to me with their beaks.",
 		["qZone"] = "The Barrens",
@@ -7310,16 +7344,16 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 12,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Plainstrider Beak: 7/7",
 		},
 		["qNote"] = "",
 		["qMoney"] = 1500,
-		["qLogged"] = 1374599947,
+		["qNPC"] = {
+		},
 	},
 	[139] = {
-		["qItems"] = {
-			[1] = "Raptor Head: 1/12",
-		},
+		["qLogged"] = 1374599947,
 		["qTitle"] = "Raptor Thieves",
 		["qDesc"] = "Not long ago, a shipment of silver was stolen from our guard tower.  It was meant as payroll to the Crossroads' guards, and we want that silver back.\n\nThe strange thing is... we caught one of the thieves on the night of the theft.  And... it was a raptor!  Unbelievable!\n\nI don't know what raptors would want with silver.  But I don't care -- I want the raptors dead so they won't steal from us again!\n\nHunt raptors in the Barrens.  Collect for me their heads!",
 		["qZone"] = "The Barrens",
@@ -7330,15 +7364,16 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 13,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Raptor Head: 1/12",
 		},
 		["qNote"] = "",
 		["qMoney"] = 1800,
-		["qLogged"] = 1374599947,
+		["qNPC"] = {
+		},
 	},
 	[140] = {
-		["qItems"] = {
-		},
+		["qLogged"] = 1374599947,
 		["qTitle"] = "The Forgotten Pools",
 		["qDesc"] = "Long ago, the Barrens was a lush place, teeming with life.  But war and cataclysm raged across the land, scorching it and leaving a dry husk.  Such is the way of things, and it saddens my heart.\n\nBut within the past few years, new oases have formed in the Barrens, and life stirs.  And deep down, we druids sense a power leaking its way to the surface.\n\nWe must find its source.  Travel to the Forgotten Pools, northwest of the Crossroads.  Search its waters for a source of power, then return here.",
 		["qZone"] = "The Barrens",
@@ -7349,16 +7384,15 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 13,
-		["qNPC"] = {
+		["qItems"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1374599947,
+		["qNPC"] = {
+		},
 	},
 	[141] = {
-		["qItems"] = {
-			[1] = "Crossroads' Supply Crates: 0/1",
-		},
+		["qLogged"] = 1374599947,
 		["qTitle"] = "Supplies for the Crossroads",
 		["qDesc"] = "That attack on the caravan contained supplies we desperately needed.\n\nYou've been brave enough to take on the Razormane tribe so far, and I will ask you to do so again, but this time, I wonder if I could ask you to keep your eyes open for some of our lost supplies. You can probably find them throughout their camps, the quilboar getting fat off their dishonorable acts.\n\nThe people of the Crossroads would be in your debt.",
 		["qZone"] = "The Barrens",
@@ -7369,16 +7403,16 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 14,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Crossroads' Supply Crates: 0/1",
 		},
 		["qNote"] = "",
 		["qMoney"] = 1800,
-		["qLogged"] = 1374599947,
+		["qNPC"] = {
+		},
 	},
 	[142] = {
-		["qItems"] = {
-			[1] = "Find Mankrik's Wife: 0/1",
-		},
+		["qLogged"] = 1374599947,
 		["qTitle"] = "Lost in Battle",
 		["qDesc"] = "We battled in a small tauren camp when we were separated--she held three of the Bristlebacks off by herself. But the odds began to overwhelm us. I led some away only to see her overwhelmed by newcomers. In my rage, I turned to face my enemies, but they brought me down easily with their vast numbers.\n\nI awoke to a tauren druid tending my wounds--he had come across me on the Gold Road as I fell.\n\nPlease, shaman, find some sign of my wife.",
 		["qZone"] = "The Barrens",
@@ -7389,16 +7423,16 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 20,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Find Mankrik's Wife: 0/1",
 		},
 		["qNote"] = "",
 		["qMoney"] = 2700,
-		["qLogged"] = 1374599947,
+		["qNPC"] = {
+		},
 	},
 	[143] = {
-		["qItems"] = {
-			[1] = "Fungal Spores: 2/4",
-		},
+		["qLogged"] = 1374600252,
 		["qTitle"] = "Fungal Spores",
 		["qDesc"] = "The oases of the Barrens hide a mystery.  Life energy flows from their waters, invigorating the plants and beasts that drink it.\n\nInvigorating, and altering.\n\nThere is a mushroom that grows near these oases.  Its spores hold properties that we, the apothecaries of Lordaeron, find useful.\n\nBring me these spores and you will earn our gratitude.",
 		["qZone"] = "The Barrens",
@@ -7409,11 +7443,13 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 15,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Fungal Spores: 2/4",
 		},
 		["qNote"] = "",
 		["qMoney"] = 2100,
-		["qLogged"] = 1374600252,
+		["qNPC"] = {
+		},
 	},
 	[144] = {
 		["qLogged"] = 1374600257,
@@ -7440,8 +7476,19 @@ QST_QuestBase = {
 		["qDesc"] = "As Naralex descended deeper into his nightmare, a strange breed of beasts arose from beneath the Barrens into the Wailing Caverns.\n\nThese deviate creatures have strange, otherworldly properties. While evil in nature, it is my opinion that some good can come from their existence here in Kalimdor. I believe their hides will be of particular use in the ways of leatherworking.\n\nIf you feel up to the task, venture into the caves below and retrieve some deviate hides.",
 		["qNPC"] = {
 		},
-		["qLogged"] = 1374600660,
 		["qObj"] = "Nalpak in the Wailing Caverns wants 20 Deviate Hides.",
+		["qChoice"] = {
+			[1] = {
+				["qLink"] = "|cff1eff00|Hitem:6480:0:0:0|h[Slick Deviate Leggings]|h|r",
+				["qTex"] = "Interface\\Icons\\INV_Pants_02",
+				["qAmount"] = 1,
+			},
+			[2] = {
+				["qLink"] = "|cffffffff|Hitem:918:0:0:0|h[Deviate Hide Pack]|h|r",
+				["qTex"] = "Interface\\Icons\\INV_Misc_Bag_07_Black",
+				["qAmount"] = 1,
+			},
+		},
 		["qTag"] = "Dungeon",
 		["qPlayer"] = {
 			["Stormslinger of Warsong [12x] Blizzlike"] = {
@@ -7452,45 +7499,33 @@ QST_QuestBase = {
 		["qZone"] = "Wailing Caverns",
 		["qNote"] = "",
 		["qMoney"] = 5400,
-		["qChoice"] = {
-			[1] = {
-				["qLink"] = "|cff1eff00|Hitem:6480:0:0:0|h[Slick Deviate Leggings]|h|r",
-				["qAmount"] = 1,
-				["qTex"] = "Interface\\Icons\\INV_Pants_02",
-			},
-			[2] = {
-				["qLink"] = "|cffffffff|Hitem:918:0:0:0|h[Deviate Hide Pack]|h|r",
-				["qAmount"] = 1,
-				["qTex"] = "Interface\\Icons\\INV_Misc_Bag_07_Black",
-			},
-		},
+		["qLogged"] = 1374600660,
 	},
 	[146] = {
-		["qItems"] = {
-			[1] = "Vorrel's Wedding Ring: 0/1",
-		},
+		["qLogged"] = 1396976771,
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:7751:0:0:0|h[Vorrel's Boots]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Boots_03",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Boots_03",
 			},
 		},
 		["qTitle"] = "Vorrel's Revenge",
 		["qDesc"] = "Even though my will is free, I can serve the Dark Lady no more. I feel my time on Azeroth has come to an end. My life force is shattered.\n\nInterrogator Vishas did this to me! Tortured me for weeks! Took my wedding ring and gave it to his wife. The bastard!\n\nRevenge... I want revenge!\n\nThe pompous fool bragged about his precious wife, Nancy, who lived along Lake Lordamere. Track the wench down, slay her and return my wedding ring to my wife, Monika in Tarren Mill.\n\nHeed my last wishes....",
-		["qNPC"] = {
+		["qZone"] = "Scarlet Monastery",
+		["qItems"] = {
+			[1] = "Vorrel's Wedding Ring: 0/1",
 		},
-		["qObj"] = "Return Vorrel Sengutz's wedding ring to Monika Sengutz in Tarren Mill.",
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:7750:0:0:0|h[Mantle of Woe]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Shoulder_23",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Shoulder_23",
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:4643:0:0:0|h[Grimsteel Cape]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_Cape_02",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Misc_Cape_02",
 			},
 		},
 		["qTag"] = "Elite",
@@ -7500,10 +7535,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 33,
-		["qZone"] = "Scarlet Monastery",
+		["qNPC"] = {
+		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1396976771,
+		["qObj"] = "Return Vorrel Sengutz's wedding ring to Monika Sengutz in Tarren Mill.",
 	},
 	[147] = {
 		["qItems"] = {
@@ -7513,7 +7549,8 @@ QST_QuestBase = {
 		["qDesc"] = "Wanted: Arnak Grimtotem\n\nArnak the outcast is wanted for the heinous crimes of murder and kidnapping. Handsome rewards will be given to those brave enough to bring this criminal to justice.\n\nArnak was last seen on the cliffs near the Darkcloud Pinnacle. Show the proof of your deed to Cliffwatcher Longhorn in Freewind Post in order to claim the reward.",
 		["qZone"] = "Thousand Needles",
 		["qObj"] = "Slay Arnak Grimtotem and bring proof of your deed to Cliffwatcher Longhorn in Freewind Post.",
-		["qLogged"] = 1396976771,
+		["qNPC"] = {
+		},
 		["qPlayer"] = {
 			["Stormslinger of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -7523,19 +7560,18 @@ QST_QuestBase = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:15471:0:0:0|h[Brawnhide Armor]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Chest_Leather_01",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Chest_Leather_01",
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:15470:0:0:0|h[Plainsguard Leggings]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Pants_03",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Pants_03",
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1396976771,
 	},
 	[148] = {
 		["qItems"] = {
@@ -7551,11 +7587,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 31,
-		["qLogged"] = 1396976771,
-		["qNote"] = "",
-		["qMoney"] = 9000,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 9000,
+		["qLogged"] = 1396976771,
 	},
 	[149] = {
 		["qLogged"] = 1396976771,
@@ -7602,7 +7638,8 @@ QST_QuestBase = {
 		["qDesc"] = "You looking fer work, Stormslinger? I might have some if you're up for a little challenge.\n\nI got a friend named Groy who makes a killing selling what the naga call akiris reed: it's some kind of valuable ocean reed. Not too sure what it's for, but he pays well for bundles of the stuff.\n\nYa bring me ten stalks of the stuff, and we'll have business to do. The naga were last seen along the beach to the north of here.",
 		["qZone"] = "Stranglethorn Vale",
 		["qObj"] = "Bring 10 Bundles of Akiris Reed to Privateer Bloads in Booty Bay.",
-		["qLogged"] = 1396977461,
+		["qNPC"] = {
+		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -7615,14 +7652,13 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:4117:0:0:0|h[Scorching Sash]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_Bandana_03",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Misc_Bandana_03",
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 18000,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1396977461,
 	},
 	[152] = {
 		["qItems"] = {
@@ -7641,11 +7677,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 35,
-		["qLogged"] = 1396977485,
-		["qNote"] = "",
-		["qMoney"] = 10500,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 10500,
+		["qLogged"] = 1396977485,
 	},
 	[153] = {
 		["qItems"] = {
@@ -7655,7 +7691,8 @@ QST_QuestBase = {
 		["qDesc"] = "Zanzil the Outcast dwells with his followers in the Jubuwal and Aboraz Ruins, northeast of Booty Bay.  He is exiled from his tribe.  Why? Well...\n\nZanzil has methods of bending the minds of others, and his leaders fear him.  He uses a mixture of jungle plants on his followers to suppress their will and strengthen their bodies.\n\nHis mixture would be worth much to those who wish to control others.\n\nBring me samples of his mixture, and I will find a use for them.",
 		["qZone"] = "Stranglethorn Vale",
 		["qObj"] = "Bring 12 samples of Zanzil's Mixture to Crank Fizzlebub in Booty Bay.",
-		["qLogged"] = 1396977490,
+		["qNPC"] = {
+		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -7668,14 +7705,13 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:4131:0:0:0|h[Belt of Corruption]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Belt_17",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Belt_17",
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 19500,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1396977490,
 	},
 	[154] = {
 		["qItems"] = {
@@ -7685,7 +7721,8 @@ QST_QuestBase = {
 		["qDesc"] = "Damn trolls! They've been killing off our agents in the jungle! I've already lost a good number of my best guards to skirmishes with them. The costs are piling up! How will I explain this to Baron Revilgaz?\n\nDecisive action... Think, Kebok... you weren't assigned to the post you have today for sitting around... I've got it! You... Stormslinger, is it? You'll help me, won't you? There's money to be had!\n\nHere's the deal... you bring me the ears of fifteen Bloodscalp Trolls, and I'll compensate you well.",
 		["qZone"] = "Stranglethorn Vale",
 		["qObj"] = "Acquire 15 Bloodscalp Ears and return them to Kebok in Booty Bay.",
-		["qLogged"] = 1396977506,
+		["qNPC"] = {
+		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -7698,14 +7735,13 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffffffff|Hitem:4598:0:0:0|h[Goblin Fishing Pole]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_Bomb_03",
 				["qAmount"] = 8,
+				["qTex"] = "Interface\\Icons\\INV_Misc_Bomb_03",
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 10500,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1396977506,
 	},
 	[155] = {
 		["qItems"] = {
@@ -7715,7 +7751,8 @@ QST_QuestBase = {
 		["qDesc"] = "He's done it this time! Bad enough that Gelriz's muscling out the moguls who were appointed by the trade princes, now he tries to cut in on the most notorious pirate!\n\nRevilgaz won't have it, and he's told me to take care of the problem in my own way.\n\nMy way? Theft. The Venture Co. geologists near Lake Nazferiti are deeply interested in those strange blue crystals they have been finding in the mines. Bring me samples of the stone from their geologists, I don't care what you have to do to get them.",
 		["qZone"] = "Stranglethorn Vale",
 		["qObj"] = "Retrieve 8 Tumbled Crystals and return them to Kebok in Booty Bay.",
-		["qLogged"] = 1396977509,
+		["qNPC"] = {
+		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -7728,14 +7765,13 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:4121:0:0:0|h[Gemmed Gloves]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Gauntlets_06",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Gauntlets_06",
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1396977509,
 	},
 	[156] = {
 		["qItems"] = {
@@ -7752,11 +7788,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 36,
-		["qLogged"] = 1396977621,
-		["qNote"] = "",
-		["qMoney"] = 12000,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 12000,
+		["qLogged"] = 1396977621,
 	},
 	[157] = {
 		["qItems"] = {
@@ -7773,11 +7809,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 38,
-		["qLogged"] = 1396977627,
-		["qNote"] = "",
-		["qMoney"] = 0,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qLogged"] = 1396977627,
 	},
 	[158] = {
 		["qItems"] = {
@@ -7787,7 +7823,8 @@ QST_QuestBase = {
 		["qDesc"] = "I was sent to Grom'gol  to aid Nimboya on his quest, but... I too have reasons for being here.\n\nThe Bloodscalp tribe is enemy to our tribe.  Collecting trophies of our enemies gives us power over them.  You may aid our tribe by hunting our enemies.\n\nThey dwell to the north.  Slay Bloodscalp trolls and take from them their bloody bone necklaces.  Collect many, and your reward will be great.",
 		["qZone"] = "Stranglethorn Vale",
 		["qObj"] = "Bring 25 Bloody Bone Necklaces to Kin'weelay at the Grom'gol Base Camp.",
-		["qLogged"] = 1396977653,
+		["qNPC"] = {
+		},
 		["qPlayer"] = {
 			["Stormslinger of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -7797,14 +7834,13 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:4135:0:0:0|h[Bloodbone Band]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_Bone_05",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Misc_Bone_05",
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1396977653,
 	},
 	[159] = {
 		["qItems"] = {
@@ -7820,11 +7856,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 34,
-		["qLogged"] = 1396977657,
-		["qNote"] = "",
-		["qMoney"] = 0,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qLogged"] = 1396977657,
 	},
 	[160] = {
 		["qLogged"] = 1396977664,
@@ -7856,23 +7892,22 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 37,
-		["qItems"] = {
-			[1] = "Tablet Shard: 0/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Tablet Shard: 0/1",
 		},
 	},
 	[162] = {
-		["qItems"] = {
-			[1] = "Shrunken Head: 0/20",
-		},
+		["qLogged"] = 1396987875,
 		["qTitle"] = "Headhunting",
 		["qDesc"] = "We must find if Yenniku is dead.\n\nSlay the Bloodscalp Headhunters and take from them their Shrunken Heads.  You must gather many, many heads, and I will inspect them to make sure Yenniku's head is not among them.\n\nAnd if Yenniku was killed by the Bloodscalps, then may a 600-year curse fall on the spirit of their chief, Gan'zulah!\n\nGo, Stormslinger.  You may find many Headhunters at the ruins of Zuuldaia and Zul'Kunda, along the coast to the north.",
 		["qZone"] = "Stranglethorn Vale",
 		["qObj"] = "Bring 20 Shrunken Heads to Nimboya at the Grom'gol Base Camp.",
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Shrunken Head: 0/20",
 		},
 		["qPlayer"] = {
 			["Stormslinger of Warsong [12x] Blizzlike"] = {
@@ -7883,23 +7918,22 @@ QST_QuestBase = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:4133:0:0:0|h[Darkspear Cuffs]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Bracer_10",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:4132:0:0:0|h[Darkspear Armsplints]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Bracer_09",
+				["qAmount"] = 1,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1396987875,
+		["qNPC"] = {
+		},
 	},
 	[163] = {
-		["qItems"] = {
-			[1] = "Skullsplitter Tusk: 0/18",
-		},
+		["qLogged"] = 1396988168,
 		["qTitle"] = "Skullsplitter Tusks",
 		["qDesc"] = "It's expensive and hard to kill enough tigers to support the export of tiger fangs to the islands in the South Seas. Luckily, we've developed a technique that allows us to take mundane horn-like objects and turn them into undetectable forgeries.\n\nThe closest match we've found, amazingly, are the tusks of the Skullsplitter trolls.\n\nHey, before you say anything, what the buyer doesn't know doesn't hurt them, am I right? Bring me a large number of them so we can get to work on the monthly shipment!",
 		["qZone"] = "Stranglethorn Vale",
@@ -7913,15 +7947,16 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 42,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Skullsplitter Tusk: 0/18",
 		},
 		["qNote"] = "",
 		["qMoney"] = 16500,
-		["qLogged"] = 1396988168,
+		["qNPC"] = {
+		},
 	},
 	[164] = {
-		["qItems"] = {
-		},
+		["qLogged"] = 1396988174,
 		["qTitle"] = "Investigate the Camp",
 		["qDesc"] = "I've gotten reports of a group of hunters that have set up camp upriver of the Venture Company mining camp on Lake Nazferiti.  Now, normally I wouldn't care, but improbably, I heard that Hemet Nesingwary Jr. was one of the hunters there.  He's certainly well-connected, if you catch my meaning, and you never can be too safe.\n\nWhy don't you go check out the camp, Stormslinger, see what they're about?",
 		["qZone"] = "Stranglethorn Vale",
@@ -7935,11 +7970,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 32,
-		["qNPC"] = {
+		["qItems"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 4800,
-		["qLogged"] = 1396988174,
+		["qNPC"] = {
+		},
 	},
 	[165] = {
 		["qLogged"] = 1396988179,
@@ -7983,9 +8019,7 @@ QST_QuestBase = {
 		},
 	},
 	[167] = {
-		["qItems"] = {
-			[1] = "Sign of the Earth: 0/1",
-		},
+		["qLogged"] = 1397083343,
 		["qTitle"] = "Broken Alliances",
 		["qDesc"] = "From the Horde's alliance with the dragon Deathwing during the Second War, we know that two of his lieutenants, Blacklash and Hematus, were imprisoned within Lethlor Ravine far to the east. We must silence our depraved allies of old to restore honor to the Horde!\n\nWe hired Tho'grun and his band of ogre mercenaries to help us obtain the Sign of the Earth, a key needed to unlock the drakes' prison. Tho'grun betrayed us though, overwhelming us and taking it for himself. Go to Camp Boff and take it back!",
 		["qZone"] = "Badlands",
@@ -7996,18 +8030,16 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 43,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Sign of the Earth: 0/1",
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1397083343,
+		["qNPC"] = {
+		},
 	},
 	[168] = {
-		["qItems"] = {
-			[1] = "Buzzard Gizzard: 5/5",
-			[2] = "Crag Coyote Fang: 10/10",
-			[3] = "Rock Elemental Shard: 5/5",
-		},
+		["qLogged"] = 1397083367,
 		["qTitle"] = "Badlands Reagent Run",
 		["qDesc"] = "Stormslinger, I could use your aid if you're up for it.  I am an alchemist of some note, and I seek your aid in acquiring some reagents found out in the Badlands.\n\nI need the following items to replenish my stocks: five buzzard gizzards, ten crag coyote fangs, and five rock elemental shards.  Obviously, you can get them off of the beasties themselves; if you're not the fighting type, then find friends who are.\n\nAcquire these items for me, you'll get some coin out of the deal.  Watcha wanna do?",
 		["qZone"] = "Badlands",
@@ -8018,11 +8050,15 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 39,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Buzzard Gizzard: 5/5",
+			[2] = "Crag Coyote Fang: 10/10",
+			[3] = "Rock Elemental Shard: 5/5",
 		},
 		["qNote"] = "",
 		["qMoney"] = 13500,
-		["qLogged"] = 1397083367,
+		["qNPC"] = {
+		},
 	},
 	[169] = {
 		["qLogged"] = 1397148916,
@@ -8058,11 +8094,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 50,
-		["qLogged"] = 1397148920,
-		["qNote"] = "",
-		["qMoney"] = 16500,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 16500,
+		["qLogged"] = 1397148920,
 	},
 	[171] = {
 		["qLogged"] = 1397148924,
@@ -8077,11 +8113,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 51,
-		["qNPC"] = {
-		},
+		["qZone"] = "Sunken Temple",
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qZone"] = "Sunken Temple",
+		["qNPC"] = {
+		},
 	},
 	[172] = {
 		["qLogged"] = 1397148944,
@@ -8089,8 +8125,7 @@ QST_QuestBase = {
 		["qDesc"] = "I take pride in my leather work, and I feel it shows; quality should never be compromised.  Anyone who says that quality doesn't matter would also have you believe that the earth does not keep secrets!\n\nIn my latest pursuit of high-quality materials, I have discovered thick yeti hides.  Yetis are native to Feralas, often found west of here in Feral Scar Vale.  I'll give you a choice of one of my leather goods for a stack of ten.  If that is agreeable to you, then we are set!",
 		["qZone"] = "Feralas",
 		["qObj"] = "Bring 10 Thick Yeti Hides to Jangdor Swiftstrider in Camp Mojache.",
-		["qItems"] = {
-			[1] = "Thick Yeti Hide: 0/10",
+		["qNPC"] = {
 		},
 		["qPlayer"] = {
 			["Stormslinger of Warsong [12x] Blizzlike"] = {
@@ -8101,18 +8136,19 @@ QST_QuestBase = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:9633:0:0:0|h[Jangdor's Handcrafted Boots]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Boots_05",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Boots_05",
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:9632:0:0:0|h[Jangdor's Handcrafted Gloves]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Gauntlets_23",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Gauntlets_23",
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Thick Yeti Hide: 0/10",
 		},
 	},
 	[173] = {
@@ -8129,11 +8165,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 42,
-		["qLogged"] = 1397149042,
-		["qNote"] = "",
-		["qMoney"] = 13500,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 13500,
+		["qLogged"] = 1397149042,
 	},
 	[174] = {
 		["qLogged"] = 1397149067,
@@ -8141,8 +8177,7 @@ QST_QuestBase = {
 		["qDesc"] = "I just arrived here in Feralas, and I've heard that the Gordunni Ogres that inhabit the wilds here have some interesting minerals. Who knows what they are up to, but they sure are protective of that stuff! They don't leave it just lying around; no, they bury it to protect folks like me from getting their hands on it.\n\nIf you'd be willing, I'll give you my shovel. Go to the Gordunni Outpost north of here and dig me up some Gordunni cobalt. Look for the blue glow, then start digging!",
 		["qZone"] = "Feralas",
 		["qObj"] = "Orwin Gizzmick in Camp Mojache wants 12 samples of Gordunni Cobalt.",
-		["qItems"] = {
-			[1] = "Gordunni Cobalt: 12/12",
+		["qNPC"] = {
 		},
 		["qPlayer"] = {
 			["Stormslinger of Warsong [12x] Blizzlike"] = {
@@ -8153,18 +8188,19 @@ QST_QuestBase = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:9658:0:0:0|h[Boots of the Maharishi]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Boots_02",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Boots_02",
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:9660:0:0:0|h[Stargazer Cloak]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_Cape_08",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Misc_Cape_08",
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Gordunni Cobalt: 12/12",
 		},
 	},
 	[175] = {
@@ -8181,11 +8217,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 45,
-		["qLogged"] = 1397149132,
-		["qNote"] = "",
-		["qMoney"] = 19500,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 19500,
+		["qLogged"] = 1397149132,
 	},
 	[176] = {
 		["qLogged"] = 1397151068,
@@ -8218,16 +8254,14 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 46,
-		["qLogged"] = 1397151141,
-		["qNote"] = "",
-		["qMoney"] = 0,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qLogged"] = 1397151141,
 	},
 	[178] = {
-		["qItems"] = {
-			[1] = "Woodpaw Alpha slain: 5/5",
-		},
+		["qLogged"] = 1397151789,
 		["qTitle"] = "Alpha Strike",
 		["qDesc"] = "The plan is for various leaders of the gnolls - Alphas as they call themselves - to be taken down within rapid succession.  If we're able to execute this sort of swift and precise devastation against them, it would cause chaos in their ranks.  Perhaps it would also drive a message through their thick flea-bitten heads that we can and will destroy them!\n\nI want you to be the messenger of my will; eliminate five of their Alphas within one hour for this to work Stormslinger, or we'll remain at this impasse!",
 		["qZone"] = "Feralas",
@@ -8238,16 +8272,16 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 43,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Woodpaw Alpha slain: 5/5",
 		},
 		["qNote"] = "",
 		["qMoney"] = 13500,
-		["qLogged"] = 1397151789,
+		["qNPC"] = {
+		},
 	},
 	[179] = {
-		["qItems"] = {
-			[1] = "Grimtotem Horn: 20/20",
-		},
+		["qLogged"] = 1397152771,
 		["qTitle"] = "A Grim Discovery",
 		["qDesc"] = "What!? You came across tauren in the area? You're joking! What did they look like!?\n\nThe Grimtotem clan! You found some of them? Belgrom, one of our masters, has an interest in their kind... he's even put a bounty on them.\n\nYou have to go back, shaman. Go back and bring me their horns... piles of them if you can. The Grimtotem are not to be trifled with or underestimated. Go back and slay them; let the rivers in Feralas run red with their dark blood.",
 		["qZone"] = "Feralas",
@@ -8258,11 +8292,13 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 45,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Grimtotem Horn: 20/20",
 		},
 		["qNote"] = "",
 		["qMoney"] = 19500,
-		["qLogged"] = 1397152771,
+		["qNPC"] = {
+		},
 	},
 	[180] = {
 		["qLogged"] = 1397153485,
@@ -8310,21 +8346,21 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 43,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 0,
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:9661:0:0:0|h[Earthclasp Barrier]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Shield_13",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:9662:0:0:0|h[Rushridge Boots]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Boots_Plate_01",
+				["qAmount"] = 1,
 			},
+		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qNPC"] = {
 		},
 	},
 	[183] = {
@@ -8342,11 +8378,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 52,
-		["qLogged"] = 1397280486,
-		["qNote"] = "",
-		["qMoney"] = 0,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qLogged"] = 1397280486,
 	},
 	[184] = {
 		["qLogged"] = 1397281207,
@@ -8383,11 +8419,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 43,
-		["qLogged"] = 1397281721,
-		["qNote"] = "",
-		["qMoney"] = 18000,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 18000,
+		["qLogged"] = 1397281721,
 	},
 	[186] = {
 		["qItems"] = {
@@ -8397,7 +8433,8 @@ QST_QuestBase = {
 		["qDesc"] = "Greetings Stormslinger - the name's Luglunket, and we've got an important job for you if you're up for it!  Huzzah!\n\nNothing would please me more as a seasoned spigot operator to take any Wastewander water pouches you might find out in the desert.  That's our water anyway - the nomads have just stolen it is all!  The Gadgetzan Water Company will offer you an official care package for every five you turn in.  Most importantly though, you're helping Gadgetzan help itself!",
 		["qZone"] = "Tanaris",
 		["qObj"] = "Bring 5 Wastewander Water Pouches to Spigot Operator Luglunket in Gadgetzan.",
-		["qLogged"] = 1397281731,
+		["qNPC"] = {
+		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -8410,14 +8447,13 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffffffff|Hitem:8484:0:0:0|h[Gadgetzan Water Co. Care Package]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Crate_04",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Crate_04",
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1397281731,
 	},
 	[187] = {
 		["qItems"] = {
@@ -8433,11 +8469,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 49,
-		["qLogged"] = 1397281746,
-		["qNote"] = "",
-		["qMoney"] = 21000,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 21000,
+		["qLogged"] = 1397281746,
 	},
 	[188] = {
 		["qItems"] = {
@@ -8456,11 +8492,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 46,
-		["qLogged"] = 1397281835,
-		["qNote"] = "",
-		["qMoney"] = 10500,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 10500,
+		["qLogged"] = 1397281835,
 	},
 	[189] = {
 		["qItems"] = {
@@ -8477,11 +8513,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 50,
-		["qLogged"] = 1397281893,
-		["qNote"] = "",
-		["qMoney"] = 22500,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 22500,
+		["qLogged"] = 1397281893,
 	},
 	[190] = {
 		["qItems"] = {
@@ -8497,11 +8533,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 45,
-		["qLogged"] = 1397282098,
-		["qNote"] = "",
-		["qMoney"] = 39000,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 39000,
+		["qLogged"] = 1397282098,
 	},
 	[191] = {
 		["qItems"] = {
@@ -8517,11 +8553,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 46,
-		["qLogged"] = 1397282101,
-		["qNote"] = "",
-		["qMoney"] = 39000,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 39000,
+		["qLogged"] = 1397282101,
 	},
 	[192] = {
 		["qItems"] = {
@@ -8534,7 +8570,8 @@ QST_QuestBase = {
 		["qDesc"] = "Argh! They want the impossible from me!\n\nThe Steamwheedle Cartel wants me to teach the Southsea pirates a lesson.  The problem is that I can't be in two places at once; I need to stay here to keep the peace.\n\nOf late, the pirates have been disregarding the protection money that the cartel regularly forks over. So I'd like to temporarily deputize you to go down there and show them what for.\n\nYou'll find them at Lost Rigger Cove, which is not too far to the south.  Thanks Stormslinger, I'll owe you one!",
 		["qZone"] = "Tanaris",
 		["qObj"] = "Security Chief Bilgewhizzle of Steamwheedle Port in Tanaris wants you to kill 10 Southsea Pirates, 10 Southsea Freebooters, 10 Southsea Dock Workers and 10 Southsea Swashbucklers.",
-		["qLogged"] = 1397282108,
+		["qNPC"] = {
+		},
 		["qPlayer"] = {
 			["Stormslinger of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -8544,19 +8581,18 @@ QST_QuestBase = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:20640:0:0:0|h[Southsea Head Bucket]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Helmet_20",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Helmet_20",
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:20641:0:0:0|h[Southsea Mojo Boots]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Boots_05",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Boots_05",
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 19500,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1397282108,
 	},
 	[193] = {
 		["qLogged"] = 1397282390,
@@ -8594,11 +8630,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 44,
-		["qLogged"] = 1397282832,
-		["qNote"] = "",
-		["qMoney"] = 19500,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 19500,
+		["qLogged"] = 1397282832,
 	},
 	[195] = {
 		["qLogged"] = 1397283021,
@@ -8632,11 +8668,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 45,
-		["qLogged"] = 1397283039,
-		["qNote"] = "",
-		["qMoney"] = 19500,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 19500,
+		["qLogged"] = 1397283039,
 	},
 	[197] = {
 		["qItems"] = {
@@ -8652,11 +8688,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 54,
-		["qLogged"] = 1397286119,
-		["qNote"] = "",
-		["qMoney"] = 49500,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 49500,
+		["qLogged"] = 1397286119,
 	},
 	[198] = {
 		["qItems"] = {
@@ -8668,7 +8704,8 @@ QST_QuestBase = {
 		["qDesc"] = "Just recently, a large band of nomadic ogres arrived in Tanaris. South of here, they have taken over a large area of the desert and formed a compound. Several smaller bands are currently wandering the desert, some of which have invaded the old troll ruins.\n\nThe Dunemaul Compound must be destroyed! We cannot allow these ogres to build up a force.\n\nThe leader of this band is named Gor'marok the Ravager; I believe that putting an end to his leadership will be the beginning of the end for the ogres.",
 		["qZone"] = "Tanaris",
 		["qObj"] = "Andi Lynn in Gadgetzan wants you to destroy the Dunemaul Compound by killing 10 Dunemaul Brutes, 10 Dunemaul Enforcers, and Gor'marok the Ravager.",
-		["qLogged"] = 1397286142,
+		["qNPC"] = {
+		},
 		["qPlayer"] = {
 			["Stormslinger of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -8678,19 +8715,18 @@ QST_QuestBase = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:16738:0:0:0|h[Witherseed Gloves]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Gauntlets_15",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Gauntlets_15",
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:16739:0:0:0|h[Rugwood Mantle]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Shoulder_07",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Shoulder_07",
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1397286142,
 	},
 	[199] = {
 		["qItems"] = {
@@ -8707,18 +8743,14 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 53,
-		["qLogged"] = 1397286193,
-		["qNote"] = "",
-		["qMoney"] = 0,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qLogged"] = 1397286193,
 	},
 	[200] = {
-		["qItems"] = {
-			[1] = "Un'Goro Gorilla Pelt: 2/2",
-			[2] = "Un'Goro Stomper Pelt: 0/2",
-			[3] = "Un'Goro Thunderer Pelt: 1/2",
-		},
+		["qLogged"] = 1397292218,
 		["qTitle"] = "The Apes of Un'Goro",
 		["qDesc"] = "This crater has many strange creatures--they seem to be nobler versions of the creatures found throughout my homeland and beyond. I cannot explain it, but this place cries of the Earth Mother. I pay homage to her every time I track one of her beautiful creatures across its basin.\n\nIf you too wish to feel the enlightenment that accompanies such a great feat, then head to the north. There you'll find great apes who are a test for any mortal's strength. Bring me their pelts... prove your strength.",
 		["qZone"] = "Un'Goro Crater",
@@ -8729,16 +8761,18 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 55,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Un'Goro Gorilla Pelt: 2/2",
+			[2] = "Un'Goro Stomper Pelt: 0/2",
+			[3] = "Un'Goro Thunderer Pelt: 1/2",
 		},
 		["qNote"] = "",
 		["qMoney"] = 25500,
-		["qLogged"] = 1397292218,
+		["qNPC"] = {
+		},
 	},
 	[201] = {
-		["qItems"] = {
-			[1] = "Piece of Threshadon Carcass: 1/1",
-		},
+		["qLogged"] = 1397292221,
 		["qTitle"] = "The Fare of Lar'korwi",
 		["qDesc"] = "Once, a long time ago, a brother of mine took some meat from one of Lar'korwi's kills. He didn't know it at the time, but Lar'korwi saw him from the forest. Lar'korwi followed my brother for days, destroying everything he touched. My brother, scared, finally decided to run from the Crater and leave Lar'korwi behind.\n\nLar'korwi killed him not far from this spot.\n\nIf you want to provoke Lar'korwi, find a fresh kill of his and take some of the meat from it.\n\nReturn to me afterwards.",
 		["qZone"] = "Un'Goro Crater",
@@ -8749,11 +8783,13 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 53,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Piece of Threshadon Carcass: 1/1",
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1397292221,
+		["qNPC"] = {
+		},
 	},
 	[202] = {
 		["qLogged"] = 1397292473,
@@ -8773,17 +8809,17 @@ QST_QuestBase = {
 		},
 	},
 	[203] = {
+		["qLogged"] = 1397293159,
+		["qTitle"] = "Elemental Mastery",
+		["qDesc"] = "Bath'rah the Windwatcher has sent out a summons for a shaman of your wisdom.  He requests you bring a sample of each of the elements to show you are ready.\n\nTo find Bath'rah, go to the river east of Tarren Mill.  Follow the river north until you come across the ruins where Bath'rah resides.",
+		["qArea"] = "Unknown",
+		["qObj"] = "Collect a sample of air, fire, earth and water for Bath'rah the Windwatcher.",
 		["qItems"] = {
 			[1] = "Elemental Air: 1/1",
 			[2] = "Elemental Fire: 1/1",
 			[3] = "Elemental Earth: 1/1",
 			[4] = "Elemental Water: 1/1",
 		},
-		["qTitle"] = "Elemental Mastery",
-		["qDesc"] = "Bath'rah the Windwatcher has sent out a summons for a shaman of your wisdom.  He requests you bring a sample of each of the elements to show you are ready.\n\nTo find Bath'rah, go to the river east of Tarren Mill.  Follow the river north until you come across the ruins where Bath'rah resides.",
-		["qArea"] = "Unknown",
-		["qObj"] = "Collect a sample of air, fire, earth and water for Bath'rah the Windwatcher.",
-		["qZone"] = "Shaman",
 		["qPlayer"] = {
 			["Stormslinger of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -8794,7 +8830,7 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1397293159,
+		["qZone"] = "Shaman",
 	},
 	[204] = {
 		["qLogged"] = 1397294579,
@@ -8803,10 +8839,10 @@ QST_QuestBase = {
 		["qZone"] = "Thunder Bluff",
 		["qObj"] = "Speak with Arch Druid Hamuul Runetotem in Thunder Bluff.",
 		["qPlayer"] = {
-			["Stormslinger of Warsong [12x] Blizzlike"] = {
+			["Zapunzel of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
 			},
-			["Zapunzel of Warsong [12x] Blizzlike"] = {
+			["Stormslinger of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
 			},
 		},
@@ -8847,11 +8883,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 50,
-		["qLogged"] = 1397294810,
-		["qNote"] = "",
-		["qMoney"] = 43500,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 43500,
+		["qLogged"] = 1397294810,
 	},
 	[207] = {
 		["qLogged"] = 1397295299,
@@ -8859,8 +8895,7 @@ QST_QuestBase = {
 		["qDesc"] = "You'd think that being chief digger for Marshal Expeditions means I like digging.  There might be worse things to do in this world... but none really leap to mind.\n\nWe were supposed to be digging in Terror Run - FANTASTIC name by the way - for dead stegodons and diemetradons.  Well, there are plenty of live ones there too!  Wil and Hol are still all about studying this death trap, so we need those dinosaur bones.  Between you and me though, bringing some from live ones will work out just as well.",
 		["qZone"] = "Un'Goro Crater",
 		["qObj"] = "Bring 8 Dinosaur Bones to Spark Nilminer in Un'Goro Crater.",
-		["qItems"] = {
-			[1] = "Dinosaur Bone: 8/8",
+		["qNPC"] = {
 		},
 		["qPlayer"] = {
 			["Stormslinger of Warsong [12x] Blizzlike"] = {
@@ -8871,18 +8906,19 @@ QST_QuestBase = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:11908:0:0:0|h[Archaeologist's Quarry Boots]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Boots_05",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Boots_05",
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:11909:0:0:0|h[Excavator's Utility Belt]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Belt_09",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Belt_09",
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Dinosaur Bone: 8/8",
 		},
 	},
 	[208] = {
@@ -8902,11 +8938,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 52,
-		["qLogged"] = 1397295306,
-		["qNote"] = "",
-		["qMoney"] = 22500,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 22500,
+		["qLogged"] = 1397295306,
 	},
 	[209] = {
 		["qItems"] = {
@@ -8925,11 +8961,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 53,
-		["qLogged"] = 1397295308,
-		["qNote"] = "",
-		["qMoney"] = 24000,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 24000,
+		["qLogged"] = 1397295308,
 	},
 	[210] = {
 		["qItems"] = {
@@ -8946,11 +8982,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 53,
-		["qLogged"] = 1397295311,
-		["qNote"] = "",
-		["qMoney"] = 12000,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 12000,
+		["qLogged"] = 1397295311,
 	},
 	[211] = {
 		["qLogged"] = 1397295315,
@@ -8958,9 +8994,7 @@ QST_QuestBase = {
 		["qDesc"] = "Wanted: A skilled fighter to deal with the threat of the Pterrordax that inhabit the Un'Goro Crater. Their numbers are growing, and they are becoming a menace to travelers in the area.\n\nDecrease the population by slaying 10 pterrordax and 15 frenzied pterrordax.\n\nSpeak with Spraggle Frock after completing the task for a reward.",
 		["qZone"] = "Un'Goro Crater",
 		["qObj"] = "Kill 10 Pterrordax and 15 Frenzied Pterrordax, then speak to Spraggle Frock at Marshal's Refuge.",
-		["qItems"] = {
-			[1] = "Pterrordax slain: 10/10",
-			[2] = "Frenzied Pterrordax slain: 0/15",
+		["qNPC"] = {
 		},
 		["qPlayer"] = {
 			["Stormslinger of Warsong [12x] Blizzlike"] = {
@@ -8971,18 +9005,20 @@ QST_QuestBase = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:11918:0:0:0|h[Grotslab Gloves]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Gauntlets_17",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Gauntlets_17",
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:11919:0:0:0|h[Cragplate Greaves]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Boots_Plate_08",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Boots_Plate_08",
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Pterrordax slain: 10/10",
+			[2] = "Frenzied Pterrordax slain: 0/15",
 		},
 	},
 	[212] = {
@@ -8999,11 +9035,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 52,
-		["qLogged"] = 1397295338,
-		["qNote"] = "",
-		["qMoney"] = 12000,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 12000,
+		["qLogged"] = 1397295338,
 	},
 	[213] = {
 		["qLogged"] = 1397295406,
@@ -9011,9 +9047,7 @@ QST_QuestBase = {
 		["qDesc"] = "I'm making a flying machine!\n\nI got stranded here, and I'm absolutely horrible at finding my way around. I'd take a gryphon or wind rider back to Gadgetzan, but those beasts just scare me to death.\n\nSo, will you help me? All I have left to build is the wings, and I was thinking that the webby scales from the pterrordax and diemetradon would be perfect. There's no way I'm going to go up against one of those, but you look pretty tough. Why don't you give it a try?",
 		["qZone"] = "Un'Goro Crater",
 		["qObj"] = "Collect 8 Webbed Diemetradon Scales and 8 Webbed Pterrordax Scales for Shizzle in Marshal's Refuge.",
-		["qItems"] = {
-			[1] = "Webbed Diemetradon Scale: 8/8",
-			[2] = "Webbed Pterrordax Scale: 8/8",
+		["qNPC"] = {
 		},
 		["qPlayer"] = {
 			["Stormslinger of Warsong [12x] Blizzlike"] = {
@@ -9024,23 +9058,25 @@ QST_QuestBase = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:11915:0:0:0|h[Shizzle's Drizzle Blocker]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Shield_07",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Shield_07",
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:11916:0:0:0|h[Shizzle's Muzzle]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Shoulder_25",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Shoulder_25",
 			},
 			[3] = {
 				["qLink"] = "|cff1eff00|Hitem:11917:0:0:0|h[Shizzle's Nozzle Wiper]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Bracer_07",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Bracer_07",
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Webbed Diemetradon Scale: 8/8",
+			[2] = "Webbed Pterrordax Scale: 8/8",
 		},
 	},
 	[214] = {
@@ -9057,11 +9093,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 53,
-		["qLogged"] = 1397297049,
-		["qNote"] = "",
-		["qMoney"] = 0,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qLogged"] = 1397297049,
 	},
 	[215] = {
 		["qLogged"] = 1397324294,
@@ -9098,9 +9134,7 @@ QST_QuestBase = {
 		},
 	},
 	[217] = {
-		["qItems"] = {
-			[1] = "Tablet Transcript: 0/1",
-		},
+		["qLogged"] = 1397383996,
 		["qTitle"] = "Tablet of the Seven",
 		["qDesc"] = "I came to the Burning Steppes, following the legends of the Seven.  They were dwarves of great knowledge and power, and if you have knowledge and power, then wealth is sure to follow.\n\nThat's what I want.  Wealth!\n\nIf we can learn more of the Seven, then maybe we can get rich together.  The ruins of Thaurissan is rumored to keep the Tablet of the Seven, which holds knowledge of the ancient dwarves.  Find this tablet, copy its text and bring it to me.  Let's discover its secrets together!",
 		["qZone"] = "Burning Steppes",
@@ -9111,11 +9145,13 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 50,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Tablet Transcript: 0/1",
 		},
 		["qNote"] = "",
 		["qMoney"] = 22500,
-		["qLogged"] = 1397383996,
+		["qNPC"] = {
+		},
 	},
 	[218] = {
 		["qItems"] = {
@@ -9125,8 +9161,24 @@ QST_QuestBase = {
 		["qDesc"] = "My brother Ribbly has always been a drain to his family, taking our money and wasting it on one scheme after another.\n\nWell, his last scheme must have been his worst, because Baron Revilgaz of Booty Bay just put a price on poor Ribbly's head.  I can't tell you how happy this makes the Screwspigots!  Our little Ribbly's finally worth something!\n\nBut now he's hiding out, deep in Blackrock Depths.  Please, find him and bring him to me!\n\nOr, if he won't come, then that's ok... just bring me his head.",
 		["qNPC"] = {
 		},
-		["qLogged"] = 1397384013,
 		["qObj"] = "Bring Ribbly's Head to Yuka Screwspigot in the Burning Steppes.",
+		["qChoice"] = {
+			[1] = {
+				["qLink"] = "|cff1eff00|Hitem:11865:0:0:0|h[Rancor Boots]|h|r",
+				["qTex"] = "Interface\\Icons\\INV_Boots_02",
+				["qAmount"] = 1,
+			},
+			[2] = {
+				["qLink"] = "|cff1eff00|Hitem:11963:0:0:0|h[Penance Spaulders]|h|r",
+				["qTex"] = "Interface\\Icons\\INV_Shoulder_25",
+				["qAmount"] = 1,
+			},
+			[3] = {
+				["qLink"] = "|cff1eff00|Hitem:12049:0:0:0|h[Splintsteel Armor]|h|r",
+				["qTex"] = "Interface\\Icons\\INV_Chest_Chain_16",
+				["qAmount"] = 1,
+			},
+		},
 		["qTag"] = "Dungeon",
 		["qPlayer"] = {
 			["Stormslinger of Warsong [12x] Blizzlike"] = {
@@ -9137,23 +9189,7 @@ QST_QuestBase = {
 		["qZone"] = "Blackrock Depths",
 		["qNote"] = "",
 		["qMoney"] = 18000,
-		["qChoice"] = {
-			[1] = {
-				["qLink"] = "|cff1eff00|Hitem:11865:0:0:0|h[Rancor Boots]|h|r",
-				["qAmount"] = 1,
-				["qTex"] = "Interface\\Icons\\INV_Boots_02",
-			},
-			[2] = {
-				["qLink"] = "|cff1eff00|Hitem:11963:0:0:0|h[Penance Spaulders]|h|r",
-				["qAmount"] = 1,
-				["qTex"] = "Interface\\Icons\\INV_Shoulder_25",
-			},
-			[3] = {
-				["qLink"] = "|cff1eff00|Hitem:12049:0:0:0|h[Splintsteel Armor]|h|r",
-				["qAmount"] = 1,
-				["qTex"] = "Interface\\Icons\\INV_Chest_Chain_16",
-			},
-		},
+		["qLogged"] = 1397384013,
 	},
 	[219] = {
 		["qItems"] = {
@@ -9163,8 +9199,19 @@ QST_QuestBase = {
 		["qDesc"] = "By order o' 'is eminence, Overseer Oilfist, the rogue Thorium Brotherhood agent an' newly hired commander o' the Dark Iron Slag Pit crew o' the Cauldron, Overseer Maltorius, is to be killed an' 'is head brung back as proof o' the deed.\n\nSee Lookout Captan Lolo Longstriker fer the reward on this bounty.",
 		["qNPC"] = {
 		},
-		["qLogged"] = 1397384150,
 		["qObj"] = "Deep within the Slag Pit of the Cauldron, in the Searing Gorge, you will find the traitorous Dark Iron dwarf named Overseer Maltorius.\n\nSlay Overseer Maltorius and take his head. Return the head to Lookout Captain Lolo Longstriker in the Searing Gorge for your reward.",
+		["qChoice"] = {
+			[1] = {
+				["qLink"] = "|cff1eff00|Hitem:19128:0:0:0|h[Seared Mail Vest]|h|r",
+				["qTex"] = "Interface\\Icons\\INV_Chest_Chain_13",
+				["qAmount"] = 1,
+			},
+			[2] = {
+				["qLink"] = "|cff1eff00|Hitem:19127:0:0:0|h[Charred Leather Tunic]|h|r",
+				["qTex"] = "Interface\\Icons\\INV_Chest_Leather_03",
+				["qAmount"] = 1,
+			},
+		},
 		["qTag"] = "Elite",
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
@@ -9178,29 +9225,17 @@ QST_QuestBase = {
 		["qZone"] = "Searing Gorge",
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qChoice"] = {
-			[1] = {
-				["qLink"] = "|cff1eff00|Hitem:19128:0:0:0|h[Seared Mail Vest]|h|r",
-				["qAmount"] = 1,
-				["qTex"] = "Interface\\Icons\\INV_Chest_Chain_13",
-			},
-			[2] = {
-				["qLink"] = "|cff1eff00|Hitem:19127:0:0:0|h[Charred Leather Tunic]|h|r",
-				["qAmount"] = 1,
-				["qTex"] = "Interface\\Icons\\INV_Chest_Leather_03",
-			},
-		},
+		["qLogged"] = 1397384150,
 	},
 	[220] = {
-		["qItems"] = {
-			[1] = "Smithing Tuyere: 1/1",
-			[2] = "Lookout's Spyglass: 1/1",
-		},
+		["qLogged"] = 1397384154,
 		["qTitle"] = "STOLEN: Smithing Tuyere and Lookout's Spyglass",
 		["qDesc"] = "The following items have been stolen:\n\n*One Dark Iron Tuyere.\n\n*One Lookout's Spyglass.\n\nA reward is being offered to individuals who find and return these pilfered items.\n\nThe Thorium Brotherhood is certain that these items were stolen by unscrupulous and jealous Dark Iron dwarves that inhabit the Searing Gorge.\n\nThe spyglass in question was an excellent tool for the lookouts and the tuyere was an irreplaceable smithing tool.\n\nShould you find the missing items, return them to Scrange.",
 		["qZone"] = "Searing Gorge",
 		["qObj"] = "Find and return the Smithing Tuyere and Lookout's Spyglass to Taskmaster Scrange in the Searing Gorge.\n\nThe only information you have about these items is the following: They were definitely stolen by Dark Iron dwarves. The Smithing Tuyere is a blacksmithing tool used by blacksmiths and the Lookout's Spyglass is an invaluable monitoring tool to lookouts. ",
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Smithing Tuyere: 1/1",
+			[2] = "Lookout's Spyglass: 1/1",
 		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
@@ -9214,24 +9249,22 @@ QST_QuestBase = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:19124:0:0:0|h[Slagplate Leggings]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Pants_04",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:19123:0:0:0|h[Everwarm Handwraps]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Gauntlets_19",
+				["qAmount"] = 1,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 42000,
-		["qLogged"] = 1397384154,
+		["qNPC"] = {
+		},
 	},
 	[221] = {
-		["qItems"] = {
-			[1] = "Dark Iron Taskmaster slain: 15/15",
-			[2] = "Dark Iron Slaver slain: 15/15",
-		},
+		["qLogged"] = 1397384156,
 		["qTitle"] = "JOB OPPORTUNITY: Culling the Competition",
 		["qDesc"] = "Taskmaster Scrange is looking for a few good men and women to help 'cull the competition' in the Searing Gorge.\n\nIf you are interested in this position, venture out into the Searing Gorge and slaughter every Dark Iron Taskmaster and Dark Iron Slaver that you see.\n\nReturn to Taskmaster Scrange when your clothes are bloody enough.\n\nYou'll know when they're bloody enough so don't ask.",
 		["qZone"] = "Searing Gorge",
@@ -9245,21 +9278,23 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 48,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Dark Iron Taskmaster slain: 15/15",
+			[2] = "Dark Iron Slaver slain: 15/15",
 		},
 		["qNote"] = "",
 		["qMoney"] = 63000,
-		["qLogged"] = 1397384156,
+		["qNPC"] = {
+		},
 	},
 	[222] = {
-		["qItems"] = {
-			[1] = "Heavy War Golem slain: 20/20",
-		},
+		["qLogged"] = 1397384166,
 		["qTitle"] = "Curse These Fat Fingers",
 		["qDesc"] = "Unfortunately, I can't dish out the beats like I used to, due to this here fat finger problem. Ye see, the climate out here combined with the lack o' air pressure makes me fingers expand. They're like gigantic Thelsamar Blood Sausages, they are...\n\nYe're gonna have to carry out me orders of business and what have ye.\n\nFirst on me agenda: Poundin' the livin' daylights out o' the heavy war golems o' the Gorge. Get crackin'.",
 		["qZone"] = "Searing Gorge",
 		["qObj"] = "Hansel Heavyhands wants you to kill 20 Heavy War Golems.\n\nThe Heavy War Golems wander the areas surrounding the Cauldron in the Searing Gorge. When you've killed enough, return to Hansel in Searing Gorge.",
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Heavy War Golem slain: 20/20",
 		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
@@ -9273,23 +9308,23 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:19126:0:0:0|h[Slagplate Gauntlets]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Gauntlets_22",
+				["qAmount"] = 1,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 21000,
-		["qLogged"] = 1397384166,
+		["qNPC"] = {
+		},
 	},
 	[223] = {
-		["qItems"] = {
-			[1] = "Greater Lava Spider slain: 20/20",
-		},
+		["qLogged"] = 1397384169,
 		["qTitle"] = "Fiery Menace!",
 		["qDesc"] = "Wouldn't ye know it, every time ol' Hansel wants to take a moment to relax and reflect upon his life, the powers that be give him another job.\n\nMe gots to think, come on! Ye know what I be saying? Come. On.\n\nSo, these here greater lava spiders are causin' a ruckus o' some sort. Oilfist says they shoot fire out their... erm, yea well, anyway, such things upset the children.\n\nI guess we gots to kill 'em. Rather, ye gots to kill 'em.",
 		["qZone"] = "Searing Gorge",
 		["qObj"] = "Hansel Heavyhands wants you to kill 20 Greater Lava Spiders in the Searing Gorge. You can find Greater Lava Spiders in the plateaus and lava pools of the Searing Gorge.\n\nReturn to Hansel Heavyhands in the Searing Gorge when you have killed enough Greater Lava Spiders.",
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Greater Lava Spider slain: 20/20",
 		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
@@ -9303,23 +9338,23 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:19125:0:0:0|h[Seared Mail Girdle]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Belt_16",
+				["qAmount"] = 1,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 21000,
-		["qLogged"] = 1397384169,
+		["qNPC"] = {
+		},
 	},
 	[224] = {
-		["qItems"] = {
-			[1] = "Incendosaur slain: 20/20",
-		},
+		["qLogged"] = 1397384174,
 		["qTitle"] = "Incendosaurs? Whateverosaur is More Like It",
 		["qDesc"] = "Bunions, lad. Me bunions got bunions. How am I supposed to do any sort of killin' with me feet in such disarray? That's why ye're gonna help.\n\nScrange and Burninate tasked me to kill these things so they can send some expeditionary teams down into the Slag Pit lava pools to do some explorin'. Supposedly some incendosaurs or some such nonsense down there causin' all kinds o' problems. Now move along an' don't come back 'til the incendosaur population be extinct.",
 		["qZone"] = "Searing Gorge",
 		["qObj"] = "Hansel Heavyhands wants you to kill 20 Incendosaurs.\n\nYou will find Incendosaurs occupying the lava pools inside the Slag Pit. The Slag Pit can be found in the Cauldron of the Searing Gorge.\n\nReturn to Hansel Heavyhands in the Searing Gorge when you have killed enough Incendosaurs.",
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Incendosaur slain: 20/20",
 		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
@@ -9333,18 +9368,17 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:19141:0:0:0|h[Luffa]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Fabric_Wool_01",
+				["qAmount"] = 1,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 21000,
-		["qLogged"] = 1397384174,
+		["qNPC"] = {
+		},
 	},
 	[225] = {
-		["qItems"] = {
-			[1] = "Secret Plans: Fiery Flux: 1/1",
-		},
+		["qLogged"] = 1397384180,
 		["qTitle"] = "What the Flux?",
 		["qDesc"] = "When that bastard, Maltorius, left our clan, he left with something more valuable than a pristine arcane crystal: Our recipe for fiery flux! I'd bet anything that the recipe was part of the deal in his new promotion amongst the Dark Irons.\n\nI want you to get our secret plans back, Stormslinger. I'm sure they're somewhere near Maltorius, deep inside the Slag Pit.",
 		["qZone"] = "Searing Gorge",
@@ -9358,15 +9392,16 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 50,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Secret Plans: Fiery Flux: 1/1",
 		},
 		["qNote"] = "",
 		["qMoney"] = 22500,
-		["qLogged"] = 1397384180,
+		["qNPC"] = {
+		},
 	},
 	[226] = {
-		["qItems"] = {
-		},
+		["qLogged"] = 1397384258,
 		["qTitle"] = "Divine Retribution",
 		["qDesc"] = "Hear my tale, adventurer.",
 		["qZone"] = "Searing Gorge",
@@ -9380,17 +9415,15 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 48,
-		["qNPC"] = {
+		["qItems"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1397384258,
+		["qNPC"] = {
+		},
 	},
 	[227] = {
-		["qItems"] = {
-			[1] = "Heart of Flame: 4/4",
-			[2] = "Golem Oil: 4/4",
-		},
+		["qLogged"] = 1397384271,
 		["qTitle"] = "The Flawless Flame",
 		["qDesc"] = "You have made the right decision, Stormslinger.\n\nWe must strike where we will do the most damage: the four sentry towers.\n\nWith the four towers in flames, we can initiate an offensive before they have time to react.\n\nYou will need the proper tool to set the towers ablaze. To make the tool requires some materials.\n\nBring me four hearts of flame and four golem oil and I shall craft the torch of flawless flame.\n\nThe golems and elementals in these lands should be your first target.",
 		["qZone"] = "Searing Gorge",
@@ -9404,16 +9437,17 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 48,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Heart of Flame: 4/4",
+			[2] = "Golem Oil: 4/4",
 		},
 		["qNote"] = "",
 		["qMoney"] = 42000,
-		["qLogged"] = 1397384271,
+		["qNPC"] = {
+		},
 	},
 	[228] = {
-		["qItems"] = {
-			[1] = "Thorium Plated Dagger: 8/8",
-		},
+		["qLogged"] = 1397403938,
 		["qTitle"] = "Forging the Shaft",
 		["qDesc"] = "To hold the flawless flame, we will need a shaft and a casing. You must first find a suitable shaft.\n\nThe Dark Iron taskmasters and slavers of the cauldron use weapons of enchanted thorium, an extremely sturdy alloy. If you bring me eight thorium plated daggers, I can break the alloy down and reforge a shaft.\n",
 		["qZone"] = "Searing Gorge",
@@ -9427,11 +9461,13 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 48,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Thorium Plated Dagger: 8/8",
 		},
 		["qNote"] = "",
 		["qMoney"] = 42000,
-		["qLogged"] = 1397403938,
+		["qNPC"] = {
+		},
 	},
 	[229] = {
 		["qLogged"] = 1397407723,
@@ -9449,12 +9485,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 50,
-		["qItems"] = {
-			[1] = "Symbol of Ragnaros: 1/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 22500,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Symbol of Ragnaros: 1/1",
 		},
 	},
 	[230] = {
@@ -9473,11 +9509,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 50,
-		["qLogged"] = 1397407975,
-		["qNote"] = "",
-		["qMoney"] = 0,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qLogged"] = 1397407975,
 	},
 	[231] = {
 		["qLogged"] = 1397408053,
@@ -9534,13 +9570,14 @@ QST_QuestBase = {
 		},
 	},
 	[234] = {
-		["qLogged"] = 1397410241,
+		["qItems"] = {
+			[1] = "Morrowgrain: 10/10",
+		},
 		["qTitle"] = "Morrowgrain Research",
 		["qDesc"] = "With what we call an Evergreen Pouch, we have cultivated Tharlendris seeds in the soil from Un'Goro Crater.  These seeds have blossomed into an array of random, potent herbs.  One result is morrowgrain, a mysterious herb we know little about; I very much hope to unravel this mystery for the Circle.\n\nTake this voucher over to my daughter Bashana, and she will give you some seeds so you may assist us.  If you run out, you will need to purchase more from her.",
 		["qZone"] = "Thunder Bluff",
 		["qObj"] = "Take the Seed Voucher to Bashana Runetotem in Thunder Bluff.",
-		["qNPC"] = {
-		},
+		["qLogged"] = 1397410241,
 		["qPlayer"] = {
 			["Stormslinger of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -9550,14 +9587,13 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffffffff|Hitem:11022:0:0:0|h[Packet of Tharlendris Seeds]|h|r",
-				["qAmount"] = 20,
 				["qTex"] = "Interface\\Icons\\Spell_Nature_ProtectionformNature",
+				["qAmount"] = 20,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qItems"] = {
-			[1] = "Morrowgrain: 10/10",
+		["qNPC"] = {
 		},
 	},
 	[235] = {
@@ -9567,10 +9603,10 @@ QST_QuestBase = {
 		["qZone"] = "Silithus",
 		["qObj"] = "Speak with General Kirika at the Horde encampment near Hive'Regal.",
 		["qPlayer"] = {
-			["Stormslinger of Warsong [12x] Blizzlike"] = {
+			["Zapunzel of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
 			},
-			["Zapunzel of Warsong [12x] Blizzlike"] = {
+			["Stormslinger of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
 			},
 		},
@@ -9581,9 +9617,7 @@ QST_QuestBase = {
 		},
 	},
 	[236] = {
-		["qItems"] = {
-			[1] = "Twilight Tablet Fragment: 0/8",
-		},
+		["qLogged"] = 1397410966,
 		["qTitle"] = "The Twilight Mystery",
 		["qDesc"] = "A camp of Twilight's Hammer cultists once thrived northwest of here.  If you were to venture there now, you'd find the area swarming with elementals and nothing but scattered pieces of wood and canvas to mark the spot where the camp was.\n\nI've recovered a few fragments of a clay tablet from the site, but I have too few of them to piece together anything useful.  See if you can find the remaining tablet fragments so we can shed some light into the Twilight's Hammer presence here in Silithus.",
 		["qZone"] = "Silithus",
@@ -9603,17 +9637,16 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 58,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Twilight Tablet Fragment: 0/8",
 		},
 		["qNote"] = "",
 		["qMoney"] = 27000,
-		["qLogged"] = 1397410966,
+		["qNPC"] = {
+		},
 	},
 	[237] = {
-		["qItems"] = {
-			[1] = "Stonelash Scorpid Stinger: 8/8",
-			[2] = "Sand Skitterer Fang: 8/8",
-		},
+		["qLogged"] = 1397411651,
 		["qTitle"] = "Deadly Desert Venom",
 		["qDesc"] = "Beetix Ficklespragg at your service!  My cousin Noggle makes a living gathering rare herbs for Cenarion Hold alchemists.  Or used to, anyway.  He came back from his last trip with a strong poison running though his veins.\n\nI've managed to slow down the venom, but to fully neutralize it I need poison samples from whatever stung him.\n\nNoggle arrived from the north, so I'd bet my shirt stonelash scorpids or sand skitterers did it.  Bring me some stingers and fangs and I'll try to make an antidote for him.",
 		["qZone"] = "Silithus",
@@ -9630,11 +9663,14 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 55,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Stonelash Scorpid Stinger: 8/8",
+			[2] = "Sand Skitterer Fang: 8/8",
 		},
 		["qNote"] = "",
 		["qMoney"] = 25500,
-		["qLogged"] = 1397411651,
+		["qNPC"] = {
+		},
 	},
 	[238] = {
 		["qLogged"] = 1397417132,
@@ -9642,10 +9678,7 @@ QST_QuestBase = {
 		["qDesc"] = "Blasted!  The antidote didn't work.  Noggle must've been stung by one of the stronger creatures in the far south.\n\nI'm going to need you to go there and get me some more samples, Stormslinger.  The good news is that since their poison is stronger I won't require as many.  The bad news is that there are more kinds of poisonous creatures crawling around the southern area so you'll have to draw from more sources.",
 		["qZone"] = "Silithus",
 		["qObj"] = "Beetix Ficklespragg at Cenarion Hold in Silithus wants you to gather 3 Stonelash Pincer Stingers, 3 Stonelash Flayer Stingers and 3 Rock Stalker Fangs.",
-		["qItems"] = {
-			[1] = "Stonelash Flayer Stinger: 3/3",
-			[2] = "Stonelash Pincer Stinger: 3/3",
-			[3] = "Rock Stalker Fang: 3/3",
+		["qNPC"] = {
 		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
@@ -9662,18 +9695,21 @@ QST_QuestBase = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cffffffff|Hitem:13446:0:0:0|h[Major Healing Potion]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Potion_54",
 				["qAmount"] = 2,
+				["qTex"] = "Interface\\Icons\\INV_Potion_54",
 			},
 			[2] = {
 				["qLink"] = "|cffffffff|Hitem:13444:0:0:0|h[Major Mana Potion]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Potion_76",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Potion_76",
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 19500,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Stonelash Flayer Stinger: 3/3",
+			[2] = "Stonelash Pincer Stinger: 3/3",
+			[3] = "Rock Stalker Fang: 3/3",
 		},
 	},
 	[239] = {
@@ -9683,8 +9719,19 @@ QST_QuestBase = {
 		["qTitle"] = "Wanted - Deathclasp, Terror of the Sands",
 		["qDesc"] = "The terrible scorpid, Deathclasp, is believed to have retreated to the southern mountain range in the presence of increased silithid activity.  She presents a great threat to patrols and expeditions in the southern regions.  Individuals participating in her destruction will be remunerated handsomely.  Inquire with Captain Vish Kozus, at the top of the Cenarion Hold Watchtower, regarding a reward.",
 		["qZone"] = "Silithus",
-		["qLogged"] = 1397417321,
 		["qObj"] = "Bring Deathclasp's Pincer to Vish Kozus, Captain of the Guard.",
+		["qChoice"] = {
+			[1] = {
+				["qLink"] = "|cff1eff00|Hitem:20646:0:0:0|h[Sandstrider's Mark]|h|r",
+				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Weapon_Bow_03",
+			},
+			[2] = {
+				["qLink"] = "|cff1eff00|Hitem:20647:0:0:0|h[Black Crystal Dagger]|h|r",
+				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Weapon_ShortBlade_20",
+			},
+		},
 		["qTag"] = "Elite",
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
@@ -9702,18 +9749,7 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 54000,
-		["qChoice"] = {
-			[1] = {
-				["qLink"] = "|cff1eff00|Hitem:20646:0:0:0|h[Sandstrider's Mark]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Weapon_Bow_03",
-				["qAmount"] = 1,
-			},
-			[2] = {
-				["qLink"] = "|cff1eff00|Hitem:20647:0:0:0|h[Black Crystal Dagger]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Weapon_ShortBlade_20",
-				["qAmount"] = 1,
-			},
-		},
+		["qLogged"] = 1397417321,
 	},
 	[240] = {
 		["qLogged"] = 1397424801,
@@ -9723,40 +9759,39 @@ QST_QuestBase = {
 		["qObj"] = "Find and deliver Silithyst to the Silithyst Extractor then speak with General Kirika at the Horde encampment near Hive'Regal.",
 		["qTag"] = "PvP",
 		["qPlayer"] = {
-			["Stormslinger of Warsong [12x] Blizzlike"] = {
+			["Zapunzel of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
 			},
-			["Zapunzel of Warsong [12x] Blizzlike"] = {
+			["Stormslinger of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 0,
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cffffffff|Hitem:13446:0:0:0|h[Major Healing Potion]|h|r",
-				["qAmount"] = 2,
 				["qTex"] = "Interface\\Icons\\INV_Potion_54",
+				["qAmount"] = 2,
 			},
 			[2] = {
 				["qLink"] = "|cffffffff|Hitem:13444:0:0:0|h[Major Mana Potion]|h|r",
-				["qAmount"] = 2,
 				["qTex"] = "Interface\\Icons\\INV_Potion_76",
+				["qAmount"] = 2,
 			},
+		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qNPC"] = {
 		},
 	},
 	[241] = {
-		["qItems"] = {
-			[1] = "Noggle's Satchel: 1/1",
-		},
+		["qLogged"] = 1397426737,
 		["qTitle"] = "Noggle's Lost Satchel",
 		["qDesc"] = "Where am I?  Where's my bag? *gasp* I must've lost it while fleeing from Deathclasp, the giant scorpid.  In my rush to escape I walked right into a nest of stonelash flayers.\n\nThe satchel I was carrying had all sorts of rare reagents in it.  Without them, me and Beetix won't be able to make the potions that Cenarion Hold needs.  I'm too weak to get up yet, but I can make it worth your while if you bring back my reagents.\n\nI ran into Deathclasp in the southern mountain range, behind Bronzebeard's camp.",
 		["qZone"] = "Silithus",
 		["qObj"] = "Retrieve Noggle's Satchel from the mountains in the south of Silithus and return it to him at Cenarion Hold.",
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Noggle's Satchel: 1/1",
 		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
@@ -9773,18 +9808,19 @@ QST_QuestBase = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cffffffff|Hitem:13452:0:0:0|h[Elixir of the Mongoose]|h|r",
-				["qAmount"] = 2,
 				["qTex"] = "Interface\\Icons\\INV_Potion_32",
+				["qAmount"] = 2,
 			},
 			[2] = {
 				["qLink"] = "|cffffffff|Hitem:13447:0:0:0|h[Elixir of the Sages]|h|r",
-				["qAmount"] = 2,
 				["qTex"] = "Interface\\Icons\\INV_Potion_29",
+				["qAmount"] = 2,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1397426737,
+		["qNPC"] = {
+		},
 	},
 	[242] = {
 		["qLogged"] = 1397431913,
@@ -9805,12 +9841,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "Core Fragment: 1/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 3900,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Core Fragment: 1/1",
 		},
 	},
 	[243] = {
@@ -9827,11 +9863,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 51,
-		["qLogged"] = 1397497798,
-		["qNote"] = "",
-		["qMoney"] = 26700,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 26700,
+		["qLogged"] = 1397497798,
 	},
 	[244] = {
 		["qLogged"] = 1397497802,
@@ -9840,18 +9876,18 @@ QST_QuestBase = {
 		},
 		["qTitle"] = "Jammal'an the Prophet",
 		["qDesc"] = "My Witherbark companions don't take kindly to strangers around their home.\n\nMe? I don't have a home anymore. I was exiled from my people, the great Atal'ai tribe of the Swamp of Sorrows.\n\nOur spiritual leader, Jammal'an, had what he called a prophecy. He believes the summoning of the god, Hakkar will bring the Atal'ai immortality.\n\nBut I urged caution. What if the prophecy was nothing more than manipulation?\n\nI want revenge for my exile. Bring me Jammal'an's head. Maybe then my people will be free.",
+		["qZone"] = "Sunken Temple",
 		["qArea"] = "Unknown",
-		["qObj"] = "The Atal'ai Exile in The Hinterlands wants the Head of Jammal'an.",
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff0070dd|Hitem:11123:0:0:0|h[Rainstrider Leggings]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Pants_08",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Pants_08",
 			},
 			[2] = {
 				["qLink"] = "|cff0070dd|Hitem:11124:0:0:0|h[Helm of Exile]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Helmet_21",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Helmet_21",
 			},
 		},
 		["qTag"] = "Dungeon",
@@ -9861,19 +9897,22 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 53,
-		["qZone"] = "Sunken Temple",
-		["qNote"] = "",
-		["qMoney"] = 6900,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 6900,
+		["qObj"] = "The Atal'ai Exile in The Hinterlands wants the Head of Jammal'an.",
 	},
 	[245] = {
-		["qLogged"] = 1397580067,
+		["qItems"] = {
+			[1] = "Azerothian Diamond: 1/1",
+			[2] = "Pristine Black Diamond: 1/1",
+		},
 		["qTitle"] = "Material Assistance",
 		["qDesc"] = "Stormslinger, there is a pressing matter I hope you can help with... both materially and spiritually.  Allow me to explain.\n\nWithin the depths of the Scholomance in Lordaeron is a chamber called the Great Ossuary.  I need to complete a device that would pierce the shadows of this horrid room.  To finish what I have started, I need two diamonds: an Azerothian and a Pristine Black.  These are not trivial items, I know - I just don't have the resources myself.\n\nCould you provide me with one of each?",
 		["qArea"] = "Unknown",
 		["qObj"] = "If you are interested in helping Sagorne Crestrider in Orgrimmar's Valley of Wisdom, bring him an Azerothian Diamond and a Pristine Black Diamond.",
-		["qZone"] = "Shaman",
+		["qLogged"] = 1397580067,
 		["qPlayer"] = {
 			["Stormslinger of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -9884,10 +9923,7 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 4350,
-		["qItems"] = {
-			[1] = "Azerothian Diamond: 1/1",
-			[2] = "Pristine Black Diamond: 1/1",
-		},
+		["qZone"] = "Shaman",
 	},
 	[246] = {
 		["qLogged"] = 1397580081,
@@ -9913,8 +9949,8 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff0070dd|Hitem:22095:0:0:0|h[Bindings of The Five Thunders]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Bracer_02",
+				["qAmount"] = 1,
 			},
 		},
 	},
@@ -9943,16 +9979,14 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffa335ee|Hitem:20134:0:0:0|h[Skyfury Helm]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Helmet_57",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Helmet_57",
 			},
 		},
 		["qTitle"] = "The Darkreaver Menace",
 		["qDesc"] = "Death Knight Darkreaver lords over the Great Ossuary in the Scholomance.  He threatens to twist the spirit realm to do his own bidding, and he must be stopped!  This is where the scryer you helped make comes into play.\n\nUse the divination scryer in the heart of the Great Ossuary's basement to call forth Darkreaver's spirit minions.  Defeat the spirits and the death knight himself will appear.  Stormslinger, bring me his head!  Only his demise will reverse the damage done to the spirit realm!",
+		["qZone"] = "Shaman",
 		["qArea"] = "Unknown",
-		["qItems"] = {
-			[1] = "Darkreaver's Head: 0/1",
-		},
 		["qObj"] = "Use the Divination Scryer in the heart of the Great Ossuary's basement in the Scholomance.  Doing so will bring forth spirits you must fight.  Defeating these spirits will summon forth Death Knight Darkreaver; defeat him.\n\nBring Darkreaver's Head to Sagorne Creststrider in the Valley of Wisdom, Orgrimmar.",
 		["qTag"] = "Dungeon",
 		["qPlayer"] = {
@@ -9961,10 +9995,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qZone"] = "Shaman",
+		["qNPC"] = {
+		},
 		["qNote"] = "",
 		["qMoney"] = 8700,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Darkreaver's Head: 0/1",
 		},
 	},
 	[249] = {
@@ -9975,8 +10011,24 @@ QST_QuestBase = {
 		["qDesc"] = "Greetings, Stormslinger.  Before I assign you to more involved tasks in the war, you'll need to do your share of field duty.  \n\nYou will find Captain Skullsplit's Orgrimmar Legion outside Hive'Regal.\n\nReport to him and come back to me with proof of your field service.  I shall have a more advanced assignment ready for you.\n\nOh, please do your best to stay away from the Ironforge Brigade.  Tensions are high among our Alliance and Horde volunteers.",
 		["qNPC"] = {
 		},
-		["qLogged"] = 1400332839,
 		["qObj"] = "Report to Krug Skullsplit at the Orgrimmar Legion post in front of Hive'Regal.  Prepare your Unsigned Field Duty Papers, obtain Signed Field Duty Papers and bring them to Windcaller Kaldon in Cenarion Hold.\n\nNote: Healing or casting beneficial spells on a member of the Orgrimmar Legion will flag you for PvP.",
+		["qChoice"] = {
+			[1] = {
+				["qLink"] = "|cffffffff|Hitem:20808:0:0:0|h[Combat Assignment]|h|r",
+				["qTex"] = "Interface\\Icons\\INV_Letter_04",
+				["qAmount"] = 1,
+			},
+			[2] = {
+				["qLink"] = "|cffffffff|Hitem:21266:0:0:0|h[Logistics Assignment]|h|r",
+				["qTex"] = "Interface\\Icons\\INV_Letter_04",
+				["qAmount"] = 1,
+			},
+			[3] = {
+				["qLink"] = "|cffffffff|Hitem:20809:0:0:0|h[Tactical Assignment]|h|r",
+				["qTex"] = "Interface\\Icons\\INV_Letter_04",
+				["qAmount"] = 1,
+			},
+		},
 		["qTag"] = "Elite",
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
@@ -9990,23 +10042,7 @@ QST_QuestBase = {
 		["qZone"] = "Silithus",
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qChoice"] = {
-			[1] = {
-				["qLink"] = "|cffffffff|Hitem:20808:0:0:0|h[Combat Assignment]|h|r",
-				["qAmount"] = 1,
-				["qTex"] = "Interface\\Icons\\INV_Letter_04",
-			},
-			[2] = {
-				["qLink"] = "|cffffffff|Hitem:21266:0:0:0|h[Logistics Assignment]|h|r",
-				["qAmount"] = 1,
-				["qTex"] = "Interface\\Icons\\INV_Letter_04",
-			},
-			[3] = {
-				["qLink"] = "|cffffffff|Hitem:20809:0:0:0|h[Tactical Assignment]|h|r",
-				["qAmount"] = 1,
-				["qTex"] = "Interface\\Icons\\INV_Letter_04",
-			},
-		},
+		["qLogged"] = 1400332839,
 	},
 	[250] = {
 		["qLogged"] = 1400333310,
@@ -10063,8 +10099,8 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:20802:0:0:0|h[Cenarion Combat Badge]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Jewelry_Talisman_06",
+				["qAmount"] = 1,
 			},
 		},
 	},
@@ -10094,8 +10130,8 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:20802:0:0:0|h[Cenarion Combat Badge]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Jewelry_Talisman_06",
+				["qAmount"] = 1,
 			},
 		},
 	},
@@ -10125,8 +10161,8 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:20802:0:0:0|h[Cenarion Combat Badge]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Jewelry_Talisman_06",
+				["qAmount"] = 1,
 			},
 		},
 	},
@@ -10143,21 +10179,24 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 52,
-		["qItems"] = {
-			[1] = "Ironfel: 0/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 450,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Ironfel: 0/1",
 		},
 	},
 	[255] = {
-		["qLogged"] = 1400783557,
+		["qItems"] = {
+			[1] = "Bloodshot Spider Eye: 8/8",
+			[2] = "Thick Black Claw: 8/8",
+		},
 		["qTitle"] = "Spirit Totem",
 		["qDesc"] = "The elemental spirits of this place don't be likin' me any more.\n\nYou know about the totems more than any, and I be needin' a spirit totem to protect me.  We already got the elements, now we need somethin' more with more nature.  More primal.\n\nIn the Western Plaguelands you can kill bears for claws and spiders for their eyes.  The carrion birds eat everything, so they might have either one.",
 		["qArea"] = "Unknown",
 		["qObj"] = "Bring the pieces for the spirit totem to Bath'rah the Windwatcher.",
-		["qZone"] = "Shaman",
+		["qLogged"] = 1400783557,
 		["qPlayer"] = {
 			["Stormslinger of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -10168,10 +10207,7 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 4350,
-		["qItems"] = {
-			[1] = "Bloodshot Spider Eye: 8/8",
-			[2] = "Thick Black Claw: 8/8",
-		},
+		["qZone"] = "Shaman",
 	},
 	[256] = {
 		["qLogged"] = 1400932768,
@@ -10182,23 +10218,23 @@ QST_QuestBase = {
 		},
 		["qTitle"] = "Da Voodoo",
 		["qDesc"] = "The spirit totem just isn't enough.  We be needin' some voodoo magic to make it work jus' right.\n\nThe trolls in the sunken temple have feathers strong with voodoo magics.  Go there and kill Gasher, Mijan, Zolo, Hukku, Zul'lor, and Loro.  Then we have magic enough for a real spirit totem.",
+		["qZone"] = "Shaman",
 		["qArea"] = "Unknown",
-		["qObj"] = "Bring the voodoo feathers to Bath'rah the Windwatcher.",
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff0070dd|Hitem:20369:0:0:0|h[Azurite Fists]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Gauntlets_30",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Gauntlets_30",
 			},
 			[2] = {
 				["qLink"] = "|cff0070dd|Hitem:20503:0:0:0|h[Enamored Water Spirit]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Wand_01",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Wand_01",
 			},
 			[3] = {
 				["qLink"] = "|cff0070dd|Hitem:20556:0:0:0|h[Wildstaff]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Staff_Goldfeathered_01",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Staff_Goldfeathered_01",
 			},
 		},
 		["qTag"] = "Dungeon",
@@ -10208,11 +10244,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 52,
-		["qZone"] = "Shaman",
-		["qNote"] = "",
-		["qMoney"] = 53100,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 53100,
+		["qObj"] = "Bring the voodoo feathers to Bath'rah the Windwatcher.",
 	},
 	[257] = {
 		["qLogged"] = 1400932965,
@@ -10235,17 +10271,17 @@ QST_QuestBase = {
 		},
 	},
 	[258] = {
-		["qLogged"] = 1400454616,
+		["qItems"] = {
+			[1] = "Mithril Bar: 40/40",
+			[2] = "Truesilver Bar: 5/5",
+		},
 		["qTitle"] = "The Great Silver Deceiver",
 		["qDesc"] = "It is said that truesilver is stronger and more durable than mithril. Galvan does not disagree with this assessment of the minerals, but contrary to its name, truesilver is not true! Mithril is a far nobler mineral! HAH! Regardless, for this lesson you will need to find the great silver deceiver, Kylosandrax.\n\nBring me forty bars of mithril and five bars of truesilver. In exchange, you will be taught the secret of ornate mithril gloves and more importantly, learn that truesilver is a liar!",
 		["qNPC"] = {
 		},
 		["qArea"] = "Unknown",
 		["qObj"] = "Bring forty Mithril Bars and five Truesilver Bars to Galvan the Ancient in Stranglethorn.",
-		["qItems"] = {
-			[1] = "Mithril Bar: 40/40",
-			[2] = "Truesilver Bar: 5/5",
-		},
+		["qLogged"] = 1400454616,
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -10262,17 +10298,17 @@ QST_QuestBase = {
 		["qZone"] = "Blacksmithing",
 	},
 	[259] = {
-		["qLogged"] = 1400454633,
+		["qItems"] = {
+			[1] = "Iron Bar: 40/40",
+			[2] = "Mithril Bar: 40/40",
+		},
 		["qTitle"] = "Smelt On, Smelt Off",
 		["qDesc"] = "Many blacksmiths believe that mining and smithing are separate, independent jobs; but can there be blacksmithing without mining? Ah ha -- it is an impossibility! The accomplished blacksmith must also be an accomplished miner.\n\nShow Galvan that you are capable, Kylosandrax. Bring me forty bars of iron and forty bars of mithril. For this, Galvan will teach you the ways of the ornate mithril pants!",
 		["qNPC"] = {
 		},
 		["qArea"] = "Unknown",
 		["qObj"] = "Bring forty Mithril Bars and forty Iron Bars to Galvan the Ancient in Stranglethorn.",
-		["qItems"] = {
-			[1] = "Iron Bar: 40/40",
-			[2] = "Mithril Bar: 40/40",
-		},
+		["qLogged"] = 1400454633,
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -10289,18 +10325,18 @@ QST_QuestBase = {
 		["qZone"] = "Blacksmithing",
 	},
 	[260] = {
-		["qLogged"] = 1400455165,
+		["qReward"] = {
+			[1] = {
+				["qAmount"] = 1,
+			},
+		},
 		["qTitle"] = "Expert Blacksmith!",
 		["qDesc"] = "When you first came to me, I knew that you would turn out to be one of my finest pupils! It was without hesitancy that you gave up a trinket of some power to McGavan. You did this only so that you could meet me. Such blind faith and devotion to the craft should be rewarded.\n\nYou have attained expertise over blacksmithing, Kylosandrax. Reap the rewards!",
 		["qNPC"] = {
 		},
 		["qArea"] = "Unknown",
 		["qObj"] = "Claim your reward from Galvan the Ancient!",
-		["qReward"] = {
-			[1] = {
-				["qAmount"] = 1,
-			},
-		},
+		["qLogged"] = 1400455165,
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -10325,41 +10361,22 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 45,
-		["qZone"] = "Blacksmithing",
+		["qNPC"] = {
+		},
 		["qNote"] = "",
 		["qMoney"] = 2520,
-		["qNPC"] = {
-		},
+		["qZone"] = "Blacksmithing",
 	},
 	[262] = {
-		["qLogged"] = 1400455667,
-		["qTitle"] = "A Good Head On Your Shoulders",
-		["qDesc"] = "It seems as if master had this planned from the start. I was not taught to create the items which you learned to create and you were not taught the items which I learned to create.\n\nThe master is wise, Kylosandrax. We shall teach each other!\n\nShow me how to make a mithril coif and ornate mithril shoulders and I shall show you how to create an ornate mithril helm.",
-		["qArea"] = "Unknown",
-		["qObj"] = "Bring two Mithril Coifs and one Ornate Mithril Shoulder to Trenton Lighthammer.",
-		["qZone"] = "Blacksmithing",
-		["qPlayer"] = {
-			["Kylosandrax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFF7F7F7FUnknown",
-			},
-		},
-		["qLevel"] = 45,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 3300,
 		["qItems"] = {
 			[1] = "Mithril Coif: 2/2",
 			[2] = "Ornate Mithril Shoulder: 1/1",
 		},
-	},
-	[263] = {
-		["qLogged"] = 1400455675,
-		["qTitle"] = "The Mithril Kid",
-		["qDesc"] = "Around these parts I am known as the Mithril Kid. I supply ornate mithril to adventurers from around the world.\n\n<Trenton whispers.>\n\nLittle do they know that I do not know the technique to fashion ornate mithril gloves. Shhhh! This will be our little secret.\n\nTeach me the technique to create ornate mithril gloves, Kylosandrax, and in exchange, I will show you the resultant of the culmination of my training under Galvan: the ornate mithril breastplate.",
+		["qTitle"] = "A Good Head On Your Shoulders",
+		["qDesc"] = "It seems as if master had this planned from the start. I was not taught to create the items which you learned to create and you were not taught the items which I learned to create.\n\nThe master is wise, Kylosandrax. We shall teach each other!\n\nShow me how to make a mithril coif and ornate mithril shoulders and I shall show you how to create an ornate mithril helm.",
 		["qArea"] = "Unknown",
-		["qObj"] = "Bring two Heavy Mithril Breastplates and one Ornate Mithril Gloves to Trenton Lighthammer.",
-		["qZone"] = "Blacksmithing",
+		["qObj"] = "Bring two Mithril Coifs and one Ornate Mithril Shoulder to Trenton Lighthammer.",
+		["qLogged"] = 1400455667,
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -10370,18 +10387,18 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 3300,
+		["qZone"] = "Blacksmithing",
+	},
+	[263] = {
 		["qItems"] = {
 			[1] = "Heavy Mithril Breastplate: 2/2",
 			[2] = "Ornate Mithril Gloves: 1/1",
 		},
-	},
-	[264] = {
-		["qLogged"] = 1400455681,
-		["qTitle"] = "The World At Your Feet",
-		["qDesc"] = "At last year's All-Valley Blacksmithing Championship, all those who watched saw my leg get swept from under me by a cowardly dog from the Venture Co. Foundry. What they didn't know, however, was the reason I was able to continue and ultimately win the tournament: That's right, ornate mithril boots!\n\nI will need to learn how to craft ornate mithril pants for this year's tournament, however, as a Venture Co. shredder is an entrant! Teach me the way of the pants and learn the way of the boot!",
+		["qTitle"] = "The Mithril Kid",
+		["qDesc"] = "Around these parts I am known as the Mithril Kid. I supply ornate mithril to adventurers from around the world.\n\n<Trenton whispers.>\n\nLittle do they know that I do not know the technique to fashion ornate mithril gloves. Shhhh! This will be our little secret.\n\nTeach me the technique to create ornate mithril gloves, Kylosandrax, and in exchange, I will show you the resultant of the culmination of my training under Galvan: the ornate mithril breastplate.",
 		["qArea"] = "Unknown",
-		["qObj"] = "Bring two Heavy Mithril Boots and one Ornate Mithril Pants to Trenton Lighthammer.\n",
-		["qZone"] = "Blacksmithing",
+		["qObj"] = "Bring two Heavy Mithril Breastplates and one Ornate Mithril Gloves to Trenton Lighthammer.",
+		["qLogged"] = 1400455675,
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -10392,21 +10409,40 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 3300,
+		["qZone"] = "Blacksmithing",
+	},
+	[264] = {
 		["qItems"] = {
 			[1] = "Heavy Mithril Boots: 2/2",
 			[2] = "Ornate Mithril Pants: 1/1",
 		},
+		["qTitle"] = "The World At Your Feet",
+		["qDesc"] = "At last year's All-Valley Blacksmithing Championship, all those who watched saw my leg get swept from under me by a cowardly dog from the Venture Co. Foundry. What they didn't know, however, was the reason I was able to continue and ultimately win the tournament: That's right, ornate mithril boots!\n\nI will need to learn how to craft ornate mithril pants for this year's tournament, however, as a Venture Co. shredder is an entrant! Teach me the way of the pants and learn the way of the boot!",
+		["qArea"] = "Unknown",
+		["qObj"] = "Bring two Heavy Mithril Boots and one Ornate Mithril Pants to Trenton Lighthammer.\n",
+		["qLogged"] = 1400455681,
+		["qPlayer"] = {
+			["Kylosandrax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFF7F7F7FUnknown",
+			},
+		},
+		["qLevel"] = 45,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 3300,
+		["qZone"] = "Blacksmithing",
 	},
 	[265] = {
-		["qLogged"] = 1400539188,
+		["qItems"] = {
+		},
 		["qTitle"] = "Did You Lose This?",
 		["qDesc"] = "You have done much for the Order, Kylosandrax. The sheer dedication it takes to get this far would have turned away any ordinary person. There is no doubt in my mind, or in the mind of Galvan, that you are one of us.\n\nWhich is why I think you deserve a little reward. It is nothing really, just a trinket. You may be familiar with its properties, as I do believe it is what brought you to us in the first place.",
 		["qNPC"] = {
 		},
 		["qArea"] = "Unknown",
 		["qObj"] = "Wait for Trenton to finish his work.",
-		["qItems"] = {
-		},
+		["qLogged"] = 1400539188,
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -10416,8 +10452,8 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:10418:0:0:0|h[Glimmering Mithril Insignia]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Jewelry_Talisman_02",
+				["qAmount"] = 1,
 			},
 		},
 		["qNote"] = "",
@@ -10425,12 +10461,15 @@ QST_QuestBase = {
 		["qZone"] = "Blacksmithing",
 	},
 	[266] = {
-		["qLogged"] = 1401124971,
+		["qReward"] = {
+			[1] = {
+				["qAmount"] = 1,
+			},
+		},
 		["qTitle"] = "Enchanted Thorium Platemail: Volume II",
 		["qDesc"] = "The tome carries the mark of the Athenaeum.",
 		["qZone"] = "Blacksmithing",
-		["qNPC"] = {
-		},
+		["qLogged"] = 1401124971,
 		["qObj"] = "Return the book to its rightful owners.",
 		["qTag"] = "Dungeon",
 		["qPlayer"] = {
@@ -10442,10 +10481,7 @@ QST_QuestBase = {
 		["qArea"] = "Unknown",
 		["qNote"] = "",
 		["qMoney"] = 8700,
-		["qReward"] = {
-			[1] = {
-				["qAmount"] = 1,
-			},
+		["qNPC"] = {
 		},
 	},
 	[267] = {
@@ -10456,7 +10492,8 @@ QST_QuestBase = {
 		["qDesc"] = "We have discovered another base of operations for the Twilight's Hammer.  It is called Twilight's Run; it is a cave tucked in the northeast corner of Silithus.  The local leader of the cult, Vyral the Vile, haunts that cave - it is he who you must next defeat.  When you have done this, bring me his signet ring.\n\nFortune to you, Kylosandrax.  The horrors of Twilight's Run are formidable indeed.",
 		["qZone"] = "Silithus",
 		["qObj"] = "Bring Vyral's Signet Ring to Huum Wildmane in Cenarion Hold.",
-		["qLogged"] = 1402243727,
+		["qNPC"] = {
+		},
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -10466,26 +10503,25 @@ QST_QuestBase = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:20650:0:0:0|h[Desert Wind Gauntlets]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Gauntlets_28",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Gauntlets_28",
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:20649:0:0:0|h[Sunprism Pendant]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Jewelry_Necklace_15",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Jewelry_Necklace_15",
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 32700,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1402243727,
 	},
 	[268] = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffa335ee|Hitem:19824:0:0:0|h[Zandalar Vindicator's Armguards]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Bracer_14",
+				["qAmount"] = 1,
 			},
 		},
 		["qTitle"] = "Paragons of Power: The Vindicator's Armguards",
@@ -10521,12 +10557,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 51,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Shackle Key: 1/1",
 		},
 		["qNote"] = "",
 		["qMoney"] = 5250,
-		["qItems"] = {
-			[1] = "Shackle Key: 1/1",
+		["qNPC"] = {
 		},
 	},
 	[270] = {
@@ -10542,31 +10578,34 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 51,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 71700,
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:19114:0:0:0|h[Highland Bow]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Weapon_Bow_08",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:19115:0:0:0|h[Flask of Forest Mojo]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Potion_19",
+				["qAmount"] = 1,
 			},
+		},
+		["qNote"] = "",
+		["qMoney"] = 71700,
+		["qNPC"] = {
 		},
 	},
 	[271] = {
-		["qLogged"] = 1403135329,
+		["qItems"] = {
+			[1] = "Cenarion Combat Badge: 0/5",
+			[2] = "Cenarion Logistics Badge: 0/3",
+			[3] = "Cenarion Tactical Badge: 0/7",
+		},
 		["qTitle"] = "Volunteer's Battlegear",
 		["qDesc"] = "The badges you collect from performing combat, logistics and tactical assignments for Cenarion Hold are more than just for show, Kylosandrax.\n\nYou'd be wise to hold on to them.  As you prove your loyalty to our organization I can offer you some of the gear we reserve for our closest allies in exchange for those badges.  ",
 		["qZone"] = "Silithus",
 		["qObj"] = "Bring 5 Cenarion Combat Badges, 3 Cenarion Logistics Badges and 7 Cenarion Tactical Badges to Vargus at Cenarion Hold in Silithus.  You must also attain Friendly reputation with Cenarion Circle to be able to complete this quest.",
-		["qNPC"] = {
-		},
+		["qLogged"] = 1403135329,
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -10576,26 +10615,23 @@ QST_QuestBase = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff0070dd|Hitem:21178:0:0:0|h[Gloves of Earthen Power]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Gauntlets_18",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qLink"] = "|cff0070dd|Hitem:21179:0:0:0|h[Band of Earthen Wrath]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Jewelry_Ring_18",
+				["qAmount"] = 1,
 			},
 			[3] = {
 				["qLink"] = "|cff0070dd|Hitem:21187:0:0:0|h[Earthweave Cloak]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Misc_Cape_07",
+				["qAmount"] = 1,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qItems"] = {
-			[1] = "Cenarion Combat Badge: 0/5",
-			[2] = "Cenarion Logistics Badge: 0/3",
-			[3] = "Cenarion Tactical Badge: 0/7",
+		["qNPC"] = {
 		},
 	},
 	[272] = {
@@ -10611,32 +10647,23 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
-			[1] = "Head of the Broodlord Lashlayer: 0/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 5730,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Head of the Broodlord Lashlayer: 0/1",
 		},
 	},
 	[273] = {
-		["qLogged"] = 1403174431,
+		["qItems"] = {
+			[1] = "Scourge Data: 1/1",
+		},
 		["qTitle"] = "The Active Agent",
 		["qDesc"] = "You will have to delve deeper into Stratholme, Kylosandrax.\n\nBeyond the first gates you will find the ziggurats. We know that the Scourge draws great power from these structures. Search the Ziggurats and return with any information that you may discover.\n",
 		["qNPC"] = {
 		},
-		["qChoice"] = {
-			[1] = {
-				["qLink"] = "|cff0070dd|Hitem:13209:0:0:0|h[Seal of the Dawn]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_ArmorKit_18",
-				["qAmount"] = 1,
-			},
-			[2] = {
-				["qLink"] = "|cff0070dd|Hitem:19812:0:0:0|h[Rune of the Dawn]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_Rune_06",
-				["qAmount"] = 1,
-			},
-		},
+		["qLogged"] = 1403174431,
 		["qObj"] = "Travel to Stratholme and search the ziggurats. Find and return new Scourge Data to Betina Bigglezink.\n",
 		["qTag"] = "Dungeon",
 		["qPlayer"] = {
@@ -10648,8 +10675,17 @@ QST_QuestBase = {
 		["qZone"] = "Stratholme",
 		["qNote"] = "",
 		["qMoney"] = 8700,
-		["qItems"] = {
-			[1] = "Scourge Data: 1/1",
+		["qChoice"] = {
+			[1] = {
+				["qLink"] = "|cff0070dd|Hitem:13209:0:0:0|h[Seal of the Dawn]|h|r",
+				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Misc_ArmorKit_18",
+			},
+			[2] = {
+				["qLink"] = "|cff0070dd|Hitem:19812:0:0:0|h[Rune of the Dawn]|h|r",
+				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Misc_Rune_06",
+			},
 		},
 	},
 	[274] = {
@@ -10674,8 +10710,8 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffffffff|Hitem:20422:0:0:0|h[Twilight Cultist Medallion of Station]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Jewelry_Amulet_06",
+				["qAmount"] = 1,
 			},
 		},
 		["qTitle"] = "Dukes of the Council",
@@ -10700,11 +10736,15 @@ QST_QuestBase = {
 		},
 	},
 	[276] = {
-		["qLogged"] = 1403427930,
+		["qReward"] = {
+			[1] = {
+				["qAmount"] = 1,
+			},
+		},
 		["qTitle"] = "Enchanted Thorium Platemail: Volume I",
 		["qDesc"] = "The tome carries the mark of the Athenaeum.",
 		["qZone"] = "Blacksmithing",
-		["qArea"] = "Unknown",
+		["qLogged"] = 1403427930,
 		["qObj"] = "Return the book to its rightful owners.",
 		["qTag"] = "Dungeon",
 		["qPlayer"] = {
@@ -10717,14 +10757,11 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 3900,
-		["qReward"] = {
-			[1] = {
-				["qAmount"] = 1,
-			},
-		},
+		["qArea"] = "Unknown",
 	},
 	[277] = {
-		["qLogged"] = 1403516776,
+		["qItems"] = {
+		},
 		["qTitle"] = "Eitrigg's Wisdom",
 		["qDesc"] = "Rend lives?\n\nImpossible!\n\nIt had been thought that Rend  was slain decades ago.\n\nSeek out the wisdom of Eitrigg, Kylosandrax. None know the workings of the Blackrock better than he and if what is written here bares truth, Eitrigg should be informed. No person should be denied the right of vengeance.\n\nYou will find him in Orgrimmar.\n\nOnce you have spoken with Eitrigg, confer with the Warchief to find out what he wishes to do about this problem.",
 		["qZone"] = "Orgrimmar",
@@ -10735,11 +10772,10 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1403516776,
 		["qNote"] = "",
 		["qMoney"] = 5700,
-		["qItems"] = {
+		["qNPC"] = {
 		},
 	},
 	[278] = {
@@ -10776,24 +10812,24 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 5730,
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:19574:0:0:0|h[Strength of Mugamba]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Jewelry_Necklace_23",
+				["qAmount"] = 1,
 			},
+		},
+		["qNote"] = "",
+		["qMoney"] = 5730,
+		["qNPC"] = {
 		},
 	},
 	[280] = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffa335ee|Hitem:19823:0:0:0|h[Zandalar Vindicator's Belt]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Belt_32",
+				["qAmount"] = 1,
 			},
 		},
 		["qTitle"] = "Paragons of Power: The Vindicator's Belt",
@@ -10817,42 +10853,16 @@ QST_QuestBase = {
 		},
 	},
 	[281] = {
-		["qLogged"] = 1403945776,
-		["qTitle"] = "A Boar's Vitality",
-		["qDesc"] = "Within these blasted lands exists two species of boar: the ash-mane boar and the helboar.\n\nIt would appear that the stamina of these beasts renders them nearly immune to harm, as the other animals find them too difficult to kill and consequently, not worth the effort.\n\nWe need to perform further analysis, Kylosandrax. Should you bring me three blasted boar lungs, two scorpok pincers, and one basilisk brain, I shall create a divine elixir from the residue of the assay. You will be my first test subject!",
-		["qZone"] = "Blasted Lands",
-		["qObj"] = "Bring three Blasted Boar Lungs, two Scorpok Pincers, and one Basilisk Brain to Bloodmage Drazial.\n",
-		["qNPC"] = {
-		},
-		["qPlayer"] = {
-			["Kylosandrax of Warsong [12x] Blizzlike"] = {
-				["qStatus"] = "|cFF7F7F7FUnknown",
-			},
-		},
-		["qLevel"] = 50,
-		["qReward"] = {
-			[1] = {
-				["qLink"] = "|cffffffff|Hitem:8411:0:0:0|h[Lung Juice Cocktail]|h|r",
-				["qAmount"] = 1,
-				["qTex"] = "Interface\\Icons\\INV_Drink_12",
-			},
-		},
-		["qNote"] = "",
-		["qMoney"] = 4050,
 		["qItems"] = {
 			[1] = "Blasted Boar Lung: 3/3",
 			[2] = "Scorpok Pincer: 2/2",
 			[3] = "Basilisk Brain: 1/1",
 		},
-	},
-	[282] = {
-		["qLogged"] = 1403947308,
-		["qTitle"] = "Spirit of the Boar",
-		["qDesc"] = "When I first administered the elixir, Kylosandrax, I could tell that one or two applications would not satiate your appetite. Even now, I can see the hunger in your eyes. The concoction has addictive properties of which, seemingly, the most strong of will cannot resist.\n\nSo be it! Should you require more of the lung juice cocktail, venture back into the wasteland and find for me three blasted boar lungs, two scorpok pincers, and one basilisk brain.",
+		["qTitle"] = "A Boar's Vitality",
+		["qDesc"] = "Within these blasted lands exists two species of boar: the ash-mane boar and the helboar.\n\nIt would appear that the stamina of these beasts renders them nearly immune to harm, as the other animals find them too difficult to kill and consequently, not worth the effort.\n\nWe need to perform further analysis, Kylosandrax. Should you bring me three blasted boar lungs, two scorpok pincers, and one basilisk brain, I shall create a divine elixir from the residue of the assay. You will be my first test subject!",
 		["qZone"] = "Blasted Lands",
 		["qObj"] = "Bring three Blasted Boar Lungs, two Scorpok Pincers, and one Basilisk Brain to Bloodmage Drazial.\n",
-		["qNPC"] = {
-		},
+		["qLogged"] = 1403945776,
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -10862,25 +10872,55 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffffffff|Hitem:8411:0:0:0|h[Lung Juice Cocktail]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Drink_12",
+				["qAmount"] = 1,
 			},
 		},
 		["qNote"] = "",
-		["qMoney"] = 0,
+		["qMoney"] = 4050,
+		["qNPC"] = {
+		},
+	},
+	[282] = {
 		["qItems"] = {
 			[1] = "Blasted Boar Lung: 0/3",
 			[2] = "Scorpok Pincer: 0/2",
 			[3] = "Basilisk Brain: 0/1",
 		},
+		["qTitle"] = "Spirit of the Boar",
+		["qDesc"] = "When I first administered the elixir, Kylosandrax, I could tell that one or two applications would not satiate your appetite. Even now, I can see the hunger in your eyes. The concoction has addictive properties of which, seemingly, the most strong of will cannot resist.\n\nSo be it! Should you require more of the lung juice cocktail, venture back into the wasteland and find for me three blasted boar lungs, two scorpok pincers, and one basilisk brain.",
+		["qZone"] = "Blasted Lands",
+		["qObj"] = "Bring three Blasted Boar Lungs, two Scorpok Pincers, and one Basilisk Brain to Bloodmage Drazial.\n",
+		["qLogged"] = 1403947308,
+		["qPlayer"] = {
+			["Kylosandrax of Warsong [12x] Blizzlike"] = {
+				["qStatus"] = "|cFF7F7F7FUnknown",
+			},
+		},
+		["qLevel"] = 50,
+		["qReward"] = {
+			[1] = {
+				["qLink"] = "|cffffffff|Hitem:8411:0:0:0|h[Lung Juice Cocktail]|h|r",
+				["qTex"] = "Interface\\Icons\\INV_Drink_12",
+				["qAmount"] = 1,
+			},
+		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qNPC"] = {
+		},
 	},
 	[283] = {
-		["qLogged"] = 1403947368,
+		["qItems"] = {
+			[1] = "Shadowsworn Adept slain: 20/20",
+			[2] = "Shadowsworn Cultist slain: 10/10",
+			[3] = "Shadowsworn Thug slain: 20/20",
+		},
 		["qTitle"] = "War on the Shadowsworn",
 		["qDesc"] = "The continued presence of the shadowsworn in the Blasted Lands bring great pain to me.  Their dark rituals and spells cause agony unlike any I felt while alive.\n\nThrough you I can deliver my own message of pain.  Go forth and deliver my wrath.",
 		["qArea"] = "Unknown",
 		["qObj"] = "Slaughter the Shadowsworn in the Blasted Lands and return to the Fallen Hero of the Horde.",
-		["qZone"] = "Warrior",
+		["qLogged"] = 1403947368,
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -10891,11 +10931,7 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 4350,
-		["qItems"] = {
-			[1] = "Shadowsworn Adept slain: 20/20",
-			[2] = "Shadowsworn Cultist slain: 10/10",
-			[3] = "Shadowsworn Thug slain: 20/20",
-		},
+		["qZone"] = "Warrior",
 	},
 	[284] = {
 		["qItems"] = {
@@ -10906,24 +10942,23 @@ QST_QuestBase = {
 		["qLogged"] = 1403953133,
 		["qTitle"] = "Voodoo Feathers",
 		["qDesc"] = "Your honor has brought some peace to me.  It is only right that I offer you something in return.\n\nMy weapons and armor were splendid in life, and yet they are of no use to me now.  They would be better served in your possession.\n\nTravel to the sunken temple and destroy the troll guardians Gasher, Mijan, Zolo, Hukku, Zul'lor, and Loro.  They carry magic feathers that can reform my physical body long enough to grant you a reward.",
-		["qZone"] = "Warrior",
-		["qNPC"] = {
-		},
+		["qArea"] = "Unknown",
+		["qObj"] = "Bring the Voodoo Feathers from the trolls in the Sunken Temple to the Fallen Hero of the Horde.",
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff0070dd|Hitem:20521:0:0:0|h[Fury Visor]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Helmet_01",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Helmet_01",
 			},
 			[2] = {
 				["qLink"] = "|cff0070dd|Hitem:20130:0:0:0|h[Diamond Flask]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Drink_01",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Drink_01",
 			},
 			[3] = {
 				["qLink"] = "|cff0070dd|Hitem:20517:0:0:0|h[Razorsteel Shoulders]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Shoulder_16",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Shoulder_16",
 			},
 		},
 		["qTag"] = "Dungeon",
@@ -10933,19 +10968,21 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 52,
-		["qArea"] = "Unknown",
+		["qZone"] = "Warrior",
 		["qNote"] = "",
 		["qMoney"] = 6600,
-		["qObj"] = "Bring the Voodoo Feathers from the trolls in the Sunken Temple to the Fallen Hero of the Horde.",
+		["qNPC"] = {
+		},
 	},
 	[285] = {
-		["qLogged"] = 1403965970,
+		["qItems"] = {
+			[1] = "Bone Fragments: 30/30",
+		},
 		["qTitle"] = "Bonescythe Digs",
 		["qDesc"] = "Don Julio's Bonescythe armor pattern requires bone fragments - a lot of bone fragments. While those crazy enough to venture into Naxxramas provide me with enough of the core materials to make the armor, I'm always looking for more Scourge bone fragments.\n\nSo what do you think? Interested in getting your hands dirty and destroying some Scourge at the same time? It's a win-win situation.",
 		["qZone"] = "Eastern Plaguelands",
 		["qObj"] = "Rohan the Assassin at Light's Hope Chapel in the Eastern Plaguelands wants 30 Bone Fragments.\n",
-		["qNPC"] = {
-		},
+		["qLogged"] = 1403965970,
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -10955,24 +10992,24 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:22524:0:0:0|h[Insignia of the Crusade]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Misc_Token_ScarletCrusade",
+				["qAmount"] = 1,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 5700,
-		["qItems"] = {
-			[1] = "Bone Fragments: 30/30",
+		["qNPC"] = {
 		},
 	},
 	[286] = {
-		["qLogged"] = 1403965994,
+		["qItems"] = {
+			[1] = "Core of Elements: 30/30",
+		},
 		["qTitle"] = "The Elemental Equation",
 		["qDesc"] = "Greetings, adventurer! Are you interested in some work? I pay those under my employ with insignias. These insignias can be used at the Quartermaster to purchase items of power.\n\nAll I need you to do is bring me as many core of elements as you can carry. The more the better!\n\nYou'll find them on elementals of varying shapes and sizes that exist across our world.",
 		["qZone"] = "Eastern Plaguelands",
 		["qObj"] = "Archmage Angela Dosantos at Light's Hope Chapel in the Eastern Plaguelands wants 30 Core of Elements.\n",
-		["qNPC"] = {
-		},
+		["qLogged"] = 1403965994,
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -10982,24 +11019,24 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:22523:0:0:0|h[Insignia of the Dawn]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Misc_Token_ArgentDawn",
+				["qAmount"] = 1,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 5700,
-		["qItems"] = {
-			[1] = "Core of Elements: 30/30",
+		["qNPC"] = {
 		},
 	},
 	[287] = {
-		["qLogged"] = 1403966008,
+		["qItems"] = {
+			[1] = "Dark Iron Scraps: 30/30",
+		},
 		["qTitle"] = "Binding the Dreadnaught",
 		["qDesc"] = "Have you ever seen Dreadnaught armor, warrior? No, of course you haven't. You're still a boy - a tyke. Let me tell you, it is glorious.\n\nYou're probably asking yourself what any of this has to do with you, right? I'll tell you what, scrub; I need Dark Iron scraps and I'm willing to pay to get my hands on as many as possible.\n\nI need the scraps to put together sets of Dreadnaught for our champions. Bring me scraps and get paid.",
 		["qZone"] = "Eastern Plaguelands",
 		["qObj"] = "Korfax at Light's Hope Chapel in the Eastern Plaguelands wants 30 Dark Iron Scraps.",
-		["qNPC"] = {
-		},
+		["qLogged"] = 1403966008,
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -11009,14 +11046,13 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:22523:0:0:0|h[Insignia of the Dawn]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Misc_Token_ArgentDawn",
+				["qAmount"] = 1,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 5700,
-		["qItems"] = {
-			[1] = "Dark Iron Scraps: 30/30",
+		["qNPC"] = {
 		},
 	},
 	[288] = {
@@ -11032,12 +11068,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Fate of Ramaladni: 0/1",
 		},
 		["qNote"] = "",
 		["qMoney"] = 5730,
-		["qItems"] = {
-			[1] = "Fate of Ramaladni: 0/1",
+		["qNPC"] = {
 		},
 	},
 	[289] = {
@@ -11048,7 +11084,8 @@ QST_QuestBase = {
 		["qDesc"] = "You want a writ? What? Do you expect me to hand you a highly sought after work order just for showing up? I think not, scrub. Crafters from around the world bid for jobs here at the front lines.\n\nIf you want a work order, you'll have to show me that you're willing to bleed for the cause. Bring me a valor token and we'll talk.\n\nAnd there's only one way to get your grubby little scrub mitts on those - get to killin'.",
 		["qZone"] = "Eastern Plaguelands",
 		["qObj"] = "Dispatch Commander Metz at Light's Hope Chapel in the Eastern Plaguelands wants an Argent Dawn Valor Token.\n",
-		["qLogged"] = 1403966740,
+		["qNPC"] = {
+		},
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -11065,15 +11102,20 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 2880,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1403966740,
 	},
 	[290] = {
-		["qLogged"] = 1403999364,
+		["qReward"] = {
+			[1] = {
+				["qLink"] = "|cff1eff00|Hitem:10455:0:0:0|h[Chained Essence of Eranikus]|h|r",
+				["qTex"] = "Interface\\Icons\\INV_Stone_03",
+				["qAmount"] = 1,
+			},
+		},
 		["qTitle"] = "The Essence of Eranikus",
 		["qDesc"] = "As you touch the gem, a deep voice resonates in your mind.\n\n\"Mortal, heed this plea.  I am Eranikus of the Green Dragonflight, keeper of this accursed temple.  My charge to ensure that the trolls never again bring forth their abomination of a god has for now ended in failure.  As I imbue this gem with part of my essence, I sense my grip on the Dream twisting into chaos.  Please - place this gem into the essence font in my lair, and let our magic there purge the taint from my psyche so that I may rest.\"",
 		["qZone"] = "Sunken Temple",
-		["qArea"] = "Unknown",
+		["qLogged"] = 1403999364,
 		["qObj"] = "Place the Essence of Eranikus in the Essence Font located in this lair in the Sunken Temple.",
 		["qTag"] = "Dungeon",
 		["qPlayer"] = {
@@ -11086,20 +11128,14 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 2460,
-		["qReward"] = {
-			[1] = {
-				["qLink"] = "|cff1eff00|Hitem:10455:0:0:0|h[Chained Essence of Eranikus]|h|r",
-				["qAmount"] = 1,
-				["qTex"] = "Interface\\Icons\\INV_Stone_03",
-			},
-		},
+		["qArea"] = "Unknown",
 	},
 	[291] = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffa335ee|Hitem:21393:0:0:0|h[Signet of Unyielding Strength]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Jewelry_Ring_AhnQiraj_03",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Jewelry_Ring_AhnQiraj_03",
 			},
 		},
 		["qTitle"] = "Signet of Unyielding Strength",
@@ -11129,15 +11165,15 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffa335ee|Hitem:19287:0:0:0|h[Darkmoon Card: Heroism]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_Ticket_Tarot_Heroism_01",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Misc_Ticket_Tarot_Heroism_01",
 			},
 		},
 		["qTitle"] = "Darkmoon Warlords Deck",
 		["qDesc"] = "Now that you have gathered all of the Warlord cards together into a deck, a ninth card mysteriously appears with the same backing as the first eight.   On this card is inscribed, \"Return these cards to the Darkmoon Faire and be rewarded.\"   You have heard that this faire alternately stops at Mulgore and Goldshire every few months, so you will have to wait until they are here next.",
 		["qArea"] = "Unknown",
 		["qObj"] = "Return the Warlords Deck to the Darkmoon Faire when it comes to town.",
-		["qLogged"] = 1404567928,
+		["qZone"] = "Darkmoon Faire",
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -11148,7 +11184,7 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qZone"] = "Darkmoon Faire",
+		["qLogged"] = 1404567928,
 	},
 	[293] = {
 		["qLogged"] = 1404572295,
@@ -11163,19 +11199,20 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
+		["qZone"] = "Alterac Valley",
 		["qNote"] = "",
 		["qMoney"] = 570,
-		["qZone"] = "Alterac Valley",
+		["qNPC"] = {
+		},
 	},
 	[294] = {
-		["qLogged"] = 1404572308,
+		["qItems"] = {
+			[1] = "Armor Scraps: 0/20",
+		},
 		["qTitle"] = "Enemy Booty",
 		["qDesc"] = "When you fight the enemy, gather the scraps of their armor and bring them to me.  I'll use those scraps to make armor for our own troops!",
 		["qZone"] = "Alterac Valley",
-		["qNPC"] = {
-		},
+		["qLogged"] = 1404572308,
 		["qObj"] = "Bring 20 Armor Scraps to Smith Regzar in Frostwolf Village.",
 		["qTag"] = "PvP",
 		["qPlayer"] = {
@@ -11187,8 +11224,7 @@ QST_QuestBase = {
 		["qArea"] = "Unknown",
 		["qNote"] = "",
 		["qMoney"] = 5700,
-		["qItems"] = {
-			[1] = "Armor Scraps: 0/20",
+		["qNPC"] = {
 		},
 	},
 	[295] = {
@@ -11204,22 +11240,23 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 3900,
 		["qItems"] = {
 			[1] = "Gordok Shackle Key: 1/1",
 		},
+		["qNote"] = "",
+		["qMoney"] = 3900,
+		["qNPC"] = {
+		},
 	},
 	[296] = {
-		["qLogged"] = 1404839573,
+		["qItems"] = {
+			[1] = "Argent Dawn Valor Token: 0/1",
+		},
 		["qTitle"] = "Craftsman's Writ",
 		["qDesc"] = "You know the drill, kid. One valor token gets you a craftsman's writ.",
 		["qZone"] = "Eastern Plaguelands",
 		["qObj"] = "",
-		["qNPC"] = {
-		},
+		["qLogged"] = 1404839573,
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -11229,14 +11266,13 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffffffff|Hitem:22568:0:0:0|h[Sealed Craftsman's Writ]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Scroll_04",
+				["qAmount"] = 1,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qItems"] = {
-			[1] = "Argent Dawn Valor Token: 0/1",
+		["qNPC"] = {
 		},
 	},
 	[297] = {
@@ -11251,31 +11287,30 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 6000,
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cffa335ee|Hitem:19948:0:0:0|h[Zandalarian Hero Badge]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Jewelry_Necklace_13",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qLink"] = "|cffa335ee|Hitem:19950:0:0:0|h[Zandalarian Hero Charm]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Jewelry_Necklace_13",
+				["qAmount"] = 1,
 			},
 			[3] = {
 				["qLink"] = "|cffa335ee|Hitem:19949:0:0:0|h[Zandalarian Hero Medallion]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Jewelry_Necklace_13",
+				["qAmount"] = 1,
 			},
+		},
+		["qNote"] = "",
+		["qMoney"] = 6000,
+		["qNPC"] = {
 		},
 	},
 	[298] = {
-		["qItems"] = {
-		},
+		["qLogged"] = 1402007683,
 		["qTitle"] = "The Fargodeep Mine",
 		["qDesc"] = "The mine in Northshire isn't the only one with problems!  I have reports that the Fargodeep Mine in Elwynn has also become a haven for Kobolds.\n\nExplore the mine and confirm these reports, then return to me.  The mine is almost due south of Goldshire, between the Stonefield and Maclure homesteads.",
 		["qZone"] = "Elwynn Forest",
@@ -11286,21 +11321,22 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 7,
-		["qNPC"] = {
+		["qItems"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 375,
-		["qLogged"] = 1402007683,
+		["qNPC"] = {
+		},
 	},
 	[299] = {
-		["qItems"] = {
-			[1] = "Kobold Vermin slain: 0/10",
-		},
+		["qLogged"] = 1402007683,
 		["qTitle"] = "Kobold Camp Cleanup",
 		["qDesc"] = "Your first task is one of cleansing, Ryvok.  A clan of kobolds have infested the woods to the north.  Go there and fight the kobold vermin you find.  Reduce their numbers so that we may one day drive them from Northshire.",
 		["qArea"] = "Unknown",
 		["qObj"] = "Kill 10 Kobold Vermin, then return to Marshal McBride.",
-		["qZone"] = "Northshire Valley",
+		["qItems"] = {
+			[1] = "Kobold Vermin slain: 0/10",
+		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -11311,7 +11347,7 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 75,
-		["qLogged"] = 1402007683,
+		["qZone"] = "Northshire Valley",
 	},
 	[300] = {
 		["qLogged"] = 1405638085,
@@ -11325,16 +11361,14 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 52,
-		["qZone"] = "Mage",
-		["qNote"] = "",
-		["qMoney"] = 0,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qZone"] = "Mage",
 	},
 	[301] = {
-		["qItems"] = {
-			[1] = "Plagueland Termites: 0/100",
-		},
+		["qLogged"] = 1405703947,
 		["qTitle"] = "A Plague Upon Thee",
 		["qDesc"] = "So, to bring pain and strife to the Scarlet Crusade, I want to take their precious lumber mill from them. I'm sure the loss of such a resource will cause them a great deal of harm in defending and rebuilding the town for their own reasons. Will you help me, Zapunzel?\n\nStart by taking this jar to Plaguewood in the Eastern Plaguelands. Fill it with the termites you find in their mounds throughout the woods. Come back when you have enough.",
 		["qZone"] = "Tirisfal Glades",
@@ -11345,11 +11379,13 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 55,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Plagueland Termites: 0/100",
 		},
 		["qNote"] = "",
 		["qMoney"] = 25500,
-		["qLogged"] = 1405703947,
+		["qNPC"] = {
+		},
 	},
 	[302] = {
 		["qLogged"] = 1405766512,
@@ -11363,11 +11399,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 53,
-		["qItems"] = {
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 24000,
-		["qNPC"] = {
+		["qItems"] = {
 		},
 	},
 	[303] = {
@@ -11402,12 +11438,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 53,
-		["qItems"] = {
-			[1] = "Felstone Field Cauldron Key: 1/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Felstone Field Cauldron Key: 1/1",
 		},
 	},
 	[305] = {
@@ -11442,18 +11478,16 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 55,
-		["qItems"] = {
-			[1] = "Dalson's Tears Cauldron Key: 1/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Dalson's Tears Cauldron Key: 1/1",
 		},
 	},
 	[307] = {
-		["qItems"] = {
-			[1] = "Writhing Haunt Cauldron Key: 1/1",
-		},
+		["qLogged"] = 1405783602,
 		["qTitle"] = "Target: Writhing Haunt",
 		["qDesc"] = "Two cauldrons have been successfully opened; while you'll be able to access them indefinitely, we still want to open up the other two that remain.  This will provide all of us with more options to introduce the counter agent!\n\nThis time, you'll be hitting the Writhing Haunt's cauldron.  It is almost due east of Andorhal, relatively close to the ruined city walls; again, eliminate the cauldron lord present there for its key.  Use this bottle to obtain the sample from the cauldron.\n\nGood hunting, Zapunzel!",
 		["qZone"] = "Western Plaguelands",
@@ -11464,16 +11498,16 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 55,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Writhing Haunt Cauldron Key: 1/1",
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1405783602,
+		["qNPC"] = {
+		},
 	},
 	[308] = {
-		["qItems"] = {
-			[1] = "Gahrron's Withering Cauldron Key: 0/1",
-		},
+		["qLogged"] = 1405786272,
 		["qTitle"] = "Target: Gahrron's Withering",
 		["qDesc"] = "The last cauldron that remains is located on a farm now called Gahrron's Withering.  It is guarded by some of the Scourge's tougher minions - specifically, wraiths and ghosts.  They are not to be trifled with, Zapunzel.\n\nGahrron's Withering is far to the east of the Bulwark, close to where the Eastern Plaguelands begin; again, eliminate the cauldron lord present there for its key.  Here is your empty sample bottle; bring it to me filled.  May the shadows cloak you in safety for this dangerous mission, mage.",
 		["qZone"] = "Western Plaguelands",
@@ -11484,11 +11518,13 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 58,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Gahrron's Withering Cauldron Key: 0/1",
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1405786272,
+		["qNPC"] = {
+		},
 	},
 	[309] = {
 		["qLogged"] = 1408659165,
@@ -11503,16 +11539,16 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qReward"] = {
-			[1] = {
-				["qLink"] = "|cff0070dd|Hitem:18468:0:0:0|h[Royal Seal of Eldre'Thalas]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Jewelry_Talisman_10",
-				["qAmount"] = 1,
-			},
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 3900,
-		["qNPC"] = {
+		["qReward"] = {
+			[1] = {
+				["qLink"] = "|cff0070dd|Hitem:18468:0:0:0|h[Royal Seal of Eldre'Thalas]|h|r",
+				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Jewelry_Talisman_10",
+			},
 		},
 	},
 	[310] = {
@@ -11535,30 +11571,30 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qZone"] = "Dire Maul",
+		["qLogged"] = 1408663885,
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1408663885,
+		["qZone"] = "Dire Maul",
 	},
 	[311] = {
-		["qItems"] = {
-			[1] = "Book of Incantations: 1/1",
-		},
+		["qLogged"] = 1408988011,
 		["qTitle"] = "Pusillin and the Elder Azj'Tordin",
 		["qDesc"] = "I had let my guard down for only one moment, stranger. In my haste to escape the grip of the fallen Prince, I was robbed. A most foul demon, the imp Pusillin, pilfered my book of incantations and the key to the once great halls of Eldre'Thalas.\n\nI no longer hold interest in the key, as I have exchanged my immortality for freedom, but I desperately need my book of incantations.\n\nFind the imp, Pusillin, and recover my book.\n\nSearch the Warpwood Quarter of Dire Maul for Pusillin.",
 		["qNPC"] = {
 		},
-		["qObj"] = "Travel to Dire Maul and locate the Imp, Pusillin. Convince Pusillin to give you Azj'Tordin's Book of Incantations through any means necessary.\n\nReturn to Azj'Tordin at the Lariss Pavilion in Feralas should you recover the Book of Incantations.",
+		["qItems"] = {
+			[1] = "Book of Incantations: 1/1",
+		},
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:18411:0:0:0|h[Spry Boots]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Boots_06",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Boots_06",
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:18410:0:0:0|h[Sprinter's Sword]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Sword_28",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Sword_28",
 			},
 		},
 		["qTag"] = "Dungeon",
@@ -11571,7 +11607,7 @@ QST_QuestBase = {
 		["qZone"] = "Dire Maul",
 		["qNote"] = "",
 		["qMoney"] = 60600,
-		["qLogged"] = 1408988011,
+		["qObj"] = "Travel to Dire Maul and locate the Imp, Pusillin. Convince Pusillin to give you Azj'Tordin's Book of Incantations through any means necessary.\n\nReturn to Azj'Tordin at the Lariss Pavilion in Feralas should you recover the Book of Incantations.",
 	},
 	[312] = {
 		["qLogged"] = 1422485048,
@@ -11579,8 +11615,7 @@ QST_QuestBase = {
 		["qDesc"] = "It was horrible!  Verna woke me when she heard a ruckus in the fields.  The fields were full of hooligans.  We left in a rush and I forgot to pack my pocket watch.  Verna's pa gave me that watch on our wedding day and I feel just sick knowing those thieves have it.  I left the pocket watch in the wardrobe at the farmhouse.  Look for the field of pumpkins to the West -- you can't miss it.  If you bring it back to me, I'd sure be grateful!",
 		["qZone"] = "Westfall",
 		["qObj"] = "Farmer Furlbrow wants you to retrieve his pocket watch from the wardrobe in his farmhouse at the pumpkin farm to the West.",
-		["qItems"] = {
-			[1] = "Furlbrow's Pocket Watch: 0/1",
+		["qNPC"] = {
 		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
@@ -11598,7 +11633,8 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Furlbrow's Pocket Watch: 0/1",
 		},
 	},
 	[313] = {
@@ -11624,8 +11660,7 @@ QST_QuestBase = {
 		["qDesc"] = "Poor Old Blanchy!  Such a tired beast after all the work we put her through. I fed her before we left the farm, but we weren't expecting the wagon to break on us. If you could bring her a few handfuls of oats from the fields, I'd be grateful.\n\nI bet you could find some around all of the farms in Westfall, if you can steer clear of those horrific machines that have taken over. There are several farms southwest of here.",
 		["qZone"] = "Westfall",
 		["qObj"] = "Verna Furlbrow in Westfall wants you to bring her 8 Handfuls of Oats.",
-		["qItems"] = {
-			[1] = "Handful of Oats: 8/8",
+		["qNPC"] = {
 		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
@@ -11643,7 +11678,8 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Handful of Oats: 8/8",
 		},
 	},
 	[315] = {
@@ -11675,21 +11711,20 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 12,
-		["qNPC"] = {
-		},
+		["qZone"] = "Paladin",
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qZone"] = "Paladin",
+		["qNPC"] = {
+		},
 	},
 	[317] = {
-		["qItems"] = {
-			[1] = "Harvest Watcher slain: 20/20",
-		},
+		["qLogged"] = 1422559978,
 		["qTitle"] = "The Killing Fields",
 		["qDesc"] = "Look at what has happened to this place!  These lands were once occupied by good farm folk.  But the damned thieves have driven them all off.  Not me, though!  But it seems some Harvest Watchers have taken over the fields.\n\nIf you're up for the work, I'd like you to go out and kill twenty of them.  Come back when you're done for your pay.  If you finish up with the ones in my field, clear them from the neighboring fields as well.",
 		["qZone"] = "Westfall",
 		["qObj"] = "Farmer Saldean wants you to kill 20 Harvest Watchers.",
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Harvest Watcher slain: 20/20",
 		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
@@ -11700,18 +11735,19 @@ QST_QuestBase = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:3578:0:0:0|h[Harvester's Pants]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Pants_05",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:1561:0:0:0|h[Harvester's Robe]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Chest_Cloth_13",
+				["qAmount"] = 1,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1422559978,
+		["qNPC"] = {
+		},
 	},
 	[318] = {
 		["qLogged"] = 1422561631,
@@ -11731,7 +11767,10 @@ QST_QuestBase = {
 		},
 	},
 	[319] = {
-		["qLogged"] = 1422561635,
+		["qItems"] = {
+			[1] = "Defias Trapper slain: 0/15",
+			[2] = "Defias Smuggler slain: 0/15",
+		},
 		["qTitle"] = "The People's Militia",
 		["qDesc"] = "The People's Militia has but one goal:  To defend the lands of Westfall and return peace to our surroundings.  Unfortunately, the price of peace is often blood. \n\nOne of my scouts has brought word of a band of Defias Trappers wreaking havoc nearby.  I have reports of Defias Trapper sightings near the Jangolode Mine to the Northwest as well as at the Molsen Farm and Furlbrow's Pumpkin Farm. If you seek to join our ranks, slay 15 Defias Trappers and 15 Defias Smugglers then return to me.",
 		["qZone"] = "Westfall",
@@ -11742,13 +11781,10 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 12,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1422561635,
 		["qNote"] = "",
 		["qMoney"] = 1500,
-		["qItems"] = {
-			[1] = "Defias Trapper slain: 0/15",
-			[2] = "Defias Smuggler slain: 0/15",
+		["qNPC"] = {
 		},
 	},
 	[320] = {
@@ -11786,16 +11822,16 @@ QST_QuestBase = {
 		},
 	},
 	[322] = {
+		["qLogged"] = 1422561908,
+		["qTitle"] = "The Tome of Divinity",
+		["qDesc"] = "",
+		["qArea"] = "Unknown",
+		["qObj"] = "",
 		["qReward"] = {
 			[1] = {
 				["qAmount"] = 1,
 			},
 		},
-		["qTitle"] = "The Tome of Divinity",
-		["qDesc"] = "",
-		["qArea"] = "Unknown",
-		["qObj"] = "",
-		["qZone"] = "Paladin",
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -11806,7 +11842,7 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1422561908,
+		["qZone"] = "Paladin",
 	},
 	[323] = {
 		["qLogged"] = 1422570167,
@@ -11826,12 +11862,14 @@ QST_QuestBase = {
 		},
 	},
 	[324] = {
-		["qLogged"] = 1422643211,
+		["qItems"] = {
+			[1] = "Linen Cloth: 10/10",
+		},
 		["qTitle"] = "The Tome of Divinity",
 		["qDesc"] = "Your task then, Ryvok, is to find someone here in Stormwind that is in need of aid. Someone who is pure of heart and motive. Perhaps someone helping others. Perhaps someone in need of a guide. Regardless, the person must have noble intent and be relying on your kindness.\n\nDo this, and return to me when you are finished. Then, we shall discuss more of your path and what it means to be a paladin of the Light.",
 		["qArea"] = "Unknown",
 		["qObj"] = "Search the Trade District of Stormwind for Stephanie Turner.",
-		["qZone"] = "Paladin",
+		["qLogged"] = 1422643211,
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -11842,9 +11880,7 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qItems"] = {
-			[1] = "Linen Cloth: 10/10",
-		},
+		["qZone"] = "Paladin",
 	},
 	[325] = {
 		["qLogged"] = 1422644231,
@@ -11858,12 +11894,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 26,
-		["qItems"] = {
-			[1] = "Fangore's Paw: 0/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 12000,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Fangore's Paw: 0/1",
 		},
 	},
 	[326] = {
@@ -11874,7 +11910,8 @@ QST_QuestBase = {
 		["qDesc"] = "Lake Everstill is famous for its spotted sunfish.  There's always demand for them...and I'm running low!\n\nBring me a batch of 10 and I'll barter well for them.  If you can't fish yourself, then...maybe you can get them off the murlocs!",
 		["qZone"] = "Redridge Mountains",
 		["qObj"] = "Bring 10 Spotted Sunfish to Dockmaster Baren in Lakeshire.",
-		["qLogged"] = 1422644316,
+		["qNPC"] = {
+		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -11894,8 +11931,7 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 3000,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1422644316,
 	},
 	[327] = {
 		["qItems"] = {
@@ -11905,7 +11941,8 @@ QST_QuestBase = {
 		["qDesc"] = "I could really use a hand here, Ryvok.  With the town under siege, it's been hard to get supplies.  My tools were being delivered from Goldshire by wagon but the bridge was blown out.  We put the tools in a boat but the orcs hit it with a catapult.  Just my luck, my toolbox sank right to the bottom of the lake.\n\nRetrieve my toolbox, Ryvok, and I'll make it worth your while.",
 		["qZone"] = "Redridge Mountains",
 		["qObj"] = "Foreman Oslow of Lakeshire wants you to retrieve his toolbox from the bottom of Lake Everstill.",
-		["qLogged"] = 1422644447,
+		["qNPC"] = {
+		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -11919,8 +11956,7 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1422644447,
 	},
 	[328] = {
 		["qLogged"] = 1422644454,
@@ -11934,33 +11970,33 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 21,
-		["qItems"] = {
-			[1] = "Battleworn Axe: 10/10",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 3900,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Battleworn Axe: 10/10",
 		},
 	},
 	[329] = {
-		["qItems"] = {
-			[1] = "Tharil'zun's Head: 0/1",
-		},
+		["qLogged"] = 1422645167,
 		["qTitle"] = "Tharil'zun",
 		["qDesc"] = "Blackrock Outrunners and Renegades are running ambushes between here and Stonewatch Keep.  The leader of the Outrunners is an orc named Tharil'zun--we want this orc.  Bring me the head of Tharil'zun!",
 		["qNPC"] = {
 		},
-		["qObj"] = "Bring Tharil'zun's Head to Marshal Marris in Redridge.",
+		["qItems"] = {
+			[1] = "Tharil'zun's Head: 0/1",
+		},
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:1276:0:0:0|h[Fire Hardened Buckler]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Shield_09",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Shield_09",
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:6093:0:0:0|h[Orc Crusher]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Mace_07",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Mace_07",
 			},
 		},
 		["qTag"] = "Elite",
@@ -11973,7 +12009,7 @@ QST_QuestBase = {
 		["qZone"] = "Redridge Mountains",
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1422645167,
+		["qObj"] = "Bring Tharil'zun's Head to Marshal Marris in Redridge.",
 	},
 	[330] = {
 		["qLogged"] = 1422645175,
@@ -11988,12 +12024,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 23,
-		["qItems"] = {
-			[1] = "Midnight Orb: 0/3",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 4500,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Midnight Orb: 0/3",
 		},
 	},
 	[331] = {
@@ -12014,14 +12050,14 @@ QST_QuestBase = {
 		},
 	},
 	[332] = {
-		["qItems"] = {
-			[1] = "Henze Faulk slain: 0/1",
-		},
+		["qLogged"] = 1422657568,
 		["qTitle"] = "The Tome of Divinity",
 		["qDesc"] = "Bless their hearts, most of them have no families because of the Scourge attacks in the last decade.\n\nMy husband John collects the materials for me to make the shirts and pants for the children, but I haven't even had time to do that. I've been too focused on keeping food on their plates, and a roof over their heads.\n\nWhat's that? You'd be willing to help? Oh, thank the Light, and thank you, Ryvok.\n\nIf you could bring me some linen cloth so I can sew clothes for the kids, that would help me out so much.",
 		["qArea"] = "Unknown",
 		["qObj"] = "Bring 10 Linen Cloth to Stephanie Turner in Stormwind.",
-		["qZone"] = "Paladin",
+		["qItems"] = {
+			[1] = "Henze Faulk slain: 0/1",
+		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -12032,7 +12068,7 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1422657568,
+		["qZone"] = "Paladin",
 	},
 	[333] = {
 		["qLogged"] = 1422657568,
@@ -12057,21 +12093,19 @@ QST_QuestBase = {
 		["qDesc"] = "Targorr the Dread served under Gath'Ilzogg as supreme Executioner.  His methods were ruthless, even by filthy orc standards.  Men who fought bravely to defend the Kingdom were tortured on his whim.  Now he is being held in the Stormwind Stockade, sentenced to die.  Yet something is amiss.  One of the bureaucratic nobles put a hold on his execution.  I am sure foul play is in the works.\n\nPut an end to Targorr the Dread, Ryvok.  Travel to The Stockade and behead him before trickery is upon us.",
 		["qNPC"] = {
 		},
-		["qItems"] = {
-			[1] = "Head of Targorr: 0/1",
-		},
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:3400:0:0:0|h[Lucine Longsword]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Sword_20",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:1317:0:0:0|h[Hardened Root Staff]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Staff_16",
+				["qAmount"] = 1,
 			},
 		},
+		["qObj"] = "Bring the head of Targorr the Dread to Guard Berton in Lakeshire.",
 		["qTag"] = "Dungeon",
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
@@ -12082,10 +12116,14 @@ QST_QuestBase = {
 		["qZone"] = "The Stockade",
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qObj"] = "Bring the head of Targorr the Dread to Guard Berton in Lakeshire.",
+		["qItems"] = {
+			[1] = "Head of Targorr: 0/1",
+		},
 	},
 	[335] = {
-		["qLogged"] = 1422658682,
+		["qItems"] = {
+			[1] = "Blackrock Champion slain: 0/15",
+		},
 		["qTitle"] = "Blackrock Bounty",
 		["qDesc"] = "The Blackrock Clan must be destroyed. The Enemy has invaded our lands. These mountains fall under the sovereign right of the King of Stormwind. Our sources tell us that the leaders of each unit within the Clan are known as Champions. You'll find them in their encampment to the north, just west of the road to the Burning Steppes.\n\nMagistrate Solomon wants these foul brutes dead. Slay 15 Blackrock Champions and return to me.",
 		["qZone"] = "Redridge Mountains",
@@ -12096,12 +12134,10 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 25,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1422658682,
 		["qNote"] = "",
 		["qMoney"] = 5400,
-		["qItems"] = {
-			[1] = "Blackrock Champion slain: 0/15",
+		["qNPC"] = {
 		},
 	},
 	[336] = {
@@ -12134,11 +12170,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 20,
-		["qZone"] = "Paladin",
-		["qNote"] = "",
-		["qMoney"] = 0,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qZone"] = "Paladin",
 	},
 	[338] = {
 		["qLogged"] = 1422659577,
@@ -12158,14 +12194,13 @@ QST_QuestBase = {
 		},
 	},
 	[339] = {
-		["qItems"] = {
-			[1] = "Crystalized Scales: 0/8",
-		},
+		["qLogged"] = 1422659974,
 		["qTitle"] = "Retrieval for Mauren",
 		["qDesc"] = "Travelers keep asking me about the Stonetalon Mountains. It seems to be a popular place for adventure--it doesn't matter if you're seeking wyvern, elementals, or you have business with the Venture Co.\n\nWithin the Charred Vale, deep in Stonetalon, there used to be a species of basilisks whose scales, when ground to dust, made a wonderful reagent for some spells I've created.\n\nIf those basilisks still live, I would love to have a few of their scales.\n\nTake your time, it is no rush, but I can pay well.",
 		["qZone"] = "Stonetalon Mountains",
 		["qObj"] = "Bring 8 Crystalized Scales to Collin Mauren in Stormwind.",
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Crystalized Scales: 0/8",
 		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
@@ -12180,7 +12215,8 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1422659974,
+		["qNPC"] = {
+		},
 	},
 	[340] = {
 		["qLogged"] = 1422714356,
@@ -12188,9 +12224,7 @@ QST_QuestBase = {
 		["qDesc"] = "Henze and I had made it to Heroes' Vigil, an island in the middle of Stone Cairn Lake in northeastern Elwynn. We'd heard the Defias had infiltrated our borders and we wanted proof to take to the king's advisors.\n\nWe caught sight of a couple of the scum going over some documents, and we attacked. Unfortunately, we were quickly overwhelmed by more of the mages.\n\nHenze held them off for me while I escaped... the daft fool, going and being brave.\n\nHe's out there now, Henze is. Can you help us, Ryvok?",
 		["qArea"] = "Unknown",
 		["qObj"] = "Take the Symbol of Life and resurrect Henze Faulk in Elwynn.",
-		["qItems"] = {
-			[1] = "Henze Faulk slain: 0/1",
-		},
+		["qZone"] = "Paladin",
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -12201,7 +12235,9 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qZone"] = "Paladin",
+		["qItems"] = {
+			[1] = "Henze Faulk slain: 0/1",
+		},
 	},
 	[341] = {
 		["qLogged"] = 1422714356,
@@ -12215,11 +12251,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 23,
-		["qNPC"] = {
-		},
+		["qZone"] = "Paladin",
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qZone"] = "Paladin",
+		["qNPC"] = {
+		},
 	},
 	[342] = {
 		["qLogged"] = 1422714766,
@@ -12233,13 +12269,13 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 24,
-		["qItems"] = {
-			[1] = "Skeletal Warrior slain: 0/8",
-			[2] = "Skeletal Mage slain: 0/6",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 5100,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Skeletal Warrior slain: 0/8",
+			[2] = "Skeletal Mage slain: 0/6",
 		},
 	},
 	[343] = {
@@ -12271,12 +12307,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 41,
-		["qItems"] = {
-			[1] = "Mistvale Giblets: 0/5",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Mistvale Giblets: 0/5",
 		},
 	},
 	[345] = {
@@ -12291,12 +12327,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 34,
-		["qItems"] = {
-			[1] = "Stranglethorn Raptor slain: 0/10",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Stranglethorn Raptor slain: 0/10",
 		},
 	},
 	[346] = {
@@ -12311,12 +12347,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 31,
-		["qItems"] = {
-			[1] = "Stranglethorn Tiger slain: 4/10",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Stranglethorn Tiger slain: 4/10",
 		},
 	},
 	[347] = {
@@ -12331,12 +12367,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 31,
-		["qItems"] = {
-			[1] = "Young Panther slain: 3/10",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Young Panther slain: 3/10",
 		},
 	},
 	[348] = {
@@ -12368,11 +12404,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 37,
-		["qItems"] = {
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 12000,
-		["qNPC"] = {
+		["qItems"] = {
 		},
 	},
 	[350] = {
@@ -12387,11 +12423,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 16,
-		["qNPC"] = {
-		},
+		["qZone"] = "Druid",
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qZone"] = "Druid",
+		["qNPC"] = {
+		},
 	},
 	[351] = {
 		["qLogged"] = 1419878361,
@@ -12405,16 +12441,14 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qZone"] = "Seasonal",
-		["qNote"] = "",
-		["qMoney"] = 390,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 390,
+		["qZone"] = "Seasonal",
 	},
 	[352] = {
-		["qItems"] = {
-			[1] = "Stranglethorn Tiger slain: 4/10",
-		},
+		["qLogged"] = 1422740902,
 		["qTitle"] = "Tiger Mastery",
 		["qDesc"] = "You are learning, paladin.  Let us test your skills with the mature cats now. Kill 10 Stranglethorn Tigers this time out.",
 		["qZone"] = "Stranglethorn Vale",
@@ -12425,11 +12459,13 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 33,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Stranglethorn Tiger slain: 4/10",
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1422740902,
+		["qNPC"] = {
+		},
 	},
 	[353] = {
 		["qLogged"] = 1422798365,
@@ -12483,7 +12519,9 @@ QST_QuestBase = {
 		},
 	},
 	[356] = {
-		["qLogged"] = 1422800685,
+		["qItems"] = {
+			[1] = "Kurzen Jungle Fighter slain: 15/15",
+		},
 		["qTitle"] = "The Second Rebellion",
 		["qDesc"] = "We're fighting a losing battle with Colonel Kurzen.  Not only is he a brilliant tactician, he outnumbers us at least 10 to 1!  To survive, we need to use his own, covert tactics against him.\n\nEnter his camp to the east and kill his men.  Lots of them.  And get out before reinforcements can close on you.",
 		["qZone"] = "Stranglethorn Vale",
@@ -12494,22 +12532,22 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 33,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1422800685,
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qItems"] = {
-			[1] = "Kurzen Jungle Fighter slain: 15/15",
+		["qNPC"] = {
 		},
 	},
 	[357] = {
-		["qLogged"] = 1422800695,
+		["qItems"] = {
+			[1] = "Jungle Remedy: 7/7",
+			[2] = "Venom Fern Extract: 1/1",
+		},
 		["qTitle"] = "Bad Medicine",
 		["qDesc"] = "To have a chance against Kurzen, we need his healing support neutralized.  He has gathered a large number of Medicine Men who heal his forces with Jungle Remedies and poison our fighters with Venom Fern Extracts.\n\nWe need those remedies and extracts for our own.  Search the Kurzen Compound - his Medicine Men and Jungle fighers will have the remedies, and the extracts are probably stowed in some of the camp's supply boxes.",
 		["qZone"] = "Stranglethorn Vale",
 		["qObj"] = "Bring 7 Jungle Remedies and 1 Venom Fern Extract to Sergeant Yohwa at the Rebel Camp.",
-		["qNPC"] = {
-		},
+		["qLogged"] = 1422800695,
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -12519,20 +12557,18 @@ QST_QuestBase = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:4140:0:0:0|h[Palm Frond Mantle]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Shoulder_06",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:4126:0:0:0|h[Guerrilla Cleaver]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Axe_21",
+				["qAmount"] = 1,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qItems"] = {
-			[1] = "Jungle Remedy: 7/7",
-			[2] = "Venom Fern Extract: 1/1",
+		["qNPC"] = {
 		},
 	},
 	[358] = {
@@ -12553,7 +12589,13 @@ QST_QuestBase = {
 		},
 	},
 	[359] = {
-		["qLogged"] = 1422802604,
+		["qReward"] = {
+			[1] = {
+				["qLink"] = "|cff1eff00|Hitem:4122:0:0:0|h[Bookmaker's Scepter]|h|r",
+				["qTex"] = "Interface\\Icons\\INV_Mace_01",
+				["qAmount"] = 1,
+			},
+		},
 		["qTitle"] = "The Hidden Key",
 		["qDesc"] = "Although no mention of Private Thorsen is found in these records, hidden within the binding of one of Herod's ledger books is a small, brass key.\n\nAnd after further study of his notes, a few references to a \"secure strongbox\" are contained among various papers.  The box is somewhere within the Stockpile - the cavern complex at the back of Kurzen's Compound.\n\nIf this secure strongbox is found, and the small brass key can open it, then perhaps the mystery behind Thorsen's detection will be revealed.",
 		["qZone"] = "Stranglethorn Vale",
@@ -12564,20 +12606,16 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 37,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1422802604,
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qReward"] = {
-			[1] = {
-				["qLink"] = "|cff1eff00|Hitem:4122:0:0:0|h[Bookmaker's Scepter]|h|r",
-				["qAmount"] = 1,
-				["qTex"] = "Interface\\Icons\\INV_Mace_01",
-			},
+		["qNPC"] = {
 		},
 	},
 	[360] = {
-		["qLogged"] = 1422803585,
+		["qItems"] = {
+			[1] = "Lesser Bloodstone Ore: 0/4",
+		},
 		["qTitle"] = "Favor for Krazek",
 		["qDesc"] = "There is a mountain cave in Drywhisker Gorge, far to the north in the Arathi Highlands.  In that cave is rare ore: bloodstone.  The bloodstone in this cave is not of the highest grade, but even low-quality bloodstone is valuable... to those with the knowledge to use it.\n\nI would like some.\n\nI will fix your crock pot, but while I work on it... bring me samples of bloodstone.  Bring me enough, and I'll even give you a bonus.\n\nOh, and if you don't have the skill to mine it... find someone who does!",
 		["qZone"] = "Stranglethorn Vale",
@@ -12588,26 +12626,23 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 37,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1422803585,
 		["qNote"] = "",
 		["qMoney"] = 9000,
-		["qItems"] = {
-			[1] = "Lesser Bloodstone Ore: 0/4",
+		["qNPC"] = {
 		},
 	},
 	[361] = {
+		["qLogged"] = 1422807121,
+		["qTitle"] = "The Green Hills of Stranglethorn",
+		["qDesc"] = "Master Nesingwary will be so upset if he finds out!\n\nHe trusted me to proofread the manuscript of his novel, The Green Hills of Stranglethorn.  Everything was going well, but a large gust of wind blew through the camp and scattered the pages everywhere!\n\nI was able to gather most of the pages but many are still strewn about the jungle.  Collect the pages to complete each of the four chapters.\n\nI will help you organize them.  Return the chapters to me once you have all four.",
+		["qZone"] = "Stranglethorn Vale",
+		["qObj"] = "Collect the missing pages from The Green Hills of Stranglethorn manuscript.  Once all four chapters are complete, return them to Barnil.",
 		["qItems"] = {
 			[1] = "Green Hills of Stranglethorn - Chapter I: 1/1",
 			[2] = "Green Hills of Stranglethorn - Chapter II: 1/1",
 			[3] = "Green Hills of Stranglethorn - Chapter III: 1/1",
 			[4] = "Green Hills of Stranglethorn - Chapter IV: 1/1",
-		},
-		["qTitle"] = "The Green Hills of Stranglethorn",
-		["qDesc"] = "Master Nesingwary will be so upset if he finds out!\n\nHe trusted me to proofread the manuscript of his novel, The Green Hills of Stranglethorn.  Everything was going well, but a large gust of wind blew through the camp and scattered the pages everywhere!\n\nI was able to gather most of the pages but many are still strewn about the jungle.  Collect the pages to complete each of the four chapters.\n\nI will help you organize them.  Return the chapters to me once you have all four.",
-		["qZone"] = "Stranglethorn Vale",
-		["qObj"] = "Collect the missing pages from The Green Hills of Stranglethorn manuscript.  Once all four chapters are complete, return them to Barnil.",
-		["qNPC"] = {
 		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
@@ -12624,26 +12659,26 @@ QST_QuestBase = {
 			},
 			[3] = {
 				["qLink"] = "|cffffffff|Hitem:3928:0:0:0|h[Superior Healing Potion]|h|r",
-				["qAmount"] = 3,
 				["qTex"] = "Interface\\Icons\\INV_Potion_53",
+				["qAmount"] = 3,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1422807121,
+		["qNPC"] = {
+		},
 	},
 	[362] = {
+		["qLogged"] = 1422807124,
+		["qTitle"] = "Chapter I",
+		["qDesc"] = "Chapter I was quite riveting!  Master Nesingwary sets the backdrop for the story and makes mention of his hunting companions, including me! \n\nBut that's besides the point.  Let me see which pages are still missing.  It seems pages 1, 4, 6 and 8 are still out there somewhere in the jungle!",
+		["qZone"] = "Stranglethorn Vale",
+		["qObj"] = "Bring pages 1, 4, 6, and 8 of Nesingwary's The Green Hills of Stranglethorn to Barnil Stonepot in order to complete Chapter I.",
 		["qItems"] = {
 			[1] = "Green Hills of Stranglethorn - Page 1: 1/1",
 			[2] = "Green Hills of Stranglethorn - Page 4: 1/1",
 			[3] = "Green Hills of Stranglethorn - Page 6: 1/1",
 			[4] = "Green Hills of Stranglethorn - Page 8: 1/1",
-		},
-		["qTitle"] = "Chapter I",
-		["qDesc"] = "Chapter I was quite riveting!  Master Nesingwary sets the backdrop for the story and makes mention of his hunting companions, including me! \n\nBut that's besides the point.  Let me see which pages are still missing.  It seems pages 1, 4, 6 and 8 are still out there somewhere in the jungle!",
-		["qZone"] = "Stranglethorn Vale",
-		["qObj"] = "Bring pages 1, 4, 6, and 8 of Nesingwary's The Green Hills of Stranglethorn to Barnil Stonepot in order to complete Chapter I.",
-		["qNPC"] = {
 		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
@@ -12654,26 +12689,26 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffffffff|Hitem:2756:0:0:0|h[Green Hills of Stranglethorn - Chapter I]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Misc_Bandage_07",
+				["qAmount"] = 1,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1422807124,
+		["qNPC"] = {
+		},
 	},
 	[363] = {
+		["qLogged"] = 1422807127,
+		["qTitle"] = "Chapter II",
+		["qDesc"] = "Chapter II was chock full of exciting tales of panther and tiger hunting.  I could just kick myself for letting the pages blow away! \n\n It seems I was able to recover all of the pages with the exception of pages 10, 11, 14, and 16.",
+		["qZone"] = "Stranglethorn Vale",
+		["qObj"] = "Bring pages 10, 11, 14 and 16 of Nesingwary's The Green Hills of Stranglethorn to Barnil Stonepot in order to complete Chapter II.",
 		["qItems"] = {
 			[1] = "Green Hills of Stranglethorn - Page 10: 1/1",
 			[2] = "Green Hills of Stranglethorn - Page 11: 1/1",
 			[3] = "Green Hills of Stranglethorn - Page 14: 1/1",
 			[4] = "Green Hills of Stranglethorn - Page 16: 1/1",
-		},
-		["qTitle"] = "Chapter II",
-		["qDesc"] = "Chapter II was chock full of exciting tales of panther and tiger hunting.  I could just kick myself for letting the pages blow away! \n\n It seems I was able to recover all of the pages with the exception of pages 10, 11, 14, and 16.",
-		["qZone"] = "Stranglethorn Vale",
-		["qObj"] = "Bring pages 10, 11, 14 and 16 of Nesingwary's The Green Hills of Stranglethorn to Barnil Stonepot in order to complete Chapter II.",
-		["qNPC"] = {
 		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
@@ -12684,26 +12719,26 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffffffff|Hitem:2757:0:0:0|h[Green Hills of Stranglethorn - Chapter II]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Misc_Bandage_07",
+				["qAmount"] = 1,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1422807127,
+		["qNPC"] = {
+		},
 	},
 	[364] = {
+		["qLogged"] = 1422807164,
+		["qTitle"] = "Chapter III",
+		["qDesc"] = "Chapter III was my favorite.  It tells of Sir Erlgadin and Lady Rouack's first kill with a dwarven rifle.  And the end of Chapter III, why, such a cliffhanger!  \n\nLooks to me as though we still need pages 18, 20, 21 and 24 to finish the chapter.  Those pages are out there somewhere. . .",
+		["qZone"] = "Stranglethorn Vale",
+		["qObj"] = "Bring pages 18, 20, 21and 24 of Nesingwary's The Green Hills of Stranglethorn to Barnil Stonepot in order to complete Chapter III.",
 		["qItems"] = {
 			[1] = "Green Hills of Stranglethorn - Page 18: 1/1",
 			[2] = "Green Hills of Stranglethorn - Page 20: 1/1",
 			[3] = "Green Hills of Stranglethorn - Page 21: 1/1",
 			[4] = "Green Hills of Stranglethorn - Page 24: 1/1",
-		},
-		["qTitle"] = "Chapter III",
-		["qDesc"] = "Chapter III was my favorite.  It tells of Sir Erlgadin and Lady Rouack's first kill with a dwarven rifle.  And the end of Chapter III, why, such a cliffhanger!  \n\nLooks to me as though we still need pages 18, 20, 21 and 24 to finish the chapter.  Those pages are out there somewhere. . .",
-		["qZone"] = "Stranglethorn Vale",
-		["qObj"] = "Bring pages 18, 20, 21and 24 of Nesingwary's The Green Hills of Stranglethorn to Barnil Stonepot in order to complete Chapter III.",
-		["qNPC"] = {
 		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
@@ -12714,25 +12749,25 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffffffff|Hitem:2758:0:0:0|h[Green Hills of Stranglethorn - Chapter III]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Misc_Bandage_07",
+				["qAmount"] = 1,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1422807164,
+		["qNPC"] = {
+		},
 	},
 	[365] = {
-		["qItems"] = {
-			[1] = "Green Hills of Stranglethorn - Page 25: 1/1",
-			[2] = "Green Hills of Stranglethorn - Page 26: 1/1",
-			[3] = "Green Hills of Stranglethorn - Page 27: 1/1",
-		},
+		["qLogged"] = 1422807171,
 		["qTitle"] = "Chapter IV",
 		["qDesc"] = "Ah Chapter IV; the big finale!  And what an ending it was! \n\nWe are only missing three pages for this chapter.  We need pages 25, 26 and 27 to put Chapter IV back together.",
 		["qZone"] = "Stranglethorn Vale",
 		["qObj"] = "Bring pages 25, 26, and 27 of Nesingwary's The Green Hills of Stranglethorn to Barnil Stonepot in order to complete Chapter IV.",
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Green Hills of Stranglethorn - Page 25: 1/1",
+			[2] = "Green Hills of Stranglethorn - Page 26: 1/1",
+			[3] = "Green Hills of Stranglethorn - Page 27: 1/1",
 		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
@@ -12743,16 +12778,20 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffffffff|Hitem:2759:0:0:0|h[Green Hills of Stranglethorn - Chapter IV]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Misc_Bandage_07",
+				["qAmount"] = 1,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1422807171,
+		["qNPC"] = {
+		},
 	},
 	[366] = {
-		["qLogged"] = 1422807525,
+		["qItems"] = {
+			[1] = "Kurzen Commando slain: 10/10",
+			[2] = "Kurzen Headshrinker slain: 6/6",
+		},
 		["qTitle"] = "Special Forces",
 		["qDesc"] = "Now that many of his regular troops are reduced, you must face his highly trained forces.  When they're not in the wilderness slaughtering our rebel soldiers, they are found deep in the back of the Kurzen Compound, in a cave they call the Stockpile.\n\nI know many of Kurzen's troops personally, and I know they are skilled, loyal, and cruel.  This is no easy task I set before you, Ryvok.\n\nAfter you defeat them, report to Lieutenant Doren, my commanding officer.  He will want your report firsthand.",
 		["qZone"] = "Stranglethorn Vale",
@@ -12763,13 +12802,10 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 38,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1422807525,
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qItems"] = {
-			[1] = "Kurzen Commando slain: 10/10",
-			[2] = "Kurzen Headshrinker slain: 6/6",
+		["qNPC"] = {
 		},
 	},
 	[367] = {
@@ -12831,8 +12867,8 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:4127:0:0:0|h[Shrapnel Blaster]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Weapon_Rifle_02",
+				["qAmount"] = 1,
 			},
 		},
 	},
@@ -12848,32 +12884,31 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 37,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 0,
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:4139:0:0:0|h[Junglewalker Sandals]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Boots_Fabric_01",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:4123:0:0:0|h[Frost Metal Pauldrons]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Shoulder_07",
+				["qAmount"] = 1,
 			},
+		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qNPC"] = {
 		},
 	},
 	[371] = {
-		["qItems"] = {
-			[1] = "Pupellyverbos Port: 0/12",
-		},
+		["qLogged"] = 1422808656,
 		["qTitle"] = "Whiskey Slim's Lost Grog",
 		["qDesc"] = "We was splicin' the mainbrace somethin' fierce off of the Overlook Cliffs, ol' Hinterlands just in the distance.  Thought the seas was goin' to swallow us whole.\n\nOl' Slim knows all about liquid courage!  Cap'n had a crate of Pupellyverbos Port we commandeered from a privateer en route to Stormwind.\n\nSo when that storm off of Hinterlands hit, I busted into the grog.  Big wave hit and tossed them bottles overboard.  Cap'n is goin' to give me a taste o' the cat if ye don't help me get 'em back though!",
 		["qZone"] = "Stranglethorn Vale",
 		["qObj"] = "Whiskey Slim in Booty Bay wants you to bring him the bottles of Pupellyverbos Port he lost.",
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Pupellyverbos Port: 0/12",
 		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
@@ -12888,7 +12923,8 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qLogged"] = 1422808656,
+		["qNPC"] = {
+		},
 	},
 	[372] = {
 		["qLogged"] = 1422811404,
@@ -12913,8 +12949,8 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:11469:0:0:0|h[Bloodband Bracers]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Bracer_13",
+				["qAmount"] = 1,
 			},
 		},
 	},
@@ -12931,12 +12967,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 45,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Uncracked Scarab Shell: 0/5",
 		},
 		["qNote"] = "",
 		["qMoney"] = 19500,
-		["qItems"] = {
-			[1] = "Uncracked Scarab Shell: 0/5",
+		["qNPC"] = {
 		},
 	},
 	[374] = {
@@ -12945,21 +12981,19 @@ QST_QuestBase = {
 		["qDesc"] = "Sergeant Bly stole from me!  He said he'd only borrow it, but he stole my cherished divino-matic rod!!  Without that rod how will I know where to dig new water holes??\n\nFind Bly and bring me my rod!  I heard he led his band of ill-reputed adventurers to go treasure hunting in Zul'Farrak to the west.  I bet you'll find him there.\n\nLet's hope the trolls took care of him, because if you have to fight him for the rod then you're in for a serious fight.",
 		["qNPC"] = {
 		},
-		["qItems"] = {
-			[1] = "Divino-matic Rod: 0/1",
-		},
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff0070dd|Hitem:9533:0:0:0|h[Masons Fraternity Ring]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Jewelry_Ring_03",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qLink"] = "|cff0070dd|Hitem:9534:0:0:0|h[Engineer's Guild Headpiece]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Helmet_33",
+				["qAmount"] = 1,
 			},
 		},
+		["qObj"] = "Bring the Divino-matic Rod to Chief Engineer Bilgewhizzle in Gadgetzan.",
 		["qTag"] = "Dungeon",
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
@@ -12970,7 +13004,9 @@ QST_QuestBase = {
 		["qZone"] = "Zul'Farrak",
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qObj"] = "Bring the Divino-matic Rod to Chief Engineer Bilgewhizzle in Gadgetzan.",
+		["qItems"] = {
+			[1] = "Divino-matic Rod: 0/1",
+		},
 	},
 	[375] = {
 		["qLogged"] = 1422812274,
@@ -12985,16 +13021,18 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 45,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 58500,
 		["qItems"] = {
 			[1] = "Troll Temper: 0/20",
 		},
+		["qNote"] = "",
+		["qMoney"] = 58500,
+		["qNPC"] = {
+		},
 	},
 	[376] = {
-		["qLogged"] = 1422812520,
+		["qItems"] = {
+			[1] = "Centipaar Insect Parts: 0/5",
+		},
 		["qTitle"] = "Noxious Lair Investigation",
 		["qDesc"] = "All right now, these reports about the bugs... what we know is that they are draining the water pools that used to be where the Noxious Lair is. What we DON'T know is, well, everything else.\n\nLet's figure out who our enemy is first! I want you to head into the Noxious Lair and get some parts off of those critters. Get five from the Centipaar there and bring them to Alchemist Pestlezugg for him to dink with. With him on the case, we'll figure out what they are!",
 		["qZone"] = "Tanaris",
@@ -13005,12 +13043,10 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 47,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1422812520,
 		["qNote"] = "",
 		["qMoney"] = 15000,
-		["qItems"] = {
-			[1] = "Centipaar Insect Parts: 0/5",
+		["qNPC"] = {
 		},
 	},
 	[377] = {
@@ -13042,11 +13078,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 40,
-		["qZone"] = "Paladin",
-		["qNote"] = "",
-		["qMoney"] = 0,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qZone"] = "Paladin",
 	},
 	[379] = {
 		["qLogged"] = 1422842732,
@@ -13060,14 +13096,14 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 45,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 0,
 		["qItems"] = {
 			[1] = "Check First Cage: 1/1",
 			[2] = "Check Second Cage: 1/1",
 			[3] = "Check Third Cage: 1/1",
-		},
-		["qNote"] = "",
-		["qMoney"] = 0,
-		["qNPC"] = {
 		},
 	},
 	[380] = {
@@ -13082,13 +13118,13 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 48,
-		["qItems"] = {
-			[1] = "Green Sludge slain: 10/10",
-			[2] = "Jade Ooze slain: 10/10",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 15000,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Green Sludge slain: 10/10",
+			[2] = "Jade Ooze slain: 10/10",
 		},
 	},
 	[381] = {
@@ -13103,12 +13139,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 45,
-		["qItems"] = {
-			[1] = "Troll Tribal Necklace: 5/5",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 19500,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Troll Tribal Necklace: 5/5",
 		},
 	},
 	[382] = {
@@ -13134,7 +13170,7 @@ QST_QuestBase = {
 		["qDesc"] = "The gnome's voice crackles once again from the robot:\n\n\"I need to move OOX-09/HL to an open, safe place so it can begin a lengthy take-off procedure.  It has built-in cloaking, but I need time on my end to make it operational again.  Escort the robot from its current location to, let's say, the shoreline beyond Overlook Cliff!  That should be a perfect place, and long enough, to get things online!\"\n\n\"Escort it safely to the shore, and then come talk to me in Booty Bay!  Oglethorpe Obnoticus - out!\"",
 		["qZone"] = "The Hinterlands",
 		["qObj"] = "Escort OOX-09/HL to the shoreline beyond Overlook Cliff, then report to Oglethorpe Obnoticus in Booty Bay.",
-		["qItems"] = {
+		["qNPC"] = {
 		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
@@ -13145,18 +13181,18 @@ QST_QuestBase = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:9645:0:0:0|h[Gnomish Inventor Boots]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Boots_01",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Boots_01",
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:9646:0:0:0|h[Gnomish Water Sinking Device]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Boots_Plate_07",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Boots_Plate_07",
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
 		},
 	},
 	[384] = {
@@ -13171,11 +13207,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 48,
-		["qItems"] = {
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
 		},
 	},
 	[385] = {
@@ -13184,8 +13220,7 @@ QST_QuestBase = {
 		["qDesc"] = "Sick...so...very s-s-sick....\n\n...have contracted Stranglethorn Fever...deadly v-v-virus...\n\n...only cure...is...is...to eat the heart of M-m-m-m-mokk the Savage...elusive white beast...\n\n...Witch doctor Unbagwa...only one who can s-s-summon....\n\n...seek Unbagwa in hidden cave on southern cape...\n\n...hurry...dying...dying....",
 		["qZone"] = "Stranglethorn Vale",
 		["qObj"] = "Seek out Witch Doctor Unbagwa and have him summon Mokk the Savage.  Bring the Heart of Mokk to Fin Fizracket.",
-		["qItems"] = {
-			[1] = "Heart of Mokk: 0/1",
+		["qNPC"] = {
 		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
@@ -13200,7 +13235,8 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Heart of Mokk: 0/1",
 		},
 	},
 	[386] = {
@@ -13249,14 +13285,14 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 44,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 19500,
 		["qItems"] = {
 			[1] = "Maury's Clubbed Foot: 1/1",
 			[2] = "Jon-Jon's Golden Spyglass: 1/1",
 			[3] = "Chucky's Huge Ring: 1/1",
-		},
-		["qNote"] = "",
-		["qMoney"] = 19500,
-		["qNPC"] = {
 		},
 	},
 	[389] = {
@@ -13271,13 +13307,13 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 45,
-		["qItems"] = {
-			[1] = "Dark Iron Geologist slain: 8/8",
-			[2] = "Silk Cloth: 15/15",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Dark Iron Geologist slain: 8/8",
+			[2] = "Silk Cloth: 15/15",
 		},
 	},
 	[390] = {
@@ -13292,11 +13328,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 48,
-		["qItems"] = {
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
 		},
 	},
 	[391] = {
@@ -13305,11 +13341,7 @@ QST_QuestBase = {
 		["qDesc"] = "Oh, you know what? That reminds me.\n\nYou wanna finish up a little job I took up while I was in Tanaris? It's easy...\n\nKrinkle Goodsteel in Gadgetzan was lookin' for some stuff found here in Searing Gorge and a few other places. Maybe you could take a look at the list and then bring it all to him?\n\nI'll just slide his ledger under the door if you're interested. Take that, and the stuff he wants back to him after ya collected it all.",
 		["qZone"] = "Searing Gorge",
 		["qObj"] = "Take the copy of Goodsteel's Ledger and then find the items listed in it before seeking Krinkle Goodsteel in Tanaris.",
-		["qItems"] = {
-			[1] = "Goodsteel Ledger: 1/1",
-			[2] = "Solid Crystal Leg Shaft: 20/20",
-			[3] = "Overdue Package: 0/1",
-			[4] = "Goodsteel's Balanced Flameberge: 0/1",
+		["qNPC"] = {
 		},
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
@@ -13320,18 +13352,22 @@ QST_QuestBase = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:11860:0:0:0|h[Charged Lightning Rod]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Wand_08",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Wand_08",
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:11861:0:0:0|h[Girdle of Reprisal]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Belt_27",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Belt_27",
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Goodsteel Ledger: 1/1",
+			[2] = "Solid Crystal Leg Shaft: 20/20",
+			[3] = "Overdue Package: 0/1",
+			[4] = "Goodsteel's Balanced Flameberge: 0/1",
 		},
 	},
 	[392] = {
@@ -13399,13 +13435,13 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 52,
-		["qItems"] = {
-			[1] = "Filled Cursed Ooze Jar: 0/6",
-			[2] = "Filled Tainted Ooze Jar: 0/6",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 22500,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Filled Cursed Ooze Jar: 0/6",
+			[2] = "Filled Tainted Ooze Jar: 0/6",
 		},
 	},
 	[396] = {
@@ -13420,16 +13456,16 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 43,
-		["qReward"] = {
-			[1] = {
-				["qLink"] = "|cffffffff|Hitem:5396:0:0:0|h[Key to Searing Gorge]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_Key_14",
-				["qAmount"] = 1,
-			},
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qReward"] = {
+			[1] = {
+				["qLink"] = "|cffffffff|Hitem:5396:0:0:0|h[Key to Searing Gorge]|h|r",
+				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Misc_Key_14",
+			},
 		},
 	},
 	[397] = {
@@ -13455,29 +13491,24 @@ QST_QuestBase = {
 		["qDesc"] = "Listen well, Ryvok. While the four towers can never be destroyed, you can use the torch of retribution to set them ablaze for a very long period of time: A fire that no element or force can subdue.\n\nWhile they are ablaze, no guard or sentry unit can inhabit the watch posts and thus, their first line of defense is nullified.\n\nYou must enter each tower and use the Torch of Retribution within their fortifications. Beware the lookouts posted by the Dark Irons, Ryvok.",
 		["qNPC"] = {
 		},
-		["qItems"] = {
-			[1] = "Western Tower Ablaze: 0/1",
-			[2] = "Southern Tower Ablaze: 0/1",
-			[3] = "Eastern Tower Ablaze: 0/1",
-			[4] = "Northern Tower Ablaze: 0/1",
-		},
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:10742:0:0:0|h[Dragonflight Leggings]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Pants_05",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:10743:0:0:0|h[Drakefire Headguard]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Helmet_17",
+				["qAmount"] = 1,
 			},
 			[3] = {
 				["qLink"] = "|cff1eff00|Hitem:10744:0:0:0|h[Axe of the Ebon Drake]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Axe_12",
+				["qAmount"] = 1,
 			},
 		},
+		["qObj"] = "Set the North, South, East, and West Sentry Towers on fire by using the Torch of Retribution inside each of the buildings. \n",
 		["qTag"] = "Elite",
 		["qPlayer"] = {
 			["Ryvok of Warsong [12x] Blizzlike"] = {
@@ -13488,10 +13519,18 @@ QST_QuestBase = {
 		["qZone"] = "Searing Gorge",
 		["qNote"] = "",
 		["qMoney"] = 69000,
-		["qObj"] = "Set the North, South, East, and West Sentry Towers on fire by using the Torch of Retribution inside each of the buildings. \n",
+		["qItems"] = {
+			[1] = "Western Tower Ablaze: 0/1",
+			[2] = "Southern Tower Ablaze: 0/1",
+			[3] = "Eastern Tower Ablaze: 0/1",
+			[4] = "Northern Tower Ablaze: 0/1",
+		},
 	},
 	[399] = {
-		["qLogged"] = 1422906196,
+		["qItems"] = {
+			[1] = "Skeletal Flayer slain: 0/10",
+			[2] = "Slavering Ghoul slain: 0/10",
+		},
 		["qTitle"] = "Clear the Way",
 		["qDesc"] = "With Andorhal's western and northern roads into the city well fortified, I'm looking to strike at it from the less defended eastern road.  The Scourge relies on the buffer of undead that infests Sorrow Hill as a first line of defense.  If we are to advance on Andorhal, we will need to do it through Sorrow Hill.\n\nYour first assignment will be to clear the way through Sorrow Hill.  Thin out the skeletons and ghouls that haunt the area; report back to me when this is done!",
 		["qZone"] = "Western Plaguelands",
@@ -13502,13 +13541,10 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 52,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1422906196,
 		["qNote"] = "",
 		["qMoney"] = 22500,
-		["qItems"] = {
-			[1] = "Skeletal Flayer slain: 0/10",
-			[2] = "Slavering Ghoul slain: 0/10",
+		["qNPC"] = {
 		},
 	},
 	[400] = {
@@ -13524,19 +13560,21 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 54000,
 		["qItems"] = {
 			[1] = "The Deed to Brill: 0/1",
 			[2] = "The Deed to Caer Darrow: 0/1",
 			[3] = "The Deed to Southshore: 0/1",
 			[4] = "The Deed to Tarren Mill: 0/1",
 		},
+		["qNote"] = "",
+		["qMoney"] = 54000,
+		["qNPC"] = {
+		},
 	},
 	[401] = {
-		["qLogged"] = 1422906305,
+		["qItems"] = {
+			[1] = "Plagueland Termites: 0/100",
+		},
 		["qTitle"] = "A Plague Upon Thee",
 		["qDesc"] = "I've tried many times to rout out the Scarlet Crusade through force alone, but to no avail. So, as an alternative, I've decided to make their lives more difficult.\n\nIf you are willing to help, I want to infest that lumber mill with the most terrible species of termites ever found.\n\nIn Plaguewood, near the once-great Stratholme, there is a breed that survived the plague and the Scourge combined. Find their mounds and fill this jar with them, so we can prepare them to be unleashed on the Crusade.",
 		["qZone"] = "Western Plaguelands",
@@ -13547,12 +13585,10 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 55,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1422906305,
 		["qNote"] = "",
 		["qMoney"] = 25500,
-		["qItems"] = {
-			[1] = "Plagueland Termites: 0/100",
+		["qNPC"] = {
 		},
 	},
 	[402] = {
@@ -13567,15 +13603,15 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 56,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 25500,
 		["qItems"] = {
 			[1] = "Tower One marked: 1/1",
 			[2] = "Tower Two marked: 1/1",
 			[3] = "Tower Three marked: 1/1",
 			[4] = "Tower Four marked: 1/1",
-		},
-		["qNote"] = "",
-		["qMoney"] = 25500,
-		["qNPC"] = {
 		},
 	},
 	[403] = {
@@ -13667,12 +13703,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 57,
-		["qItems"] = {
-			[1] = "Skeletal Fragments: 0/15",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Skeletal Fragments: 0/15",
 		},
 	},
 	[408] = {
@@ -13704,12 +13740,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 55,
-		["qItems"] = {
-			[1] = "Dredge Striker slain: 15/15",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 25500,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Dredge Striker slain: 15/15",
 		},
 	},
 	[410] = {
@@ -13724,32 +13760,23 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 57,
-		["qItems"] = {
-			[1] = "Dredge Crusher slain: 0/20",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 51000,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Dredge Crusher slain: 0/20",
 		},
 	},
 	[411] = {
-		["qLogged"] = 1422991600,
+		["qItems"] = {
+			[1] = "Return Silithyst: 0/1",
+		},
 		["qTitle"] = "Scouring the Desert",
 		["qDesc"] = "We recently found out that the Horde has been scavenging the Silithus desert for resources, but paid them little mind. We thought it could not be worth it to station large numbers in this sweltering desert.\n\nHowever, it was discovered the importance of the resources, and now we are scrambling to catch up.\n\nIf I have your assistance, you must go into the desert and recover the silithyst and return it here.",
 		["qNPC"] = {
 		},
-		["qChoice"] = {
-			[1] = {
-				["qLink"] = "|cffffffff|Hitem:13446:0:0:0|h[Major Healing Potion]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Potion_54",
-				["qAmount"] = 2,
-			},
-			[2] = {
-				["qLink"] = "|cffffffff|Hitem:13444:0:0:0|h[Major Mana Potion]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Potion_76",
-				["qAmount"] = 2,
-			},
-		},
+		["qLogged"] = 1422991600,
 		["qObj"] = "Find and deliver Silithyst to the Silithyst Extractor, then speak with Marshal Bluewall at the Alliance encampment near Hive'Zora.",
 		["qTag"] = "PvP",
 		["qPlayer"] = {
@@ -13761,8 +13788,17 @@ QST_QuestBase = {
 		["qZone"] = "Silithus",
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qItems"] = {
-			[1] = "Return Silithyst: 0/1",
+		["qChoice"] = {
+			[1] = {
+				["qLink"] = "|cffffffff|Hitem:13446:0:0:0|h[Major Healing Potion]|h|r",
+				["qAmount"] = 2,
+				["qTex"] = "Interface\\Icons\\INV_Potion_54",
+			},
+			[2] = {
+				["qLink"] = "|cffffffff|Hitem:13444:0:0:0|h[Major Mana Potion]|h|r",
+				["qAmount"] = 2,
+				["qTex"] = "Interface\\Icons\\INV_Potion_76",
+			},
 		},
 	},
 	[412] = {
@@ -13824,27 +13860,13 @@ QST_QuestBase = {
 		},
 	},
 	[414] = {
-		["qLogged"] = 1423000895,
+		["qItems"] = {
+			[1] = "Signed Field Duty Papers: 0/1",
+		},
 		["qTitle"] = "Field Duty",
 		["qDesc"] = "Greetings, Ryvok.  Before I assign you to more involved tasks in the war, you'll need to do your share of field duty.  \n\nYou will find Captain Blackanvil's Ironforge Brigade outside Hive'Zora.\n\nReport to him or his lieutenant, Janela Stouthammer and come back to me.  I shall have a more advanced assignment for you ready.\n\nOh and please do us a favor and stay away from the Orgrimmar Legion.  We've been forced to keep the two forces well apart from one another due to mutual animosity.",
 		["qZone"] = "Silithus",
-		["qChoice"] = {
-			[1] = {
-				["qLink"] = "|cffffffff|Hitem:20808:0:0:0|h[Combat Assignment]|h|r",
-				["qAmount"] = 1,
-				["qTex"] = "Interface\\Icons\\INV_Letter_04",
-			},
-			[2] = {
-				["qLink"] = "|cffffffff|Hitem:21132:0:0:0|h[Logistics Assignment]|h|r",
-				["qAmount"] = 1,
-				["qTex"] = "Interface\\Icons\\INV_Letter_04",
-			},
-			[3] = {
-				["qLink"] = "|cffffffff|Hitem:20809:0:0:0|h[Tactical Assignment]|h|r",
-				["qAmount"] = 1,
-				["qTex"] = "Interface\\Icons\\INV_Letter_04",
-			},
-		},
+		["qLogged"] = 1423000895,
 		["qObj"] = "Report for duty at the Ironforge Brigade post near Hive'Zora.  Prepare your Unsigned Field Duty Papers and obtain Signed Field Duty Papers from Captain Blackanvil and return to Windcaller Kaldon at Cenarion Hold in Silithus.\n\nNote: Healing or casting beneficial spells on a member of the Ironforge Brigade will flag you for PvP.",
 		["qTag"] = "Elite",
 		["qPlayer"] = {
@@ -13857,8 +13879,22 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qItems"] = {
-			[1] = "Signed Field Duty Papers: 0/1",
+		["qChoice"] = {
+			[1] = {
+				["qLink"] = "|cffffffff|Hitem:20808:0:0:0|h[Combat Assignment]|h|r",
+				["qTex"] = "Interface\\Icons\\INV_Letter_04",
+				["qAmount"] = 1,
+			},
+			[2] = {
+				["qLink"] = "|cffffffff|Hitem:21132:0:0:0|h[Logistics Assignment]|h|r",
+				["qTex"] = "Interface\\Icons\\INV_Letter_04",
+				["qAmount"] = 1,
+			},
+			[3] = {
+				["qLink"] = "|cffffffff|Hitem:20809:0:0:0|h[Tactical Assignment]|h|r",
+				["qTex"] = "Interface\\Icons\\INV_Letter_04",
+				["qAmount"] = 1,
+			},
 		},
 	},
 	[415] = {
@@ -13874,13 +13910,13 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 5700,
 		["qItems"] = {
 			[1] = "Frankal Questioned: 0/1",
 			[2] = "Rutgar Questioned: 0/1",
+		},
+		["qNote"] = "",
+		["qMoney"] = 5700,
+		["qNPC"] = {
 		},
 	},
 	[416] = {
@@ -13895,11 +13931,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qZone"] = "Paladin",
-		["qNote"] = "",
-		["qMoney"] = 0,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qZone"] = "Paladin",
 	},
 	[417] = {
 		["qLogged"] = 1423001386,
@@ -13913,11 +13949,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 52,
-		["qZone"] = "Paladin",
-		["qNote"] = "",
-		["qMoney"] = 450,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 450,
+		["qZone"] = "Paladin",
 	},
 	[418] = {
 		["qLogged"] = 1423001396,
@@ -13931,11 +13967,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qZone"] = "Paladin",
-		["qNote"] = "",
-		["qMoney"] = 0,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qZone"] = "Paladin",
 	},
 	[419] = {
 		["qLogged"] = 1423088866,
@@ -13950,11 +13986,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qItems"] = {
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 62700,
-		["qNPC"] = {
+		["qItems"] = {
 		},
 	},
 	[420] = {
@@ -13986,11 +14022,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 70,
-		["qNPC"] = {
-		},
+		["qZone"] = "Seasonal",
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qZone"] = "Seasonal",
+		["qNPC"] = {
+		},
 	},
 	[422] = {
 		["qLogged"] = 1423510622,
@@ -14022,11 +14058,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 70,
-		["qNPC"] = {
-		},
+		["qZone"] = "Seasonal",
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qZone"] = "Seasonal",
+		["qNPC"] = {
+		},
 	},
 	[424] = {
 		["qLogged"] = 1423684158,
@@ -14043,11 +14079,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 70,
-		["qNPC"] = {
-		},
+		["qZone"] = "Lunar Festival",
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qZone"] = "Lunar Festival",
+		["qNPC"] = {
+		},
 	},
 	[425] = {
 		["qLogged"] = 1424126210,
@@ -14055,8 +14091,7 @@ QST_QuestBase = {
 		["qDesc"] = "Ishnu-alah, orc. Show me proof of the demise of a Lord of the Abyssal Council and I shall reward you with an item that should aid you in your battles against the Qiraji.",
 		["qZone"] = "Silithus",
 		["qObj"] = "Aurel Goldleaf at Cenarion Hold in Silithus wants you to bring her 1 Abyssal Scepter. You must also be Honored with the Cenarion Circle.",
-		["qItems"] = {
-			[1] = "Abyssal Scepter: 0/1",
+		["qNPC"] = {
 		},
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
@@ -14071,7 +14106,8 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 5730,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Abyssal Scepter: 0/1",
 		},
 	},
 	[426] = {
@@ -14103,14 +14139,14 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 34200,
 		["qItems"] = {
 			[1] = "Twilight Lexicon - Chapter 1: 0/1",
 			[2] = "Twilight Lexicon - Chapter 2: 0/1",
 			[3] = "Twilight Lexicon - Chapter 3: 0/1",
-		},
-		["qNote"] = "",
-		["qMoney"] = 34200,
-		["qNPC"] = {
 		},
 	},
 	[428] = {
@@ -14126,8 +14162,8 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffa335ee|Hitem:21394:0:0:0|h[Drape of Unyielding Strength]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Misc_Cape_20",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Misc_Cape_20",
 			},
 		},
 		["qObj"] = "Bring 1 Qiraji Martial Drape, 2 Onyx Idols, 5 Silver Scarabs and 5 Bone Scarabs to Keyl Swiftclaw in Silithus.  You must also obtain Revered reputation with Cenarion Circle to complete this quest.",
@@ -14157,8 +14193,8 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffa335ee|Hitem:21392:0:0:0|h[Sickle of Unyielding Strength]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Axe_15",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Axe_15",
 			},
 		},
 		["qObj"] = "Bring 1 Qiraji Spiked Hilt, 2  Alabaster Idols, 5 Crystal Scarabs and 5 Stone Scarabs to Warden Haro in Silithus.  You must also attain Exalted reputation with Cenarion Circle to complete this quest.",
@@ -14198,8 +14234,8 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cffa335ee|Hitem:19822:0:0:0|h[Zandalar Vindicator's Breastplate]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Chest_Plate07",
 				["qAmount"] = 1,
+				["qTex"] = "Interface\\Icons\\INV_Chest_Plate07",
 			},
 		},
 	},
@@ -14214,7 +14250,8 @@ QST_QuestBase = {
 			["qLink"] = "First Aid",
 		},
 		["qObj"] = "Save patients by using Triage Bandages to tend to their wounds. You must save 15 patients before 6 of them die from their injuries.\n\nRemember the order of triage! Critically Injured Soldiers die the fastest followed by Badly Injured Soldiers. Injured Soldiers take the longest to die and should be saved AFTER your Critically Injured and Badly Injured Soldiers have been triaged.",
-		["qLogged"] = 1425150724,
+		["qNPC"] = {
+		},
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -14224,8 +14261,7 @@ QST_QuestBase = {
 		["qArea"] = "Unknown",
 		["qNote"] = "",
 		["qMoney"] = 3300,
-		["qNPC"] = {
-		},
+		["qLogged"] = 1425150724,
 	},
 	[432] = {
 		["qLogged"] = 1426028730,
@@ -14251,8 +14287,8 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:20801:0:0:0|h[Cenarion Tactical Badge]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Jewelry_Amulet_02",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qAmount"] = 1,
@@ -14282,13 +14318,13 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:20801:0:0:0|h[Cenarion Tactical Badge]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Jewelry_Amulet_02",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qLink"] = "|cffffffff|Hitem:21133:0:0:0|h[Followup Tactical Assignment]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Letter_04",
+				["qAmount"] = 1,
 			},
 		},
 	},
@@ -14315,13 +14351,13 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:20801:0:0:0|h[Cenarion Tactical Badge]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Jewelry_Amulet_02",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qLink"] = "|cffffffff|Hitem:20809:0:0:0|h[Tactical Assignment]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Letter_04",
+				["qAmount"] = 1,
 			},
 		},
 	},
@@ -14348,13 +14384,13 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:20801:0:0:0|h[Cenarion Tactical Badge]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Jewelry_Amulet_02",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qLink"] = "|cffffffff|Hitem:21133:0:0:0|h[Followup Tactical Assignment]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Letter_04",
+				["qAmount"] = 1,
 			},
 		},
 	},
@@ -14381,13 +14417,13 @@ QST_QuestBase = {
 		["qReward"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:20801:0:0:0|h[Cenarion Tactical Badge]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Jewelry_Amulet_02",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qLink"] = "|cffffffff|Hitem:20809:0:0:0|h[Tactical Assignment]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Letter_04",
+				["qAmount"] = 1,
 			},
 		},
 	},
@@ -14415,18 +14451,19 @@ QST_QuestBase = {
 		["qLogged"] = 1426442699,
 		["qTitle"] = "Shadows of Doom",
 		["qDesc"] = "After you bring down the defenses of the Scourge summoning circles that have appeared in the zones under attack, you will be able to confront the acolytes who protect them.\n\nIn truth, these are not men. They are shadows, some of the Lich King's most frightening creatures. They can be revealed using the necrotic runes they carry, and then destroyed with magic or strength of arms.",
-		["qZone"] = "Invasion",
-		["qArea"] = "Unknown",
+		["qNPC"] = {
+		},
+		["qObj"] = "Go to a summoning circle and kill a Shadow of Doom, then return to Commander Thomas Helleran at Light's Hope Chapel in Eastern Plaguelands.",
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cff1eff00|Hitem:23123:0:0:0|h[Blessed Wizard Oil]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Potion_26",
 				["qAmount"] = 5,
+				["qTex"] = "Interface\\Icons\\INV_Potion_26",
 			},
 			[2] = {
 				["qLink"] = "|cff1eff00|Hitem:23122:0:0:0|h[Consecrated Sharpening Stone]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Stone_SharpeningStone_02",
 				["qAmount"] = 5,
+				["qTex"] = "Interface\\Icons\\INV_Stone_SharpeningStone_02",
 			},
 		},
 		["qTag"] = "Elite",
@@ -14436,33 +14473,21 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
-		["qNPC"] = {
-		},
+		["qZone"] = "Invasion",
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qObj"] = "Go to a summoning circle and kill a Shadow of Doom, then return to Commander Thomas Helleran at Light's Hope Chapel in Eastern Plaguelands.",
+		["qArea"] = "Unknown",
 	},
 	[439] = {
-		["qLogged"] = 1426442720,
-		["qTitle"] = "Under the Shadow",
-		["qDesc"] = "The floating necropolises of the Scourge plague the lands of Horde and Alliance alike. Tanaris, the Blasted Lands, Winterspring and the Burning Steppes are blanketed in the shadows of the flying fortresses.\n\nOnly through our combined efforts will they be turned away.\n\nThe necropolises are supported by magical circles at various points in the invaded areas. We have determined that destroying the mindless hordes that surround these circles will destroy their defenses.",
-		["qArea"] = "Unknown",
-		["qChoice"] = {
-			[1] = {
-				["qLink"] = "|cff1eff00|Hitem:23123:0:0:0|h[Blessed Wizard Oil]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Potion_26",
-				["qAmount"] = 2,
-			},
-			[2] = {
-				["qLink"] = "|cff1eff00|Hitem:23122:0:0:0|h[Consecrated Sharpening Stone]|h|r",
-				["qTex"] = "Interface\\Icons\\INV_Stone_SharpeningStone_02",
-				["qAmount"] = 2,
-			},
-		},
-		["qObj"] = "Check your map to find an area under Scourge attack. Go there and damage a necropolis by defeating the Scourge around them. Return 10 of their Necrotic Runes to Commander Thomas Helleran at Light's Hope Chapel in the Eastern Plaguelands.",
 		["qItems"] = {
 			[1] = "Necrotic Rune: 2/10",
 		},
+		["qTitle"] = "Under the Shadow",
+		["qDesc"] = "The floating necropolises of the Scourge plague the lands of Horde and Alliance alike. Tanaris, the Blasted Lands, Winterspring and the Burning Steppes are blanketed in the shadows of the flying fortresses.\n\nOnly through our combined efforts will they be turned away.\n\nThe necropolises are supported by magical circles at various points in the invaded areas. We have determined that destroying the mindless hordes that surround these circles will destroy their defenses.",
+		["qZone"] = "Invasion",
+		["qArea"] = "Unknown",
+		["qObj"] = "Check your map to find an area under Scourge attack. Go there and damage a necropolis by defeating the Scourge around them. Return 10 of their Necrotic Runes to Commander Thomas Helleran at Light's Hope Chapel in the Eastern Plaguelands.",
+		["qLogged"] = 1426442720,
 		["qPlayer"] = {
 			["Kylosandrax of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -14473,7 +14498,18 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qZone"] = "Invasion",
+		["qChoice"] = {
+			[1] = {
+				["qLink"] = "|cff1eff00|Hitem:23123:0:0:0|h[Blessed Wizard Oil]|h|r",
+				["qAmount"] = 2,
+				["qTex"] = "Interface\\Icons\\INV_Potion_26",
+			},
+			[2] = {
+				["qLink"] = "|cff1eff00|Hitem:23122:0:0:0|h[Consecrated Sharpening Stone]|h|r",
+				["qAmount"] = 2,
+				["qTex"] = "Interface\\Icons\\INV_Stone_SharpeningStone_02",
+			},
+		},
 	},
 	[440] = {
 		["qLogged"] = 1426442866,
@@ -14487,14 +14523,14 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 0,
 		["qItems"] = {
 			[1] = "Arcane Crystal: 0/5",
 			[2] = "Nexus Crystal: 0/2",
 			[3] = "Righteous Orb: 1/1",
-		},
-		["qNote"] = "",
-		["qMoney"] = 0,
-		["qNPC"] = {
 		},
 	},
 	[441] = {
@@ -14627,14 +14663,14 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 60,
+		["qNPC"] = {
+		},
+		["qNote"] = "",
+		["qMoney"] = 8700,
 		["qItems"] = {
 			[1] = "Doctor Theolen Krastinov slain: 1/1",
 			[2] = "Remains of Eva Sarkhoff Burned: 0/1",
 			[3] = "Remains of Lucien Sarkhoff Burned: 0/1",
-		},
-		["qNote"] = "",
-		["qMoney"] = 8700,
-		["qNPC"] = {
 		},
 	},
 	[447] = {
@@ -14649,11 +14685,11 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 1,
-		["qNPC"] = {
-		},
+		["qZone"] = "Valley of Trials",
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qZone"] = "Valley of Trials",
+		["qNPC"] = {
+		},
 	},
 	[448] = {
 		["qLogged"] = 1428157927,
@@ -14667,30 +14703,25 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 5,
-		["qNPC"] = {
-		},
-		["qNote"] = "",
-		["qMoney"] = 0,
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cffffffff|Hitem:4540:0:0:0|h[Tough Hunk of Bread]|h|r",
-				["qAmount"] = 5,
 				["qTex"] = "Interface\\Icons\\INV_Misc_Food_11",
+				["qAmount"] = 5,
 			},
 			[2] = {
 				["qLink"] = "|cffffffff|Hitem:159:0:0:0|h[Refreshing Spring Water]|h|r",
-				["qAmount"] = 5,
 				["qTex"] = "Interface\\Icons\\INV_Drink_07",
+				["qAmount"] = 5,
 			},
+		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qNPC"] = {
 		},
 	},
 	[449] = {
-		["qItems"] = {
-			[1] = "Razormane Quilboar slain: 0/4",
-			[2] = "Razormane Scout slain: 0/4",
-			[3] = "Razormane Dustrunner slain: 0/4",
-			[4] = "Razormane Battleguard slain: 0/4",
-		},
+		["qLogged"] = 1428158498,
 		["qTitle"] = "Encroachment",
 		["qDesc"] = "When we arrived, the Razormane quilboars possessed much of the land, and proved a thorn in our sides. Through our efforts we have driven out the largest part of their numbers, but still they remain well-fortified in some areas.\n\nIt has gone on long enough, however. For our own protection, we cannot allow the Razormane any hold in our lands. Their camps can be found to the west of here. Look for the brambles and you will find them. Today we drive them from Durotar, tomorrow, perhaps from all of Kalimdor.",
 		["qZone"] = "Durotar",
@@ -14701,18 +14732,19 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 10,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Razormane Quilboar slain: 0/4",
+			[2] = "Razormane Scout slain: 0/4",
+			[3] = "Razormane Dustrunner slain: 0/4",
+			[4] = "Razormane Battleguard slain: 0/4",
 		},
 		["qNote"] = "",
 		["qMoney"] = 750,
-		["qLogged"] = 1428158498,
+		["qNPC"] = {
+		},
 	},
 	[450] = {
-		["qItems"] = {
-			[1] = "Kul Tiras Sailor slain: 10/10",
-			[2] = "Kul Tiras Marine slain: 8/8",
-			[3] = "Lieutenant Benedict slain: 1/1",
-		},
+		["qLogged"] = 1428158502,
 		["qTitle"] = "Vanquish the Betrayers",
 		["qDesc"] = "Led by Admiral Proudmoore, the humans of Kul Tiras encroached on Durotar, violating the Warchief's pact made with Jaina Proudmoore in order to defeat Archimonde years ago.\n\nThe human aggression was repelled and Tiragarde Keep fell. But recently, the Admiral's reserves, led by Lieutenant Benedict, have retaken the keep and once again pose a threat to our homeland. These humans show no respect for diplomacy.\n\nProve your honor and travel south to Tiragarde Keep to eliminate the human invaders.",
 		["qZone"] = "Durotar",
@@ -14723,11 +14755,15 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 7,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Kul Tiras Sailor slain: 10/10",
+			[2] = "Kul Tiras Marine slain: 8/8",
+			[3] = "Lieutenant Benedict slain: 1/1",
 		},
 		["qNote"] = "",
 		["qMoney"] = 525,
-		["qLogged"] = 1428158502,
+		["qNPC"] = {
+		},
 	},
 	[451] = {
 		["qLogged"] = 1428353935,
@@ -14747,13 +14783,14 @@ QST_QuestBase = {
 		},
 	},
 	[452] = {
-		["qLogged"] = 1428354337,
+		["qItems"] = {
+			[1] = "Gnomish Tools: 0/3",
+		},
 		["qTitle"] = "From The Wreckage....",
 		["qDesc"] = "One of my most observant scouts brings back word that the wreckage of Proudmoore's fleet still remains off the coast of Durotar, just east of Tiragarde Keep.\n\nIt is no secret that the humans, in alliance with those foul little creatures known as gnomes, have an advanced knowledge of mechanics. We must have a complete understanding of all our potential enemies. And our people will benefit from this new knowledge as well.\n\nSwim through the wreckage, Kashonar, and retrieve for me the tools of the Alliance.",
 		["qZone"] = "Durotar",
 		["qObj"] = "Gar'Thok of Razor Hill wants you to retrieve 3 Gnomish Tools from the wreckage off the coast.",
-		["qNPC"] = {
-		},
+		["qLogged"] = 1428354337,
 		["qPlayer"] = {
 			["Kashonar of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -14763,24 +14800,23 @@ QST_QuestBase = {
 		["qChoice"] = {
 			[1] = {
 				["qLink"] = "|cffffffff|Hitem:4936:0:0:0|h[Dirt-trodden Boots]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Boots_08",
+				["qAmount"] = 1,
 			},
 			[2] = {
 				["qLink"] = "|cffffffff|Hitem:4928:0:0:0|h[Sandrunner Wristguards]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Bracer_12",
+				["qAmount"] = 1,
 			},
 			[3] = {
 				["qLink"] = "|cffffffff|Hitem:4935:0:0:0|h[Wide Metal Girdle]|h|r",
-				["qAmount"] = 1,
 				["qTex"] = "Interface\\Icons\\INV_Belt_03",
+				["qAmount"] = 1,
 			},
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qItems"] = {
-			[1] = "Gnomish Tools: 0/3",
+		["qNPC"] = {
 		},
 	},
 	[453] = {
@@ -14795,19 +14831,21 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 10,
-		["qZone"] = "Rogue",
-		["qNote"] = "",
-		["qMoney"] = 0,
 		["qNPC"] = {
 		},
+		["qNote"] = "",
+		["qMoney"] = 0,
+		["qZone"] = "Rogue",
 	},
 	[454] = {
-		["qLogged"] = 1428355138,
+		["qItems"] = {
+			[1] = "Tazan's Satchel: 0/1",
+		},
 		["qTitle"] = "The Shattered Hand",
 		["qDesc"] = "The Warchief is too subtle in his methods. He is cautious to unleash the might of the Horde. Once we were stronger, mighty conquerors all. That pride we must regain, and the Shattered Hand will do so.\n\nWe build strength from the shadows and strike at the exposed, secretly laying our enemies low. A task you must complete for me, to prove your worth.\n\nThe troll Tazan trades with the pirates near Ratchet. He has information I must have. Kill him and bring me his satchel.",
 		["qArea"] = "Unknown",
 		["qObj"] = "Kill Tazan and bring his Satchel to Therzok in the Cleft of Shadow in Orgrimmar.",
-		["qZone"] = "Rogue",
+		["qLogged"] = 1428355138,
 		["qPlayer"] = {
 			["Kashonar of Warsong [12x] Blizzlike"] = {
 				["qStatus"] = "|cFF7F7F7FUnknown",
@@ -14818,14 +14856,10 @@ QST_QuestBase = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 0,
-		["qItems"] = {
-			[1] = "Tazan's Satchel: 0/1",
-		},
+		["qZone"] = "Rogue",
 	},
 	[455] = {
-		["qItems"] = {
-			[1] = "Lieutenant's Insignia: 0/1",
-		},
+		["qLogged"] = 1428355368,
 		["qTitle"] = "Hidden Enemies",
 		["qDesc"] = "One thing I will not tolerate are traitors in our midst, Kashonar. But I would be a fool to play my hand so early--it would not sufficiently cut the corruption out of our lands and only cause the infection to grow worse.\n\nBut you, a young adventurer, could go places my agents could not... could learn the truth... could find the true head of the beast.\n\nIf you are brave enough, then enter Skull Rock to the east of Orgrimmar, find a lieutenant's insignia off one of the Burning Blade there, and return to me.",
 		["qZone"] = "Orgrimmar",
@@ -14836,11 +14870,13 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 12,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Lieutenant's Insignia: 0/1",
 		},
 		["qNote"] = "",
 		["qMoney"] = 750,
-		["qLogged"] = 1428355368,
+		["qNPC"] = {
+		},
 	},
 	[456] = {
 		["qLogged"] = 1428950524,
@@ -14855,12 +14891,12 @@ QST_QuestBase = {
 			},
 		},
 		["qLevel"] = 16,
-		["qItems"] = {
-			[1] = "Taragaman the Hungerer's Heart: 1/1",
+		["qNPC"] = {
 		},
 		["qNote"] = "",
 		["qMoney"] = 2400,
-		["qNPC"] = {
+		["qItems"] = {
+			[1] = "Taragaman the Hungerer's Heart: 1/1",
 		},
 	},
 }

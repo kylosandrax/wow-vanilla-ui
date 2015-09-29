@@ -8,8 +8,8 @@ TheoryCraft_Settings = {
 		["Shadow"] = 0,
 		["Nature"] = 0,
 	},
-	["buttontexty"] = 10.22,
-	["buttontextx"] = 1.111,
+	["ColR"] = 1,
+	["ColG"] = 1,
 	["ColG2"] = 1,
 	["ColR2"] = 1,
 	["ColB"] = 1,
@@ -18,9 +18,9 @@ TheoryCraft_Settings = {
 	["embedstyle1"] = true,
 	["tryfirstsfg"] = 0,
 	["combinedot"] = true,
+	["GenerateList"] = "",
 	["FontPath"] = "Fonts\\ArialN.TTF",
 	["mitigation"] = true,
-	["GenerateList"] = "",
 	["procs"] = true,
 	["dontresist"] = true,
 	["trysecond"] = "averagehealnocrit",
@@ -30,6 +30,34 @@ TheoryCraft_Settings = {
 		["intellect"] = 0,
 		["newstat"] = {
 		},
+		["strength"] = 0,
+		["agility"] = 0,
+		["name"] = "Naked",
+		["stamina"] = 0,
+		["wear"] = {
+		},
+		["destat"] = {
+			[1] = "Head",
+			[2] = "Neck",
+			[3] = "Shoulder",
+			[4] = "Chest",
+			[5] = "Waist",
+			[6] = "Legs",
+			[7] = "Feet",
+			[8] = "Wrist",
+			[9] = "Hands",
+			[10] = "Finger0",
+			[11] = "Finger1",
+			[12] = "Trinket0",
+			[13] = "Trinket1",
+			[14] = "Back",
+			[15] = "MainHand",
+			[16] = "SecondaryHand",
+			[17] = "Ranged",
+			[18] = "Tabard",
+			[19] = "Ammo",
+		},
+		["spirit"] = 0,
 		["slots"] = {
 			["Ranged"] = {
 				["stats"] = {
@@ -58,17 +86,18 @@ TheoryCraft_Settings = {
 					["numlines"] = 6,
 				},
 			},
-			["Neck"] = {
+			["Legs"] = {
 				["stats"] = {
-					["intellect"] = 4,
-					["strength"] = 4,
+					["intellect"] = 11,
+					["spirit"] = 11,
+					["agility"] = 11,
 				},
-				["name"] = "|cff1eff00|Hitem:12029:0:933:0|h[Greenstone Talisman of the Gorilla]|h|r",
+				["name"] = "|cff1eff00|Hitem:8112:0:0:0|h[Hibernal Pants]|h|r",
 				["data"] = {
-					["name"] = "Greenstone Talisman of the Gorilla",
+					["name"] = "Hibernal Pants",
 					["procs"] = {
 					},
-					["numlines"] = 6,
+					["numlines"] = 8,
 				},
 			},
 			["Back"] = {
@@ -97,15 +126,13 @@ TheoryCraft_Settings = {
 			},
 			["Hands"] = {
 				["stats"] = {
-					["agility"] = 4,
-					["strength"] = 8,
 				},
-				["name"] = "|cff1eff00|Hitem:4075:0:0:0|h[Mail Combat Gauntlets]|h|r",
+				["name"] = "|cff1eff00|Hitem:12695:0:0:0|h[Plans: Radiant Gloves]|h|r",
 				["data"] = {
-					["name"] = "Mail Combat Gauntlets",
+					["name"] = "Plans: Radiant Gloves",
 					["procs"] = {
 					},
-					["numlines"] = 7,
+					["numlines"] = 11,
 				},
 			},
 			["Off Hand"] = {
@@ -192,18 +219,17 @@ TheoryCraft_Settings = {
 					["numlines"] = 7,
 				},
 			},
-			["Legs"] = {
+			["Neck"] = {
 				["stats"] = {
-					["intellect"] = 11,
-					["spirit"] = 11,
-					["agility"] = 11,
+					["intellect"] = 4,
+					["strength"] = 4,
 				},
-				["name"] = "|cff1eff00|Hitem:8112:0:0:0|h[Hibernal Pants]|h|r",
+				["name"] = "|cff1eff00|Hitem:12029:0:933:0|h[Greenstone Talisman of the Gorilla]|h|r",
 				["data"] = {
-					["name"] = "Hibernal Pants",
+					["name"] = "Greenstone Talisman of the Gorilla",
 					["procs"] = {
 					},
-					["numlines"] = 8,
+					["numlines"] = 6,
 				},
 			},
 			["Finger1"] = {
@@ -244,38 +270,10 @@ TheoryCraft_Settings = {
 				},
 			},
 		},
-		["agility"] = 0,
-		["name"] = "Naked",
-		["stamina"] = 0,
-		["wear"] = {
-		},
-		["destat"] = {
-			[1] = "Head",
-			[2] = "Neck",
-			[3] = "Shoulder",
-			[4] = "Chest",
-			[5] = "Waist",
-			[6] = "Legs",
-			[7] = "Feet",
-			[8] = "Wrist",
-			[9] = "Hands",
-			[10] = "Finger0",
-			[11] = "Finger1",
-			[12] = "Trinket0",
-			[13] = "Trinket1",
-			[14] = "Back",
-			[15] = "MainHand",
-			[16] = "SecondaryHand",
-			[17] = "Ranged",
-			[18] = "Tabard",
-			[19] = "Ammo",
-		},
-		["spirit"] = 0,
-		["strength"] = 0,
 	},
 	["ColB2"] = 0.6862745098039216,
-	["ColR"] = 1,
-	["ColG"] = 1,
+	["buttontexty"] = 10.22,
+	["buttontextx"] = 1.111,
 	["embed"] = true,
 	["healanddamage"] = true,
 }

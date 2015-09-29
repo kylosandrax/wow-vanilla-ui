@@ -1,17 +1,16 @@
 
 QuestlogOptions = {
 	["Ryvok-Warsong [12x] Blizzlike"] = {
-		["HeaderList"] = {
-		},
+		["LockTracker"] = 1,
 		["AddNew"] = 1,
 		["InfoOnQuestCompletion"] = 1,
 		["CustomTooltipColor"] = 0,
 		["RestoreUponSelect"] = 1,
 		["WindowState"] = 0,
 		["LockPoints"] = {
-			["corner"] = "TOPLEFT",
-			["pointone"] = 4.971462884332108,
 			["pointtwo"] = 891.1023778575054,
+			["pointone"] = 4.971462884332108,
+			["corner"] = "TOPLEFT",
 		},
 		["TrackerSymbol"] = 3,
 		["FadeObjectiveColor"] = 0,
@@ -37,6 +36,53 @@ QuestlogOptions = {
 		["MinimizeFinished"] = 0,
 		["MinimizeUponClose"] = 1,
 		["CustomHeaderColor"] = 0,
+		["HeaderList"] = {
+		},
+		["TrackerShowMinimizer"] = 0,
+		["LogOpacity"] = 1,
+		["RemoveCompletedObjectives"] = 1,
+		["ItemTooltip"] = 0,
+		["Color"] = {
+			["TrackerBG"] = {
+				["a"] = 0,
+				["r"] = 0.09,
+				["g"] = 0.09,
+				["b"] = 0.19,
+			},
+			["Zone"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["Tooltip"] = {
+				["r"] = 1,
+				["g"] = 0.8,
+				["b"] = 0,
+			},
+			["ObjectiveEmpty"] = {
+				["r"] = 0.8,
+				["g"] = 0.8,
+				["b"] = 0.8,
+			},
+			["HeaderEmpty"] = {
+				["r"] = 0.75,
+				["g"] = 0.61,
+				["b"] = 0,
+			},
+			["ObjectiveComplete"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["HeaderComplete"] = {
+				["r"] = 1,
+				["g"] = 0.82,
+				["b"] = 0,
+			},
+		},
+		["MobTooltip"] = 0,
+		["AutoCompleteQuests"] = 0,
+		["ShowZonesInTracker"] = 1,
 		["CompletedQuests"] = {
 			["Dire Maul"] = {
 				["isOk"] = false,
@@ -44,10 +90,19 @@ QuestlogOptions = {
 			["Twilight Geolords"] = {
 				["isOk"] = false,
 			},
-			["Plagued Hatchlings"] = {
+			["Winterspring"] = {
 				["isOk"] = false,
 			},
 			["Blackrock Spire"] = {
+				["isOk"] = false,
+			},
+			["What Tomorrow Brings"] = {
+				["isOk"] = false,
+			},
+			["Scholomance"] = {
+				["isOk"] = false,
+			},
+			["Plagued Hatchlings"] = {
 				["isOk"] = false,
 			},
 			["The Archivist"] = {
@@ -59,10 +114,11 @@ QuestlogOptions = {
 			["Elven Legends"] = {
 				["isOk"] = false,
 			},
-			["Darnassus"] = {
+			["Barov Family Fortune"] = {
 				["isOk"] = false,
 			},
-			["Barov Family Fortune"] = {
+			["Duke Nicholas Zverenhoff"] = {
+				["isCompleted"] = true,
 				["isOk"] = false,
 			},
 			["Field Duty"] = {
@@ -77,11 +133,11 @@ QuestlogOptions = {
 			["Skeletal Fragments"] = {
 				["isOk"] = false,
 			},
-			["The Flesh Does Not Lie"] = {
-				["isCompleted"] = true,
+			["Scouring the Desert"] = {
 				["isOk"] = false,
 			},
-			["Scouring the Desert"] = {
+			["The Flesh Does Not Lie"] = {
+				["isCompleted"] = true,
 				["isOk"] = false,
 			},
 			["Chillwind Point"] = {
@@ -96,7 +152,8 @@ QuestlogOptions = {
 			["Blackhand's Command"] = {
 				["isOk"] = false,
 			},
-			["Feathermoon Stronghold"] = {
+			["The Everlook Report"] = {
+				["isCompleted"] = true,
 				["isOk"] = false,
 			},
 			["Silithus"] = {
@@ -111,59 +168,13 @@ QuestlogOptions = {
 			["Assisting Arch Druid Staghelm"] = {
 				["isOk"] = false,
 			},
-			["Scholomance"] = {
+			["Darnassus"] = {
 				["isOk"] = false,
 			},
-			["What Tomorrow Brings"] = {
+			["Feathermoon Stronghold"] = {
 				["isOk"] = false,
 			},
 		},
-		["TrackerShowMinimizer"] = 0,
-		["LogOpacity"] = 1,
-		["ShowZonesInTracker"] = 1,
-		["AutoCompleteQuests"] = 0,
-		["Color"] = {
-			["TrackerBG"] = {
-				["a"] = 0,
-				["r"] = 0.09,
-				["g"] = 0.09,
-				["b"] = 0.19,
-			},
-			["Zone"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["ObjectiveComplete"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["ObjectiveEmpty"] = {
-				["r"] = 0.8,
-				["g"] = 0.8,
-				["b"] = 0.8,
-			},
-			["HeaderEmpty"] = {
-				["r"] = 0.75,
-				["g"] = 0.61,
-				["b"] = 0,
-			},
-			["Tooltip"] = {
-				["r"] = 1,
-				["g"] = 0.8,
-				["b"] = 0,
-			},
-			["HeaderComplete"] = {
-				["r"] = 1,
-				["g"] = 0.82,
-				["b"] = 0,
-			},
-		},
-		["MobTooltip"] = 0,
-		["ItemTooltip"] = 0,
-		["RemoveCompletedObjectives"] = 1,
-		["LockTracker"] = 1,
 	},
 	["Banjax-Warsong [12x] Blizzlike"] = {
 		["LockTracker"] = 1,
@@ -173,9 +184,9 @@ QuestlogOptions = {
 		["RestoreUponSelect"] = 1,
 		["WindowState"] = 0,
 		["LockPoints"] = {
-			["pointtwo"] = 891.1023778575054,
-			["pointone"] = 4.971462884332108,
 			["corner"] = "TOPLEFT",
+			["pointone"] = 4.971462884332108,
+			["pointtwo"] = 891.1023778575054,
 		},
 		["TrackerSymbol"] = 3,
 		["FadeObjectiveColor"] = 0,
@@ -204,53 +215,6 @@ QuestlogOptions = {
 		["MinimizeFinished"] = 0,
 		["MinimizeUponClose"] = 1,
 		["CustomHeaderColor"] = 0,
-		["HeaderList"] = {
-		},
-		["TrackerShowMinimizer"] = 0,
-		["LogOpacity"] = 1,
-		["RemoveCompletedObjectives"] = 1,
-		["ItemTooltip"] = 0,
-		["Color"] = {
-			["TrackerBG"] = {
-				["a"] = 0,
-				["r"] = 0.09,
-				["g"] = 0.09,
-				["b"] = 0.19,
-			},
-			["Zone"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["Tooltip"] = {
-				["r"] = 1,
-				["g"] = 0.8,
-				["b"] = 0,
-			},
-			["ObjectiveEmpty"] = {
-				["r"] = 0.8,
-				["g"] = 0.8,
-				["b"] = 0.8,
-			},
-			["HeaderEmpty"] = {
-				["r"] = 0.75,
-				["g"] = 0.61,
-				["b"] = 0,
-			},
-			["ObjectiveComplete"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["HeaderComplete"] = {
-				["r"] = 1,
-				["g"] = 0.82,
-				["b"] = 0,
-			},
-		},
-		["MobTooltip"] = 0,
-		["AutoCompleteQuests"] = 0,
-		["ShowZonesInTracker"] = 1,
 		["CompletedQuests"] = {
 			["Dire Maul"] = {
 				["isOk"] = false,
@@ -267,8 +231,7 @@ QuestlogOptions = {
 			["Abyssal Contacts"] = {
 				["isOk"] = false,
 			},
-			["The Madness Within"] = {
-				["isCompleted"] = true,
+			["Alterac Valley"] = {
 				["isOk"] = false,
 			},
 			["The Archivist"] = {
@@ -280,7 +243,8 @@ QuestlogOptions = {
 			["Elven Legends"] = {
 				["isOk"] = false,
 			},
-			["Orgrimmar"] = {
+			["The Madness Within"] = {
+				["isCompleted"] = true,
 				["isOk"] = false,
 			},
 			["Wanted: Vile Priestess Hexx and Her Minions"] = {
@@ -298,11 +262,11 @@ QuestlogOptions = {
 			["Assisting Arch Druid Runetotem"] = {
 				["isOk"] = false,
 			},
-			["The Heart of the Mountain"] = {
-				["isOk"] = false,
-			},
 			["The Flesh Does Not Lie"] = {
 				["isCompleted"] = true,
+				["isOk"] = false,
+			},
+			["The Heart of the Mountain"] = {
 				["isOk"] = false,
 			},
 			["KILL ON SIGHT: Dark Iron Dwarves"] = {
@@ -317,10 +281,10 @@ QuestlogOptions = {
 			["Blackhand's Command"] = {
 				["isOk"] = false,
 			},
-			["Silithus"] = {
+			["Vyral the Vile"] = {
 				["isOk"] = false,
 			},
-			["Vyral the Vile"] = {
+			["Silithus"] = {
 				["isOk"] = false,
 			},
 			["Dearest Natalia"] = {
@@ -336,9 +300,56 @@ QuestlogOptions = {
 				["isCompleted"] = true,
 				["isOk"] = false,
 			},
-			["Alterac Valley"] = {
+			["Orgrimmar"] = {
 				["isOk"] = false,
 			},
+		},
+		["TrackerShowMinimizer"] = 0,
+		["LogOpacity"] = 1,
+		["ShowZonesInTracker"] = 1,
+		["AutoCompleteQuests"] = 0,
+		["Color"] = {
+			["TrackerBG"] = {
+				["a"] = 0,
+				["r"] = 0.09,
+				["g"] = 0.09,
+				["b"] = 0.19,
+			},
+			["Zone"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["ObjectiveComplete"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["ObjectiveEmpty"] = {
+				["r"] = 0.8,
+				["g"] = 0.8,
+				["b"] = 0.8,
+			},
+			["HeaderEmpty"] = {
+				["r"] = 0.75,
+				["g"] = 0.61,
+				["b"] = 0,
+			},
+			["Tooltip"] = {
+				["r"] = 1,
+				["g"] = 0.8,
+				["b"] = 0,
+			},
+			["HeaderComplete"] = {
+				["r"] = 1,
+				["g"] = 0.82,
+				["b"] = 0,
+			},
+		},
+		["MobTooltip"] = 0,
+		["ItemTooltip"] = 0,
+		["RemoveCompletedObjectives"] = 1,
+		["HeaderList"] = {
 		},
 	},
 	["Ryjax-Warsong [12x] Blizzlike"] = {
@@ -350,9 +361,9 @@ QuestlogOptions = {
 		["RestoreUponSelect"] = 1,
 		["WindowState"] = 0,
 		["LockPoints"] = {
-			["pointtwo"] = 891.1023778575054,
-			["pointone"] = 4.971462884332108,
 			["corner"] = "TOPLEFT",
+			["pointone"] = 4.971462884332108,
+			["pointtwo"] = 891.1023778575054,
 		},
 		["TrackerSymbol"] = 3,
 		["FadeObjectiveColor"] = 0,
@@ -378,52 +389,6 @@ QuestlogOptions = {
 		["MinimizeFinished"] = 0,
 		["MinimizeUponClose"] = 1,
 		["CustomHeaderColor"] = 0,
-		["LockTracker"] = 1,
-		["TrackerShowMinimizer"] = 0,
-		["LogOpacity"] = 1,
-		["RemoveCompletedObjectives"] = 1,
-		["ItemTooltip"] = 0,
-		["Color"] = {
-			["TrackerBG"] = {
-				["a"] = 0,
-				["r"] = 0.09,
-				["g"] = 0.09,
-				["b"] = 0.19,
-			},
-			["Zone"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["Tooltip"] = {
-				["r"] = 1,
-				["g"] = 0.8,
-				["b"] = 0,
-			},
-			["ObjectiveEmpty"] = {
-				["r"] = 0.8,
-				["g"] = 0.8,
-				["b"] = 0.8,
-			},
-			["HeaderEmpty"] = {
-				["r"] = 0.75,
-				["g"] = 0.61,
-				["b"] = 0,
-			},
-			["ObjectiveComplete"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["HeaderComplete"] = {
-				["r"] = 1,
-				["g"] = 0.82,
-				["b"] = 0,
-			},
-		},
-		["MobTooltip"] = 0,
-		["AutoCompleteQuests"] = 0,
-		["ShowZonesInTracker"] = 1,
 		["CompletedQuests"] = {
 			["Dire Maul"] = {
 				["isOk"] = false,
@@ -471,13 +436,13 @@ QuestlogOptions = {
 			["Seasonal"] = {
 				["isOk"] = false,
 			},
-			["Into The Maw of Madness"] = {
+			["Elven Legends"] = {
 				["isOk"] = false,
 			},
 			["The Heart of the Mountain"] = {
 				["isOk"] = false,
 			},
-			["The Flesh Does Not Lie"] = {
+			["Commander Gor'shak"] = {
 				["isOk"] = false,
 			},
 			["Stratholme"] = {
@@ -486,7 +451,7 @@ QuestlogOptions = {
 			["Scholomance"] = {
 				["isOk"] = false,
 			},
-			["Great-father Winter is Here!"] = {
+			["The Champion of the Horde"] = {
 				["isOk"] = false,
 			},
 			["Druid"] = {
@@ -498,19 +463,65 @@ QuestlogOptions = {
 			["En-Ay-Es-Tee-Why"] = {
 				["isOk"] = false,
 			},
-			["The Champion of the Horde"] = {
+			["Great-father Winter is Here!"] = {
 				["isOk"] = false,
 			},
 			["Blackrock Depths"] = {
 				["isOk"] = false,
 			},
-			["Commander Gor'shak"] = {
+			["The Flesh Does Not Lie"] = {
 				["isOk"] = false,
 			},
-			["Elven Legends"] = {
+			["Into The Maw of Madness"] = {
 				["isOk"] = false,
 			},
 		},
+		["TrackerShowMinimizer"] = 0,
+		["LogOpacity"] = 1,
+		["ShowZonesInTracker"] = 1,
+		["AutoCompleteQuests"] = 0,
+		["Color"] = {
+			["TrackerBG"] = {
+				["a"] = 0,
+				["r"] = 0.09,
+				["g"] = 0.09,
+				["b"] = 0.19,
+			},
+			["Zone"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["ObjectiveComplete"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["ObjectiveEmpty"] = {
+				["r"] = 0.8,
+				["g"] = 0.8,
+				["b"] = 0.8,
+			},
+			["HeaderEmpty"] = {
+				["r"] = 0.75,
+				["g"] = 0.61,
+				["b"] = 0,
+			},
+			["Tooltip"] = {
+				["r"] = 1,
+				["g"] = 0.8,
+				["b"] = 0,
+			},
+			["HeaderComplete"] = {
+				["r"] = 1,
+				["g"] = 0.82,
+				["b"] = 0,
+			},
+		},
+		["MobTooltip"] = 0,
+		["ItemTooltip"] = 0,
+		["RemoveCompletedObjectives"] = 1,
+		["LockTracker"] = 1,
 	},
 	["Sixofnine-Warsong [12x] Blizzlike"] = {
 		["LockTracker"] = 0,
@@ -547,11 +558,8 @@ QuestlogOptions = {
 		["CustomHeaderColor"] = 0,
 		["TrackerShowMinimizer"] = 0,
 		["LogOpacity"] = 1,
-		["HeaderList"] = {
-		},
-		["RemoveCompletedObjectives"] = 0,
-		["ItemTooltip"] = 0,
-		["MobTooltip"] = 0,
+		["ShowZonesInTracker"] = 1,
+		["AutoCompleteQuests"] = 0,
 		["Color"] = {
 			["TrackerBG"] = {
 				["a"] = 0,
@@ -564,10 +572,10 @@ QuestlogOptions = {
 				["g"] = 1,
 				["b"] = 1,
 			},
-			["Tooltip"] = {
+			["ObjectiveComplete"] = {
 				["r"] = 1,
-				["g"] = 0.8,
-				["b"] = 0,
+				["g"] = 1,
+				["b"] = 1,
 			},
 			["ObjectiveEmpty"] = {
 				["r"] = 0.8,
@@ -579,10 +587,10 @@ QuestlogOptions = {
 				["g"] = 0.61,
 				["b"] = 0,
 			},
-			["ObjectiveComplete"] = {
+			["Tooltip"] = {
 				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
+				["g"] = 0.8,
+				["b"] = 0,
 			},
 			["HeaderComplete"] = {
 				["r"] = 1,
@@ -590,8 +598,11 @@ QuestlogOptions = {
 				["b"] = 0,
 			},
 		},
-		["AutoCompleteQuests"] = 0,
-		["ShowZonesInTracker"] = 1,
+		["MobTooltip"] = 0,
+		["ItemTooltip"] = 0,
+		["RemoveCompletedObjectives"] = 0,
+		["HeaderList"] = {
+		},
 	},
 	["Nameplate-Emerald Dream [1x] Blizzlike"] = {
 		["LockTracker"] = 0,
@@ -628,11 +639,8 @@ QuestlogOptions = {
 		["CustomHeaderColor"] = 0,
 		["TrackerShowMinimizer"] = 0,
 		["LogOpacity"] = 1,
-		["HeaderList"] = {
-		},
-		["RemoveCompletedObjectives"] = 0,
-		["ItemTooltip"] = 0,
-		["MobTooltip"] = 0,
+		["ShowZonesInTracker"] = 1,
+		["AutoCompleteQuests"] = 0,
 		["Color"] = {
 			["TrackerBG"] = {
 				["a"] = 0,
@@ -645,10 +653,10 @@ QuestlogOptions = {
 				["g"] = 1,
 				["b"] = 1,
 			},
-			["Tooltip"] = {
+			["ObjectiveComplete"] = {
 				["r"] = 1,
-				["g"] = 0.8,
-				["b"] = 0,
+				["g"] = 1,
+				["b"] = 1,
 			},
 			["ObjectiveEmpty"] = {
 				["r"] = 0.8,
@@ -660,10 +668,10 @@ QuestlogOptions = {
 				["g"] = 0.61,
 				["b"] = 0,
 			},
-			["ObjectiveComplete"] = {
+			["Tooltip"] = {
 				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
+				["g"] = 0.8,
+				["b"] = 0,
 			},
 			["HeaderComplete"] = {
 				["r"] = 1,
@@ -671,8 +679,11 @@ QuestlogOptions = {
 				["b"] = 0,
 			},
 		},
-		["AutoCompleteQuests"] = 0,
-		["ShowZonesInTracker"] = 1,
+		["MobTooltip"] = 0,
+		["ItemTooltip"] = 0,
+		["RemoveCompletedObjectives"] = 0,
+		["HeaderList"] = {
+		},
 	},
 	["Ryvok-Emerald Dream [1x] Blizzlike"] = {
 		["LockTracker"] = 0,
@@ -709,8 +720,11 @@ QuestlogOptions = {
 		["CustomHeaderColor"] = 0,
 		["TrackerShowMinimizer"] = 0,
 		["LogOpacity"] = 1,
-		["ShowZonesInTracker"] = 1,
-		["AutoCompleteQuests"] = 0,
+		["HeaderList"] = {
+		},
+		["RemoveCompletedObjectives"] = 0,
+		["ItemTooltip"] = 0,
+		["MobTooltip"] = 0,
 		["Color"] = {
 			["TrackerBG"] = {
 				["a"] = 0,
@@ -723,10 +737,10 @@ QuestlogOptions = {
 				["g"] = 1,
 				["b"] = 1,
 			},
-			["ObjectiveComplete"] = {
+			["Tooltip"] = {
 				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
+				["g"] = 0.8,
+				["b"] = 0,
 			},
 			["ObjectiveEmpty"] = {
 				["r"] = 0.8,
@@ -738,10 +752,10 @@ QuestlogOptions = {
 				["g"] = 0.61,
 				["b"] = 0,
 			},
-			["Tooltip"] = {
+			["ObjectiveComplete"] = {
 				["r"] = 1,
-				["g"] = 0.8,
-				["b"] = 0,
+				["g"] = 1,
+				["b"] = 1,
 			},
 			["HeaderComplete"] = {
 				["r"] = 1,
@@ -749,11 +763,8 @@ QuestlogOptions = {
 				["b"] = 0,
 			},
 		},
-		["MobTooltip"] = 0,
-		["ItemTooltip"] = 0,
-		["RemoveCompletedObjectives"] = 0,
-		["HeaderList"] = {
-		},
+		["AutoCompleteQuests"] = 0,
+		["ShowZonesInTracker"] = 1,
 	},
 	["Kylosandrax-Warsong [12x] Blizzlike"] = {
 		["HeaderList"] = {
@@ -764,9 +775,9 @@ QuestlogOptions = {
 		["RestoreUponSelect"] = 1,
 		["WindowState"] = 0,
 		["LockPoints"] = {
-			["pointtwo"] = 891.1023778575054,
-			["pointone"] = 4.971462884332108,
 			["corner"] = "TOPLEFT",
+			["pointone"] = 4.971462884332108,
+			["pointtwo"] = 891.1023778575054,
 		},
 		["TrackerSymbol"] = 3,
 		["FadeObjectiveColor"] = 0,
@@ -794,52 +805,6 @@ QuestlogOptions = {
 		["MinimizeFinished"] = 0,
 		["MinimizeUponClose"] = 1,
 		["CustomHeaderColor"] = 0,
-		["LockTracker"] = 1,
-		["TrackerShowMinimizer"] = 0,
-		["LogOpacity"] = 1,
-		["RemoveCompletedObjectives"] = 1,
-		["ItemTooltip"] = 0,
-		["Color"] = {
-			["TrackerBG"] = {
-				["a"] = 0,
-				["r"] = 0.09,
-				["g"] = 0.09,
-				["b"] = 0.19,
-			},
-			["Zone"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["Tooltip"] = {
-				["r"] = 1,
-				["g"] = 0.8,
-				["b"] = 0,
-			},
-			["ObjectiveEmpty"] = {
-				["r"] = 0.8,
-				["g"] = 0.8,
-				["b"] = 0.8,
-			},
-			["HeaderEmpty"] = {
-				["r"] = 0.75,
-				["g"] = 0.61,
-				["b"] = 0,
-			},
-			["ObjectiveComplete"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["HeaderComplete"] = {
-				["r"] = 1,
-				["g"] = 0.82,
-				["b"] = 0,
-			},
-		},
-		["MobTooltip"] = 0,
-		["AutoCompleteQuests"] = 0,
-		["ShowZonesInTracker"] = 1,
 		["CompletedQuests"] = {
 			["Dire Maul"] = {
 				["isOk"] = false,
@@ -863,7 +828,7 @@ QuestlogOptions = {
 			["Blasted Lands"] = {
 				["isOk"] = false,
 			},
-			["The Champion of the Horde"] = {
+			["Hive'Regal Scout Report"] = {
 				["isOk"] = false,
 			},
 			["Scholomance"] = {
@@ -872,13 +837,14 @@ QuestlogOptions = {
 			["Elven Legends"] = {
 				["isOk"] = false,
 			},
-			["Barov Family Fortune"] = {
-				["isOk"] = false,
-			},
-			["Hive'Regal Scout Report"] = {
-				["isOk"] = false,
-			},
 			["Orgrimmar"] = {
+				["isOk"] = false,
+			},
+			["KILL ON SIGHT: High Ranking Dark Iron Officials"] = {
+				["isOk"] = false,
+			},
+			["Libram of Protection"] = {
+				["isCompleted"] = true,
 				["isOk"] = false,
 			},
 			["Paragons of Power: The Vindicator's Breastplate"] = {
@@ -890,17 +856,17 @@ QuestlogOptions = {
 			["Seasonal"] = {
 				["isOk"] = false,
 			},
-			["Giant Goblin Eggs!"] = {
-				["isCompleted"] = true,
+			["Poisoned Water"] = {
 				["isOk"] = false,
 			},
-			["Poisoned Water"] = {
+			["Giant Goblin Eggs!"] = {
+				["isCompleted"] = true,
 				["isOk"] = false,
 			},
 			["Stormers and Rumblers"] = {
 				["isOk"] = false,
 			},
-			["Field Duty"] = {
+			["Disharmony of Flame"] = {
 				["isOk"] = false,
 			},
 			["Azshara"] = {
@@ -918,20 +884,65 @@ QuestlogOptions = {
 			["Signet of the Dukes"] = {
 				["isOk"] = false,
 			},
-			["Disharmony of Flame"] = {
+			["Field Duty"] = {
 				["isOk"] = false,
 			},
 			["Blackrock Depths"] = {
 				["isOk"] = false,
 			},
-			["Libram of Protection"] = {
-				["isCompleted"] = true,
+			["Barov Family Fortune"] = {
 				["isOk"] = false,
 			},
-			["KILL ON SIGHT: High Ranking Dark Iron Officials"] = {
+			["The Champion of the Horde"] = {
 				["isOk"] = false,
 			},
 		},
+		["TrackerShowMinimizer"] = 0,
+		["LogOpacity"] = 1,
+		["ShowZonesInTracker"] = 1,
+		["AutoCompleteQuests"] = 0,
+		["Color"] = {
+			["TrackerBG"] = {
+				["a"] = 0,
+				["r"] = 0.09,
+				["g"] = 0.09,
+				["b"] = 0.19,
+			},
+			["Zone"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["ObjectiveComplete"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["ObjectiveEmpty"] = {
+				["r"] = 0.8,
+				["g"] = 0.8,
+				["b"] = 0.8,
+			},
+			["HeaderEmpty"] = {
+				["r"] = 0.75,
+				["g"] = 0.61,
+				["b"] = 0,
+			},
+			["Tooltip"] = {
+				["r"] = 1,
+				["g"] = 0.8,
+				["b"] = 0,
+			},
+			["HeaderComplete"] = {
+				["r"] = 1,
+				["g"] = 0.82,
+				["b"] = 0,
+			},
+		},
+		["MobTooltip"] = 0,
+		["ItemTooltip"] = 0,
+		["RemoveCompletedObjectives"] = 1,
+		["LockTracker"] = 1,
 	},
 	["Kashonar-Warsong [12x] Blizzlike"] = {
 		["LockTracker"] = 0,
@@ -941,9 +952,9 @@ QuestlogOptions = {
 		["RestoreUponSelect"] = 1,
 		["WindowState"] = 0,
 		["LockPoints"] = {
-			["pointtwo"] = 910.3889150459123,
-			["pointone"] = 3.444471140565688,
 			["corner"] = "TOPLEFT",
+			["pointone"] = 3.444471140565688,
+			["pointtwo"] = 910.3889150459123,
 		},
 		["TrackerSymbol"] = 0,
 		["FadeObjectiveColor"] = 0,
@@ -972,8 +983,11 @@ QuestlogOptions = {
 		["CustomHeaderColor"] = 0,
 		["TrackerShowMinimizer"] = 0,
 		["LogOpacity"] = 1,
-		["ShowZonesInTracker"] = 1,
-		["AutoCompleteQuests"] = 0,
+		["HeaderList"] = {
+		},
+		["RemoveCompletedObjectives"] = 0,
+		["ItemTooltip"] = 0,
+		["MobTooltip"] = 0,
 		["Color"] = {
 			["TrackerBG"] = {
 				["a"] = 0,
@@ -986,10 +1000,10 @@ QuestlogOptions = {
 				["g"] = 1,
 				["b"] = 1,
 			},
-			["ObjectiveComplete"] = {
+			["Tooltip"] = {
 				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
+				["g"] = 0.8,
+				["b"] = 0,
 			},
 			["ObjectiveEmpty"] = {
 				["r"] = 0.8,
@@ -1001,10 +1015,10 @@ QuestlogOptions = {
 				["g"] = 0.61,
 				["b"] = 0,
 			},
-			["Tooltip"] = {
+			["ObjectiveComplete"] = {
 				["r"] = 1,
-				["g"] = 0.8,
-				["b"] = 0,
+				["g"] = 1,
+				["b"] = 1,
 			},
 			["HeaderComplete"] = {
 				["r"] = 1,
@@ -1012,11 +1026,8 @@ QuestlogOptions = {
 				["b"] = 0,
 			},
 		},
-		["MobTooltip"] = 0,
-		["ItemTooltip"] = 0,
-		["RemoveCompletedObjectives"] = 0,
-		["HeaderList"] = {
-		},
+		["AutoCompleteQuests"] = 0,
+		["ShowZonesInTracker"] = 1,
 	},
 	["Kylosandrax-Al'Akir [instant 60] Blizzlike"] = {
 		["LockTracker"] = 0,
@@ -1053,11 +1064,8 @@ QuestlogOptions = {
 		["CustomHeaderColor"] = 0,
 		["TrackerShowMinimizer"] = 0,
 		["LogOpacity"] = 1,
-		["HeaderList"] = {
-		},
-		["RemoveCompletedObjectives"] = 0,
-		["ItemTooltip"] = 0,
-		["MobTooltip"] = 0,
+		["ShowZonesInTracker"] = 1,
+		["AutoCompleteQuests"] = 0,
 		["Color"] = {
 			["TrackerBG"] = {
 				["a"] = 0,
@@ -1070,10 +1078,10 @@ QuestlogOptions = {
 				["g"] = 1,
 				["b"] = 1,
 			},
-			["Tooltip"] = {
+			["ObjectiveComplete"] = {
 				["r"] = 1,
-				["g"] = 0.8,
-				["b"] = 0,
+				["g"] = 1,
+				["b"] = 1,
 			},
 			["ObjectiveEmpty"] = {
 				["r"] = 0.8,
@@ -1085,10 +1093,10 @@ QuestlogOptions = {
 				["g"] = 0.61,
 				["b"] = 0,
 			},
-			["ObjectiveComplete"] = {
+			["Tooltip"] = {
 				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
+				["g"] = 0.8,
+				["b"] = 0,
 			},
 			["HeaderComplete"] = {
 				["r"] = 1,
@@ -1096,11 +1104,192 @@ QuestlogOptions = {
 				["b"] = 0,
 			},
 		},
-		["AutoCompleteQuests"] = 0,
-		["ShowZonesInTracker"] = 1,
+		["MobTooltip"] = 0,
+		["ItemTooltip"] = 0,
+		["RemoveCompletedObjectives"] = 0,
+		["HeaderList"] = {
+		},
 	},
 	["Zapunzel-Warsong [12x] Blizzlike"] = {
 		["LockTracker"] = 1,
+		["AddNew"] = 1,
+		["InfoOnQuestCompletion"] = 1,
+		["CustomTooltipColor"] = 0,
+		["RestoreUponSelect"] = 1,
+		["WindowState"] = 0,
+		["LockPoints"] = {
+			["corner"] = "TOPLEFT",
+			["pointone"] = 4.971462884332108,
+			["pointtwo"] = 891.1023778575054,
+		},
+		["TrackerSymbol"] = 3,
+		["FadeObjectiveColor"] = 0,
+		["OnlyLevelsInLog"] = 0,
+		["RemoveFinished"] = 1,
+		["TrackerList"] = 0,
+		["FadeHeaderColor"] = 0,
+		["UseTrackerListing"] = 0,
+		["AddUntracked"] = 0,
+		["CustomObjetiveColor"] = 0,
+		["CustomTrackerBGColor"] = 0,
+		["SortTrackerItems"] = 0,
+		["ShowObjectiveMarkers"] = 1,
+		["TrackerIsMinimized"] = 0,
+		["ShowQuestLevels"] = 1,
+		["TrackerFontHeight"] = 12,
+		["OrganizerSettings"] = {
+		},
+		["CustomZoneColor"] = 0,
+		["QuestWatches"] = {
+		},
+		["LockQuestLog"] = 1,
+		["MinimizeFinished"] = 0,
+		["MinimizeUponClose"] = 1,
+		["CustomHeaderColor"] = 0,
+		["CompletedQuests"] = {
+			["Dire Maul"] = {
+				["isOk"] = false,
+			},
+			["Warlord's Command"] = {
+				["isOk"] = false,
+			},
+			["Elven Legends"] = {
+				["isOk"] = false,
+			},
+			["Winterspring"] = {
+				["isOk"] = false,
+			},
+			["Blackrock Spire"] = {
+				["isOk"] = false,
+			},
+			["Scholomance"] = {
+				["isOk"] = false,
+			},
+			["The Pack Mistress"] = {
+				["isOk"] = false,
+			},
+			["Plagued Hatchlings"] = {
+				["isOk"] = false,
+			},
+			["The Archivist"] = {
+				["isOk"] = false,
+			},
+			["Kibler's Exotic Pets"] = {
+				["isOk"] = false,
+			},
+			["Mother's Milk"] = {
+				["isOk"] = false,
+			},
+			["Commander Gor'shak"] = {
+				["isOk"] = false,
+			},
+			["Trouble in Winterspring!"] = {
+				["isOk"] = false,
+			},
+			["The Rise of the Machines"] = {
+				["isOk"] = false,
+			},
+			["Barov Family Fortune"] = {
+				["isOk"] = false,
+			},
+			["Undercity"] = {
+				["isOk"] = false,
+			},
+			["Assisting Arch Druid Runetotem"] = {
+				["isOk"] = false,
+			},
+			["Operative Bijou"] = {
+				["isOk"] = false,
+			},
+			["The Heart of the Mountain"] = {
+				["isOk"] = false,
+			},
+			["Mage"] = {
+				["isOk"] = false,
+			},
+			["Stratholme"] = {
+				["isOk"] = false,
+			},
+			["Pusillin and the Elder Azj'Tordin"] = {
+				["isCompleted"] = true,
+				["isOk"] = false,
+			},
+			["Ursius of the Shardtooth"] = {
+				["isOk"] = false,
+			},
+			["Burning Steppes"] = {
+				["isOk"] = false,
+			},
+			["Silithus"] = {
+				["isOk"] = false,
+			},
+			["The Flesh Does Not Lie"] = {
+				["isOk"] = false,
+			},
+			["The Perfect Poison"] = {
+				["isOk"] = false,
+			},
+			["Blackrock Depths"] = {
+				["isOk"] = false,
+			},
+			["Magecraft"] = {
+				["isOk"] = false,
+			},
+			["Luck Be With You"] = {
+				["isOk"] = false,
+			},
+		},
+		["TrackerShowMinimizer"] = 0,
+		["LogOpacity"] = 1,
+		["ShowZonesInTracker"] = 1,
+		["AutoCompleteQuests"] = 0,
+		["Color"] = {
+			["TrackerBG"] = {
+				["a"] = 0,
+				["r"] = 0.09,
+				["g"] = 0.09,
+				["b"] = 0.19,
+			},
+			["Zone"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["ObjectiveComplete"] = {
+				["r"] = 1,
+				["g"] = 1,
+				["b"] = 1,
+			},
+			["ObjectiveEmpty"] = {
+				["r"] = 0.8,
+				["g"] = 0.8,
+				["b"] = 0.8,
+			},
+			["HeaderEmpty"] = {
+				["r"] = 0.75,
+				["g"] = 0.61,
+				["b"] = 0,
+			},
+			["Tooltip"] = {
+				["r"] = 1,
+				["g"] = 0.8,
+				["b"] = 0,
+			},
+			["HeaderComplete"] = {
+				["r"] = 1,
+				["g"] = 0.82,
+				["b"] = 0,
+			},
+		},
+		["MobTooltip"] = 0,
+		["ItemTooltip"] = 0,
+		["RemoveCompletedObjectives"] = 1,
+		["HeaderList"] = {
+		},
+	},
+	["Stormslinger-Warsong [12x] Blizzlike"] = {
+		["HeaderList"] = {
+		},
 		["AddNew"] = 1,
 		["InfoOnQuestCompletion"] = 1,
 		["CustomTooltipColor"] = 0,
@@ -1135,8 +1324,7 @@ QuestlogOptions = {
 		["MinimizeFinished"] = 0,
 		["MinimizeUponClose"] = 1,
 		["CustomHeaderColor"] = 0,
-		["HeaderList"] = {
-		},
+		["LockTracker"] = 1,
 		["TrackerShowMinimizer"] = 0,
 		["LogOpacity"] = 1,
 		["RemoveCompletedObjectives"] = 1,
@@ -1181,142 +1369,12 @@ QuestlogOptions = {
 		},
 		["MobTooltip"] = 0,
 		["AutoCompleteQuests"] = 0,
-		["ShowZonesInTracker"] = 1,
+		["ShowZonesInTracker"] = 0,
 		["CompletedQuests"] = {
 			["Dire Maul"] = {
 				["isOk"] = false,
 			},
 			["Warlord's Command"] = {
-				["isOk"] = false,
-			},
-			["Mother's Milk"] = {
-				["isOk"] = false,
-			},
-			["Plagued Hatchlings"] = {
-				["isOk"] = false,
-			},
-			["Blackrock Spire"] = {
-				["isOk"] = false,
-			},
-			["Scholomance"] = {
-				["isOk"] = false,
-			},
-			["Blackrock Depths"] = {
-				["isOk"] = false,
-			},
-			["Winterspring"] = {
-				["isOk"] = false,
-			},
-			["The Archivist"] = {
-				["isOk"] = false,
-			},
-			["Kibler's Exotic Pets"] = {
-				["isOk"] = false,
-			},
-			["Elven Legends"] = {
-				["isOk"] = false,
-			},
-			["Commander Gor'shak"] = {
-				["isOk"] = false,
-			},
-			["Trouble in Winterspring!"] = {
-				["isOk"] = false,
-			},
-			["The Rise of the Machines"] = {
-				["isOk"] = false,
-			},
-			["Barov Family Fortune"] = {
-				["isOk"] = false,
-			},
-			["Undercity"] = {
-				["isOk"] = false,
-			},
-			["Assisting Arch Druid Runetotem"] = {
-				["isOk"] = false,
-			},
-			["Ursius of the Shardtooth"] = {
-				["isOk"] = false,
-			},
-			["The Heart of the Mountain"] = {
-				["isOk"] = false,
-			},
-			["Mage"] = {
-				["isOk"] = false,
-			},
-			["Stratholme"] = {
-				["isOk"] = false,
-			},
-			["Pusillin and the Elder Azj'Tordin"] = {
-				["isCompleted"] = true,
-				["isOk"] = false,
-			},
-			["Operative Bijou"] = {
-				["isOk"] = false,
-			},
-			["Burning Steppes"] = {
-				["isOk"] = false,
-			},
-			["Silithus"] = {
-				["isOk"] = false,
-			},
-			["The Flesh Does Not Lie"] = {
-				["isOk"] = false,
-			},
-			["The Perfect Poison"] = {
-				["isOk"] = false,
-			},
-			["The Pack Mistress"] = {
-				["isOk"] = false,
-			},
-			["Magecraft"] = {
-				["isOk"] = false,
-			},
-			["Luck Be With You"] = {
-				["isOk"] = false,
-			},
-		},
-	},
-	["Stormslinger-Warsong [12x] Blizzlike"] = {
-		["LockTracker"] = 1,
-		["AddNew"] = 1,
-		["InfoOnQuestCompletion"] = 1,
-		["CustomTooltipColor"] = 0,
-		["RestoreUponSelect"] = 1,
-		["WindowState"] = 0,
-		["LockPoints"] = {
-			["corner"] = "TOPLEFT",
-			["pointone"] = 4.971462884332108,
-			["pointtwo"] = 891.1023778575054,
-		},
-		["TrackerSymbol"] = 3,
-		["FadeObjectiveColor"] = 0,
-		["OnlyLevelsInLog"] = 0,
-		["RemoveFinished"] = 1,
-		["TrackerList"] = 0,
-		["FadeHeaderColor"] = 0,
-		["UseTrackerListing"] = 0,
-		["AddUntracked"] = 0,
-		["CustomObjetiveColor"] = 0,
-		["CustomTrackerBGColor"] = 0,
-		["SortTrackerItems"] = 0,
-		["ShowObjectiveMarkers"] = 1,
-		["TrackerIsMinimized"] = 0,
-		["ShowQuestLevels"] = 1,
-		["TrackerFontHeight"] = 12,
-		["OrganizerSettings"] = {
-		},
-		["CustomZoneColor"] = 0,
-		["QuestWatches"] = {
-		},
-		["LockQuestLog"] = 1,
-		["MinimizeFinished"] = 0,
-		["MinimizeUponClose"] = 1,
-		["CustomHeaderColor"] = 0,
-		["CompletedQuests"] = {
-			["Dire Maul"] = {
-				["isOk"] = false,
-			},
-			["Twilight Geolords"] = {
 				["isOk"] = false,
 			},
 			["Da Voodoo"] = {
@@ -1341,22 +1399,22 @@ QuestlogOptions = {
 			["Scholomance"] = {
 				["isOk"] = false,
 			},
-			["Elven Legends"] = {
+			["Mother's Milk"] = {
 				["isOk"] = false,
 			},
 			["Bijou's Belongings"] = {
 				["isOk"] = false,
 			},
-			["The Ectoplasmic Distiller"] = {
+			["Elven Legends"] = {
 				["isOk"] = false,
 			},
-			["The Twilight Mystery"] = {
+			["Twilight Geolords"] = {
 				["isOk"] = false,
 			},
 			["Shaman"] = {
 				["isOk"] = false,
 			},
-			["Blackrock Depths"] = {
+			["The Pack Mistress"] = {
 				["isOk"] = false,
 			},
 			["The Heart of the Mountain"] = {
@@ -1368,80 +1426,33 @@ QuestlogOptions = {
 			["Stratholme"] = {
 				["isOk"] = false,
 			},
-			["Doctor Theolen Krastinov, the Butcher"] = {
+			["KILL ON SIGHT: Dark Iron Dwarves"] = {
 				["isOk"] = false,
 			},
 			["Blackhand's Command"] = {
 				["isOk"] = false,
 			},
-			["The Darkreaver Menace"] = {
+			["The Flesh Does Not Lie"] = {
 				["isOk"] = false,
 			},
 			["Silithus"] = {
 				["isOk"] = false,
 			},
-			["The Flesh Does Not Lie"] = {
+			["The Darkreaver Menace"] = {
 				["isOk"] = false,
 			},
-			["KILL ON SIGHT: Dark Iron Dwarves"] = {
+			["Doctor Theolen Krastinov, the Butcher"] = {
 				["isOk"] = false,
 			},
-			["The Pack Mistress"] = {
+			["Blackrock Depths"] = {
 				["isOk"] = false,
 			},
-			["Warlord's Command"] = {
+			["The Twilight Mystery"] = {
 				["isOk"] = false,
 			},
-			["Mother's Milk"] = {
+			["The Ectoplasmic Distiller"] = {
 				["isOk"] = false,
 			},
-		},
-		["TrackerShowMinimizer"] = 0,
-		["LogOpacity"] = 1,
-		["ShowZonesInTracker"] = 0,
-		["AutoCompleteQuests"] = 0,
-		["Color"] = {
-			["TrackerBG"] = {
-				["a"] = 0,
-				["r"] = 0.09,
-				["g"] = 0.09,
-				["b"] = 0.19,
-			},
-			["Zone"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["ObjectiveComplete"] = {
-				["r"] = 1,
-				["g"] = 1,
-				["b"] = 1,
-			},
-			["ObjectiveEmpty"] = {
-				["r"] = 0.8,
-				["g"] = 0.8,
-				["b"] = 0.8,
-			},
-			["HeaderEmpty"] = {
-				["r"] = 0.75,
-				["g"] = 0.61,
-				["b"] = 0,
-			},
-			["Tooltip"] = {
-				["r"] = 1,
-				["g"] = 0.8,
-				["b"] = 0,
-			},
-			["HeaderComplete"] = {
-				["r"] = 1,
-				["g"] = 0.82,
-				["b"] = 0,
-			},
-		},
-		["MobTooltip"] = 0,
-		["ItemTooltip"] = 0,
-		["RemoveCompletedObjectives"] = 1,
-		["HeaderList"] = {
 		},
 	},
 }
@@ -1451,11 +1462,11 @@ QuestLevel_Quest2Level = {
 	["Wanted - Deathclasp, Terror of the Sands"] = "@x¤<59¤",
 	["A Strange Request"] = "<45¤",
 	["[60D] The Great Fras Siabi"] = "@x¤<60¤",
-	["Towers and Bunkers"] = "@x¤<60¤",
+	["Stealing Knowledge"] = "<52¤",
 	["Jammal'an the Prophet"] = "@x¤<53¤",
 	["A Better Ingredient"] = "@x¤<52¤",
 	["Duke Nicholas Zverenhoff"] = "<52¤",
-	["Coolant Heads Prevail"] = "<37¤",
+	["Target: Felstone Field"] = "<53¤",
 	["Tribal Leatherworking"] = "<55¤",
 	["Recover the Key!"] = "@x¤<51¤",
 	["Samophlange"] = "<14¤",
@@ -1469,10 +1480,10 @@ QuestLevel_Quest2Level = {
 	["Trouble in Winterspring!"] = "<56¤",
 	["Bloodpetal Poison"] = "<52¤",
 	["Wild Leather Vest"] = "<45¤",
-	["A New Cloak's Sheen"] = "<45¤",
+	["Dark Heart"] = "@x¤<50¤",
 	["Signet of Unyielding Strength"] = "@x¤<60¤",
 	["Trollbane"] = "<37¤",
-	["Warlord's Command"] = "@x¤<60¤",
+	["More Wastewander Justice"] = "<44¤",
 	["The People's Militia"] = "<12¤",
 	["Target: Hive'Zora Tunnelers"] = "@x¤<60¤",
 	["Noggle's Last Hope"] = "<57¤",
@@ -1483,16 +1494,16 @@ QuestLevel_Quest2Level = {
 	["In Good Taste"] = "<49¤",
 	["Sharing the Knowledge"] = "<57¤",
 	["Chen's Empty Keg"] = "<15¤",
-	["A Supernatural Device"] = "<60¤",
+	["Of Love and Family"] = "@¤>60¤<58¤",
 	["Into The Scarlet Monastery"] = "@x¤<42¤",
 	["The Mark of Quality"] = "<46¤",
 	["Return to MacKinley"] = "<41¤",
 	["The Flawless Flame"] = "<48¤",
 	["The Captain's Chest"] = "@x¤<51¤",
-	["Kidnapped Elder Torntusk!"] = "@x¤<51¤",
+	["Urok Doomhowl"] = "@x¤<60¤",
 	["Report to Doren"] = "<37¤",
 	["Apothecary Zamah"] = "<15¤",
-	["Crystals of Power"] = "<53¤",
+	["The Great Fras Siabi"] = "@x¤<60¤",
 	["Hunt for Yenniku"] = "<34¤",
 	["WANTED: Baron Longshore"] = "<16¤",
 	["Scouring the Desert"] = "@x¤<60¤",
@@ -1505,7 +1516,7 @@ QuestLevel_Quest2Level = {
 	["Gadgetzan Water Survey"] = "<46¤",
 	["Great-father Winter is Here!"] = "<60¤",
 	["Shadow Magic"] = "@x¤<23¤",
-	["The Dread Citadel - Naxxramas"] = "<60¤",
+	["Speak with Un'thuwa"] = "<10¤",
 	["Steelsnap"] = "<30¤",
 	["Colonel Kurzen"] = "@x¤<40¤",
 	["Noxious Lair Investigation"] = "<47¤",
@@ -1521,11 +1532,11 @@ QuestLevel_Quest2Level = {
 	["Tabetha's Task"] = "@x¤<46¤",
 	["Noggle's Lost Satchel"] = "<57¤",
 	["The Infernal Orb"] = "<40¤",
-	["The Green Hills of Stranglethorn"] = "<40¤",
+	["Target: Hive'Zora Reavers"] = "@x¤<60¤",
 	["Broodling Essence"] = "<52¤",
 	["[60] Writ of Safe Passage"] = "<60¤",
 	["Vile Familiars"] = "<4¤",
-	["Elven Legends"] = "@x¤<60¤",
+	["Woodpaw Investigation"] = "<43¤",
 	["The Hunter's Way"] = "<10¤",
 	["War on the Woodpaw"] = "<42¤",
 	["Root Samples"] = "<16¤",
@@ -1534,21 +1545,21 @@ QuestLevel_Quest2Level = {
 	["Good Luck Charm"] = "<52¤",
 	["Favor for Krazek"] = "<37¤",
 	["Conquering Arathi Basin"] = "@x¤<60¤",
-	["Troll Temper"] = "@x¤<45¤",
+	["Better Late Than Never"] = "<52¤",
 	["Bonescythe Digs"] = "<60¤",
 	["The Shattered Hand"] = "<13¤",
 	["The Ectoplasmic Distiller"] = "<60¤",
-	["Serpentbloom"] = "<18¤",
+	["Plainstrider Menace"] = "<12¤",
 	["Arcane Refreshment"] = "@x¤<60¤",
 	["Swoop Hunting"] = "<6¤",
-	["Warrior Kinship"] = "<52¤",
+	["Trial at the Field of Giants"] = "<20¤",
 	["Magecraft"] = "<52¤",
 	["Items of Power"] = "<40¤",
 	["Pirate Hats Ahoy!"] = "<45¤",
 	["Headhunting"] = "<37¤",
 	["Weapons of Choice"] = "<24¤",
 	["Find OOX-09/HL!"] = "<48¤",
-	["Therzok"] = "<10¤",
+	["The Haunted Isle"] = "<37¤",
 	["Troll Necklace Bounty"] = "<45¤",
 	["Drape of Unyielding Strength"] = "@x¤<60¤",
 	["To Steal From Thieves"] = "<36¤",
@@ -1558,10 +1569,10 @@ QuestLevel_Quest2Level = {
 	["Stormers and Rumblers"] = "<57¤",
 	["Roll the Bones"] = "<51¤",
 	["The Hunt Begins"] = "<2¤",
-	["Vyral the Vile"] = "<60¤",
+	["A Threat in Feralas"] = "<43¤",
 	["The Stone of the Tides"] = "<37¤",
 	["[60] Cryptstalker Armor Doesn't Make Itself..."] = "<60¤",
-	["Sickle of Unyielding Strength"] = "@x¤<60¤",
+	["Encroachment"] = "<10¤",
 	["STOLEN: Smithing Tuyere and Lookout's Spyglass"] = "<48¤",
 	["Poison Water"] = "<5¤",
 	["Uldaman Reagent Run"] = "<42¤",
@@ -1569,12 +1580,12 @@ QuestLevel_Quest2Level = {
 	["Two Halves Become One"] = "<54¤",
 	["Patrol Schedules"] = "<37¤",
 	["Kitchen Assistance"] = "<57¤",
-	["The Tome of Divinity"] = ">13¤<12¤",
+	["Proving Grounds"] = "<60¤",
 	["Journey to the Crossroads"] = "<12¤",
 	["The Fargodeep Mine"] = "<7¤",
 	["Chapter IV"] = "<40¤",
 	["Finding the Antidote"] = "<9¤",
-	["Battle of Warsong Gulch"] = "@x¤<60¤",
+	["Strength of Mount Mugamba"] = "@x¤<60¤",
 	["Report to Anastasia"] = "<15¤",
 	["Tablet of the Seven"] = "<50¤",
 	["Stalking the Stalkers"] = "<48¤",
@@ -1582,7 +1593,7 @@ QuestLevel_Quest2Level = {
 	["Find OOX-17/TN!"] = "<48¤",
 	["Lost in Battle"] = "<20¤",
 	["From The Wreckage...."] = "<8¤",
-	["Screecher Spirits"] = "<44¤",
+	["The Hunter's Path"] = "<10¤",
 	["Curse These Fat Fingers"] = "<49¤",
 	["Signet of the Dukes"] = "@x¤<60¤",
 	["Fungal Spores"] = "<15¤",
@@ -1596,7 +1607,7 @@ QuestLevel_Quest2Level = {
 	["Handle With Care"] = "<47¤",
 	["The Darkreaver Menace"] = "@x¤<60¤",
 	["Chasing A-Me 01"] = "<53¤",
-	["Call of Water"] = ">23¤<20¤",
+	["Aurel Goldleaf"] = "@x¤<60¤",
 	["Libram of Protection"] = "@x¤<60¤",
 	["The Heart of Hakkar"] = "<60¤",
 	["Disrupt the Attacks"] = "<12¤",
@@ -1614,18 +1625,18 @@ QuestLevel_Quest2Level = {
 	["Raptor Horns"] = "<18¤",
 	["Hidden Secrets"] = "<38¤",
 	["Giant Goblin Eggs!"] = "@x¤<60¤",
-	["The Scourge Cauldrons"] = "<53¤",
+	["The Mithril Kid"] = "<45¤",
 	["Wastewander Justice"] = "<43¤",
 	["The Horn of the Beast"] = "@x¤<43¤",
 	["Scarab Shells"] = "@x¤<45¤",
-	["WANTED: Andre Firebeard"] = "<45¤",
-	["The Strength of Corruption"] = "<52¤",
+	["In Dreams"] = "@x¤<60¤",
+	["Enchanted Thorium Platemail: Volume I"] = "@x¤<60¤",
 	["The Dunemaul Compound"] = "<49¤",
 	["The Night Watch"] = "<24¤",
 	["Back to Thunder Bluff"] = "<10¤",
 	["Mother's Milk"] = "@x¤<60¤",
 	["[60D] The Archivist"] = "@x¤<60¤",
-	["Barov Family Fortune"] = "@x¤<60¤",
+	["Trial of the Sea Lion"] = "<16¤",
 	["Mazzranache"] = "<8¤",
 	["An Earnest Proposition"] = "@x¤<60¤",
 	["Grimtotem Spying"] = "<28¤",
@@ -1679,7 +1690,7 @@ QuestLevel_Quest2Level = {
 	["A Troubled Spirit"] = "<52¤",
 	["Forging the Shaft"] = "<48¤",
 	["[50] A Call to Arms: The Plaguelands!"] = "<50¤",
-	["Aquatic Form"] = "<16¤",
+	["Etched Parchment"] = "<1¤",
 	["Securing the Supply Lines"] = "<55¤",
 	["Target: Dalson's Tears"] = "<55¤",
 	["The Flesh Does Not Lie"] = "@x¤<60¤",
@@ -1688,20 +1699,20 @@ QuestLevel_Quest2Level = {
 	["A Bijou for Zanza"] = "<60¤",
 	["Skulk Rock Clean-up"] = "<48¤",
 	["Dearest Colara,"] = "<70¤",
-	["Body and Heart"] = "<10¤",
+	["Meats to Orgrimmar"] = "<10¤",
 	["Binding the Dreadnaught"] = "<60¤",
 	["Lord Grayson Shadowbreaker"] = "<60¤",
 	["Snapjaws, Mon!"] = "<50¤",
 	["The Fate of Ramaladni"] = "@x¤<60¤",
 	["Journey to the Marsh"] = "<38¤",
 	["Job Opening: Guard Captain of Revantusk Village"] = "@x¤<51¤",
-	["Triage"] = "<45¤",
-	["The Forgotten Pools"] = "<13¤",
+	["[60D] The Madness Within"] = "@x¤<60¤",
+	["What the Flux?"] = "<50¤",
 	["Tharil'zun"] = "@x¤<25¤",
 	["A Little Luck"] = "<60¤",
 	["The Battle for Alterac"] = "@x¤<60¤",
 	["They Call Me \"The Rooster\""] = "<60¤",
-	["What Comes Around..."] = "@x¤<25¤",
+	["Hypercapacitor Gizmo"] = "@x¤<30¤",
 	["Paragons of Power: The Haruspex's Tunic"] = "@x¤<60¤",
 	["Ship Schedules"] = "<45¤",
 	["The Ogres of Feralas"] = ">44¤<43¤",
@@ -1728,7 +1739,7 @@ QuestLevel_Quest2Level = {
 	["Return to Primal Torntusk"] = "@x¤<51¤",
 	["Wild Leather Shoulders"] = "<45¤",
 	["[60] The Battle for Alterac"] = "@x¤<60¤",
-	["Abyssal Contacts"] = "@x¤<60¤",
+	["A Boar's Vitality"] = "<50¤",
 	["Bad Medicine"] = "<34¤",
 	["[60] Invaders of Alterac Valley"] = "@x¤<60¤",
 	["The Apes of Un'Goro"] = "<55¤",
@@ -1750,9 +1761,9 @@ QuestLevel_Quest2Level = {
 	["Bloodscalp Ears"] = "<35¤",
 	["Big Game Hunter"] = "@x¤<43¤",
 	["The Gordunni Scroll"] = "<43¤",
-	["Dreadmaul Rock"] = "<52¤",
+	["Abyssal Crests"] = "@x¤<60¤",
 	["Moonglade"] = "<10¤",
-	["Hunt the Savages"] = "<48¤",
+	["Wharfmaster Dizzywig"] = "<11¤",
 	["Supplies for the Crossroads"] = "<14¤",
 	["Bor Wildmane"] = "@x¤<60¤",
 	["Cannibalistic Cousins"] = "<48¤",
@@ -1768,287 +1779,287 @@ QuestLevel_Quest2Level = {
 	["Kobold Camp Cleanup"] = "<2¤",
 	["The Pack Mistress"] = "@x¤<59¤",
 	["A Call to Arms: The Plaguelands!"] = "<50¤",
-	["Message to the Wildhammer"] = "@x¤<48¤",
+	["Super Sticky"] = "<54¤",
 	["The Deserter"] = "<59¤",
 	["Writ of Safe Passage"] = "<60¤",
 	["Clear the Way"] = "<52¤",
 	["A Lesson to Learn"] = "<16¤",
 	["Study of the Elements: Rock"] = ">42¤<37¤",
 	["Vilebranch Hooligans"] = "<48¤",
-	["Lords of the Council"] = "@x¤<60¤",
+	["JOB OPPORTUNITY: Culling the Competition"] = "<48¤",
 	["Ledger from Tanaris"] = "<46¤",
 	["Hive'Ashi Scout Report"] = "@x¤<60¤",
-	["En-Ay-Es-Tee-Why"] = "@x¤<59¤",
+	["Assassination Plot"] = "<28¤",
 	["Southsea Freebooters"] = "<14¤",
-	["Badlands Reagent Run"] = "<39¤",
-	["Chapter III"] = "<40¤",
-	["Into The Maw of Madness"] = "@x¤<60¤",
-	["Blackhand's Command"] = "@x¤<60¤",
+	["Heeding the Call"] = "<10¤",
+	["Raptor Thieves"] = "<13¤",
+	["Zukk'ash Infestation"] = "<45¤",
+	["Azure Templar"] = "@x¤<60¤",
 	["Only One May Rise"] = "@x¤<60¤",
-	["Taming the Beast"] = "<10¤",
-	["The Battle Plans"] = "<43¤",
-	["[60] Capture a Mine"] = "@x¤<60¤",
+	["Screecher Spirits"] = "<44¤",
+	["Call of Water (Part 6)"] = "<23¤",
+	["Redemption"] = "<56¤",
 	["The Everlook Report"] = "<52¤",
 	["The Vile Reef"] = "@x¤<37¤",
-	["Scythe of the Unseen Path"] = "@x¤<60¤",
+	["The Scourge Cauldrons"] = "<53¤",
 	["Mok'thardin's Enchantment"] = ">41¤<38¤",
-	["Doctor Theolen Krastinov, the Butcher"] = "@x¤<60¤",
-	["Redemption"] = "<56¤",
-	["Investigate the Alchemist Shop"] = "<16¤",
+	["Invaders of Alterac Valley"] = "@x¤<60¤",
+	["A Humble Task"] = "<2¤",
+	["Demon Dogs"] = "<56¤",
 	["Beware of Pterrordax"] = "<55¤",
-	["Strength of Mount Mugamba"] = "@x¤<60¤",
-	["[52D] KILL ON SIGHT: Dark Iron Dwarves"] = "@x¤<52¤",
-	["Supplies to Private Thorsen"] = "<32¤",
+	["The Price of Shoes"] = "<18¤",
+	["Dearest Elenia,"] = "<70¤",
+	["The Art of the Armorsmith"] = "<40¤",
 	["Galvan's Finest Pupil"] = "<45¤",
-	["Simple Parchment"] = "<1¤",
+	["Enemy Booty"] = "@x¤<60¤",
 	["Rabine Saturna"] = "<55¤",
 	["Wild Leather Armor"] = "<45¤",
-	["Tiara of the Deep"] = "@x¤<46¤",
-	["Dearest Elenia,"] = "<70¤",
-	["Twilight Geolords"] = "<60¤",
-	["Speaking of Fortitude"] = "<24¤",
-	["Craftsman's Writ"] = "<60¤",
-	["Expert Blacksmith!"] = "<45¤",
-	["Elmore's Task"] = "<15¤",
-	["All Along the Watchtowers"] = "@x¤<56¤",
-	["Emphasis on Sacrifice"] = "<60¤",
-	["Stormpike's Delivery"] = "<15¤",
-	["Heeding the Call"] = "<10¤",
-	["Stepping Up Security"] = "<57¤",
-	["Capture a Mine"] = "@x¤<60¤",
-	["Paragons of Power: The Haruspex's Bracers"] = "@x¤<60¤",
-	["Voodoo Feathers"] = "@x¤<52¤",
-	["Abyssal Crests"] = "@x¤<60¤",
-	["The Graveyards of Alterac"] = "@x¤<60¤",
-	["Super Sticky"] = "<54¤",
-	["Panther Mastery"] = "@¤>40¤<31¤",
-	["Azure Templar"] = "@x¤<60¤",
-	["Enemy Booty"] = "@x¤<60¤",
-	["Target: Hive'Zora Waywatchers"] = "@x¤<60¤",
-	["Return to the Bulwark"] = ">55¤<53¤",
-	["Thun'grim Firegaze"] = "<10¤",
-	["Tinkmaster Overspark"] = "@x¤<26¤",
-	["Dukes of the Council"] = "@x¤<60¤",
-	["Da Voodoo"] = "@x¤<52¤",
-	["Wharfmaster Dizzywig"] = "<11¤",
-	["The Sunken Temple"] = "@x¤<51¤",
-	["Hidden Enemies"] = "@¤>16¤<12¤",
-	["The Lunar Festival"] = "<70¤",
+	["Cenarion Battlegear"] = "<60¤",
+	["The Return of Korrak"] = "@x¤<60¤",
 	["Split Bone Necklace"] = "<42¤",
-	["The Elemental Equation"] = "<60¤",
+	["Speaking of Fortitude"] = "<24¤",
+	["Scholomance"] = "<55¤",
+	["The Sunken Temple"] = "@x¤<51¤",
+	["Elmore's Task"] = "<15¤",
+	["Dreadmaul Rock"] = "<52¤",
+	["Lard Lost His Lunch"] = "<49¤",
+	["Stormpike's Delivery"] = "<15¤",
+	["Message to the Wildhammer"] = "@x¤<48¤",
+	["Stepping Up Security"] = "<57¤",
+	["Avenging the Fallen"] = "<48¤",
+	["The Lost Tools"] = "<16¤",
+	["Voodoo Feathers"] = "@x¤<52¤",
+	["Call of Water"] = ">23¤<20¤",
+	["Welcome to the Jungle"] = "<30¤",
+	["Target: Hive'Zora Waywatchers"] = "@x¤<60¤",
+	["Panther Mastery"] = "@¤>40¤<31¤",
+	["Dukes of the Council"] = "@x¤<60¤",
+	["Twilight Geolords"] = "<60¤",
+	["Hunt the Savages"] = "<48¤",
+	["The Lunar Festival"] = "<70¤",
+	["Martek the Exiled"] = "<35¤",
+	["Tinkmaster Overspark"] = "@x¤<26¤",
+	["Wanted: Vile Priestess Hexx and Her Minions"] = "@x¤<51¤",
+	["Da Voodoo"] = "@x¤<52¤",
+	["[52D] KILL ON SIGHT: Dark Iron Dwarves"] = "@x¤<52¤",
+	["Wind Rider"] = "<29¤",
+	["Hidden Enemies"] = "@¤>16¤<12¤",
+	["The Emerald Dream..."] = "@x¤<60¤",
+	["Sacred Fire"] = "<27¤",
+	["Rest and Relaxation"] = "<5¤",
 	["Deadly Desert Venom"] = "<55¤",
 	["Spirit Totem"] = "<52¤",
 	["Arugal Must Die"] = "@x¤<27¤",
-	["The Emerald Dream..."] = "@x¤<60¤",
-	["Rest and Relaxation"] = "<5¤",
+	["Return to the Bulwark"] = ">55¤<53¤",
+	["Troll Temper"] = "@x¤<45¤",
 	["Hive'Regal Scout Report"] = "@x¤<60¤",
-	["Dark Ceremony"] = "<46¤",
-	["In Dreams"] = "@x¤<60¤",
-	["Better Late Than Never"] = "<52¤",
-	["Squire Maltrake"] = "<50¤",
-	["The Defias Brotherhood"] = "<18¤",
-	["Dark Vessels"] = "@x¤<50¤",
-	["Target: Hive'Zora Reavers"] = "@x¤<60¤",
+	["Selling Fish"] = "<21¤",
+	["Elven Legends"] = "@x¤<60¤",
 	["Melor Sends Word"] = "<30¤",
-	["Aurel Goldleaf"] = "@x¤<60¤",
+	["Alien Egg"] = "<26¤",
+	["Kibler's Exotic Pets"] = "@x¤<59¤",
+	["Dark Vessels"] = "@x¤<50¤",
+	["The Perfect Poison"] = "@x¤<60¤",
+	["The Green Hills of Stranglethorn"] = "<40¤",
+	["Retrieval for Mauren"] = "<26¤",
 	["Barbecued Buzzard Wings"] = "<40¤",
 	["Enchanted South Seas Kelp"] = "@x¤<60¤",
-	["[60R] Scythe of the Unseen Path"] = "@x¤<60¤",
+	["The Dread Citadel - Naxxramas"] = "<60¤",
 	["Tran'rek"] = "@x¤<45¤",
-	["KILL ON SIGHT: High Ranking Dark Iron Officials"] = "@x¤<54¤",
+	["Report to Kadrak"] = "<19¤",
 	["Torwa Pathfinder"] = "<52¤",
 	["Veteran Uzzek"] = "<10¤",
 	["Gammerita, Mon!"] = "@x¤<48¤",
-	["The Perfect Poison"] = "@x¤<60¤",
+	["KILL ON SIGHT: High Ranking Dark Iron Officials"] = "@x¤<54¤",
 	["Of Lost Honor"] = "<58¤",
 	["Tribes at War"] = "<21¤",
 	["Smelt On, Smelt Off"] = "<45¤",
-	["Speak with Un'thuwa"] = "<10¤",
-	["The Art of the Armorsmith"] = "<40¤",
-	["The Hunter's Path"] = "<10¤",
+	["All Along the Watchtowers"] = "@x¤<56¤",
+	["Scythe of the Unseen Path"] = "@x¤<60¤",
+	["Goldleaf's Discovery"] = "<60¤",
 	["Pacify the Centaur"] = "<25¤",
-	["To Gadgetzan You Go!"] = "<45¤",
+	["Larion and Muigin"] = "<52¤",
 	["The Altar of Zul"] = "<48¤",
 	["Speak with Deino"] = "<26¤",
-	["More Wastewander Justice"] = "<44¤",
-	["The Mithril Kid"] = "<45¤",
+	["Bijou's Belongings"] = "@x¤<59¤",
+	["[55D] The Heart of the Mountain"] = "@x¤<55¤",
 	["Vengeance on the Northspring"] = "<50¤",
-	["Goldleaf's Discovery"] = "<60¤",
-	["Scarlet Subterfuge"] = "@x¤<60¤",
+	["Doctor Theolen Krastinov, the Butcher"] = "@x¤<60¤",
+	["Craftsman's Writ"] = "<60¤",
 	["Paragons of Power: The Vindicator's Breastplate"] = "@x¤<60¤",
-	["Krazek's Cookery"] = "<37¤",
-	["Sharing the Land"] = "<6¤",
-	["[60D] Houses of the Holy"] = "@x¤<60¤",
+	["Crystals of Power"] = "<53¤",
+	["Jungle Secrets"] = "<33¤",
+	["Ziz Fizziks"] = "<21¤",
 	["The Heart of the Mountain"] = "@x¤<55¤",
 	["[60D] The Flesh Does Not Lie"] = "@x¤<60¤",
 	["The Windwatcher"] = "<30¤",
 	["Pusillin and the Elder Azj'Tordin"] = "@x¤<58¤",
-	["Dearest Natalia"] = "@x¤<60¤",
+	["Simple Parchment"] = "<1¤",
 	["Rescue OOX-09/HL!"] = "<48¤",
 	["Enchanted Thorium Platemail: Volume II"] = "@x¤<60¤",
 	["A Threat Within"] = "<1¤",
-	["Urok Doomhowl"] = "@x¤<60¤",
-	["Of Love and Family"] = "@¤>60¤<58¤",
-	["Egg Hunt"] = "<22¤",
-	["The Hidden Key"] = "<37¤",
+	["A Little Slime Goes a Long Way"] = "<52¤",
+	["Kidnapped Elder Torntusk!"] = "@x¤<51¤",
+	["The Tome of Divinity"] = ">13¤<12¤",
+	["A Supernatural Device"] = "<60¤",
 	["The Treasure of the Shen'dralar"] = "@x¤<60¤",
-	["A Grim Discovery"] = "<45¤",
 	["[58D] Plagued Hatchlings"] = "@x¤<58¤",
+	["Scarlet Subterfuge"] = "@x¤<60¤",
 	["Cryptstalker Armor Doesn't Make Itself..."] = "<60¤",
-	["A Task Unfinished"] = "<5¤",
-	["Selling Fish"] = "<21¤",
-	["Alien Ecology"] = "<52¤",
-	["The Sacred Flame"] = "<25¤",
+	["Separation Anxiety"] = "@x¤<50¤",
+	["Plagued Hatchlings"] = "@x¤<58¤",
+	["Hammerfall"] = "<34¤",
+	["Expert Blacksmith!"] = "<45¤",
 	["Dangers of the Windfury"] = "<8¤",
-	["Target: Writhing Haunt"] = "<55¤",
-	["Alien Egg"] = "<26¤",
+	["Necklace Recovery"] = "@x¤<41¤",
+	["The Defias Brotherhood"] = "<18¤",
 	["Volunteer's Battlegear"] = "<60¤",
 	["Return to Witch Doctor Uzer'i"] = "<45¤",
 	["Cut Arathor Supply Lines"] = "@x¤<35¤",
 	["Searching for the Lost Satchel"] = "@x¤<16¤",
-	["Material Assistance"] = "<60¤",
+	["The Hidden Key"] = "<37¤",
 	["A Peon's Burden"] = "<5¤",
 	["Elemental Mastery"] = "<52¤",
 	["Skeletal Fragments"] = "<57¤",
 	["Gordunni Cobalt"] = "<43¤",
 	["Poisoned Water"] = "<56¤",
-	["[55D] The Heart of the Mountain"] = "@x¤<55¤",
-	["Houses of the Holy"] = "@x¤<60¤",
-	["Hypercapacitor Gizmo"] = "@x¤<30¤",
-	["The Killing Fields"] = "<15¤",
+	["[60R] Scythe of the Unseen Path"] = "@x¤<60¤",
+	["Your Place In The World"] = "<1¤",
+	["Egg Hunt"] = "<22¤",
+	["Hostile Takeover"] = "<36¤",
 	["Expedition Salvation"] = "<53¤",
-	["Fall From Grace"] = "<50¤",
+	["The Fare of Lar'korwi"] = "<53¤",
 	["The Gordunni Orb"] = "<47¤",
-	["What the Flux?"] = "<50¤",
+	["The Forgotten Pools"] = "<13¤",
 	["Training the Beast"] = "<10¤",
-	["Call of Earth"] = "<4¤",
-	["The Return of Korrak"] = "@x¤<60¤",
-	["A Little Slime Goes a Long Way"] = "<52¤",
-	["Chapter II"] = "<40¤",
+	["Triage"] = "<45¤",
+	["A New Cloak's Sheen"] = "<45¤",
+	["Krazek's Cookery"] = "<37¤",
+	["En-Ay-Es-Tee-Why"] = "@x¤<59¤",
 	["The Twilight Mystery"] = "<58¤",
-	["Stranglethorn Fever"] = "<45¤",
+	["Chapter II"] = "<40¤",
 	["Special Forces"] = "<38¤",
-	["Returning the Lost Satchel"] = "@x¤<16¤",
+	["The Battle Plans"] = "<43¤",
 	["Speak with our Quartermaster"] = "@x¤<60¤",
 	["Proof of Deed"] = "@x¤<43¤",
 	["Consumed by Hatred"] = "<20¤",
-	["Preparation for Ceremony"] = "<11¤",
-	["Hammerfall"] = "<34¤",
-	["Assassination Plot"] = "<28¤",
-	["Betrayed"] = "<53¤",
-	["Bijou's Belongings"] = "@x¤<59¤",
-	["Invaders of Alterac Valley"] = "@x¤<60¤",
-	["Hostile Takeover"] = "<36¤",
-	["The Fare of Lar'korwi"] = "<53¤",
-	["The Demon Scarred Cloak"] = "<12¤",
+	["Alien Ecology"] = "<52¤",
+	["The Flame's Casing"] = "@x¤<50¤",
+	["WANTED: Andre Firebeard"] = "<45¤",
+	["Barov Family Fortune"] = "@x¤<60¤",
+	["Material Assistance"] = "<60¤",
+	["[60D] Houses of the Holy"] = "@x¤<60¤",
+	["The Killing Fields"] = "<15¤",
+	["Fall From Grace"] = "<50¤",
+	["Body and Heart"] = "<10¤",
 	["The Last Element"] = "@x¤<54¤",
 	["Crystal in the Mountains"] = "<35¤",
-	["Desert Recipe"] = "<57¤",
+	["The Demon Scarred Cloak"] = "<12¤",
 	["Chillwind Point"] = "<52¤",
 	["Shadows of Doom"] = "@x¤<60¤",
-	["Darkmoon Warlords Deck"] = "<55¤",
+	["Dark Iron Legacy"] = "@x¤<52¤",
 	["The Disgraced One"] = "<50¤",
 	["The Mithril Order"] = "<40¤",
-	["Raptor Thieves"] = "<13¤",
+	["Chapter III"] = "<40¤",
 	["Ribbly Screwspigot"] = "@x¤<53¤",
-	["Stealing Knowledge"] = "<52¤",
-	["Bookie Herod"] = "<35¤",
+	["Towers and Bunkers"] = "@x¤<60¤",
+	["Coolant Heads Prevail"] = "<37¤",
 	["Sting of the Scorpid"] = "<3¤",
 	["A Humble Offering"] = "<60¤",
-	["Etched Parchment"] = "<1¤",
-	["Target: Felstone Field"] = "<53¤",
+	["Aquatic Form"] = "<16¤",
+	["Bookie Herod"] = "<35¤",
 	["Return to Chillwind Camp"] = "<53¤",
-	["Dark Iron Legacy"] = "@x¤<52¤",
+	["Darkmoon Warlords Deck"] = "<55¤",
+	["Desert Recipe"] = "<57¤",
 	["The Ashenvale Hunt"] = "<20¤",
-	["Meats to Orgrimmar"] = "<10¤",
 	["The Thirsty Goblin"] = "<49¤",
-	["Trial of the Sea Lion"] = "<16¤",
-	["Alpha Strike"] = "<43¤",
-	["Call of Water (Part 6)"] = "<23¤",
+	["Betrayed"] = "<53¤",
+	["Tiger Mastery"] = ">37¤<31¤",
+	["Returning the Lost Satchel"] = "@x¤<16¤",
+	["Stranglethorn Fever"] = "<45¤",
 	["[60R] The Legend of Korrak"] = "@x¤<60¤",
-	["The Haunted Isle"] = "<37¤",
-	["Dark Heart"] = "@x¤<50¤",
-	["[60D] The Madness Within"] = "@x¤<60¤",
+	["Blackhand's Command"] = "@x¤<60¤",
+	["Call of Earth"] = "<4¤",
 	["Krastinov's Bag of Horrors"] = "@x¤<60¤",
 	["The Power to Destroy..."] = "@x¤<16¤",
 	["Williden's Journal"] = "<50¤",
-	["Path of Defense"] = "<10¤",
-	["Larion and Muigin"] = "<52¤",
-	["Your Place In The World"] = "<1¤",
+	["What Comes Around..."] = "@x¤<25¤",
+	["Taming the Beast"] = "<10¤",
+	["Warlord's Command"] = "@x¤<60¤",
 	["The Book of Ur"] = "@x¤<26¤",
-	["Necklace Recovery"] = "@x¤<41¤",
+	["Target: Writhing Haunt"] = "<55¤",
 	["Clamlette Surprise"] = "<45¤",
-	["Tiger Mastery"] = ">37¤<31¤",
-	["The Lost Tools"] = "<16¤",
-	["The Flame's Casing"] = "@x¤<50¤",
+	["Houses of the Holy"] = "@x¤<60¤",
+	["A Grim Discovery"] = "<45¤",
+	["A Task Unfinished"] = "<5¤",
 	["The Hunt Continues"] = "<3¤",
-	["Proving Grounds"] = "<60¤",
-	["In Defense of Frostwolf"] = "@x¤<60¤",
+	["The Sacred Flame"] = "<25¤",
+	["Dearest Natalia"] = "@x¤<60¤",
 	["Scarlet Diversions"] = "<53¤",
-	["A Humble Task"] = "<2¤",
+	["[60] Capture a Mine"] = "@x¤<60¤",
 	["Camp Mojache"] = "@x¤<57¤",
 	["The Bloodsail Buccaneers"] = "<41¤",
-	["Jungle Secrets"] = "<33¤",
+	["Sharing the Land"] = "<6¤",
 	["Stinglasher"] = "<47¤",
-	["Luck Be With You"] = "@x¤<60¤",
-	["The Great Fras Siabi"] = "@x¤<60¤",
-	["Free Knot!"] = "@x¤<60¤",
+	["Abyssal Contacts"] = "@x¤<60¤",
 	["Disharmony of Flame"] = "@x¤<52¤",
 	["Forged Steel"] = "<10¤",
+	["Disharmony of Fire"] = "@x¤<56¤",
+	["Path of Defense"] = "<10¤",
 	["Rig Wars"] = "@x¤<35¤",
 	["Water Pouch Bounty"] = "<44¤",
-	["Wind Rider"] = "<29¤",
+	["To Gadgetzan You Go!"] = "<45¤",
 	["Sarkoth"] = "<5¤",
 	["Divine Retribution"] = "<48¤",
-	["Retrieval for Mauren"] = "<26¤",
-	["Report to Kadrak"] = "<19¤",
+	["Dark Ceremony"] = "<46¤",
+	["Supplies to Private Thorsen"] = "<32¤",
 	["Secret Communication"] = "<60¤",
 	["Spirit of the Boar"] = "<50¤",
-	["Investigate the Camp"] = "<32¤",
+	["Badlands Reagent Run"] = "<39¤",
 	["Skullsplitter Tusks"] = "<42¤",
-	["Woodpaw Investigation"] = "<43¤",
-	["Kibler's Exotic Pets"] = "@x¤<59¤",
+	["The Elemental Equation"] = "<60¤",
+	["Investigate the Camp"] = "<32¤",
 	["A Good Head On Your Shoulders"] = "<45¤",
 	["The Admiral's Orders"] = "<7¤",
-	["Plagued Hatchlings"] = "@x¤<58¤",
+	["Squire Maltrake"] = "<50¤",
 	["Blackrock Menace"] = "<21¤",
-	["Wanted: Vile Priestess Hexx and Her Minions"] = "@x¤<51¤",
-	["Plainstrider Menace"] = "<12¤",
-	["Trial at the Field of Giants"] = "<20¤",
+	["Into The Maw of Madness"] = "@x¤<60¤",
+	["In Defense of Frostwolf"] = "@x¤<60¤",
+	["Preparation for Ceremony"] = "<11¤",
 	["Trouble at the Docks"] = "<18¤",
-	["Martek the Exiled"] = "<35¤",
+	["Thun'grim Firegaze"] = "<10¤",
 	["Waters of Xavian"] = "<26¤",
 	["Trial of the Lake"] = "<16¤",
-	["Zukk'ash Infestation"] = "<45¤",
-	["Zanzil's Secret"] = "<44¤",
-	["Cenarion Battlegear"] = "<60¤",
-	["Sacred Fire"] = "<27¤",
+	["Serpentbloom"] = "<18¤",
+	["Alpha Strike"] = "<43¤",
+	["Warrior Kinship"] = "<52¤",
+	["Tiara of the Deep"] = "@x¤<46¤",
 	["Raising Spirits"] = "<34¤",
-	["The Missing Shipment"] = "<14¤",
-	["Avenging the Fallen"] = "<48¤",
+	["Therzok"] = "<10¤",
+	["Capture a Mine"] = "@x¤<60¤",
 	["Under the Shadow"] = "<60¤",
-	["A Threat in Feralas"] = "<43¤",
-	["Lard Lost His Lunch"] = "<49¤",
-	["Ziz Fizziks"] = "<21¤",
-	["Scholomance"] = "<55¤",
+	["Zanzil's Secret"] = "<44¤",
+	["The Graveyards of Alterac"] = "@x¤<60¤",
+	["Emphasis on Sacrifice"] = "<60¤",
+	["Free Knot!"] = "@x¤<60¤",
 	["Power Stones"] = "<36¤",
-	["Encroachment"] = "<10¤",
-	["The Price of Shoes"] = "<18¤",
-	["A Boar's Vitality"] = "<50¤",
-	["The Essence of Eranikus"] = "@x¤<55¤",
-	["Disharmony of Fire"] = "@x¤<56¤",
-	["Witherbark Cages"] = "<45¤",
-	["Demon Dogs"] = "<56¤",
-	["War on the Shadowsworn"] = "<52¤",
+	["The Missing Shipment"] = "<14¤",
+	["Vyral the Vile"] = "<60¤",
 	["Target: Hive'Zora Hive Sisters"] = "@x¤<60¤",
-	["Enchanted Thorium Platemail: Volume I"] = "@x¤<60¤",
-	["Separation Anxiety"] = "@x¤<50¤",
-	["Dwarven Digging"] = "<8¤",
-	["Welcome to the Jungle"] = "<30¤",
-	["The Spy Revealed!"] = "<37¤",
 	["Booty Bay or Bust!"] = "<40¤",
+	["Sickle of Unyielding Strength"] = "@x¤<60¤",
+	["Witherbark Cages"] = "<45¤",
+	["Investigate the Alchemist Shop"] = "<16¤",
+	["War on the Shadowsworn"] = "<52¤",
+	["Paragons of Power: The Haruspex's Bracers"] = "@x¤<60¤",
+	["Battle of Warsong Gulch"] = "@x¤<60¤",
+	["The Essence of Eranikus"] = "@x¤<55¤",
+	["Dwarven Digging"] = "<8¤",
+	["Luck Be With You"] = "@x¤<60¤",
+	["The Spy Revealed!"] = "<37¤",
+	["The Strength of Corruption"] = "<52¤",
 	["A Collection of Heads"] = "@x¤<60¤",
 	["Great Bear Spirit"] = "<10¤",
 	["Need for a Cure"] = "<9¤",
-	["JOB OPPORTUNITY: Culling the Competition"] = "<48¤",
+	["Lords of the Council"] = "@x¤<60¤",
 }

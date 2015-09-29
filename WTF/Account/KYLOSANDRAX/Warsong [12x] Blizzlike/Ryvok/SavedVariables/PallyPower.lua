@@ -1,9 +1,9 @@
 
 PP_PerUser = {
-	["smartbuffs"] = 1,
+	["scalebar"] = 1.048861077895351,
 	["scalemain"] = 1,
 	["scanfreq"] = 30,
-	["scalebar"] = 1.048861077895351,
+	["smartbuffs"] = 1,
 	["scanperframe"] = 1,
 	["chatfeedback"] = 1,
 }

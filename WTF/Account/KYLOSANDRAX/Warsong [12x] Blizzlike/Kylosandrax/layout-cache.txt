@@ -15,7 +15,7 @@ FrameLevel: 15
 X: 756
 Y: -746
 Frame: ATSWFrame
-FrameLevel: 63
+FrameLevel: 56
 X: 354
 Y: -102
 Frame: ATSWCSFrame
@@ -84,7 +84,7 @@ X: 903
 Y: -87
 Frame: FuBarPluginMetaMapFrame
 FrameLevel: 7
-X: 638
+X: 636
 Y: 4
 Frame: PowaBarConfigFrame
 FrameLevel: 1

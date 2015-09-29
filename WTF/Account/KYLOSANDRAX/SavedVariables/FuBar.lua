@@ -45,6 +45,7 @@ FuBar2DB = {
 							[14] = "MetaMap",
 							[15] = "TinyTipFu",
 							[16] = "sRaidFrames Improved 1.10",
+							[17] = "sRaidFrames Improved 1.25",
 						},
 					},
 					["widthPercent"] = 1,
@@ -77,7 +78,6 @@ FuBar2DB = {
 					["category"] = "Other",
 				},
 			},
-			["leftSpacing"] = 20,
 			["tooltip"] = {
 				["fontSizePercent"] = 1,
 			},
@@ -87,6 +87,7 @@ FuBar2DB = {
 			["thickness"] = 7,
 			["transparency"] = 0.5,
 			["overflow"] = false,
+			["autohideTop"] = false,
 			["places"] = {
 				["center"] = {
 				},
@@ -95,7 +96,7 @@ FuBar2DB = {
 				["left"] = {
 				},
 			},
-			["autohideTop"] = false,
+			["leftSpacing"] = 20,
 		},
 	},
 }

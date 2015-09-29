@@ -15,11 +15,11 @@ FrameLevel: 1
 X: 1336
 Y: -626
 Frame: ATSWFrame
-FrameLevel: 77
+FrameLevel: 28
 X: 352
 Y: -107
 Frame: ATSWCSFrame
-FrameLevel: 19
+FrameLevel: 20
 X: 0
 Y: -104
 Frame: Carni_ECB_1

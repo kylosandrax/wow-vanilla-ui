@@ -20,8 +20,8 @@ ZorlenConfig = {
 			},
 			["Concussive Shot"] = {
 				["Guard Mol'dar"] = "yes",
-				["Qiraji Gladiator"] = "yes",
 				["Cho'Rush the Observer"] = "yes",
+				["Qiraji Gladiator"] = "yes",
 			},
 			["Serpent Sting"] = {
 				["Ironbark Protector"] = "yes",
@@ -64,18 +64,16 @@ ZorlenConfig = {
 		},
 		["food_off"] = true,
 		["Immune"] = {
-			["Taunt"] = {
-				["Ossirian the Unscarred"] = "yes",
-				["Onyxia"] = "yes",
+			["Shield Slam"] = {
 			},
 			["Intimidating Shout"] = {
 				["Skeletal Shocktrooper"] = "yes",
 				["Black Guard Sentry"] = "yes",
-				["Skeletal Guardian"] = "yes",
-				["Skeletal Highborne"] = "yes",
 				["Skeletal Sorcerer"] = "yes",
-				["Gurubashi Champion"] = "yes",
+				["Skeletal Highborne"] = "yes",
+				["Skeletal Guardian"] = "yes",
 				["Splintered Skeleton"] = "yes",
+				["Gurubashi Champion"] = "yes",
 				["Ravaged Cadaver"] = "yes",
 				["Soulflayer"] = "yes",
 			},
@@ -105,12 +103,12 @@ ZorlenConfig = {
 				["Guard Slip'kik"] = "yes",
 				["Maleki the Pallid"] = "yes",
 				["Gurubashi Axe Thrower"] = "yes",
-				["King Gordok"] = "yes",
-				["Cho'Rush the Observer"] = "yes",
+				["General Angerforge"] = "yes",
+				["Baron Rivendare"] = "yes",
 				["Illyanna Ravenoak"] = "yes",
 				["Gurubashi Champion"] = "yes",
-				["Baron Rivendare"] = "yes",
-				["General Angerforge"] = "yes",
+				["Cho'Rush the Observer"] = "yes",
+				["King Gordok"] = "yes",
 			},
 			["Disarm"] = {
 				["Warchief Rend Blackhand"] = "yes",
@@ -130,29 +128,31 @@ ZorlenConfig = {
 				["Ironbark Protector"] = "yes",
 				["Earth Elemental"] = "yes",
 				["Obsidian Destroyer"] = "yes",
-				["Lava Surger"] = "yes",
-				["Lava Annihilator"] = "yes",
 				["Wandering Forest Walker"] = "yes",
+				["Lava Annihilator"] = "yes",
+				["Blazing Fireguard"] = "yes",
 				["Mana Remnant"] = "yes",
 				["Warpwood Crusher"] = "yes",
 				["Pyroguard Emberseer"] = "yes",
-				["Blazing Fireguard"] = "yes",
+				["Lava Surger"] = "yes",
 				["Firelord"] = "yes",
 			},
 			["Piercing Howl"] = {
-				["Flame Imp"] = "yes",
+				["High Priestess Jeklik"] = "yes",
 				["Hukku"] = "yes",
 				["Jammal'an the Prophet"] = "yes",
 				["Dreamscythe"] = "yes",
-				["Baron Rivendare"] = "yes",
-				["High Priestess Jeklik"] = "yes",
-				["Gurubashi Bat Rider"] = "yes",
 				["Soulflayer"] = "yes",
+				["Flame Imp"] = "yes",
+				["Gurubashi Bat Rider"] = "yes",
+				["Baron Rivendare"] = "yes",
 			},
 			["Sunder Armor"] = {
 				["Lava Surger"] = "yes",
 			},
-			["Shield Slam"] = {
+			["Taunt"] = {
+				["Ossirian the Unscarred"] = "yes",
+				["Onyxia"] = "yes",
 			},
 		},
 	},
@@ -173,9 +173,9 @@ ZorlenConfig = {
 				["Mad Voidwalker"] = "yes",
 			},
 			["War Stomp"] = {
-				["Onyxia"] = "yes",
-				["Molten Giant"] = "yes",
 				["Lava Annihilator"] = "yes",
+				["Molten Giant"] = "yes",
+				["Onyxia"] = "yes",
 			},
 			["Bash"] = {
 				["Ohgan"] = "yes",
@@ -193,8 +193,8 @@ ZorlenConfig = {
 				["Golem Lord Argelmach"] = "yes",
 				["Wailing Banshee"] = "yes",
 				["Chromatic Elite Guard"] = "yes",
-				["Alzzin the Wildshaper"] = "yes",
 				["Hurley Blackbreath"] = "yes",
+				["Alzzin the Wildshaper"] = "yes",
 			},
 			["Turn Undead"] = {
 				["Wailing Banshee"] = "yes",
@@ -231,18 +231,18 @@ ZorlenConfig = {
 				["Crystal Fang"] = "yes",
 				["Lethtendris"] = "yes",
 			},
+			["Scorch"] = {
+				["Emperor Dagran Thaurissan"] = "yes",
+			},
 			["Frost Nova"] = {
 				["Hydrospawn"] = "yes",
-			},
-			["Frostbolt"] = {
-				["Hydrospawn"] = "yes",
-				["Hakkari Priest"] = "yes",
-				["Emperor Dagran Thaurissan"] = "yes",
 			},
 			["Counterspell"] = {
 				["Emperor Dagran Thaurissan"] = "yes",
 			},
-			["Scorch"] = {
+			["Frostbolt"] = {
+				["Hydrospawn"] = "yes",
+				["Hakkari Priest"] = "yes",
 				["Emperor Dagran Thaurissan"] = "yes",
 			},
 		},

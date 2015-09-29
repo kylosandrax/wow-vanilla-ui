@@ -2,123 +2,6 @@
 RDX5Data = {
 	["AutoPromoteList"] = {
 	},
-	["AggroMonitorEnabled"] = true,
-	["User"] = {
-		["ryvok|warsong [12x] blizzlike"] = {
-			["enabled"] = true,
-			["venc"] = {
-			},
-			["active_encounter"] = "default",
-			["enc_default"] = {
-				["mod_debuffs"] = {
-					["y"] = 1157.777913544159,
-					["x"] = 311.1111449233229,
-					["relevance"] = {
-					},
-					["slice"] = 1,
-					["show"] = 4,
-				},
-				["mod_assists"] = {
-					["auxarray"] = {
-					},
-					["mtarray"] = {
-					},
-				},
-				["mod_windows"] = {
-					["main tanks"] = {
-						["y"] = 847.7779510653628,
-						["shown"] = true,
-						["x"] = 1607.778318514398,
-					},
-					["raid healing"] = {
-						["y"] = 648.8889461626353,
-						["shown"] = false,
-						["x"] = 1611.111070915982,
-					},
-				},
-			},
-		},
-		["ryjax|warsong [12x] blizzlike"] = {
-			["enabled"] = true,
-			["venc"] = {
-			},
-			["active_encounter"] = "default",
-			["noesync"] = true,
-			["enc_default"] = {
-				["mod_debuffs"] = {
-					["y"] = 1147.777801498079,
-					["x"] = 196.6665075250069,
-					["relevance"] = {
-					},
-					["show"] = 4,
-					["slice"] = 1,
-					["filterConfig"] = {
-						["desync"] = 3,
-						["hp"] = false,
-						["classes"] = {
-							[1] = true,
-							[2] = true,
-							[3] = true,
-							[4] = true,
-							[5] = true,
-							[6] = true,
-							[7] = true,
-							[8] = true,
-							[9] = true,
-						},
-						["cg"] = true,
-						["groups"] = {
-							[1] = true,
-							[2] = true,
-							[3] = true,
-							[4] = true,
-							[5] = true,
-							[6] = true,
-							[7] = true,
-							[8] = true,
-						},
-						["mp"] = false,
-						["dead"] = 3,
-						["followdistance"] = 1,
-					},
-				},
-				["mod_assists"] = {
-					["auxarray"] = {
-					},
-					["mtarray"] = {
-					},
-				},
-				["mod_windows"] = {
-					["raid healing"] = {
-						["y"] = 625.9053422820111,
-						["shown"] = false,
-						["x"] = 1345.098206835768,
-					},
-					["main tanks"] = {
-						["y"] = 543.1349359545388,
-						["shown"] = false,
-						["x"] = 1355.980825888285,
-					},
-				},
-			},
-		},
-		["kashonar|warsong [12x] blizzlike"] = {
-			["enabled"] = true,
-			["venc"] = {
-			},
-			["enc_default"] = {
-				["mod_assists"] = {
-					["auxarray"] = {
-					},
-					["mtarray"] = {
-					},
-				},
-			},
-			["active_encounter"] = "default",
-		},
-	},
-	["BootstrapVer"] = 19,
-	["ImpliedTarget"] = 0,
 	["Global"] = {
 		["DataVersion"] = 12,
 		["fxLow"] = {
@@ -130,11 +13,11 @@ RDX5Data = {
 			["bDeathUpdateDelay"] = 0.25,
 			["hbFast"] = 0.2,
 			["mqDelay"] = 0.75,
-			["enableHOT"] = true,
-			["bAuraRealtimeSyncDelay"] = 2,
-			["bAuraTimerSyncDelay"] = 10,
-			["uiWindowUpdateDelay"] = 0.25,
 			["bAuraUpdateDelay"] = 0.25,
+			["bAuraRealtimeSyncDelay"] = 2,
+			["enableHOT"] = true,
+			["uiWindowUpdateDelay"] = 0.25,
+			["bAuraTimerSyncDelay"] = 10,
 		},
 		["vis"] = {
 			["cStatusText"] = {
@@ -142,10 +25,10 @@ RDX5Data = {
 				["g"] = 1,
 				["b"] = 1,
 			},
-			["cStaleData"] = {
-				["r"] = 0.3,
-				["g"] = 0.7,
-				["b"] = 0.7,
+			["cStatusTextFade"] = {
+				["r"] = 1,
+				["g"] = 0,
+				["b"] = 0,
 			},
 			["cWindowTitle"] = {
 				["r"] = 0.05,
@@ -167,10 +50,10 @@ RDX5Data = {
 				["g"] = 0,
 				["b"] = 1,
 			},
-			["cLinkdead"] = {
-				["r"] = 0.5,
-				["g"] = 0.5,
-				["b"] = 0.5,
+			["cEnemyHP"] = {
+				["r"] = 0,
+				["g"] = 1,
+				["b"] = 0,
 			},
 			["cEnemyHPFade"] = {
 				["r"] = 1,
@@ -209,75 +92,23 @@ RDX5Data = {
 				["g"] = 0,
 				["b"] = 0,
 			},
-			["cEnemyHP"] = {
-				["r"] = 0,
-				["g"] = 1,
-				["b"] = 0,
+			["cLinkdead"] = {
+				["r"] = 0.5,
+				["g"] = 0.5,
+				["b"] = 0.5,
 			},
 			["cFriendHP"] = {
 				["r"] = 0,
 				["g"] = 1,
 				["b"] = 0,
 			},
-			["cStatusTextFade"] = {
-				["r"] = 1,
-				["g"] = 0,
-				["b"] = 0,
+			["cStaleData"] = {
+				["r"] = 0.3,
+				["g"] = 0.7,
+				["b"] = 0.7,
 			},
 		},
 		["mod_windows"] = {
-			["main tanks"] = {
-				["smbtn"] = {
-					["sptitle"] = "swiftmend",
-					["iid"] = 4,
-				},
-				["slbtn"] = {
-					["sptitle"] = "holy light(rank 6)",
-					["iid"] = 4,
-				},
-				["sort"] = 2,
-				["srbtn"] = {
-					["sptitle"] = "flash of light(rank 6)",
-					["iid"] = 4,
-				},
-				["disp"] = 1,
-				["stext"] = 3,
-				["truncate"] = 5,
-				["layout"] = 1,
-				["width"] = 152.5184936523438,
-				["rbtn"] = {
-					["iid"] = 1,
-				},
-				["mbtn"] = {
-					["iid"] = 1,
-				},
-				["name"] = "main tanks",
-				["filter"] = {
-					["desync"] = 3,
-					["hpmin"] = 1,
-					["hp"] = true,
-					["followdistance"] = 1,
-					["classes"] = {
-						[1] = true,
-					},
-					["cg"] = true,
-					["hpmax"] = 93,
-					["mp"] = false,
-					["hm"] = 1,
-					["hptype"] = 1,
-					["groups"] = {
-						[1] = true,
-						[2] = true,
-					},
-					["dead"] = 3,
-				},
-				["height"] = 24.99993515014648,
-				["lbtn"] = {
-					["iid"] = 2,
-				},
-				["scale"] = 1.216663479804993,
-				["title"] = "Main Tanks",
-			},
 			["raid healing"] = {
 				["smbtn"] = {
 					["iid"] = 1,
@@ -298,16 +129,14 @@ RDX5Data = {
 				["rbtn"] = {
 					["iid"] = 1,
 				},
+				["width"] = 152.5184936523438,
+				["scale"] = 1.216663479804993,
 				["title"] = "Raid Healing",
-				["mbtn"] = {
-					["iid"] = 1,
-				},
-				["name"] = "raid healing",
 				["filter"] = {
 					["desync"] = 3,
 					["hpmin"] = 1,
 					["hp"] = true,
-					["dead"] = 3,
+					["followdistance"] = 2,
 					["classes"] = {
 						[1] = true,
 						[2] = true,
@@ -322,6 +151,7 @@ RDX5Data = {
 					["hpmax"] = 93,
 					["mp"] = false,
 					["hm"] = 1,
+					["hptype"] = 1,
 					["groups"] = {
 						[1] = true,
 						[2] = true,
@@ -332,17 +162,188 @@ RDX5Data = {
 						[7] = true,
 						[8] = true,
 					},
-					["hptype"] = 1,
-					["followdistance"] = 2,
+					["dead"] = 3,
 				},
 				["height"] = 24.99993515014648,
 				["lbtn"] = {
 					["iid"] = 2,
 				},
+				["mbtn"] = {
+					["iid"] = 1,
+				},
+				["name"] = "raid healing",
+			},
+			["main tanks"] = {
+				["smbtn"] = {
+					["sptitle"] = "swiftmend",
+					["iid"] = 4,
+				},
+				["slbtn"] = {
+					["sptitle"] = "holy light(rank 6)",
+					["iid"] = 4,
+				},
+				["sort"] = 2,
+				["srbtn"] = {
+					["sptitle"] = "flash of light(rank 6)",
+					["iid"] = 4,
+				},
+				["disp"] = 1,
+				["stext"] = 3,
+				["truncate"] = 5,
+				["layout"] = 1,
+				["rbtn"] = {
+					["iid"] = 1,
+				},
+				["title"] = "Main Tanks",
 				["scale"] = 1.216663479804993,
+				["name"] = "main tanks",
+				["filter"] = {
+					["desync"] = 3,
+					["hpmin"] = 1,
+					["hp"] = true,
+					["dead"] = 3,
+					["classes"] = {
+						[1] = true,
+					},
+					["cg"] = true,
+					["hpmax"] = 93,
+					["mp"] = false,
+					["hm"] = 1,
+					["groups"] = {
+						[1] = true,
+						[2] = true,
+					},
+					["hptype"] = 1,
+					["followdistance"] = 1,
+				},
+				["height"] = 24.99993515014648,
+				["lbtn"] = {
+					["iid"] = 2,
+				},
+				["mbtn"] = {
+					["iid"] = 1,
+				},
 				["width"] = 152.5184936523438,
 			},
 		},
+	},
+	["User"] = {
+		["ryvok|warsong [12x] blizzlike"] = {
+			["enabled"] = true,
+			["venc"] = {
+			},
+			["enc_default"] = {
+				["mod_debuffs"] = {
+					["y"] = 1157.777913544159,
+					["slice"] = 1,
+					["relevance"] = {
+					},
+					["show"] = 4,
+					["x"] = 311.1111449233229,
+				},
+				["mod_assists"] = {
+					["auxarray"] = {
+					},
+					["mtarray"] = {
+					},
+				},
+				["mod_windows"] = {
+					["raid healing"] = {
+						["y"] = 648.8889461626353,
+						["shown"] = false,
+						["x"] = 1611.111070915982,
+					},
+					["main tanks"] = {
+						["y"] = 847.7779510653628,
+						["shown"] = true,
+						["x"] = 1607.778318514398,
+					},
+				},
+			},
+			["active_encounter"] = "default",
+		},
+		["ryjax|warsong [12x] blizzlike"] = {
+			["enabled"] = true,
+			["venc"] = {
+			},
+			["enc_default"] = {
+				["mod_debuffs"] = {
+					["show"] = 4,
+					["x"] = 196.6665075250069,
+					["relevance"] = {
+					},
+					["y"] = 1147.777801498079,
+					["slice"] = 1,
+					["filterConfig"] = {
+						["desync"] = 3,
+						["hp"] = false,
+						["classes"] = {
+							[1] = true,
+							[2] = true,
+							[3] = true,
+							[4] = true,
+							[5] = true,
+							[6] = true,
+							[7] = true,
+							[8] = true,
+							[9] = true,
+						},
+						["cg"] = true,
+						["groups"] = {
+							[1] = true,
+							[2] = true,
+							[3] = true,
+							[4] = true,
+							[5] = true,
+							[6] = true,
+							[7] = true,
+							[8] = true,
+						},
+						["mp"] = false,
+						["followdistance"] = 1,
+						["dead"] = 3,
+					},
+				},
+				["mod_assists"] = {
+					["auxarray"] = {
+					},
+					["mtarray"] = {
+					},
+				},
+				["mod_windows"] = {
+					["main tanks"] = {
+						["y"] = 543.1349359545388,
+						["shown"] = false,
+						["x"] = 1355.980825888285,
+					},
+					["raid healing"] = {
+						["y"] = 625.9053422820111,
+						["shown"] = false,
+						["x"] = 1345.098206835768,
+					},
+				},
+			},
+			["noesync"] = true,
+			["active_encounter"] = "default",
+		},
+		["kashonar|warsong [12x] blizzlike"] = {
+			["enabled"] = true,
+			["venc"] = {
+			},
+			["active_encounter"] = "default",
+			["enc_default"] = {
+				["mod_assists"] = {
+					["auxarray"] = {
+					},
+					["mtarray"] = {
+					},
+				},
+			},
+		},
+	},
+	["BootstrapVer"] = 19,
+	["ImpliedTarget"] = 0,
+	["Bootstrap"] = {
 	},
 	["TrustedBootstrapSources"] = {
 	},
@@ -351,6 +352,5 @@ RDX5Data = {
 		["active"] = false,
 		["x"] = 0,
 	},
-	["Bootstrap"] = {
-	},
+	["AggroMonitorEnabled"] = true,
 }
