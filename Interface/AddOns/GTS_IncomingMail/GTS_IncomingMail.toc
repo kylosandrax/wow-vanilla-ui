@@ -1,0 +1,11 @@
+## Title: GTS Incoming Mail
+## Interface: 11000
+## Author: Roman Tarakanov (RTE/Arthas)
+## URL: http://www.curse-gaming.com/mod.php?addid=1899
+## Version: 3.0b1
+## DefaultState: enabled
+## Notes: GTS component. Saves incoming mail data to SV.lua file for further parsing. 
+## SavedVariables: 
+## OptionalDeps: CT_MailMod
+## Dependencies: GTS_Core 
+GTS_IncomingMail.xml

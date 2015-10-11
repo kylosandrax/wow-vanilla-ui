@@ -146,3 +146,7 @@ RDXM_Debuffs: enabled
 RDXM_Assists: enabled
 RDXM_Bootstrap: enabled
 RDXM_BossMods: enabled
+MoveAnything: disabled
+GTS_GuildRosterScan: disabled
+GTS_IncomingMail: disabled
+GTS_OutgoingMail: disabled

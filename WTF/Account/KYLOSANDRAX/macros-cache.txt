@@ -1,3 +1,6 @@
+MACRO 14 "BankScan" Ability_CheapShot
+/gts bscan
+END
 MACRO 13 "Bijou" Ability_Druid_Typhoon
 /use Bronze Hakkari Bijou
 /use Purple Hakkari Bijou

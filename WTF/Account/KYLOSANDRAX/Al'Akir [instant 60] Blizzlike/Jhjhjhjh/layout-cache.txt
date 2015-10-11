@@ -1,0 +1,12 @@
+Frame: KLHTM_Frame
+FrameLevel: 1
+X: 1329
+Y: -510
+Frame: aUFplayer
+FrameLevel: 1
+X: 656
+Y: -564
+Frame: aUFtarget
+FrameLevel: 1
+X: 1059
+Y: -573

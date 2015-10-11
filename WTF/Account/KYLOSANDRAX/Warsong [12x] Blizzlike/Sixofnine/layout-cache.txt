@@ -10,6 +10,10 @@ Frame: DefendYourselfPanicBar
 FrameLevel: 2
 X: 1103
 Y: -1008
+Frame: GTS_Menu
+FrameLevel: 1
+X: 1166
+Y: -344
 Frame: KLHTM_Frame
 FrameLevel: 1
 X: 1328

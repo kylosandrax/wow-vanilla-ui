@@ -5,8 +5,8 @@ ImprovedErrorSettings = {
 	["gagNoise"] = false,
 	["emptyButton"] = false,
 	["alwaysShow"] = false,
-	["blinkNotification"] = true,
-	["displayOnError"] = false,
 	["displayCount"] = true,
+	["displayOnError"] = false,
+	["blinkNotification"] = true,
 	["XMLDebug"] = 0,
 }

@@ -8,3 +8,7 @@ RDXM_Debuffs: disabled
 RDXM_Logistics: disabled
 RDXM_ThreatMeter: disabled
 RDXM_Windows: disabled
+MoveAnything: disabled
+GTS_GuildRosterScan: disabled
+GTS_IncomingMail: disabled
+GTS_OutgoingMail: disabled

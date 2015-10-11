@@ -2,14 +2,19 @@
 BWP_Options = {
 	["ShowNPC"] = true,
 	["ShowCorpse"] = false,
-	["SetAlpha"] = 1,
-	["ShowOnGuard"] = false,
-	["ClearDest"] = true,
-	["ShowYards"] = false,
 	["SetDistance"] = 0.004100000020116568,
 	["ShowPoints"] = true,
+	["ClearDest"] = true,
+	["ShowYards"] = false,
+	["SetAlpha"] = 1,
+	["ShowOnGuard"] = false,
 }
-BWP_Destination = nil
+BWP_Destination = {
+	["y"] = 0.2600687909676056,
+	["x"] = 0.3931249268083856,
+	["name"] = "naxx",
+	["zone"] = "Eastern Plaguelands",
+}
 BWP_QuestList = {
 	[1] = {
 		["Y"] = 0.3629077672958374,
@@ -218,7 +223,7 @@ BWP_QuestList = {
 		["Y"] = 0.3647378385066986,
 		["X"] = 0.4994093775749207,
 		["Zone"] = 13,
-		["QuestName"] = "Cenarion Battlegear,,Field Duty,,Azure Templar",
+		["QuestName"] = "Cenarion Battlegear,,,Azure Templar",
 		["QuestGiver"] = "Windcaller Kaldon",
 	},
 	[31] = {
@@ -414,7 +419,7 @@ BWP_QuestList = {
 		["Y"] = 0.3772063851356506,
 		["X"] = 0.4863135814666748,
 		["Zone"] = 13,
-		["QuestName"] = "Aurel Goldleaf,,Twilight Geolords,Vyral the Vile,Goldleaf's Discovery",
+		["QuestName"] = "Aurel Goldleaf,,Vyral the Vile,Goldleaf's Discovery",
 		["QuestGiver"] = "Huum Wildmane",
 	},
 	[59] = {
@@ -736,7 +741,7 @@ BWP_QuestList = {
 		["Y"] = 0.3894497156143189,
 		["X"] = 0.613125205039978,
 		["Zone"] = 21,
-		["QuestName"] = "The Everlook Report,Duke Nicholas Zverenhoff",
+		["QuestName"] = "Duke Nicholas Zverenhoff",
 		["QuestGiver"] = "Gregor Greystone",
 	},
 	[105] = {
@@ -792,14 +797,14 @@ BWP_QuestList = {
 		["Y"] = 0.5841662883758545,
 		["X"] = 0.8149940967559815,
 		["Zone"] = 9,
-		["QuestName"] = "The Elemental Equation,The Dread Citadel - Naxxramas",
+		["QuestName"] = "The Elemental Equation,The Dread Citadel - Naxxramas,The Dread Citadel - Naxxramas",
 		["QuestGiver"] = "Archmage Angela Dosantos",
 	},
 	[113] = {
 		["Y"] = 0.582180917263031,
 		["X"] = 0.8169078230857849,
 		["Zone"] = 9,
-		["QuestName"] = "Binding the Dreadnaught,,",
+		["QuestName"] = "Binding the Dreadnaught,,,The Fate of Ramaladni,Ramaladni's Icy Grasp",
 		["QuestGiver"] = "Korfax, Champion of the Light",
 	},
 	[114] = {
@@ -1051,7 +1056,7 @@ BWP_QuestList = {
 		["Y"] = 0.1450556516647339,
 		["X"] = 0.1528200805187225,
 		["Zone"] = 18,
-		["QuestName"] = "Paragons of Power: The Vindicator's Armguards,Strength of Mount Mugamba,Paragons of Power: The Vindicator's Belt,,Paragons of Power: The Vindicator's Breastplate",
+		["QuestName"] = "Paragons of Power: The Vindicator's Armguards,Strength of Mount Mugamba,Paragons of Power: The Vindicator's Belt,,Paragons of Power: The Vindicator's Breastplate,The Heathen's Brand,Paragons of Power: The Freethinker's Armguards",
 		["QuestGiver"] = "Jin'rokh the Breaker",
 	},
 	[150] = {
@@ -1317,14 +1322,14 @@ BWP_QuestList = {
 		["Y"] = 0.8442562222480774,
 		["X"] = 0.4292928576469421,
 		["Zone"] = 23,
-		["QuestName"] = "Target: Felstone Field,",
+		["QuestName"] = "Target: Felstone Field,,Target: Dalson's Tears,Target: Writhing Haunt,Target: Gahrron's Withering",
 		["QuestGiver"] = "High Priestess MacDonnell",
 	},
 	[188] = {
 		["Y"] = 0.8384526371955872,
 		["X"] = 0.4269379675388336,
 		["Zone"] = 23,
-		["QuestName"] = "Skeletal Fragments",
+		["QuestName"] = "Skeletal Fragments,Mold Rhymes With...",
 		["QuestGiver"] = "Alchemist Arbington",
 	},
 	[189] = {
@@ -1359,7 +1364,7 @@ BWP_QuestList = {
 		["Y"] = 0.3649612963199616,
 		["X"] = 0.4953971803188324,
 		["Zone"] = 13,
-		["QuestName"] = "",
+		["QuestName"] = ",What Tomorrow Brings,Only One May Rise",
 		["QuestGiver"] = "Baristolth of the Shifting Sands",
 	},
 	[194] = {
@@ -1422,7 +1427,7 @@ BWP_QuestList = {
 		["Y"] = 0.3945970237255096,
 		["X"] = 0.5181177854537964,
 		["Zone"] = 13,
-		["QuestName"] = "Drape of Unyielding Strength,",
+		["QuestName"] = "Drape of Unyielding Strength,,",
 		["QuestGiver"] = "Keyl Swiftclaw",
 	},
 	[203] = {
@@ -1466,6 +1471,48 @@ BWP_QuestList = {
 		["Zone"] = 2,
 		["QuestName"] = "Poisoned Water,Stormers and Rumblers",
 		["QuestGiver"] = "Duke Hydraxis",
+	},
+	[209] = {
+		["Y"] = 0.8407767415046692,
+		["X"] = 0.4273873567581177,
+		["Zone"] = 23,
+		["QuestName"] = "Dispelling Evil,Forging the Mightstone",
+		["QuestGiver"] = "Commander Ashlam Valorfist",
+	},
+	[210] = {
+		["Y"] = 0.5794589519500732,
+		["X"] = 0.8168464303016663,
+		["Zone"] = 9,
+		["QuestName"] = "Houses of the Holy",
+		["QuestGiver"] = "Leonid Barthalomew the Revered",
+	},
+	[211] = {
+		["Y"] = 0.8379307985305786,
+		["X"] = 0.5232203006744385,
+		["Zone"] = 23,
+		["QuestName"] = "Inert Scourgestones",
+		["QuestGiver"] = "High Priest Thel'danis",
+	},
+	[212] = {
+		["Y"] = 0.2873979806900024,
+		["X"] = 0.5144093632698059,
+		["Zone"] = 15,
+		["QuestName"] = "Fire Plume Forged",
+		["QuestGiver"] = "Krinkle Goodsteel",
+	},
+	[213] = {
+		["Y"] = 0.582179605960846,
+		["X"] = 0.8158382773399353,
+		["Zone"] = 9,
+		["QuestName"] = "Echoes of War",
+		["QuestGiver"] = "Commander Eligor Dawnbringer",
+	},
+	[214] = {
+		["Y"] = 0.5882167220115662,
+		["X"] = 0.8000116348266602,
+		["Zone"] = 9,
+		["QuestName"] = "Writ of Safe Passage",
+		["QuestGiver"] = "Guard Didier",
 	},
 }
 BWP_AbandonedQuests = nil

@@ -137,3 +137,7 @@ Banknon: enabled
 EngBags: disabled
 TankStats: disabled
 TankPoints: disabled
+MoveAnything: disabled
+GTS_GuildRosterScan: disabled
+GTS_IncomingMail: disabled
+GTS_OutgoingMail: disabled

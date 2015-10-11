@@ -335,7 +335,7 @@ function TrinketMenu.ProcessAutoQueue(which)
 		return
 	end
 	if TrinketMenuQueue.Stats[id] then
-		if TrinketMenuQueue.Stats[id].keep then
+		if TrinketMenuQueue.Stats[id].keep and (enable ~= 1 or enable == 1 and (start == 0 or (duration-(GetTime()-start))<31)) then --
 			icon:SetVertexColor(1,.5,.5)
 			return -- leave if .keep flag set on this item
 		end

@@ -7,9 +7,12 @@ END
 MACRO 16777220 "PallyPower" Ability_Priest_AngelicFeather
 /pp
 END
-MACRO 16777217 "QH-HLR5" Ability_Paladin_BlindingLight2
+MACRO 16777217 "QH-R5" Ability_Paladin_BlindingLight2
 /script QuickHeal(nil,'Holy Light 5')
 END
-MACRO 16777221 "QHR6" Ability_Creature_Cursed_01
+MACRO 16777221 "QH-R6" Ability_Creature_Cursed_01
 /script QuickHeal(nil,'Holy Light 6')
+END
+MACRO 16777222 "QHFoL" ABILITY_HUNTER_LONGEVITY
+/script QuickHeal(nil,'Flash of Light 6')
 END

@@ -3,13 +3,17 @@ SmartLoot_Options = {
 	["AutoConfirm"] = 1,
 	["ShowAnchor"] = false,
 	["LootFrameCount"] = 4,
-	["AutoLoot"] = true,
+	["ShowMinimapButton"] = 1,
 	["HideDefaultFrames"] = true,
 	["MinimapButtonPosition"] = 281,
-	["ShowMinimapButton"] = 1,
+	["AutoLoot"] = true,
 }
 SmartLoot_Autoroll = {
-	["Essence of Undeath"] = {
+	["Green Hakkari Bijou"] = {
+		["roll"] = 1,
+		["quality"] = 3,
+	},
+	["Lunar Raiment of the Owl"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -17,8 +21,8 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Lambent Idol"] = {
-		["roll"] = 2,
+	["Gold Hakkari Bijou"] = {
+		["roll"] = 1,
 		["quality"] = 3,
 	},
 	["Four of Beasts"] = {
@@ -37,6 +41,10 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
+	["Two of Beasts"] = {
+		["roll"] = 2,
+		["quality"] = 3,
+	},
 	["Twilight Cultist Cowl"] = {
 		["roll"] = 2,
 		["quality"] = 2,
@@ -53,7 +61,7 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Aquamarine"] = {
+	["Living Essence"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -69,9 +77,9 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Formula: Enchant Bracer - Superior Spirit"] = {
+	["Grimoire of Shadow Ward IV"] = {
 		["roll"] = 2,
-		["quality"] = 2,
+		["quality"] = 3,
 	},
 	["Pattern: Chimeric Vest"] = {
 		["roll"] = 2,
@@ -249,11 +257,23 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
+	["Plans: Wicked Mithril Blade"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
 	["Recipe: Purification Potion"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
 	["Traveler's Backpack"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
+	["Three of Warlords"] = {
+		["roll"] = 2,
+		["quality"] = 3,
+	},
+	["Schematic: Catseye Ultra Goggles"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -306,6 +326,10 @@ SmartLoot_Autoroll = {
 		["quality"] = 2,
 	},
 	["Reinforced Steel Lockbox"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
+	["Recipe: Gift of Arthas"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -369,6 +393,10 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
+	["Plans: Thorium Armor"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
 	["Red Hakkari Bijou"] = {
 		["roll"] = 1,
 		["quality"] = 3,
@@ -381,44 +409,8 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Green Hakkari Bijou"] = {
+	["Clay Scarab"] = {
 		["roll"] = 1,
-		["quality"] = 3,
-	},
-	["Lunar Raiment of the Owl"] = {
-		["roll"] = 2,
-		["quality"] = 2,
-	},
-	["Gold Hakkari Bijou"] = {
-		["roll"] = 1,
-		["quality"] = 3,
-	},
-	["Pattern: Brightcloth Pants"] = {
-		["roll"] = 2,
-		["quality"] = 2,
-	},
-	["Belt of Valor"] = {
-		["roll"] = 2,
-		["quality"] = 3,
-	},
-	["Shadowcraft Belt"] = {
-		["roll"] = 2,
-		["quality"] = 3,
-	},
-	["Pattern: Chimeric Leggings"] = {
-		["roll"] = 2,
-		["quality"] = 2,
-	},
-	["Razzashi Coin"] = {
-		["roll"] = 1,
-		["quality"] = 2,
-	},
-	["Pattern: Frostweave Tunic"] = {
-		["roll"] = 2,
-		["quality"] = 2,
-	},
-	["Plans: Radiant Boots"] = {
-		["roll"] = 2,
 		["quality"] = 2,
 	},
 	["Emerald Legplates of Strength"] = {
@@ -429,11 +421,27 @@ SmartLoot_Autoroll = {
 		["roll"] = 1,
 		["quality"] = 2,
 	},
+	["Razzashi Coin"] = {
+		["roll"] = 1,
+		["quality"] = 2,
+	},
 	["Pattern: Brightcloth Gloves"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Pattern: Runecloth Shoulders"] = {
+	["Vilebranch Coin"] = {
+		["roll"] = 1,
+		["quality"] = 2,
+	},
+	["Belt of Valor"] = {
+		["roll"] = 2,
+		["quality"] = 3,
+	},
+	["Formula: Enchant Bracer - Superior Spirit"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
+	["Pattern: Chimeric Leggings"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -441,35 +449,31 @@ SmartLoot_Autoroll = {
 		["roll"] = 1,
 		["quality"] = 3,
 	},
+	["Pattern: Frostweave Tunic"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
+	["Plans: Radiant Boots"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
+	["Essence of Undeath"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
+	["Lambent Idol"] = {
+		["roll"] = 2,
+		["quality"] = 3,
+	},
 	["Pattern: Runecloth Tunic"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Skullsplitter Coin"] = {
-		["roll"] = 1,
-		["quality"] = 2,
-	},
-	["Plans: Radiant Breastplate"] = {
+	["Pattern: Runecloth Shoulders"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Plans: Thorium Leggings"] = {
-		["roll"] = 2,
-		["quality"] = 2,
-	},
-	["Plans: Thorium Belt"] = {
-		["roll"] = 2,
-		["quality"] = 2,
-	},
-	["Essence of Water"] = {
-		["roll"] = 2,
-		["quality"] = 2,
-	},
-	["Plans: Radiant Leggings"] = {
-		["roll"] = 2,
-		["quality"] = 2,
-	},
-	["Living Essence"] = {
+	["Aquamarine"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -477,11 +481,43 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
+	["Plans: Radiant Leggings"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
+	["Essence of Water"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
+	["Plans: Radiant Breastplate"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
+	["Plans: Thorium Belt"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
+	["Skullsplitter Coin"] = {
+		["roll"] = 1,
+		["quality"] = 2,
+	},
+	["Merciless Greaves of the Eagle"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
+	["Plans: Thorium Leggings"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
+	["Formula: Enchant Bracer - Greater Stamina"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
 	["Frayed Abomination Stitching"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Recipe: Greater Fire Protection Potion"] = {
+	["Schematic: Thorium Rifle"] = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
@@ -493,18 +529,6 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Grimoire of Shadow Ward IV"] = {
-		["roll"] = 2,
-		["quality"] = 3,
-	},
-	["Vilebranch Coin"] = {
-		["roll"] = 1,
-		["quality"] = 2,
-	},
-	["Pattern: Big Voodoo Cloak"] = {
-		["roll"] = 2,
-		["quality"] = 2,
-	},
 	["Libram of Rapidity"] = {
 		["roll"] = 2,
 		["quality"] = 2,
@@ -513,8 +537,20 @@ SmartLoot_Autoroll = {
 		["roll"] = 2,
 		["quality"] = 2,
 	},
-	["Clay Scarab"] = {
-		["roll"] = 1,
+	["Pattern: Big Voodoo Cloak"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
+	["Shadowcraft Belt"] = {
+		["roll"] = 2,
+		["quality"] = 3,
+	},
+	["Pattern: Brightcloth Pants"] = {
+		["roll"] = 2,
+		["quality"] = 2,
+	},
+	["Recipe: Greater Fire Protection Potion"] = {
+		["roll"] = 2,
 		["quality"] = 2,
 	},
 }

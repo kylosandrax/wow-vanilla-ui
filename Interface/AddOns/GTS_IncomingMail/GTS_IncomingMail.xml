@@ -1,0 +1,52 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+
+<Script file="GTS_IncomingMail.lua"/>
+<Frame name="GTS_IM_Main">
+	<Scripts>
+		<OnLoad>
+ 			this:RegisterEvent("VARIABLES_LOADED");
+		</OnLoad>
+		<OnEvent>
+       			GTS_IM_OnLoad(); 
+		</OnEvent>
+	</Scripts>
+</Frame>
+
+<Frame name="GTS_Menu_IM" hidden="false" parent="GTS_Menu_Tab2">
+	<Size> 
+		<AbsDimension x="455" y="135"/> 
+	</Size> 
+	<Anchors> 
+		<Anchor point="TOPLEFT">
+			<Offset>
+				<AbsDimension x="0" y="-152"/>
+			</Offset>
+		</Anchor>
+	</Anchors> 
+	
+	<Backdrop edgeFile="Interface\DialogFrame\UI-DialogBox-Border" tile="true">
+		<TileSize>
+			<AbsValue val="16"/>
+		</TileSize>
+		<EdgeSize>
+			<AbsValue val="16"/>
+		</EdgeSize>
+	</Backdrop>
+	<Layers>
+		<Layer level="ARTWORK">
+			<!-- Header text -->
+			<FontString name="$parent_Header" inherits="GameFontNormalSmall" text="Incoming Mail:">
+				<Anchors>
+					<Anchor point="TOPLEFT">
+						<Offset>
+							<AbsDimension x="10" y="-10"/>
+						</Offset>
+					</Anchor>
+				</Anchors>
+				<Color r="1" g="1" b="1"/>
+			</FontString>
+		</Layer>
+	</Layers>
+</Frame>
+</Ui>

@@ -1,0 +1,11 @@
+## Title: GTS_GuildRosterScan
+## Interface: 11000
+## Author: Roman Tarakanov (RTE/Arthas)
+## URL: http://www.curse-gaming.com/mod.php?addid=1899
+## Version: 3.0b1
+## DefaultState: enabled
+## Notes: Package for GTS, scans the guild roster into SV.lua file for further parsing.   
+## SavedVariables: 
+## OptionalDeps: 
+## Dependencies: GTS_Core
+GTS_GuildRosterScan.xml

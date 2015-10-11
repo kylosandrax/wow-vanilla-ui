@@ -5,17 +5,17 @@ WIM_Data = {
 	["windowAlpha"] = 0.8,
 	["iconPosition"] = 337,
 	["miniFreeMoving"] = {
-		["top"] = 0,
-		["left"] = 0,
 		["enabled"] = false,
+		["left"] = 0,
+		["top"] = 0,
 	},
 	["keepFocusRested"] = false,
 	["showTimeStamps"] = true,
 	["popUpdate"] = true,
 	["characterInfo"] = {
-		["show"] = true,
-		["details"] = true,
 		["classColor"] = true,
+		["details"] = true,
+		["show"] = true,
 		["classIcon"] = true,
 	},
 	["keepFocus"] = false,
@@ -75,14 +75,14 @@ WIM_Data = {
 		},
 		["recordEveryone"] = false,
 		["recordFriends"] = true,
-		["autoDelete"] = {
-			["enabled"] = true,
-			["days"] = 7,
-		},
 		["colorOut"] = {
 			["r"] = 0.7058823529411764,
 			["g"] = 0.7058823529411764,
 			["b"] = 0.7058823529411764,
+		},
+		["autoDelete"] = {
+			["enabled"] = true,
+			["days"] = 7,
 		},
 	},
 	["hookWispParse"] = true,
@@ -91,20 +91,20 @@ WIM_Data = {
 	["enableWIM"] = true,
 	["popOnSend"] = true,
 	["showMiniMap"] = true,
-	["useEscape"] = true,
-	["enableHistory"] = true,
+	["versionLastLoaded"] = "1.3.1",
+	["showToolTips"] = true,
 	["winLoc"] = {
 		["top"] = 775,
 		["left"] = 242,
 	},
-	["enableFilter"] = true,
+	["sortAlpha"] = true,
 	["winSize"] = {
 		["height"] = 256,
 		["width"] = 384,
 	},
-	["sortAlpha"] = true,
-	["showToolTips"] = true,
-	["versionLastLoaded"] = "1.3.1",
+	["enableFilter"] = true,
+	["enableHistory"] = true,
+	["useEscape"] = true,
 }
 WIM_Alias = {
 }
@@ -120,4 +120,46 @@ WIM_Filters = {
 	["^YOU HAVE THE PLAGUE!"] = "Ignore",
 }
 WIM_History = {
+	["Jabala"] = {
+		[1] = {
+			["type"] = 1,
+			["time"] = "23:06",
+			["from"] = "Jabala",
+			["date"] = "10/10/15",
+			["msg"] = "u coming for another run?",
+			["stamp"] = 1444514778,
+		},
+		[2] = {
+			["type"] = 2,
+			["time"] = "23:06",
+			["from"] = "Ryvok",
+			["date"] = "10/10/15",
+			["msg"] = "inv when rdy",
+			["stamp"] = 1444514779,
+		},
+		[3] = {
+			["type"] = 2,
+			["time"] = "00:30",
+			["from"] = "Ryvok",
+			["date"] = "10/11/15",
+			["msg"] = "impressive kiting again",
+			["stamp"] = 1444519851,
+		},
+		[4] = {
+			["type"] = 2,
+			["time"] = "00:31",
+			["from"] = "Ryvok",
+			["date"] = "10/11/15",
+			["msg"] = "I could never get the hang of the jumpshot",
+			["stamp"] = 1444519865,
+		},
+		[5] = {
+			["type"] = 1,
+			["time"] = "00:31",
+			["from"] = "Jabala",
+			["date"] = "10/11/15",
+			["msg"] = "ah ty=)",
+			["stamp"] = 1444519891,
+		},
+	},
 }

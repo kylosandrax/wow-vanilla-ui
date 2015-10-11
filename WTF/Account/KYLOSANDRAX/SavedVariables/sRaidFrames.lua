@@ -6,7 +6,6 @@ sRaidFramesDB = {
 			["SortBy"] = "group",
 			["SubSort"] = "none",
 			["profile2"] = true,
-			["healthDisplayType"] = "deficit",
 			["profile1"] = false,
 			["BorderColor"] = {
 				["r"] = 0.4509803921568628,
@@ -37,11 +36,14 @@ sRaidFramesDB = {
 			["ShowFilteredBuffs"] = false,
 			["aggro_aura"] = true,
 			["lock_focus"] = true,
+			["ExtendedRangeCheck"] = false,
 			["hp_limit"] = 1,
 			["dynamic_overheal_sort"] = false,
 			["lock"] = true,
+			["grp_name"] = false,
 			["Border"] = false,
 			["vertical_hp"] = false,
+			["redbar"] = false,
 			["Positions"] = {
 				[1] = {
 					["y"] = 247.0881222875439,
@@ -80,10 +82,10 @@ sRaidFramesDB = {
 					["x"] = 1090.837360304548,
 				},
 			},
-			["redbar"] = false,
+			["ExtendedRangeCheckCombat"] = true,
 			["units_limit"] = 5,
 			["dynamic_aggro_sort"] = false,
-			["grp_name"] = false,
+			["healthDisplayType"] = "deficit",
 		},
 	},
 }

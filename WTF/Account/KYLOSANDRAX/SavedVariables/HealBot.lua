@@ -1,6 +1,6 @@
 
 HealBot_Config = {
-	["ActionHeight"] = 73.99999935308269,
+	["ActionHeight"] = 45,
 	["ActionAlpha"] = 1,
 	["AlertSeconds"] = 15,
 	["ActionLocked"] = 0,
@@ -32,7 +32,7 @@ HealBot_Config = {
 		["Warlock"] = {
 		},
 	},
-	["TargetHeals"] = 1,
+	["ShowTooltip"] = 1,
 	["IntegratePMF"] = 1,
 	["EmergencySort"] = 1,
 	["ActionVisible"] = 0,
@@ -54,7 +54,7 @@ HealBot_Config = {
 	["TargetWhisper"] = 1,
 	["Version"] = "v0.35b",
 	["UseHealing"] = {
-		["Healing Touch"] = 1,
+		["Renew"] = 1,
 		["Holy Light"] = 1,
 		["Regrowth"] = 1,
 		["Mend Pet"] = 1,
@@ -69,10 +69,10 @@ HealBot_Config = {
 		["Power Word: Shield"] = 0,
 		["Flash of Light"] = 1,
 		["Rejuvenation"] = 1,
-		["Renew"] = 1,
+		["Healing Touch"] = 1,
 		["Healing Wave"] = 1,
 	},
 	["HealingUsage"] = 0.5,
 	["PanelSounds"] = 1,
-	["ShowTooltip"] = 1,
+	["TargetHeals"] = 1,
 }

@@ -169,14 +169,14 @@ SW_RPS = {
 	["startTimer"] = {
 		["epochTS"] = 1400053050,
 		["msO"] = -0.5329999999999018,
-		["uTS"] = -43512647.53299999,
+		["uTS"] = -44517898.53299999,
 	},
 	["uglyTruthStarted"] = false,
 	["lastFightDmg"] = 0,
 	["baseTimer"] = {
 		["epochTS"] = 1400053050,
 		["msO"] = -0.5329999999999018,
-		["uTS"] = -43512647.53299999,
+		["uTS"] = -44517898.53299999,
 	},
 	["currentSecs"] = 0,
 	["totalSecs"] = 0,

@@ -9,13 +9,13 @@ BuffaloDB = {
 				["buff"] = false,
 			},
 			["xPos"] = {
-				["buff"] = 1687.314909041937,
 				["debuff"] = 1598.498504292984,
+				["buff"] = 1687.314909041937,
 				["weapon"] = 492.9955004730074,
 			},
 			["scale"] = {
-				["buff"] = 1.1,
 				["debuff"] = 1.1,
+				["buff"] = 1.1,
 				["weapon"] = 0.9,
 			},
 			["rows"] = {
@@ -25,13 +25,13 @@ BuffaloDB = {
 				["buff"] = 2,
 			},
 			["yPos"] = {
-				["buff"] = 1008.865194621148,
 				["debuff"] = 1008.865194621148,
+				["buff"] = 1008.865194621148,
 				["weapon"] = 324.3432978485844,
 			},
 			["whiteTimers"] = {
-				["buff"] = true,
 				["debuff"] = true,
+				["buff"] = true,
 				["weapon"] = true,
 			},
 			["locked"] = true,

@@ -261,10 +261,10 @@ function TrinketMenu.Initialize()
 	TrinketMenu.CreateTimer("TooltipUpdate",TrinketMenu.TooltipUpdate,1,1)
 	TrinketMenu.CreateTimer("CooldownUpdate",TrinketMenu.CooldownUpdate,1,1)
 
-	TrinketMenu.oldUseInventoryItem = UseInventoryItem
-	UseInventoryItem = TrinketMenu.newUseInventoryItem
-	TrinketMenu.oldUseAction = UseAction
-	UseAction = TrinketMenu.newUseAction
+	--TrinketMenu.oldUseInventoryItem = UseInventoryItem
+	--UseInventoryItem = TrinketMenu.newUseInventoryItem
+	--TrinketMenu.oldUseAction = UseAction
+	--UseAction = TrinketMenu.newUseAction
 
 	TrinketMenu.InitOptions()
 
@@ -757,14 +757,13 @@ function TrinketMenu.ReflectTrinketUse(slot)
 end
 
 function TrinketMenu.newUseInventoryItem(slot)
-	TrinketMenu.oldUseInventoryItem(slot)
 	if slot==13 or slot==14 and not MerchantFrame:IsVisible() then
 		TrinketMenu.ReflectTrinketUse(slot)
 	end
+	TrinketMenu.oldUseInventoryItem(slot)
 end
 
 function TrinketMenu.newUseAction(slot,cursor,self)
-	TrinketMenu.oldUseAction(slot,cursor,self)
 	if IsEquippedAction(slot) then
 		TrinketMenu_TooltipScan:SetAction(slot)
 		local _,trinket0 = TrinketMenu.ItemInfo(13)
@@ -775,6 +774,7 @@ function TrinketMenu.newUseAction(slot,cursor,self)
 			TrinketMenu.ReflectTrinketUse(14)
 		end
 	end
+	TrinketMenu.oldUseAction(slot,cursor,self)
 end
 
 --[[ Tooltips ]]
