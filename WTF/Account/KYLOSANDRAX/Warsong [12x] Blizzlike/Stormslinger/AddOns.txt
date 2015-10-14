@@ -54,7 +54,7 @@ oCB: enabled
 !OmniCC: enabled
 oRA2: disabled
 oSkin: disabled
-Outfitter: disabled
+Outfitter: enabled
 PetFeeder: enabled
 Prat: enabled
 sct: enabled
@@ -170,3 +170,4 @@ MoveAnything: disabled
 GTS_GuildRosterScan: disabled
 GTS_IncomingMail: disabled
 GTS_OutgoingMail: disabled
+ItemRackFu: enabled

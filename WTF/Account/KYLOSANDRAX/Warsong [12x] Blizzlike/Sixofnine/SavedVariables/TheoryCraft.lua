@@ -12,37 +12,56 @@ TheoryCraft_Settings = {
 	["buttontextx"] = 1.111,
 	["ColG2"] = 1,
 	["ColR2"] = 1,
-	["ColB"] = 1,
+	["embedstyle1"] = true,
 	["tryfirst"] = "averagedam",
 	["trysecondsfg"] = -1,
-	["embedstyle1"] = true,
+	["ColB"] = 1,
 	["tryfirstsfg"] = 0,
-	["combinedot"] = true,
-	["mitigation"] = true,
+	["embed"] = true,
+	["ColG"] = 1,
+	["ColR"] = 1,
 	["GenerateList"] = "",
-	["FontPath"] = "Fonts\\ArialN.TTF",
-	["procs"] = true,
+	["ColB2"] = 0.6862745098039216,
 	["dontresist"] = true,
 	["trysecond"] = "averagehealnocrit",
 	["buttontext"] = true,
 	["dataversion"] = "1.06",
 	["CustomOutfit"] = {
-		["intellect"] = 0,
+		["destat"] = {
+			[1] = "Head",
+			[2] = "Neck",
+			[3] = "Shoulder",
+			[4] = "Chest",
+			[5] = "Waist",
+			[6] = "Legs",
+			[7] = "Feet",
+			[8] = "Wrist",
+			[9] = "Hands",
+			[10] = "Finger0",
+			[11] = "Finger1",
+			[12] = "Trinket0",
+			[13] = "Trinket1",
+			[14] = "Back",
+			[15] = "MainHand",
+			[16] = "SecondaryHand",
+			[17] = "Ranged",
+			[18] = "Tabard",
+			[19] = "Ammo",
+		},
 		["newstat"] = {
 		},
 		["slots"] = {
-			["Ranged"] = {
+			["Waist"] = {
 				["stats"] = {
+					["stamina"] = 11,
+					["intellect"] = 10,
 				},
-				["name"] = "|cff1eff00|Hitem:15284:0:0:0|h[Long Battle Bow]|h|r",
+				["name"] = "|cff1eff00|Hitem:10066:0:868:0|h[Duskwoven Sash of the Eagle]|h|r",
 				["data"] = {
-					["name"] = "Long Battle Bow",
+					["name"] = "Duskwoven Sash of the Eagle",
 					["procs"] = {
 					},
-					["RangedSpeed"] = 2.2,
-					["RangedMax"] = 34,
-					["RangedMin"] = 18,
-					["numlines"] = 6,
+					["numlines"] = 7,
 				},
 			},
 			["Finger0"] = {
@@ -58,17 +77,18 @@ TheoryCraft_Settings = {
 					["numlines"] = 6,
 				},
 			},
-			["Neck"] = {
+			["Legs"] = {
 				["stats"] = {
-					["intellect"] = 4,
-					["strength"] = 4,
+					["intellect"] = 11,
+					["spirit"] = 11,
+					["agility"] = 11,
 				},
-				["name"] = "|cff1eff00|Hitem:12029:0:933:0|h[Greenstone Talisman of the Gorilla]|h|r",
+				["name"] = "|cff1eff00|Hitem:8112:0:0:0|h[Hibernal Pants]|h|r",
 				["data"] = {
-					["name"] = "Greenstone Talisman of the Gorilla",
+					["name"] = "Hibernal Pants",
 					["procs"] = {
 					},
-					["numlines"] = 6,
+					["numlines"] = 8,
 				},
 			},
 			["Back"] = {
@@ -134,17 +154,17 @@ TheoryCraft_Settings = {
 					["numlines"] = 7,
 				},
 			},
-			["Feet"] = {
+			["Finger1"] = {
 				["stats"] = {
-					["stamina"] = 9,
-					["agility"] = 10,
+					["intellect"] = 9,
+					["spirit"] = 9,
 				},
-				["name"] = "|cff1eff00|Hitem:7531:0:609:0|h[Cabalist Boots of the Monkey]|h|r",
+				["name"] = "|cff1eff00|Hitem:11992:0:778:0|h[Vermilion Band of the Owl]|h|r",
 				["data"] = {
-					["name"] = "Cabalist Boots of the Monkey",
+					["name"] = "Vermilion Band of the Owl",
 					["procs"] = {
 					},
-					["numlines"] = 7,
+					["numlines"] = 6,
 				},
 			},
 			["Chest"] = {
@@ -169,63 +189,26 @@ TheoryCraft_Settings = {
 				["data"] = {
 					["numlines"] = 8,
 					["MeleeMax"] = 146,
-					["name"] = "Greater Maul of the Tiger",
+					["MeleeMin"] = 97,
 					["procs"] = {
 					},
 					["MeleeAPMult"] = 3.3,
 					["MainSpeed"] = 3.4,
-					["MeleeMin"] = 97,
+					["name"] = "Greater Maul of the Tiger",
 				},
 			},
-			["Waist"] = {
+			["Ranged"] = {
 				["stats"] = {
-					["intellect"] = 10,
-					["stamina"] = 11,
 				},
-				["name"] = "|cff1eff00|Hitem:10066:0:868:0|h[Duskwoven Sash of the Eagle]|h|r",
+				["name"] = "|cff1eff00|Hitem:15284:0:0:0|h[Long Battle Bow]|h|r",
 				["data"] = {
-					["name"] = "Duskwoven Sash of the Eagle",
+					["name"] = "Long Battle Bow",
 					["procs"] = {
 					},
-					["numlines"] = 7,
-				},
-			},
-			["Legs"] = {
-				["stats"] = {
-					["intellect"] = 11,
-					["spirit"] = 11,
-					["agility"] = 11,
-				},
-				["name"] = "|cff1eff00|Hitem:8112:0:0:0|h[Hibernal Pants]|h|r",
-				["data"] = {
-					["name"] = "Hibernal Pants",
-					["procs"] = {
-					},
-					["numlines"] = 8,
-				},
-			},
-			["Finger1"] = {
-				["stats"] = {
-					["intellect"] = 9,
-					["spirit"] = 9,
-				},
-				["name"] = "|cff1eff00|Hitem:11992:0:778:0|h[Vermilion Band of the Owl]|h|r",
-				["data"] = {
-					["name"] = "Vermilion Band of the Owl",
-					["procs"] = {
-					},
+					["RangedSpeed"] = 2.2,
+					["RangedMax"] = 34,
 					["numlines"] = 6,
-				},
-			},
-			["Shoulder"] = {
-				["stats"] = {
-				},
-				["name"] = "|cff1eff00|Hitem:7424:0:1609:0|h[Phalanx Spaulders of Defense]|h|r",
-				["data"] = {
-					["name"] = "Phalanx Spaulders of Defense",
-					["procs"] = {
-					},
-					["numlines"] = 6,
+					["RangedMin"] = 18,
 				},
 			},
 			["Wrist"] = {
@@ -241,39 +224,56 @@ TheoryCraft_Settings = {
 					["numlines"] = 7,
 				},
 			},
+			["Feet"] = {
+				["stats"] = {
+					["stamina"] = 9,
+					["agility"] = 10,
+				},
+				["name"] = "|cff1eff00|Hitem:7531:0:609:0|h[Cabalist Boots of the Monkey]|h|r",
+				["data"] = {
+					["name"] = "Cabalist Boots of the Monkey",
+					["procs"] = {
+					},
+					["numlines"] = 7,
+				},
+			},
+			["Shoulder"] = {
+				["stats"] = {
+				},
+				["name"] = "|cff1eff00|Hitem:7424:0:1609:0|h[Phalanx Spaulders of Defense]|h|r",
+				["data"] = {
+					["name"] = "Phalanx Spaulders of Defense",
+					["procs"] = {
+					},
+					["numlines"] = 6,
+				},
+			},
+			["Neck"] = {
+				["stats"] = {
+					["intellect"] = 4,
+					["strength"] = 4,
+				},
+				["name"] = "|cff1eff00|Hitem:12029:0:933:0|h[Greenstone Talisman of the Gorilla]|h|r",
+				["data"] = {
+					["name"] = "Greenstone Talisman of the Gorilla",
+					["procs"] = {
+					},
+					["numlines"] = 6,
+				},
+			},
 		},
 		["agility"] = 0,
 		["name"] = "Naked",
-		["stamina"] = 0,
+		["strength"] = 0,
 		["wear"] = {
 		},
-		["destat"] = {
-			[1] = "Head",
-			[2] = "Neck",
-			[3] = "Shoulder",
-			[4] = "Chest",
-			[5] = "Waist",
-			[6] = "Legs",
-			[7] = "Feet",
-			[8] = "Wrist",
-			[9] = "Hands",
-			[10] = "Finger0",
-			[11] = "Finger1",
-			[12] = "Trinket0",
-			[13] = "Trinket1",
-			[14] = "Back",
-			[15] = "MainHand",
-			[16] = "SecondaryHand",
-			[17] = "Ranged",
-			[18] = "Tabard",
-			[19] = "Ammo",
-		},
+		["intellect"] = 0,
 		["spirit"] = 0,
-		["strength"] = 0,
+		["stamina"] = 0,
 	},
-	["ColB2"] = 0.6862745098039216,
-	["ColR"] = 1,
-	["ColG"] = 1,
-	["embed"] = true,
+	["procs"] = true,
+	["mitigation"] = true,
+	["FontPath"] = "Fonts\\ArialN.TTF",
+	["combinedot"] = true,
 	["healanddamage"] = true,
 }

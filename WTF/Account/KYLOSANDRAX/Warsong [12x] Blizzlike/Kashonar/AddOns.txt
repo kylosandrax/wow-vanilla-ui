@@ -12,3 +12,6 @@ MoveAnything: disabled
 GTS_GuildRosterScan: disabled
 GTS_IncomingMail: disabled
 GTS_OutgoingMail: disabled
+ItemRackFu: enabled
+ItemRack: enabled
+Outfitter: enabled

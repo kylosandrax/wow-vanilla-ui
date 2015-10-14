@@ -2,9 +2,9 @@
 FuBar_ItemBonusesDB = {
 	["profiles"] = {
 		["Default"] = {
+			["display_none"] = true,
 			["detachedTooltip"] = {
 			},
-			["display_none"] = true,
 		},
 	},
 }

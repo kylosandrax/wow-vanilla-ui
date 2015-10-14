@@ -67,7 +67,7 @@ CECB_Options: enabled
 oCB: enabled
 !OmniCC: enabled
 oRA2: disabled
-Outfitter: disabled
+Outfitter: enabled
 PetFeeder: enabled
 PowerAuras: enabled
 Prat: enabled
@@ -169,3 +169,4 @@ MoveAnything: disabled
 GTS_GuildRosterScan: disabled
 GTS_IncomingMail: disabled
 GTS_OutgoingMail: disabled
+ItemRackFu: enabled

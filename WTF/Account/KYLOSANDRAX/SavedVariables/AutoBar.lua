@@ -43,7 +43,9 @@ AutoBar_Config = {
 			[12] = "HEARTHSTONE",
 		},
 	},
-	["Ryjax - Warsong [12x] Blizzlike"] = {
+	["Jhjhjhjh - Al'Akir [instant 60] Blizzlike"] = {
+		["display"] = {
+		},
 		["buttons"] = {
 			[1] = {
 				[1] = "BANDAGES",
@@ -61,32 +63,13 @@ AutoBar_Config = {
 				[6] = "ALTERAC_HEAL",
 				[7] = "HEALTHSTONE",
 			},
-			[3] = {
-				[1] = "MANAPOTIONS",
-				[2] = "REJUVENATION_POTIONS",
-				[3] = "NIGHT_DRAGONS_BREATH",
-				[4] = "PVP_MANAPOTIONS",
-				[5] = "ALTERAC_MANA",
-			},
-			[4] = {
-				[1] = "WATER",
-				[2] = "WATER_CONJURED",
-			},
+			[3] = "RAGEPOTIONS",
 			[5] = {
 				[1] = "FOOD",
 				[2] = "FOOD_STAMINA",
 				[3] = "FOOD_CONJURED",
 			},
 			[12] = "HEARTHSTONE",
-		},
-		["display"] = {
-			["position"] = {
-				["y"] = 188.3077644439493,
-				["x"] = 1320.708103273363,
-			},
-		},
-		["smartselfcast"] = {
-			["WIZARD_OIL"] = 1,
 		},
 	},
 	["Nameplate - Emerald Dream [1x] Blizzlike"] = {
@@ -171,40 +154,6 @@ AutoBar_Config = {
 			[12] = 19874,
 		},
 	},
-	["Kylosandrax - Warsong [12x] Blizzlike"] = {
-		["display"] = {
-			["dockshifty"] = 1,
-			["position"] = {
-				["y"] = 209.4575761327878,
-				["x"] = 1337.029514567478,
-			},
-		},
-		["buttons"] = {
-			[1] = {
-				[1] = "BANDAGES",
-				[2] = "ALTERAC_BANDAGES",
-				[3] = "WARSONG_BANDAGES",
-				[4] = "ARATHI_BANDAGES",
-				[5] = "UNGORO_RESTORE",
-			},
-			[2] = {
-				[1] = "HEALPOTIONS",
-				[2] = "REJUVENATION_POTIONS",
-				[3] = "WHIPPER_ROOT",
-				[4] = "NIGHT_DRAGONS_BREATH",
-				[5] = "PVP_HEALPOTIONS",
-				[6] = "ALTERAC_HEAL",
-				[7] = "HEALTHSTONE",
-			},
-			[3] = "RAGEPOTIONS",
-			[5] = {
-				[1] = "FOOD",
-				[2] = "FOOD_STAMINA",
-				[3] = "FOOD_CONJURED",
-			},
-			[12] = "HEARTHSTONE",
-		},
-	},
 	["Kashonar - Warsong [12x] Blizzlike"] = {
 		["display"] = {
 			["position"] = {
@@ -238,8 +187,13 @@ AutoBar_Config = {
 			[12] = "HEARTHSTONE",
 		},
 	},
-	["Jhjhjhjh - Al'Akir [instant 60] Blizzlike"] = {
+	["Kylosandrax - Warsong [12x] Blizzlike"] = {
 		["display"] = {
+			["position"] = {
+				["y"] = 209.4575761327878,
+				["x"] = 1337.029514567478,
+			},
+			["dockshifty"] = 1,
 		},
 		["buttons"] = {
 			[1] = {
@@ -259,6 +213,49 @@ AutoBar_Config = {
 				[7] = "HEALTHSTONE",
 			},
 			[3] = "RAGEPOTIONS",
+			[5] = {
+				[1] = "FOOD",
+				[2] = "FOOD_STAMINA",
+				[3] = "FOOD_CONJURED",
+			},
+			[12] = "HEARTHSTONE",
+		},
+	},
+	["Ryvok - Emerald Dream [1x] Blizzlike"] = {
+		["display"] = {
+			["position"] = {
+				["y"] = 184.4439312233737,
+				["x"] = 1355.55513980336,
+			},
+		},
+		["buttons"] = {
+			[1] = {
+				[1] = "BANDAGES",
+				[2] = "ALTERAC_BANDAGES",
+				[3] = "WARSONG_BANDAGES",
+				[4] = "ARATHI_BANDAGES",
+				[5] = "UNGORO_RESTORE",
+			},
+			[2] = {
+				[1] = "HEALPOTIONS",
+				[2] = "REJUVENATION_POTIONS",
+				[3] = "WHIPPER_ROOT",
+				[4] = "NIGHT_DRAGONS_BREATH",
+				[5] = "PVP_HEALPOTIONS",
+				[6] = "ALTERAC_HEAL",
+				[7] = "HEALTHSTONE",
+			},
+			[3] = {
+				[1] = "MANAPOTIONS",
+				[2] = "REJUVENATION_POTIONS",
+				[3] = "NIGHT_DRAGONS_BREATH",
+				[4] = "PVP_MANAPOTIONS",
+				[5] = "ALTERAC_MANA",
+			},
+			[4] = {
+				[1] = "WATER",
+				[2] = "WATER_CONJURED",
+			},
 			[5] = {
 				[1] = "FOOD",
 				[2] = "FOOD_STAMINA",
@@ -382,13 +379,7 @@ AutoBar_Config = {
 			[12] = "HEARTHSTONE",
 		},
 	},
-	["Ryvok - Emerald Dream [1x] Blizzlike"] = {
-		["display"] = {
-			["position"] = {
-				["y"] = 184.4439312233737,
-				["x"] = 1355.55513980336,
-			},
-		},
+	["Ryjax - Warsong [12x] Blizzlike"] = {
 		["buttons"] = {
 			[1] = {
 				[1] = "BANDAGES",
@@ -423,6 +414,15 @@ AutoBar_Config = {
 				[3] = "FOOD_CONJURED",
 			},
 			[12] = "HEARTHSTONE",
+		},
+		["display"] = {
+			["position"] = {
+				["y"] = 188.3077644439493,
+				["x"] = 1320.708103273363,
+			},
+		},
+		["smartselfcast"] = {
+			["WIZARD_OIL"] = 1,
 		},
 	},
 	["Zapunzel - Warsong [12x] Blizzlike"] = {

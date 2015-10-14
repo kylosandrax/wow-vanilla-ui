@@ -9,6 +9,7 @@ FuBar2DB = {
 					["xPercent"] = -9.315609195148511e-008,
 					["attachPoint"] = "TOP",
 					["lock"] = true,
+					["widthPercent"] = 1,
 					["plugins"] = {
 						["center"] = {
 							[1] = "ItemBonusesFu",
@@ -48,7 +49,6 @@ FuBar2DB = {
 							[17] = "sRaidFrames Improved 1.25",
 						},
 					},
-					["widthPercent"] = 1,
 					["yPercent"] = 0.9849999652217268,
 				},
 			},
@@ -87,7 +87,7 @@ FuBar2DB = {
 			["thickness"] = 7,
 			["transparency"] = 0.5,
 			["overflow"] = false,
-			["leftSpacing"] = 20,
+			["autohideTop"] = false,
 			["places"] = {
 				["center"] = {
 				},
@@ -96,7 +96,7 @@ FuBar2DB = {
 				["left"] = {
 				},
 			},
-			["autohideTop"] = false,
+			["leftSpacing"] = 20,
 		},
 	},
 }

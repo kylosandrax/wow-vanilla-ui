@@ -21,11 +21,11 @@ FrameLevel: 1
 X: 1325
 Y: -519
 Frame: ATSWFrame
-FrameLevel: 18
+FrameLevel: 71
 X: 352
 Y: -107
 Frame: ATSWCSFrame
-FrameLevel: 22
+FrameLevel: 38
 X: 0
 Y: -104
 Frame: Carni_ECB_1
@@ -41,7 +41,7 @@ FrameLevel: 2
 X: 26
 Y: -27
 Frame: ItemRack_SetsFrame
-FrameLevel: 7
+FrameLevel: 8
 X: 770
 Y: -117
 Frame: KLHTM_Frame
@@ -81,7 +81,7 @@ FrameLevel: 1
 X: 314
 Y: -29
 Frame: SW_BarFrame1
-FrameLevel: 13
+FrameLevel: 8
 X: 49
 Y: -419
 W: 264
@@ -106,6 +106,10 @@ Frame: TrinketMenu_MainFrame
 FrameLevel: 1
 X: 1046
 Y: -903
+Frame: XLootFrame
+FrameLevel: 5
+X: 1204
+Y: -322
 Frame: BWP_MainFrame
 FrameLevel: 8
 X: 1421

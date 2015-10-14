@@ -35,7 +35,7 @@ MetaMapBLT: enabled
 MetaMapBKP: enabled
 MetaMap: enabled
 CustomNameplates: enabled
-Outfitter: disabled
+Outfitter: enabled
 Buffalo: disabled
 DiscordArt: disabled
 DiscordArtOptions: disabled
@@ -141,3 +141,4 @@ MoveAnything: disabled
 GTS_GuildRosterScan: disabled
 GTS_IncomingMail: disabled
 GTS_OutgoingMail: disabled
+ItemRackFu: enabled
